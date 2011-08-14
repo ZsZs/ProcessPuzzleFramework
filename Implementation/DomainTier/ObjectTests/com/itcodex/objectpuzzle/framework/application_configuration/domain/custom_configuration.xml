@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Here your can override the values defined in default_configuration.xml file
+It is also possible to add your own configuration values -->
+<processPuzzleConfiguration>
+  <colors>
+    <background>#808080</background>
+    <text>#000000</text>
+    <header>#008000</header>
+    <link normal="#000080" visited="#800080"/>
+    <default>${colors.header}</default>
+  </colors>
+  <rowsPerPage>15</rowsPerPage>
+  <buttons>
+    <name>OK,Cancel,Help</name>
+  </buttons>
+  <numberFormat pattern="###\,###.##"/>
+  
+	<application>
+		<serverWorkingFolder>d:\work</serverWorkingFolder>
+	</application>
+	
+	<persistence>
+		<persistenceStrategies>
+			<persistenceStrategy name="TEST_STRATEGY">
+				<repositoryEventHandlers>
+					<repositoryEventHandler name="TEST_PROVIDER" kind="PersistenceProvider" description="Hibernate provider configured to use MS SQL Server, ObjectPuzzle_dc_test database">
+						<eventHandlerClass>com.processpuzzle.framework.persistence.domain.HibernatePersistenceProvider</eventHandlerClass>
+						<hibernate>
+							<connection>
+								<driver_class>net.sourceforge.jtds.jdbc.Driver</driver_class>
+								<url>jdbc:jtds:sqlserver://localhost/ObjectPuzzle_dc_test</url>
+								<username>opuser</username>
+								<password>opuser</password>
+							</connection>
+							<dialect>org.hibernate.dialect.SQLServerDialect</dialect>
+		
+							<!-- Generic properties --> 
+							<current_session_context_class>thread</current_session_context_class>
+							<show_sql>false</show_sql>
+							<transaction>
+								<factory_class>org.hibernate.transaction.JDBCTransactionFactory</factory_class>
+							</transaction>
+							<cache>
+								<provider_class>org.hibernate.cache.HashtableCacheProvider</provider_class>
+								<use_second_level_cache>true</use_second_level_cache>
+								<use_query_cache>true</use_query_cache>
+							</cache>
+							<c3p0>
+								<max_size>5</max_size>
+								<min_size>2</min_size>
+								<timeout>5000</timeout>
+								<max_statements>100</max_statements>
+								<idle_test_period>3000</idle_test_period>
+								<acquire_increment>2</acquire_increment>
+								<validate>false</validate>
+							</c3p0>
+							<hbm2ddl>
+								<auto>create-drop</auto>
+							</hbm2ddl>
+						</hibernate>
+					</repositoryEventHandler>
+				</repositoryEventHandlers>
+			</persistenceStrategy>
+			<persistenceStrategy name="HSQL-Test_DB_With_Synchronization">
+				<repositoryEventHandlers>
+					<repositoryEventHandler name="HIBERNATE-HSQL-DOMAINTIER_TEST_DB" kind="PersistenceProvider" description="Hibernate provider, configured to use HSQL DB Server, DOMAINTIER_TEST_DB dabase.">
+						<eventHandlerClass>com.processpuzzle.framework.persistence.domain.HibernatePersistenceProvider</eventHandlerClass>
+	
+						<!-- HSQL specific properties-->
+						<hibernate>
+							<connection>
+								<driver_class>org.hsqldb.jdbcDriver</driver_class>
+								<url>jdbc:hsqldb:mem:DOMAINTIER_TEST_DB</url>
+								<username>sa</username>
+								<password></password>
+							</connection> 
+							<dialect>org.hibernate.dialect.HSQLDialect</dialect>
+		
+							<!-- Generic properties --> 
+							<current_session_context_class>thread</current_session_context_class>
+							<show_sql>false</show_sql>
+							<transaction>
+								<factory_class>org.hibernate.transaction.JDBCTransactionFactory</factory_class>
+							</transaction>
+							<cache>
+								<provider_class>org.hibernate.cache.HashtableCacheProvider</provider_class>
+								<use_second_level_cache>true</use_second_level_cache>
+								<use_query_cache>true</use_query_cache>
+							</cache>
+							<c3p0>
+								<max_size>5</max_size>
+								<min_size>2</min_size>
+								<timeout>5000</timeout>
+								<max_statements>100</max_statements>
+								<idle_test_period>3000</idle_test_period>
+								<acquire_increment>2</acquire_increment>
+								<validate>false</validate>
+							</c3p0>
+							<hbm2ddl>
+								<auto>create-drop</auto>
+							</hbm2ddl>
+						</hibernate>
+					</repositoryEventHandler>
+					<repositoryEventHandler name="BIDIRECTIONAL_SYNCHRONIZATION-DOMAINTIER_TEST_DB" kind="SynchronizationProvider">
+						<eventHandlerClass>com.processpuzzle.framework.persistence.domain.BidirectionalSynchronizationStrategy</eventHandlerClass>
+						<persistenceProviders>
+							<repositoryEventHandler>
+								<persistenceProviderClass>com.processpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</persistenceProviderClass>
+							</repositoryEventHandler>
+							<repositoryEventHandler>
+								<persistenceProviderClass>com.processpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</persistenceProviderClass>
+							</repositoryEventHandler>
+						</persistenceProviders>
+					</repositoryEventHandler>
+				</repositoryEventHandlers>
+			</persistenceStrategy>
+		</persistenceStrategies>
+
+	</persistence>
+
+</processPuzzleConfiguration>

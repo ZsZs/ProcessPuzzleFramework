@@ -1,0 +1,1 @@
+java -cp e:\zsolt.zsuffa_webview_on_nagyokos\ProcessPuzzle\Framework\build\ProductionLibraries\HSQL\hsqldb.jar org.hsqldb.server.Server --database.0 mem:DOMAINTIER_TEST_DB --dbname.0 test_db

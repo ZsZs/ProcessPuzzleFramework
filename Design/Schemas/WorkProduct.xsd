@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xsd:schema 
+		targetNamespace="http://www.processpuzzle.com" 
+		xmlns:pp="http://www.processpuzzle.com" 
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:include schemaLocation="WorkProductType.xsd"/>
+	
+	<xsd:element name="workProduct" type="pp:WorkProduct"/>
+	
+	<xsd:complexType name="WorkProduct">
+	    <xsd:sequence>
+	    	<xsd:element name="description" type="xsd:string"/>
+	    	<xsd:element name="type" type="pp:WorkProductType"/>
+	    </xsd:sequence>
+	    <xsd:attribute name="id" type="xsd:integer"/>
+	    <xsd:attribute name="name" type="xsd:string"/>
+	</xsd:complexType>
+</xsd:schema>

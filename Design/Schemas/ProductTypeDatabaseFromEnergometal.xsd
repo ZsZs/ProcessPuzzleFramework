@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace = "http://www.processpuzzle.com/"
+	elementFormDefault="qualified"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.processpuzzle.com/">
+
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="energometall_termektorzs" type="ProductTypeDef"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+ 
+  <xsd:complexType name="ProductTypeDef">
+   <xsd:sequence minOccurs="1" maxOccurs="1">
+     <xsd:element name="SAPItemCode" type="xsd:string"/>
+     <xsd:element name="EAN" type="xsd:string"/>
+     <xsd:element name="ProducerID" type="xsd:string"/>
+     <xsd:element name="Level1" type="xsd:string"/>
+     <xsd:element name="Level2" type="xsd:string"/>
+     <xsd:element name="Level3" type="xsd:string"/>
+     <xsd:element name="GroupName" type="xsd:string"/>
+     <xsd:element name="ItemDescription" type="xsd:string"/>
+     <xsd:element name="Feature1_name" type="xsd:string"/>
+     <xsd:element name="Feature1_value" type="xsd:string"/>
+     <xsd:element name="ItemDescriptionENG" type="xsd:string"/>
+     <xsd:element name="AFA" type="xsd:string"/>
+     <xsd:element name="AFARate" type="xsd:string"/>
+     <xsd:element name="StockNOW" type="xsd:integer"/>
+     <xsd:element name="Feature2_name" type="xsd:string"/>
+     <xsd:element name="Feature2_value" type="xsd:string"/>
+     <xsd:element name="VTSZ" type="xsd:string"/>
+     <xsd:element name="CatalogOrder" type="xsd:integer"/>
+   </xsd:sequence>
+ </xsd:complexType>
+</xsd:schema>

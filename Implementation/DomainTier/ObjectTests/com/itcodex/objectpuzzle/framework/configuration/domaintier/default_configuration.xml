@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ProcessPuzzle default configuration values. Don not change them! -->
+<processPuzzleConfiguration>
+	<application>
+		<name>ProcessPuzzle</name>
+		<version>1.0</version>
+		<serverWorkingFolder>c:\\processpuzzle</serverWorkingFolder>
+		<clientWorkingFolder>c:\\processpuzzle</clientWorkingFolder>
+		<defaultUserAccount>
+			<name>ProcessPuzzle</name>
+			<password>ProcessPuzzle</password>
+		</defaultUserAccount>
+		<persistentDataInitializationStrategy>dropAndCreate</persistentDataInitializationStrategy>
+	</application>
+	
+	<runtime>
+		<environment>local</environment>
+	</runtime>
+	
+	<frontController>
+		<commandMapping>
+			<class>com.itcodex.objectpuzzle.framework.application_configuration.control.ObjectPuzzleCommandMapping</class>
+		</commandMapping>
+	</frontController>
+	
+	<persistence>
+		<persistenceStrategies>
+			<persistenceStrategy name="TEST_STRATEGY">
+				<repositoryEventHandlers>
+					<repositoryEventHandler name="TEST_PROVIDER" kind="PersistenceProvider" description="Hibernate provider, configured to use HSQL DB Server, DOMAINTIER_TEST_DB dabase.">
+						<eventHandlerClass>com.itcodex.objectpuzzle.framework.persistence.domain.HibernatePersistenceProvider</eventHandlerClass>
+	
+						<!-- HSQL specific properties-->
+						<hibernate>
+							<connection>
+								<driver_class>org.hsqldb.jdbcDriver</driver_class>
+								<url>jdbc:hsqldb:mem:DOMAINTIER_TEST_DB</url>
+								<username>sa</username>
+								<password></password>
+							</connection> 
+							<dialect>org.hibernate.dialect.HSQLDialect</dialect>
+		
+							<!-- Generic properties --> 
+							<current_session_context_class>thread</current_session_context_class>
+							<show_sql>true</show_sql>
+							<transaction>
+								<factory_class>org.hibernate.transaction.JDBCTransactionFactory</factory_class>
+							</transaction>
+							<cache>
+								<provider_class>org.hibernate.cache.HashtableCacheProvider</provider_class>
+								<use_second_level_cache>true</use_second_level_cache>
+								<use_query_cache>true</use_query_cache>
+							</cache>
+							<c3p0>
+								<max_size>5</max_size>
+								<min_size>2</min_size>
+								<timeout>5000</timeout>
+								<max_statements>100</max_statements>
+								<idle_test_period>3000</idle_test_period>
+								<acquire_increment>2</acquire_increment>
+								<validate>false</validate>
+							</c3p0>
+							<hbm2ddl>
+								<auto>create-drop</auto>
+							</hbm2ddl>
+						</hibernate>
+					</repositoryEventHandler>
+					
+					<repositoryEventHandler name="BIDIRECTIONAL_SYNCHRONIZATION-DOMAINTIER_TEST_DB" kind="SynchronizationProvider">
+						<eventHandlerClass>com.itcodex.objectpuzzle.framework.persistence.domain.BidirectionalSynchronizationStrategy</eventHandlerClass>
+						<persistenceProviders>
+							<repositoryEventHandler>
+								<persistenceProviderClass>com.itcodex.objectpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</persistenceProviderClass>
+							</repositoryEventHandler>
+							<repositoryEventHandler>
+								<persistenceProviderClass>com.itcodex.objectpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</persistenceProviderClass>
+							</repositoryEventHandler>
+						</persistenceProviders>
+					</repositoryEventHandler>
+				</repositoryEventHandlers>
+			</persistenceStrategy>
+		</persistenceStrategies>
+
+		<repositories>
+			<repository class="com.itcodex.objectpuzzle.framework.application_security.domain.UserRepository" strategy="TEST_STRATEGY"/>
+			<repository class="com.processpuzzle.application.domain.ApplicationEventRepository" strategy="TEST_STRATEGY"/>
+			<repository class="com.itcodex.objectpuzzle.framework.fundamental_types.domain.lastidnumber.LastIdNumberRepository" strategy="TEST_STRATEGY"/>
+
+			<repository class="com.itcodex.objectpuzzle.framework.persistence.domain.TestEntityRepository" strategy="TEST_STRATEGY"/>
+			<repository class="com.itcodex.objectpuzzle.framework.persistence.domain.ComponentRepository" strategy="TEST_STRATEGY"/>
+		</repositories>
+
+		<persistentClasses>
+			<persistentClassList class="com.processpuzzle.application.configuration.domain.FrameworkPersistentClasses"/>
+			<persistentClass class="com.itcodex.objectpuzzle.framework.persistence.domain.TestEntity"/>
+			<persistentClass class="com.itcodex.objectpuzzle.framework.persistence.domain.TestEntityComponent"/>
+			<persistentClass class="com.itcodex.objectpuzzle.framework.persistence.domain.TestEntitySubclass"/>
+			<persistentClass class="com.itcodex.objectpuzzle.framework.persistence.domain.Component"/>
+			<persistentClass class="com.itcodex.objectpuzzle.framework.persistence.domain.Leaf"/>
+			<persistentClass class="com.itcodex.objectpuzzle.framework.persistence.domain.Composite"/>
+		</persistentClasses>
+
+	</persistence>
+	
+	<internalization>
+		<resourceBundle>classpath:com/processpuzzle/internalization/domain/DomainTier_Resources</resourceBundle>
+		<resourceBundle>classpath:com/processpuzzle/internalization/domain/TestResources</resourceBundle>
+		<resourceBundle>classpath:com/processpuzzle/internalization/domain/AnotherTestResources</resourceBundle>
+		<availableLocales>
+			<locale>hu, HU</locale>
+			<locale>en, US</locale>
+			<locale>en, GB</locale>
+		</availableLocales>
+		<defaultLocale>hu, HU</defaultLocale>
+		<localeDefinitions>classpath:com/processpuzzle/internalization/domain/LocaleDefinitions.xml</localeDefinitions>
+	</internalization>
+	
+	<dataLoaders>
+		<dataLoader kind="system">
+			<dataLoaderClass>com.itcodex.objectpuzzle.framework.configuration.domaintier.FrameworkDomaintierTestDatas</dataLoaderClass>
+			<instantiationArguments>
+			</instantiationArguments>
+		</dataLoader>
+	</dataLoaders>
+	
+	<emailing>
+		<system>
+			<activation>passive</activation>
+		</system>
+		<host>
+			<systemUser>
+				<name>gabox01</name>
+				<password>ggmail81</password>
+			</systemUser>
+		</host>
+		<smtp>
+			<host>smtp.gmail.com</host>
+			<auth>true</auth>
+			<debug>true</debug>
+			<port>465</port>
+			<socketFactory>
+				<port>465</port>
+				<class>javax.net.ssl.SSLSocketFactory</class>
+				<fallback>false</fallback>
+			</socketFactory>
+		</smtp>
+	</emailing>
+	
+	<beanContainer>
+		<containerDefinitionPath>classpath:com/itcodex/objectpuzzle/framework/configuration/domaintier/BeanContainerDefinition.xml</containerDefinitionPath>
+	</beanContainer>
+
+</processPuzzleConfiguration>

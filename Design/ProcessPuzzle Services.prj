@@ -1,0 +1,7 @@
+
+<project type="cont" name="ProcessPuzzle Services" expanded="yes" catalog="no" pluginOwner="-1">
+	<file plugId="3" URL="Services\WorkProductService.wsdl" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+</project>

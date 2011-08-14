@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="requestContextInMockedApplicationFixture" class="com.processpuzzle.sharedfixtures.domaintier.RequestContextInMockedApplicationFixture" />
+
+  <bean id="mockProcessPuzzleContext" class="com.processpuzzle.sharedfixtures.domaintier.MockProcessPuzzleContext" >
+    <constructor-arg>
+      <ref bean="requestContextInMockedApplicationFixture"/>
+    </constructor-arg>
+  </bean>
+
+  <bean id="instantiatedRepositoryTester" class="com.processpuzzle.fitnesse.persistence.InstantiatedRepositoryTester">
+    <constructor-arg>
+      <ref bean="mockProcessPuzzleContext" />
+    </constructor-arg>
+  </bean>
+</beans>

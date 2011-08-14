@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><TransformationConfiguration forwardTransformation="com.ibm.xtools.transform.uml2.wsdl.internal.Uml2WsdlTransform" version="7.0.0">
+<!--xtools2_universal_type_manager-->
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableDefaultFile" value="@45,=@com.ibm.xtools.transform.core.metatype.stringArtifactService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableDefaultFolder" value="@45,=@com.ibm.xtools.transform.core.metatype.stringServices/ArtifactService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableFile" value="@45,=@com.ibm.xtools.transform.core.metatype.stringArtifactService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableFileDefaultNamespace" value="@45,=@com.ibm.xtools.transform.core.metatype.stringhttp://Services/ArtifactService/"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableFileExtension" value="@45,=@com.ibm.xtools.transform.core.metatype.stringwsdl"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableFileNamespace" value="@45,=@com.ibm.xtools.transform.core.metatype.stringhttp://Services/ArtifactService/"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableFolder" value="@45,=@com.ibm.xtools.transform.core.metatype.string"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQResourceTableQName" value="@45,=@com.ibm.xtools.transform.core.metatype.stringDesign Model::www.processpuzzle.com::ArtifactService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableDefaultFile" value="@45,=@com.ibm.xtools.transform.core.metatype.stringArtifactTypeService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableDefaultFolder" value="@45,=@com.ibm.xtools.transform.core.metatype.stringwww/processpuzzle/com/ArtifactTypeService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableFile" value="@45,=@com.ibm.xtools.transform.core.metatype.stringArtifactTypeService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableFileDefaultNamespace" value="@45,=@com.ibm.xtools.transform.core.metatype.stringhttp://www.processpuzzle.com/ArtifactTypeService/"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableFileExtension" value="@45,=@com.ibm.xtools.transform.core.metatype.stringwsdl"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableFileNamespace" value="@45,=@com.ibm.xtools.transform.core.metatype.stringhttp://www.processpuzzle.com/ArtifactTypeService/"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableFolder" value="@45,=@com.ibm.xtools.transform.core.metatype.string"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQResourceTableQName" value="@45,=@com.ibm.xtools.transform.core.metatype.stringDesign Model::www.processpuzzle.com::ArtifactTypeService"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableDefaultFile" value="@45,=@com.ibm.xtools.transform.core.metatype.stringServices"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableDefaultFolder" value="@45,=@com.ibm.xtools.transform.core.metatype.stringServices"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableFile" value="@45,=@com.ibm.xtools.transform.core.metatype.stringServices"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableFileDefaultNamespace" value="@45,=@com.ibm.xtools.transform.core.metatype.stringhttp://pp/Services/"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableFileExtension" value="@45,=@com.ibm.xtools.transform.core.metatype.stringwsdl"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableFileNamespace" value="@45,=@com.ibm.xtools.transform.core.metatype.stringhttp://pp/pp/Services/"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableFolder" value="@45,=@com.ibm.xtools.transform.core.metatype.stringServices"/>
+<Property id="/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_iWHaIKOcEd2nFYk375lPdQResourceTableQName" value="@45,=@com.ibm.xtools.transform.core.metatype.stringDesign Model::www.processpuzzle.com"/>
+<Property id="AuroSaveRule" value="@46,=@com.ibm.xtools.transform.core.metatype.booleantrue"/>
+<Property id="AuroValidateRule" value="@46,=@com.ibm.xtools.transform.core.metatype.booleantrue"/>
+<Property id="CONTEXT_SOURCE" value="@49,208@com.ibm.xtools.transform.core.metatype.Collection[org.eclipse.uml2.uml.internal.impl.PackageImpl@5ebd5ebd (name: ArtifactService, visibility: &amp;lt;unset&amp;gt;), org.eclipse.uml2.uml.internal.impl.PackageImpl@3b253b25 (name: ArtifactTypeService, visibility: &amp;lt;unset&amp;gt;)]java.util.ArrayList,202,206&amp;lt;ELEM_START&amp;gt;@47,52@com.ibm.xtools.uml.transform.core.metatype.uml2Design Model::www.processpuzzle.com::ArtifactServiceplatform:/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_B41kkKOeEd2nFYk375lPdQ,@47,56@com.ibm.xtools.uml.transform.core.metatype.uml2Design Model::www.processpuzzle.com::ArtifactTypeServiceplatform:/resource/ProcessPuzzle%20Framework%20Models/Design%20Model.emx#_FrQtUKOeEd2nFYk375lPdQ"/>
+<Property id="CONTEXT_TARGET_CONTAINER" value="@45,=@com.ibm.xtools.transform.core.metatype.folder/ProcessPuzzle Framework Models/Services"/>
+<Property id="DCMP" value="@43,5@com.ibm.xtools.transform.core.metatype.DCMPMixed2"/>
+<Property id="Design Model::www.processpuzzle.com::ArtifactService::ArtifactService" value="@45,=@com.ibm.xtools.transform.core.metatype.stringSOAP-DOCUMENT-LITERAL"/>
+<Property id="Design Model::www.processpuzzle.com::ArtifactTypeService::ArtifactTypeService" value="@45,=@com.ibm.xtools.transform.core.metatype.stringSOAP-DOCUMENT-LITERAL"/>
+<Property id="FORWARD_TRANSFORMATION_EXTENSIONS_STATUS" value="@42,2@com.ibm.xtools.transform.core.metatype.Map{}java.util.HashMap&amp;lt;ELEM_START&amp;gt;"/>
+<Property id="OpenReportDialog" value="@46,=@com.ibm.xtools.transform.core.metatype.booleantrue"/>
+<Property id="PopulateAllProperty" value="@46,=@com.ibm.xtools.transform.core.metatype.booleantrue"/>
+<Property id="RsaVersion" value="@45,=@com.ibm.xtools.transform.core.metatype.string7.5.0.0"/>
+<Property id="ShowWarningsInReportDialog" value="@46,=@com.ibm.xtools.transform.core.metatype.booleanfalse"/>
+<Property id="com.ibm.xtools.transform.merge.option" value="@45,=@com.ibm.xtools.transform.core.metatype.stringVisual_Merge"/>
+<Property id="com.ibm.xtools.transform.uml2.wsdl.binding" value="@45,=@com.ibm.xtools.transform.core.metatype.stringSOAP-DOCUMENT-LITERAL"/>
+<Property id="generateComplexTypeForEmptyRequest" value="@46,=@com.ibm.xtools.transform.core.metatype.booleanfalse"/>
+<Property id="logTrace" value="@46,=@com.ibm.xtools.transform.core.metatype.booleanfalse"/>
+<Property id="procesWothoutStereotype" value="@46,=@com.ibm.xtools.transform.core.metatype.booleanfalse"/>
+<Property id="processDataTypesStyle" value="@45,=@com.ibm.xtools.transform.core.metatype.choice0"/>
+<Property id="replaceUML" value="@46,=@com.ibm.xtools.transform.core.metatype.booleantrue"/>
+<Property id="silentlyAddRule" value="@46,=@com.ibm.xtools.transform.core.metatype.booleantrue"/>
+<Property id="useWidStyle" value="@46,=@com.ibm.xtools.transform.core.metatype.booleanfalse"/>
+</TransformationConfiguration>

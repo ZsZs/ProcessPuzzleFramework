@@ -1,0 +1,35 @@
+
+### set log levels - for more verbose logging change 'info' to 'debug' ###
+### append consoleappender if necessery ex: log4j.logger.com.itcodex=INFO, R, stdout
+
+log4j.rootLogger = FATAL, rollingFileAppender
+
+log4j.logger.com.mchange = INFO, rollingFileAppender
+log4j.logger.com.itcodex = DEBUG, rollingFileAppender
+log4j.logger.com.processpuzzle = ERROR, rollingFileAppender
+log4j.logger.org.apache.catalina = FATAL, rollingFileAppender
+log4j.logger.org.hibernate = ERROR, rollingFileAppender
+log4j.logger.com.sun.xml.bind = ERROR, rollingFileAppender
+log4j.logger.org.springframework = ERROR, rollingFileAppender
+log4j.logger.org.hibernate.type = FATAL, rollingFileAppender
+
+### direct log messages to stdout, uncomment only if you are using a development environment ###
+#log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+#log4j.appender.stdout.Target=System.out
+#log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+#log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+
+### direct messages to file processpuzzle.log, catalina.home environment variable existence is assummed  ###
+#log4j.appender.rollingFileAppender = org.apache.log4j.RollingFileAppender
+#log4j.appender.rollingFileAppender.File = ${catalina.home}/logs/ProcessPuzzle.log
+#log4j.appender.rollingFileAppender.MaxFileSize = 10MB
+#log4j.appender.rollingFileAppender.MaxBackupIndex = 10
+#log4j.appender.rollingFileAppender.layout = org.apache.log4j.PatternLayout
+#log4j.appender.rollingFileAppender.layout.ConversionPattern = %d{yyyy MMM dd HH:mm:ss,SSS} %p %t %c - %m%n
+
+log4j.appender.rollingFileAppender = org.apache.log4j.RollingFileAppender
+log4j.appender.rollingFileAppender.File = Logs/ProcessPuzzle.log
+log4j.appender.rollingFileAppender.MaxFileSize = 10MB
+log4j.appender.rollingFileAppender.MaxBackupIndex = 10
+log4j.appender.rollingFileAppender.layout = org.apache.log4j.PatternLayout
+log4j.appender.rollingFileAppender.layout.ConversionPattern = %d{yyyy MMM dd HH:mm:ss,SSS} %p %t %c - %m%n

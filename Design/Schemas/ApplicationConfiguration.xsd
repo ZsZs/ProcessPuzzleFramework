@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.processpuzzle.com" xmlns:ns1="http://www.processpuzzle.com">
+  <xs:element name="processPuzzleConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:application"/>
+        <xs:element ref="ns1:runtime"/>
+        <xs:element ref="ns1:presentation"/>
+        <xs:element ref="ns1:frontController"/>
+        <xs:element ref="ns1:persistence"/>
+        <xs:element ref="ns1:internalization"/>
+        <xs:element ref="ns1:dataLoaders"/>
+        <xs:element ref="ns1:businessDefinitions"/>
+        <xs:element ref="ns1:emailing"/>
+        <xs:element ref="ns1:beanContainer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="application">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:name"/>
+        <xs:element ref="ns1:version"/>
+        <xs:element ref="ns1:serverWorkingFolder"/>
+        <xs:element ref="ns1:clientWorkingFolder"/>
+        <xs:element ref="ns1:defaultUserAccount"/>
+        <xs:element ref="ns1:persistentDataInitializationStrategy"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="version" type="xs:decimal"/>
+  <xs:element name="serverWorkingFolder" type="xs:string"/>
+  <xs:element name="clientWorkingFolder" type="xs:string"/>
+  <xs:element name="defaultUserAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:name"/>
+        <xs:element ref="ns1:password"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistentDataInitializationStrategy" type="xs:NCName"/>
+  <xs:element name="runtime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:environment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="environment" type="xs:NCName"/>
+  <xs:element name="presentation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:webUiController"/>
+        <xs:element ref="ns1:defaultSkin"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="webUiController">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:businessBrowser"/>
+        <xs:element ref="ns1:contextMenu"/>
+        <xs:element ref="ns1:infoPane"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="businessBrowser">
+    <xs:complexType>
+      <xs:attribute name="showOnStartUp" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="contextMenu">
+    <xs:complexType>
+      <xs:attribute name="showOnStartUp" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="infoPane">
+    <xs:complexType>
+      <xs:attribute name="showOnStartUp" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="defaultSkin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:skinRelativePath"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="skinRelativePath" type="xs:NCName"/>
+  <xs:element name="frontController">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:commandMapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="commandMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:class"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:persistenceStrategies"/>
+        <xs:element ref="ns1:repositories"/>
+        <xs:element ref="ns1:persistentClasses"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistenceStrategies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:persistenceStrategy"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistenceStrategy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:repositoryEventHandlers"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="repositoryEventHandlers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:repositoryEventHandler"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="repositories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:repository"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="repository">
+    <xs:complexType>
+      <xs:attribute name="class" use="required"/>
+      <xs:attribute name="strategy" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistentClasses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:persistentClassList"/>
+        <xs:element maxOccurs="unbounded" ref="ns1:persistentClass"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistentClassList">
+    <xs:complexType>
+      <xs:attribute name="class" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistentClass">
+    <xs:complexType>
+      <xs:attribute name="class" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="internalization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:resourceBundle"/>
+        <xs:element ref="ns1:availableLocales"/>
+        <xs:element ref="ns1:defaultLocale"/>
+        <xs:element ref="ns1:localeDefinitions"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resourceBundle" type="xs:anyURI"/>
+  <xs:element name="availableLocales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:locale"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="locale" type="xs:string"/>
+  <xs:element name="defaultLocale" type="xs:NCName"/>
+  <xs:element name="localeDefinitions" type="xs:anyURI"/>
+  <xs:element name="dataLoaders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:dataLoader"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dataLoader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:dataLoaderClass"/>
+        <xs:element ref="ns1:instantiationArguments"/>
+      </xs:sequence>
+      <xs:attribute name="kind" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dataLoaderClass" type="xs:string"/>
+  <xs:element name="instantiationArguments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:argument"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="argument">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:anyURI">
+          <xs:attribute name="name" use="required" type="xs:NCName"/>
+          <xs:attribute name="type" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="businessDefinitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:schema"/>
+        <xs:element ref="ns1:mapping"/>
+        <xs:element ref="ns1:businessDefinition"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="schema" type="xs:anyURI"/>
+  <xs:element name="mapping" type="xs:anyURI"/>
+  <xs:element name="businessDefinition" type="xs:string"/>
+  <xs:element name="emailing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:system"/>
+        <xs:element ref="ns1:host"/>
+        <xs:element ref="ns1:smtp"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="system">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:activation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activation" type="xs:NCName"/>
+  <xs:element name="smtp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:host"/>
+        <xs:element ref="ns1:auth"/>
+        <xs:element ref="ns1:debug"/>
+        <xs:element ref="ns1:port"/>
+        <xs:element ref="ns1:socketFactory"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="auth" type="xs:boolean"/>
+  <xs:element name="debug" type="xs:boolean"/>
+  <xs:element name="socketFactory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:port"/>
+        <xs:element ref="ns1:class"/>
+        <xs:element ref="ns1:fallback"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fallback" type="xs:boolean"/>
+  <xs:element name="beanContainer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:containerDefinitionPath"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="containerDefinitionPath" type="xs:string"/>
+  <xs:element name="name" type="xs:NCName"/>
+  <xs:element name="password" type="xs:string"/>
+  <xs:element name="class" type="xs:NCName"/>
+  <xs:element name="repositoryEventHandler">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="ns1:eventHandlerClass"/>
+        <xs:element minOccurs="0" ref="ns1:hibernate"/>
+        <xs:element minOccurs="0" ref="ns1:persistenceProviders"/>
+        <xs:element minOccurs="0" ref="ns1:persistenceProviderClass"/>
+      </xs:sequence>
+      <xs:attribute name="description"/>
+      <xs:attribute name="kind" type="xs:NCName"/>
+      <xs:attribute name="name" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eventHandlerClass" type="xs:string"/>
+  <xs:element name="hibernate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:connection"/>
+        <xs:element ref="ns1:dialect"/>
+        <xs:element ref="ns1:current_session_context_class"/>
+        <xs:element ref="ns1:show_sql"/>
+        <xs:element ref="ns1:transaction"/>
+        <xs:element ref="ns1:cache"/>
+        <xs:element ref="ns1:c3p0"/>
+        <xs:element ref="ns1:hbm2ddl"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="connection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:driver_class"/>
+        <xs:element ref="ns1:url"/>
+        <xs:element ref="ns1:username"/>
+        <xs:element ref="ns1:password"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="driver_class" type="xs:NCName"/>
+  <xs:element name="url" type="xs:anyURI"/>
+  <xs:element name="username" type="xs:NCName"/>
+  <xs:element name="dialect" type="xs:string"/>
+  <xs:element name="current_session_context_class" type="xs:NCName"/>
+  <xs:element name="show_sql" type="xs:boolean"/>
+  <xs:element name="transaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:factory_class"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="factory_class" type="xs:string"/>
+  <xs:element name="cache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:provider_class"/>
+        <xs:element ref="ns1:use_second_level_cache"/>
+        <xs:element ref="ns1:use_query_cache"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="provider_class" type="xs:string"/>
+  <xs:element name="use_second_level_cache" type="xs:boolean"/>
+  <xs:element name="use_query_cache" type="xs:boolean"/>
+  <xs:element name="c3p0">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:max_size"/>
+        <xs:element ref="ns1:min_size"/>
+        <xs:element ref="ns1:timeout"/>
+        <xs:element ref="ns1:max_statements"/>
+        <xs:element ref="ns1:idle_test_period"/>
+        <xs:element ref="ns1:acquire_increment"/>
+        <xs:element ref="ns1:validate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="max_size" type="xs:integer"/>
+  <xs:element name="min_size" type="xs:integer"/>
+  <xs:element name="timeout" type="xs:integer"/>
+  <xs:element name="max_statements" type="xs:integer"/>
+  <xs:element name="idle_test_period" type="xs:integer"/>
+  <xs:element name="acquire_increment" type="xs:integer"/>
+  <xs:element name="validate" type="xs:boolean"/>
+  <xs:element name="hbm2ddl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:auto"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="auto" type="xs:NCName"/>
+  <xs:element name="persistenceProviders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:repositoryEventHandler"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistenceProviderClass" type="xs:string"/>
+  <xs:element name="host">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:systemUser"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="systemUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:name"/>
+        <xs:element ref="ns1:password"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="port" type="xs:integer"/>
+</xs:schema>

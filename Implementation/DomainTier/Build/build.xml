@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ProcessPuzzle Domain Tier" basedir=".." default="domaintier-build">
+
+	<property name="project.root" location="${basedir}" />
+	<property name="view.root.path" location="../../../" />
+	<property name="common.build.path" value="${view.root.path}/ProcessPuzzle/Environment/ANT/Scripts" />
+
+	<property file="${view.root.path}/ITKodex/Projects/Commons/Implementation/DomainTier/Build/buildinfo.properties" prefix="itcodexcommons"/>
+	<property file="${view.root.path}/ITKodex/Projects/LiTest/Implementation/DomainTier/Build/buildinfo.properties" prefix="litest"/>
+	<property file="${project.root}/Build/local.build.properties" />
+	<property file="${project.root}/Build/buildinfo.properties"/>
+	<property file="${common.build.path}/common.build.properties" />
+
+	<path id="project.auxiliary.classpath">
+		<fileset dir="${distribution.base.path}/${itcodexcommons.component.distribution.dir}">
+			<include name="${itcodexcommons.component.packaged.file}" />
+		</fileset>
+		
+		<fileset dir="${distribution.base.path}/${litest.component.distribution.dir}">
+			<include name="${litest.component.packaged.file}" />
+		</fileset>
+	</path>
+
+	<target name="domaintier-build">
+		<ant dir="${project.root}" antfile="${common.build.path}/${common.domaintier.build.file}" target="distribute">
+			<property name="cobertura.data.file" value="${project.root}/${cobertura.data.file}" />
+			<reference refid="project.auxiliary.classpath"/>
+		</ant>
+	</target>
+</project>

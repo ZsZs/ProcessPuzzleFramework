@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ProcessPuzzle - Models</name>
+	<comment></comment>
+	<projects>
+		<project>UML Libraries</project>
+		<project>UML Profiles</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+	name="WorkProductService" 
+	targetNamespace="http://www.processpuzzle.com/" 
+	xmlns:tns="http://www.processpuzzle.com/" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.processpuzzle.com" schemaLocation="WorkProductType.xsd" />
+			<xsd:import namespace="http://www.processpuzzle.com" schemaLocation="WorkProduct.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="findByIdRequest">
+		<wsdl:part name="id" type="xsd:int"/>
+	</wsdl:message>
+	
+	<wsdl:message name="findByIdResponse">
+        <wsdl:part type="xsd:string" name="workProduct" />
+	</wsdl:message>
+	
+	<wsdl:portType name="WorkProduct">
+		<wsdl:operation name="findById">
+	    	<wsdl:input message="tns:findByIdRequest"/>
+	    	<wsdl:output message="tns:findByIdResponse"/>
+	    </wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="WorkProductBinding"	type="tns:WorkProduct">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="findById">
+			<soap12:operation soapAction="http://www.processpuzzle.com/findById" />
+			<wsdl:input><soap12:body use="literal" /></wsdl:input>
+			<wsdl:output><soap12:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="WorkProduct">
+		<wsdl:port name="WorkProductPost" binding="tns:WorkProductBinding">
+			<soap12:address location="http://localhost/ProcessPuzzle/WorkProduct"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

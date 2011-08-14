@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="_i48msN4MEdu0_KhhHrWiwA" name="Framework UML-Java Mapping">
+  <packagedElement xmi:type="uml:Package" xmi:id="_jBcbYN4MEdu0_KhhHrWiwA" name="com.itcodex.objectpuzzle.framework.configuration.domaintier">
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jBcbYd4MEdu0_KhhHrWiwA" name="RepositoryTest"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jBiiAN4MEdu0_KhhHrWiwA" name="ConfigurationConstants"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jBoooN4MEdu0_KhhHrWiwA" name="DomainTier_ConfigurationFixture"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jCZdoN4MEdu0_KhhHrWiwA" name="TestFixture"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_i5CtUN4MEdu0_KhhHrWiwA" name="com.itcodex.objectpuzzle.framework.fundamental_types.domain"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_jBWUwN4MEdu0_KhhHrWiwA" name="com.itcodex.objectpuzzle.framework.configuration.domaintier"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_jCfkQN4MEdu0_KhhHrWiwA" name="Design Building Blocks" clientDependency="_jCfkQd4MEdu0_KhhHrWiwA">
+    <manifestation xmi:id="_jCfkQd4MEdu0_KhhHrWiwA" client="_jCfkQN4MEdu0_KhhHrWiwA">
+      <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptlhphy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks?"/>
+      <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptlhphy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks?"/>
+    </manifestation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_jCrxgN4MEdu0_KhhHrWiwA" name="Design Building Blocks">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jCx4IN4MEdu0_KhhHrWiwA" name="${functional.area.impldesign}">
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jCx4Id4MEdu0_KhhHrWiwA" name="domain" clientDependency="_jCx4It4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jCx4It4MEdu0_KhhHrWiwA" client="_jCx4Id4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptliIhy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/domain?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptliIhy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/domain?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jC-FYN4MEdu0_KhhHrWiwA" name="presentation" clientDependency="_jC-FYd4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jC-FYd4MEdu0_KhhHrWiwA" client="_jC-FYN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptliKxy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/presentation?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptliKxy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/presentation?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jDKSoN4MEdu0_KhhHrWiwA" name="resource" clientDependency="_jDKSod4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jDKSod4MEdu0_KhhHrWiwA" client="_jDKSoN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptliNBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/resource?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptliNBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/resource?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jDQZQN4MEdu0_KhhHrWiwA" name="control" clientDependency="_jDQZQd4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jDQZQd4MEdu0_KhhHrWiwA" client="_jDQZQN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptliPRy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/control?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptliPRy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D/control?"/>
+        </manifestation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jCrxgd4MEdu0_KhhHrWiwA" name="${functional.area.impldesign}" clientDependency="_jCrxgt4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jCrxgt4MEdu0_KhhHrWiwA" client="_jCrxgd4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptlh-By2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptlh-By2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.impldesign%7D?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jDWf4N4MEdu0_KhhHrWiwA" name="${functional.area.ucrs}" clientDependency="_jDWf4d4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jDWf4d4MEdu0_KhhHrWiwA" client="_jDWf4N4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptliRhy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.ucrs%7D?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptliRhy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.ucrs%7D?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jDcmgN4MEdu0_KhhHrWiwA" name="${functional.area.specs}" clientDependency="_jDcmgd4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jDcmgd4MEdu0_KhhHrWiwA" client="_jDcmgN4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptlijxy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.specs%7D?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptlijxy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.specs%7D?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jDitIN4MEdu0_KhhHrWiwA" name="${functional.area.specs}">
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jDitId4MEdu0_KhhHrWiwA" name="${functional.area.specs} Data Transfer Objects" clientDependency="_jDitIt4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jDitIt4MEdu0_KhhHrWiwA" client="_jDitId4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptlipBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.specs%7D/$%7Bfunctional.area.specs%7D%20Data%20Transfer%20Objects?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptlipBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Building%20Blocks/$%7Bfunctional.area.specs%7D/$%7Bfunctional.area.specs%7D%20Data%20Transfer%20Objects?"/>
+        </manifestation>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_jDozwN4MEdu0_KhhHrWiwA" name="Viewpoints" clientDependency="_jDozwd4MEdu0_KhhHrWiwA">
+    <manifestation xmi:id="_jDozwd4MEdu0_KhhHrWiwA" client="_jDozwN4MEdu0_KhhHrWiwA">
+      <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptlirRy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints?"/>
+      <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptlirRy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints?"/>
+    </manifestation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_jD1BAN4MEdu0_KhhHrWiwA" name="Viewpoints">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jD7HoN4MEdu0_KhhHrWiwA" name="Architectural Layers">
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jD7Hod4MEdu0_KhhHrWiwA" name="Common Elements" clientDependency="_jD7Hot4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jD7Hot4MEdu0_KhhHrWiwA" client="_jD7Hod4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljORy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/Common%20Elements?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljORy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/Common%20Elements?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jEHU4N4MEdu0_KhhHrWiwA" name="domain" clientDependency="_jEHU4d4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jEHU4d4MEdu0_KhhHrWiwA" client="_jEHU4N4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljOxy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/domain?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljOxy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/domain?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jENbgN4MEdu0_KhhHrWiwA" name="presentation" clientDependency="_jENbgd4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jENbgd4MEdu0_KhhHrWiwA" client="_jENbgN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljPxy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/presentation?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljPxy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/presentation?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jETiIN4MEdu0_KhhHrWiwA" name="resource" clientDependency="_jETiId4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jETiId4MEdu0_KhhHrWiwA" client="_jETiIN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljQxy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/resource?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljQxy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/resource?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jEZowN4MEdu0_KhhHrWiwA" name="control" clientDependency="_jEZowd4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jEZowd4MEdu0_KhhHrWiwA" client="_jEZowN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljRRy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/control?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljRRy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers/control?"/>
+        </manifestation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jD1BAd4MEdu0_KhhHrWiwA" name="Architectural Layers" clientDependency="_jD1BAt4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jD1BAt4MEdu0_KhhHrWiwA" client="_jD1BAd4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptliyRy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptliyRy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/Architectural%20Layers?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jEfvYN4MEdu0_KhhHrWiwA" name=" Package Dependencies" clientDependency="_jEfvYd4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jEfvYd4MEdu0_KhhHrWiwA" client="_jEfvYN4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljShy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/%20Package%20Dependencies?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljShy2EdmH6_M2UD5AWw?Design%20Model/Viewpoints/%20Package%20Dependencies?"/>
+      </manifestation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_jEr8oN4MEdu0_KhhHrWiwA" name="Design Contracts" clientDependency="_jEr8od4MEdu0_KhhHrWiwA">
+    <manifestation xmi:id="_jEr8od4MEdu0_KhhHrWiwA" client="_jEr8oN4MEdu0_KhhHrWiwA">
+      <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljWhy2EdmH6_M2UD5AWw?Design%20Model/Design%20Contracts?"/>
+      <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljWhy2EdmH6_M2UD5AWw?Design%20Model/Design%20Contracts?"/>
+    </manifestation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_jEyqUN4MEdu0_KhhHrWiwA" name="Design Contracts">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jE-3kd4MEdu0_KhhHrWiwA" name="Component Specifications">
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jFE-MN4MEdu0_KhhHrWiwA" name="Libraries" clientDependency="_jFE-Md4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jFE-Md4MEdu0_KhhHrWiwA" client="_jFE-MN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_Bu4yIM2QEduPkeFvDZSBZw?Design%20Model/Design%20Contracts/Component%20Specifications/Libraries?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_Bu4yIM2QEduPkeFvDZSBZw?Design%20Model/Design%20Contracts/Component%20Specifications/Libraries?"/>
+        </manifestation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jEyqUd4MEdu0_KhhHrWiwA" name="Design-Level Use Case Realizations" clientDependency="_jEyqUt4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jEyqUt4MEdu0_KhhHrWiwA" client="_jEyqUd4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptljXBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Contracts/Design-Level%20Use%20Case%20Realizations?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptljXBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Contracts/Design-Level%20Use%20Case%20Realizations?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jE4w8N4MEdu0_KhhHrWiwA" name="Component Specifications" clientDependency="_jE-3kN4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jE-3kN4MEdu0_KhhHrWiwA" client="_jE4w8N4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ptroEBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Contracts/Component%20Specifications?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ptroEBy2EdmH6_M2UD5AWw?Design%20Model/Design%20Contracts/Component%20Specifications?"/>
+      </manifestation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_jFLE0N4MEdu0_KhhHrWiwA" name="Implementation Designs" clientDependency="_jFLE0d4MEdu0_KhhHrWiwA">
+    <manifestation xmi:id="_jFLE0d4MEdu0_KhhHrWiwA" client="_jFLE0N4MEdu0_KhhHrWiwA">
+      <supplier xmi:type="uml:Package" href="Design%20Model.emx#_pt978Ry2EdmH6_M2UD5AWw?Design%20Model/Implementation%20Designs?"/>
+      <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_pt978Ry2EdmH6_M2UD5AWw?Design%20Model/Implementation%20Designs?"/>
+    </manifestation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_jFRLcN4MEdu0_KhhHrWiwA" name="Implementation Designs">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jFjfUN4MEdu0_KhhHrWiwA" name="Integration">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jFpl8N4MEdu0_KhhHrWiwA" name="query">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jFpl8d4MEdu0_KhhHrWiwA" name="Criteria" clientDependency="_jFpl8t4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jFpl8t4MEdu0_KhhHrWiwA" client="_jFpl8d4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcMBM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/query/QueryCondition?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcMBM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/query/QueryCondition?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jF1zMN4MEdu0_KhhHrWiwA" name="LogicalExpression" clientDependency="_jF1zMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jF1zMd4MEdu0_KhhHrWiwA" client="_jF1zMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcL9c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/LogicalExpression?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcL9c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/LogicalExpression?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jF750N4MEdu0_KhhHrWiwA" name="NotNullExpression" clientDependency="_jF750d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jF750d4MEdu0_KhhHrWiwA" client="_jF750N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcMFM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/NotNullExpression?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcMFM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/NotNullExpression?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jGCAcN4MEdu0_KhhHrWiwA" name="Query" clientDependency="_jGCAcd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jGCAcd4MEdu0_KhhHrWiwA" client="_jGCAcN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcL3c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/query/Query?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcL3c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/query/Query?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jGIHEN4MEdu0_KhhHrWiwA" name="QueryProperty" clientDependency="_jGIHEd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jGIHEd4MEdu0_KhhHrWiwA" client="_jGIHEN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcL6803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/QueryProperty?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcL6803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/QueryProperty?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jGONsN4MEdu0_KhhHrWiwA" name="QueryTest" clientDependency="_jGONsd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jGONsd4MEdu0_KhhHrWiwA" client="_jGONsN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcL_803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/QueryTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcL_803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/QueryTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jGaa8N4MEdu0_KhhHrWiwA" name="Restrictions" clientDependency="_jGaa8d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jGaa8d4MEdu0_KhhHrWiwA" client="_jGaa8N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcMGc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/query/Restrictions?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcMGc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/query/Restrictions?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jGghkN4MEdu0_KhhHrWiwA" name="SimpleExpression" clientDependency="_jGghkd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jGghkd4MEdu0_KhhHrWiwA" client="_jGghkN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcL0c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/SimpleExpression?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcL0c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/SimpleExpression?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jGmoMN4MEdu0_KhhHrWiwA" name="SubCriteria" clientDependency="_jGmoMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jGmoMd4MEdu0_KhhHrWiwA" client="_jGmoMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvcMEc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/SubCriteria?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvcMEc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/SubCriteria?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jGsu0N4MEdu0_KhhHrWiwA" name="Criterion" clientDependency="_jGsu0d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jGsu0d4MEdu0_KhhHrWiwA" client="_jGsu0N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Interface" href="Design%20Model.emx#_cvcL8c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/Criterion?"/>
+            <utilizedElement xmi:type="uml:Interface" href="Design%20Model.emx#_cvcL8c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/query/Criterion?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jFjfUd4MEdu0_KhhHrWiwA" name="query" clientDependency="_jFjfUt4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.query.domain">
+        <manifestation xmi:id="_jFjfUt4MEdu0_KhhHrWiwA" client="_jFjfUd4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_qo384MyfEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration/persistence_management/query?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_qo384MyfEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration/persistence_management/query?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jG48EN4MEdu0_KhhHrWiwA" name="persistence_management" clientDependency="_jG48Ed4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.persistence.domain">
+        <manifestation xmi:id="_jG48Ed4MEdu0_KhhHrWiwA" client="_jG48EN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_sV7UkMyfEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration/persistence_management?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_sV7UkMyfEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration/persistence_management?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jG_CsN4MEdu0_KhhHrWiwA" name="persistence_management">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jG_Csd4MEdu0_KhhHrWiwA" name="EntityIdentityCollitionException" clientDependency="_jG_Cst4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jG_Cst4MEdu0_KhhHrWiwA" client="_jG_Csd4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueijc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/EntityIdentityCollitionException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueijc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/EntityIdentityCollitionException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jHFJUN4MEdu0_KhhHrWiwA" name="IdentityCollisionException" clientDependency="_jHLP8N4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jHLP8N4MEdu0_KhhHrWiwA" client="_jHFJUN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueins03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/IdentityCollisionException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueins03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/IdentityCollisionException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jHRWkN4MEdu0_KhhHrWiwA" name="UnitOfWork" clientDependency="_jHRWkd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jHRWkd4MEdu0_KhhHrWiwA" client="_jHRWkN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuSVuc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/UnitOfWork?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuSVuc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/UnitOfWork?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jHXdMN4MEdu0_KhhHrWiwA" name="AggregationTransformationProcedure" clientDependency="_jHXdMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jHXdMd4MEdu0_KhhHrWiwA" client="_jHXdMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctttsc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/AggregationTransformationProcedure?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctttsc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/AggregationTransformationProcedure?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jHdj0N4MEdu0_KhhHrWiwA" name="Enum" clientDependency="_jHdj0d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jHdj0d4MEdu0_KhhHrWiwA" client="_jHdj0N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctnnZ803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/Enum?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctnnZ803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/Enum?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jHjqcN4MEdu0_KhhHrWiwA" name="EnumUserType" clientDependency="_jHjqcd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jHjqcd4MEdu0_KhhHrWiwA" client="_jHjqcN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttttc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/EnumUserType?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttttc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/EnumUserType?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jHpxEN4MEdu0_KhhHrWiwA" name="Factory" clientDependency="_jHpxEd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jHpxEd4MEdu0_KhhHrWiwA" client="_jHpxEN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttuyM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/Factory?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttuyM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/Factory?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jHv3sN4MEdu0_KhhHrWiwA" name="HibernateStrategy" clientDependency="_jHv3sd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jHv3sd4MEdu0_KhhHrWiwA" client="_jHv3sN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttuCM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/HibernatePersistenceProvider?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttuCM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/HibernatePersistenceProvider?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jH1-UN4MEdu0_KhhHrWiwA" name="InMemoryStrategy" clientDependency="_jH1-Ud4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jH1-Ud4MEdu0_KhhHrWiwA" client="_jH1-UN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttuO803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/InMemoryPersistenceProvider?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttuO803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/InMemoryPersistenceProvider?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jH8E8N4MEdu0_KhhHrWiwA" name="ObjectPuzzleManagedSynchronization" clientDependency="_jH8E8d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jH8E8d4MEdu0_KhhHrWiwA" client="_jH8E8N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttt5c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/UniDirectionalSynchronizationProvider?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttt5c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/UniDirectionalSynchronizationProvider?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jIISMN4MEdu0_KhhHrWiwA" name="ObjectPuzzleManagedSynchronizationTest" clientDependency="_jIISMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jIISMd4MEdu0_KhhHrWiwA" client="_jIISMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctttoM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/ObjectPuzzleManagedSynchronizationTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctttoM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/ObjectPuzzleManagedSynchronizationTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jIOY0N4MEdu0_KhhHrWiwA" name="PersistenceStrategy" clientDependency="_jIOY0d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jIOY0d4MEdu0_KhhHrWiwA" client="_jIOY0N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctnnAs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/PersistenceProvider?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctnnAs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/PersistenceProvider?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jIUfcN4MEdu0_KhhHrWiwA" name="PersistenceTestSuite" clientDependency="_jIUfcd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jIUfcd4MEdu0_KhhHrWiwA" client="_jIUfcN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttt-M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/PersistenceTestSuite?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttt-M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/PersistenceTestSuite?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jIamEN4MEdu0_KhhHrWiwA" name="QLUtility" clientDependency="_jIamEd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jIamEd4MEdu0_KhhHrWiwA" client="_jIamEN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctnnes03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/QLUtility?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctnnes03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/QLUtility?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jIgssN4MEdu0_KhhHrWiwA" name="RemoteSystemRepositoryFacade" clientDependency="_jIgssd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jIgssd4MEdu0_KhhHrWiwA" client="_jIgssN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttt6803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/RemoteSystemRepositoryFacade?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttt6803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/RemoteSystemRepositoryFacade?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jImzUN4MEdu0_KhhHrWiwA" name="Repository" clientDependency="_jImzUd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jImzUd4MEdu0_KhhHrWiwA" client="_jImzUN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttucM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/Repository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttucM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/Repository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jIs58N4MEdu0_KhhHrWiwA" name="RepositoryEventHandler" clientDependency="_jIs58d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jIs58d4MEdu0_KhhHrWiwA" client="_jIs58N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttuzM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/RepositoryEventHandler?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttuzM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/RepositoryEventHandler?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jIzAkN4MEdu0_KhhHrWiwA" name="RepositoryException" clientDependency="_jIzAkd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jIzAkd4MEdu0_KhhHrWiwA" client="_jIzAkN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctnnWc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/RepositoryException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctnnWc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/RepositoryException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jI5HMN4MEdu0_KhhHrWiwA" name="SynchronizableReference" clientDependency="_jI5HMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jI5HMd4MEdu0_KhhHrWiwA" client="_jI5HMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctttl803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizableReference?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctttl803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizableReference?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jI_N0N4MEdu0_KhhHrWiwA" name="SynchronizableReferenceRepository" clientDependency="_jI_N0d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jI_N0d4MEdu0_KhhHrWiwA" client="_jI_N0N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttt-803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizableReferenceRepository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttt-803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizableReferenceRepository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJFUcN4MEdu0_KhhHrWiwA" name="SynchronizationStrategy" clientDependency="_jJLbEN4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJLbEN4MEdu0_KhhHrWiwA" client="_jJFUcN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttu9s03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizationProvider?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttu9s03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizationProvider?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJRhsN4MEdu0_KhhHrWiwA" name="SynchronizedRepositoryTest" clientDependency="_jJRhsd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJRhsd4MEdu0_KhhHrWiwA" client="_jJRhsN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttu3M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizedRepositoryTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttu3M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/SynchronizedRepositoryTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJXoUN4MEdu0_KhhHrWiwA" name="TestEntity" clientDependency="_jJXoUd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJXoUd4MEdu0_KhhHrWiwA" client="_jJXoUN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttvJs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntity?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttvJs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntity?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJdu8N4MEdu0_KhhHrWiwA" name="TestEntityComponent" clientDependency="_jJdu8d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJdu8d4MEdu0_KhhHrWiwA" client="_jJdu8N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttvIM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntityComponent?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttvIM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntityComponent?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJj1kN4MEdu0_KhhHrWiwA" name="TestEntityFactory" clientDependency="_jJj1kd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJj1kd4MEdu0_KhhHrWiwA" client="_jJj1kN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctttrM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntityFactory?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctttrM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntityFactory?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJp8MN4MEdu0_KhhHrWiwA" name="TestEntityRepository" clientDependency="_jJp8Md4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJp8Md4MEdu0_KhhHrWiwA" client="_jJp8MN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cthgQc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntityRepository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cthgQc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestEntityRepository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJwC0N4MEdu0_KhhHrWiwA" name="TestRemoteEntity" clientDependency="_jJwC0d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJwC0d4MEdu0_KhhHrWiwA" client="_jJwC0N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ctnnec03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestRemoteEntity?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ctnnec03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestRemoteEntity?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jJ2JcN4MEdu0_KhhHrWiwA" name="TestRemoteSystemRepository" clientDependency="_jJ8QEN4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jJ8QEN4MEdu0_KhhHrWiwA" client="_jJ2JcN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttt8c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestRemoteSystemRepository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttt8c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestRemoteSystemRepository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jKCWsN4MEdu0_KhhHrWiwA" name="TestRepositoryTest" clientDependency="_jKCWsd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jKCWsd4MEdu0_KhhHrWiwA" client="_jKCWsN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cttu5803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestRepositoryTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cttu5803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/TestRepositoryTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jKIdUN4MEdu0_KhhHrWiwA" name="QLConstants" clientDependency="_jKIdUd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jKIdUd4MEdu0_KhhHrWiwA" client="_jKIdUN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Interface" href="Design%20Model.emx#_cttuZ803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/QLConstants?"/>
+            <utilizedElement xmi:type="uml:Interface" href="Design%20Model.emx#_cttuZ803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/persistence_management/QLConstants?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jKOj8N4MEdu0_KhhHrWiwA" name="resource_management" clientDependency="_jKOj8d4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.resource_management.domain">
+        <manifestation xmi:id="_jKOj8d4MEdu0_KhhHrWiwA" client="_jKOj8N4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_Nvx1MMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration/resource_management?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_Nvx1MMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration/resource_management?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jKUqkN4MEdu0_KhhHrWiwA" name="resource_management">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jKUqkd4MEdu0_KhhHrWiwA" name="PropertyLoadException" clientDependency="_jKUqkt4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jKUqkt4MEdu0_KhhHrWiwA" client="_jKUqkd4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueil803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyLoadException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueil803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyLoadException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jKg30N4MEdu0_KhhHrWiwA" name="ClassLoaderIO" clientDependency="_jKg30d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jKg30d4MEdu0_KhhHrWiwA" client="_jKg30N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYb_M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/ClassLoaderIO?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYb_M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/ClassLoaderIO?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jKm-cN4MEdu0_KhhHrWiwA" name="FoToPdfConverter" clientDependency="_jKm-cd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jKm-cd4MEdu0_KhhHrWiwA" client="_jKm-cN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYb6803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/FoToPdfConverter?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYb6803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/FoToPdfConverter?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jKtFEN4MEdu0_KhhHrWiwA" name="FoToPdfConverterTest" clientDependency="_jKtFEd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jKtFEd4MEdu0_KhhHrWiwA" client="_jKtFEN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYcLM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/FoToPdfConverterTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYcLM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/FoToPdfConverterTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jKzLsN4MEdu0_KhhHrWiwA" name="IOEnvironment" clientDependency="_jKzLsd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jKzLsd4MEdu0_KhhHrWiwA" client="_jKzLsN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYb4c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/IOEnvironment?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYb4c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/IOEnvironment?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jK5SUN4MEdu0_KhhHrWiwA" name="PropertyLoader" clientDependency="_jK5SUd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jK5SUd4MEdu0_KhhHrWiwA" client="_jK5SUN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYcEc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYcEc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyLoader?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jLFfkN4MEdu0_KhhHrWiwA" name="PropertyLoaderTest" clientDependency="_jLFfkd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jLFfkd4MEdu0_KhhHrWiwA" client="_jLFfkN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYcNM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyLoaderTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYcNM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyLoaderTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jLLmMN4MEdu0_KhhHrWiwA" name="PropertyParser" clientDependency="_jLLmMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jLLmMd4MEdu0_KhhHrWiwA" client="_jLLmMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYcCs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyParser?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYcCs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/PropertyParser?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jLRs0N4MEdu0_KhhHrWiwA" name="ResourceManagementTestSuite" clientDependency="_jLRs0d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jLRs0d4MEdu0_KhhHrWiwA" client="_jLRs0N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYb-c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/ResourceManagementTestSuite?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYb-c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/ResourceManagementTestSuite?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jLXzcN4MEdu0_KhhHrWiwA" name="XmlTransformer" clientDependency="_jLXzcd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jLXzcd4MEdu0_KhhHrWiwA" client="_jLXzcN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYb8M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/XmlTransformer?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYb8M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/XmlTransformer?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jLd6EN4MEdu0_KhhHrWiwA" name="XmlTransformerTest" clientDependency="_jLd6Ed4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jLd6Ed4MEdu0_KhhHrWiwA" client="_jLd6EN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuYcMM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/XmlTransformerTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuYcMM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/XmlTransformerTest?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jFRLcd4MEdu0_KhhHrWiwA" name="Presentation" clientDependency="_jFRLct4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jFRLct4MEdu0_KhhHrWiwA" client="_jFRLcd4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_TBaScMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Presentation?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_TBaScMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Presentation?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jFdYsN4MEdu0_KhhHrWiwA" name="Integration" clientDependency="_jFdYsd4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jFdYsd4MEdu0_KhhHrWiwA" client="_jFdYsN4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_ZU1_YMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_ZU1_YMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Integration?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jLkAsN4MEdu0_KhhHrWiwA" name="Domain" clientDependency="_jLkAsd4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jLkAsd4MEdu0_KhhHrWiwA" client="_jLkAsN4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_XpROYMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_XpROYMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jLqHUN4MEdu0_KhhHrWiwA" name="Domain">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jL27oN4MEdu0_KhhHrWiwA" name="application_onfiguration">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jL27od4MEdu0_KhhHrWiwA" name="Application" clientDependency="_jL27ot4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jL27ot4MEdu0_KhhHrWiwA" client="_jL27od4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct568s03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/Application?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct568s03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/Application?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMDI4N4MEdu0_KhhHrWiwA" name="ApplicationTest" clientDependency="_jMDI4d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMDI4d4MEdu0_KhhHrWiwA" client="_jMDI4N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57ks03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/ApplicationTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57ks03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/ApplicationTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMJPgN4MEdu0_KhhHrWiwA" name="Configuration" clientDependency="_jMJPgd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMJPgd4MEdu0_KhhHrWiwA" client="_jMJPgN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct56_c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/ProcessPuzzleContext?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct56_c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/ProcessPuzzleContext?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMPWIN4MEdu0_KhhHrWiwA" name="ConfigurationSetUpException" clientDependency="_jMPWId4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMPWId4MEdu0_KhhHrWiwA" client="_jMPWIN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57Zs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/ConfigurationSetUpException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57Zs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/ConfigurationSetUpException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMVcwN4MEdu0_KhhHrWiwA" name="ConfigurationTest" clientDependency="_jMVcwd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMVcwd4MEdu0_KhhHrWiwA" client="_jMVcwN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct562M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/ConfigurationTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct562M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/ConfigurationTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMbjYN4MEdu0_KhhHrWiwA" name="DataLoader" clientDependency="_jMbjYd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMbjYd4MEdu0_KhhHrWiwA" client="_jMbjYN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57Vc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/DataLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57Vc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/DataLoader?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMhqAN4MEdu0_KhhHrWiwA" name="DataLoaderException" clientDependency="_jMhqAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMhqAd4MEdu0_KhhHrWiwA" client="_jMhqAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct56wc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/DataLoaderException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct56wc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/DataLoaderException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMnwoN4MEdu0_KhhHrWiwA" name="DomainClassRepositoryMapping" clientDependency="_jMnwod4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMnwod4MEdu0_KhhHrWiwA" client="_jMnwoN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57X803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/RepositoryMappings?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57X803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/RepositoryMappings?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMt3QN4MEdu0_KhhHrWiwA" name="HardCodedDataLoader" clientDependency="_jMt3Qd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jMt3Qd4MEdu0_KhhHrWiwA" client="_jMt3QN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct561s03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/HardCodedDataLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct561s03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/HardCodedDataLoader?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jMz94N4MEdu0_KhhHrWiwA" name="LoadData"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jM6EgN4MEdu0_KhhHrWiwA" name="MigrationDataLoader" clientDependency="_jM6Egd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jM6Egd4MEdu0_KhhHrWiwA" client="_jM6EgN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57Ws03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/MigrationDataLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57Ws03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/MigrationDataLoader?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jNALIN4MEdu0_KhhHrWiwA" name="OPDomainTierClassRepositoryMapping" clientDependency="_jNALId4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jNALId4MEdu0_KhhHrWiwA" client="_jNALIN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct560M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/OPDomainTierClassRepositoryMapping?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct560M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_configuration/OPDomainTierClassRepositoryMapping?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jNGRwN4MEdu0_KhhHrWiwA" name="TestClassMapping" clientDependency="_jNGRwd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jNGRwd4MEdu0_KhhHrWiwA" client="_jNGRwN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57b803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestClassMapping?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57b803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestClassMapping?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jNMYYN4MEdu0_KhhHrWiwA" name="TestMigrationDataLoader" clientDependency="_jNMYYd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jNMYYd4MEdu0_KhhHrWiwA" client="_jNMYYN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct568M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestMigrationDataLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct568M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestMigrationDataLoader?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jNSfAN4MEdu0_KhhHrWiwA" name="TestSystemDataLoader" clientDependency="_jNSfAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jNSfAd4MEdu0_KhhHrWiwA" client="_jNSfAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57U803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestSystemDataLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57U803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestSystemDataLoader?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jNYloN4MEdu0_KhhHrWiwA" name="TestXmlDataLoader" clientDependency="_jNYlod4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jNYlod4MEdu0_KhhHrWiwA" client="_jNYloN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57Ts03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestXmlDataLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57Ts03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_onfiguration/TestXmlDataLoader?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jNesQN4MEdu0_KhhHrWiwA" name="XmlDataLoader" clientDependency="_jNesQd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jNesQd4MEdu0_KhhHrWiwA" client="_jNesQN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ct57UM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/XmlDataLoader?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ct57UM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Integration/resource_management/XmlDataLoader?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jLqHUd4MEdu0_KhhHrWiwA" name="application_onfiguration" clientDependency="_jLqHUt4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.application_configuration.domain">
+        <manifestation xmi:id="_jLqHUt4MEdu0_KhhHrWiwA" client="_jLqHUd4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_2aTHEMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/application_configuration?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_2aTHEMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/application_configuration?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jNq5gN4MEdu0_KhhHrWiwA" name="application_security" clientDependency="_jNq5gd4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.application_security.domain">
+        <manifestation xmi:id="_jNq5gd4MEdu0_KhhHrWiwA" client="_jNq5gN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_4nFHsMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/application_security?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_4nFHsMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/application_security?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jNxAIN4MEdu0_KhhHrWiwA" name="application_security">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jNxAId4MEdu0_KhhHrWiwA" name="AccessRight" clientDependency="_jNxAIt4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jNxAIt4MEdu0_KhhHrWiwA" client="_jNxAId4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxeCc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessRight?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxeCc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessRight?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jN9NYN4MEdu0_KhhHrWiwA" name="AccessRightConstraintViolationException" clientDependency="_jN9NYd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jN9NYd4MEdu0_KhhHrWiwA" client="_jN9NYN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxd-803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessRightConstraintViolationException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxd-803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessRightConstraintViolationException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jODUAN4MEdu0_KhhHrWiwA" name="AccessRightRepository" clientDependency="_jODUAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jODUAd4MEdu0_KhhHrWiwA" client="_jODUAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxdcc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessRightRepository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxdcc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessRightRepository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jOJaoN4MEdu0_KhhHrWiwA" name="AnAccessControlledObject" clientDependency="_jOJaod4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jOJaod4MEdu0_KhhHrWiwA" client="_jOJaoN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxdr803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AnAccessControlledObject?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxdr803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AnAccessControlledObject?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jOPhQN4MEdu0_KhhHrWiwA" name="ApplicationSecurityTestSuite" clientDependency="_jOPhQd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jOPhQd4MEdu0_KhhHrWiwA" client="_jOPhQN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxd9c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/ApplicationSecurityTestSuite?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxd9c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/ApplicationSecurityTestSuite?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jOVn4N4MEdu0_KhhHrWiwA" name="DefaultAccessRight" clientDependency="_jOVn4d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jOVn4d4MEdu0_KhhHrWiwA" client="_jOVn4N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxeKM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/DefaultAccessRight?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxeKM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/DefaultAccessRight?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jObugN4MEdu0_KhhHrWiwA" name="User" clientDependency="_jObugd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jObugd4MEdu0_KhhHrWiwA" client="_jObugN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxd0c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/User?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxd0c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/User?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jOh1IN4MEdu0_KhhHrWiwA" name="UserFactory" clientDependency="_jOh1Id4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jOh1Id4MEdu0_KhhHrWiwA" client="_jOh1IN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxdgc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserFactory?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxdgc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserFactory?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jOn7wN4MEdu0_KhhHrWiwA" name="UserFactoryTest" clientDependency="_jOn7wd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jOn7wd4MEdu0_KhhHrWiwA" client="_jOn7wN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxdus03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserFactoryTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxdus03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserFactoryTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jOuCYN4MEdu0_KhhHrWiwA" name="UserRepository" clientDependency="_jOuCYd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jOuCYd4MEdu0_KhhHrWiwA" client="_jOuCYN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxdjM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxdjM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jO0JAN4MEdu0_KhhHrWiwA" name="UserRepositoryBackUpTest" clientDependency="_jO0JAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jO0JAd4MEdu0_KhhHrWiwA" client="_jO0JAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxeI803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepositoryBackUpTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxeI803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepositoryBackUpTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jPAWQN4MEdu0_KhhHrWiwA" name="UserRepositoryRestoreTest" clientDependency="_jPAWQd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jPAWQd4MEdu0_KhhHrWiwA" client="_jPAWQN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxd6M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepositoryRestoreTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxd6M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepositoryRestoreTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jPGc4N4MEdu0_KhhHrWiwA" name="UserRepositoryTest" clientDependency="_jPGc4d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jPGc4d4MEdu0_KhhHrWiwA" client="_jPGc4N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxdw803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepositoryTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxdw803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserRepositoryTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jP3R4N4MEdu0_KhhHrWiwA" name="UserSession" clientDependency="_jP3R4d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jP3R4d4MEdu0_KhhHrWiwA" client="_jP3R4N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxd7c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserSession?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxd7c03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserSession?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jP9YgN4MEdu0_KhhHrWiwA" name="UserTest" clientDependency="_jP9Ygd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jP9Ygd4MEdu0_KhhHrWiwA" client="_jP9YgN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cuxeGM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cuxeGM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/UserTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jQDfIN4MEdu0_KhhHrWiwA" name="AccessControlledObject" clientDependency="_jQDfId4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jQDfId4MEdu0_KhhHrWiwA" client="_jQDfIN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Interface" href="Design%20Model.emx#_cuxd-M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessControlledObject?"/>
+            <utilizedElement xmi:type="uml:Interface" href="Design%20Model.emx#_cuxd-M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/application_security/AccessControlledObject?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jQJlwN4MEdu0_KhhHrWiwA" name="rule_engine" clientDependency="_jQJlwd4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.rule_engine.domain">
+        <manifestation xmi:id="_jQJlwd4MEdu0_KhhHrWiwA" client="_jQJlwN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_8yYqgMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/business_rules?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_8yYqgMygEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/business_rules?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jQPsYN4MEdu0_KhhHrWiwA" name="rule_engine">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jQVzAN4MEdu0_KhhHrWiwA" name="Operator" clientDependency="_jQVzAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jQVzAd4MEdu0_KhhHrWiwA" client="_jQVzAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFOM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Operator?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFOM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Operator?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jQb5oN4MEdu0_KhhHrWiwA" name="Proposition" clientDependency="_jQb5od4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jQb5od4MEdu0_KhhHrWiwA" client="_jQb5oN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFbc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Proposition?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFbc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Proposition?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jQiAQN4MEdu0_KhhHrWiwA" name="Queue" clientDependency="_jQiAQd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jQiAQd4MEdu0_KhhHrWiwA" client="_jQiAQN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFjc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Queue?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFjc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Queue?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jQuNgN4MEdu0_KhhHrWiwA" name="Rule" clientDependency="_jQuNgd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jQuNgd4MEdu0_KhhHrWiwA" client="_jQuNgN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFpM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Rule?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFpM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Rule?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jQ0UIN4MEdu0_KhhHrWiwA" name="RuleContext" clientDependency="_jQ0UId4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jQ0UId4MEdu0_KhhHrWiwA" client="_jQ0UIN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFQc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/RuleContext?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFQc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/RuleContext?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jQ6awN4MEdu0_KhhHrWiwA" name="RuleElement" clientDependency="_jQ6awd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jQ6awd4MEdu0_KhhHrWiwA" client="_jQ6awN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWF1M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/RuleElement?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWF1M03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/RuleElement?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jRAhYN4MEdu0_KhhHrWiwA" name="RuleTest" clientDependency="_jRAhYd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jRAhYd4MEdu0_KhhHrWiwA" client="_jRAhYN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFMc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/RuleTest?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFMc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/RuleTest?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jRGoAN4MEdu0_KhhHrWiwA" name="ValueHolderRuleElement" clientDependency="_jRGoAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jRGoAd4MEdu0_KhhHrWiwA" client="_jRGoAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFhM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/ValueHolderRuleElement?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFhM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/ValueHolderRuleElement?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jRMuoN4MEdu0_KhhHrWiwA" name="Variable" clientDependency="_jRMuod4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jRMuod4MEdu0_KhhHrWiwA" client="_jRMuoN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cvWFUc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Variable?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cvWFUc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/business_rules/Variable?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jRS1QN4MEdu0_KhhHrWiwA" name="fundamental_types" clientDependency="_jRS1Qd4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.fundamental_types.domain">
+        <manifestation xmi:id="_jRS1Qd4MEdu0_KhhHrWiwA" client="_jRS1QN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_BQcKMMyhEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/fundamental_types?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_BQcKMMyhEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/fundamental_types?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jRY74N4MEdu0_KhhHrWiwA" name="fundamental_types">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jRY74d4MEdu0_KhhHrWiwA" name="AssertionException" clientDependency="_jRY74t4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jRY74t4MEdu0_KhhHrWiwA" client="_jRY74d4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueio803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/fundamental_types/AssertionException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueio803EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/fundamental_types/AssertionException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jRlJIN4MEdu0_KhhHrWiwA" name="NameCollisionException" clientDependency="_jRlJId4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jRlJId4MEdu0_KhhHrWiwA" client="_jRlJIN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueiqs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/fundamental_types/NameCollisionException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueiqs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/fundamental_types/NameCollisionException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jRrPwN4MEdu0_KhhHrWiwA" name="OpAssertion" clientDependency="_jRrPwd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jRrPwd4MEdu0_KhhHrWiwA" client="_jRrPwN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueigc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/fundamental_types/OpAssertion?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueigc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/fundamental_types/OpAssertion?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jRxWYN4MEdu0_KhhHrWiwA" name="ProcessPuzzleException" clientDependency="_jRxWYd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jRxWYd4MEdu0_KhhHrWiwA" client="_jRxWYN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_K-YMwNiiEduYIolqkY-zOg?Design%20Model/Implementation%20Designs/Domain/fundamental_types/ProcessPuzzleException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_K-YMwNiiEduYIolqkY-zOg?Design%20Model/Implementation%20Designs/Domain/fundamental_types/ProcessPuzzleException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jR3dAN4MEdu0_KhhHrWiwA" name="Money" clientDependency="_jR3dAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jR3dAd4MEdu0_KhhHrWiwA" client="_jR3dAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_Ogmf-84mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Money?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_Ogmf-84mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Money?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jR9joN4MEdu0_KhhHrWiwA" name="Quantity" clientDependency="_jR9jod4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jR9jod4MEdu0_KhhHrWiwA" client="_jR9joN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_OgmgEs4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Quantity?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_OgmgEs4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Quantity?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jSDqQN4MEdu0_KhhHrWiwA" name="TimePeriod" clientDependency="_jSDqQd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jSDqQd4MEdu0_KhhHrWiwA" client="_jSDqQN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_OgmgBM4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimePeriod?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_OgmgBM4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimePeriod?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jSV-IN4MEdu0_KhhHrWiwA" name="TimePoint" clientDependency="_jSV-Id4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jSV-Id4MEdu0_KhhHrWiwA" client="_jSV-IN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_Ogsmlc4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimePoint?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_Ogsmlc4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimePoint?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jScEwN4MEdu0_KhhHrWiwA" name="TimeValue" clientDependency="_jScEwd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jScEwd4MEdu0_KhhHrWiwA" client="_jScEwN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_Ogsmq84mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimeValue?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_Ogsmq84mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimeValue?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jSiLYN4MEdu0_KhhHrWiwA" name="Unit" clientDependency="_jSiLYd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jSiLYd4MEdu0_KhhHrWiwA" client="_jSiLYN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_Ogsmus4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Unit?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_Ogsmus4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Unit?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jSoSAN4MEdu0_KhhHrWiwA" name="Currency" clientDependency="_jSoSAd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jSoSAd4MEdu0_KhhHrWiwA" client="_jSoSAN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_vmwBcM4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Currency?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_vmwBcM4mEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/Currency?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jSuYoN4MEdu0_KhhHrWiwA" name="ConversionRatio" clientDependency="_jS0fQN4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jS0fQN4MEdu0_KhhHrWiwA" client="_jSuYoN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_6tzjgM4oEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/ConversionRatio?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_6tzjgM4oEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/ConversionRatio?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jS7M8N4MEdu0_KhhHrWiwA" name="TimeUnit" clientDependency="_jS7M8d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jS7M8d4MEdu0_KhhHrWiwA" client="_jS7M8N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_ETvREM4rEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimeUnit?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_ETvREM4rEduFpt013Z9v0w?Design%20Model/Implementation%20Designs/Domain/fundamental_types/TimeUnit?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jTBTkN4MEdu0_KhhHrWiwA" name="ExchangeRate" clientDependency="_jTBTkd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jTBTkd4MEdu0_KhhHrWiwA" client="_jTBTkN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_4kCxwNfYEduHRbluOc6gYQ?Design%20Model/Implementation%20Designs/Domain/fundamental_types/ExchangeRate?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_4kCxwNfYEduHRbluOc6gYQ?Design%20Model/Implementation%20Designs/Domain/fundamental_types/ExchangeRate?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jTHaMN4MEdu0_KhhHrWiwA" name="UnitRepository" clientDependency="_jTHaMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jTHaMd4MEdu0_KhhHrWiwA" client="_jTHaMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_OaMRQNugEduIKLP6Cxr3Qw?Design%20Model/Implementation%20Designs/Domain/fundamental_types/UnitRepository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_OaMRQNugEduIKLP6Cxr3Qw?Design%20Model/Implementation%20Designs/Domain/fundamental_types/UnitRepository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jTNg0N4MEdu0_KhhHrWiwA" name="QuantityPrecission"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jTTncN4MEdu0_KhhHrWiwA" name="NumberPrecission"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jTf0sN4MEdu0_KhhHrWiwA" name="TimePrecission"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jTl7UN4MEdu0_KhhHrWiwA" name="internalization" clientDependency="_jTl7Ud4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.internalization.domain">
+        <manifestation xmi:id="_jTl7Ud4MEdu0_KhhHrWiwA" client="_jTl7UN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_DDcY4MyhEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/internalization?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_DDcY4MyhEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Domain/internalization?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jTsB8N4MEdu0_KhhHrWiwA" name="internalization">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jTsB8d4MEdu0_KhhHrWiwA" name="LocaleRepository" clientDependency="_jTsB8t4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jTsB8t4MEdu0_KhhHrWiwA" client="_jTsB8d4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cukpcc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/LocaleRepository?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cukpcc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/LocaleRepository?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jTyIkN4MEdu0_KhhHrWiwA" name="ProcessPuzzleLocale" clientDependency="_jTyIkd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jTyIkd4MEdu0_KhhHrWiwA" client="_jTyIkN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cukphs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/ProcessPuzzleLocale?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cukphs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/ProcessPuzzleLocale?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jT4PMN4MEdu0_KhhHrWiwA" name="LocaleUtil" clientDependency="_jT4PMd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jT4PMd4MEdu0_KhhHrWiwA" client="_jT4PMN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cukpMM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/LocaleUtil?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cukpMM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/LocaleUtil?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jT-V0N4MEdu0_KhhHrWiwA" name="ResourceCache" clientDependency="_jUEccN4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jUEccN4MEdu0_KhhHrWiwA" client="_jT-V0N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cukpgM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/ResourceCache?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cukpgM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/ResourceCache?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jUKjEN4MEdu0_KhhHrWiwA" name="ResourceKey" clientDependency="_jUKjEd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jUKjEd4MEdu0_KhhHrWiwA" client="_jUKjEN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cukpYc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/ResourceKey?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cukpYc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/ResourceKey?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jUQpsN4MEdu0_KhhHrWiwA" name="XMLBundleParser" clientDependency="_jUQpsd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jUQpsd4MEdu0_KhhHrWiwA" client="_jUQpsN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cukpQs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/XMLBundleParser?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cukpQs03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/XMLBundleParser?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jUWwUN4MEdu0_KhhHrWiwA" name="XMLResourceBundle" clientDependency="_jUWwUd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jUWwUd4MEdu0_KhhHrWiwA" client="_jUWwUN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cukpnc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/XMLResourceBundle?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cukpnc03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/internalization/XMLResourceBundle?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jUc28N4MEdu0_KhhHrWiwA" name="PersonNameFormat" clientDependency="_jUc28d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jUc28d4MEdu0_KhhHrWiwA" client="_jUc28N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_a8LeEN4EEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/text_formatting/PersonNameFormatSpecifier?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_a8LeEN4EEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/text_formatting/PersonNameFormatSpecifier?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jUi9kN4MEdu0_KhhHrWiwA" name="AddressFormat" clientDependency="_jUpEMN4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jUpEMN4MEdu0_KhhHrWiwA" client="_jUi9kN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_610o0N4HEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/text_formatting/AddressFormatSpecifier?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_610o0N4HEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/text_formatting/AddressFormatSpecifier?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jUvK0N4MEdu0_KhhHrWiwA" name="address" clientDependency="_jUvK0d4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jUvK0d4MEdu0_KhhHrWiwA" client="_jUvK0N4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_skXZYMzEEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/location?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_skXZYMzEEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/location?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jU1RcN4MEdu0_KhhHrWiwA" name="party" clientDependency="_jU1Rcd4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jU1Rcd4MEdu0_KhhHrWiwA" client="_jU1RcN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_wsyAQMzEEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/party_management?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_wsyAQMzEEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/party_management?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jU7YEN4MEdu0_KhhHrWiwA" name="workflow_management" clientDependency="_jU7YEd4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.workflow_management">
+        <manifestation xmi:id="_jU7YEd4MEdu0_KhhHrWiwA" client="_jU7YEN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_AatRsMzFEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/workflow_management?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_AatRsMzFEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/workflow_management?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jVHlUN4MEdu0_KhhHrWiwA" name="workflow_management">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jVHlUd4MEdu0_KhhHrWiwA" name="IllegalDependencyException" clientDependency="_jVHlUt4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jVHlUt4MEdu0_KhhHrWiwA" client="_jVHlUd4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueiiM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/workflow_management/IllegalDependencyException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueiiM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/workflow_management/IllegalDependencyException?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jVNr8N4MEdu0_KhhHrWiwA" name="UnsupportedStateTransitionException" clientDependency="_jVNr8d4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jVNr8d4MEdu0_KhhHrWiwA" client="_jVNr8N4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_cueioM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/workflow_management/UnsupportedStateTransitionException?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_cueioM03EduK0qVz1vlIoA?Design%20Model/Implementation%20Designs/Domain/workflow_management/UnsupportedStateTransitionException?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jVTykN4MEdu0_KhhHrWiwA" name="asset" clientDependency="_jVTykd4MEdu0_KhhHrWiwA">
+        <manifestation xmi:id="_jVTykd4MEdu0_KhhHrWiwA" client="_jVTykN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_dhZ7EMzFEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/asset?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_dhZ7EMzFEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/asset?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jVZ5MN4MEdu0_KhhHrWiwA" name="generic_artifact" clientDependency="_jVZ5Md4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.artifact_management">
+        <manifestation xmi:id="_jVZ5Md4MEdu0_KhhHrWiwA" client="_jVZ5MN4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_fKnUkMzFEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/artifact_management?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_fKnUkMzFEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Domain/artifact_management?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_jVf_0N4MEdu0_KhhHrWiwA" name="preferences" clientDependency="_jVsNEN4MEdu0_KhhHrWiwA" fileName="com.itcodex.objectpuzzle.framework.preferences.domain">
+        <manifestation xmi:id="_jVsNEN4MEdu0_KhhHrWiwA" client="_jVf_0N4MEdu0_KhhHrWiwA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_6PJSEN4BEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/preferences?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_6PJSEN4BEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/preferences?"/>
+        </manifestation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jVyTsN4MEdu0_KhhHrWiwA" name="preferences">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jVyTsd4MEdu0_KhhHrWiwA" name="Preferences" clientDependency="_jVyTst4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jVyTst4MEdu0_KhhHrWiwA" client="_jVyTsd4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_V6uBQN4CEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/preferences/Preferences?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_V6uBQN4CEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/preferences/Preferences?"/>
+          </manifestation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jV4aUN4MEdu0_KhhHrWiwA" name="UserPreferences" clientDependency="_jV4aUd4MEdu0_KhhHrWiwA">
+          <manifestation xmi:id="_jV4aUd4MEdu0_KhhHrWiwA" client="_jV4aUN4MEdu0_KhhHrWiwA">
+            <supplier xmi:type="uml:Class" href="Design%20Model.emx#_YGwbAN4CEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/preferences/UserPreferences?"/>
+            <utilizedElement xmi:type="uml:Class" href="Design%20Model.emx#_YGwbAN4CEdu0_KhhHrWiwA?Design%20Model/Implementation%20Designs/Domain/preferences/UserPreferences?"/>
+          </manifestation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_PZOKQN6eEdu_hbIvzgjWfA" name="text_formatting" clientDependency="_PZOKQd6eEdu_hbIvzgjWfA" fileName="com.itcodex.objectpuzzle.framework.text_formatting.domain">
+        <manifestation xmi:id="_PZOKQd6eEdu_hbIvzgjWfA" client="_PZOKQN6eEdu_hbIvzgjWfA">
+          <supplier xmi:type="uml:Package" href="Design%20Model.emx#_10yAUN6VEdu_hbIvzgjWfA?Design%20Model/Implementation%20Designs/Domain/text_formatting?"/>
+          <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_10yAUN6VEdu_hbIvzgjWfA?Design%20Model/Implementation%20Designs/Domain/text_formatting?"/>
+        </manifestation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jV-g8N4MEdu0_KhhHrWiwA" name="Data" clientDependency="_jWEnkN4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jWEnkN4MEdu0_KhhHrWiwA" client="_jV-g8N4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_bKOzsMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Data?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_bKOzsMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Data?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jWEnkd4MEdu0_KhhHrWiwA" name="Control" clientDependency="_jWKuMN4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jWKuMN4MEdu0_KhhHrWiwA" client="_jWEnkd4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_U_FgEMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Control?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_U_FgEMyWEduQzausL4Q9BQ?Design%20Model/Implementation%20Designs/Control?"/>
+      </manifestation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_jWQ00N4MEdu0_KhhHrWiwA" name="Artifact" clientDependency="_jWQ00d4MEdu0_KhhHrWiwA">
+      <manifestation xmi:id="_jWQ00d4MEdu0_KhhHrWiwA" client="_jWQ00N4MEdu0_KhhHrWiwA">
+        <supplier xmi:type="uml:Package" href="Design%20Model.emx#_94psAMzBEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Artifact?"/>
+        <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_94psAMzBEdu_YOtBXjRYUg?Design%20Model/Implementation%20Designs/Artifact?"/>
+      </manifestation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_jWW7cN4MEdu0_KhhHrWiwA" name="PrimitiveTypes" clientDependency="_jWW7cd4MEdu0_KhhHrWiwA">
+    <manifestation xmi:id="_jWW7cd4MEdu0_KhhHrWiwA" client="_jWW7cN4MEdu0_KhhHrWiwA">
+      <supplier xmi:type="uml:Package" href="Design%20Model.emx#_3RoaxM4sEduFpt013Z9v0w?Design%20Model/PrimitiveTypes?"/>
+      <utilizedElement xmi:type="uml:Package" href="Design%20Model.emx#_3RoaxM4sEduFpt013Z9v0w?Design%20Model/PrimitiveTypes?"/>
+    </manifestation>
+  </packagedElement>
+  <profileApplication xmi:id="_i48msd4MEdu0_KhhHrWiwA">
+    <eAnnotations xmi:id="_i48mst4MEdu0_KhhHrWiwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_i48ms94MEdu0_KhhHrWiwA">
+    <eAnnotations xmi:id="_i48mtN4MEdu0_KhhHrWiwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_IN8k8MmBEdqBcN1R6EvWUw?Default/Default?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+  </profileApplication>
+  <profileApplication xmi:id="_i48mtd4MEdu0_KhhHrWiwA">
+    <eAnnotations xmi:id="_i48mtt4MEdu0_KhhHrWiwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_IrdAUMmBEdqBcN1R6EvWUw?Deployment/Deployment?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+  </profileApplication>
+</uml:Model>
