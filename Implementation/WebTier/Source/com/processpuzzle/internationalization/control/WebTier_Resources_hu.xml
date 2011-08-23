@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources 
+	xmlns:tns="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
+	
+	<Language name="hu">
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress" type="String">Telefonszám</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.countryCode" type="String">Ország kód</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.nationalDirectDialingPrefix" type="String">Nemzetközi előhívó</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.areaCode" type="String">Körzetszám</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.number" type="String">Szám</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.extension" type="String">Egyéb</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.physicalType" type="String">Típus</Resource>
+
+		<Resource key="com.processpuzzle.party.domain.EmailAddress" type="String">E-mail cím</Resource>
+		<Resource key="com.processpuzzle.party.domain.WebPageAddress" type="String">Weboldal</Resource>
+		<Resource key="com.processpuzzle.party.domain.WebPageAddress.url" type="String">Url</Resource>
+
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress" type="String">Földrajzi cím</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.addressLine" type="String">Utca, házszám</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.city" type="String">Város</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.regionOrState" type="String">Állam</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.zipOrPostCode" type="String">Irányítószám</Resource>
+
+		<Resource key="ui.generic.undefined" type="String">Nincs meghatározva</Resource>
+		<Resource key="ui.generic.the" type="String">A(z)</Resource>
+		<Resource key="ui.generic.table.summary" type="String">Összesen</Resource>
+		<Resource key="ui.generic.table.listed" type="String">Listázva</Resource>
+		<Resource key="ui.generic.select" type="String">Kiválaszt</Resource>
+		<Resource key="ui.generic.select.notset" type="String">nincs megadva</Resource>
+		<Resource key="ui.generic.select.none" type="String">nincs</Resource>
+		<Resource key="ui.generic.select.all" type="String">mind</Resource>
+		<Resource key="ui.generic.button.cancel" type="String">Mégsem</Resource>
+		<Resource key="ui.generic.button.ok" type="String">Ok</Resource>
+		<Resource key="ui.generic.button.new" type="String">Új</Resource>
+		<Resource key="ui.generic.button.edit" type="String">Szerkeszt</Resource>
+		<Resource key="ui.generic.button.editing" type="String">Szerkesztés</Resource>
+		<Resource key="ui.generic.button.remove" type="String">Töröl</Resource>
+		<Resource key="ui.generic.button.delete" type="String">Törlés</Resource>
+		<Resource key="ui.generic.button.previous" type="String">Előző</Resource>
+		<Resource key="ui.generic.button.next" type="String">Következő</Resource>
+		<Resource key="ui.generic.button.open" type="String">Megnyit</Resource>
+		<Resource key="ui.generic.button.reserve" type="String">Lefoglal</Resource>
+		<Resource key="ui.generic.button.release" type="String">Elenged</Resource>
+		<Resource key="ui.generic.button.undoReserve" type="String">Visszavon</Resource>
+		<Resource key="ui.generic.button.updateAndSave" type="String">Frissítés</Resource>
+		<Resource key="ui.generic.button.placeOrder" type="String">Megrendelés</Resource>
+		<Resource key="ui.generic.button.save" type="String">Mentés</Resource>
+		<Resource key="ui.generic.button.close" type="String">Bezár</Resource>
+		<Resource key="ui.generic.button.open" type="String">Megnyitás</Resource>
+		<Resource key="ui.generic.button.browse" type="String">Tallózás</Resource>
+		<Resource key="ui.generic.button.upload" type="String">Feltölt</Resource>
+		<Resource key="ui.generic.button.further" type="String">Tovább</Resource>
+		<Resource key="ui.generic.button.create" type="String">Létrehoz</Resource>
+		<Resource key="ui.generic.artifact.reservestatus.reserve" type="String">Lefoglalva</Resource>
+		<Resource key="ui.generic.artifact.reservestatus.release" type="String">Elengedve</Resource>
+		<Resource key="ui.generic.artifact.versionControlled.true" type="String">Igen</Resource>
+		<Resource key="ui.generic.artifact.versionControlled.false" type="String">Nem</Resource>
+		<Resource key="ui.generic.message.underMaintenance" type="String">Alkalmazás karbantartás alatt!</Resource>
+
+		<Resource key="ui.generic.button.backToList" type="String">Vissza a listához</Resource>
+		<Resource key="ui.generic.button.add" type="String">Hozzáad</Resource>
+		<Resource key="ui.generic.button.modify" type="String">Módosítás</Resource>
+		<Resource key="ui.generic.button.insert" type="String">Beszúrás</Resource>
+		<Resource key="ui.generic.button.yes" type="String">Igen</Resource>
+		<Resource key="ui.generic.button.no" type="String">Nem</Resource>
+		<Resource key="ui.generic.button.start" type="String">Megkezd</Resource>
+		<Resource key="ui.generic.button.finish" type="String">Befejez</Resource>
+		<Resource key="ui.generic.button.suspend" type="String">Felfüggeszt</Resource>
+		<Resource key="ui.generic.button.resume" type="String">Folytat</Resource>
+		<Resource key="ui.generic.button.discard" type="String">Eldob</Resource>
+		<Resource key="ui.generic.button.accept" type="String">Elfogad</Resource>
+		<Resource key="ui.generic.button.defaultPerformer" type="String">Alapértemezett végrehajtó</Resource>
+
+		<Resource key="ui.generic.action.undefined" type="String">Nincs meghatározva</Resource>
+		<Resource key="ui.generic.action.none" type="String">Nincs</Resource>
+		<Resource key="ui.generic.action.Proposed" type="String">Tervezett</Resource>
+		<Resource key="ui.generic.action.Implemented" type="String">Megkezdett</Resource>
+		<Resource key="ui.generic.action.Completed" type="String">Befejezett</Resource>
+
+		<Resource key="ui.generic.action.event.Implementation" type="String">Megkezdés</Resource>
+		<Resource key="ui.generic.action.event.Completition" type="String">Befejezés</Resource>
+
+		<!-- Labels -->
+		
+		<!-- General -->
+		<Resource key="ui.label.name" type="String">Név</Resource>
+		<Resource key="ui.label.userName" type="String">Felhasználó név</Resource>
+		<Resource key="ui.label.fullName" type="String">Teljes név</Resource>
+		<Resource key="ui.label.designation" type="String">Megnevezés</Resource>
+		<Resource key="ui.label.description" type="String">Leírás</Resource>
+		<Resource key="ui.label.comment" type="String">Megjegyzés</Resource>
+		<Resource key="ui.label.identifier" type="String">Azonosító</Resource>
+		<Resource key="ui.label.fileNumber" type="String">Ügyszám</Resource>
+		<Resource key="ui.label.priority" type="String">Prioritás</Resource>
+		<Resource key="ui.label.subject" type="String">Tárgy</Resource>
+		<Resource key="ui.label.status" type="String">Állapot</Resource>
+		<Resource key="ui.label.type" type="String">Típus</Resource>
+		<Resource key="ui.label.protocol" type="String">Protokoll</Resource>
+		<Resource key="ui.label.executable" type="String">Futtatható</Resource>
+		<Resource key="ui.label.event" type="String">Esemény</Resource>
+		<Resource key="ui.label.address" type="String">Cím</Resource>
+		<Resource key="ui.label.phone" type="String">Telefon</Resource>
+		<Resource key="ui.label.fax" type="String">Fax</Resource>
+		<Resource key="ui.label.email" type="String">Email</Resource>
+		<Resource key="ui.label.choose" type="String">-Válasszon-</Resource>
+		<Resource key="ui.label.version" type="String">Verzió</Resource>
+		<Resource key="ui.label.versionControlled" type="String">Verziókezelt</Resource>
+		
+		<!-- Date -->
+		<Resource key="ui.label.hour" type="String">Óra</Resource>
+		<Resource key="ui.label.day" type="String">Nap</Resource>
+		<Resource key="ui.label.week" type="String">Hét</Resource>
+		<Resource key="ui.label.month" type="String">Hónap</Resource>
+		<Resource key="ui.label.deadline" type="String">Határidő</Resource>
+		<Resource key="ui.label.projectedBegin" type="String">Tervezett kezdés</Resource>
+		<Resource key="ui.label.projectedEnd" type="String">Tervezett befejezés</Resource>
+		<Resource key="ui.label.realBegin" type="String">Tényleges kezdés</Resource>
+		<Resource key="ui.label.realEnd" type="String">Tényleges befejezés</Resource>
+		
+		<!-- Parties -->
+		<Resource key="ui.label.user" type="String">Felhasználó</Resource>
+		<Resource key="ui.label.responsible" type="String">Felelős</Resource>
+		<Resource key="ui.label.owner" type="String">Tulajdonos</Resource>
+		<Resource key="ui.label.procurer" type="String">Megrendelő</Resource>
+		<Resource key="ui.label.person" type="String">Személy</Resource>
+		<Resource key="ui.label.persons" type="String">Személyek</Resource>
+		<Resource key="ui.label.company" type="String">Cég</Resource>
+		<Resource key="ui.label.company.org" type="String">Cég / Szervezet</Resource>
+		<Resource key="ui.label.lastModifier" type="String">Utólsó módosító</Resource>
+		
+		<!-- Values -->
+		<Resource key="ui.label.date" type="String">Dátum</Resource>
+		<Resource key="ui.label.time" type="String">Idő</Resource>
+		<Resource key="ui.label.amount" type="String">Összeg</Resource>
+		<Resource key="ui.label.quantity" type="String">Mennyiség</Resource>
+		<Resource key="ui.label.measure" type="String">Mértékegység</Resource>
+		<Resource key="ui.label.resource" type="String">Erőforrás</Resource>
+		<Resource key="ui.label.resourceType" type="String">Erőforrás típus</Resource>
+		<Resource key="ui.label.huf" type="String">Forint</Resource>
+		<Resource key="ui.label.total" type="String">Végösszeg</Resource>
+		<Resource key="ui.label.netTotal" type="String">Nettó végösszeg</Resource>
+		<Resource key="ui.label.netAmount" type="String">Nettó összeg</Resource>
+		<Resource key="ui.label.creationDate" type="String">Létrehozás dátuma</Resource>
+		<Resource key="ui.label.lastModDate" type="String">Utólsó módosítás dátuma</Resource>
+
+		<!-- Filter	-->
+		<Resource key="ui.filter.field" type="String">Mező</Resource>
+		<Resource key="ui.filter.condition" type="String">Feltétel</Resource>
+		<Resource key="ui.filter.operator" type="String">Operátor</Resource>
+		<Resource key="ui.filter.value" type="String">Érték</Resource>
+		<Resource key="ui.filter.order" type="String">Rendezési sorrend</Resource>
+		<Resource key="ui.filter.orderType" type="String">Rendezési típus</Resource>
+		<Resource key="ui.filter.ascending" type="String">Növekvő</Resource>
+		<Resource key="ui.filter.descending" type="String">Csökkenő</Resource>
+		<Resource key="ui.filter.showList" type="String">Lista megjelenítése</Resource>
+		<Resource key="ui.filter.predefined" type="String">Előre beállított szűrő</Resource>
+		<Resource key="ui.filter.custom" type="String">Saját szűrő</Resource>
+		<Resource key="ui.filter.query" type="String">Lekérdezés</Resource>
+		<Resource key="ui.filter.and" type="String">ÉS</Resource>
+		<Resource key="ui.filter.or" type="String">VAGY</Resource>
+		<Resource key="ui.filter.compile" type="String">Összeállít</Resource>
+		<Resource key="ui.filter.execute" type="String">Végrehajt</Resource>
+
+		<!-- ArtifactList_ListedArtifacts.jsp -->
+		<Resource key="ui.ArtifactList_ListedArtifacts.reserveStatus" type="String">Lefoglalás</Resource>
+		<Resource key="ui.ArtifactList_ListedArtifacts.useBy" type="String">Használva</Resource>
+
+		<!-- Artifact_AccessRights.jsp -->
+		<Resource key="ui.Artifact_AccessRights.read" type="String">Olvasás</Resource>
+		<Resource key="ui.Artifact_AccessRights.create" type="String">Létrehozás</Resource>
+		<Resource key="ui.Artifact_AccessRights.write" type="String">Írás</Resource>
+		<Resource key="ui.Artifact_AccessRights.delete" type="String">Törlés</Resource>
+
+		<!-- Artifact_Versions.jsp -->
+		<Resource key="ui.Artifact_Versions.beginOfMod" type="String">Módosítás kezdete</Resource>
+		<Resource key="ui.Artifact_Versions.endOfMod" type="String">Módosítás vége</Resource>
+		<Resource key="ui.Artifact_Versions.modifier" type="String">Módosító</Resource>
+
+		<!-- DatabaseAdmin -->
+		<Resource key="ui.databaseAdministration.backupDate" type="String">Mentés dátuma</Resource>
+		<Resource key="ui.databaseAdministration.startBackup" type="String">Biztonsági mentés indítása</Resource>
+		<Resource key="ui.databaseAdministration.startRestore" type="String">Helyreállítás indítása</Resource>
+		<Resource key="ui.databaseAdministration.welcome" type="String">Adatbázis Adminisztráció</Resource>
+		<Resource key="ui.databaseAdministration.restoreButton" type="String">Helyreállítás</Resource>
+		<Resource key="ui.databaseAdministration.notLoggedIn" type="String">Nincs bejelentkezve!</Resource>
+		<Resource key="ui.databaseAdministration.undoMaintenance" type="String">Karbantartartás leállítása.</Resource>
+		<Resource key="ui.databaseAdministration.backedUp" type="String">A biztonsági mentés elkészült.</Resource>
+		<Resource key="ui.databaseAdministration.restored" type="String">Helyreállítás elkészült.</Resource>
+		<Resource key="ui.databaseAdministration.error" type="String">Hiba</Resource>
+		<Resource key="ui.databaseAdministration.tooManySignedInUser" type="String">Túl sok bejelentkezett felhasználó!</Resource>
+
+		<Resource key="ui.databaseAdministration.adminInfo" type="String">Most biztonsági mentést készíthet az egész adatbázisról vagy helyreállíthatja az elmentett adatbázist a következő gombok segítségével.</Resource>
+		<Resource key="ui.databaseAdministration.schemaDropWarning" type="String">Figyelem! Ha eldobja az adatbázis sémát az összes adat véglegesen elveszik!</Resource>
+		<Resource key="ui.databaseAdministration.schemaDropConfirmation" type="String">Biztos, hogy teljesen eltávolítja az összes adatot az adatbázisból?</Resource>
+		<Resource key="ui.databaseAdministration.noExistingBackupWarningPartOne" type="String">Figyelem! Még nem készült biztonsági mentés vagy biztonsági mentés nem érhető el!</Resource>
+		<Resource key="ui.databaseAdministration.noExistingBackupWarningPartTwo" type="String">Legalább egy biztonsági mentést kell készítenie a helyreállítás elindításához!</Resource>
+		<Resource key="ui.databaseAdministration.backupConfirmation" type="String">Szeretne létrehozni biztonsági mentést az adatbázisról?</Resource>
+		<Resource key="ui.databaseAdministration.cancelledBackup" type="String">Biztonsági mentés folyamat leállítva!</Resource>
+		<Resource key="ui.databaseAdministration.availableBackups" type="String">Jelenleg elérhető biztonsági mentések</Resource>
+
+		<!-- AccessRightsViolation	-->
+		<Resource key="ui.arv.header" type="String">Figyelem!</Resource>
+		<Resource key="ui.arv.info" type="String">Önnek nincs jogosultsága az alábbi műveletekhez:</Resource>
+
+		<!-- FileStorage_Properties	-->
+		<Resource key="ui.FileStorage_Properties.originalFileName" type="String">Fájl név</Resource>
+		<Resource key="ui.FileStorage_Properties.size" type="String">Méret</Resource>
+		<Resource key="ui.FileStorage_Properties.uploadDate" type="String">Feltöltés dátuma</Resource>
+
+		<!-- ImageFile_Properties	-->
+		<Resource key="ui.ImageFile_Properties.thumbnail" type="String">Kis kép</Resource>
+
+		<!-- ImageFile_ImageView	-->
+		<Resource key="ui.ImageFile_ImageView.image" type="String">Kép</Resource>
+
+		<!-- PersonDataSheet_BaseData.jsp -->
+		<Resource key="ui.pds.basedata.table.header" type="String">Személyek</Resource>
+		<Resource key="ui.pds.basedata.familyName" type="String">Vezetéknév</Resource>
+		<Resource key="ui.pds.basedata.givenName" type="String">Keresztnév</Resource>
+		<Resource key="ui.pds.basedata.birthDate" type="String">Születési dátum</Resource>
+		<Resource key="ui.pds.basedata.prefix" type="String">Előtag</Resource>
+		<Resource key="ui.pds.basedata.prefix.dr" type="String">Dr.</Resource>
+		<Resource key="ui.pds.basedata.prefix.prof" type="String">Prof.</Resource>
+		<Resource key="ui.pds.basedata.prefix.jr" type="String">Ifj.</Resource>
+		<Resource key="ui.pds.basedata.prefix.old" type="String">Id.</Resource>
+		<Resource key="ui.pds.basedata.deletePersonConfirmation" type="String">Biztos, hogy eltávolítja a kiválasztott személyt?</Resource>
+		<Resource key="ui.pds.basedata.userData" type="String">Felhasználói Adatok</Resource>
+		<Resource key="ui.pds.basedata.userName" type="String">Felhaszn. Név</Resource>
+		<Resource key="ui.pds.basedata.password" type="String">Jelszó</Resource>
+		<Resource key="ui.pds.basedata.prefferedLocale" type="String">Rendszer Nyelv</Resource>
+		<Resource key="ui.pds.basedata.prefferedLocale.hu" type="String">Magyar</Resource>
+		<Resource key="ui.pds.basedata.prefferedLocale.en" type="String">Angol</Resource>
+
+		<!-- PersonDataSheet_EmailAddresses -->
+		<Resource key="ui.pds.emaildata.email" type="String">E-Mail</Resource>
+		<Resource key="ui.pds.emaildata.table.header" type="String">E-Mailek</Resource>
+
+		<!-- PersonDataSheet_WebPages -->
+		<Resource key="ui.pds.webpagedata.webpage" type="String">Weboldal</Resource>
+		<Resource key="ui.pds.webpagedata.table.header" type="String">Weboldalak</Resource>
+
+		<!-- PersonDataSheet_Geo -->
+		<Resource key="ui.pds.geodata.table.header" type="String">Címek</Resource>
+		<Resource key="ui.pds.geodata.country" type="String">Ország</Resource>
+		<Resource key="ui.pds.geodata.zip" type="String">Irányítószám</Resource>
+		<Resource key="ui.pds.geodata.settlement" type="String">Település</Resource>
+		<Resource key="ui.pds.geodata.district" type="String">Kerület</Resource>
+		<Resource key="ui.pds.geodata.street" type="String">Utca</Resource>
+		<Resource key="ui.pds.geodata.buildingNumber" type="String">Házszám</Resource>
+		<Resource key="ui.pds.geodata.default" type="String">Cím</Resource>
+
+		<!-- PlanDataSheet_RoleAssignments -->
+		<Resource key="ui.plands.roleassignments.role" type="String">Szerep</Resource>
+		<Resource key="ui.plands.roleassignments.roles" type="String">Szerepek</Resource>
+		<Resource key="ui.plands.roleassignments.associate" type="String">Hozzárendel</Resource>
+
+		<!-- Settlement_List -->
+		<Resource key="ui.settlementds.settlementlist.settlement" type="String">Település</Resource>
+
+		<!-- Settlement_Properties -->
+		<Resource key="ui.settlementds.settlementproperties.settlementName" type="String">Településnév</Resource>
+		<Resource key="ui.settlementds.settlementproperties.zipCodes" type="String">Irányítószámok</Resource>
+		<Resource key="ui.settlementds.settlementproperties.districts" type="String">Kerületek</Resource>
+
+		<!-- CompanyDataSheet_BaseData -->
+		<Resource key="ui.companyds.basedata.companyShortName" type="String">Rövid név</Resource>
+		<Resource key="ui.companyds.basedata.type.organizationUnit" type="String">Szervezeti Egység</Resource>
+		<Resource key="ui.companyds.basedata.tradeRegisterNumber" type="String">Cégjegyzékszám</Resource>
+		<Resource key="ui.companyds.basedata.taxNumber" type="String">Adószám</Resource>
+		<Resource key="ui.companyds.basedata.centralAccessibility" type="String">Közponi elérhetőségek</Resource>
+		<Resource key="ui.companyds.basedata.centralPhone" type="String">Központi telefon</Resource>
+		<Resource key="ui.companyds.basedata.administrator" type="String">Ügyintéző</Resource>
+		<Resource key="ui.companyds.basedata.adminPhone" type="String">Ügyintéző telefonszáma</Resource>
+
+		<!-- PartyRelationship -->
+		<Resource key="ui.partyRelationship.header" type="String">Kapcsolatok</Resource>
+		<Resource key="ui.partyRelationship.contactType" type="String">Kapcsolat típus</Resource>
+		<Resource key="ui.partyRelationship.ownRole" type="String">Saját szerep</Resource>
+		<Resource key="ui.partyRelationship.contactRole" type="String">Kapcsolat szerepe</Resource>
+		<Resource key="ui.partyRelationship.relationshipType.OrganizationHierarchy" type="String">Fiókhálózat</Resource>
+		<Resource key="ui.partyRelationship.relationshipType.Employment" type="String">Alkalmazás</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.Employer" type="String">Munkáltató</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.Employee" type="String">Munkavállaló</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.SuperiorOrganization" type="String">Bank</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.InferiorOrganization" type="String">Bank Fiók</Resource>
+
+		<!-- Errors -->
+		<Resource key="fc.autherror.authenticationError" type="String">Kérem jelentkezzen be!</Resource>
+		<Resource key="fc.autherror.authorizationError" type="String">A funkció használatára nem jogosult!</Resource>
+
+		<Resource key="fc.frontcontrollererror.frontControllerError" type="String">Front Controller Hiba</Resource>
+		<Resource key="fc.frontcontrollererror.internalError" type="String">Belső hiba keletkezett az alkalmazásban. Vegye fel a kapcsolatot a rendszeradminisztrátorral.</Resource>
+		<Resource key="fc.frontcontrollererror.designation" type="String">Hiba megnevezése:</Resource>
+		<Resource key="fc.frontcontrollererror.description" type="String">Hiba leírása:</Resource>
+		<Resource key="fc.frontcontrollererror.attributes" type="String">Szükséges attribútumok:</Resource>
+
+		<Resource key="fc.unknownerror.error" type="String">Ismeretlen FrontCommand Hiba</Resource>
+		<Resource key="fc.unknownerror.description" type="String">Leírás:</Resource>
+
+		<!-- Other Labels -->
+		<Resource key="ui.label.intakeNewGeneralResource" type="String">Új általános erőforrás felvétele</Resource>
+
+		<!-- Energometall -->
+		<Resource key="ui.label.orderId" type="String">Megrendelés azonosító</Resource>
+		<Resource key="ui.label.orderCompiler" type="String">Megrendelés összeállító</Resource>
+		<Resource key="ui.label.catalogName" type="String">Katalógusnév</Resource>
+		<Resource key="ui.label.catalogStatus" type="String">Katalógus állapota</Resource>
+		<Resource key="ui.label.catalogDescription" type="String">Katalógus leírás</Resource>
+		<Resource key="ui.label.price" type="String">Ár</Resource>
+		<Resource key="ui.label.priceType" type="String">Ártípus</Resource>
+		<Resource key="ui.label.valid" type="String">Érvényes</Resource>
+		<Resource key="ui.label.default" type="String">Alapértelmezett</Resource>
+		<Resource key="ui.label.taxationType" type="String">Adózási típus</Resource>
+		<Resource key="ui.label.taxationRate" type="String">Adózási mérték</Resource>
+		<Resource key="ui.label.EAN" type="String">Vonalkód</Resource>
+		<Resource key="ui.label.manufacturerCode" type="String">Gyártókód</Resource>
+		<Resource key="ui.label.feature" type="String">Tulajdonság</Resource>
+		<Resource key="ui.label.featureName" type="String">Tulajdonság neve</Resource>
+		<Resource key="ui.label.salesTaxPolicy" type="String">Áfakulcsok</Resource>
+		<Resource key="ui.label.productTypeIdentifier" type="String">Terméktípus azonosító</Resource>
+		<Resource key="ui.label.productCatalog" type="String">Termékkatalógus</Resource>
+		<Resource key="ui.label.isActive" type="String">Aktív</Resource>
+		<Resource key="ui.label.active" type="String">Aktív</Resource>
+		<Resource key="ui.label.inactive" type="String">Inaktív</Resource>
+		<Resource key="ui.label.deliveryAddress" type="String">Szállítási cím</Resource>
+		<Resource key="ui.label.orderDate" type="String">Megrendelés dátuma</Resource>
+		<Resource key="ui.label.order" type="String">Megrendelés</Resource>
+		<Resource key="ui.label.contactPerson" type="String">Kapcsolattartó személy</Resource>
+		<Resource key="ui.label.offeredPurchasePrice" type="String">Felajánlott vételi ár</Resource>
+		<Resource key="ui.label.purchaser" type="String">Vásárló</Resource>
+		<Resource key="ui.label.unitPrice" type="String">Egységár</Resource>
+		<Resource key="ui.label.customsTariffNumber" type="String">Vámtarifaszám</Resource>
+		<Resource key="ui.label.itemIdentifier" type="String">Cikkszám</Resource>
+		<Resource key="ui.label.orderLineId" type="String">Tételazonosító</Resource>
+		
+	</Language>
+</tns:Resources>

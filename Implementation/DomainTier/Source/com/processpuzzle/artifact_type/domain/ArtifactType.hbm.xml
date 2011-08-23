@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass name="com.processpuzzle.artifact_type.domain.ArtifactType"
+		table="T_ARTIFACT_TYPE"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<property name="name" />
+		<property name="description" />
+		<property name="artifactClassName"/>
+		<property name="domainClassName"/>
+		<property name="instanceFolder" />
+		<property name="caption"/>
+		<property name="baseUri"/>
+		<property name="isSystem"/>
+		<property name="createOnStartup"/>
+		<property name="isSingleton"/>
+		<property name="pessimisticLock"/>
+		<property name="isVersionControlled"/>
+		<property name="refreshOnDocumentActivation"/>
+		<property name="refreshOnViewActivation"/>
+		
+		<many-to-one 
+			name="group" 
+			column="ARTIFACT_TYPE_GROUP_ID" 
+			class="com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup"
+			lazy="false"
+			not-null="false"
+ 			insert="false"
+			update="false">
+		</many-to-one>
+		
+		<bag name="propertyDefinitions" cascade="all" lazy="false">
+			<key column="ARTIFACT_TYPE_ID"></key>
+			<one-to-many class="com.processpuzzle.artifact_type.domain.PropertyDefinition" />
+		</bag>
+		
+		<bag name="defaultAccessRights" cascade="all" lazy="false">
+			<key column="ARTIFACT_TYPE_ID"></key>
+			<one-to-many class="com.processpuzzle.application.security.domain.DefaultAccessRight" />
+		</bag>
+		
+		<bag name="availableViews" cascade="all" lazy="false">
+			<key column="ARTIFACT_TYPE_ID"></key>
+			<one-to-many class="com.processpuzzle.artifact_type.domain.ArtifactViewType" />
+		</bag>
+		
+		<bag name="associatedMenuItems" cascade="all" lazy="false">
+			<key column="ARTIFACT_TYPE_ID"></key>
+			<one-to-many class="com.processpuzzle.artifact_type.domain.ArtifactMenu" />
+		</bag>		
+	</union-subclass>
+</hibernate-mapping>

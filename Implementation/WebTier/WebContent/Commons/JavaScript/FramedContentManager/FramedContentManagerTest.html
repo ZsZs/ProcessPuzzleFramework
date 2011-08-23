@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Test page for FramedContentManager.js</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+    <script type="text/javascript" src="../MooTools/mootools-core-1.3.js"></script>
+    <script type="text/javascript" src="../MooTools/mootools-more-1.3.js"></script>
+    <script type="text/javascript" src="../Singleton/Singleton.js"></script>
+    <script type="text/javascript" src="FramedContentManager.js"></script>
+
+    <script type="text/javascript" >
+      window.addEvent( 'domready', function() {
+	    runTestFunction();
+  	  });
+  	  
+  	  var CONTENT_FRAME_NAME = "contentFrame";
+  	  var CONTENT_PAGE_ONE = "ContentPageOne.html";
+  	  var CONTENT_PAGE_TWO = "ContentPageTwo.html";
+  	  var MAIN_MENU_ID_ONE = "contentOne";
+  	  var MAIN_MENU_ID_TWO = "contentTwo";
+  	  var NAVIGATION_FRAME_NAME = "leftFrame";
+  	  var NAVIGATION_PAGE_NAME = "NavigatorPage.html";
+  	  var SELECTED_MENUITEM_CLASS = "selectedMenuItem";
+  	  var SUB_MENU_ID_ONE = "actionOne";
+  	  var SUB_MENU_ID_TWO = "actionTwo";
+  	  var contentFrame = null;
+  	  var contentPageOne = null;
+  	  //var framedContentManager = null;
+  	  var initialUrl = null;
+  	  var navigationFrame = null;
+  	  var navigationPage = null;
+
+      function setUp() {
+      	contentFrame = window.top.frames[1];
+      	contentPageOne = window.top.frames[CONTENT_FRAME_NAME];
+      	navigationFrame = window.top.frames[NAVIGATION_FRAME_NAME];
+
+      	framedContentManager = FramedContentManager.getInstance();
+      	
+      	waitWhileFramedPagesAreLoaded();
+      	
+      	initialUrl = framedContentManager.substringBeforeLast( document.URL, "#" );
+      	initialUrl = framedContentManager.substringBeforeLast( initialUrl, "?" );
+      	navigationPage = window.top.frames[NAVIGATION_FRAME_NAME].document;
+      }
+      
+      function tearDown() {
+      	//window.location.hash = "";
+      }
+
+      function testInitialization() {
+      alert("hello");
+		assertNotNull( "Framed content manager instantiates automatically a sole instance.", framedContentManager );
+		assertNotNull( "Sole instance is available at:", window.top.framedContentManager );
+		assertNotNull( "Sole instance is available at:", framedContentManager );
+		assertEquals( "Frameset's default value is:", window.top, framedContentManager.frameSet );
+		assertEquals( "Defult content frame is:", CONTENT_FRAME_NAME, framedContentManager.options.contentFrameName );
+		assertEquals( "Frameset's url is:", initialUrl, framedContentManager.framesetUrl );
+		assertEquals( "Frameset name is:", "FramedContentManagerTest.html", framedContentManager.frameSetName );
+		assertEquals( initialUrl.substring( 0, document.URL.lastIndexOf( "/" )+1 ), framedContentManager.contextRoot );
+		assertTrue( framedContentManager.isInitialized );
+      }
+
+      function testDeselectCurrentMenuItem() {
+      	//SETUP:
+      	var menuItemElement = navigationPage.getElementById( MAIN_MENU_ID_ONE );
+      	
+      	//ASSUME:
+      	assertEquals( "LI", menuItemElement.tagName.toUpperCase() );
+      	assertTrue( menuItemElement.hasClass( SELECTED_MENUITEM_CLASS ));
+      	
+      	//EXCERCISE:
+      	framedContentManager.deselectCurrentMenuItem( navigationPage );
+      	
+      	//VERIFY:
+      	assertFalse( menuItemElement.hasClass( SELECTED_MENUITEM_CLASS ));
+      	
+      	//TEAR DOWN:
+      	menuItemElement.addClass( SELECTED_MENUITEM_CLASS );
+      }
+      
+      function testDetermineContextRoot() {
+      	assertEquals( "http://itkodex.hu/", framedContentManager.determineContextRoot( "http://itkodex.hu/index.html" )); 
+      	assertEquals( "http://itkodex.hu/", framedContentManager.determineContextRoot( "http://itkodex.hu/index.html#Company/News.html" )); 
+      	assertEquals( "file:\\\\itkodex.hu\\", framedContentManager.determineContextRoot( "file:\\\\itkodex.hu\\index.html" )); 
+      }
+      
+      function testDeterminePageName() {
+      	assertEquals( NAVIGATION_PAGE_NAME, framedContentManager.determinePageName( navigationPage.URL ) );
+      	assertEquals( CONTENT_PAGE_ONE, framedContentManager.determinePageName( contentFrame.document.URL ) );
+      }
+      
+      function testDetermineRealUrl() {
+      	assertEquals( document.URL.substring( 0, document.URL.lastIndexOf( "/" )+1 ) + "Company/News.html", framedContentManager.determineRealUrl( document.URL + "/index.html#Company/News.html" )); 
+      }
+      
+      function testEnhanceUrl() {
+      	assertEquals( initialUrl + CONTENT_PAGE_ONE, framedContentManager.enhanceUrl( window.top.frames[CONTENT_FRAME_NAME].document ));
+      	assertEquals( window.location.href, framedContentManager.enhanceUrl( window.top.frames[CONTENT_FRAME_NAME].document ));
+      }
+      
+      function testLoadContent() {
+      	//ASUMTIONS:
+      	assertTrue( currentContentPageIs( CONTENT_PAGE_ONE ));
+      	
+      	//EXCERCISE:
+      	framedContentManager.loadContentPage( CONTENT_PAGE_TWO );
+      	
+      	//VERIFY:
+      	assertEquals( CONTENT_PAGE_TWO, framedContentManager.determinePageName( contentFrame.document.URL ));
+
+		//TEAR DOWN:
+      	framedContentManager.loadContentPage( CONTENT_PAGE_ONE );
+      }
+      
+      function testRedirectToFramedUrl() {
+      }
+      
+      function testRestoreStateFromUrl() {
+      	//SETUP:
+      	window.top.location.hash = CONTENT_PAGE_ONE;
+      	
+      	//EXCERCISE:
+      	framedContentManager.restoreStateFromUrl();
+      	
+      	//VERIFY:
+      	var timeoutId = verifyContentFrameUrl.delay( 2000 );
+      }
+      
+      function testSelectMenuItem() {
+      	//ASUMTIONS:
+      	var menuItemElement = navigationPage.getElementById( MAIN_MENU_ID_TWO );
+      	assertEquals( "LI", menuItemElement.tagName.toUpperCase() );
+      	assertFalse( menuItemElement.hasClass( SELECTED_MENUITEM_CLASS ));
+      	
+      	//EXCERCISE:
+      	framedContentManager.selectMenuItem( MAIN_MENU_ID_TWO, navigationPage );
+      	
+      	//VERIFY:
+      	assertTrue( menuItemElement.hasClass( SELECTED_MENUITEM_CLASS ));
+      	
+      	//TEAR DOWN:
+      	menuItemElement.removeClass( SELECTED_MENUITEM_CLASS );
+      }
+      
+      function testSelectMenuItemAndLoadPage() {
+      	//ASUMTIONS:
+      	assertTrue( menuItemHasClass( MAIN_MENU_ID_ONE, SELECTED_MENUITEM_CLASS ));
+      	assertFalse( menuItemHasClass( MAIN_MENU_ID_TWO, SELECTED_MENUITEM_CLASS ));
+      	assertTrue( currentContentPageIs( CONTENT_PAGE_ONE ));
+      	
+      	//EXCERCISE:
+      	framedContentManager.selectMenuItemAndLoadPage( MAIN_MENU_ID_TWO, CONTENT_PAGE_TWO, navigationPage, contentFrame );
+      	
+      	//VERIFY:
+      	assertFalse( menuItemHasClass( MAIN_MENU_ID_ONE, SELECTED_MENUITEM_CLASS ));
+      	assertTrue( menuItemHasClass( MAIN_MENU_ID_TWO, SELECTED_MENUITEM_CLASS ));
+      	assertTrue( currentContentPageIs( CONTENT_PAGE_TWO ));
+
+      	//TEAR DOWN:
+      	framedContentManager.selectMenuItemAndLoadPage( MAIN_MENU_ID_ONE, CONTENT_PAGE_ONE, navigationPage );
+      }
+      
+      function testStoreStateInUrl() {
+      	//SETUP:
+      	//EXCERCISE:
+      	framedContentManager.storeStateInUrl();
+      	
+      	//VERIFY:
+      	assertEquals( window.location.href, initialUrl + "#" + CONTENT_PAGE_ONE );
+      }
+      
+      function testSwapMenuItemSelection() {
+      	//ASSUME:
+      	var menuItemElementCurrent = navigationPage.getElementById( MAIN_MENU_ID_ONE );
+      	var menuItemElementToSelect = navigationPage.getElementById( MAIN_MENU_ID_TWO );  
+      	
+      	assertTrue( menuItemElementCurrent.hasClass( SELECTED_MENUITEM_CLASS ));
+      	assertFalse( menuItemElementToSelect.hasClass( SELECTED_MENUITEM_CLASS ));
+      	
+      	//EXCERCISE:
+      	framedContentManager.swapMenuItemSelection( MAIN_MENU_ID_TWO, navigationPage );
+      	
+      	//VERIFY:
+      	assertFalse( menuItemElementCurrent.hasClass( SELECTED_MENUITEM_CLASS ));
+      	assertTrue( menuItemElementToSelect.hasClass( SELECTED_MENUITEM_CLASS ));
+      	
+      	//TEAR DOWN:
+      	menuItemElementCurrent.addClass( SELECTED_MENUITEM_CLASS );
+      	menuItemElementToSelect.removeClass( SELECTED_MENUITEM_CLASS );
+      }
+      
+      //private helper methods
+      function currentContentPageIs( pageName ) {
+      	var currentContentPageName = framedContentManager.determinePageName( contentFrame.document.URL );
+      	return currentContentPageName == pageName;
+      }
+      
+      function menuItemHasClass( menuItemId, selectedMenuItemClass ) {
+      	var menuItemElement = navigationPage.getElementById( menuItemId );
+      	return menuItemElement.hasClass( selectedMenuItemClass );
+      }
+      
+      function menuItemTagNameIs( menuItemId, tagName ){
+      	var menuItemElement = navigationPage.getElementById( menuItemId );
+        return tagName.toUpperCase() == menuItemElement.tagName.toUpperCase();
+      }
+      
+      function verifyContentFrameUrl() {
+      	var pageName = framedContentManager.substringAfterLast( window.top.frames[CONTENT_FRAME_NAME].document.URL, "/" );
+      	assertEquals( CONTENT_PAGE_ONE, pageName );
+      }
+      
+      function waitWhileFramedPagesAreLoaded() {
+      	var startTime = $time();
+      	var elapsedTime = 0;
+      	var frames = window.top.frames;
+      	while( navigationFrame.document == null || contentFrame.document == null ){
+      		elapsedTime = $time() - startTime;
+      		if( elapsedTime > 2000 )
+      			throw new UninitializedContentManagerException( "Loading frames time out." );
+      	} 
+      }
+      
+      //runs a test function during debugging
+      function runTestFunction(){
+	    setUp();
+	    testSelectMenuItemAndLoadPage();
+		tearDown();
+	  }
+    </script>
+  </head>
+  <frameset rows="*", cols="200,*">
+	<frame src="NavigatorPage.html" frameborder=0 scrolling = auto name="leftFrame" >
+	<frame src="ContentPageOne.html" frameborder=0 scrolling = auto name="contentFrame" >
+  </frameset>
+</html>

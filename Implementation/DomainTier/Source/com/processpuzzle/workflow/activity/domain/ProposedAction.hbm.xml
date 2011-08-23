@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.activity.domain.ProposedAction"
+		table="T_PROPOSED_ACTION">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="PROPOSED_ACTION_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+
+		<many-to-one lazy="false" name="implementedAction"
+			class="com.processpuzzle.workflow.activity.domain.ImplementedAction"
+			cascade="save-update" />
+		<set name="bookedResources" cascade="all">
+			<key column="PROPOSED_ACTION_ID" />
+			<one-to-many
+				class="com.processpuzzle.workflow.activity.domain.GeneralResourceAllocation" />
+		</set>
+	</class>
+</hibernate-mapping>

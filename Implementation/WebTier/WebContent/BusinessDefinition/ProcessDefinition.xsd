@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.processpuzzle.com/type_definition/ProcessModelTypes" targetNamespace="http://www.processpuzzle.com/type_definition/ProcessModelTypes"
+	elementFormDefault="qualified">
+
+	<xsd:element name="ProcessDefinition">
+		<xsd:complexType>
+			<xsd:sequence maxOccurs="1">
+				<xsd:element name="protocols" type="ProtocolListDefinition" minOccurs="0"></xsd:element>
+				<xsd:element name="partyRoleTypes" type="PartyRoleTypes" minOccurs="0"></xsd:element>
+				<xsd:element name="partyRelationshipTypes" type="PartyRelationshipTypes" minOccurs="0"></xsd:element>
+				<xsd:element name="artifactTypes" type="ArtifactTypeListDefinition"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ProtocolDefinition Begin -->
+
+	<xsd:complexType name="ProtocolListDefinition">
+		<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:element name="activities" type="ActivityListDefinition" />
+			<xsd:element name="lifecycleProtocol" type="LifeCycleProtocolType" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ActivityListDefinition">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="activity" type="ActivityProtocolListDefinitionType" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ActivityProtocolListDefinitionType">
+		<xsd:attribute name="name" type="xsd:ID" use="required" />
+		<xsd:attribute name="performerRole" type="xsd:IDREF" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="LifeCycleProtocolType">
+		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="lifecyclePhase" type="LifeCyclePhaseProtocolType" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="prefix" type="xsd:string" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="LifeCyclePhaseProtocolType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="workflowDetail" type="WorkflowDetailProtocolType" minOccurs="0" />
+			<xsd:element name="activity"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="WorkflowDetailProtocolType">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="activity"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+	</xsd:complexType>
+
+
+	<!-- ProtocolDefinition End -->
+
+	<!-- PartyRoleTypeDefinition Begin -->
+
+	<xsd:complexType name="PartyRoleTypes">
+		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="partyRoleType" type="PartyRoleType" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="PartyRoleType">
+		<xsd:sequence minOccurs="0" maxOccurs="1">
+			<xsd:element name="partyRoleConstraints">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+						<xsd:element name="partyRoleConstraint" type="PartyRoleConstraint" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:ID" use="required"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="PartyRoleConstraint">
+		<xsd:attribute name="name" type="xsd:token" />
+	</xsd:complexType>
+
+	<xsd:complexType name="PartyRelationshipTypes">
+		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="partyRelationshipType" type="PartyRelationshipType" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="PartyRelationshipType">
+		<xsd:sequence minOccurs="0" maxOccurs="1">
+			<xsd:element name="partyRelationshipConstraints">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+						<xsd:element name="partyRelationshipConstraint" type="PartyRelationshipConstraint" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:token" />
+	</xsd:complexType>
+
+	<xsd:complexType name="PartyRelationshipConstraint">
+		<xsd:attribute name="clientRoleType" type="xsd:token" use="required" />
+		<xsd:attribute name="supplierRoleType" type="xsd:token" use="required" />
+	</xsd:complexType>
+
+	<!-- ArtifactTypeListDefinition Begin -->
+
+	<xsd:complexType name="ArtifactTypeListDefinition">
+		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="artifactTypeGroup">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="1" maxOccurs="1">
+						<xsd:element name="defaultAccessRights" type="AccessRightsList" minOccurs="0" maxOccurs="1" />
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="artifactType" type="ArtifactTypeDefinition"></xsd:element>
+						</xsd:sequence>
+					</xsd:sequence>
+					<xsd:attribute name="name" type="xsd:token" use="required"></xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ArtifactTypeDefinition">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="caption" type="xsd:string"></xsd:element>
+			<xsd:element name="baseUri" type="xsd:string"></xsd:element>
+			<xsd:element name="defaultAccessRights" type="AccessRightsList" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="creationProperties" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+						<xsd:element name="creationProperty" type="PropertyDefinition"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="availableViews" maxOccurs="unbounded" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+						<xsd:choice>
+							<xsd:element name="propertyViewType" type="PropertyViewType"></xsd:element>
+							<xsd:element name="printViewType" type="PrintViewType"></xsd:element>
+							<xsd:element name="editableTextViewType" type="EditableTextViewType"></xsd:element>
+							<xsd:element name="artifactListViewType" type="ArtifactListViewType"></xsd:element>
+							<xsd:element name="artifactModificationsViewType" type="ArtifactModificationsViewType"></xsd:element>
+							<xsd:element name="relatedArtifactsViewType" type="RelatedArtifactsViewType"></xsd:element>
+							<xsd:element name="artifactCommentsViewType" type="ArtifactCommentsViewType"></xsd:element>
+							<xsd:element name="accessRightsViewType" type="AccessRightsViewType"></xsd:element>
+							<xsd:element name="artifactCustomFormViewType" type="ArtifactCustomFormViewType"></xsd:element>
+							<xsd:element name="listQueryViewType" type="ListQueryViewType"></xsd:element>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="associatedMenuItems" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+						<xsd:element name="menuItem" type="MenuItemDefinition"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:token" use="required"></xsd:attribute>
+		<xsd:attribute name="group" type="xsd:token" use="required"></xsd:attribute>
+		<xsd:attribute name="artifactClassName" type="xsd:token" use="required"></xsd:attribute>
+		<xsd:attribute name="pessimisticLock" type="xsd:boolean" use="optional" default="false"></xsd:attribute>
+		<xsd:attribute name="isSystem" type="xsd:boolean" use="optional" default="false"></xsd:attribute>
+		<xsd:attribute name="isVersionControlled" type="xsd:boolean" use="optional" default="false"></xsd:attribute>
+		<xsd:attribute name="createOnStartUp" type="xsd:boolean" use="optional" default="false"></xsd:attribute>
+		<xsd:attribute name="isSingleton" type="xsd:boolean" use="optional" default="false"></xsd:attribute>
+		<xsd:attribute name="refreshOnDocumentActivation" type="xsd:boolean" default="false"></xsd:attribute>
+		<xsd:attribute name="refreshOnViewActivation" type="xsd:boolean" default="false"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="ArtifactViewType">
+		<xsd:sequence>
+			<xsd:element name="viewCaption" type="xsd:string" />
+			<xsd:element name="viewAccessUrl" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="associatedMenuItems" maxOccurs="unbounded" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+						<xsd:element name="menuItem" type="MenuItemDefinition"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:token" use="required"></xsd:attribute>
+		<xsd:attribute name="clientType" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="PropertyView"></xsd:enumeration>
+					<xsd:enumeration value="NativeView"></xsd:enumeration>
+					<xsd:enumeration value="BrowseView"></xsd:enumeration>
+					<xsd:enumeration value="PrintView"></xsd:enumeration>
+					<xsd:enumeration value="EditableHtmlView"></xsd:enumeration>
+					<xsd:enumeration value="CustomFormView"></xsd:enumeration>
+					<xsd:enumeration value="ListQueryView"></xsd:enumeration>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="presentationUri" type="xsd:token" use="optional"></xsd:attribute>
+		<xsd:attribute name="viewClassName" type="xsd:token" use="optional"></xsd:attribute>
+		<xsd:attribute name="isDefault" type="xsd:boolean" default="false" use="optional" />
+		<xsd:attribute name="isStatic" type="xsd:boolean" default="true" use="optional" />
+	</xsd:complexType>
+
+	<!-- ViewType extensions - begin -->
+	<xsd:complexType name="PropertyViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="PrintViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType">
+				<xsd:attribute name="xmlToFoXsltPath" type="xsd:token" use="required"></xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="EditableTextViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType">
+				<xsd:attribute name="xmlToHtmlXsltPath" type="xsd:token" use="required"></xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ArtifactListViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType">
+				<xsd:attribute name="listedArtifactType" type="xsd:token" use="required"></xsd:attribute>
+				<xsd:attribute name="orderBy" type="xsd:token" use="optional"></xsd:attribute>
+				<xsd:attribute name="order" type="SortOrder" use="optional"></xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ListQueryViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType">
+				<xsd:sequence>
+					<xsd:element name="preDefinedQueries" maxOccurs="1" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="query" minOccurs="1" maxOccurs="unbounded">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element name="description" type="xsd:string"></xsd:element>
+											<xsd:element name="statement" type="xsd:string"></xsd:element>
+										</xsd:sequence>
+										<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="targetPropertyView" type="xsd:token" use="required" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ArtifactModificationsViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="RelatedArtifactsViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ArtifactCommentsViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="AccessRightsViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ArtifactCustomFormViewType">
+		<xsd:complexContent>
+			<xsd:extension base="ArtifactViewType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- ViewType extensions - end -->
+
+	<xsd:complexType name="MenuItemDefinition">
+		<xsd:sequence>
+			<xsd:element name="itemName" type="xsd:token" />
+			<xsd:element name="command" type="WebUICommandDefinition" minOccurs="0" maxOccurs="1"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="PropertyDefinition">
+		<xsd:attribute name="name" type="xsd:token" use="required"></xsd:attribute>
+		<xsd:attribute name="type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="string"></xsd:enumeration>
+					<xsd:enumeration value="integer"></xsd:enumeration>
+					<xsd:enumeration value="date"></xsd:enumeration>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="ViewTypeName">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="ArtifactPropertyViewType"></xsd:enumeration>
+			<xsd:enumeration value="ArtifactListViewType"></xsd:enumeration>
+			<xsd:enumeration value="ArtifactPrintViewType"></xsd:enumeration>
+			<xsd:enumeration value="ArtifactModificationsViewType"></xsd:enumeration>
+			<xsd:enumeration value="ArtifactCommentsViewType"></xsd:enumeration>
+			<xsd:enumeration value="AccessRightsViewType"></xsd:enumeration>
+			<xsd:enumeration value="ArtifactCustomFormViewType"></xsd:enumeration>
+			<xsd:enumeration value="EditableTextViewType"></xsd:enumeration>
+			<xsd:enumeration value="RelatedArtifactsViewType"></xsd:enumeration>
+			<xsd:enumeration value="ListQueryViewType"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="BaseTypeName">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Document"></xsd:enumeration>
+			<xsd:enumeration value="List"></xsd:enumeration>
+			<xsd:enumeration value="InfoPage"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="WebUICommandDefinition">
+		<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+		<xsd:attribute name="type" type="CommandTypeName" use="required"></xsd:attribute>
+		<xsd:attribute name="customPrefix" type="xsd:string" use="optional"></xsd:attribute>
+		<xsd:attribute name="actionStatement" type="xsd:string" use="optional"></xsd:attribute>
+		<xsd:attribute name="description" type="xsd:string" use="optional"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="CommandTypeName">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CustomCommand"></xsd:enumeration>
+			<xsd:enumeration value="PrintActiveDocumentCommand"></xsd:enumeration>
+			<xsd:enumeration value="CloseActiveDocumentCommand"></xsd:enumeration>
+			<xsd:enumeration value="OpenDocumentSelectedInListCommand"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="SortOrder">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="asc"></xsd:enumeration>
+			<xsd:enumeration value="desc"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- ArtifactTypeListDefinition End -->
+
+	<xsd:complexType name="AccessRightsList">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="accessRight" type="AccessRightDefinition" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="AccessRightDefinition">
+		<xsd:attribute name="partyRoleType" />
+		<xsd:attribute name="canRead" />
+		<xsd:attribute name="canCreate" />
+		<xsd:attribute name="canModify" />
+		<xsd:attribute name="canDelete" />
+	</xsd:complexType>
+
+</xsd:schema>

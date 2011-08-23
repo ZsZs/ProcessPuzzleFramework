@@ -1,0 +1,22 @@
+body {
+	background-color:#D49063;
+}
+
+.FrameMinMaxButtonDiv {
+	position: absolute;
+	left: 5%;
+	width:90%; 
+	height:10px;
+	border:1px solid #999;
+	/* font-size:4px; font-weight:bold; */
+	color:#000; background:#ccc;
+	cursor:pointer;
+	text-align: center;
+	top:1px;
+}
+
+.FrameMinMaxButtonImg {
+	position: absolute;
+	top:0px;
+	/* left:50%; */
+}

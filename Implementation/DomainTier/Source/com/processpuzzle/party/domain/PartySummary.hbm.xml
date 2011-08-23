@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.party.domain.PartySummary"
+		table="T_PARTY_SUMMARY"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<!-- <key column="T_PARTY_SUMMARY_ID"/> -->
+		<property name="name"></property>
+		<property name="address"></property>
+		<property name="telephoneNumber"></property>
+		<property name="faxNumber"></property>
+		<property name="emailAddress"></property>
+		<property name="webAddress"></property>
+ 		
+<!-- 		<set name="identifiers" 
+			cascade="all, delete-orphan">
+			<key column="ORDER_ID" not-null="true"/>
+			<composite-element class="com.processpuzzle.order.domain.order.OrderIdentifier">
+				<property name="identifier" column="orderidentifier"/>
+			</composite-element>
+		</set>
+ -->
+	
+	</union-subclass>
+</hibernate-mapping>

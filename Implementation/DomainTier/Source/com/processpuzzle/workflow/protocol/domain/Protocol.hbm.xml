@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.workflow.protocol.domain.Protocol"
+		table="T_PROTOCOL"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<property name="name"></property>
+		<set name="simpleDependentProtocols" inverse="true"
+			cascade="all">
+			<key column="PROTOCOL_SIMP_CON_ID"></key>
+			<one-to-many
+				class="com.processpuzzle.workflow.protocol.domain.SimpleProtocolDependency" />
+		</set>
+		<set name="simpleConsequentProtocols" inverse="true"
+			cascade="all">
+			<key column="PROTOCOL_SIMP_DEP_ID"></key>
+			<one-to-many
+				class="com.processpuzzle.workflow.protocol.domain.SimpleProtocolDependency" />
+		</set>
+		<set name="compositeProtocolsIncludedIn" inverse="true"
+			cascade="all">
+			<key column="PROTOCOL_ID"></key>
+			<one-to-many
+				class="com.processpuzzle.workflow.protocol.domain.ProtocolCallAction" />
+		</set>
+		<property name="mandatory" />
+	</union-subclass>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.persistence.domain.TestEntitySubclass"
+		extends="com.processpuzzle.persistence.domain.TestEntity"
+		table="TEST_ENTITY_SUBCLASS">
+		 <!--<key column="TEST_ENTITY_CHILD_ID" />-->
+	</union-subclass>
+</hibernate-mapping>

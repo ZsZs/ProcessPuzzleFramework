@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass
+		name="com.processpuzzle.party.domain.PersonName"
+		table="T_PERSON_NAME"
+		extends="com.processpuzzle.party.domain.PartyName">
+ 		<key column="ID" />
+		<property name="prefix" />
+		<property name="familyName" />
+		<property name="givenName" />
+		<property name="middleName" />
+		<property name="suffix" />
+	</joined-subclass>
+</hibernate-mapping>

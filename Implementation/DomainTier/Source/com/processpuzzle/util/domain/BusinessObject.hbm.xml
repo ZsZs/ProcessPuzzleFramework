@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.util.domain.BusinessObject" table="T_BUSINESS_OBJECT">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="BUSINESS_OBJECT_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<many-to-one lazy="false" name="commissionerCompany" class="com.processpuzzle.party.domain.Company"/>
+		<many-to-one lazy="false" name="commissionerOrganizationUnit" class="com.processpuzzle.party.domain.OrganizationUnit"/>
+		
+	</class>
+</hibernate-mapping>

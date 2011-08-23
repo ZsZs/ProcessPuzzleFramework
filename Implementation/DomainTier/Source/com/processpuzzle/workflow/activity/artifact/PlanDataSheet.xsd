@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pp="http://www.processpuzzle.com/TypeDefintions/Artifacts/Action" targetNamespace="http://www.processpuzzle.com/TypeDefintions/Artifacts/Action">
+
+	<xsd:element name="PlanDataSheet" type="pp:PlanDataSheetDefinition"></xsd:element>
+
+	<xsd:complexType name="PlanDataSheetDefinition">
+		<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:element name="planName" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+			<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+				<xsd:element name="plan" type="pp:PlanDefinition"/>
+			</xsd:sequence>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:integer" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="ActionDefinition">
+		<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:element name="name" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:integer" use="required"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="PlanDefinition">
+	  	<xsd:complexContent>
+	  		<xsd:extension base="pp:ActionDefinition">
+				<xsd:choice minOccurs="1" maxOccurs="unbounded">
+					<xsd:element name="plan" type="pp:PlanDefinition" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="action" type="pp:ActionDefinition" minOccurs="1" maxOccurs="1"></xsd:element>
+				</xsd:choice>
+			</xsd:extension>
+	  	</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

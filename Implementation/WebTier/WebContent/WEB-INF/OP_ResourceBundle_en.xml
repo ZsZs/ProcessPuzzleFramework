@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources xmlns:tns="http://www.itcodex.com/ResourceBundle" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.itcodex.com/ResourceBundle ../../WebContent/Configuration/ResourceBundle.xsd ">
+	<Language name="en">
+
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress" type="String">Telecom Address</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.countryCode" type="String">Country code</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.nationalDirectDialingPrefix" type="String">National direct dialing prefix</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.areaCode" type="String">Area code</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.number" type="String">Number</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.extension" type="String">Extension</Resource>
+		<Resource key="com.processpuzzle.party.domain.TelecomAddress.physicalType" type="String">Physical type</Resource>
+
+		<Resource key="com.processpuzzle.party.domain.EmailAddress" type="String">Email address</Resource>
+		<Resource key="com.processpuzzle.party.domain.WebPageAddress" type="String">Web page address</Resource>
+		<Resource key="com.processpuzzle.party.domain.WebPageAddress.url" type="String">Url</Resource>
+
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress" type="String">Geographic address</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.addressLine" type="String">Address line</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.city" type="String">City</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.regionOrState" type="String">State</Resource>
+		<Resource key="com.processpuzzle.party.domain.GeographicAddress.zipOrPostCode" type="String">Zipcode</Resource>
+
+		<Resource key="ui.generic.undefined" type="String">Undefined</Resource>
+		<Resource key="ui.generic.the" type="String">The</Resource>
+		<Resource key="ui.generic.table.summary" type="String">Summary</Resource>
+		<Resource key="ui.generic.table.listed" type="String">Listed</Resource>
+		<Resource key="ui.generic.select" type="String">Select</Resource>
+		<Resource key="ui.generic.select.notset" type="String">not set</Resource>
+		<Resource key="ui.generic.select.none" type="String">none</Resource>
+		<Resource key="ui.generic.select.all" type="String">all</Resource>
+		<Resource key="ui.generic.button.cancel" type="String">Cancel</Resource>
+		<Resource key="ui.generic.button.ok" type="String">Ok</Resource>
+		<Resource key="ui.generic.button.new" type="String">New</Resource>
+		<Resource key="ui.generic.button.edit" type="String">Edit</Resource>
+		<Resource key="ui.generic.button.editing" type="String">Editing</Resource>
+		<Resource key="ui.generic.button.remove" type="String">Remove</Resource>
+		<Resource key="ui.generic.button.delete" type="String">Delete</Resource>
+		<Resource key="ui.generic.button.previous" type="String">Previous</Resource>
+		<Resource key="ui.generic.button.next" type="String">Next</Resource>
+		<Resource key="ui.generic.button.open" type="String">Open</Resource>
+		<Resource key="ui.generic.button.reserve" type="String">Reserve</Resource>
+		<Resource key="ui.generic.button.release" type="String">Release</Resource>
+		<Resource key="ui.generic.button.undoReserve" type="String">Undo reserve</Resource>
+		<Resource key="ui.generic.button.save" type="String">Save</Resource>
+		<Resource key="ui.generic.button.close" type="String">Close</Resource>
+		<Resource key="ui.generic.button.open" type="String">Open</Resource>
+		<Resource key="ui.generic.button.browse" type="String">Browse</Resource>
+		<Resource key="ui.generic.button.upload" type="String">Upload</Resource>
+		<Resource key="ui.generic.button.further" type="String">Further</Resource>
+		<Resource key="ui.generic.button.create" type="String">Create</Resource>
+		<Resource key="ui.generic.artifact.reservestatus.reserve" type="String">Reserved</Resource>
+		<Resource key="ui.generic.artifact.reservestatus.release" type="String">Released</Resource>
+		<Resource key="ui.generic.artifact.versionControlled.true" type="String">Yes</Resource>
+		<Resource key="ui.generic.artifact.versionControlled.false" type="String">No</Resource>
+		<Resource key="ui.generic.message.underMaintenance" type="String">Application is under maintenance!</Resource>
+
+		<Resource key="ui.generic.button.backToList" type="String">Back to list</Resource>
+		<Resource key="ui.generic.button.add" type="String">Add</Resource>
+		<Resource key="ui.generic.button.modify" type="String">Modify</Resource>
+		<Resource key="ui.generic.button.insert" type="String">Insert</Resource>
+		<Resource key="ui.generic.button.yes" type="String">Yes</Resource>
+		<Resource key="ui.generic.button.no" type="String">No</Resource>
+		<Resource key="ui.generic.button.start" type="String">Start</Resource>
+		<Resource key="ui.generic.button.finish" type="String">Finish</Resource>
+		<Resource key="ui.generic.button.suspend" type="String">Suspend</Resource>
+		<Resource key="ui.generic.button.resume" type="String">Resume</Resource>
+		<Resource key="ui.generic.button.discard" type="String">Discard</Resource>
+		<Resource key="ui.generic.button.accept" type="String">Accept</Resource>
+		<Resource key="ui.generic.button.defaultPerformer" type="String">Default performer</Resource>
+
+		<Resource key="ui.generic.action.undefined" type="String">Undefined</Resource>
+		<Resource key="ui.generic.action.none" type="String">None</Resource>
+		<Resource key="ui.generic.action.Proposed" type="String">Proposed</Resource>
+		<Resource key="ui.generic.action.Implemented" type="String">Implemented</Resource>
+		<Resource key="ui.generic.action.Completed" type="String">Completed</Resource>
+
+		<Resource key="ui.generic.action.event.Implementation" type="String">Implementation</Resource>
+		<Resource key="ui.generic.action.event.Completition" type="String">Completition</Resource>
+
+		<!-- Labels -->
+
+		<!-- General -->
+		<Resource key="ui.label.name" type="String">Name</Resource>
+		<Resource key="ui.label.userName" type="String">User name</Resource>
+		<Resource key="ui.label.fullName" type="String">Full name</Resource>
+		<Resource key="ui.label.designation" type="String">Designation</Resource>
+		<Resource key="ui.label.description" type="String">Description</Resource>
+		<Resource key="ui.label.comment" type="String">Comment</Resource>
+		<Resource key="ui.label.identifier" type="String">Identifier</Resource>
+		<Resource key="ui.label.fileNumber" type="String">Filenumber</Resource>
+		<Resource key="ui.label.priority" type="String">Priority</Resource>
+		<Resource key="ui.label.subject" type="String">Subject</Resource>
+		<Resource key="ui.label.status" type="String">Status</Resource>
+		<Resource key="ui.label.type" type="String">Type</Resource>
+		<Resource key="ui.label.protocol" type="String">Protocol</Resource>
+		<Resource key="ui.label.executable" type="String">Executable</Resource>
+		<Resource key="ui.label.event" type="String">Event</Resource>
+		<Resource key="ui.label.address" type="String">Address</Resource>
+		<Resource key="ui.label.choose" type="String">-Choose-</Resource>
+		<Resource key="ui.label.version" type="String">Version</Resource>
+		<Resource key="ui.label.versionControlled" type="String">Version controlled</Resource>
+
+		<!-- Date -->
+		<Resource key="ui.label.hour" type="String">Hour</Resource>
+		<Resource key="ui.label.day" type="String">Day</Resource>
+		<Resource key="ui.label.week" type="String">Week</Resource>
+		<Resource key="ui.label.month" type="String">Month</Resource>
+		<Resource key="ui.label.deadline" type="String">Deadline</Resource>
+		<Resource key="ui.label.projectedBegin" type="String">Projected begin</Resource>
+		<Resource key="ui.label.projectedEnd" type="String">Projected end</Resource>
+		<Resource key="ui.label.realBegin" type="String">Real begin</Resource>
+		<Resource key="ui.label.realEnd" type="String">Real end</Resource>
+		
+		<!-- Parties -->
+		<Resource key="ui.label.user" type="String">User</Resource>
+		<Resource key="ui.label.responsible" type="String">Responsible</Resource>
+		<Resource key="ui.label.owner" type="String">Owner</Resource>
+		<Resource key="ui.label.procurer" type="String">Procurer</Resource>
+		<Resource key="ui.label.person" type="String">Person</Resource>
+		<Resource key="ui.label.persons" type="String">Persons</Resource>
+		<Resource key="ui.label.company" type="String">Company</Resource>
+		<Resource key="ui.label.company.org" type="String">Company / Organization</Resource>
+		<Resource key="ui.label.lastModifier" type="String">Last modifier</Resource>
+		
+		<!-- Values -->
+		<Resource key="ui.label.date" type="String">Date</Resource>
+		<Resource key="ui.label.time" type="String">Time</Resource>
+		<Resource key="ui.label.amount" type="String">Amount</Resource>
+		<Resource key="ui.label.quantity" type="String">Quantity</Resource>
+		<Resource key="ui.label.measure" type="String">Measure</Resource>
+		<Resource key="ui.label.resource" type="String">Resource</Resource>
+		<Resource key="ui.label.resourceType" type="String">Resource type</Resource>
+		<Resource key="ui.label.huf" type="String">HUF</Resource>
+		<Resource key="ui.label.netTotal" type="String">Net total</Resource>
+		<Resource key="ui.label.netAmount" type="String">Net amount</Resource>
+		<Resource key="ui.label.creationDate" type="String">Creation date</Resource>
+		<Resource key="ui.label.lastModDate" type="String">Last modification date</Resource>
+
+		<!-- Filter	-->
+		<Resource key="ui.filter.field" type="String">Field</Resource>
+		<Resource key="ui.filter.condition" type="String">Condition</Resource>
+		<Resource key="ui.filter.operator" type="String">Operator</Resource>
+		<Resource key="ui.filter.value" type="String">Value</Resource>
+		<Resource key="ui.filter.order" type="String">Sorting order</Resource>
+		<Resource key="ui.filter.orderType" type="String">Sorting type</Resource>
+		<Resource key="ui.filter.ascending" type="String">Ascending</Resource>
+		<Resource key="ui.filter.descending" type="String">Descending</Resource>
+		<Resource key="ui.filter.showList" type="String">Show list</Resource>
+		<Resource key="ui.filter.predefined" type="String">Predefined Filter</Resource>
+		<Resource key="ui.filter.custom" type="String">Custom Filter</Resource>
+		<Resource key="ui.filter.query" type="String">Query</Resource>
+		<Resource key="ui.filter.and" type="String">AND</Resource>
+		<Resource key="ui.filter.or" type="String">OR</Resource>
+		<Resource key="ui.filter.compile" type="String">Compile</Resource>
+		<Resource key="ui.filter.execute" type="String">Execute</Resource>
+
+		<!-- ArtifactList_ListedArtifacts.jsp -->
+		<Resource key="ui.ArtifactList_ListedArtifacts.reserveStatus" type="String">Reserve status</Resource>
+		<Resource key="ui.ArtifactList_ListedArtifacts.useBy" type="String">Use by</Resource>
+
+		<!-- Artifact_AccessRights.jsp -->
+		<Resource key="ui.Artifact_AccessRights.read" type="String">Read</Resource>
+		<Resource key="ui.Artifact_AccessRights.create" type="String">Create</Resource>
+		<Resource key="ui.Artifact_AccessRights.write" type="String">Write</Resource>
+		<Resource key="ui.Artifact_AccessRights.delete" type="String">Delete</Resource>
+
+		<!-- Artifact_Versions.jsp -->
+		<Resource key="ui.Artifact_Versions.beginOfMod" type="String">Begin of modification</Resource>
+		<Resource key="ui.Artifact_Versions.endOfMod" type="String">End of modification</Resource>
+		<Resource key="ui.Artifact_Versions.modifier" type="String">Modifier</Resource>
+
+		<!-- DatabaseAdmin -->
+		<Resource key="ui.databaseAdministration.backupDate" type="String">Date of backup</Resource>
+		<Resource key="ui.databaseAdministration.startBackup" type="String">Start BackUp</Resource>
+		<Resource key="ui.databaseAdministration.startRestore" type="String">Start Restore</Resource>
+		<Resource key="ui.databaseAdministration.welcome" type="String">Database Administration</Resource>
+		<Resource key="ui.databaseAdministration.restoreButton" type="String">Restore</Resource>
+		<Resource key="ui.databaseAdministration.notLoggedIn" type="String">You are not logged in!</Resource>
+		<Resource key="ui.databaseAdministration.undoMaintenance" type="String">Maintenance is undone!</Resource>
+		<Resource key="ui.databaseAdministration.backedUp" type="String">Backup is successfully done.</Resource>
+		<Resource key="ui.databaseAdministration.restored" type="String">Database restore is finished.</Resource>
+		<Resource key="ui.databaseAdministration.error" type="String">Error</Resource>
+		<Resource key="ui.databaseAdministration.tooManySignedInUser" type="String">Too many user are signed in!</Resource>
+
+		<Resource key="ui.databaseAdministration.adminInfo" type="String">Now, you can create BackUp from the entire database or Restore saved dataset by the following buttons below.</Resource>
+		<Resource key="ui.databaseAdministration.schemaDropWarning" type="String">Warning! If you drop the database the data you delete is gone forever!</Resource>
+		<Resource key="ui.databaseAdministration.schemaDropConfirmation" type="String">Are you sure you want to completely remove all data in the dataset?</Resource>
+		<Resource key="ui.databaseAdministration.noExistingBackupWarningPartOne" type="String">Please attention! You have not created any BackUp yet or BackUp is unavailable!</Resource>
+		<Resource key="ui.databaseAdministration.noExistingBackupWarningPartTwo" type="String">You have to make at least one BackUp copy from the database to start Restore!</Resource>
+		<Resource key="ui.databaseAdministration.backupConfirmation" type="String">Would you like to create a BackUp from the database?</Resource>
+		<Resource key="ui.databaseAdministration.cancelledBackup" type="String">BackUp process cancelled!</Resource>
+		<Resource key="ui.databaseAdministration.availableBackups" type="String">Currently available backups</Resource>
+
+		<!-- AccessRightsViolation	-->
+		<Resource key="ui.arv.header" type="String">Warning!</Resource>
+		<Resource key="ui.arv.info" type="String">You have not any rights to the following operations:</Resource>
+
+		<!-- FileStorage_Properties	-->
+		<Resource key="ui.FileStorage_Properties.originalFileName" type="String">File name</Resource>
+		<Resource key="ui.FileStorage_Properties.size" type="String">Size</Resource>
+		<Resource key="ui.FileStorage_Properties.uploadDate" type="String">Upload date</Resource>
+
+		<!-- ImageFile_Properties	-->
+		<Resource key="ui.ImageFile_Properties.thumbnail" type="String">Thumbnail</Resource>
+
+		<!-- ImageFile_ImageView	-->
+		<Resource key="ui.ImageFile_ImageView.image" type="String">Image</Resource>
+
+		<!-- PersonDataSheet_BaseData.jsp -->
+		<Resource key="ui.pds.basedata.table.header" type="String">Persons</Resource>
+		<Resource key="ui.pds.basedata.familyName" type="String">Family nme</Resource>
+		<Resource key="ui.pds.basedata.givenName" type="String">Given name</Resource>
+		<Resource key="ui.pds.basedata.birthDate" type="String">Date of birth</Resource>
+		<Resource key="ui.pds.basedata.prefix" type="String">Prefix</Resource>
+		<Resource key="ui.pds.basedata.prefix.dr" type="String">Dr.</Resource>
+		<Resource key="ui.pds.basedata.prefix.prof" type="String">Prof.</Resource>
+		<Resource key="ui.pds.basedata.prefix.jr" type="String">Jr.</Resource>
+		<Resource key="ui.pds.basedata.prefix.old" type="String">Old.</Resource>
+		<Resource key="ui.pds.basedata.deletePersonConfirmation" type="String">Are you sure you want to remove the selected person?</Resource>
+		<Resource key="ui.pds.basedata.userData" type="String">User Data</Resource>
+		<Resource key="ui.pds.basedata.userName" type="String">User Name</Resource>
+		<Resource key="ui.pds.basedata.password" type="String">Password</Resource>
+		<Resource key="ui.pds.basedata.prefferedLocale" type="String">System Language</Resource>
+		<Resource key="ui.pds.basedata.prefferedLocale.hu" type="String">Hungarian</Resource>
+		<Resource key="ui.pds.basedata.prefferedLocale.en" type="String">English</Resource>
+
+		<!-- PersonDataSheet_EmailAddresses -->
+		<Resource key="ui.pds.emaildata.email" type="String">E-Mail</Resource>
+		<Resource key="ui.pds.emaildata.table.header" type="String">E-Mails</Resource>
+
+		<!-- PersonDataSheet_WebPages -->
+		<Resource key="ui.pds.webpagedata.webpage" type="String">Website</Resource>
+		<Resource key="ui.pds.webpagedata.table.header" type="String">WebSites</Resource>
+
+		<!-- PersonDataSheet_Geo -->
+		<Resource key="ui.pds.geodata.table.header" type="String">Addresses</Resource>
+		<Resource key="ui.pds.geodata.country" type="String">Country</Resource>
+		<Resource key="ui.pds.geodata.zip" type="String">ZIP</Resource>
+		<Resource key="ui.pds.geodata.settlement" type="String">Settlement</Resource>
+		<Resource key="ui.pds.geodata.district" type="String">District</Resource>
+		<Resource key="ui.pds.geodata.street" type="String">Street</Resource>
+		<Resource key="ui.pds.geodata.buildingNumber" type="String">Building number</Resource>
+		<Resource key="ui.pds.geodata.default" type="String">Default</Resource>
+
+		<!-- PlanDataSheet_RoleAssignments -->
+		<Resource key="ui.plands.roleassignments.role" type="String">Role</Resource>
+		<Resource key="ui.plands.roleassignments.roles" type="String">Roles</Resource>
+		<Resource key="ui.plands.roleassignments.associate" type="String">Associate</Resource>
+
+		<!-- Settlement_List -->
+		<Resource key="ui.settlementds.settlementlist.settlement" type="String">Settlement</Resource>
+
+		<!-- Settlement_Properties -->
+		<Resource key="ui.settlementds.settlementproperties.settlementName" type="String">Settlement name</Resource>
+		<Resource key="ui.settlementds.settlementproperties.zipCodes" type="String">ZIP Codes</Resource>
+		<Resource key="ui.settlementds.settlementproperties.districts" type="String">Districts</Resource>
+
+		<!-- CompanyDataSheet_BaseData -->
+		<Resource key="ui.companyds.basedata.companyShortName" type="String">Short name</Resource>
+		<Resource key="ui.companyds.basedata.type.organizationUnit" type="String">Organization Unit</Resource>
+		<Resource key="ui.companyds.basedata.tradeRegisterNumber" type="String">Trade register number</Resource>
+		<Resource key="ui.companyds.basedata.taxNumber" type="String">Tax number</Resource>
+		<Resource key="ui.companyds.basedata.centralAccessibility" type="String">Central accessibility</Resource>
+		<Resource key="ui.companyds.basedata.centralPhone" type="String">Central telephone</Resource>
+		<Resource key="ui.companyds.basedata.administrator" type="String">Administrator</Resource>
+		<Resource key="ui.companyds.basedata.adminPhone" type="String">Administrator's phone</Resource>
+
+		<!-- PartyRelationship -->
+		<Resource key="ui.partyRelationship.header" type="String">Contacts</Resource>
+		<Resource key="ui.partyRelationship.contactType" type="String">Contact type</Resource>
+		<Resource key="ui.partyRelationship.ownRole" type="String">Own role</Resource>
+		<Resource key="ui.partyRelationship.contactRole" type="String">Contact role</Resource>
+		<Resource key="ui.partyRelationship.relationshipType.OrganizationHierarchy" type="String">Organization Hierarchy</Resource>
+		<Resource key="ui.partyRelationship.relationshipType.Employment" type="String">Employment</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.Employer" type="String">Employer</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.Employee" type="String">Employee</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.SuperiorOrganization" type="String">Bank</Resource>
+		<Resource key="ui.partyRelationship.validRoleType.InferiorOrganization" type="String">Subdiary Bank</Resource>
+
+		<!-- Errors -->
+		<Resource key="fc.autherror.authenticationError" type="String">You have to login!</Resource>
+		<Resource key="fc.autherror.authorizationError" type="String">You don't have any permission!</Resource>
+
+		<Resource key="fc.frontcontrollererror.frontControllerError" type="String">Front Controller Error</Resource>
+		<Resource key="fc.frontcontrollererror.internalError" type="String">An internal error occured in the application. Please contact your system administrator.</Resource>
+		<Resource key="fc.frontcontrollererror.designation" type="String">Error name:</Resource>
+		<Resource key="fc.frontcontrollererror.description" type="String">Error description:</Resource>
+		<Resource key="fc.frontcontrollererror.attributes" type="String">Required attributes:</Resource>
+
+		<Resource key="fc.unknownerror.error" type="String">Unknown FrontCommand Error</Resource>
+		<Resource key="fc.unknownerror.description" type="String">Description:</Resource>
+
+		<!-- Other Labels -->
+		<Resource key="ui.label.intakeNewGeneralResource" type="String">Intake new general resource</Resource>
+		
+	</Language>
+</tns:Resources>

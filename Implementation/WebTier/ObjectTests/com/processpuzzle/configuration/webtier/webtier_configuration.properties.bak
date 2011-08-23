@@ -1,0 +1,20 @@
+domain.class.repository.mapping = com.processpuzzle.configuration.OPDomainClassRepositoryMapping
+command.mapping = com.processpuzzle.framework.application_configuration.control.ObjectPuzzleCommandMapping
+persistence.strategy.name = hibernate
+persistence.strategy.configuration = com.processpuzzle.framework.configuration.webtier/webtier_persistence_configuration.properties
+
+internalization.resource.bundle = WebContent/WEB-INF/ResourceBundle
+default.locale = hu
+available.locales = hu|en
+
+adi.location = C:\\Temp\\OPDocs
+adi.version = 0.6
+
+runtime.environment = local
+
+artifacttypes.definition = com/processpuzzle/framework/configuration/webtier/OPWebTierTest_ArtifactTypes.xml;
+system.data.loader.class = com.processpuzzle.artifact_type.domain.ArtifactTypesLoader;com.processpuzzle.artifact.domain.SystemArtifactLoader
+
+#system.data.loader.class = com.itcodex.adi.configuration.domainlogic.ADIComponentParameters
+#migration.data.loader.class = someMigrationLoader
+#test.data.loader.class = com.itcodex.adi.persistence.domain.ADITestDatas

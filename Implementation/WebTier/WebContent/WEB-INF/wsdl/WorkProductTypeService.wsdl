@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="WorkProductTypeService" 
+	targetNamespace="http://www.processpuzzle.com" 
+	xmlns:pp="http://www.processpuzzle.com"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+
+  <wsdl:types>
+	  <xsd:schema targetNamespace="http://www.processpuzzle.com" xmlns:pp="http://www.processpuzzle.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	  <xsd:complexType name="WorkProductType">
+	    <xsd:sequence>
+	      <xsd:element name="description" type="xsd:string"/>
+	    </xsd:sequence>
+	    <xsd:attribute name="id" type="xsd:integer"/>
+	    <xsd:attribute name="name" type="xsd:string"/>
+	  </xsd:complexType>
+	</xsd:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="FindByIdRequest">
+  	<wsdl:part name="id" type="xsd:integer" />
+  </wsdl:message>
+  
+  <wsdl:message name="FindByIdResponse">
+    <wsdl:part name="workProductType" type="pp:WorkProductType" />
+  </wsdl:message>
+  
+  <wsdl:portType name="WorkProductTypeService">
+    <wsdl:operation name="findById">
+      <wsdl:input message="pp:FindByIdRequest"/>
+      <wsdl:output message="pp:FindByIdResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  
+  <wsdl:binding name="WorkProductTypeBinding" type="pp:WorkProductTypeService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    
+    <wsdl:operation name="findById">
+      <soap:operation soapAction="http://www.processpuzzle.com/WorkProductType/findById" />
+      <wsdl:input><soap:body use="literal"/></wsdl:input>
+      <wsdl:output><soap:body use="literal" parts="workProductType" /></wsdl:output>
+    </wsdl:operation>
+    
+  </wsdl:binding>
+  
+  <wsdl:service name="WorkProductTypeService">
+  	<wsdl:port name="WorkProductTypePort" binding="pp:WorkProductTypeBinding">
+  		<soap:address location="http://localhost:8080/ProcessPuzzle" />
+  	</wsdl:port>
+  </wsdl:service>
+  
+</wsdl:definitions>

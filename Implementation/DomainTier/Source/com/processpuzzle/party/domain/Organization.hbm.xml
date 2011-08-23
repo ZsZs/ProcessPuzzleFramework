@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass
+		name="com.processpuzzle.party.domain.Organization"
+		table="T_ORGANIZATION"
+		extends="com.processpuzzle.party.domain.Party">
+		<key column="ID" />
+<!-- 
+		<set name="affiliations" cascade="all">
+			<key column="ORGANIZATION_ID" />
+			<one-to-many class="com.processpuzzle.party.domain.Affiliation" />
+		</set>
+ -->
+	</joined-subclass>
+</hibernate-mapping>

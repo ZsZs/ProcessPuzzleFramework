@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applicationRepository>
+	<application name="DomainTierTestApplication">
+		<description>Used to test ProcessPuzzle domain tier functionality.</description>
+		<version>1.0.0</version>
+		<className>com.processpuzzle.application.domain.Application</className>
+		<executionStatus>stopped</executionStatus>
+		<installationStatus>installed</installationStatus>
+		<configurationDescriptorPath>classpath:com/itcodex/objectpuzzle/framework/configuration/domaintier/configuration_descriptor.xml</configurationDescriptorPath>
+	</application>
+	
+	<application name="AlreadyInstalledApplication">
+		<description>Test application for testing application installer.</description>
+		<version>1.0.0</version>
+		<className>com.processpuzzle.application.domain.AlreadyInstalledApplication</className>
+		<executionStatus>stopped</executionStatus>
+		<installationStatus>installed</installationStatus>
+		<configurationDescriptorPath>classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml</configurationDescriptorPath>
+	</application>
+</applicationRepository>

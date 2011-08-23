@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.artifact.domain.HTMLText"
+		table="T_HTML_TEXT"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<property name="divId"></property>
+		<property name="text"></property>
+		<property name="creationTimeStamp" type="java.util.Date"></property>
+	</union-subclass>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+div.messageHeader{
+font-weight: bold;
+font-size: 10px;
+padding-top: 0.5cm;
+}
+
+div.messageText{
+font-family: Verdana;
+font-size: 10px;
+padding-left: 1.0cm;
+}
+
+input.buttonSmall{
+	background-color: transparent;
+	background-image: url("../Images/buttonSmall.jpg");
+	background-repeat: no-repeat;
+	font-family: Tahoma;
+	font-weight: normal;
+	height:22px;
+	width:106px;
+	border:0px;
+}
+input.buttonLarge{
+	background-color: transparent;
+	background-image: url("../Images/buttonLarge.jpg");
+	background-repeat: no-repeat;
+	height:22px;
+	width:217px;
+	border:0px;
+}

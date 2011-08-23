@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.inventory.domain.Holding" table="T_HOLDING">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="HOLDING_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<property name="name" />
+		<component name="balance" class="com.processpuzzle.fundamental_types.quantity.domain.Quantity">
+			<property name="amount"></property>
+			<component name="unit" class="com.processpuzzle.fundamental_types.quantity.domain.Unit">
+				<property name="name" column="balanceName"></property>
+				<property name="symbol" column="balanceSymbol"></property>
+			</component>
+		</component>
+		<many-to-one lazy="false" name="type" unique="true" column="HOLDING_TYPE_ID" class="com.processpuzzle.inventory.domain.HoldingType" />
+		<many-to-one lazy="false" name="location" unique="true" column="LOCATION_ID" class="com.processpuzzle.inventory.domain.Location" />
+		<many-to-one lazy="false" name="entry" unique="true" column="INVENTORY_ENTRY_ID" class="com.processpuzzle.inventory.domain.InventoryEntry" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Test page for ArtifactTypeLoader.js</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<script language="JavaScript" src="../FundamentalTypes/JavaCompatibility.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="ArtifactTypeLoader.js"></script>
+</head>
+
+<body>
+	<h1>ArtifactTypeLoader.js test page</H1>
+	<p>This page contains tests for ArtifactTypeLoader.js JavaScript class.</P>
+
+	<script language=javascript>
+		var TEST_FILE_PATH = "../ArtifactTypeLoader/TestArtifactTypes.xml";
+		var artifactTypeLoader = null;
+
+		function setUp(){
+			artifactTypeLoader = new ArtifactTypeLoader();
+		}
+
+		function tearDown(){
+			artifactTypeLoader = null;
+		}
+
+		function testArtifactTypeLoader_ForLoadTypesFromFile(){
+			try{
+				artifactTypeLoader.loadTypesFromFile( TEST_FILE_PATH );
+			} catch(e) {
+				fail("Cannot load types from file!");
+			}
+			assertEquals( "Number of loaded types is 4.", 4, artifactTypeLoader.getCountOfTypes() );
+		}
+
+		function testArtifactTypeLoader_ForLoadTypesFromXml(){
+			try{
+				var xml = XMLFile(  TEST_FILE_PATH );
+				
+				artifactTypeLoader.loadTypesFromXml(  xml);
+			} catch(e) {
+				fail("Cannot load types from xml!");
+			}
+			assertEquals( "Number of loaded types is 4.", 4, artifactTypeLoader.getCountOfTypes() );
+		}
+
+		function runTestFunction(){
+			setUp();
+			testArtifactTypeLoader_ForLoadTypes();
+			tearDown();
+		}
+
+		//runTestFunction();
+
+	</script>
+
+</body>
+</html>

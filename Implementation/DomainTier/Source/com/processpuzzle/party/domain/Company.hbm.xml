@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.party.domain.Company" 
+		table="T_COMPANY"
+		extends="com.processpuzzle.party.domain.Organization">
+		<property name="tradeRegisterNumber"></property>
+		<property name="taxNumber"></property>
+		<property name="administrator"></property>
+		<property name="adminPhone"></property>
+		<property name="shortName"></property>
+	</union-subclass>
+</hibernate-mapping>

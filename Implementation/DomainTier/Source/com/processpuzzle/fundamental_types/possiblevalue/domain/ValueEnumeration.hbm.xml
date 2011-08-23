@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.itcodex.objectpuzzle.framework.fundamental_types.domain.possible_value.ValueEnumeration" 
+		table="T_VALUE_ENUM"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<set name="values" cascade="all">
+				<key column="VALUE_ENUM_ID"></key>
+				<one-to-many class="com.processpuzzle.persistence.typemapping.domain.QuantityTypeMapping"/>
+		</set>
+	</union-subclass>
+</hibernate-mapping>

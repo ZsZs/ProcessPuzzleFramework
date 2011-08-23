@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+  	<title>TreeWidget Test Suite</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link type="text/css" href="../JsUnit/app/css/jsUnitStyle.css" rel="stylesheet"></link>
+	<script type="text/javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->		
+	
+	<script language="JavaScript">
+		function suite() {
+		  var newsuite = new top.jsUnitTestSuite();
+		  newsuite.addTestPage("../TreeWidget/TreeNodeTest.html");
+		  newsuite.addTestPage("../TreeWidget/CompositeTreeNodeTest.html");
+		  newsuite.addTestPage("../TreeWidget/RootNodeTest.html");
+		  newsuite.addTestPage("../TreeWidget/LeafTreeNodeTest.html");
+		  newsuite.addTestPage("../TreeWidget/TreeWidgetTest.html");
+		  return newsuite;
+		}
+		</script>
+  </head>
+
+  <body>
+    <h1>TreeWidget Test Suite</h1>
+
+    <p>This page contains a suite of tests for&nbsp;'TreeWidget' testing.</p>
+  </body>
+</html>

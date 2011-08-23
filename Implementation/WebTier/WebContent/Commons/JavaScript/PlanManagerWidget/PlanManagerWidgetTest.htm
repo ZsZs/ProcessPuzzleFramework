@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Test page for PlanManagerWidget.js</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<link rel="stylesheet" href="../../Skins/Default/Styles/base.css" type="text/css">
+	<link rel="stylesheet" href="../../Skins/Default/Styles/content.css" type="text/css">
+	<link rel="stylesheet" href="../../Skins/Default/Styles/form_styles.css" type="text/css">
+	<link rel="stylesheet" href="../TreeWidget/TreeWidget.css" type="text/css">
+
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Collection.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/ArrayList.js"></script>
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Configuration.js"></script>
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="JavaScript" src="../BrowserWidget/BrowserWidget.js"></script>
+	<script language="JavaScript" src="../WebUIController/WebUIController.js"></script>
+	<script language="JavaScript" src="../TreeWidget/TreeNode.js"></script>
+	<script language="JavaScript" src="../TreeWidget/TreeWidget.js"></script>
+	<script language="JavaScript" src="../TreeWidget/UndefinedTreeDefinitionException.js"></script>
+	<script language="javascript" src="PlanManagerWidget.js" ></script>
+</head>
+
+<body>
+	<h1>PlanManagerWidget.js test page</h1>
+	<p>This page contains tests for PlanManagerWidget.js javascript class.</p>
+
+<!--
+	<FORM method="post" name="PlanManagerForm" enctype="text/plain">
+		<div class="readOnlyContainer">
+			<div class="row">
+				<span class="label">xx folyamat tevékenységei:</span>
+				<DIV id="TreeView"></DIV>
+			</div>
+			<div class="row">
+				<SPAN class="label">Kiválasztott tevékenység: </SPAN>
+				<SPAN class="formw">Ajánlatkészítés</SPAN>
+				<input type="button" class="buttonSmall" id="abandoneActionButton" value="Elvet">
+			</div>
+			<div class="row">
+				<SPAN class="label">Új tevékenség: </SPAN>
+				<SPAN class="formw">
+					<select name="protocol">
+						<OPTION value="0">Ajánlatkészítés</OPTION>
+						<OPTION value="1">Kockázatelemzés</OPTION>
+					</select>	
+				<INPUT type="text"></INPUT>
+				<input type="button" class="buttonSmall" id="newActionButton" value="Beszúr">
+				</SPAN>
+			</div>
+		</div>
+	</FORM>
+-->
+
+	<div id="PlanManagerWidget"></div>
+		
+	<script language="javascript">
+		var widgetName = null;
+		var planDataUri = "TestPlanHierarchy.xml";
+		var webUiController = null;
+		var planManagerWidget = null;
+		var divElementForPlanManager = document.getElementById("PlanManagerWidget");
+		var applicationConfiguration = null;
+
+		function setUp() {
+			widgetName = "PlanManagerWidget";
+			webUiController = new WebUiController();
+			webUiController.loadResourceBundle( "ResourceBundle", new Locale( "hu" ));
+			applicationConfiguration = new Configuration();
+		
+			applicationConfiguration.addProperty( PLAN_URI_PROPERTY_NAME, "TestPlanHierarchy.xml" );
+			applicationConfiguration.addProperty( PLAN_TRANSFORMATION_URI_PROPERTY_NAME, "TransformPlanDataToTree.xsl" );
+			webUiController.setApplicationConfiguration( applicationConfiguration );
+			planManagerWidget = new PlanManagerWidget( webUiController, 1, planDataUri, widgetName );
+		}
+
+		function tearDown() {
+			if( planManagerWidget.isVisible() ) planManagerWidget.hide();
+			planManagerWidget = null;
+			webUiController = null;
+		}
+
+		function testConstructor_ForSucess() {
+			assertNotNull( "PlanManagerWidget is created", planManagerWidget);
+		}
+
+		function testConstructor_ForUndefinedParameters() {
+			try { planManagerWidget = new PlanManagerWidget( null, 1, planDataUri ); }
+			catch (exception) { 
+				assertTrue("If 'webUiController' parameter is undefined the contructor throws IllegalArgumentException", exception instanceof IllegalArgumentException); 
+			}
+
+			try { planManagerWidget = new PlanManagerWidget( webUiController, null, planDataUri ); }
+			catch (exception) { 
+				assertTrue("If 'windowMode' parameter is undefined the contructor throws InvalidParameterException", exception instanceof InvalidParameterException); 
+			}
+
+			try { planManagerWidget = new PlanManagerWidget( webUiController, 1, "" ); }
+			catch (exception) { 
+				assertTrue("If 'planDataUri' parameter is undefined the contructor throws IllegalArgumentException", exception instanceof IllegalArgumentException); 
+			}
+		}
+		
+		//Checks the dom elements which should be inserted.
+		function testShow_ForElement() {
+			planManagerWidget.show();
+			assertNotNull( "The show() method inserts a form into the container element.", document.getElementById( PLAN_MANAGER_FORM_NAME ));
+			assertNotNull( "The show() method inserts a TreeWidget into the container div.", document.getElementById("PlanTreeWidget"));
+
+			var treeWidget = planManagerWidget.getPlanTreeWidget();
+			assertTrue("TreeWidget shold be transparently loaded cause of planManagerWidget.show() method.", treeWidget.isVisible());
+		}
+		
+		function testHide_ForTreeWidget() {
+			planManagerWidget.show();
+			planManagerWidget.hide();
+			assertNull("The hide() method removes the TreeWidget from container div.", document.getElementById("PlanTreeWidget"));
+		}
+		
+		function testOnActionTreeClick() {
+			planManagerWidget.show();
+			var selectedActionElement = lookUpSelectedActionElement();
+			assertEquals("If we click on a node whithin the tree, the appropriate action would be highlighted.", "ProjectPreparation", selectedActionElement.nodeValue);
+		}
+/*		
+		function testOnSelectedActionClick() {
+			planManagerWidget.show();
+			var selectedActionElement = lookUpSelectedActionElement();
+			selectedActionElement.click();
+			assertEquals("If we click on a node whithin the tree, the appropriate action would be highlighted.", "ProjectPreparation", selectedActionElement.nodeValue );
+		}
+*/		
+		//runs a test funcition during debugging
+		function runTestFunction() {
+			setUp();
+			testShow_ForElement()
+//			tearDown();
+		}
+
+		runTestFunction();
+		
+		function lookUpSelectedActionElement () {
+			var treeNodeDivElement = document.getElementById( 1 );
+			var treeNodeCaptionElement = treeNodeDivElement.getElementsByTagName("A");
+			treeNodeCaptionElement[0].click();
+			var selectedActionElement = planManagerWidget.getSelectedActionTextElement();
+			return selectedActionElement;
+		}
+
+	</script>
+</body>
+</html>

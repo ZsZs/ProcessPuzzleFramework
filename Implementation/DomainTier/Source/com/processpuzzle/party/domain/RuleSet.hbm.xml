@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.party.domain.RuleSet"
+		table="T_RULESET">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="RULESET_ID" not-null="true" />
+			<generator class="native" />
+		</id>
+	</class>
+</hibernate-mapping>

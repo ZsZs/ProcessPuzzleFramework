@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity" 
+		table="T_ARTIFACT_TYPE_GROUP">
+
+		<property name="name"/>
+		<bag name="artifactTypes" cascade="all,delete-orphan" lazy="false">
+			<key column="ARTIFACT_TYPE_GROUP_ID"  not-null="false" />
+			<one-to-many class="com.processpuzzle.artifact_type.domain.ArtifactType"/>
+		</bag>
+		
+		<bag name="defaultAccessRights" cascade="all,delete-orphan" lazy="false">
+			<key column="ARTIFACT_TYPE_GROUP_ID" />
+			<one-to-many class="com.processpuzzle.application.security.domain.DefaultAccessRight"/>
+		</bag>
+	</union-subclass>
+</hibernate-mapping>

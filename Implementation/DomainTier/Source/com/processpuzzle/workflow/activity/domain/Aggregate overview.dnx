@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.2/Umlnotation" xmi:id="_xF2EQFXvEdyt4qf3L0WIYQ" type="Class" name="Aggregate overview.dnx">
+  <children xmi:id="_A5C3QFXwEdyt4qf3L0WIYQ" type="rectangle">
+    <children xmi:id="_A5C3Q1XwEdyt4qf3L0WIYQ" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:id="_A5C3RFXwEdyt4qf3L0WIYQ" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A5C3QVXwEdyt4qf3L0WIYQ" fillColor="13369343" lineColor="6737151"/>
+    <element xmi:type="notation:Diagram" href="Activity%20statuses%20-%20overview.dnx#_sKYPAFYfEdyqYfLIEsvGsg?Activity%20statuses%20-%20overview.dnx?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A5C3QlXwEdyt4qf3L0WIYQ" x="263" y="2882" width="29289" height="15452"/>
+  </children>
+  <children xmi:id="_1b9I4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_1dxGwFXvEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_1dxGwVXvEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_1dxGwlXvEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_1dxGw1XvEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_1dxGxFXvEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_1d3NYFXvEdyt4qf3L0WIYQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1d3NYVXvEdyt4qf3L0WIYQ"/>
+    </children>
+    <children xmi:id="_1d3NYlXvEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1d3NY1XvEdyt4qf3L0WIYQ"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_1b9I4VXvEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Plan%5Bjcu%5Ename=Plan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1b9I4lXvEdyt4qf3L0WIYQ" x="10258" y="7594"/>
+  </children>
+  <children xmi:id="_3_W5wFXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_3_dAYFXvEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_3_dAYVXvEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_3_dAYlXvEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_3_dAY1XvEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_3_dAZFXvEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_3_dAZVXvEdyt4qf3L0WIYQ" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3_dAZlXvEdyt4qf3L0WIYQ"/>
+    </children>
+    <children xmi:id="_3_dAZ1XvEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3_dAaFXvEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_3_W5wVXvEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3_W5wlXvEdyt4qf3L0WIYQ" x="16878" y="7671" width="4471"/>
+  </children>
+  <children xmi:id="_8xKb4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_8xKb41XvEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_8xKb5FXvEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_8xKb5VXvEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_8xKb5lXvEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_8xKb51XvEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_8xKb6FXvEdyt4qf3L0WIYQ" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_8xKb6VXvEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <children xmi:id="_8xKb6lXvEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_8xKb61XvEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_8xKb4VXvEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Action%5Bjcu%5Ename=Action.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8xKb4lXvEdyt4qf3L0WIYQ" x="10686" y="4072" width="9737" height="2091"/>
+  </children>
+  <children xmi:id="_D6ufkFXwEdyt4qf3L0WIYQ" type="Text">
+    <children xmi:id="_D6ufk1XwEdyt4qf3L0WIYQ" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:id="_D6uflFXwEdyt4qf3L0WIYQ" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_D6ufkVXwEdyt4qf3L0WIYQ" fontColor="10485760" fontName="Comic Sans MS" fontHeight="12" bold="true" description="Workflow - Aggregate overview"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D6ufklXwEdyt4qf3L0WIYQ" x="396" y="396"/>
+  </children>
+  <children xmi:id="_VlOLYFXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_VlOLY1XwEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_VlOLZFXwEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_VlOLZVXwEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_VlOLZlXwEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_VlOLZ1XwEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_VlOLaFXwEdyt4qf3L0WIYQ" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_VlOLaVXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <children xmi:id="_VlOLalXwEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_VlOLa1XwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_VlOLYVXwEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=AbandonedAction%5Bjcu%5Ename=AbandonedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VlOLYlXwEdyt4qf3L0WIYQ" x="17036" y="16321"/>
+  </children>
+  <children xmi:id="_ZA-gmVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZA-gnFXwEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ZA-gnVXwEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ZA-gnlXwEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_ZA-gn1XwEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_ZA-goFXwEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_ZA-goVXwEdyt4qf3L0WIYQ" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZA-golXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <children xmi:id="_ZA-go1XwEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZA-gpFXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ZA-gmlXwEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=GenericAction%5Bjcu%5Ename=GenericAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZA-gm1XwEdyt4qf3L0WIYQ" x="17098" y="12746"/>
+  </children>
+  <children xmi:id="_ZA-gsVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZBEnMFXwEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ZBEnMVXwEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ZBEnMlXwEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_ZBEnM1XwEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_ZBEnNFXwEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_ZBEnNVXwEdyt4qf3L0WIYQ" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZBEnNlXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <children xmi:id="_ZBEnN1XwEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZBEnOFXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ZA-gslXwEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ImplementedAction%5Bjcu%5Ename=ImplementedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZA-gs1XwEdyt4qf3L0WIYQ" x="22168" y="16304"/>
+  </children>
+  <children xmi:id="_ZBEnOVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZBEnPFXwEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ZBEnPVXwEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ZBEnPlXwEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_ZBEnP1XwEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_ZBEnQFXwEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_ZBEnQVXwEdyt4qf3L0WIYQ" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZBEnQlXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <children xmi:id="_ZBEnQ1XwEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZBEnRFXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ZBEnOlXwEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ActionStatus%5Bjcu%5Ename=ActionStatus.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZBEnO1XwEdyt4qf3L0WIYQ" x="23237" y="8595"/>
+  </children>
+  <children xmi:id="_ZBEnT1XwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZBEnUlXwEdyt4qf3L0WIYQ" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ZBEnU1XwEdyt4qf3L0WIYQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ZBEnVFXwEdyt4qf3L0WIYQ" type="Stereotype"/>
+    <children xmi:id="_ZBEnVVXwEdyt4qf3L0WIYQ" type="Name"/>
+    <children xmi:id="_ZBEnVlXwEdyt4qf3L0WIYQ" type="Parent"/>
+    <children xmi:id="_ZBEnV1XwEdyt4qf3L0WIYQ" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZBEnWFXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <children xmi:id="_ZBEnWVXwEdyt4qf3L0WIYQ" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZBEnWlXwEdyt4qf3L0WIYQ" collapsed="true"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ZBEnUFXwEdyt4qf3L0WIYQ" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ProposedAction%5Bjcu%5Ename=ProposedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZBEnUVXwEdyt4qf3L0WIYQ" x="9660" y="16393"/>
+  </children>
+  <children xmi:id="_sRsp4FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_sRsp41YdEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_sRsp5FYdEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_sRsp5VYdEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_sRsp5lYdEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_sRsp51YdEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_sRsp6FYdEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sRsp6VYdEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_sRsp6lYdEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sRsp61YdEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_sRsp4VYdEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=PlanType%5Bjcu%5Ename=PlanType.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sRsp4lYdEdyqYfLIEsvGsg" x="7128" y="1452"/>
+  </children>
+  <children xmi:id="_sRsp7FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_sRsp71YdEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_sRsp8FYdEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_sRsp8VYdEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_sRsp8lYdEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_sRsp81YdEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_sRsp9FYdEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sRsp9VYdEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_sRsp9lYdEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sRsp91YdEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_sRsp7VYdEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ActionReference%5Bjcu%5Ename=ActionReference.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sRsp7lYdEdyqYfLIEsvGsg" x="1171" y="3736" height="5715"/>
+  </children>
+  <children xmi:id="_sRsp-FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_sRsp-1YdEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_sRsp_FYdEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_sRsp_VYdEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_sRsp_lYdEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_sRsp_1YdEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_sRsqAFYdEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sRsqAVYdEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_sRsqAlYdEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sRsqA1YdEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_sRsp-VYdEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ProcessPlan%5Bjcu%5Ename=ProcessPlan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sRsp-lYdEdyqYfLIEsvGsg" x="6737" y="11790" width="6456"/>
+  </children>
+  <children xmi:id="_vbRp_FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbRp_1YdEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_vbRqAFYdEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_vbRqAVYdEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_vbRqAlYdEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_vbRqA1YdEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_vbRqBFYdEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_vbRqBVYdEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_vbRqBlYdEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_vbRqB1YdEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_vbRp_VYdEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ProtocolCallAction%5Bjcu%5Ename=ProtocolCallAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.protocol.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vbRp_lYdEdyqYfLIEsvGsg" x="1188" y="1056"/>
+  </children>
+  <children xmi:id="_vbXwklYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbXwlVYdEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_vbXwllYdEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_vbXwl1YdEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_vbXwmFYdEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_vbXwmVYdEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_vbXwmlYdEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_vbXwm1YdEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_vbXwnFYdEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_vbXwnVYdEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_vbXwk1YdEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ActionDependency%5Bjcu%5Ename=ActionDependency.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vbXwlFYdEdyqYfLIEsvGsg" x="767" y="14285"/>
+  </children>
+  <children xmi:id="_Tg1jAlYeEdyqYfLIEsvGsg">
+    <children xmi:id="_Tg1jBVYeEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Tg1jBlYeEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Tg1jB1YeEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_Tg1jCFYeEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_Tg1jCVYeEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_Tg1jClYeEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Tg1jC1YeEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_Tg1jDFYeEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Tg1jDVYeEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Tg1jA1YeEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=WorkflowTeam%5Bjcu%5Ename=WorkflowTeam.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.party_management.party.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Tg1jBFYeEdyqYfLIEsvGsg" x="660" y="19140"/>
+  </children>
+  <children xmi:id="_Tg1jDlYeEdyqYfLIEsvGsg">
+    <children xmi:id="_Tg1jEVYeEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Tg1jElYeEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Tg1jE1YeEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_Tg1jFFYeEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_Tg1jFVYeEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_Tg1jFlYeEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Tg1jF1YeEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_Tg1jGFYeEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Tg1jGVYeEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Tg1jD1YeEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=WorkflowRepository%5Bjcu%5Ename=WorkflowRepository.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Tg1jEFYeEdyqYfLIEsvGsg" x="24989" y="3802"/>
+  </children>
+  <children xmi:id="_Tg7puVYeEdyqYfLIEsvGsg">
+    <children xmi:id="_Tg7pvFYeEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Tg7pvVYeEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Tg7pvlYeEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_Tg7pv1YeEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_Tg7pwFYeEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_Tg7pwVYeEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Tg7pwlYeEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_Tg7pw1YeEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Tg7pxFYeEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Tg7pulYeEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Project%5Bjcu%5Ename=Project.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.party_management.party.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Tg7pu1YeEdyqYfLIEsvGsg" x="5676" y="19272"/>
+  </children>
+  <children xmi:id="_E321YFYgEdyqYfLIEsvGsg" type="Note">
+    <eAnnotations xmi:id="_E321ZVYgEdyqYfLIEsvGsg" source="DiagramLink"/>
+    <children xmi:id="_E321Y1YgEdyqYfLIEsvGsg" type="DiagramName"/>
+    <children xmi:id="_E321ZFYgEdyqYfLIEsvGsg" type="Description"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_E321YVYgEdyqYfLIEsvGsg"/>
+    <element xmi:type="notation:Diagram" href="Activity%20statuses%20-%20overview.dnx#_sKYPAFYfEdyqYfLIEsvGsg?Activity%20statuses%20-%20overview.dnx?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E321YlYgEdyqYfLIEsvGsg" x="12540" y="660" height="766"/>
+  </children>
+  <children xmi:id="_1UfXsFYrEdyqYfLIEsvGsg">
+    <children xmi:id="_1UfXs1YrEdyqYfLIEsvGsg" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_1UfXtFYrEdyqYfLIEsvGsg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_1UfXtVYrEdyqYfLIEsvGsg" type="Stereotype"/>
+    <children xmi:id="_1UfXtlYrEdyqYfLIEsvGsg" type="Name"/>
+    <children xmi:id="_1UfXt1YrEdyqYfLIEsvGsg" type="Parent"/>
+    <children xmi:id="_1UfXuFYrEdyqYfLIEsvGsg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1UfXuVYrEdyqYfLIEsvGsg"/>
+    </children>
+    <children xmi:id="_1UfXulYrEdyqYfLIEsvGsg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1UfXu1YrEdyqYfLIEsvGsg"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_1UfXsVYrEdyqYfLIEsvGsg" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Artifact%5Bjcu%5Ename=Artifact.java%5Bjpack%5Ename=com.processpuzzle.artifact.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1UfXslYrEdyqYfLIEsvGsg" x="19800" y="1188" width="4709"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_xF2EQVXvEdyt4qf3L0WIYQ"/>
+  <element xsi:nil="true"/>
+  <edges xmi:id="_9E1l0FXvEdyt4qf3L0WIYQ" source="_1b9I4FXvEdyt4qf3L0WIYQ" target="_8xKb4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_9E1l01XvEdyt4qf3L0WIYQ" type="NameLabel">
+      <children xmi:id="_9E1l1VXvEdyt4qf3L0WIYQ" type="Stereotype"/>
+      <children xmi:id="_9E1l1lXvEdyt4qf3L0WIYQ" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9E1l1FXvEdyt4qf3L0WIYQ" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_9E1l0VXvEdyt4qf3L0WIYQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="mmi:///#jgen%5Bjsrctype%5Ename=Plan%5Bjcu%5Ename=Plan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Action%5Bjcu%5Ename=Action.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Generalization"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9E1l0lXvEdyt4qf3L0WIYQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_9E7selXvEdyt4qf3L0WIYQ" source="_3_W5wFXvEdyt4qf3L0WIYQ" target="_8xKb4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_9E7sfVXvEdyt4qf3L0WIYQ" type="NameLabel">
+      <children xmi:id="_9E7sf1XvEdyt4qf3L0WIYQ" type="Stereotype"/>
+      <children xmi:id="_9E7sgFXvEdyt4qf3L0WIYQ" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9E7sflXvEdyt4qf3L0WIYQ" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_9E7se1XvEdyt4qf3L0WIYQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="mmi:///#jgen%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Action%5Bjcu%5Ename=Action.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Generalization"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9E7sfFXvEdyt4qf3L0WIYQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_ZBKt01XwEdyt4qf3L0WIYQ" source="_VlOLYFXwEdyt4qf3L0WIYQ" target="_ZA-gsVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZBKt1lXwEdyt4qf3L0WIYQ" type="FromMultiplicityLabel">
+      <children xmi:id="_ZBKt2FXwEdyt4qf3L0WIYQ" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZBKt11XwEdyt4qf3L0WIYQ" y="396"/>
+    </children>
+    <children xmi:id="_ZBKt2VXwEdyt4qf3L0WIYQ" type="FromRoleLabel">
+      <children xmi:id="_ZBKt21XwEdyt4qf3L0WIYQ" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZBKt2lXwEdyt4qf3L0WIYQ" y="-397"/>
+    </children>
+    <children xmi:id="_ZBKt3FXwEdyt4qf3L0WIYQ" type="associationTypeLabel">
+      <children xmi:id="_ZBQ0cFXwEdyt4qf3L0WIYQ" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZBKt3VXwEdyt4qf3L0WIYQ" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ZBKt1FXwEdyt4qf3L0WIYQ" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=implementedAction%5Bjsrctype%5Ename=AbandonedAction%5Bjcu%5Ename=AbandonedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZBKt1VXwEdyt4qf3L0WIYQ" points="[0, 860, -13, -7858]$[0, 2447, -13, -6271]"/>
+  </edges>
+  <edges xmi:id="_ZBQ0hFXwEdyt4qf3L0WIYQ" source="_VlOLYFXwEdyt4qf3L0WIYQ" target="_ZA-gmVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZBQ0h1XwEdyt4qf3L0WIYQ" type="NameLabel">
+      <children xmi:id="_ZBQ0iVXwEdyt4qf3L0WIYQ" type="Stereotype"/>
+      <children xmi:id="_ZBQ0ilXwEdyt4qf3L0WIYQ" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZBQ0iFXwEdyt4qf3L0WIYQ" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ZBQ0hVXwEdyt4qf3L0WIYQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="mmi:///#jgen%5Bjsrctype%5Ename=AbandonedAction%5Bjcu%5Ename=AbandonedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=GenericAction%5Bjcu%5Ename=GenericAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Generalization"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZBQ0hlXwEdyt4qf3L0WIYQ" points="[0, -860, 4075, 5953]$[-4075, -2447, 0, 4366]"/>
+  </edges>
+  <edges xmi:id="_ZBQ0i1XwEdyt4qf3L0WIYQ" source="_VlOLYFXwEdyt4qf3L0WIYQ" target="_ZBEnT1XwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZBQ0jlXwEdyt4qf3L0WIYQ" type="FromMultiplicityLabel">
+      <children xmi:id="_ZBQ0kFXwEdyt4qf3L0WIYQ" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZBQ0j1XwEdyt4qf3L0WIYQ" y="396"/>
+    </children>
+    <children xmi:id="_ZBQ0kVXwEdyt4qf3L0WIYQ" type="FromRoleLabel">
+      <children xmi:id="_ZBQ0k1XwEdyt4qf3L0WIYQ" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZBQ0klXwEdyt4qf3L0WIYQ" y="-397"/>
+    </children>
+    <children xmi:id="_ZBQ0lFXwEdyt4qf3L0WIYQ" type="associationTypeLabel">
+      <children xmi:id="_ZBQ0llXwEdyt4qf3L0WIYQ" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZBQ0lVXwEdyt4qf3L0WIYQ" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ZBQ0jFXwEdyt4qf3L0WIYQ" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=proposedAction%5Bjsrctype%5Ename=AbandonedAction%5Bjcu%5Ename=AbandonedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZBQ0jVXwEdyt4qf3L0WIYQ" points="[0, 860, -8876, -7858]$[8863, 2447, -13, -6271]"/>
+  </edges>
+  <edges xmi:id="_ZBQ0l1XwEdyt4qf3L0WIYQ" source="_VlOLYFXwEdyt4qf3L0WIYQ" target="_ZA-gsVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_ZBQ0mlXwEdyt4qf3L0WIYQ" type="KindLabel">
+      <children xmi:id="_ZBQ0nFXwEdyt4qf3L0WIYQ" type="Stereotype"/>
+      <children xmi:id="_ZBQ0nlXwEdyt4qf3L0WIYQ" type="Kind"/>
+      <children xmi:id="_ZBQ0nVXwEdyt4qf3L0WIYQ" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZBQ0m1XwEdyt4qf3L0WIYQ" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ZBQ0mFXwEdyt4qf3L0WIYQ" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=AbandonedAction%5Bjcu%5Ename=AbandonedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=ImplementedAction%5Bjcu%5Ename=ImplementedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZBQ0mVXwEdyt4qf3L0WIYQ" points="[0, 860, -13, -7858]$[0, 2447, -13, -6271]"/>
+  </edges>
+  <edges xmi:id="_lHOAQlYdEdyqYfLIEsvGsg" source="_ZBEnOVXwEdyt4qf3L0WIYQ" target="_ZBEnOVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_lHOARVYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_lHOAR1YdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lHOARlYdEdyqYfLIEsvGsg" x="181" y="274"/>
+    </children>
+    <children xmi:id="_lHOASFYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_lHOASlYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lHOASVYdEdyqYfLIEsvGsg" x="749" y="-956"/>
+    </children>
+    <children xmi:id="_lHOAS1YdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_lHOATVYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lHOATFYdEdyqYfLIEsvGsg" x="-14" y="343"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_lHOAQ1YdEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=subStatus%5Bjsrctype%5Ename=ActionStatus%5Bjcu%5Ename=ActionStatus.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lHOARFYdEdyqYfLIEsvGsg" points="[1720, -26, 1720, -26]$[3043, -26, 3043, -26]$[3043, -1984, 3043, -1984]$[318, -1984, 318, -1984]$[318, -820, 318, -820]"/>
+  </edges>
+  <edges xmi:id="_sRsqBFYdEdyqYfLIEsvGsg" source="_1b9I4FXvEdyt4qf3L0WIYQ" target="_sRsp4FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_sRsqB1YdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_sRsqCVYdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRsqCFYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_sRsqClYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_sRsqDFYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRsqC1YdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_sRsqDVYdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_sRsqD1YdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRsqDlYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sRsqBVYdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=type%5Bjsrctype%5Ename=Plan%5Bjcu%5Ename=Plan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sRsqBlYdEdyqYfLIEsvGsg" points="[0, 701, 7620, -4472]$[-7620, 2289, 0, -2884]"/>
+  </edges>
+  <edges xmi:id="_sRsqEFYdEdyqYfLIEsvGsg" source="_1b9I4FXvEdyt4qf3L0WIYQ" target="_sRsp-FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_sRsqE1YdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_sRsqFVYdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRsqFFYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_sRsqFlYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_sRsqGFYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRsqF1YdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_sRsqGVYdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_sRsqG1YdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRsqGlYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sRsqEVYdEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=subProcessPlans%5Bjsrctype%5Ename=Plan%5Bjcu%5Ename=Plan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sRsqElYdEdyqYfLIEsvGsg" points="[-1164, 185, 318, -4445]$[-2355, 396, -873, -4234]$[-1587, 4101, -105, -529]"/>
+  </edges>
+  <edges xmi:id="_sRywgFYdEdyqYfLIEsvGsg" source="_1b9I4FXvEdyt4qf3L0WIYQ" target="_1b9I4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_sRywg1YdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_sRywhVYdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywhFYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_sRywhlYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_sRywiFYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywh1YdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_sRywiVYdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_sRywi1YdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywilYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sRywgVYdEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=parent%5Bjsrctype%5Ename=Plan%5Bjcu%5Ename=Plan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sRywglYdEdyqYfLIEsvGsg" points="[1244, 0, 1244, 0]$[2646, 0, 2646, 0]$[2646, 2037, 2646, 2037]$[423, 2037, 423, 2037]$[423, 714, 423, 714]"/>
+  </edges>
+  <edges xmi:id="_sRywjFYdEdyqYfLIEsvGsg" source="_sRsp-FYdEdyqYfLIEsvGsg" target="_1b9I4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_sRywj1YdEdyqYfLIEsvGsg" type="NameLabel">
+      <children xmi:id="_sRywkVYdEdyqYfLIEsvGsg" type="Stereotype"/>
+      <children xmi:id="_sRywklYdEdyqYfLIEsvGsg" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sRywkFYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sRywjVYdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="mmi:///#jgen%5Bjsrctype%5Ename=ProcessPlan%5Bjcu%5Ename=ProcessPlan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Plan%5Bjcu%5Ename=Plan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Generalization"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sRywjlYdEdyqYfLIEsvGsg" points="[-13, -2884, 0, 2289]$[-13, -4472, 0, 701]"/>
+  </edges>
+  <edges xmi:id="_sRywk1YdEdyqYfLIEsvGsg" source="_sRsp7FYdEdyqYfLIEsvGsg" target="_1b9I4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_sRywllYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_sRywmFYdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywl1YdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_sRywmVYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_sRywm1YdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywmlYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_sRywnFYdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_sRywnlYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywnVYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sRywlFYdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=thePlan%5Bjsrctype%5Ename=ActionReference%5Bjcu%5Ename=ActionReference.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sRywlVYdEdyqYfLIEsvGsg" points="[0, 5636, 0, -2288]$[0, 7223, 0, -701]"/>
+  </edges>
+  <edges xmi:id="_sRywn1YdEdyqYfLIEsvGsg" source="_1b9I4FXvEdyt4qf3L0WIYQ" target="_sRsp7FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_sRywolYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_sRywpFYdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywo1YdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_sRywpVYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_sRywp1YdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywplYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_sRywqFYdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_sRywqlYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sRywqVYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sRywoFYdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=actions%5Bjsrctype%5Ename=Plan%5Bjcu%5Ename=Plan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sRywoVYdEdyqYfLIEsvGsg" points="[0, -701, 0, 7223]$[0, -2288, 0, 5636]"/>
+  </edges>
+  <edges xmi:id="_vbXwnlYdEdyqYfLIEsvGsg" source="_vbXwklYdEdyqYfLIEsvGsg" target="_sRsp7FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbXwoVYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_vbXwo1YdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXwolYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_vbXwpFYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_vbXwplYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXwpVYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_vbXwp1YdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_vbXwqVYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXwqFYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_vbXwn1YdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=consequentAction%5Bjsrctype%5Ename=ActionDependency%5Bjcu%5Ename=ActionDependency.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vbXwoFYdEdyqYfLIEsvGsg" points="[0, 3307, -13, -6376]$[0, 4894, -13, -4789]"/>
+  </edges>
+  <edges xmi:id="_vbXwslYdEdyqYfLIEsvGsg" source="_vbXwklYdEdyqYfLIEsvGsg" target="_sRsp7FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbXwtVYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_vbXwt1YdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXwtlYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_vbXwuFYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_vbXwulYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXwuVYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_vbXwu1YdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_vbXwvVYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXwvFYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_vbXws1YdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=dependentAction%5Bjsrctype%5Ename=ActionDependency%5Bjcu%5Ename=ActionDependency.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vbXwtFYdEdyqYfLIEsvGsg" points="[449, -529, 211, 7700]$[2592, -3043, 2354, 5186]$[1534, -5345, 1296, 2884]"/>
+  </edges>
+  <edges xmi:id="_vbXw1lYdEdyqYfLIEsvGsg" source="_8xKb4FXvEdyt4qf3L0WIYQ" target="_sRsp7FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbXw2VYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_vbXw21YdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXw2lYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_vbXw3FYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_vbXw3lYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXw3VYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_vbXw31YdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_vbXw4VYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbXw4FYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_vbXw11YdEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=projectPIncludedIn%5Bjsrctype%5Ename=Action%5Bjcu%5Ename=Action.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vbXw2FYdEdyqYfLIEsvGsg" points="[-4816, -583, 7593, -2064]$[-10425, -583, 1984, -2064]"/>
+  </edges>
+  <edges xmi:id="_vbd3MlYdEdyqYfLIEsvGsg" source="_sRsp7FYdEdyqYfLIEsvGsg" target="_vbXwklYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbd3NVYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_vbd3N1YdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3NlYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_vbd3OFYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_vbd3OlYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3OVYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_vbd3O1YdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_vbd3PVYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3PFYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_vbd3M1YdEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=dependentActions%5Bjsrctype%5Ename=ActionReference%5Bjcu%5Ename=ActionReference.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vbd3NFYdEdyqYfLIEsvGsg" points="[-1270, 2884, -1032, -5345]$[-1270, 7700, -1032, -529]"/>
+  </edges>
+  <edges xmi:id="_vbd3RlYdEdyqYfLIEsvGsg" source="_sRsp7FYdEdyqYfLIEsvGsg" target="_vbXwklYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbd3SVYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_vbd3S1YdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3SlYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_vbd3TFYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_vbd3TlYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3TVYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_vbd3T1YdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_vbd3UVYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3UFYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_vbd3R1YdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=consequentActions%5Bjsrctype%5Ename=ActionReference%5Bjcu%5Ename=ActionReference.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vbd3SFYdEdyqYfLIEsvGsg" points="[-13, -4789, 0, 4894]$[-13, -6376, 0, 3307]"/>
+  </edges>
+  <edges xmi:id="_vbd3UlYdEdyqYfLIEsvGsg" source="_sRsp7FYdEdyqYfLIEsvGsg" target="_vbRp_FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_vbd3VVYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_vbd3V1YdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3VlYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_vbd3WFYdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_vbd3WlYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3WVYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_vbd3W1YdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_vbd3XVYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3XFYdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_vbd3U1YdEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=protocolReference%5Bjsrctype%5Ename=ActionReference%5Bjcu%5Ename=ActionReference.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vbd3VFYdEdyqYfLIEsvGsg" points="[-13, 4789, 0, -7859]$[-13, 6377, 0, -6271]"/>
+  </edges>
+  <edges xmi:id="_vbd3YVYdEdyqYfLIEsvGsg" source="_sRsp7FYdEdyqYfLIEsvGsg" target="_8xKb4FXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_vbd3ZFYdEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_vbd3ZlYdEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3ZVYdEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_vbd3Z1YdEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_vbd3aVYdEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3aFYdEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_vbd3alYdEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_vbd3bFYdEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vbd3a1YdEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_vbd3YlYdEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=action%5Bjsrctype%5Ename=ActionReference%5Bjcu%5Ename=ActionReference.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vbd3Y1YdEdyqYfLIEsvGsg" points="[1984, -741, -10425, 740]$[7593, -741, -4816, 740]"/>
+  </edges>
+  <edges xmi:id="_ThBwUFYeEdyqYfLIEsvGsg" source="_sRsp-FYdEdyqYfLIEsvGsg" target="_Tg7puVYeEdyqYfLIEsvGsg">
+    <children xmi:id="_ThBwU1YeEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_ThBwVVYeEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ThBwVFYeEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_ThBwVlYeEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_ThBwWFYeEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ThBwV1YeEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_ThBwWVYeEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_ThBwW1YeEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ThBwWlYeEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ThBwUVYeEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=project%5Bjsrctype%5Ename=ProcessPlan%5Bjcu%5Ename=ProcessPlan.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ThBwUlYeEdyqYfLIEsvGsg" points="[-14, 2672, 0, -7435]$[-14, 4260, 0, -5847]"/>
+  </edges>
+  <edges xmi:id="_ThBwfFYeEdyqYfLIEsvGsg" source="_Tg1jAlYeEdyqYfLIEsvGsg" target="_sRsp-FYdEdyqYfLIEsvGsg">
+    <children xmi:id="_ThH2wFYeEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_ThH2wlYeEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ThH2wVYeEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_ThH2w1YeEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_ThH2xVYeEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ThH2xFYeEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_ThH2xlYeEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_ThH2yFYeEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ThH2x1YeEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ThBwfVYeEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=plan%5Bjsrctype%5Ename=WorkflowTeam%5Bjcu%5Ename=WorkflowTeam.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.party_management.party.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ThBwflYeEdyqYfLIEsvGsg" points="[0, 4789, -13481, -4260]$[13467, 6377, -14, -2672]"/>
+  </edges>
+  <edges xmi:id="_1UfXvFYrEdyqYfLIEsvGsg" source="_3_W5wFXvEdyt4qf3L0WIYQ" target="_1UfXsFYrEdyqYfLIEsvGsg">
+    <children xmi:id="_1UfXv1YrEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_1UfXwVYrEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UfXwFYrEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_1UfXwlYrEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_1UfXxFYrEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UfXw1YrEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_1UfXxVYrEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_1UfXx1YrEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UfXxlYrEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_1UfXvVYrEdyqYfLIEsvGsg" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=outputs%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1UfXvlYrEdyqYfLIEsvGsg" points="[-1, 556, -13, -12515]$[-1, 2143, -13, -10928]"/>
+  </edges>
+  <edges xmi:id="_1UfXyFYrEdyqYfLIEsvGsg" source="_3_W5wFXvEdyt4qf3L0WIYQ" target="_1UfXsFYrEdyqYfLIEsvGsg">
+    <children xmi:id="_1UfXy1YrEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_1UfXzVYrEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UfXzFYrEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_1UfXzlYrEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_1UfX0FYrEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UfXz1YrEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_1UfX0VYrEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_1UfX01YrEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UfX0lYrEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_1UfXyVYrEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=inputs%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1UfXylYrEdyqYfLIEsvGsg" points="[1270, -397, -1640, 5688]$[3387, -1032, 477, 5053]$[2963, -5530, 53, 555]"/>
+  </edges>
+  <edges xmi:id="_1UfX1FYrEdyqYfLIEsvGsg" source="_ZA-gmVXwEdyt4qf3L0WIYQ" target="_3_W5wFXvEdyt4qf3L0WIYQ">
+    <children xmi:id="_1UleUFYrEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_1UleUlYrEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UleUVYrEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_1UleU1YrEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_1UleVVYrEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UleVFYrEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_1UleVlYrEdyqYfLIEsvGsg" visible="false" type="associationTypeLabel">
+      <children xmi:id="_1UleWFYrEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UleV1YrEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_1UfX1VYrEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=parentSubAction%5Bjsrctype%5Ename=GenericAction%5Bjcu%5Ename=GenericAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1UfX1lYrEdyqYfLIEsvGsg" points="[-1084, -529, -1376, 4551]$[-1084, -4524, -1376, 556]"/>
+  </edges>
+  <edges xmi:id="_1UleWVYrEdyqYfLIEsvGsg" source="_3_W5wFXvEdyt4qf3L0WIYQ" target="_ZA-gmVXwEdyt4qf3L0WIYQ">
+    <children xmi:id="_1UleXFYrEdyqYfLIEsvGsg" type="FromMultiplicityLabel">
+      <children xmi:id="_1UleXlYrEdyqYfLIEsvGsg" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UleXVYrEdyqYfLIEsvGsg" y="396"/>
+    </children>
+    <children xmi:id="_1UleX1YrEdyqYfLIEsvGsg" type="FromRoleLabel">
+      <children xmi:id="_1UleYVYrEdyqYfLIEsvGsg" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UleYFYrEdyqYfLIEsvGsg" y="-397"/>
+    </children>
+    <children xmi:id="_1UleYlYrEdyqYfLIEsvGsg" type="associationTypeLabel">
+      <children xmi:id="_1UleZFYrEdyqYfLIEsvGsg" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_1UleY1YrEdyqYfLIEsvGsg" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_1UleWlYrEdyqYfLIEsvGsg" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=possibleLifecycleInstances%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.activity.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1UleW1YrEdyqYfLIEsvGsg" points="[1137, 556, 1429, -4524]$[1137, 4551, 1429, -529]"/>
+  </edges>
+</notation:Diagram>

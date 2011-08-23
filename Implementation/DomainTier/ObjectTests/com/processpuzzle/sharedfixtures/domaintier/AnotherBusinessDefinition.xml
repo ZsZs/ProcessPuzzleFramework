@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<businessDefinition 
+	xmlns = "http://www.processpuzzle.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.processpuzzle.com/ ../../business/definition/domain/BusinessDefinition.xsd ">
+
+	<!-- PartyTypes: Defines acceptable types of parties. -->
+	<partyTypes>
+		<partyType name = "NonProfitOrganization" />
+	</partyTypes>
+	
+	<!-- PartyRoleTypes: Defines the roles can be filled in the workflows. -->
+	<partyRoleTypes>
+		<partyRoleType name="Customer">
+		</partyRoleType>
+		
+		<partyRoleType name="Vendor">
+		</partyRoleType>		
+	</partyRoleTypes>
+	
+	<partyRelationshipTypes>
+		<partyRelationshipType name="Sales">
+			<partyRelationshipConstraints>
+				<partyRelationshipConstraint clientRoleType="Customer" supplierRoleType="Vendor" />
+			</partyRelationshipConstraints>
+		</partyRelationshipType>
+	</partyRelationshipTypes>
+	 
+</businessDefinition>

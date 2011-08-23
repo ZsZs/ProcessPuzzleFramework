@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+  <class name="com.processpuzzle.party.domain.PersonGroup" table="T_PERSON_GROUP">
+	<id name="id" type="integer" unsaved-value="null" >
+      <column name="PERSON_GROUP_ID" not-null="true"/>
+      <generator class="identity"/>
+    </id>
+    	<many-to-one lazy="false" name="person" class="com.processpuzzle.party.domain.Person" column="PERSON_ID"/>
+		<many-to-one lazy="false" name="grp" class="com.processpuzzle.party.domain.Group" column="GROUP_ID" cascade="save-update"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>DocumentReservationWidgetTest.html</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="javascript" src="../WebUIController/WebUIController.js"></script>
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/ArrayList.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Configuration.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Collection.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../CommonScripts/GenericBrowser.js"></script>
+	<script language="JavaScript" src="DocumentReservationWidget.js"></script>
+</HEAD>
+<BODY>
+	<h1>DocumentReservationWidget.js test page</h1>
+	<p>This page contains tests for DocumentReservationWidget.js JavaScript class.</p>
+	<div class="readOnlyContainer">
+			<table id="ArtifactList_ListedArtifactsForm" border="1">
+				<thead>
+					<tr>
+						<td></td>
+						<td align="middle" id="artifactName" style="CURSOR:pointer" onClick="">dokument név</td>
+					</tr>
+				</thead>
+					<tr>
+						<td><input type="checkbox" id="selectCheckbox_1"></td>
+						<td><a href="#" class="listedDocumentName">dokumentum 1</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="selectCheckbox_2"></td>
+						<td><a href="#" class="listedDocumentName">dokumentum 2</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="selectCheckbox_3"></td>
+						<td><a href="#" class="listedDocumentName">dokumentum 3</a></td>
+					</tr>
+					
+			</table>
+	</div>
+	<DIV id="reservationWidget"><font face=System></font></DIV>
+
+	<script language=javascript>
+		var reservationWidget = null;
+		var resourceBundle = new XMLResourceBundle("../../Configuration/WebUiInternalization");
+		var webUiController = new WebUiController();
+		var userName = "user name";
+		var userLocation = "c";
+		webUiController.setUserName(userName);
+		webUiController.setUserLocation(userLocation);
+		resourceBundle.loadFile(new Locale("hu"));
+
+		function setUp(){
+			reservationWidget = new DocumentReservationWidget("reservationWidget", resourceBundle);
+			reservationWidget = new DocumentReservationWidget("reservationWidget", resourceBundle);
+			reservationWidget.show();
+		}
+
+		function tearDown(){
+			reservationWidget.hide();
+			reservationWidget = null;
+			var checkbox = document.getElementById("selectCheckbox_1");
+			checkbox.checked = false;
+			var checkbox = document.getElementById("selectCheckbox_3");
+			checkbox.checked = false;
+		}
+
+		function testShow(){
+			assertNotNull("The newly created widget displays the form.", document.getElementById("documentReservationForm"));
+
+			var reserveButton = document.getElementById("reserveButton");
+			assertNotNull("The newly created widget has a reserve button.", reserveButton);
+			assertNotNull("The reserve button's onclick method is: ", reserveButton.onclick);
+
+			var releaseButton = document.getElementById("releaseButton");
+			assertNotNull("The newly created widget has a release button.", releaseButton);
+			assertNotNull("The release button's onclick method is: ", releaseButton.onclick);
+
+//			var cancelButton = document.getElementById("cancelButton");
+//			assertNotNull("The newly created widget has a cancel button.", cancelButton);
+//			assertNotNull("The cancel button's onclick method is: ", cancelButton.onclick);
+		}
+
+		function testCommentVisibility_ForReserveButton(){
+		
+			var reserveButton = document.getElementById("reserveButton");
+			assertFalse("The comment is not visible", reservationWidget.commentVisibility());
+
+			var chb1 = document.getElementById("selectCheckbox_1");
+			chb1.click();
+
+			reserveButton.click();
+			assertTrue("Clicking on the button, makes the comment visible", reservationWidget.commentVisibility());
+			
+			reserveButton.click(); 
+			assertFalse("The second click onto the button hides the comment", reservationWidget.commentVisibility());
+			assertNull("The second click also removes the comment division from the doc", findFormElementByName("div", "commentDiv"));			
+		}
+
+		function testCommentVisibility_ForReleaseButton(){
+			var releaseButton = document.getElementById("releaseButton");
+			assertFalse("The comment is not visible", reservationWidget.commentVisibility());
+
+			var chb1 = document.getElementById("selectCheckbox_1");
+			chb1.click();
+
+			releaseButton.click(); 
+			assertTrue("Clicking on the button, makes the comment visible", reservationWidget.commentVisibility());
+			
+			releaseButton.click(); 
+			assertFalse("The second click onto the button hides the comment", reservationWidget.commentVisibility());
+			assertNull("The second click also removes the comment division from the doc", findFormElementByName("div", "commentDiv"));
+		}
+
+		function testCommentVisibility_ForCancelButton(){
+			var cancelButton = document.getElementById("cancelButton");
+		}
+
+		function testConstructComment_ForParts(){
+			var displayedForm = document.getElementById("documentReservationForm");
+			var releaseButton = document.getElementById("releaseButton");
+			var checkbox = document.getElementById("selectCheckbox_1");
+			checkbox.checked = true;
+			releaseButton.click(); 
+
+			var element =  displayedForm.getElementsByTagName("div");
+			
+			assertNotNull("The displayedForm has a div element", findFormElementByName("div", "commentDiv"));
+			assertNotNull("The displayedForm has a p element", findFormElementByName("p","artifactsLabel"));
+			assertNotNull("The displayedForm has a p element", findFormElementByName("p","commentLabel"));
+			assertNotNull("The displayedForm has a textarea", findFormElementByName("textarea", "commentTextArea"));
+			assertNotNull("The dsiplayedForm has a targetDocDiv element", findFormElementByName("div", "targetDocumentListDiv"));
+			assertNotNull("The displayedForm has an unordered list", findFormElementByName("ul", "unordlist"));
+		}
+
+		function testTargetDocuments(){
+			var checkbox = document.getElementById("selectCheckbox_1");
+			checkbox.click();
+			
+			checkbox = document.getElementById("selectCheckbox_3");
+			checkbox.click();
+
+			var reserveButton = document.getElementById("reserveButton");
+			reserveButton.click(); 
+			assertEquals("The numbers of documents should be ", 2, reservationWidget.getTargetDocuments().length);
+		}
+
+		function findFormElementByName (tagName, elementName) {
+			var returnValue = null;
+			var elements = document.getElementsByTagName(tagName);
+			for( var i = 0; i < elements.length; i++ ) {
+				var element = elements[i];
+				if (element.getAttribute("name") == elementName) {
+					returnValue = element;
+					break;
+				}
+			}
+			return returnValue;
+		}
+
+		function testReserveAppletConstuction() {
+			var appletElement = document.getElementById("reserveApplet");
+			assertNotNull("The displayedForm has an applet element", appletElement);
+			assertEquals("The applet's codebase is 'ReserveApplet.class'", appletElement.code, "ReserveApplet.class");
+			var loc = window.location;
+			assertEquals("The applet's codebase is ./applets", appletElement.codebase, loc.protocol+"//"+loc.host+"/"+"ADIBrowserInterface/applets");
+			assertEquals("The applet's width is 50", appletElement.width, "50");
+			assertEquals("The applet's height is 20", appletElement.height, "20");
+			assertEquals("The applet's archive is 'ReserveReleaseApplets.jar'", appletElement.archive, "ReserveReleaseApplets.jar");
+
+			var params = document.getElementsByTagName("param");
+			assertEquals("The applet has 10 param.", params.length, 10);
+			assertEquals("The applet has a param with name: buttonText", params[0].name, "buttonText");
+			assertEquals("The value of buttonText param: Reserve.", params[0].value, resourceBundle.getText("ReserveButtonCaption") ? resourceBundle.getText("ReserveButtonCaption") : "Reserve");
+			assertEquals("The applet has a param with name: acceptedText", params[1].name, "acceptedText");
+			assertEquals("The value of acceptedText param: Reserved.", params[1].value, resourceBundle.getText("ReserveAcceptedMessage") ? resourceBundle.getText("ReserveAcceptedMessage") : "Reserved.");
+			assertEquals("The applet has a param with name: ioErroMessage", params[2].name, "ioErrorMessage");
+			assertEquals("The value of ioErrorMessage param: IO Error.", params[2].value, resourceBundle.getText("IOError") ? resourceBundle.getText("IOError") : "IO error.");
+			assertEquals("The applet has a param with name: modifierName", params[3].name, "modifierName");
+			assertEquals("The value of modifierName param: user name.", params[3].value, userName);
+			assertEquals("The applet has a param with name: location", params[4].name, "location");
+			assertEquals("The value of location param: c", params[4].value, userLocation);
+		}
+
+		function testReleaseAppletConstuction() {
+			var appletElement = document.getElementById("releaseApplet");
+			assertNotNull("The displayedForm has an applet element", appletElement);
+			assertEquals("The applet's codebase is 'ReleaseApplet.class'", appletElement.code, "ReleaseApplet.class");
+			var loc = window.location;
+			assertEquals("The applet's codebase is ./applets", appletElement.codebase, loc.protocol+"//"+loc.host+"/"+"ADIBrowserInterface/applets");
+			assertEquals("The applet's width is 50", appletElement.width, "50");
+			assertEquals("The applet's height is 20", appletElement.height, "20");
+			assertEquals("The applet's archive is 'ReserveReleaseApplets.jar'", appletElement.archive, "ReserveReleaseApplets.jar");
+
+			var params = document.getElementsByTagName("param");
+			assertEquals("The applet has 10 param.", params.length, 10);
+			assertEquals("The applet has a param with name: buttonText", params[5].name, "buttonText");
+			assertEquals("The value of buttonText param: Reserve.", params[5].value, resourceBundle.getText("ReleaseButtonCaption") ? resourceBundle.getText("ReleaseButtonCaption") : "Release");
+			assertEquals("The applet has a param with name: acceptedText", params[6].name, "acceptedText");
+			assertEquals("The value of acceptedText param: Reserved.", params[6].value, resourceBundle.getText("ReleaseAcceptedMessage") ? resourceBundle.getText("ReleaseAcceptedMessage") : "Released.");
+			assertEquals("The applet has a param with name: ioErroMessage", params[7].name, "ioErrorMessage");
+			assertEquals("The value of ioErrorMessage param: IO Error.", params[7].value, resourceBundle.getText("IOError") ? resourceBundle.getText("IOError") : "IO error.");
+			assertEquals("The applet has a param with name: missingFileMessage", params[8].name, "missingFileMessage");
+			assertEquals("The value of modifierName param: Missing file from local!", params[8].value, resourceBundle.getText("MissingFileFromLocal") ? resourceBundle.getText("MissingFileFromLocal") : "Missing the local file.");
+			assertEquals("The applet has a param with name: location", params[9].name, "location");
+			assertEquals("The value of location param: c", params[9].value, userLocation);
+		}
+
+
+	function runTestFunction(){
+		setUp();
+		tearDown();
+	}
+
+	runTestFunction();
+
+	</script>
+
+</BODY>
+</HTML>

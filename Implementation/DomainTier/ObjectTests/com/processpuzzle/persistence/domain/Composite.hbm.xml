@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.persistence.domain.Composite"
+		table="T_COMPOSITE"
+		extends="com.processpuzzle.persistence.domain.Component">
+
+		<set name="components" cascade="save-update,delete" lazy="false" inverse="true">
+			<key column="COMPOSITE_ID"/>
+			<one-to-many class="com.processpuzzle.persistence.domain.Component" />
+		</set>
+ 	</union-subclass>	
+<!-- 
+	<joined-subclass
+		name="com.processpuzzle.persistence.domain.Composite"
+		table="T_COMPOSITE"
+		extends="com.processpuzzle.persistence.domain.Component">
+		<key column="ID" />
+
+		<set name="components" cascade="save-update,delete" lazy="false" inverse="true">
+			<key column="COMPOSITE_ID"/>
+			<one-to-many class="com.processpuzzle.persistence.domain.Component" />
+		</set>
+ 	</joined-subclass>	
+-->		
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applicationRepository>
+	<application name="AlreadyInstalledApplication">
+		<description>Test application for testing application installer.</description>
+		<version>1.0.0</version>
+		<className>com.processpuzzle.application.domain.AlreadyInstalledApplication</className>
+		<executionStatus>stopped</executionStatus>
+		<installationStatus>installed</installationStatus>
+		<configurationDescriptorPath>classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml</configurationDescriptorPath>
+	</application>
+</applicationRepository>

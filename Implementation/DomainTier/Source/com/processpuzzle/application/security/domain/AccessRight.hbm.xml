@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.processpuzzle.application.security.domain.AccessRight" 
+		table="T_ACCESS_RIGHT"
+	 	extends="com.processpuzzle.application.security.domain.DefaultAccessRight">
+		<!-- <key column="ACCESS_RIGHT_ID" /> -->
+		<property name="controlledObjectId"/>
+		<property name="controlledObjectClass"/>
+	</union-subclass>
+</hibernate-mapping>

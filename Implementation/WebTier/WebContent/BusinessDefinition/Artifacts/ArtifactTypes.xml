@@ -1,0 +1,329 @@
+<ArtifactTypeList>
+
+	<artifactTypeGroup name="Energometall">
+
+		<!-- 
+		
+		Order
+			
+		 -->
+
+		<artifactType name="OrderList" group="Energometall" artifactClassName="com.processpuzzle.order.artifact.OrderList" pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true"
+			createOnStartUp="true">
+			<caption>ui.OrderList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<artifactListViewType name="OrderList_ListView" clientType="BrowseView" isDefault="true" presentationUri="/ProcessInstantiation/Order/OrderList_ListView.jsp"
+					viewClassName="com.processpuzzle.order.artifact.OrderList_ListView" listedArtifactType="OrderDataSheet">
+					<viewCaption>ui.viewCaption.list</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowListView&amp;artifactName=OrderList&amp;viewName=OrderList_ListView</viewAccessUrl>
+				</artifactListViewType>
+				<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/Order/OrderList_QueryView.jsp" viewClassName="com.processpuzzle.order.artifact.OrderList_QueryView"
+					clientType="ListQueryView" targetPropertyView="com.processpuzzle.order.artifact.OrderList_PropertyView">
+					<viewCaption>ui.viewCaption.listQuery</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=OrderList&amp;viewName=OrderList_QueryView</viewAccessUrl>
+					<!-- preDefinedQueries>
+						<query name="Teszt">
+							<description>description</description>
+							<statement>from OrderDataSheet o where o.order.? = 0</statement>
+						</query>
+					</preDefinedQueries-->
+				</listQueryViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRightsView" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+					viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+					<viewCaption>ui.viewCaption.accessRights</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="PrintView" clientType="PrintView" viewClassName="com.processpuzzle.order.artifact.OrderList_PrintView" xmlToFoXsltPath="/stylesheet/orderlist.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;artifactName=OrderList&amp;viewName=OrderList_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="OrderDataSheet" group="Energometall" artifactClassName="com.processpuzzle.order.artifact.OrderDataSheet" pessimisticLock="true" isSystem="false" isVersionControlled="true" isSingleton="false"
+			createOnStartUp="false">
+			<caption>ui.OrderDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" clientType="PropertyView" isDefault="true" presentationUri="/ProcessInstantiation/Order/OrderDataSheet_PropertyView.jsp"
+					viewClassName="com.processpuzzle.order.artifact.OrderDataSheet_PropertyView">
+					<viewCaption>ui.viewCaption.properties</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=OrderDataSheet_PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactCustomFormViewType name="BaseData" clientType="CustomFormView" presentationUri="/ProcessInstantiation/Order/OrderDataSheet_BaseData.jsp"
+					viewClassName="com.processpuzzle.order.artifact.OrderDataSheet_BaseData">
+					<viewCaption>ui.viewCaption.baseData</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=OrderDataSheet_BaseData</viewAccessUrl>
+				</artifactCustomFormViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+				</artifactCommentsViewType>
+				<printViewType name="Print" viewClassName="com.processpuzzle.order.artifact.OrderDataSheet_PrintView" clientType="PrintView" xmlToFoXsltPath="/stylesheet/orderdata.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;viewName=OrderDataSheet_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+
+		<!-- 
+		
+		ProductType
+			
+		 -->
+		 
+		<artifactType name="ProductTypeList" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.ProductTypeList" pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true"
+			createOnStartUp="true">
+			<caption>ui.ProductTypeList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<artifactListViewType name="ProductTypeList_ListView" clientType="BrowseView" isDefault="true" presentationUri="/ProcessInstantiation/ProductType/ProductTypeList_ListView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.ProductTypeList_ListView" listedArtifactType="ProductTypeDataSheet">
+					<viewCaption>ui.viewCaption.list</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowListView&amp;artifactName=ProductTypeList&amp;viewName=ProductTypeList_ListView</viewAccessUrl>
+				</artifactListViewType>
+				<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/ProductType/ProductTypeList_QueryView.jsp" viewClassName="com.processpuzzle.product.artifact.ProductTypeList_QueryView"
+					clientType="ListQueryView" targetPropertyView="com.processpuzzle.product.artifact.ProductTypeList_PropertyView">
+					<viewCaption>ui.viewCaption.listQuery</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=ProductTypeList&amp;viewName=ProductTypeList_QueryView</viewAccessUrl>
+					<!-- preDefinedQueries>
+						<query name="Teszt">
+							<description>description</description>
+							<statement>from ProductTypeDataSheet o where o.product.? = 0</statement>
+						</query>
+					</preDefinedQueries-->
+				</listQueryViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRightsView" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+					viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+					<viewCaption>ui.viewCaption.accessRights</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="PrintView" clientType="PrintView" viewClassName="com.processpuzzle.product.artifact.ProductTypeList_PrintView" xmlToFoXsltPath="/stylesheet/orderlist.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;artifactName=ProductTypeList&amp;viewName=ProductTypeList_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="ProductTypeDataSheet" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.ProductTypeDataSheet" pessimisticLock="true" isSystem="false" isVersionControlled="true" isSingleton="false"
+			createOnStartUp="false">
+			<caption>ui.ProductTypeDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" clientType="PropertyView" isDefault="true" presentationUri="/ProcessInstantiation/ProductType/ProductTypeDataSheet_PropertyView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.ProductTypeDataSheet_PropertyView">
+					<viewCaption>ui.viewCaption.properties</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=ProductTypeDataSheet_PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactCustomFormViewType name="BaseData" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProductType/ProductTypeDataSheet_BaseData.jsp"
+					viewClassName="com.processpuzzle.product.artifact.ProductTypeDataSheet_BaseData">
+					<viewCaption>ui.viewCaption.baseData</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=ProductTypeDataSheet_BaseData</viewAccessUrl>
+				</artifactCustomFormViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+				</artifactCommentsViewType>
+				<printViewType name="Print" viewClassName="com.processpuzzle.order.artifact.ProductTypeDataSheet_PrintView" clientType="PrintView" xmlToFoXsltPath="/stylesheet/orderdata.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;viewName=ProductTypeDataSheet_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		 
+		<!-- 
+		
+		CatalogEntry
+			
+		 -->
+		 
+		<artifactType name="CatalogEntryList" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.CatalogEntryList" pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true"
+			createOnStartUp="true">
+			<caption>ui.CatalogEntryList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<artifactListViewType name="CatalogEntryList_ListView" clientType="BrowseView" isDefault="true" presentationUri="/ProcessInstantiation/ProductCatalog/CatalogEntryList_ListView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.CatalogEntryList_ListView" listedArtifactType="CatalogEntryDataSheet">
+					<viewCaption>ui.viewCaption.list</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowListView&amp;artifactName=CatalogEntryList&amp;viewName=CatalogEntryList_ListView</viewAccessUrl>
+				</artifactListViewType>
+				<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/ProductCatalog/CatalogEntryList_QueryView.jsp" viewClassName="com.processpuzzle.product.artifact.CatalogEntryList_QueryView"
+					clientType="ListQueryView" targetPropertyView="com.processpuzzle.product.artifact.CatalogEntryList_PropertyView">
+					<viewCaption>ui.viewCaption.listQuery</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=CatalogEntryList&amp;viewName=CatalogEntryList_QueryView</viewAccessUrl>
+				</listQueryViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRightsView" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+					viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+					<viewCaption>ui.viewCaption.accessRights</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="PrintView" clientType="PrintView" viewClassName="com.processpuzzle.product.artifact.CatalogEntryList_PrintView" xmlToFoXsltPath="/stylesheet/orderlist.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;artifactName=CatalogEntryList&amp;viewName=CatalogEntryList_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="CatalogEntryDataSheet" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.CatalogEntryDataSheet" pessimisticLock="true" isSystem="false" isVersionControlled="true" isSingleton="false"
+			createOnStartUp="false">
+			<caption>ui.CatalogEntryDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" clientType="PropertyView" isDefault="true" presentationUri="/ProcessInstantiation/ProductCatalog/CatalogEntryDataSheet_PropertyView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.CatalogEntryDataSheet_PropertyView">
+					<viewCaption>ui.viewCaption.properties</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=CatalogEntryDataSheet_PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactCustomFormViewType name="BaseData" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProductCatalog/CatalogEntryDataSheet_BaseData.jsp"
+					viewClassName="com.processpuzzle.product.artifact.CatalogEntryDataSheet_BaseData">
+					<viewCaption>ui.viewCaption.baseData</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=CatalogEntryDataSheet_BaseData</viewAccessUrl>
+				</artifactCustomFormViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+				</artifactCommentsViewType>
+				<printViewType name="Print" viewClassName="com.processpuzzle.product.artifact.CatalogEntryDataSheet_PrintView" clientType="PrintView" xmlToFoXsltPath="/stylesheet/orderdata.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;viewName=CatalogEntryDataSheet_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+
+		<!-- 
+		
+		CompositeCategory
+			
+		 -->
+		 
+		<artifactType name="CompositeCategoryList" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.CompositeCategoryList" pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true"
+			createOnStartUp="true">
+			<caption>ui.CompositeCategoryList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<artifactListViewType name="CompositeCategoryList_ListView" clientType="BrowseView" isDefault="true" presentationUri="/ProcessInstantiation/ProductCatalog/CompositeCategoryList_ListView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.CompositeCategoryList_ListView" listedArtifactType="CompositeCategoryDataSheet">
+					<viewCaption>ui.viewCaption.list</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowListView&amp;artifactName=CompositeCategoryList&amp;viewName=CompositeCategoryList_ListView</viewAccessUrl>
+				</artifactListViewType>
+				<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/ProductCatalog/CompositeCategoryList_QueryView.jsp" viewClassName="com.processpuzzle.product.artifact.CompositeCategoryList_QueryView"
+					clientType="ListQueryView" targetPropertyView="com.processpuzzle.product.artifact.CompositeCategoryList_PropertyView">
+					<viewCaption>ui.viewCaption.listQuery</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=CompositeCategoryList&amp;viewName=CompositeCategoryList_QueryView</viewAccessUrl>
+				</listQueryViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRightsView" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+					viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+					<viewCaption>ui.viewCaption.accessRights</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="PrintView" clientType="PrintView" viewClassName="com.processpuzzle.product.artifact.CompositeCategoryList_PrintView" xmlToFoXsltPath="/stylesheet/orderlist.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;artifactName=CompositeCategoryList&amp;viewName=CompositeCategoryList_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="CompositeCategoryDataSheet" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.CompositeCategoryDataSheet" pessimisticLock="true" isSystem="false" isVersionControlled="true" isSingleton="false"
+			createOnStartUp="false">
+			<caption>ui.CompositeCategoryDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" clientType="PropertyView" isDefault="true" presentationUri="/ProcessInstantiation/ProductCatalog/CompositeCategoryDataSheet_PropertyView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.CompositeCategoryDataSheet_PropertyView">
+					<viewCaption>ui.viewCaption.properties</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=CompositeCategoryDataSheet_PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+				</artifactCommentsViewType>
+				<printViewType name="Print" viewClassName="com.processpuzzle.product.artifact.CompositeCategoryDataSheet_PrintView" clientType="PrintView" xmlToFoXsltPath="/stylesheet/orderdata.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;viewName=CompositeCategoryDataSheet_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+
+		<!-- 
+		
+		ProductGroup
+			
+		 -->
+		 
+		<artifactType name="ProductGroupList" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.ProductGroupList" pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true"
+			createOnStartUp="true">
+			<caption>ui.ProductGroupList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<artifactListViewType name="ProductGroupList_ListView" clientType="BrowseView" isDefault="true" presentationUri="/ProcessInstantiation/ProductCatalog/ProductGroupList_ListView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.ProductGroupList_ListView" listedArtifactType="ProductGroupDataSheet">
+					<viewCaption>ui.viewCaption.list</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowListView&amp;artifactName=ProductGroupList&amp;viewName=ProductGroupList_ListView</viewAccessUrl>
+				</artifactListViewType>
+				<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/ProductCatalog/ProductGroupList_QueryView.jsp" viewClassName="com.processpuzzle.product.artifact.ProductGroupList_QueryView"
+					clientType="ListQueryView" targetPropertyView="com.processpuzzle.product.artifact.ProductGroupList_PropertyView">
+					<viewCaption>ui.viewCaption.listQuery</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=ProductGroupList&amp;viewName=ProductGroupList_QueryView</viewAccessUrl>
+				</listQueryViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRightsView" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+					viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+					<viewCaption>ui.viewCaption.accessRights</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="PrintView" clientType="PrintView" viewClassName="com.processpuzzle.product.artifact.ProductGroupList_PrintView" xmlToFoXsltPath="/stylesheet/orderlist.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;artifactName=ProductGroupList&amp;viewName=ProductGroupList_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="ProductGroupDataSheet" group="Energometall" artifactClassName="com.processpuzzle.product.artifact.ProductGroupDataSheet" pessimisticLock="true" isSystem="false" isVersionControlled="true" isSingleton="false"
+			createOnStartUp="false">
+			<caption>ui.ProductGroupDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" clientType="PropertyView" isDefault="true" presentationUri="/ProcessInstantiation/ProductCatalog/ProductGroupDataSheet_PropertyView.jsp"
+					viewClassName="com.processpuzzle.product.artifact.ProductGroupDataSheet_PropertyView">
+					<viewCaption>ui.viewCaption.properties</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=ProductGroupDataSheet_PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactCustomFormViewType name="BaseData" clientType="CustomFormView" presentationUri="/ProcessInstantiation/ProductCatalog/ProductGroupDataSheet_BaseData.jsp"
+					viewClassName="com.processpuzzle.product.artifact.ProductGroupDataSheet_BaseData">
+					<viewCaption>ui.viewCaption.baseData</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowView&amp;viewName=ProductGroupDataSheet_BaseData</viewAccessUrl>
+				</artifactCustomFormViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>ui.viewCaption.comments</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+				</artifactCommentsViewType>
+				<printViewType name="Print" viewClassName="com.processpuzzle.product.artifact.ProductGroupDataSheet_PrintView" clientType="PrintView" xmlToFoXsltPath="/stylesheet/orderdata.xsl">
+					<viewCaption>ui.viewCaption.print</viewCaption>
+					<viewAccessUrl>../../../CommandControllerServlet?action=ShowPrintView&amp;viewName=ProductGroupDataSheet_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+	</artifactTypeGroup>
+
+</ArtifactTypeList>

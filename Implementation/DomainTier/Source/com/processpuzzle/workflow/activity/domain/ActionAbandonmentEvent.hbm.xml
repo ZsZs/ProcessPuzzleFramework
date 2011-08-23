@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.activity.domain.ActionAbandonmentEvent"
+		table="T_ACTION_ABANDONMENT_EVENT">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="ACTION_ABANDONMENT_EVENT_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+	</class>
+</hibernate-mapping>

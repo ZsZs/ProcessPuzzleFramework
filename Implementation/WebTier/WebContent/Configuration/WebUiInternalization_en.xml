@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources 
+	xmlns:tns="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
+
+	<Language name="en">
+
+	<!-- Generic texts -->
+	<Resource key="ui.label.name" type="String">Name</Resource>
+	<Resource key="ClearButtonCaption" type="String">Clear</Resource>
+
+	<!-- Menu widget's texts -->
+	<Resource key="InfoPagesMenu" type="String">Info pages</Resource>
+	<Resource key="DocumentListInMenu" type="String">Document list</Resource>
+	<Resource key="SystemAdminMenu" type="String">System Administration</Resource>
+	<Resource key="Replacements" type="String">Replacements</Resource>
+	<Resource key="CloseActiveDocumentCommand" type="String">Close</Resource>
+	<Resource key="OpenDocumentSelectedInListCommand" type="String">Open</Resource>
+	<Resource key="PrintActiveDocumentCommand" type="String">Print</Resource>
+	<Resource key="ShowEditSelectedDocument" type="String">Show</Resource>
+	<Resource key="CreateNewDocument" type="String">Create new</Resource>
+	<Resource key="DeleteSelectedDocument" type="String">Delete</Resource>
+	<Resource key="Print" type="String">Print</Resource>
+	<Resource key="Save" type="String">Save</Resource>
+	<Resource key="Cancel" type="String">Cancel</Resource>
+	<Resource key="TaskDetailShow" type="String">Task details...</Resource>
+	<Resource key="TaskStart" type="String">Start task</Resource>
+
+	<!-- Login widget's texts -->
+	<Resource key="UserNameLabel" type="String">User name: </Resource>
+	<Resource key="PasswordLabel" type="String">Password: </Resource>
+	<Resource key="LoginButtonCaption" type="String">Login</Resource>
+	<Resource key="LogoutButtonCaption" type="String">Logout</Resource>
+	<Resource key="TryAgainButtonCaption" type="String">Try again...</Resource>
+	<Resource key="LoginWelcome" type="String">Hello, </Resource>
+	<Resource key="LoginFailure" type="String">Your username or password is invalid.</Resource>
+	<Resource key="LoginError" type="String">Unexpected error occured.</Resource>
+
+	<!-- PagingWidget's text -->
+	<Resource key="Next" type="String">Next</Resource>
+	<Resource key="Previous" type="String">Previous</Resource>
+	
+	<!-- ProductCatalogWidget's text -->
+	<Resource key="Delete" type="String">Delete</Resource>
+	<Resource key="DeleteTree" type="String">Delete tree</Resource>
+	<Resource key="Up" type="String">Up</Resource>
+	<Resource key="Down" type="String">Down</Resource>
+	<Resource key="New" type="String">New</Resource>
+	<Resource key="Insert" type="String">Insert</Resource>
+	<Resource key="Rename" type="String">Rename</Resource>
+	<Resource key="Copy" type="String">Copy</Resource>
+	<Resource key="Move" type="String">Move</Resource>
+	<Resource key="Search" type="String">Search</Resource>
+	<Resource key="Name" type="String">Name: </Resource>
+	<Resource key="TargetPath" type="String">  Target path: </Resource>
+	<Resource key="Find" type="String">Find: </Resource>
+	<Resource key="FindIn" type="String">Find in: </Resource>
+	
+	<!-- Info page names -->
+	<Resource key="ToDoListName" type="String">To do list</Resource>
+	<Resource key="DocumentHistoryName" type="String">Document history</Resource>
+	<Resource key="DocumentPropertiesInfoPageName" type="String">Document properties</Resource>
+	<Resource key="MessageWallName" type="String">Message wall</Resource>
+	<Resource key="backupName" type="String">Backup</Resource>
+	<Resource key="restoreName" type="String">Restore</Resource>
+	<Resource key="undoMaintenanceName" type="String">Undo maintenance</Resource>
+	<Resource key="DatabaseAdminName" type="String">Database administration</Resource>
+	<Resource key="databaseAdminWarningMessage" type="String">Please close all opened page to start Database Administration!</Resource>
+	<Resource key="warningText" type="String">Warning!</Resource>
+	<Resource key="warningInfoText" type="String"> page(s) are still open!</Resource>
+
+	<!-- View captions -->
+	<Resource key="ui.viewCaption.relatedArtifacts" type="String">Related artifacts</Resource>
+	<Resource key="ui.viewCaption.properties" type="String">Properties</Resource>
+	<Resource key="ui.viewCaption.list" type="String">List</Resource>
+	<Resource key="ui.viewCaption.comments" type="String">Comments</Resource>
+	<Resource key="ui.viewCaption.accessRights" type="String">Access rights</Resource>
+	<Resource key="ui.viewCaption.ReserveRelease" type="String">Reserve/Release</Resource>
+	<Resource key="ui.viewCaption.print" type="String">Print</Resource>
+	<Resource key="ui.viewCaption.documentHistory" type="String">Document history</Resource>
+	<Resource key="ui.viewCaption.baseData" type="String">Base data</Resource>
+	<Resource key="ui.viewCaption.imageView" type="String">Image</Resource>
+	<Resource key="ui.viewCaption.listQuery" type="String">Queries</Resource>
+	<Resource key="ui.viewCaption.addressData" type="String">Address data</Resource>
+	<Resource key="ui.viewCaption.relatedImages" type="String">Related images</Resource>
+	<Resource key="ui.viewCaption.commissionManagement" type="String">Commission management</Resource>
+	<Resource key="ui.viewCaption.emailAddresses" type="String">Email addresses</Resource>
+	<Resource key="ui.viewCaption.geographicalAddresses" type="String">Geographical addresses</Resource>
+	<Resource key="ui.viewCaption.webPages" type="String">Web pages</Resource>
+	<Resource key="ui.viewCaption.editableText" type="String">Edit</Resource>
+	<Resource key="ui.viewCaption.MemoForm" type="String">Form</Resource>
+	<Resource key="ui.viewCaption.Editable" type="String">Editable</Resource>
+	<Resource key="ui.viewCaption.partyRelationship" type="String">Contacts</Resource>
+	<Resource key="ui.viewCaption.generalResources" type="String">General resources</Resource>
+	<Resource key="ui.viewCaption.specificResources" type="String">Specific resources</Resource>
+	<Resource key="ui.viewCaption.sequence" type="String">Sequence</Resource>
+	<Resource key="ui.viewCaption.roleAssignments" type="String">Role assignments</Resource>
+	<Resource key="ui.viewCaption.actionList" type="String">Actionlist</Resource>
+	<Resource key="ui.viewCaption.actionHierarchy" type="String">Action hiearchy</Resource>
+	<Resource key="ui.viewCaption.eventHistory" type="String">Events</Resource>
+	<Resource key="ui.viewCaption.confirmation" type="String">Confirmation</Resource>
+	<Resource key="ui.viewCaption.accomplishmentConfirmation" type="String">Accomplishment confirmation</Resource>
+	<Resource key="ui.viewCaption.rejection" type="String">Rejection</Resource>
+	<Resource key="ui.viewCaption.deliveryTerms" type="String">Delivery terms</Resource>
+	<Resource key="ui.viewCaption.order" type="String">Order</Resource>
+	<Resource key="ui.viewCaption.finances" type="String">Finances</Resource>
+	<Resource key="ui.viewCaption.contractDecoupling" type="String">Contract decoupling</Resource>
+	<Resource key="ui.viewCaption.conciliation" type="String">Conciliation</Resource>
+	<Resource key="ui.viewCaption.calculation" type="String">Calculation</Resource>
+	<Resource key="ui.viewCaption.technicalData" type="String">Technical data</Resource>
+	<Resource key="ui.viewCaption.treeData" type="String">Tree data</Resource>
+
+	<!-- DocumentReservationWidget's texts -->
+	<Resource key="ReserveButtonCaption" type="String">Reserve</Resource>
+	<Resource key="ReleaseButtonCaption" type="String">Release</Resource>
+	<Resource key="CancelButtonCaption" type="String">Cancel</Resource>
+	<Resource key="ReservationCommentLabel" type="String">Comment:</Resource>
+	<Resource key="ReservationArtifactsLabel" type="String">Reserved artifacts:</Resource>
+	<Resource key="ReserveAcceptedMessage" type="String">Reserved.</Resource>
+	<Resource key="ReleaseAcceptedMessage" type="String">Released.</Resource>
+	<Resource key="IOError" type="String">IO error.</Resource>
+	<Resource key="MissingFileFromLocal" type="String">Missing the file from local!(</Resource>
+	<Resource key="NotSelectedItems" type="String">"Warning! Not selected items or wrong selection!</Resource>
+
+	<!-- DocumentRelationtionshipWidget's texts -->
+	<Resource key="NewRelationButtonCaption" type="String">New relation</Resource>
+	<Resource key="DelRelationButtonCaption" type="String">Delete relation</Resource>
+	<Resource key="NewFileButtonCaption" type="String">New related file</Resource>
+	<Resource key="CancelButtonCaption" type="String">Cancel</Resource>
+	<Resource key="DocumentSelectLabel" type="String">Select document to relate:</Resource>
+	<Resource key="DocumentConfirmRemoveLabel" type="String">Are you sure you want to completely remove the selected relationship?</Resource>
+	<Resource key="SelectRelatedFileLabel" type="String">Select related file:</Resource>
+	<Resource key="NewRelationButtonClickCaption" type="String">Attach</Resource>
+	<Resource key="DelRelationButtonClickCaption" type="String">Yes</Resource>
+	<Resource key="BrowseFileLabelText" type="String">File</Resource>
+	<Resource key="UploadFileButtonText" type="String">Upload</Resource>
+	<Resource key="BrowseButtonText" type="String">Browse</Resource>
+	<Resource key="SelectedArtifact" type="String">Selected</Resource>
+
+	<!-- PlanManagerWidget's texts -->
+	<Resource key="DeleteActionButtonCaption" type="String">Delete</Resource>
+	<Resource key="InsertActionButtonCaption" type="String">Insert</Resource>
+
+	<!-- ProductCatalogWidget's texts -->
+	<Resource key="ui.PlanManagerWidget.Tree.Label" type="String">Catalog tree:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Label" type="String">Selected item:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Name.Label" type="String">Name:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Description.Label" type="String">Description:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Images.Label" type="String">Images:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Documents.Label" type="String">Documents:</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Label" type="String">Products:</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Identifier" type="String">Identifier</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Designation" type="String">Designation</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Properties" type="String">Properties</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Price" type="String">Price</Resource>
+	<Resource key="ui.PlanManagerWidget.SearchResultList.Label" type="String">Matches:</Resource>
+
+	<!-- Tree Internationalization -->
+	<Resource key="Processes" type="String">Processes</Resource>
+	<Resource key="Roles" type="String">Roles</Resource>
+	<Resource key="Artifacts" type="String">Artifacts</Resource>
+	<Resource key="Documents" type="String">Documents</Resource>
+
+	<!-- Processes -->
+	<Resource key="systemIntegrationProject" type="String">Systemintegration project</Resource>
+	<Resource key="projectPreparation" type="String">Project preparation</Resource>
+	<Resource key="projectControlling" type="String">Project controlling</Resource>
+	<Resource key="projectSealing" type="String">Project sealing</Resource>
+	<Resource key="projectExecution" type="String">Project execution</Resource>
+	<Resource key="computerProductSales" type="String">Computer product sales</Resource>
+	<Resource key="giveQuotation" type="String">Give quotation</Resource>
+	<Resource key="toTender" type="String">Tender</Resource>
+	<Resource key="sealing" type="String">Sealing</Resource>
+	<Resource key="agreement" type="String">Agreement</Resource>
+	<Resource key="accomplishment" type="String">Accomplishments</Resource>
+	<Resource key="operationSupport" type="String">Operation support</Resource>
+	<Resource key="systemOperation" type="String">System operation</Resource>
+
+	<Resource key="startOffer" type="String">Start offer</Resource>
+	<Resource key="preCalculation" type="String">Preliminary calculation</Resource>
+	<Resource key="supplierRequestForQuotation" type="String">Request for quotation from supplier</Resource>
+	<Resource key="takeRequiredExperts" type="String">Taking in required experts</Resource>
+	<Resource key="offerPreparation" type="String">Offer preparation</Resource>
+	<Resource key="developOfferProfessionalContent" type="String">Develop professional content</Resource>
+	<Resource key="offerPreparationCheckup" type="String">Offer preparation checkup</Resource>
+	<Resource key="technicalContentPreparation" type="String">Technical content preparation</Resource>
+	<Resource key="technicalContentPreparationCheckup" type="String">Technical content preparation checkup</Resource>
+	<Resource key="priceConciliation" type="String">Price conciliation</Resource>
+	<Resource key="priceConciliationCheckup" type="String">Price conciliation checkup</Resource>
+	<Resource key="projectResourcePlanCreation" type="String">Project resource plan creation</Resource>
+	<Resource key="projectResourcePlanCreationCheckup" type="String">Project resource plan creation checkup</Resource>
+	<Resource key="legalEconomicContentPreparation" type="String">Legal-Economic content preparation</Resource>
+	<Resource key="legalEconomicContentPreparationCheckup" type="String">Legal-Economic content preparation checkup</Resource>
+
+	<Resource key="finalizeOffer" type="String">Finalize offer</Resource>
+	<Resource key="releaseOffer" type="String">Release offer</Resource>
+	<Resource key="recordOffer" type="String">Record offer</Resource>
+	<Resource key="recordContract" type="String">Record contract</Resource>
+	<Resource key="orderManagement" type="String">Order management</Resource>
+
+	<Resource key="serviceCommissionToAcquisition" type="String">Commission of service to acquisition</Resource>
+	<Resource key="orderFromSupplier" type="String">Order from supplier</Resource>
+	<Resource key="supplierOrderFeedback" type="String">Supplier order feedback</Resource>
+	<Resource key="shipmentReception" type="String">Shipment reception</Resource>
+	<Resource key="shipmentCheckup" type="String">Shipment checkup</Resource>
+
+	<!-- Roles -->
+	<Resource key="accountTrader" type="String">Account Trader</Resource>
+	<Resource key="commercialAssistant" type="String">Commercial Assistant</Resource>
+	<Resource key="commercialExecutive" type="String">Commercial Executive</Resource>
+	<Resource key="offerResponsible" type="String">Offer Responsible</Resource>
+	<Resource key="productTrader" type="String">Product Trader</Resource>
+	<Resource key="projectExecutive" type="String">Project Executive</Resource>
+	
+	<Resource key="finance" type="String">Finance</Resource>
+	<Resource key="financeLeader" type="String">Finance Leader</Resource>
+	<Resource key="financer" type="String">Financer</Resource>
+	
+	<Resource key="generalEngineer" type="String">General Engineer</Resource>
+	<Resource key="generalSystemEngineer" type="String">General System Engineer</Resource>
+	<Resource key="buyingAgent" type="String">Buying Agent</Resource>
+	<Resource key="storageAdministrator" type="String">Storage Administrator</Resource>
+	<Resource key="specialtySystemEngineer" type="String">SpecialtySystemEngineer</Resource>
+	<Resource key="serviceExecutive" type="String">Service Executive</Resource>
+	
+	<Resource key="beOnDuty" type="String">Be on Duty</Resource>
+	
+	<Resource key="managementAndAdministration" type="String">Management and Administration</Resource>
+	<Resource key="manager" type="String">Manager</Resource>
+
+	<!-- Artifacts (Documents) -->
+	<Resource key="commerce" type="String">Commerce</Resource>
+	<Resource key="offer" type="String">Offers</Resource>
+	<Resource key="offerPreCalculation" type="String">Offer precalculation</Resource>
+	<Resource key="supplierQuotation" type="String">Supplier quotation</Resource>
+	<Resource key="order" type="String">Orders</Resource>
+	<Resource key="projectManagement" type="String">Projectmanagement</Resource>
+	<Resource key="projectPlan" type="String">Project plan</Resource>
+	<Resource key="storageAndInventoryAdjustment" type="String">Strorage- and inventory adjustment</Resource>
+	<Resource key="service" type="String">Service</Resource>
+	<Resource key="technologicalQuotation" type="String">Technological quotation</Resource>
+	<Resource key="companyManagement" type="String">Company management</Resource>
+	<Resource key="contract" type="String">Contracts</Resource>
+	<Resource key="SystemAdministration" type="String">System administration</Resource>
+	<Resource key="CountryList" type="String">Country list</Resource>
+	<Resource key="SettlementList" type="String">Settlement list</Resource>
+	<Resource key="PersonList" type="String">Person list</Resource>
+	<Resource key="UserList" type="String">User list</Resource>
+	<Resource key="CompanyList" type="String">Company list</Resource>
+	<Resource key="OrganizationUnitList" type="String">Org. Unit list</Resource>
+	<Resource key="Notes" type="String">Notes</Resource>
+	<Resource key="notesForm" type="String">Form view</Resource>
+	<Resource key="notesDocument" type="String">Document view</Resource>
+	<Resource key="ActionList" type="String">Action list</Resource>
+	<Resource key="OfferList" type="String">Offer list</Resource>
+	<Resource key="ContractList" type="String">Contract list</Resource>
+	<Resource key="ArtifactList" type="String">Artifact list</Resource>
+	<Resource key="coWorkerList" type="String">Co-worker list</Resource>
+	<Resource key="CoWorkerList" type="String">Co-worker list</Resource>
+	<Resource key="supplierOffer" type="String">Supplier offers</Resource>
+	<Resource key="supplierContract" type="String">Supplier contracts</Resource>
+	<Resource key="SupplierOfferList" type="String">Supplier offer list</Resource>
+	<Resource key="SupplierContractList" type="String">Supplier contract list</Resource>
+	<Resource key="OrderList" type="String">Order list</Resource>
+	<Resource key="AccomplishmentList" type="String">Accomplishment list</Resource>
+	<Resource key="ProjectManagement" type="String">Project Management</Resource>
+	<Resource key="OrganizationList" type="String">Organization List</Resource>
+	<Resource key="PlanList" type="String">Plan List</Resource>
+	<Resource key="ProcessPlanList" type="String">Business processes</Resource>
+	<Resource key="PartnerRegistration" type="String">Partner registration</Resource>
+	<Resource key="RegistrationList" type="String">Registration list</Resource>
+	<Resource key="CompanyDataList" type="String">Company data list</Resource>
+	<Resource key="ProductAdministration" type="String">Product administration</Resource>
+	<Resource key="ProductCatalogList" type="String">Product catalog list</Resource>
+	<Resource key="PriceTypeList" type="String">Price type list</Resource>
+	<Resource key="ProductTypeList" type="String">Product type list</Resource>
+	<Resource key="PurchaseOrderList" type="String">Purchase order list</Resource>
+	<Resource key="OrderConfirmationList" type="String">Order confirmation list</Resource>
+	<Resource key="BillOfDeliveryList" type="String">Bill of delivery list</Resource>
+	<Resource key="InvoiceList" type="String">Invoice list</Resource>
+	<Resource key="PromptNoteList" type="String">Prompt note list</Resource>
+	<Resource key="SalesTaxPolicyList" type="String">Sales tax policy list</Resource>
+
+	<!-- Documents Subitems -->
+	<Resource key="artifactList" type="String">Artifact list</Resource>
+
+	<!-- BackUp/Restore	-->
+	<Resource key="backup" type="String">BackUp</Resource>
+	<Resource key="restore" type="String">Restore</Resource>
+	<Resource key="welcome" type="String">Welcome to Database Administration!</Resource>
+	<Resource key="adminInfo" type="String">Now, you can create BackUp from the entire database of Restore saved dataset by the following buttons below.</Resource>
+	<Resource key="schemaDropWarning" type="String">Warning! If you drop the database the data you delete is gone forever!</Resource>
+	<Resource key="schemaDropConfirmation" type="String">Are you sure you want to completely remove all data in the dataset?</Resource>
+	<Resource key="noExistingBackupWarningPart1" type="String">Please attention! You have not created any BackUp yet or BackUp is unavailable!</Resource>
+	<Resource key="noExistingBackupWarningPart2" type="String">You have to make at least one BackUp copy from the database to start Restore!</Resource>
+	<Resource key="abort" type="String">Abort</Resource>
+
+	<!--  DataRetriever  -->
+	<Resource key="WarningTextForAjax" type="String">Please wait!</Resource>
+	<Resource key="AjaxNotSupported" type="String">The browser is not supported the AJAX technology!</Resource>
+	<Resource key="AjaxWasProblem" type="String">There was a problem under the progress.</Resource>
+
+	<!--  FolderManagerWidget -->
+	<Resource key="fmw_CREATE_WINDOW_TITLE" type="String">Create new node</Resource>
+	<Resource key="fmw_RENAME_WINDOW_TITLE" type="String">Rename node</Resource>
+	<Resource key="fmw_MOVE_WINDOW_TITLE" type="String">Move node</Resource>
+	<Resource key="fmw_DELETE_WINDOW_TITLE" type="String">Delete node</Resource>
+
+	<Resource key="fmw_CANCEL_BUTTON_TEXT" type="String">Cancel</Resource>
+	<Resource key="fmw_CREATE_BUTTON_TEXT" type="String">Create</Resource>
+	<Resource key="fmw_RENAME_BUTTON_TEXT" type="String">Rename</Resource>
+	<Resource key="fmw_MOVE_BUTTON_TEXT" type="String">Move</Resource>
+	<Resource key="fmw_DELETE_BUTTON_TEXT" type="String">Delete</Resource>
+
+	<Resource key="fmw_NEW_NAME_LABEL" type="String">New name: </Resource>
+	<Resource key="fmw_SELECTED_LABEL" type="String">Selected: </Resource>
+	
+	<Resource key="fmw_PICTURE_DOCTYPE" type="String">Picture</Resource>
+	<Resource key="fmw_DOCUMENT_DOCTYPE" type="String">Document</Resource>
+	<Resource key="fmw_INNERPIC_DOCSUBTYPE" type="String">Inner Picture</Resource>
+	<Resource key="fmw_OUTERPIC_DOCSUBTYPE" type="String">Outer Picture</Resource>
+
+	<Resource key="fmw_TREE_TITLE_CREATE_NODE_LABEL" type="String">Select parent node where to place:</Resource>
+	<Resource key="fmw_TREE_TITLE_RENAME_NODE_LABEL" type="String">Select node to rename:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_FROM_NODE_LABEL" type="String">Select node to move:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_TO_NODE_LABEL" type="String">Select parent node where to move:</Resource>
+	<Resource key="fmw_TREE_TITLE_DELETE_NODE_LABEL" type="String">Select node to delete:</Resource>
+
+	<Resource key="fmw_WARNING_EMPTY_NEW_NAME" type="String">The new name field is empty!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED" type="String">Choose a node!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED2" type="String">Choose a node and it new parent too!</Resource>
+	<Resource key="fmw_WARNING_SEPARATOR_IN_NAME" type="String">The new name contains the sperator: </Resource>
+	
+	<!-- Process Management -->
+	<Resource key="ProcessManagementMenu" type="String">Processs Management</Resource>
+	<Resource key="newProcessName" type="String">New Process</Resource>
+	<Resource key="Subject" type="String">Subject</Resource>
+
+	<!-- Artifact Management -->
+	<Resource key="ArtifactManagementMenu" type="String">Artifact management</Resource>
+	<Resource key="newArtifactName" type="String">New artifact</Resource>
+	<Resource key="delArtifactName" type="String">Delete artifact</Resource>
+	<Resource key="renameArtifactName" type="String">Rename artifact</Resource>
+	<Resource key="moveArtifactName" type="String">Move artifact</Resource>
+
+	<!-- Artifact Folder Management -->
+	<Resource key="ArtifactFolderManagementMenu" type="String">Folder management</Resource>
+	<Resource key="newFolderName" type="String">New folder</Resource>
+	<Resource key="delFolderName" type="String">Delete folder</Resource>
+	<Resource key="renameFolderName" type="String">Rename folder</Resource>
+	<Resource key="moveFolderName" type="String">Move folder</Resource>
+
+	<!-- System Administration - append	-->
+	<Resource key="userManagementName" type="String">User management</Resource>
+	<Resource key="organizationManagementName" type="String">Organization management</Resource>
+	
+	<!-- Commands -->	
+	<Resource key="LifecycleName" type="String">Protocol: </Resource>
+	<Resource key="Name" type="String">Name: </Resource>
+	<Resource key="Description" type="String">Description: </Resource>
+	
+	<Resource key="SettlementLabel" type="String">Settlement: </Resource>
+	<Resource key="TopographicalNumberLabel" type="String">Topographical number: </Resource>
+	<Resource key="CreateNewSettlement" type="String">Create new settlement</Resource>
+	<Resource key="CreateNewPerson" type="String">Create new user</Resource>
+	<Resource key="FamilyNameLabel" type="String">Last name: </Resource>
+	<Resource key="GivenNameLabel" type="String">First name: </Resource>
+	<Resource key="UserNameLabel" type="String">User name: </Resource>
+	<Resource key="CreateNewCompany" type="String">Create new company</Resource>
+	<Resource key="CompanyNameLabel" type="String">Company name: </Resource>
+	<Resource key="CompanyTypeLabel" type="String">Type: </Resource>
+	<Resource key="CompanyAddress" type="String">Address: </Resource>
+	<Resource key="ProtocolLabel" type="String">Protocol: </Resource>
+	<Resource key="SubjectLabel" type="String">Subject: </Resource>
+	<Resource key="OfferNameLabel" type="String">Offer name: </Resource>
+	<Resource key="CompSalesLabel" type="String">Sales</Resource>
+	<Resource key="SysOpLabel" type="String">System operation</Resource>
+	<Resource key="OpSupportLabel" type="String">Operation support</Resource>
+	<Resource key="SysIntProjLabel" type="String">System integration project</Resource>
+	<Resource key="CreateNewOffer" type="String">Create new offer</Resource>
+	<Resource key="ProductCatalogNameLabel" type="String">Product catalog name: </Resource>
+	<Resource key="ProductTypeIdentifierLabel" type="String">Product identifier: </Resource>
+	<Resource key="ProductTypeNameLabel" type="String">Product name: </Resource>
+	<Resource key="PriceTypeNameLabel" type="String">Pricelist name: </Resource>
+	<Resource key="SalesTaxPolicyNameLabel" type="String">Sales tax policy name: </Resource>
+	<Resource key="ProductPurchaseOrderNameLabel" type="String">Product purchase order name: </Resource>	
+
+	<!-- Error -->
+	<Resource key="ui.createartifactcommand.unknownArtifactType" type="String">Unknown artifact type!</Resource>
+	<Resource key="ui.createartifactcommand.unknownArtifactClass" type="String">Unknown artifact class!</Resource>
+	<Resource key="ui.createartifactcommand.illegalArgument" type="String">Illegal argument!</Resource>
+	<Resource key="ui.createartifactcommand.entityIdentityCollition" type="String">Entity identity collision!</Resource>
+	<Resource key="ui.createartifactcommand.error" type="String">An error has been occured!</Resource>
+
+  </Language>
+</tns:Resources>

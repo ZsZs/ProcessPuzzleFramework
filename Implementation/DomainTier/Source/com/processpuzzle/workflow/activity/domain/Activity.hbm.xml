@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<joined-subclass
+		name="com.processpuzzle.workflow.activity.domain.Activity"
+		table="T_ACTIVITY"
+		extends="com.processpuzzle.workflow.activity.domain.Action">
+		<key column="T_ACTIVITY_ID" />
+		<map name="possibleLifecycleInstances" cascade="all" inverse="true">
+			<key column="ACTIVITY_ID" />
+			<map-key column="statusKeyName" type="string" />
+			<one-to-many class="com.processpuzzle.workflow.activity.domain.GenericAction" />
+		</map>
+		<set name="inputs" cascade="all">
+			<key column="ACTIVITY_INPUT_ID" />
+			<one-to-many
+				class="com.processpuzzle.artifact.domain.Artifact" />
+		</set>
+		<set name="outputs" cascade="all">
+			<key column="ACTIVITY_OUTPUT_ID" />
+			<one-to-many
+				class="com.processpuzzle.artifact.domain.Artifact" />
+		</set>
+	</joined-subclass>
+</hibernate-mapping>

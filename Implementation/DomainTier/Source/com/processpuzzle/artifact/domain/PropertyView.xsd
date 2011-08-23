@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.processpuzzle.com/"
+    xmlns:pp="http://www.processpuzzle.com/"
+    elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="../../../../com/processpuzzle/artifact/domain/ArtifactView.xsd" />
+	
+	<xsd:element name="propertyView" type="pp:PropertyView" />
+	
+	<xsd:complexType name="PropertyView" >
+		<xsd:complexContent>
+			<xsd:extension base="pp:ArtifactView">
+				<xsd:sequence>
+					<xsd:element name="artifactTypeName" type="xsd:string" />
+					<xsd:element name="creationDate" type="xsd:string" />
+					<xsd:element name="isReserved" type="xsd:boolean" />
+					<xsd:element name="isVersionControlled" type="xsd:boolean" />
+					<xsd:element name="lastModificationDate" type="xsd:string" />
+					<xsd:element name="lastModifierName" type="xsd:string" />
+					<xsd:element name="responsibleName" type="xsd:string" />
+					<xsd:element name="usedBy" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.inventory.domain.InventoryEntry" table="T_INVENTORY_ENTRY">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="INVENTORY_ENTRY_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<component name="whenBooked" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+			<property name="value" column="whenBooked" type="java.util.Date"></property>
+		</component>
+		<component name="whenCharged" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+			<property name="value" column="whenCharged" type="java.util.Date"></property>
+		</component>
+		<many-to-one lazy="false" name="transfer" unique="true" class="com.processpuzzle.inventory.domain.Transfer"></many-to-one>
+		<many-to-one lazy="false" name="holding" unique="true" class="com.processpuzzle.inventory.domain.Holding"></many-to-one>
+
+	</class>
+</hibernate-mapping>

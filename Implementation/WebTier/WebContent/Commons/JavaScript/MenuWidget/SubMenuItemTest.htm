@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+	<title>MenuItem.js test page</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/CList.js"></script>
+	<script language="JavaScript" src="../CommonScripts/CCallWrapper.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../CommonScripts/CSimpleObservable.js"></script>
+	<script language="JavaScript" src="../CommonScripts/BrowserEvent.js"></script>
+	<script language="JavaScript" src="../WebUiCommands/WebUiCommand.js"></script>
+	<script language="JavaScript" src="../WebUiCommands/CustomCommand.js"></script>
+	<script language="javascript" src="MenuItem.js" ></script>
+	<script language="javascript" src="SubMenuItem.js" ></script>
+</HEAD>
+<BODY>
+	<h1>MenuItem.js test page</h1>
+	<p>This page contains tests for SubMenuItem.js javascript class.</p>
+
+		<div id="MenuWidget">
+			<dl class="dlcn">
+				<dt id="CompositeMenu" class="dtcn">
+				</dt>
+			</dl>
+		</div>		
+
+	<script language="javascript">
+		var menuWidget;
+		var command = new WebUiCommand();
+		
+		function setUp() {
+			menuItem = new SubMenuItem("menuName", "menuCaption", command);
+		}
+
+		function tearDown(){
+			menuItem = null;
+		}
+
+		function testConstructor(){
+			assertNotNull("MenuItem is created", menuItem);
+			assertEquals("Menu name is: ", "menuName", menuItem.getName());
+			assertEquals("Menu action statement is: ", command, menuItem.getCommand());
+			assertEquals("Menu caption is: ", "menuCaption", menuItem.getCaption());
+		}
+		
+		function testOnClick(){
+			//define the observer
+			observer = new Object();
+			observer.isCalled = false;
+			observer.callback = function () {observer.isCalled = true;}
+
+			var customCommand = new CustomCommand("observer.callback()");
+			callbackMenuItem = new SubMenuItem("menuName", "menuCaption", customCommand);	
+
+			dtElement = document.getElementById("CompositeMenu");
+			callbackMenuItem.show(dtElement);
+			menuElement = document.getElementById("menuName");
+			menuElement.click();
+		
+			assertTrue("Clicking on the menu item, runs the action statement.", observer.isCalled);
+		}
+		
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			testConstructor();
+			tearDown();
+		}
+
+		runTestFunction();
+
+	</script>
+</BODY>
+</HTML>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass name="com.processpuzzle.party.domain.Person"
+		table="T_PERSON"
+		extends="com.processpuzzle.party.domain.Party">
+		<key column="ID" />
+		
+		<!-- <key column="PERSON_ID" /> -->
+		<property name="initials"></property>
+		<property name="status"></property>
+		<property name="assignment"></property>
+		<property name="gender"></property>
+		<component name="birthDate" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+			<property name="value" column="birthDate" type="java.util.Date"></property>
+		</component>
+		<many-to-one lazy="false" name="systemUser" cascade="all" class="com.processpuzzle.application.security.domain.User"></many-to-one>
+<!-- 
+		<many-to-one lazy="false" name="manager"
+			class="com.processpuzzle.party.domain.Person"
+			cascade="save-update">
+		</many-to-one>
+ 		<set name="personGroups" cascade="save-update" inverse="true">
+			<key column="PERSON_ID" />
+			<one-to-many class="com.processpuzzle.party.domain.PersonGroup" />
+		</set>
+-->
+	</joined-subclass>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://www.processpuzzle.com" xmlns:pp="http://www.processpuzzle.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="WorkProduct.xsd"/>
+  <xsd:element name="workProductPackage" type="pp:WorkProductPackage"/>
+  <xsd:complexType name="WorkProductPackage">
+    <xsd:complexContent>
+      <xsd:extension base="pp:WorkProduct">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="childs" type="pp:WorkProduct"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

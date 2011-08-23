@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+	<title>MenuWidget.js test page</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<link rel="stylesheet" href="MenuWidget.css">
+	
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Collection.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../CommonScripts/BrowserEvent.js"></script>
+	<script language="JavaScript" src="../CommonScripts/CList.js"></script>
+	<script language="JavaScript" src="../CommonScripts/CCallWrapper.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../CommonScripts/CSimpleObservable.js"></script>
+	<script language="javascript" src="MenuItem.js" ></script>
+	<script language="javascript" src="SubMenuItem.js" ></script>
+	<script language="javascript" src="DualStateMenuItem.js" ></script>
+	<script language="javascript" src="CompositMenuItem.js" ></script>
+	<script language="javascript" src="MenuWidget.js" ></script>
+</HEAD>
+<BODY>
+	<h1>MenuWidget.js test page</h1>
+	<p>This page contains tests for MenuWidget.js javascript class.</p>
+
+	<div id="MenuWidget"></div>
+	
+	<!-- html div structure, when the "Alam" is expanded
+		<div id="...">
+			<dl class="dlcn">
+				<dt class="dtcn">
+					<span class="dtscn">Alma</span>
+					<dd class="ddcn"><span><a href="#">1.ALmamag</a></span></dd>
+					<dd class="ddcn"><span><a href="#">1.ALmamag</a></span></dd>
+				</dt>
+				<dt class="dtcn">
+					<span class="dtscn">Korte</span>
+				</dt>
+				<dd class="ddcn"><a href="#">Citrom</a></dd>
+				<dd class="ddcn"><span><input type="checkbox" checked="" /><a href="#">Citrom</a></span></dd>
+			</dl>
+		</div>		
+	-->
+	
+	<script language="javascript">
+		var menuWidget;
+		var menuDiv = document.getElementById("MenuWidget");
+		
+		function setUp() {
+			menuWidget = new MenuWidget(menuDiv);
+		}
+
+		function tearDown(){
+			menuWidget.hide();
+			menuWidget = null;
+		}
+
+		function testConstructor(){
+			assertNotNull("MenuWidget is created", menuWidget);
+		}
+
+		function testConstructorForUndefinedDivIdParameter(){
+			try {var anotherWidget = new MenuWidget("");}
+			catch(e) {
+				assertTrue("Constructor throws InvalidParameterException.", e instanceof InvalidParameterException);
+				return;
+			}
+			fail("No exception was thrown.");
+		}
+		
+		function testShowForUlTag(){
+			menuWidget.show();
+			dl_number = document.getElementById("MenuWidget").getElementsByTagName("dl").length;
+			assertTrue("There is no dl tag!", dl_number>0 );
+		}
+
+		function testHideForUlTag(){
+			menuWidget.show();
+			menuWidget.hide();
+			dl_number = document.getElementById("MenuWidget").getElementsByTagName("dl").length;
+			assertTrue("There is dl tag!", dl_number==0);
+		}
+
+		function testAddingCompositMenuItem(){
+			menuWidget.addCompositMenu("alma","Alma");
+			menuWidget.addCompositMenu("korte","Korte");
+			menuWidget.show();
+		}
+
+		function testExistsMenuItem(){
+			menuWidget.addCompositMenu("alma","Alma");
+			assertTrue("There must exists the menu with menuname 'alma'.", menuWidget.exists("alma") );
+		}
+
+		function testAddingCompositMenuItemAndAddingItsSubMenus(){
+			var command = null;
+			menuWidget.addCompositMenu("alma","Alma");
+			menuWidget.addSubMenuToCompositMenu("alma","almamag1","1.Almamag",command);
+			menuWidget.addSubMenuToCompositMenu("alma","almamag2","2.Almamag",command);
+
+			menuWidget.addCompositMenu("korte","Korte");
+			menuWidget.addSubMenuToCompositMenu("korte","kortemag1","1.Kortemag",command);
+			menuWidget.addSubMenuToCompositMenu("korte","kortemag2","2.Kortemag",command);
+			menuWidget.addSubMenuToCompositMenu("korte","kortemag3","3.Kortemag",command);
+
+			menuWidget.addSubMenu("citrom","Citrom",command);
+			
+			menuWidget.addDualStateMenu("dual","Dual",command,"false");
+			menuWidget.addDualStateMenu("dualon","Dual_checked",command,"true");
+			
+			menuWidget.show();
+
+			menuWidget.addCompositMenu("dualTarolo","Dual tarolo",true);
+			menuWidget.addDualStateMenuToCompositMenu("dualTarolo","d1","dual1",command,true);
+			menuWidget.addDualStateMenuToCompositMenu("alma","d2","dual2",command);
+
+		}
+		
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			testAddingCompositMenuItemAndAddingItsSubMenus();
+			tearDown();
+		}
+
+		//runTestFunction();
+
+	</script>
+</BODY>
+</HTML>

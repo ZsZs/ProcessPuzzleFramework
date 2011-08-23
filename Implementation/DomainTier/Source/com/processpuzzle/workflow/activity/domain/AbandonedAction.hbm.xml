@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.activity.domain.AbandonedAction"
+		table="T_ABANDONED_ACTION">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="ABANDONED_ACTION_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+
+		<property name="effective"></property>
+		<property name="cause"></property>
+		<one-to-one lazy="false" name="proposedAction"
+			class="com.processpuzzle.workflow.activity.domain.ProposedAction"
+			cascade="save-update" />
+		<one-to-one lazy="false" name="implementedAction"
+			class="com.processpuzzle.workflow.activity.domain.CompletedAction"
+			cascade="save-update" />
+
+	</class>
+</hibernate-mapping>

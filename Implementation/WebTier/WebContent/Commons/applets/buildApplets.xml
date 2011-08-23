@@ -1,0 +1,29 @@
+<project name="Build applets" default="signJAR" basedir=".">
+	
+	<property name="temp.dir" value="./temp"/>
+	<property name="source.dir" value="../../../../../ObjectPuzzle/Implementation/FrameworkWebTier/JavaSource/com/itcodex/objectpuzzle/framework/applet/control"/>
+
+	<target name="clean" description="clean up">
+		<delete dir="${temp.dir}" />
+		<delete file="./ReserveReleaseApplets.jar"/>
+	</target>
+
+	<target name="compile" depends="clean" description="compile the source">
+		<mkdir dir="${temp.dir}" />
+		<javac destdir="${temp.dir}">
+			<src path="${source.dir}" />
+		</javac>
+
+	</target>
+
+	<target name="ReserveReleaseApplets.jar" depends="compile" description="generate the distribution as jar">
+		<jar destfile="./ReserveReleaseApplets.jar" basedir="${temp.dir}" duplicate="fail">
+		</jar>
+	</target>
+	
+	<target name="signJAR" depends="ReserveReleaseApplets.jar">
+		<signjar jar="./ReserveReleaseApplets.jar" alias="signFiles" storepass="ab987c" keystore="./itkodexstore" keypass="kpi135"/>
+		<delete dir="${temp.dir}" />
+	</target>
+	
+</project>

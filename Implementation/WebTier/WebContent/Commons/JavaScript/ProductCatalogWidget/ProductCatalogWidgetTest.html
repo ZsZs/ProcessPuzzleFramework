@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Test page for ProductCatalogWidget.js</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<link rel="stylesheet" href="../../Skins/Default/Styles/base.css" type="text/css">
+	<link rel="stylesheet" href="../../Skins/Default/Styles/content.css" type="text/css">
+	<link rel="stylesheet" href="../../Skins/Default/Styles/form_styles.css" type="text/css">
+	<link rel="stylesheet" href="../TreeWidget/TreeWidget.css" type="text/css">
+
+	<script language="JavaScript" src="../BrowserWidget/BrowserWidget.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Collection.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/ArrayList.js"></script>
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Configuration.js"></script>
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../Log4JavaScript/log4javascript.js"></script>
+	<script language="JavaScript" src="../Prototype/prototype-1.6.0.3.js"></script>
+	<script language="JavaScript" src="../TreeWidget/TreeNode.js"></script>
+	<script language="JavaScript" src="../TreeWidget/TreeWidget.js"></script>
+	<script language="JavaScript" src="../TreeWidget/UndefinedTreeDefinitionException.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="JavaScript" src="../XPATH/xml.js"></script>
+	<script language="JavaScript" src="../WebUIController/WebUIController.js"></script>
+	<script language="JavaScript" src="../WebUIController/WebUILogger.js"></script>
+	<script language="JavaScript" src="ProductCatalogWidget.js" ></script>
+</head>
+
+<body>
+	<h1>ProductCatalogWidget.js test page</h1>
+	<p>This page contains tests for ProductCatalogWidget.js javascript class.</p>
+
+	<div id="ProductCatalogWidget"></div>
+	<div id="resultshere"></div>
+
+	<script language="javascript">
+		var widgetName = null;
+		var catalogDataUri = "TestCatalog.xml";
+		var catalogXsltUri = "TransformProductCatalogToTree.xsl";
+		var pictureFolder = "";
+		var webUiController = null;
+		var productCatalogWidget = null;
+		var divElementForProductCatalog = document.getElementById("ProductCatalogWidget");
+		var applicationConfiguration = null;
+
+		function setUp() {
+			widgetName = "ProductCatalogWidget";
+			webUiController = new WebUiController();
+			webUiController.loadResourceBundle( "ResourceBundle", new Locale( "hu" ));
+			applicationConfiguration = new Configuration();
+		
+			applicationConfiguration.addProperty( CATALOG_URI_PROPERTY_NAME, "TestCatalog.xml" );
+			applicationConfiguration.addProperty( CATALOG_TRANSFORMATION_URI_PROPERTY_NAME, "TransformProductCatalogToTree.xsl" );
+			webUiController.setApplicationConfiguration( applicationConfiguration );
+			productCatalogWidget = new ProductCatalogWidget( webUiController, catalogDataUri, widgetName );
+		}
+
+		function tearDown() {
+			if( productCatalogWidget.isVisible() ) productCatalogWidget.hide();
+			productCatalogWidget = null;
+			webUiController = null;
+		}	
+
+		function testConstructor_ForSucess() {
+			assertNotNull( "ProductCatalogWidget is created", productCatalogWidget);
+		}
+
+		//Checks the dom elements which should be inserted.
+		function testShow_ForElement() {
+			productCatalogWidget.show();
+			assertNotNull( "The show() method inserts a form into the container element.", document.getElementById( PRODUCT_CATALOG_FORM_NAME ));
+			assertNotNull( "The show() method inserts a TreeWidget into the container div.", document.getElementById("CatalogTreeWidget"));
+
+			var treeWidget = productCatalogWidget.getCatalogTreeWidget();
+			assertTrue("TreeWidget shold be transparently loaded cause of productCatalogWidget.show() method.", treeWidget.isVisible());
+		}
+		
+		function testHide_ForTreeWidget() {
+			productCatalogWidget.show();
+			productCatalogWidget.hide();
+			assertNull("The hide() method removes the TreeWidget from container div.", document.getElementById("CatalogTreeWidget"));
+		}
+		
+		//runs a test funcition during debugging
+		function runTestFunction() {
+			setUp();
+			testShow_ForElement()
+//			tearDown();
+		}
+
+		runTestFunction();
+		
+		function lookUpSelectedActionElement () {
+			var treeNodeDivElement = document.getElementById( 1 );
+			var treeNodeCaptionElement = treeNodeDivElement.getElementsByTagName("A");
+			treeNodeCaptionElement[0].click();
+			var selectedActionElement = productCatalogWidget.getSelectedActionTextElement();
+			return selectedActionElement;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<loginResponse value="true">
+	<user>
+		<id>1</id>
+		<name>Bárczi Benő</name>
+		<location>hu</location>
+		<prefferedLanguage>hu</prefferedLanguage>
+	</user>
+</loginResponse>

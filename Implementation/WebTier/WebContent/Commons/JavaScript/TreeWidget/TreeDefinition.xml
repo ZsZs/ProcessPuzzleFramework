@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TreeView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:NamespaceSchemaLocation="C:\zszs_view\ObjectPuzzle\Implementation\WebTier\WebContent\TreeWidget\TreeWidget.xsd">
+	<RootNode>
+		<TreeNode nodeId="10" caption="Branch1" image="images/folder_open.gif" orderNumber="1">
+			<TreeNode nodeId="11" caption="Document1" image="images/page16x16.gif" orderNumber="1"></TreeNode>
+			<TreeNode nodeId="12" caption="Document2" image="images/page16x16.gif" orderNumber="2"></TreeNode>
+		</TreeNode>
+		<TreeNode nodeId="20" caption="Branch2" image="images/folder_closed.gif" orderNumber="2">
+			<TreeNode nodeId="21" caption="Document3" image="images/page16x16.gif" orderNumber="1"></TreeNode>
+			<TreeNode nodeId="22" caption="Document4" image="images/page16x16.gif" orderNumber="2"></TreeNode>
+		</TreeNode>
+	</RootNode>
+</TreeView>
+

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources 
+	xmlns:tns="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
+
+  <Language name="hu">
+	<Resource key="fmw_CREATE_WINDOW_TITLE" type="String">Új csomópont létrehozása</Resource>
+	<Resource key="fmw_RENAME_WINDOW_TITLE" type="String">Csomópont átnevezése</Resource>
+	<Resource key="fmw_MOVE_WINDOW_TITLE" type="String">Csomópont mozgatása</Resource>
+	<Resource key="fmw_DELETE_WINDOW_TITLE" type="String">Csomópont törlése</Resource>
+
+	<Resource key="fmw_CANCEL_BUTTON_TEXT" type="String">Mégsem</Resource>
+	<Resource key="fmw_CREATE_BUTTON_TEXT" type="String">Létrehoz</Resource>
+	<Resource key="fmw_RENAME_BUTTON_TEXT" type="String">Átnevez</Resource>
+	<Resource key="fmw_MOVE_BUTTON_TEXT" type="String">Mozgatás</Resource>
+	<Resource key="fmw_DELETE_BUTTON_TEXT" type="String">Törlés</Resource>
+
+	<Resource key="fmw_NEW_NAME_LABEL" type="String">Új név: </Resource>
+	<Resource key="fmw_SELECTED_LABEL" type="String">Kiválasztott: </Resource>
+
+	<Resource key="fmw_TREE_TITLE_CREATE_NODE_LABEL" type="String">Válassza ki az új csomópont szülőjét:</Resource>
+	<Resource key="fmw_TREE_TITLE_RENAME_NODE_LABEL" type="String">Válassza ki az átnevezendő csomópontot:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_FROM_NODE_LABEL" type="String">Válassza ki az áthelyezendő csomópontot:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_TO_NODE_LABEL" type="String">Válassza ki az áthelyezendő csomópontot szülőjét:</Resource>
+	<Resource key="fmw_TREE_TITLE_DELETE_NODE_LABEL" type="String">Válassza ki a törlendő csomópontot:</Resource>
+
+	<Resource key="fmw_WARNING_EMPTY_NEW_NAME" type="String">Az új név mező nincs kitöltve!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED" type="String">Válasszon egy csomópontot!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED2" type="String">Válassza a csomópontot és annak új szülőjét is!</Resource>
+	<Resource key="fmw_WARNING_SEPARATOR_IN_NAME" type="String">Az új név tartalmazza az elválasztójelet: </Resource>
+  </Language>
+</tns:Resources>

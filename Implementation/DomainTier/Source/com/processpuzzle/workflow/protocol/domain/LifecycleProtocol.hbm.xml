@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.workflow.protocol.domain.LifecycleProtocol"
+		table="T_LIFECYCLE_PROTOCOL"
+		extends="com.processpuzzle.workflow.protocol.domain.CompositeProtocol">
+		<property name="prefix"></property>
+	</union-subclass>
+</hibernate-mapping>

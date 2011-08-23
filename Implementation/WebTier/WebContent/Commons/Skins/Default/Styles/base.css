@@ -1,0 +1,15 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	margin:0;
+	padding:0;
+	border:0;
+}
+span.dt{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: bold;
+	font-size: x-small;
+	background-color: #D49063;
+	color: #FFFFFF;
+}

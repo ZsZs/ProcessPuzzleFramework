@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Test page for FolderManagerWidget.js</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<link rel="stylesheet" href="../TabWidget/tab.css">
+
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="javascript" src="FolderManagerWidget.js" ></script>
+</head>
+
+<body>
+	<h1>FolderManagerWidget.js test page</h1>
+	<p>This page contains tests for FolderManagerWidget.js javascript class.</p>
+
+	<script language="javascript">
+		var widgetName = "fmw";
+		var folderManagerWidget;
+
+		function setUp() {
+			var folderManagerWidget = new FolderManagerWidget(widgetName,0);
+		}
+
+		function tearDown() {
+			folderManagerWidget = null;
+		}
+
+		function testConstructor() {
+			assertNotNull("FolderManagerWidget is created", folderManagerWidget);
+		}
+
+		function testConstructor_withoutNameParameter() {
+			var wasInvalidParameterException = false;
+			try {
+				var f = new FolderManagerWidget(null,0);
+			} catch(e) { 
+				if (e instanceof InvalidParameterException) wasInvalidParameterException = true;
+				else fail("There must be an InvalidParameterException.");
+			}
+			assertTrue("There must be an InvalidParameterException.",wasInvalidParameterException);
+		}
+
+		function testConstructor_withoutModeParameter() {
+			var wasInvalidParameterException = false;
+			try {
+				var f = new FolderManagerWidget("WidgetName",null);
+			} catch(e) { 
+				if (e instanceof InvalidParameterException) wasInvalidParameterException = true;
+				else fail("There must be an InvalidParameterException.");
+			}
+			assertTrue("There must be an InvalidParameterException.",wasInvalidParameterException);
+		}
+
+		function testConstructor_forExistingReferenceInWindowObject() {
+			var reference;
+			eval("reference = window."+widgetName);
+			assertNotNull("FolderManagerWidget put a reference to window object from the modal window.", reference);
+		}
+
+		//runs a test funcition during debugging
+		function runTestFunction() {
+			setUp();
+			//
+			tearDown();
+		}
+
+		//runTestFunction();
+
+	</script>
+</body>
+</html>

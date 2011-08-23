@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_zck_gIwOEdqcYI8-foLRNA" type="Class" name="Artifact Overview.dnx">
+  <children xmi:id="_4epyQIwOEdqcYI8-foLRNA" sourceEdges="_oDRdlYwREdqcYI8-foLRNA _oDW9IYwREdqcYI8-foLRNA _oDijW4wREdqcYI8-foLRNA _0qaw4b2UEdqSb5i8WBF-CQ _T6fdML5gEdqV5_8JkhJtWA" targetEdges="_oC0KrowREdqcYI8-foLRNA _oDRdpYwREdqcYI8-foLRNA _oDW9MIwREdqcYI8-foLRNA _oDW9N4wREdqcYI8-foLRNA">
+    <children xmi:id="_4epyQ4wOEdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_4epyRIwOEdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_4epyRYwOEdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_4epyRowOEdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_4epyR4wOEdqcYI8-foLRNA" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_4epySIwOEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_4ev44IwOEdqcYI8-foLRNA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_4ev44YwOEdqcYI8-foLRNA" filtering="Manual">
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=Artifact^sign=(QString%3bQArtifactType%3b)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=Artifact^sign=(QString%3b)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=Artifact^sign=()V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getResponsible^sign=()QParty%3b[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setResponsible^sign=(QParty%3b)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getCommentList^sign=()QCommentList%3b[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setCommentList^sign=(QCommentList%3b)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=addComment^sign=(QComment%3b)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getCreationDate^sign=()QDate%3b[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setCreationDate^sign=(QDate%3b)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getIsUnderEdit^sign=()Z[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setIsUnderEdit^sign=(Z)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getIsCheckedOut^sign=()Z[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setIsCheckedOut^sign=(Z)V[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </styles>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_4ev44owOEdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_4ev444wOEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_4ev45IwOEdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_4ev45YwOEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_4epyQYwOEdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4epyQowOEdqcYI8-foLRNA" x="19557" y="47064"/>
+  </children>
+  <children xmi:id="_oCjE34wREdqcYI8-foLRNA" targetEdges="_oDRdlYwREdqcYI8-foLRNA">
+    <children xmi:id="_oCjE4owREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCjE44wREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCjE5IwREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjE5YwREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjE5owREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjE54wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjE6IwREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjE6YwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjE6owREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjE64wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjE7IwREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCjE7YwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCjE4IwREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCjE4YwREdqcYI8-foLRNA" x="13992" y="52311"/>
+  </children>
+  <children xmi:id="_oCjE7owREdqcYI8-foLRNA">
+    <children xmi:id="_oCjE8YwREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCjE8owREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCjE84wREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_oCjE9IwREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_oCjE9YwREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjE9owREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_oCjE94wREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjE-IwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_oCjE-YwREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjE-owREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_oCjE-4wREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCjE_IwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCjE74wREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProjectTemplate[jcu^name=ProjectTemplate.java[jpack^name=com.itcodex.adi.project_administration.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCjE8IwREdqcYI8-foLRNA" x="13356" y="60102"/>
+  </children>
+  <children xmi:id="_oCjE_YwREdqcYI8-foLRNA" targetEdges="_yc3I_MR3Edq728nUbel-FA _RWBOisR4Edq728nUbel-FA">
+    <children xmi:id="_oCjFAIwREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCjFAYwREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCjFAowREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjFA4wREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjFBIwREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjFBYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjFBowREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjFB4wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjFCIwREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjFCYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjFCowREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCjFC4wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCjE_owREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Person[jcu^name=Person.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCjE_4wREdqcYI8-foLRNA" x="24327" y="54060"/>
+  </children>
+  <children xmi:id="_oCjFDIwREdqcYI8-foLRNA" sourceEdges="_q0jyEIwUEdqcYI8-foLRNA" targetEdges="_oDW9IYwREdqcYI8-foLRNA">
+    <children xmi:id="_oCjFD4wREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCjFEIwREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCjFEYwREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjFEowREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCjFE4wREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCjFFIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCokYIwREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCokYYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCokYowREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCokY4wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCokZIwREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCokZYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCjFDYwREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCjFDowREdqcYI8-foLRNA" x="19875" y="44997"/>
+  </children>
+  <children xmi:id="_oCokhIwREdqcYI8-foLRNA" sourceEdges="_oDRdpYwREdqcYI8-foLRNA" targetEdges="_nNXeYIwTEdqcYI8-foLRNA">
+    <children xmi:id="_oCokh4wREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCokiIwREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCokiYwREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCokiowREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCoki4wREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCokjIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCokjYwREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCokjowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCokj4wREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCokkIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCokkYwREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCokkowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCokhYwREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCokhowREdqcYI8-foLRNA" x="14151" y="54855"/>
+  </children>
+  <children xmi:id="_oCurBowREdqcYI8-foLRNA" sourceEdges="_ycxCasR3Edq728nUbel-FA _yc3I88R3Edq728nUbel-FA _yc3I_MR3Edq728nUbel-FA" targetEdges="_T6fdML5gEdqV5_8JkhJtWA">
+    <children xmi:id="_oCurCYwREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCurCowREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCurC4wREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurDIwREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurDYwREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurDowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurD4wREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurEIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurEYwREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurEowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurE4wREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCurFIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCurB4wREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCurCIwREdqcYI8-foLRNA" x="25599" y="56604"/>
+  </children>
+  <children xmi:id="_oCurFYwREdqcYI8-foLRNA" targetEdges="_oDijW4wREdqcYI8-foLRNA">
+    <children xmi:id="_oCurGIwREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCurGYwREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCurGowREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurG4wREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurHIwREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurHYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurHowREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurH4wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurIIwREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurIYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurIowREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCurI4wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCurFowREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Party[jcu^name=Party.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCurF4wREdqcYI8-foLRNA" x="13992" y="50403"/>
+  </children>
+  <children xmi:id="_oCurOowREdqcYI8-foLRNA" sourceEdges="_oDW9MIwREdqcYI8-foLRNA _RWBOisR4Edq728nUbel-FA" targetEdges="_RWBOfMR4Edq728nUbel-FA">
+    <children xmi:id="_oCurPYwREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oCurPowREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oCurP4wREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurQIwREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurQYwREdqcYI8-foLRNA" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurQowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurQ4wREdqcYI8-foLRNA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurRIwREdqcYI8-foLRNA" filtering="Manual">
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=Document^sign=(QString%3bQDocumentType%3b)V[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=Document^sign=(QString%3b)V[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=Document^sign=()V[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getTitle^sign=()QString%3b[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setTitle^sign=(QString%3b)V[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getSubject^sign=()QString%3b[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setSubject^sign=(QString%3b)V[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getAuthor^sign=()QPerson%3b[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setAuthor^sign=(QPerson%3b)V[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </styles>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurRYwREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oCurRowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oCurR4wREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oCurSIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oCurO4wREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCurPIwREdqcYI8-foLRNA" x="20193" y="52152"/>
+  </children>
+  <children xmi:id="_oC0KkIwREdqcYI8-foLRNA" sourceEdges="_lWXEAIwUEdqcYI8-foLRNA" targetEdges="_0qaw4b2UEdqSb5i8WBF-CQ">
+    <children xmi:id="_oC0Kk4wREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oC0KlIwREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oC0KlYwREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KlowREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0Kl4wREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oC0KmIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KmYwREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oC0KmowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0Km4wREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oC0KnIwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KnYwREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oC0KnowREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oC0KkYwREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oC0KkowREdqcYI8-foLRNA" x="25836" y="48706"/>
+  </children>
+  <children xmi:id="_oC0Kn4wREdqcYI8-foLRNA" sourceEdges="_oC0KrowREdqcYI8-foLRNA _oDW9N4wREdqcYI8-foLRNA">
+    <children xmi:id="_oC0KoowREdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_oC0Ko4wREdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_oC0KpIwREdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KpYwREdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KpowREdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oC0Kp4wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KqIwREdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oC0KqYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KqowREdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_oC0Kq4wREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_oC0KrIwREdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_oC0KrYwREdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_oC0KoIwREdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oC0KoYwREdqcYI8-foLRNA" x="14151" y="48177"/>
+  </children>
+  <children xmi:id="_nNFKlowTEdqcYI8-foLRNA" sourceEdges="_nNXeYIwTEdqcYI8-foLRNA">
+    <children xmi:id="_nNFKmYwTEdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_nNFKmowTEdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_nNFKm4wTEdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_nNLRIIwTEdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_nNLRIYwTEdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_nNLRIowTEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_nNLRI4wTEdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_nNLRJIwTEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_nNLRJYwTEdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_nNLRJowTEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <children xmi:id="_nNLRJ4wTEdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_nNLRKIwTEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_nNFKl4wTEdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nNFKmIwTEdqcYI8-foLRNA" x="13674" y="57240"/>
+  </children>
+  <children xmi:id="_lWK2x4wUEdqcYI8-foLRNA" sourceEdges="_q0drj4wUEdqcYI8-foLRNA" targetEdges="_lWXEAIwUEdqcYI8-foLRNA _q0jyEIwUEdqcYI8-foLRNA _q0jyLIwUEdqcYI8-foLRNA">
+    <children xmi:id="_lWK2yowUEdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_lWK2y4wUEdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_lWK2zIwUEdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_lWK2zYwUEdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_lWK2zowUEdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_lWK2z4wUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_lWK20IwUEdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_lWK20YwUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_lWK20owUEdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_lWK204wUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_lWK21IwUEdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_lWK21YwUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_lWK2yIwUEdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lWK2yYwUEdqcYI8-foLRNA" x="23691" y="45156"/>
+  </children>
+  <children xmi:id="_q0ReMIwUEdqcYI8-foLRNA" sourceEdges="_q0jyLIwUEdqcYI8-foLRNA">
+    <children xmi:id="_q0Xk0IwUEdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_q0Xk0YwUEdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_q0Xk0owUEdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0Xk04wUEdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0Xk1IwUEdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_q0Xk1YwUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0Xk1owUEdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_q0Xk14wUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0Xk2IwUEdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_q0Xk2YwUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0Xk2owUEdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_q0Xk24wUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_q0ReMYwUEdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q0ReMowUEdqcYI8-foLRNA" x="27189" y="46905"/>
+  </children>
+  <children xmi:id="_q0Xk8owUEdqcYI8-foLRNA" targetEdges="_q0drj4wUEdqcYI8-foLRNA">
+    <children xmi:id="_q0Xk9YwUEdqcYI8-foLRNA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_q0Xk9owUEdqcYI8-foLRNA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_q0Xk94wUEdqcYI8-foLRNA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0Xk-IwUEdqcYI8-foLRNA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0drcIwUEdqcYI8-foLRNA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_q0drcYwUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0drcowUEdqcYI8-foLRNA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_q0drc4wUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0drdIwUEdqcYI8-foLRNA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_q0drdYwUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_q0drdowUEdqcYI8-foLRNA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_q0drd4wUEdqcYI8-foLRNA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_q0Xk84wUEdqcYI8-foLRNA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q0Xk9IwUEdqcYI8-foLRNA" x="27030" y="45156"/>
+  </children>
+  <children xmi:id="_ycq7w8R3Edq728nUbel-FA" targetEdges="_ycxCasR3Edq728nUbel-FA">
+    <children xmi:id="_ycq7xsR3Edq728nUbel-FA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ycq7x8R3Edq728nUbel-FA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ycq7yMR3Edq728nUbel-FA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_ycq7ycR3Edq728nUbel-FA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_ycq7ysR3Edq728nUbel-FA" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ycq7y8R3Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_ycq7zMR3Edq728nUbel-FA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ycq7zcR3Edq728nUbel-FA" filtering="Manual">
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=HTMLText^sign=()V[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=HTMLText^sign=(QString%3bQString%3b)V[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getId^sign=()QInteger%3b[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setId^sign=(QInteger%3b)V[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getDivId^sign=()QString%3b[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setDivId^sign=(QString%3b)V[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getText^sign=()QString%3b[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setText^sign=(QString%3b)V[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=getCreationTimeStamp^sign=()QDate%3b[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+        <filteredObjects xmi:type="uml:Operation" href="vizref:///#jmethod^vcore.target=uml2.Operation^name=setCreationTimeStamp^sign=(QDate%3b)V[jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </styles>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_ycq7zsR3Edq728nUbel-FA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ycq7z8R3Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_ycxCUMR3Edq728nUbel-FA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_ycxCUcR3Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ycq7xMR3Edq728nUbel-FA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ycq7xcR3Edq728nUbel-FA" x="24804" y="59307"/>
+  </children>
+  <children xmi:id="_ycxCUsR3Edq728nUbel-FA" targetEdges="_yc3I88R3Edq728nUbel-FA">
+    <children xmi:id="_ycxCVcR3Edq728nUbel-FA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ycxCVsR3Edq728nUbel-FA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ycxCV8R3Edq728nUbel-FA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+    </children>
+    <children xmi:id="_ycxCWMR3Edq728nUbel-FA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+    </children>
+    <children xmi:id="_ycxCWcR3Edq728nUbel-FA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ycxCWsR3Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+    </children>
+    <children xmi:id="_ycxCW8R3Edq728nUbel-FA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ycxCXMR3Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+    </children>
+    <children xmi:id="_ycxCXcR3Edq728nUbel-FA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ycxCXsR3Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+    </children>
+    <children xmi:id="_ycxCX8R3Edq728nUbel-FA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_ycxCYMR3Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ycxCU8R3Edq728nUbel-FA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TimePoint[jcu^name=TimePoint.java[jpack^name=com.itcodex.objectpuzzle.framework.fundamental_types.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Framework+Domain+Tier]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ycxCVMR3Edq728nUbel-FA" x="27348" y="53901"/>
+  </children>
+  <children xmi:id="_RV7H0MR4Edq728nUbel-FA" sourceEdges="_RWBOfMR4Edq728nUbel-FA" targetEdges="_3eW3eMR4Edq728nUbel-FA">
+    <children xmi:id="_RV7H08R4Edq728nUbel-FA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_RV7H1MR4Edq728nUbel-FA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_RV7H1cR4Edq728nUbel-FA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_RV7H1sR4Edq728nUbel-FA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_RV7H18R4Edq728nUbel-FA" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_RV7H2MR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_RV7H2cR4Edq728nUbel-FA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_RV7H2sR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_RV7H28R4Edq728nUbel-FA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_RV7H3MR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_RV7H3cR4Edq728nUbel-FA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_RV7H3sR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_RV7H0cR4Edq728nUbel-FA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RV7H0sR4Edq728nUbel-FA" x="19080" y="56127"/>
+  </children>
+  <children xmi:id="_3au7sMR4Edq728nUbel-FA" sourceEdges="_3eW3eMR4Edq728nUbel-FA">
+    <children xmi:id="_3au7s8R4Edq728nUbel-FA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_3au7tMR4Edq728nUbel-FA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_3au7tcR4Edq728nUbel-FA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_3au7tsR4Edq728nUbel-FA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_3au7t8R4Edq728nUbel-FA" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3au7uMR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_3au7ucR4Edq728nUbel-FA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3au7usR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_3au7u8R4Edq728nUbel-FA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3au7vMR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_3au7vcR4Edq728nUbel-FA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_3au7vsR4Edq728nUbel-FA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_3au7scR4Edq728nUbel-FA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3au7ssR4Edq728nUbel-FA" x="18603" y="59625"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_zck_gYwOEdqcYI8-foLRNA"/>
+  <edges xmi:id="_oC0KrowREdqcYI8-foLRNA" source="_oC0Kn4wREdqcYI8-foLRNA" target="_4epyQIwOEdqcYI8-foLRNA">
+    <children xmi:id="_oC0KsYwREdqcYI8-foLRNA" type="FromMultiplicityLabel">
+      <children xmi:id="_oC0Ks4wREdqcYI8-foLRNA" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=inputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=inputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oC0KsowREdqcYI8-foLRNA" y="397"/>
+    </children>
+    <children xmi:id="_oC0KtIwREdqcYI8-foLRNA" type="FromRoleLabel">
+      <children xmi:id="_oC0KtowREdqcYI8-foLRNA" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=inputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=inputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oC0KtYwREdqcYI8-foLRNA" x="-371" y="-479"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_oC0Kr4wREdqcYI8-foLRNA" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=inputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oC0KsIwREdqcYI8-foLRNA" points="[27, -503, -8493, -847]$[27, -1111, -8493, -1455]$[6245, -1111, -2275, -1455]"/>
+  </edges>
+  <edges xmi:id="_oDRdlYwREdqcYI8-foLRNA" source="_4epyQIwOEdqcYI8-foLRNA" target="_oCjE34wREdqcYI8-foLRNA">
+    <children xmi:id="_oDRdmIwREdqcYI8-foLRNA" type="KindLabel">
+      <children xmi:id="_oDRdmowREdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_oDRdnIwREdqcYI8-foLRNA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_oDRdm4wREdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oDRdmYwREdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_oDRdlowREdqcYI8-foLRNA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=FileStorage[jcu^name=FileStorage.java[jpack^name=com.itcodex.objectpuzzle.util.domain.file[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDRdl4wREdqcYI8-foLRNA" points="[-14, 5172, 4484, -12462]$[-4512, 6760, -14, -10874]"/>
+  </edges>
+  <edges xmi:id="_oDRdpYwREdqcYI8-foLRNA" source="_oCokhIwREdqcYI8-foLRNA" target="_4epyQIwOEdqcYI8-foLRNA">
+    <children xmi:id="_oDRdqIwREdqcYI8-foLRNA" type="KindLabel">
+      <children xmi:id="_oDRdqowREdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_oDRdrIwREdqcYI8-foLRNA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_oDRdq4wREdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oDRdqYwREdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_oDRdpowREdqcYI8-foLRNA" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDRdp4wREdqcYI8-foLRNA" points="[2011, -106, -5424, 6535]$[3625, -106, -3810, 6535]$[3625, -3995, -3810, 2646]$[5874, -3995, -1561, 2646]$[5874, -4657, -1561, 1984]"/>
+  </edges>
+  <edges xmi:id="_oDW9IYwREdqcYI8-foLRNA" source="_4epyQIwOEdqcYI8-foLRNA" target="_oCjFDIwREdqcYI8-foLRNA">
+    <children xmi:id="_oDW9JIwREdqcYI8-foLRNA" type="NameLabel">
+      <children xmi:id="_oDW9JowREdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_oDW9J4wREdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oDW9JYwREdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_oDW9IowREdqcYI8-foLRNA" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDW9I4wREdqcYI8-foLRNA" points="[-1085, -1984, -926, 2990]$[-1085, -4471, -926, 503]"/>
+  </edges>
+  <edges xmi:id="_oDW9MIwREdqcYI8-foLRNA" source="_oCurOowREdqcYI8-foLRNA" target="_4epyQIwOEdqcYI8-foLRNA">
+    <children xmi:id="_oDW9M4wREdqcYI8-foLRNA" type="NameLabel">
+      <children xmi:id="_oDW9NYwREdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_oDW9NowREdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oDW9NIwREdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_oDW9MYwREdqcYI8-foLRNA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDW9MowREdqcYI8-foLRNA" points="[-14, -10874, 18930, 6760]$[-18958, -12462, -14, 5172]"/>
+  </edges>
+  <edges xmi:id="_oDW9N4wREdqcYI8-foLRNA" source="_oC0Kn4wREdqcYI8-foLRNA" target="_4epyQIwOEdqcYI8-foLRNA">
+    <children xmi:id="_oDW9OowREdqcYI8-foLRNA" type="FromMultiplicityLabel">
+      <children xmi:id="_oDccsIwREdqcYI8-foLRNA" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=outputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=outputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDW9O4wREdqcYI8-foLRNA" y="397"/>
+    </children>
+    <children xmi:id="_oDccsYwREdqcYI8-foLRNA" type="FromRoleLabel">
+      <children xmi:id="_oDccs4wREdqcYI8-foLRNA" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=outputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=outputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDccsowREdqcYI8-foLRNA" x="-492" y="-456"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_oDW9OIwREdqcYI8-foLRNA" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=outputArtifact[jsrctype^name=Protocol[jcu^name=Protocol.java[jpack^name=com.itcodex.objectpuzzle.project_planning.protocol.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDW9OYwREdqcYI8-foLRNA" points="[-26, 502, -8758, -821]$[-26, 1164, -8758, -159]$[6113, 1164, -2619, -159]$[6113, 1323, -2619, 0]$[6456, 1323, -2276, 0]"/>
+  </edges>
+  <edges xmi:id="_oDijW4wREdqcYI8-foLRNA" source="_4epyQIwOEdqcYI8-foLRNA" target="_oCurFYwREdqcYI8-foLRNA">
+    <children xmi:id="_oDijXowREdqcYI8-foLRNA" type="FromMultiplicityLabel">
+      <children xmi:id="_oDijYIwREdqcYI8-foLRNA" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=responsible[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=responsible[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDijX4wREdqcYI8-foLRNA" y="397"/>
+    </children>
+    <children xmi:id="_oDijYYwREdqcYI8-foLRNA" type="FromRoleLabel">
+      <children xmi:id="_oDijY4wREdqcYI8-foLRNA" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=responsible[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=responsible[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDijYowREdqcYI8-foLRNA" x="-710" y="-531"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_oDijXIwREdqcYI8-foLRNA" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=responsible[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDijXYwREdqcYI8-foLRNA" points="[-2354, 212, 10690, -1032]$[-11853, 1112, 1191, -132]"/>
+  </edges>
+  <edges xmi:id="_nNXeYIwTEdqcYI8-foLRNA" source="_nNFKlowTEdqcYI8-foLRNA" target="_oCokhIwREdqcYI8-foLRNA">
+    <children xmi:id="_nNXeY4wTEdqcYI8-foLRNA" type="NameLabel">
+      <children xmi:id="_nNXeZYwTEdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]][jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_nNXeZowTEdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]][jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]][jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nNXeZIwTEdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_nNXeYYwTEdqcYI8-foLRNA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderProcessList[jcu^name=OrderProcessList.java[jpack^name=com.itcodex.adi.order_management.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ADI+Domain+Logic]]]]][jsrctype^name=ProcessDataSheet[jcu^name=ProcessDataSheet.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nNXeYowTEdqcYI8-foLRNA" points="[211, -503, 264, 2196]$[211, -1720, 264, 979]$[211, -2196, 264, 503]"/>
+  </edges>
+  <edges xmi:id="_lWXEAIwUEdqcYI8-foLRNA" source="_oC0KkIwREdqcYI8-foLRNA" target="_lWK2x4wUEdqcYI8-foLRNA">
+    <children xmi:id="_lWXEA4wUEdqcYI8-foLRNA" type="NameLabel">
+      <children xmi:id="_lWXEBYwUEdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_lWXEBowUEdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lWXEBIwUEdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_lWXEAYwUEdqcYI8-foLRNA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lWXEAowUEdqcYI8-foLRNA" points="[-1, -516, -3678, 2883]$[3677, -2103, 0, 1296]"/>
+  </edges>
+  <edges xmi:id="_q0drj4wUEdqcYI8-foLRNA" source="_lWK2x4wUEdqcYI8-foLRNA" target="_q0Xk8owUEdqcYI8-foLRNA">
+    <children xmi:id="_q0drkowUEdqcYI8-foLRNA" type="NameLabel">
+      <children xmi:id="_q0drlIwUEdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_q0drlYwUEdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q0drk4wUEdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_q0drkIwUEdqcYI8-foLRNA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ResourceType[jcu^name=ResourceType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q0drkYwUEdqcYI8-foLRNA" points="[-1, -1297, -4988, 6124]$[4973, -2884, -14, 4537]"/>
+  </edges>
+  <edges xmi:id="_q0jyEIwUEdqcYI8-foLRNA" source="_oCjFDIwREdqcYI8-foLRNA" target="_lWK2x4wUEdqcYI8-foLRNA">
+    <children xmi:id="_q0jyE4wUEdqcYI8-foLRNA" type="FromMultiplicityLabel">
+      <children xmi:id="_q0jyFYwUEdqcYI8-foLRNA" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=type[jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=type[jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_q0jyFIwUEdqcYI8-foLRNA" y="397"/>
+    </children>
+    <children xmi:id="_q0jyFowUEdqcYI8-foLRNA" type="FromRoleLabel">
+      <children xmi:id="_q0jyGIwUEdqcYI8-foLRNA" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=type[jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=type[jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_q0jyF4wUEdqcYI8-foLRNA" y="-397"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_q0jyEYwUEdqcYI8-foLRNA" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=type[jsrctype^name=Asset[jcu^name=Asset.java[jpack^name=com.itcodex.objectpuzzle.asset.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q0jyEowUEdqcYI8-foLRNA" points="[1191, 134, -7435, -25]$[6615, 134, -2011, -25]$[6615, 133, -2011, -26]$[7250, 133, -1376, -26]"/>
+  </edges>
+  <edges xmi:id="_q0jyLIwUEdqcYI8-foLRNA" source="_q0ReMIwUEdqcYI8-foLRNA" target="_lWK2x4wUEdqcYI8-foLRNA">
+    <children xmi:id="_q0jyL4wUEdqcYI8-foLRNA" type="NameLabel">
+      <children xmi:id="_q0jyMYwUEdqcYI8-foLRNA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_q0jyMowUEdqcYI8-foLRNA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q0jyMIwUEdqcYI8-foLRNA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_q0jyLYwUEdqcYI8-foLRNA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PartyType[jcu^name=PartyType.java[jpack^name=com.itcodex.objectpuzzle.party.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=AssetType[jcu^name=AssetType.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.resource[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q0jyLowUEdqcYI8-foLRNA" points="[0, -1085, -1, 2884]$[0, -2673, -1, 1296]"/>
+  </edges>
+  <edges xmi:id="_0qaw4b2UEdqSb5i8WBF-CQ" source="_4epyQIwOEdqcYI8-foLRNA" target="_oC0KkIwREdqcYI8-foLRNA">
+    <children xmi:id="_0qaw5L2UEdqSb5i8WBF-CQ" type="KindLabel">
+      <children xmi:id="_0qaw5r2UEdqSb5i8WBF-CQ" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_0qg3YL2UEdqSb5i8WBF-CQ" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_0qaw572UEdqSb5i8WBF-CQ" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0qaw5b2UEdqSb5i8WBF-CQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_0qaw4r2UEdqSb5i8WBF-CQ" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ArtifactType[jcu^name=ArtifactType.java[jpack^name=com.itcodex.objectpuzzle.artifact_type.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0qaw472UEdqSb5i8WBF-CQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_T6fdML5gEdqV5_8JkhJtWA" source="_4epyQIwOEdqcYI8-foLRNA" target="_oCurBowREdqcYI8-foLRNA">
+    <children xmi:id="_T6fdM75gEdqV5_8JkhJtWA" type="KindLabel">
+      <children xmi:id="_T6fdNb5gEdqV5_8JkhJtWA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_T6fdN75gEdqV5_8JkhJtWA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_T6fdNr5gEdqV5_8JkhJtWA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T6fdNL5gEdqV5_8JkhJtWA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_T6fdMb5gEdqV5_8JkhJtWA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Artifact[jcu^name=Artifact.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T6fdMr5gEdqV5_8JkhJtWA" points="[2302, 821, -2778, -7249]$[5054, 1826, -26, -6244]$[5054, 7567, -26, -503]"/>
+  </edges>
+  <edges xmi:id="_ycxCasR3Edq728nUbel-FA" source="_oCurBowREdqcYI8-foLRNA" target="_ycq7w8R3Edq728nUbel-FA">
+    <children xmi:id="_ycxCbcR3Edq728nUbel-FA" type="NameLabel">
+      <children xmi:id="_ycxCb8R3Edq728nUbel-FA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_ycxCcMR3Edq728nUbel-FA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ycxCbsR3Edq728nUbel-FA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ycxCa8R3Edq728nUbel-FA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLText[jcu^name=HTMLText.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ycxCbMR3Edq728nUbel-FA" points="[-14, -516, 0, 5278]$[-14, -2103, 0, 3691]"/>
+  </edges>
+  <edges xmi:id="_yc3I88R3Edq728nUbel-FA" source="_oCurBowREdqcYI8-foLRNA" target="_ycxCUsR3Edq728nUbel-FA">
+    <children xmi:id="_yc3I9sR3Edq728nUbel-FA" type="FromMultiplicityLabel">
+      <children xmi:id="_yc3I-MR3Edq728nUbel-FA" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=creationDate[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=creationDate[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yc3I98R3Edq728nUbel-FA" y="397"/>
+    </children>
+    <children xmi:id="_yc3I-cR3Edq728nUbel-FA" type="FromRoleLabel">
+      <children xmi:id="_yc3I-8R3Edq728nUbel-FA" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=creationDate[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=creationDate[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yc3I-sR3Edq728nUbel-FA" y="-397"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_yc3I9MR3Edq728nUbel-FA" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=creationDate[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yc3I9cR3Edq728nUbel-FA" points="[-14, 516, -13, -3797]$[-14, 2104, -13, -2209]"/>
+  </edges>
+  <edges xmi:id="_yc3I_MR3Edq728nUbel-FA" source="_oCurBowREdqcYI8-foLRNA" target="_oCjE_YwREdqcYI8-foLRNA">
+    <children xmi:id="_yc3I_8R3Edq728nUbel-FA" type="FromMultiplicityLabel">
+      <children xmi:id="_yc3JAcR3Edq728nUbel-FA" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yc3JAMR3Edq728nUbel-FA" y="397"/>
+    </children>
+    <children xmi:id="_yc3JAsR3Edq728nUbel-FA" type="FromRoleLabel">
+      <children xmi:id="_yc3JBMR3Edq728nUbel-FA" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yc3JA8R3Edq728nUbel-FA" x="-608" y="-439"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_yc3I_cR3Edq728nUbel-FA" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Comment[jcu^name=Comment.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yc3I_sR3Edq728nUbel-FA" points="[318, -503, -1693, 2513]$[1667, -2513, -344, 503]"/>
+  </edges>
+  <edges xmi:id="_RWBOfMR4Edq728nUbel-FA" source="_RV7H0MR4Edq728nUbel-FA" target="_oCurOowREdqcYI8-foLRNA">
+    <children xmi:id="_RWBOf8R4Edq728nUbel-FA" type="NameLabel">
+      <children xmi:id="_RWBOgcR4Edq728nUbel-FA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_RWBOgsR4Edq728nUbel-FA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RWBOgMR4Edq728nUbel-FA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_RWBOfcR4Edq728nUbel-FA" routing="Tree" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RWBOfsR4Edq728nUbel-FA" points="[-13837, -44635, -22965, -53631]$[-13737, -44535, -22865, -53531]"/>
+  </edges>
+  <edges xmi:id="_RWBOisR4Edq728nUbel-FA" source="_oCurOowREdqcYI8-foLRNA" target="_oCjE_YwREdqcYI8-foLRNA">
+    <children xmi:id="_RWBOjcR4Edq728nUbel-FA" type="FromMultiplicityLabel">
+      <children xmi:id="_RWBOj8R4Edq728nUbel-FA" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_RWBOjsR4Edq728nUbel-FA" y="397"/>
+    </children>
+    <children xmi:id="_RWBOkMR4Edq728nUbel-FA" type="FromRoleLabel">
+      <children xmi:id="_RWBOksR4Edq728nUbel-FA" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_RWBOkcR4Edq728nUbel-FA" y="-397"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_RWBOi8R4Edq728nUbel-FA" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=author[jsrctype^name=Document[jcu^name=Document.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RWBOjMR4Edq728nUbel-FA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_3eW3eMR4Edq728nUbel-FA" source="_3au7sMR4Edq728nUbel-FA" target="_RV7H0MR4Edq728nUbel-FA">
+    <children xmi:id="_3eW3e8R4Edq728nUbel-FA" type="NameLabel">
+      <children xmi:id="_3eW3fcR4Edq728nUbel-FA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_3eW3fsR4Edq728nUbel-FA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3eW3fMR4Edq728nUbel-FA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_3eW3ecR4Edq728nUbel-FA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=EditableHTMLDocument[jcu^name=EditableHTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=HTMLDocument[jcu^name=HTMLDocument.java[jpack^name=com.itcodex.objectpuzzle.artifact.domain[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3eW3esR4Edq728nUbel-FA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

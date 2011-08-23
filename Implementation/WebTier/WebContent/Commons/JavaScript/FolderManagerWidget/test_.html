@@ -1,0 +1,103 @@
+<html>
+<head>
+	<LINK href="../TreeWidget/TreeWidget.css" rel=stylesheet >
+
+	<script language="JavaScript" src="FolderManagerWidget.js"></script>
+
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="javascript" src="../TreeWidget/TreeNode.js"></script>
+	<script language="javascript" src="../TreeWidget/TreeWidget.js"></script>
+
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/ArrayList.js"></script>
+
+	<script language="javascript">
+		var fm = null;
+
+		var resourceBundleHu = new XMLResourceBundle("ResourceBundle");
+		var localeHu = new Locale("hu");
+		resourceBundleHu.loadFile(localeHu);
+
+		var resourceBundleEn = new XMLResourceBundle("ResourceBundle");
+		var localeEn = new Locale("en");
+		resourceBundleEn.loadFile(localeEn);
+
+		function myEventHandler() {
+			var s = "Selected: "+fm.getSelected();
+			if (fm.getNewName()!="")
+				s+="\nNewName: "+fm.getNewName();
+			if (fm.getSelected2()!="")
+				s+="\nSelected2: "+fm.getSelected2();
+			alert(s);
+		}
+
+		function creater(mode,resourceBundle) {
+			fm = new FolderManagerWidget("alma",mode,resourceBundle);
+			fm.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+			fm.setTransformationDefFileName("FTConverterToTWT.xsl");
+			fm.setEventHandler(myEventHandler);
+			fm.createNewNode();
+		}
+		function renamer(mode,resourceBundle) {
+			fm = new FolderManagerWidget("alma",mode,resourceBundle);
+			fm.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+			fm.setTransformationDefFileName("FTConverterToTWT.xsl");
+			fm.setEventHandler(myEventHandler);
+			fm.renameNode();
+		}
+		function mover(mode,resourceBundle) {
+			fm = new FolderManagerWidget("alma",mode,resourceBundle);
+			fm.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+			fm.setTransformationDefFileName("FTConverterToTWT.xsl");
+			fm.setEventHandler(myEventHandler);
+			fm.moveNode();
+		}
+		function deleter(mode,resourceBundle) {
+			fm = new FolderManagerWidget("alma",mode,resourceBundle);
+			fm.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+			fm.setTransformationDefFileName("FTConverterToTWT.xsl");
+			fm.setEventHandler(myEventHandler);
+			fm.deleteNode();
+		}
+	</script>
+</head>
+
+<body>
+
+	Default(english):<br>
+	<input type=button value=create onclick="javascript:creater(0);">
+	<input type=button value=rename onclick="javascript:renamer(0);">
+	<input type=button value=move onclick="javascript:mover(0);">
+	<input type=button value=delete onclick="javascript:deleter(0);">
+	
+	<br><br>
+	
+	Hungarian(from file):<br>
+	<input type=button value=letrehoz onclick="javascript:creater(0,resourceBundleHu);">
+	<input type=button value=atnevez onclick="javascript:renamer(0,resourceBundleHu);">
+	<input type=button value=mozgat onclick="javascript:mover(0,resourceBundleHu);">
+	<input type=button value=torol onclick="javascript:deleter(0,resourceBundleHu);">
+	
+	<br><br>
+	
+	English(from file):<br>
+	<input type=button value=create onclick="javascript:creater(0,resourceBundleEn);">
+	<input type=button value=rename onclick="javascript:renamer(0,resourceBundleEn);">
+	<input type=button value=move onclick="javascript:mover(0,resourceBundleEn);">
+	<input type=button value=delete onclick="javascript:deleter(0,resourceBundleEn);">
+
+</body>
+</html>

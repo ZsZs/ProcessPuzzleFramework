@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.0/notation" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.2/Umlnotation" xmi:id="_pbgLwIsUEdqzGtIbswJTbw" type="Class" name="Action Overview.dnx">
+  <children xmi:id="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_2CzHMN7iEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2CzHMd7iEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2CzHMt7iEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_2CzHM97iEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_2CzHNN7iEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_2CzHNd7iEdu_hbIvzgjWfA" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2CzHNt7iEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_2CzHN97iEdu_hbIvzgjWfA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2CzHON7iEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2CtAkt7iEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2CtAk97iEdu_hbIvzgjWfA" x="41712" y="17424"/>
+  </children>
+  <children xmi:id="_7SF2kN7iEdu_hbIvzgjWfA">
+    <children xmi:id="_7SF2k97iEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_7SF2lN7iEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_7SF2ld7iEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_7SF2lt7iEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_7SF2l97iEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_7SF2mN7iEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_7SF2md7iEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_7SF2mt7iEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_7SF2m97iEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_7SF2kd7iEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Artifact%5Bjcu%5Ename=Artifact.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.artifact.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7SF2kt7iEdu_hbIvzgjWfA" x="34372" y="19114"/>
+  </children>
+  <children xmi:id="_FLkdIN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FLkdI97jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FLkdJN7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FLkdJd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FLkdJt7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FLkdJ97jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FLkdKN7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLkdKd7jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FLkdKt7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLkdK97jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FLkdId7jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ProposedAction%5Bjcu%5Ename=ProposedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FLkdIt7jEdu_hbIvzgjWfA" x="28406" y="22282"/>
+  </children>
+  <children xmi:id="_FLqjwN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FLqjw97jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FLqjxN7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FLqjxd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FLqjxt7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FLqjx97jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FLqjyN7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqjyd7jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FLqjyt7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqjy97jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FLqjwd7jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=TimePoint%5Bjcu%5Ename=TimePoint.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.framework.fundamental_types.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FLqjwt7jEdu_hbIvzgjWfA" x="36062" y="15312"/>
+  </children>
+  <children xmi:id="_FLqj8N7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FLqj897jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FLqj9N7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FLqj9d7jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FLqj9t7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FLqj997jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FLqj-N7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqj-d7jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FLqj-t7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqj-97jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FLqj8d7jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ActionStatus%5Bjcu%5Ename=ActionStatus.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FLqj8t7jEdu_hbIvzgjWfA" x="46728" y="14916"/>
+  </children>
+  <children xmi:id="_FLqj_N7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FLqj_97jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FLqkAN7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FLqkAd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FLqkAt7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FLqkA97jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FLqkBN7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqkBd7jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FLqkBt7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqkB97jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FLqj_d7jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=CompletedAction%5Bjcu%5Ename=CompletedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FLqj_t7jEdu_hbIvzgjWfA" x="36036" y="27588"/>
+  </children>
+  <children xmi:id="_FLqkCN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FLqkC97jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FLqkDN7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FLqkDd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FLqkDt7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FLqkD97jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FLqkEN7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqkEd7jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FLqkEt7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLqkE97jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FLqkCd7jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=ImplementedAction%5Bjcu%5Ename=ImplementedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FLqkCt7jEdu_hbIvzgjWfA" x="34452" y="25476"/>
+  </children>
+  <children xmi:id="_FLwqYN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FLwqY97jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FLwqZN7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FLwqZd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FLwqZt7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FLwqZ97jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FLwqaN7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLwqad7jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FLwqat7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLwqa97jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FLwqYd7jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=AbandonedAction%5Bjcu%5Ename=AbandonedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FLwqYt7jEdu_hbIvzgjWfA" x="50028" y="27324"/>
+  </children>
+  <children xmi:id="_FLwqdt7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FLwqed7jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FLwqet7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FLwqe97jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FLwqfN7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FLwqfd7jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FLwqft7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FLwqf97jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FMJE4N7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FMJE4d7jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FLwqd97jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=GenericAction%5Bjcu%5Ename=GenericAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FLwqeN7jEdu_hbIvzgjWfA" x="52641" y="21990"/>
+  </children>
+  <children xmi:id="_FMJE4t7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMJE5d7jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FMJE5t7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FMJE597jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FMJE6N7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FMJE6d7jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FMJE6t7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FMJE697jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FMJE7N7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FMJE7d7jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FMJE497jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Action%5Bjcu%5Ename=Action.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMJE5N7jEdu_hbIvzgjWfA" x="43296" y="13464"/>
+  </children>
+  <children xmi:id="_FMJE7t7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMJE8d7jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FMJE8t7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FMJE897jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FMJE9N7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FMJE9d7jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FMJE9t7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FMJE997jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FMJE-N7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FMJE-d7jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FMJE797jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=WorkflowManager%5Bjcu%5Ename=WorkflowManager.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMJE8N7jEdu_hbIvzgjWfA" x="33924" y="17028"/>
+  </children>
+  <children xmi:id="_FMPLmN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMPLm97jEdu_hbIvzgjWfA" type="ImageCompartment">
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FMPLnN7jEdu_hbIvzgjWfA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FMPLnd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+    <children xmi:id="_FMPLnt7jEdu_hbIvzgjWfA" type="Name"/>
+    <children xmi:id="_FMPLn97jEdu_hbIvzgjWfA" type="Parent"/>
+    <children xmi:id="_FMPLoN7jEdu_hbIvzgjWfA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FMPLod7jEdu_hbIvzgjWfA"/>
+    </children>
+    <children xmi:id="_FMPLot7jEdu_hbIvzgjWfA" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FMPLo97jEdu_hbIvzgjWfA"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FMPLmd7jEdu_hbIvzgjWfA" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Protocol%5Bjcu%5Ename=Protocol.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.protocol.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D$uml.Class"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMPLmt7jEdu_hbIvzgjWfA" x="38676" y="13332"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_pbgLwYsUEdqzGtIbswJTbw"/>
+  <edges xmi:id="_7et9UN7iEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_7SF2kN7iEdu_hbIvzgjWfA">
+    <children xmi:id="_7et9U97iEdu_hbIvzgjWfA" type="FromMultiplicityLabel">
+      <children xmi:id="_7et9Vd7iEdu_hbIvzgjWfA" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7et9VN7iEdu_hbIvzgjWfA" y="396"/>
+    </children>
+    <children xmi:id="_7et9Vt7iEdu_hbIvzgjWfA" type="FromRoleLabel">
+      <children xmi:id="_7et9WN7iEdu_hbIvzgjWfA" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7et9V97iEdu_hbIvzgjWfA" y="-397"/>
+    </children>
+    <children xmi:id="_7et9Wd7iEdu_hbIvzgjWfA" type="associationTypeLabel">
+      <children xmi:id="_7et9W97iEdu_hbIvzgjWfA" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7et9Wt7iEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_7et9Ud7iEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=inputs%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7et9Ut7iEdu_hbIvzgjWfA" points="[-1402, -900, -820, 2910]$[-2910, -1879, -2328, 1931]$[-1243, -3255, -661, 555]"/>
+  </edges>
+  <edges xmi:id="_7e0D8N7iEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_7SF2kN7iEdu_hbIvzgjWfA">
+    <children xmi:id="_7e0D897iEdu_hbIvzgjWfA" type="FromMultiplicityLabel">
+      <children xmi:id="_7e0D9d7iEdu_hbIvzgjWfA" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7e0D9N7iEdu_hbIvzgjWfA" y="396"/>
+    </children>
+    <children xmi:id="_7e0D9t7iEdu_hbIvzgjWfA" type="FromRoleLabel">
+      <children xmi:id="_7e0D-N7iEdu_hbIvzgjWfA" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7e0D997iEdu_hbIvzgjWfA" y="-397"/>
+    </children>
+    <children xmi:id="_7e0D-d7iEdu_hbIvzgjWfA" type="associationTypeLabel">
+      <children xmi:id="_7e0D-97iEdu_hbIvzgjWfA" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7e0D-t7iEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_7e0D8d7iEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=outputs%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7e0D8t7iEdu_hbIvzgjWfA" points="[1217, -900, 1799, 2910]$[2726, -2011, 3308, 1799]$[450, -3255, 1032, 555]"/>
+  </edges>
+  <edges xmi:id="_FMPLsN7jEdu_hbIvzgjWfA" source="_FMJE7t7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMPLs97jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMPLtd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMPLt97jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMPLtt7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMPLtN7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMPLsd7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=WorkflowManager%5Bjcu%5Ename=WorkflowManager.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.workflow_management.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMPLst7jEdu_hbIvzgjWfA" points="[-13, 23402, 16087, -2448]$[-16100, 24990, 0, -860]"/>
+  </edges>
+  <edges xmi:id="_FMPLwN7jEdu_hbIvzgjWfA" source="_FLqkCN7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMVSIt7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMVSJN7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMVSJt7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMVSJd7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMVSI97jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMVSIN7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=ImplementedAction%5Bjcu%5Ename=ImplementedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMVSId7jEdu_hbIvzgjWfA" points="[-14, 23402, -27464, -2448]$[27450, 24990, 0, -860]"/>
+  </edges>
+  <edges xmi:id="_FMVSKt7jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_7SF2kN7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMVSLd7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMVSL97jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMVSMd7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMVSMN7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMVSLt7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMVSK97jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Artifact%5Bjcu%5Ename=Artifact.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.artifact.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMVSLN7jEdu_hbIvzgjWfA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_FMVSOt7jEdu_hbIvzgjWfA" source="_FLkdIN7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMVSPd7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMVSP97jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMVSQd7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMVSQN7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMVSPt7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMVSO97jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=ProposedAction%5Bjcu%5Ename=ProposedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMVSPN7jEdu_hbIvzgjWfA" points="[1958, -291, -9234, -529]$[4974, -741, -6218, -979]$[8440, -185, -2752, -423]"/>
+  </edges>
+  <edges xmi:id="_FMVSQt7jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_FMPLmN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMVSRd7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMbYwN7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMbYwt7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMbYwd7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMVSRt7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMVSQ97jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Protocol%5Bjcu%5Ename=Protocol.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.protocol.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMVSRN7jEdu_hbIvzgjWfA" points="[0, 859, -10412, -10187]$[10398, 2447, -14, -8599]"/>
+  </edges>
+  <edges xmi:id="_FMbYw97jEdu_hbIvzgjWfA" source="_FLwqYN7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMbYxt7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMbYyN7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMbYyt7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMbYyd7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMbYx97jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMbYxN7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=AbandonedAction%5Bjcu%5Ename=AbandonedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMbYxd7jEdu_hbIvzgjWfA" points="[-14, 23402, -19315, -2448]$[19301, 24990, 0, -860]"/>
+  </edges>
+  <edges xmi:id="_FMbY097jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_FLqj8N7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMbY1t7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMbY2N7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMbY2t7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMbY2d7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMbY197jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMbY1N7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=ActionStatus%5Bjcu%5Ename=ActionStatus.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMbY1d7jEdu_hbIvzgjWfA" points="[0, 859, -2461, -10187]$[2461, 2447, 0, -8599]"/>
+  </edges>
+  <edges xmi:id="_FMbY297jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_FMJE4t7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMbY3t7jEdu_hbIvzgjWfA" type="NameLabel">
+      <children xmi:id="_FMbY4N7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMbY4d7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMbY397jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMbY3N7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="mmi:///#jgen%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Action%5Bjcu%5Ename=Action.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Generalization"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMbY3d7jEdu_hbIvzgjWfA" points="[-105, -821, 1112, 9498]$[-1164, -9764, 53, 555]"/>
+  </edges>
+  <edges xmi:id="_FMbY4t7jEdu_hbIvzgjWfA" source="_FLqj8N7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMbY5d7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMbY597jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMbY6d7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMbY6N7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMbY5t7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMbY497jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=ActionStatus%5Bjcu%5Ename=ActionStatus.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMbY5N7jEdu_hbIvzgjWfA" points="[0, -8599, 2461, 2447]$[-2461, -10187, 0, 859]"/>
+  </edges>
+  <edges xmi:id="_FMbY6t7jEdu_hbIvzgjWfA" source="_FLqj_N7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMbY7d7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMbY797jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMbY8d7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMbY8N7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMbY7t7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMbY697jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=CompletedAction%5Bjcu%5Ename=CompletedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMbY7N7jEdu_hbIvzgjWfA" points="[-13, 23402, -35692, -2448]$[35679, 24990, 0, -860]"/>
+  </edges>
+  <edges xmi:id="_FMbY8t7jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_FLwqdt7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMbY9d7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMbY997jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMbY-d7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMbY-N7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMbY9t7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMbY897jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=GenericAction%5Bjcu%5Ename=GenericAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMbY9N7jEdu_hbIvzgjWfA" points="[2857, -794, -7011, -556]$[6006, -1667, -3862, -1429]$[8440, -767, -1428, -529]"/>
+  </edges>
+  <edges xmi:id="_FMhfYN7jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_FLkdIN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMhfY97jEdu_hbIvzgjWfA" type="FromMultiplicityLabel">
+      <children xmi:id="_FMhfZd7jEdu_hbIvzgjWfA" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FMhfZN7jEdu_hbIvzgjWfA" y="396"/>
+    </children>
+    <children xmi:id="_FMhfZt7jEdu_hbIvzgjWfA" type="FromRoleLabel">
+      <children xmi:id="_FMhfaN7jEdu_hbIvzgjWfA" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FMhfZ97jEdu_hbIvzgjWfA" x="-1241" y="-386"/>
+    </children>
+    <children xmi:id="_FMhfad7jEdu_hbIvzgjWfA" type="associationTypeLabel">
+      <children xmi:id="_FMhfa97jEdu_hbIvzgjWfA" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FMhfat7jEdu_hbIvzgjWfA" x="36" y="314"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMhfYd7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=possibleLifecycleInstances%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMhfYt7jEdu_hbIvzgjWfA" points="[0, 859, 11218, -10187]$[-11218, 2447, 0, -8599]"/>
+  </edges>
+  <edges xmi:id="_FMhfbN7jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_FLkdIN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMhfb97jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMhfcd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMhfc97jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMhfct7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMhfcN7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMhfbd7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=ProposedAction%5Bjcu%5Ename=ProposedAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMhfbt7jEdu_hbIvzgjWfA" points="[-2752, 608, 8440, 846]$[-4922, 1111, 6270, 1349]$[-9234, 185, 1958, 423]"/>
+  </edges>
+  <edges xmi:id="_FMhffN7jEdu_hbIvzgjWfA" source="_FLwqdt7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMhff97jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMhfgd7jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMhfg97jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMhfgt7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMhfgN7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMhffd7jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=GenericAction%5Bjcu%5Ename=GenericAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMhfft7jEdu_hbIvzgjWfA" points="[-1322, 555, 8546, 317]$[-3413, 1429, 6455, 1191]$[-7011, 767, 2857, 529]"/>
+  </edges>
+  <edges xmi:id="_FMhfhN7jEdu_hbIvzgjWfA" source="_FLwqdt7jEdu_hbIvzgjWfA" target="_2CtAkd7iEdu_hbIvzgjWfA">
+    <children xmi:id="_FMhfh97jEdu_hbIvzgjWfA" type="FromMultiplicityLabel">
+      <children xmi:id="_FMnmAN7jEdu_hbIvzgjWfA" type="FromMultiplicity"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FMhfiN7jEdu_hbIvzgjWfA" y="396"/>
+    </children>
+    <children xmi:id="_FMtsoN7jEdu_hbIvzgjWfA" type="FromRoleLabel">
+      <children xmi:id="_FMtsot7jEdu_hbIvzgjWfA" type="FromRole"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FMtsod7jEdu_hbIvzgjWfA" x="-972" y="-493"/>
+    </children>
+    <children xmi:id="_FMtso97jEdu_hbIvzgjWfA" type="associationTypeLabel">
+      <children xmi:id="_FMtspd7jEdu_hbIvzgjWfA" type="associationTypeCompartment"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_FMtspN7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMhfhd7jEdu_hbIvzgjWfA" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="mmi:///#jfield%5Ename=parentSubAction%5Bjsrctype%5Ename=GenericAction%5Bjcu%5Ename=GenericAction.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D$uml.Property"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMhfht7jEdu_hbIvzgjWfA" points="[-1666, -27, 8202, -265]$[-3439, -27, 6429, -265]$[-7011, 132, 2857, -106]"/>
+  </edges>
+  <edges xmi:id="_FMtstt7jEdu_hbIvzgjWfA" source="_2CtAkd7iEdu_hbIvzgjWfA" target="_FLqjwN7jEdu_hbIvzgjWfA">
+    <children xmi:id="_FMtsud7jEdu_hbIvzgjWfA" type="KindLabel">
+      <children xmi:id="_FMtsu97jEdu_hbIvzgjWfA" type="Stereotype"/>
+      <children xmi:id="_FMtsvd7jEdu_hbIvzgjWfA" type="Kind"/>
+      <children xmi:id="_FMtsvN7jEdu_hbIvzgjWfA" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMtsut7jEdu_hbIvzgjWfA" y="-186"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FMtst97jEdu_hbIvzgjWfA" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="mmi:///#jdep%5Bjsrctype%5Ename=Activity%5Bjcu%5Ename=Activity.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.project_planning.action.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcesPuzzle%20Domain%20Components%5D%5D%5D%5D%5D%5Bjsrctype%5Ename=TimePoint%5Bjcu%5Ename=TimePoint.java%5Bjpack%5Ename=com.itcodex.objectpuzzle.framework.fundamental_types.domain%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=ProcessPuzzle%20Framework%20Domain%20Tier%5D%5D%5D%5D%5D$uml.Usage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FMtsuN7jEdu_hbIvzgjWfA" points="[0, 859, 3783, -10187]$[-3784, 2447, -1, -8599]"/>
+  </edges>
+</notation:Diagram>

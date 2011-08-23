@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources 
+	xmlns:tns="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
+
+  <Language name="en">
+	<Resource key="fmw_CREATE_WINDOW_TITLE" type="String">Create new node</Resource>
+	<Resource key="fmw_RENAME_WINDOW_TITLE" type="String">Rename node</Resource>
+	<Resource key="fmw_MOVE_WINDOW_TITLE" type="String">Move node</Resource>
+	<Resource key="fmw_DELETE_WINDOW_TITLE" type="String">Delete node</Resource>
+
+	<Resource key="fmw_CANCEL_BUTTON_TEXT" type="String">Cancel</Resource>
+	<Resource key="fmw_CREATE_BUTTON_TEXT" type="String">Create</Resource>
+	<Resource key="fmw_RENAME_BUTTON_TEXT" type="String">Rename</Resource>
+	<Resource key="fmw_MOVE_BUTTON_TEXT" type="String">Move</Resource>
+	<Resource key="fmw_DELETE_BUTTON_TEXT" type="String">Delete</Resource>
+
+	<Resource key="fmw_NEW_NAME_LABEL" type="String">New name: </Resource>
+	<Resource key="fmw_SELECTED_LABEL" type="String">Selected: </Resource>
+
+	<Resource key="fmw_TREE_TITLE_CREATE_NODE_LABEL" type="String">Select parent node where to place:</Resource>
+	<Resource key="fmw_TREE_TITLE_RENAME_NODE_LABEL" type="String">Select node to rename:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_FROM_NODE_LABEL" type="String">Select node to move:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_TO_NODE_LABEL" type="String">Select parent node where to move:</Resource>
+	<Resource key="fmw_TREE_TITLE_DELETE_NODE_LABEL" type="String">Select node to delete:</Resource>
+
+	<Resource key="fmw_WARNING_EMPTY_NEW_NAME" type="String">The new name field is empty!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED" type="String">Choose a node!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED2" type="String">Choose a node and it new parent too!</Resource>
+	<Resource key="fmw_WARNING_SEPARATOR_IN_NAME" type="String">The new name contains the sperator: </Resource>
+  </Language>
+</tns:Resources>

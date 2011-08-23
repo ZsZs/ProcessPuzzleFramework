@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	  <!-- Installation time data loaders -->
+	  <bean id="predefinedUsersLoader" class="com.processpuzzle.application.security.domain.PredefinedUsersLoader"/>
+	  <bean id="businessDefinitionLoader" class="com.processpuzzle.business.definition.domain.BusinessDefinitionLoader">
+	  	<constructor-arg type="java.lang.String" value="classpath:com/processpuzzle/sharedfixtures/domaintier/TestBusinessDefinition.xml"/>
+	  </bean>
+      <bean id="systemArtifactsLoader" class="com.processpuzzle.business.definition.domain.SystemArtifactsLoader" />
+	
+	  <!-- Beans for user request, session handling. -->
+	  <bean id="userRequestContextFactory" class="com.processpuzzle.user_session.domain.DefaultUserRequestContextFactory"/>
+	  
+	  <!-- Entity factories -->
+	  <bean id="addressFactory" class="com.processpuzzle.party.domain.AddressFactory" lazy-init="true"/>
+	  <bean id="artifactFolderFactory" class="com.processpuzzle.artifact.domain.ArtifactFolderFactory" lazy-init="true"/>
+	  <bean id="artifactTypeFactory" class="com.processpuzzle.artifact_type.domain.ArtifactTypeFactory" lazy-init="true"/>
+      <bean id="catalogEntryDataSheetFactory" class="com.processpuzzle.product.artifact.CatalogEntryDataSheetFactory" lazy-init="true"/>
+	  <bean id="commentListFactory" class="com.processpuzzle.artifact.domain.CommentListFactory" lazy-init="true"/>
+      <bean id="companyDataSheetFactory" class="com.processpuzzle.party.artifact.CompanyDataSheetFactory" lazy-init="true"/>
+	  <bean id="companyFactory" class="com.processpuzzle.party.domain.CompanyFactory" lazy-init="true"/>
+      <bean id="compositeCategoryDataSheetFactory" class="com.processpuzzle.product.artifact.CompositeCategoryDataSheetFactory" lazy-init="true"/>
+	  <bean id="countryFactory" class="com.processpuzzle.address.country.domain.CountryFactory" lazy-init="true"/>
+	  <bean id="documentFactory" class="com.processpuzzle.artifact.domain.DocumentFactory" lazy-init="true"/>
+	  <bean id="imageFileFactory" class="com.processpuzzle.artifact.domain.ImageFileFactory" lazy-init="true"/>
+	  <bean id="orderEventFactory" class="com.processpuzzle.order.domain.order.OrderEventFactory" lazy-init="true"/>
+	  <bean id="orderFactory" class="com.processpuzzle.order.domain.order.OrderFactory" lazy-init="true"/>
+	  <bean id="orderLineDataSheetFactory" class="com.processpuzzle.order.artifact.OrderLineDataSheetFactory" lazy-init="true"/>
+      <bean id="organizationUnitFactory" class="com.processpuzzle.party.domain.OrganizationUnitFactory" lazy-init="true"/>
+	  <bean id="partySummaryFactory" class="com.processpuzzle.party.domain.PartySummaryFactory" lazy-init="true"/>
+      <bean id="personDataSheetFactory" class="com.processpuzzle.party.artifact.PersonDataSheetFactory" lazy-init="true"/>
+	  <bean id="personFactory" class="com.processpuzzle.party.domain.PersonFactory" lazy-init="true"/>
+  	  <bean id="priceTypeDataSheetFactory" class="com.processpuzzle.product.artifact.PriceTypeDataSheetFactory" lazy-init="true"/>
+	  <bean id="priceTypeFactory" class="com.processpuzzle.product.domain.pricetype.PriceTypeFactory" lazy-init="true"/>
+      <bean id="productCatalogFactory" class="com.processpuzzle.product.domain.productcatalog.ProductCatalogFactory" lazy-init="true"/>
+      <bean id="productCatalogDataSheetFactory" class="com.processpuzzle.product.artifact.ProductCatalogDataSheetFactory" lazy-init="true"/>
+      <bean id="productGroupDataSheetFactory" class="com.processpuzzle.product.artifact.ProductGroupDataSheetFactory" lazy-init="true"/>
+	  <bean id="productTypeFactory" class="com.processpuzzle.product.domain.producttype.ProductTypeFactory" lazy-init="true"/>
+  	  <bean id="productTypeDataSheetFactory" class="com.processpuzzle.product.artifact.ProductTypeDataSheetFactory" lazy-init="true"/>
+      <bean id="purchaseOrderDataSheetFactory" class="com.processpuzzle.order.artifact.PurchaseOrderDataSheetFactory" lazy-init="true"/>
+	  <bean id="rootArtifactFolderFactory" class="com.processpuzzle.artifact.domain.RootArtifactFolderFactory" lazy-init="true"/>	  
+      <bean id="salesTaxPolicyDataSheetFactory" class="com.processpuzzle.order.artifact.SalesTaxPolicyDataSheetFactory" lazy-init="true"/>	  
+      <bean id="salesTaxPolicyFactory" class="com.processpuzzle.order.domain.salestaxpolicy.SalesTaxPolicyFactory" lazy-init="true"/>	  
+      <bean id="settlementFactory" class="com.processpuzzle.address.settlement.domain.SettlementFactory" lazy-init="true"/>
+	  <bean id="settlementDataSheetFactory" class="com.processpuzzle.address.settlement.artifact.SettlementDataSheetFactory" lazy-init="true"/>
+      <bean id="userDataSheetFactory" class="com.processpuzzle.party.artifact.UserDataSheetFactory" lazy-init="true"/>
+	  <bean id="userFactory" class="com.processpuzzle.application.security.domain.UserFactory" lazy-init="true"/>
+  	  <bean id="zipCodeFactory" class="com.processpuzzle.address.zipcode.domain.ZipCodeFactory" lazy-init="true"/>
+	  
+	  <!-- UniqueIdentifier factories -->
+	  <bean id="orderIdentiferFactory" class="com.processpuzzle.fundamental_types.uniqueidentifier.domain.PrefixedIncNumberedIdFactory">
+	  	<constructor-arg type="java.lang.String" value="com.processpuzzle.order.domain.order.OrderIdentifier"/>
+	  	<constructor-arg type="java.lang.String" value="EMO"/>
+	  	<constructor-arg type="java.lang.String" value="-"/>
+	  	<constructor-arg type="java.lang.Integer" value="6"/>
+	 </bean>
+	  <bean id="orderLineIdentiferFactory" class="com.processpuzzle.fundamental_types.uniqueidentifier.domain.PrefixedIncNumberedIdFactory">
+	  	<constructor-arg type="java.lang.String" value="com.processpuzzle.order.domain.order.OrderLineIdentifier"/>
+	  	<constructor-arg type="java.lang.String" value="EMO-000000"/>
+	  	<constructor-arg type="java.lang.String" value="-"/>
+	  	<constructor-arg type="java.lang.Integer" value="6"/>
+	 </bean>
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.activity.domain.ResourceAllocation"
+		table="T_RESOURCE_ALLOCATION">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="RESOURCE_ALLOCATION_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<property name="name" />
+		<component name="quantity"
+			class="com.processpuzzle.fundamental_types.quantity.domain.Quantity">
+			<property name="amount"></property>
+			<component name="unit"
+				class="com.processpuzzle.fundamental_types.quantity.domain.Unit">
+				<property name="name" column="unitName"></property>
+				<property name="symbol" column="unitSymbol"></property>
+			</component>
+		</component>
+	<!-- 
+		<many-to-one lazy="false" name="type" column="RESOURCE_TYPE_ID" class="com.processpuzzle.resource.domain.type.ResourceType" />
+	 -->
+
+	</class>
+</hibernate-mapping>

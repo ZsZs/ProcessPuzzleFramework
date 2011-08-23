@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Test page for TreeNodeType.js</title>
+
+    <script type="text/javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+    
+    <script type="text/javascript" src="../MooTools/mootools-core-1.3.js"></script>
+    <script type="text/javascript" src="../Log4JavaScript/log4javascript.js"></script>
+    
+	<script type="text/javascript" src="../CommonScripts/AssertUtil.js"></script>
+	<script type="text/javascript" src="../CommonScripts/UserException.js"></script>
+	<script type="text/javascript" src="../WebUIController/WebUIController.js"></script>
+	<script type="text/javascript" src="../WebUIController/WebUILogger.js"></script>
+
+	<script type="text/javascript" src="TreeNodeType.js"></script>
+	<script type="text/javascript" src="CompositeTreeNodeType.js"></script>
+	
+	<script type="text/javascript">
+		window.addEvent('domready', function() {
+			runTestFunction();
+		});
+		
+		var CLOSED_IMAGE = "folder_closed.gif";
+		var OPEN_IMAGE = "folder_open.gif";
+		var TYPE_NAME = "FolderType";
+		var compositeTreeNodeType;
+		var treeNodeType;
+		
+		function setUp() {
+			treeNodeType = new TreeNodeType( TYPE_NAME, CLOSED_IMAGE );
+			compositeTreeNodeType = new CompositeTreeNodeType( TYPE_NAME, CLOSED_IMAGE, OPEN_IMAGE );
+		}
+
+		function tearDown(){
+			treeNodeType = null;
+			compositeTreeNodeType = null;
+		}
+		
+		function testInitialize_WhenOnlyRequiredArgumentsAreGiven_UsesDefaults(){
+			assertEquals( DEFAULT_TREE_IMAGE_FOLDER, treeNodeType.getImagesFolder() );
+		}
+		
+		function testDetermineNodeImage_WhenSimpleNode_ConcatenateImageFolderAndName(){
+			assertEquals( DEFAULT_TREE_IMAGE_FOLDER + CLOSED_IMAGE, treeNodeType.determineNodeImage() );
+		}
+
+		function testDetermineNodeImage_WhenCompositeNode_UsesStateDependentImage(){
+			assertEquals( DEFAULT_TREE_IMAGE_FOLDER + CLOSED_IMAGE, compositeTreeNodeType.determineNodeImage( compositeTreeNodeType.CLOSED_STATE ) );
+			assertEquals( DEFAULT_TREE_IMAGE_FOLDER + OPEN_IMAGE, compositeTreeNodeType.determineNodeImage( compositeTreeNodeType.OPENED_STATE ) );
+		}
+		
+		function testGetNodeImageClass() {
+			assertEquals( NODE_IMAGE_CLASS, treeNodeType.getNodeImageClass() );
+			assertEquals( NODE_IMAGE_FOLDER_CLASS, compositeTreeNodeType.getNodeImageClass() );
+		}
+
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			testDetermineNodeImage_WhenCompositeNode_UsesStateDependentImage();
+			tearDown();
+		}
+	</script>
+</head>
+<body>
+	<h1>Test page for TreeNodeType.js</h1>
+
+</body>
+</html>

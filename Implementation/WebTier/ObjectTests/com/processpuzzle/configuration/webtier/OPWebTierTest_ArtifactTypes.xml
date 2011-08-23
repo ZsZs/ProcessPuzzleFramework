@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- op:ArtifactTypeList xmlns:op="http://www.itkodex.hu/processpuzzle"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.itkodex.hu/processpuzzle ../../../../../../ObjectPuzzle/Implementation/FrameworkWebTier/WebContent/ProcessDefinition/Artifacts/ArtifactTypeList.xsd" -->
+	<ArtifactTypeList>
+	<artifactTypeGroup name="SystemAdministration">
+
+		<artifactType name="ArtifactFolder"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.artifact.domain.ArtifactFolder"
+			pessimisticLock="false"
+			isSystem="false"
+			isVersionControlled="false"
+			isSingleton="false"
+			createOnStartUp="false">
+			<caption>artifactFolder</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					presentationUri=""
+					clientType="NativeView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PropertyView">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactFolder&amp;viewName=PropertyView</viewAccessUrl>
+				</propertyViewType>		
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="ArtifactList"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.project_management.domain.ArtifactList"
+			pessimisticLock="false"
+			isSystem="true"
+			isVersionControlled="false"
+			isSingleton="true"
+			createOnStartUp="true">
+			<caption>artifactList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ArtifactList_Properties.jsp"
+					clientType="NativeView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PropertyView">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactList&amp;viewName=PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactListViewType name="ArtifactList"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ArtifactList_ListedArtifacts.jsp"
+					clientType="BrowseView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_ListView"
+					isDefault="true">
+					<viewCaption>list</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowListView&amp;artifactName=ArtifactList</viewAccessUrl>
+				</artifactListViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentComments&amp;artifactName=ArtifactList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="Print"
+					clientType="PrintView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PrintView"
+					xmlToFoXsltPath="">
+					<viewCaption>print</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowPrintView&amp;artifactName=ArtifactList</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="ArtifactDataSheet"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.artifact.domain.ArtifactDataSheet"
+			createOnStartUp="false"
+			isSingleton="false"
+			isSystem="false"
+			isVersionControlled="false"
+			pessimisticLock="false">
+			<caption>artifactDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" clientType="NativeView" isDefault="true">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=PropertyView</viewAccessUrl>
+				</propertyViewType>		
+				<relatedArtifactsViewType name="RelatedArtifacts" clientType="NativeView">
+					<viewCaption>relatedArtifacts</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+				</relatedArtifactsViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentComments</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<artifactModificationsViewType name="Versions" clientType="NativeView">
+					<viewCaption>documentHistory</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=ArtifactModificationsView</viewAccessUrl>
+				</artifactModificationsViewType>
+			</availableViews>
+		</artifactType>
+
+		<artifactType name="OrganizationList"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.party.artifact.OrganizationList"
+			pessimisticLock="false"
+			isSystem="true"
+			isVersionControlled="false"
+			isSingleton="true"
+			createOnStartUp="true">
+			<caption>organizationList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ArtifactList_Properties.jsp"
+					clientType="NativeView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PropertyView">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=CompanyList&amp;viewName=PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactListViewType name="OrganizationList"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/CompanyList_ListedCompanies.jsp"
+					clientType="BrowseView"
+					viewClassName="com.processpuzzle.party.artifact.OrganizationList_ListView"
+					isDefault="true">
+					<viewCaption>list</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowListView&amp;artifactName=OrganizationList_ListView</viewAccessUrl>
+				</artifactListViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentComments&amp;artifactName=CompanyList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=OrganizationList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="Print"
+					clientType="PrintView"
+					viewClassName="com.processpuzzle.party.artifact.OrganizationList_PrintView"
+					xmlToFoXsltPath="">
+					<viewCaption>print</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowPrintView&amp;artifactName=OrganizationList_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="CompanyDataSheet"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.party.artifact.CompanyDataSheet"
+			createOnStartUp="false"
+			isSingleton="false"
+			isSystem="false"
+			isVersionControlled="false"
+			pessimisticLock="false">
+			<caption>companyDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" 
+					clientType="NativeView"
+					isDefault="true"
+					presentationUri=""
+					viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_PropertyView">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=CompanyProperties</viewAccessUrl>
+				</propertyViewType>
+				<artifactCustomFormViewType name="BaseData"
+					clientType="CustomFormView"
+					presentationUri="/ProcessInstantiation/SystemAdministration/CompanyBaseData.jsp"
+					viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_BaseDataView">
+					<viewCaption>baseData</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=CompanyBaseDataView</viewAccessUrl>
+				</artifactCustomFormViewType>
+				<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView">
+					<viewCaption>relatedArtifacts</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+				</relatedArtifactsViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<artifactModificationsViewType name="Versions" clientType="NativeView">
+					<viewCaption>documentHistory</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=ArtifactModificationsView</viewAccessUrl>
+				</artifactModificationsViewType>
+			</availableViews>
+		</artifactType>
+
+		<artifactType name="SettlementDataSheet"
+			group="SystemAdministration"
+			artifactClassName="ccom.processpuzzle.address.settlement.artifactSettlementDataSheet"
+			createOnStartUp="false"
+			isSingleton="false"
+			isSystem="false"
+			isVersionControlled="false"
+			pessimisticLock="false">
+			<caption>settlementDataSheet</caption>
+			<baseUri></baseUri>
+			<creationProperties>
+				<creationProperty name="name" type="string" />
+			</creationProperties>
+			<availableViews>
+				<propertyViewType name="Properties" 
+					clientType="NativeView"
+					isDefault="true"
+					presentationUri="/ProcessInstantiation/SystemAdministration/Settlement_Properties.jsp"
+					viewClassName="ccom.processpuzzle.address.settlement.artifactSettlementProperties">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=SettlementProperties</viewAccessUrl>
+				</propertyViewType>
+				<artifactCustomFormViewType name="BaseData"
+					clientType="CustomFormView"
+					presentationUri="/ProcessInstantiation/SystemAdministration/Settlement_BaseData.jsp"
+					viewClassName="ccom.processpuzzle.address.settlement.artifactSettlementBaseDataView">
+					<viewCaption>baseData</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=SettlementBaseDataView</viewAccessUrl>
+				</artifactCustomFormViewType>
+				<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView">
+					<viewCaption>relatedArtifacts</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+				</relatedArtifactsViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<artifactModificationsViewType name="Versions" clientType="NativeView">
+					<viewCaption>documentHistory</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=ArtifactModificationsView</viewAccessUrl>
+				</artifactModificationsViewType>
+			</availableViews>
+		</artifactType>		
+		
+		<artifactType name="SettlementList"
+			group="SystemAdministration"
+			artifactClassName="ccom.processpuzzle.address.settlement.artifactSettlementList"
+			pessimisticLock="false"
+			isSystem="true"
+			isVersionControlled="false"
+			isSingleton="true"
+			createOnStartUp="true">
+			<caption>settlementList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ArtifactList_Properties.jsp"
+					clientType="NativeView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PropertyView">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=SettlementList&amp;viewName=ArtifactList_PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactListViewType name="SettlementList"
+					presentationUri="/ProcessInstantiation/SystemAdministration/Settlement_List.jsp"
+					clientType="BrowseView"
+					viewClassName="ccom.processpuzzle.address.settlement.artifactSettlementList_ListView"
+					isDefault="true">
+					<viewCaption>list</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowListView&amp;artifactName=SettlementList&amp;viewName=SettlementList_ListView</viewAccessUrl>
+				</artifactListViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentComments&amp;artifactName=SettlementList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=SettlementList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="Print"
+					clientType="PrintView"
+					viewClassName="ccom.processpuzzle.address.settlement.artifactSettlementList_PrintView"
+					xmlToFoXsltPath="">
+					<viewCaption>print</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowPrintView&amp;artifactName=SettlementList&amp;viewName=SettlementList_PrintView</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+
+		<artifactType name="MessageWall" 
+			group="SystemAdministration"
+			artifactClassName="">
+			<caption>messageWall</caption>
+			<baseUri>../CommandControllerServlet?action=ShowMessageWall</baseUri>
+			<availableViews>
+				<editableTextViewType name="unvisible" 
+					isDefault="true" 
+					clientType="EditableHtmlView"
+					xmlToHtmlXsltPath="">
+					<viewCaption>unvisible</viewCaption>
+				</editableTextViewType>
+			</availableViews>
+		</artifactType>
+
+		<artifactType name="FileStorage"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.artifact.domain.FileStorage"
+			pessimisticLock="false"
+			isSystem="false"
+			isVersionControlled="false"
+			isSingleton="false"
+			createOnStartUp="false">
+			<caption>fileStorage</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/FileStorage_Properties.jsp"
+					isDefault="true" 
+					clientType="NativeView"
+					viewClassName="com.processpuzzle.artifact.domain.FileStorageProperties">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=FileStorageProperties</viewAccessUrl>
+				</propertyViewType>		
+			</availableViews>
+		</artifactType>
+
+		<artifactType name="ImageFile"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.artifact.domain.ImageFile"
+			pessimisticLock="false"
+			isSystem="false"
+			isVersionControlled="false"
+			isSingleton="false"
+			createOnStartUp="false">
+			<caption>imageFile</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					clientType="NativeView"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ImageFile_Properties.jsp"
+					viewClassName="com.processpuzzle.artifact.domain.ImageProperties">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=ImageProperties</viewAccessUrl>
+				</propertyViewType>		
+				<artifactCustomFormViewType name="BaseData"
+					clientType="CustomFormView"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ImageFile_ImageView.jsp"
+					viewClassName="com.processpuzzle.artifact.domain.ImageFile_ImageView">
+					<viewCaption>imageView</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=ImageFile_ImageView</viewAccessUrl>
+				</artifactCustomFormViewType>
+			</availableViews>
+		</artifactType>
+	</artifactTypeGroup>
+</ArtifactTypeList>

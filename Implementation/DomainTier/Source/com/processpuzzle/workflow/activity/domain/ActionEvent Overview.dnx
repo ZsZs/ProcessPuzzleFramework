@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_OVDGYIsVEdqzGtIbswJTbw" type="Class" name="ActionEvent Overview.dnx">
+  <children xmi:id="_QuoM4IsVEdqzGtIbswJTbw" sourceEdges="_R_Cr74sVEdqzGtIbswJTbw _R_Iyl4sVEdqzGtIbswJTbw" targetEdges="_R_Cr4IsVEdqzGtIbswJTbw _R_Cr6IsVEdqzGtIbswJTbw _R_IygIsVEdqzGtIbswJTbw _R_Iyh4sVEdqzGtIbswJTbw _R_IyjosVEdqzGtIbswJTbw _R_O5IIsVEdqzGtIbswJTbw _R_O5J4sVEdqzGtIbswJTbw _R_O5MosVEdqzGtIbswJTbw">
+    <children xmi:id="_QuoM44sVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_QuoM5IsVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_QuoM5YsVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_QuoM5osVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_QuoM54sVEdqzGtIbswJTbw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_QuoM6IsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_QuuTgIsVEdqzGtIbswJTbw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_QuuTgYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_QuuTgosVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_QuuTg4sVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_QuuThIsVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_QuuThYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_QuoM4YsVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QuoM4osVEdqzGtIbswJTbw" x="15716" y="36564"/>
+  </children>
+  <children xmi:id="_R-2eoIsVEdqzGtIbswJTbw" sourceEdges="_R_Cr4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R-2eo4sVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_R-2epIsVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_R-2epYsVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2eposVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2ep4sVEdqzGtIbswJTbw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2eqIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2eqYsVEdqzGtIbswJTbw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2eqosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2eq4sVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2erIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2erYsVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_R-2erosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_R-2eoYsVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-2eoosVEdqzGtIbswJTbw" x="5247" y="34662"/>
+  </children>
+  <children xmi:id="_R-2er4sVEdqzGtIbswJTbw" sourceEdges="_R_IyjosVEdqzGtIbswJTbw _R_O5J4sVEdqzGtIbswJTbw" targetEdges="_R_Cr74sVEdqzGtIbswJTbw _R_Iyl4sVEdqzGtIbswJTbw">
+    <children xmi:id="_R-2esosVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_R-2es4sVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_R-2etIsVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2etYsVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2etosVEdqzGtIbswJTbw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2et4sVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2euIsVEdqzGtIbswJTbw" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2euYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2euosVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2eu4sVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2evIsVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_R-2evYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_R-2esIsVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-2esYsVEdqzGtIbswJTbw" x="14605" y="32277" width="6006"/>
+  </children>
+  <children xmi:id="_R-2evosVEdqzGtIbswJTbw" sourceEdges="_R_Cr6IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R-2ewYsVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_R-2ewosVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_R-2ew4sVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2exIsVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2exYsVEdqzGtIbswJTbw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2exosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2ex4sVEdqzGtIbswJTbw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2eyIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2eyYsVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-2eyosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-2ey4sVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_R-2ezIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_R-2ev4sVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-2ewIsVEdqzGtIbswJTbw" x="3486" y="43411"/>
+  </children>
+  <children xmi:id="_R-8lQIsVEdqzGtIbswJTbw" sourceEdges="_R_O5MosVEdqzGtIbswJTbw">
+    <children xmi:id="_R-8lQ4sVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_R-8lRIsVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_R-8lRYsVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lRosVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lR4sVEdqzGtIbswJTbw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8lSIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lSYsVEdqzGtIbswJTbw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8lSosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lS4sVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8lTIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lTYsVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_R-8lTosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_R-8lQYsVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-8lQosVEdqzGtIbswJTbw" x="9353" y="43405"/>
+  </children>
+  <children xmi:id="_R-8lT4sVEdqzGtIbswJTbw" sourceEdges="_R_Iyh4sVEdqzGtIbswJTbw">
+    <children xmi:id="_R-8lUosVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_R-8lU4sVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_R-8lVIsVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lVYsVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lVosVEdqzGtIbswJTbw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8lV4sVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lWIsVEdqzGtIbswJTbw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8lWYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lWosVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8lW4sVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lXIsVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_R-8lXYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_R-8lUIsVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-8lUYsVEdqzGtIbswJTbw" x="14998" y="43415"/>
+  </children>
+  <children xmi:id="_R-8lXosVEdqzGtIbswJTbw" sourceEdges="_R_IygIsVEdqzGtIbswJTbw">
+    <children xmi:id="_R-8lYYsVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_R-8lYosVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_R-8lY4sVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lZIsVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lZYsVEdqzGtIbswJTbw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8lZosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lZ4sVEdqzGtIbswJTbw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8laIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8laYsVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8laosVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8la4sVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_R-8lbIsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_R-8lX4sVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-8lYIsVEdqzGtIbswJTbw" x="20565" y="43398"/>
+  </children>
+  <children xmi:id="_R-8lbYsVEdqzGtIbswJTbw" sourceEdges="_R_O5IIsVEdqzGtIbswJTbw">
+    <children xmi:id="_R-8lcIsVEdqzGtIbswJTbw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_R-8lcYsVEdqzGtIbswJTbw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_R-8lcosVEdqzGtIbswJTbw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8lc4sVEdqzGtIbswJTbw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8ldIsVEdqzGtIbswJTbw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8ldYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8ldosVEdqzGtIbswJTbw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8ld4sVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8leIsVEdqzGtIbswJTbw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_R-8leYsVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <children xmi:id="_R-8leosVEdqzGtIbswJTbw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_R-8le4sVEdqzGtIbswJTbw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_R-8lbosVEdqzGtIbswJTbw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-8lb4sVEdqzGtIbswJTbw" x="25972" y="43408"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_OVDGYYsVEdqzGtIbswJTbw"/>
+  <edges xmi:id="_R_Cr4IsVEdqzGtIbswJTbw" source="_R-2eoIsVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_Cr44sVEdqzGtIbswJTbw" type="KindLabel">
+      <children xmi:id="_R_Cr5YsVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_Cr54sVEdqzGtIbswJTbw" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_Cr5osVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_Cr5IsVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_Cr4YsVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Plan[jcu^name=Plan.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_Cr4osVEdqzGtIbswJTbw" points="[-14, 3056, -14645, -4234]$[14617, 4644, -14, -2646]"/>
+  </edges>
+  <edges xmi:id="_R_Cr6IsVEdqzGtIbswJTbw" source="_R-2evosVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_Cr64sVEdqzGtIbswJTbw" type="NameLabel">
+      <children xmi:id="_R_Cr7YsVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_Cr7osVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_Cr7IsVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_Cr6YsVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionAbandonmentEvent[jcu^name=ActionAbandonmentEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_Cr6osVEdqzGtIbswJTbw" points="[-14, -807, -11391, 4233]$[11363, -2395, -14, 2645]"/>
+  </edges>
+  <edges xmi:id="_R_Cr74sVEdqzGtIbswJTbw" source="_QuoM4IsVEdqzGtIbswJTbw" target="_R-2er4sVEdqzGtIbswJTbw">
+    <children xmi:id="_R_Cr8osVEdqzGtIbswJTbw" type="FromMultiplicityLabel">
+      <children xmi:id="_R_Cr9IsVEdqzGtIbswJTbw" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=eventSource[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=eventSource[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_R_Cr84sVEdqzGtIbswJTbw" y="397"/>
+    </children>
+    <children xmi:id="_R_Cr9YsVEdqzGtIbswJTbw" type="FromRoleLabel">
+      <children xmi:id="_R_Cr94sVEdqzGtIbswJTbw" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=eventSource[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=eventSource[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_R_Cr9osVEdqzGtIbswJTbw" y="-397"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_Cr8IsVEdqzGtIbswJTbw" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=eventSource[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_Cr8YsVEdqzGtIbswJTbw" points="[-1244, -2593, -1270, 3810]$[-1244, -5900, -1270, 503]"/>
+  </edges>
+  <edges xmi:id="_R_IygIsVEdqzGtIbswJTbw" source="_R-8lXosVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_Iyg4sVEdqzGtIbswJTbw" type="NameLabel">
+      <children xmi:id="_R_IyhYsVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_IyhosVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_IyhIsVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_IygYsVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionSuspensionEvent[jcu^name=ActionSuspensionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_IygosVEdqzGtIbswJTbw" points="[-14, -807, 5463, 4233]$[-5491, -2395, -14, 2645]"/>
+  </edges>
+  <edges xmi:id="_R_Iyh4sVEdqzGtIbswJTbw" source="_R-8lT4sVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_IyiosVEdqzGtIbswJTbw" type="NameLabel">
+      <children xmi:id="_R_IyjIsVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_IyjYsVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_Iyi4sVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_IyiIsVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionReactivationEvent[jcu^name=ActionReactivationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_IyiYsVEdqzGtIbswJTbw" points="[0, -807, -14, 4233]$[0, -2395, -14, 2645]"/>
+  </edges>
+  <edges xmi:id="_R_IyjosVEdqzGtIbswJTbw" source="_R-2er4sVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_IykYsVEdqzGtIbswJTbw" type="FromMultiplicityLabel">
+      <children xmi:id="_R_Iyk4sVEdqzGtIbswJTbw" type="FromMultiplicity">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=lastEvent[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=lastEvent[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_R_IykosVEdqzGtIbswJTbw" y="397"/>
+    </children>
+    <children xmi:id="_R_IylIsVEdqzGtIbswJTbw" type="FromRoleLabel">
+      <children xmi:id="_R_IylosVEdqzGtIbswJTbw" type="FromRole">
+        <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=lastEvent[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=lastEvent[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_R_IylYsVEdqzGtIbswJTbw" x="-82" y="-1049"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_Iyj4sVEdqzGtIbswJTbw" routing="Rectilinear" showStereotype="Text"/>
+    <element xmi:type="uml:Property" href="vizref:///#jfield^vcore.target=uml2.Property^name=lastEvent[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_IykIsVEdqzGtIbswJTbw" points="[-397, 503, 4842, -5900]$[-3387, 4154, 1852, -2249]"/>
+  </edges>
+  <edges xmi:id="_R_Iyl4sVEdqzGtIbswJTbw" source="_QuoM4IsVEdqzGtIbswJTbw" target="_R-2er4sVEdqzGtIbswJTbw">
+    <children xmi:id="_R_IymosVEdqzGtIbswJTbw" type="KindLabel">
+      <children xmi:id="_R_IynIsVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_IynosVEdqzGtIbswJTbw" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_IynYsVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_Iym4sVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_IymIsVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_IymYsVEdqzGtIbswJTbw" points="[-370, -2619, -396, 3784]$[-370, -4127, -396, 2276]$[-79, -5900, -105, 503]"/>
+  </edges>
+  <edges xmi:id="_R_O5IIsVEdqzGtIbswJTbw" source="_R-8lbYsVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_O5I4sVEdqzGtIbswJTbw" type="NameLabel">
+      <children xmi:id="_R_O5JYsVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_O5JosVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_O5JIsVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_O5IYsVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionImplementationEvent[jcu^name=ActionImplementationEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_O5IosVEdqzGtIbswJTbw" points="[-14, -807, 11231, 4233]$[-11259, -2395, -14, 2645]"/>
+  </edges>
+  <edges xmi:id="_R_O5J4sVEdqzGtIbswJTbw" source="_R-2er4sVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_O5KosVEdqzGtIbswJTbw" type="KindLabel">
+      <children xmi:id="_R_O5LIsVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_O5LosVEdqzGtIbswJTbw" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_O5LYsVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_O5K4sVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_O5KIsVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=Action[jcu^name=Action.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_O5KYsVEdqzGtIbswJTbw" points="[80, 503, 106, -5900]$[424, 2567, 450, -3836]$[424, 3784, 450, -2619]"/>
+  </edges>
+  <edges xmi:id="_R_O5MosVEdqzGtIbswJTbw" source="_R-8lQIsVEdqzGtIbswJTbw" target="_QuoM4IsVEdqzGtIbswJTbw">
+    <children xmi:id="_R_O5NYsVEdqzGtIbswJTbw" type="NameLabel">
+      <children xmi:id="_R_O5N4sVEdqzGtIbswJTbw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <children xmi:id="_R_O5OIsVEdqzGtIbswJTbw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_O5NosVEdqzGtIbswJTbw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_R_O5M4sVEdqzGtIbswJTbw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ActionCompletitionEvent[jcu^name=ActionCompletitionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]][jsrctype^name=ActionEvent[jcu^name=ActionEvent.java[jpack^name=com.itcodex.objectpuzzle.project_planning.domain.action[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ObjectPuzzle+Domain+Components]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_O5NIsVEdqzGtIbswJTbw" points="[0, -807, -5623, 4233]$[5609, -2395, -14, 2645]"/>
+  </edges>
+</notation:Diagram>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<TreeView>
+	<RootNode visible="false">
+		<TreeNode nodeId="Registration" caption="Registration" state="closed" type="page" image="images/buc.gif" url="javascript:webUIController.loadDocument('ProcessPlanList','ProcessPlanList','&amp;query=from ProcessPlanDataSheet a where a.action.protocol.name=\'Registration\'');"></TreeNode>
+		<TreeNode nodeId="OrderManagement" caption="OrderManagement" type="page" image="images/buc.gif" url="javascript:webUIController.loadDocument('ProcessPlanList','ProcessPlanList','&amp;query=from ProcessPlanDataSheet a where a.action.protocol.name=\'Order\'');"></TreeNode>
+		<TreeNode nodeId="CompanyDataManagement" caption="CompanyDataManagement" state="closed" type="page" image="images/buc.gif" url="javascript:webUIController.loadDocument('ProcessPlanList','ProcessPlanList','&amp;query=from ProcessPlanDataSheet a where a.action.protocol.name=\'DataManagement\'');"></TreeNode>
+		<TreeNode nodeId="PlanManagement" caption="PlanManagement" type="page" image="images/buc.gif" url="javascript:webUIController.loadDocument('PlanList','PlanList');"></TreeNode>
+	</RootNode>
+</TreeView>

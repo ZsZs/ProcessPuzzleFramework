@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+  <class name="com.processpuzzle.party.domain.CompanySoftwareSystem" table="T_COMPANY_SOFTWARE_SYSTEM">
+	<id name="id" type="integer" unsaved-value="null" >
+      <column name="COMPANY_SOFTWARE_SYSTEM_ID" not-null="true"/>
+      <generator class="identity"/>
+    </id>
+    	<many-to-one lazy="false" name="company" class="com.processpuzzle.party.domain.Company" column="COMPANY_ID"/>
+		<many-to-one lazy="false" name="softwareSystem" class="com.processpuzzle.party.domain.SoftwareSystem" column="SOFTWARE_SYSTEM_ID" cascade="save-update"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TreeView>
+	<RootNode visible="false">
+		<TreeNode nodeId="Energometall" caption="Energometall" state="closed" type="folder" image="images/workers.gif">
+			<TreeNode nodeId="Administrator" caption="Administrator" state="closed" type="folder" image="images/role.gif">
+				<TreeNode nodeId="PromptSend" caption="PromptSend" type="page" image="images/activity.gif"></TreeNode>
+			</TreeNode>
+		</TreeNode>
+		
+		<TreeNode nodeId="Partner" caption="Partner" state="closed" type="folder" image="images/workers.gif">
+			<TreeNode nodeId="UserManager" caption="UserManager" state="closed" type="folder" image="images/role.gif">
+				<TreeNode nodeId="UserCreate" caption="UserCreate" type="page" image="images/activity.gif"></TreeNode>
+				<TreeNode nodeId="UserModify" caption="UserModify" type="page" image="images/activity.gif"></TreeNode>
+				<TreeNode nodeId="UserDelete" caption="UserDelete" type="page" image="images/activity.gif"></TreeNode>
+			</TreeNode>
+			<TreeNode nodeId="CompanyDataManager" caption="CompanyDataManager" state="closed" type="folder" image="images/role.gif">
+				<TreeNode nodeId="CompanyDataModify" caption="CompanyDataModify" type="page" image="images/activity.gif"></TreeNode>
+			</TreeNode>
+			<TreeNode nodeId="OrderBuilder" caption="OrderBuilder" state="closed" type="folder" image="images/role.gif">
+				<TreeNode nodeId="OrderBuild" caption="OrderBuild" type="page" image="images/activity.gif"></TreeNode>
+			</TreeNode>
+			<TreeNode nodeId="OrderSender" caption="OrderSender" state="closed" type="folder" image="images/role.gif">
+				<TreeNode nodeId="OrderSend" caption="OrderSend" type="page" image="images/activity.gif"></TreeNode>
+			</TreeNode>			
+		</TreeNode>
+		
+		<TreeNode nodeId="Browser" caption="Browser" state="closed" type="folder" image="images/role.gif">
+			<TreeNode nodeId="Registration" caption="Registration" type="page" image="images/activity.gif"></TreeNode>
+		</TreeNode>
+	</RootNode>
+</TreeView>

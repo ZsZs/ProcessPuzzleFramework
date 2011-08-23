@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass
+		name="com.processpuzzle.party.domain.CompanyGroup"
+		table="T_COMPANY_GROUP"
+		extends="com.processpuzzle.party.domain.Company">
+		<key column="COMPANY_GROUP_ID" />
+	</joined-subclass>
+</hibernate-mapping>

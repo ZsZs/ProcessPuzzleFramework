@@ -1,0 +1,21 @@
+body {
+	background-color:#D49063; 
+	background-image:url(../Images/ITCodexLogo.jpg);
+	background-position:top left;
+	background-repeat:repeat-x;
+	margin:0 0 0 0;
+}
+
+div {height:100%;}
+
+#heading {
+	float: left;
+}
+
+#search {
+	float:right;
+}
+
+#menubar {
+	float: left;
+}

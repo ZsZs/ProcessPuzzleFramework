@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources 
+	xmlns:tns="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
+	
+	<Language name="hu">
+  
+	<!-- Generic texts -->
+	<Resource key="ui.label.name" type="String">Név</Resource>
+	<Resource key="ClearButtonCaption" type="String">Törlés</Resource>
+
+	<!-- Menu widget's texts -->
+	<Resource key="InfoPagesMenu" type="String">Információs lapok</Resource>
+	<Resource key="DocumentListInMenu" type="String">Dokumentum lista</Resource>
+	<Resource key="SystemAdminMenu" type="String">Rendszeradminisztráció</Resource>
+	<Resource key="Replacements" type="String">Helyettesítés</Resource>
+	<Resource key="CloseActiveDocumentCommand" type="String">Bezár</Resource>
+	<Resource key="OpenDocumentSelectedInListCommand" type="String">Megnyit</Resource>
+	<Resource key="PrintActiveDocumentCommand" type="String">Nyomtat</Resource>
+	<Resource key="ShowEditSelectedDocument" type="String">Megnyit</Resource>
+	<Resource key="CreateNewDocument" type="String">Új</Resource>
+	<Resource key="DeleteSelectedDocument" type="String">Töröl</Resource>
+	<Resource key="Print" type="String">Nyomtat</Resource>
+	<Resource key="Save" type="String">Ment</Resource>
+	<Resource key="Cancel" type="String">Mégsem</Resource>
+	<Resource key="TaskDetailShow" type="String">Feladat részletek...</Resource>
+	<Resource key="TaskStart" type="String">Feladat megkezdése</Resource>
+
+	<!-- Login widget's texts -->
+	<Resource key="UserNameLabel" type="String">Név: </Resource>
+	<Resource key="PasswordLabel" type="String">Jelszó: </Resource>
+	<Resource key="LoginButtonCaption" type="String">Bejelentkezés</Resource>
+	<Resource key="LogoutButtonCaption" type="String">Kijelentkezés</Resource>
+	<Resource key="TryAgainButtonCaption" type="String">Próbálja meg újra</Resource>
+	<Resource key="LoginWelcome" type="String">Üdv a fedélzeten, </Resource>
+	<Resource key="LoginFailure" type="String">A név, vagy jelszó helytelen.</Resource>
+	<Resource key="LoginError" type="String">Nem várt hiba következett be.</Resource>
+
+	<!-- PagingWidget's text -->
+	<Resource key="Next" type="String">Következő</Resource>
+	<Resource key="Previous" type="String">Előző</Resource>
+	
+	<!-- ProductCatalogWidget's text -->
+	<Resource key="DeleteCaption" type="String">Törlés</Resource>
+	<Resource key="DeleteTree" type="String">Fatörlés</Resource>
+	<Resource key="Up" type="String">Fel</Resource>
+	<Resource key="Down" type="String">Le</Resource>
+	<Resource key="New" type="String">Új</Resource>
+	<Resource key="Insert" type="String">Beilleszt</Resource>
+	<Resource key="Rename" type="String">Átnevez</Resource>
+	<Resource key="Copy" type="String">Másol</Resource>
+	<Resource key="Move" type="String">Áthelyez</Resource>
+	<Resource key="Search" type="String">Keresés</Resource>
+	<Resource key="Name" type="String">Név: </Resource>
+	<Resource key="TargetPath" type="String">  Cél útvonal: </Resource>
+	<Resource key="Find" type="String">Keresendő: </Resource>
+	<Resource key="FindInCaption" type="String">Keresés itt: </Resource>
+	
+	<!-- Info page names -->
+	<Resource key="ToDoListName" type="String">Személyes feladatlista</Resource>
+	<Resource key="DocumentHistoryName" type="String">Munkatermék történet</Resource>
+	<Resource key="DocumentPropertiesInfoPageName" type="String">Munkatermék tulajdonságok</Resource>
+	<Resource key="MessageWallName" type="String">Üzenőfal</Resource>
+	<Resource key="backupName" type="String">Biztonsági Mentés</Resource>
+	<Resource key="restoreName" type="String">Helyreállítás</Resource>
+	<Resource key="undoMaintenanceName" type="String">Karbantartás leállítása</Resource>
+	<Resource key="DatabaseAdminName" type="String">Adatbázis adminisztráció</Resource>
+	<Resource key="databaseAdminWarningMessage" type="String">Kérem zárja be az összes megnyitott oldalt az Adatbázis Adminisztáció indításához!</Resource>
+	<Resource key="warningText" type="String">Figyelem!</Resource>
+	<Resource key="warningInfoText" type="String"> oldal még nyitva van!</Resource>
+
+	<!-- View captions -->
+	<Resource key="ui.viewCaption.relatedArtifacts" type="String">Kapcsolódó munkatermékek</Resource>
+	<Resource key="ui.viewCaption.properties" type="String">Tulajdonságok</Resource>
+	<Resource key="ui.viewCaption.list" type="String">Lista</Resource>
+	<Resource key="ui.viewCaption.comments" type="String">Megjegyzések</Resource>
+	<Resource key="ui.viewCaption.accessRights" type="String">Jogosultságok</Resource>
+	<Resource key="ui.viewCaption.ReserveRelease" type="String">Lefoglal/Elenged</Resource>
+	<Resource key="ui.viewCaption.print" type="String">Nyomtatás</Resource>
+	<Resource key="ui.viewCaption.documentHistory" type="String">Dokumentum történet</Resource>
+	<Resource key="ui.viewCaption.baseData" type="String">Alapadatok</Resource>
+	<Resource key="ui.viewCaption.imageView" type="String">Kép</Resource>
+	<Resource key="ui.viewCaption.listQuery" type="String">Lekérdezések</Resource>
+	<Resource key="ui.viewCaption.addressData" type="String">Cím adatok</Resource>
+	<Resource key="ui.viewCaption.relatedImages" type="String">Kapcsolódó képek</Resource>
+	<Resource key="ui.viewCaption.commissionManagement" type="String">Megbízás ügyintézés</Resource>
+	<Resource key="ui.viewCaption.emailAddresses" type="String">Email címek</Resource>
+	<Resource key="ui.viewCaption.geographicalAddresses" type="String">Földrajzi címek</Resource>
+	<Resource key="ui.viewCaption.webPages" type="String">Web oldalak</Resource>
+	<Resource key="ui.viewCaption.editableText" type="String">Szerkesztés</Resource>
+	<Resource key="ui.viewCaption.MemoForm" type="String">Űrlap</Resource>
+	<Resource key="ui.viewCaption.Editable" type="String">Szerkeszthető</Resource>
+	<Resource key="ui.viewCaption.partyRelationship" type="String">Kapcsolatok</Resource>
+	<Resource key="ui.viewCaption.generalResources" type="String">Általános erőforrások</Resource>
+	<Resource key="ui.viewCaption.specificResources" type="String">Specifikus erőforrások</Resource>
+	<Resource key="ui.viewCaption.sequence" type="String">Sorrend</Resource>
+	<Resource key="ui.viewCaption.roleAssignments" type="String">Szerepek</Resource>
+	<Resource key="ui.viewCaption.actionList" type="String">Tevékenységlista</Resource>
+	<Resource key="ui.viewCaption.actionHierarchy" type="String">Tevékenység hierarchia</Resource>
+	<Resource key="ui.viewCaption.eventHistory" type="String">Események</Resource>
+	<Resource key="ui.viewCaption.confirmation" type="String">Visszaigazolás</Resource>
+	<Resource key="ui.viewCaption.accomplishmentConfirmation" type="String">Teljesítés igazolás</Resource>
+	<Resource key="ui.viewCaption.rejection" type="String">Visszautasítás</Resource>
+	<Resource key="ui.viewCaption.deliveryTerms" type="String">Szállítási feltételek</Resource>
+	<Resource key="ui.viewCaption.order" type="String">Megrendelés</Resource>
+	<Resource key="ui.viewCaption.finances" type="String">Pénzügyek</Resource>
+	<Resource key="ui.viewCaption.contractDecoupling" type="String">Szerződésbontás</Resource>
+	<Resource key="ui.viewCaption.conciliation" type="String">Egyeztetés</Resource>
+	<Resource key="ui.viewCaption.calculation" type="String">Kalkuláció</Resource>
+	<Resource key="ui.viewCaption.technicalData" type="String">Szakmai adatok</Resource>
+	<Resource key="ui.viewCaption.treeData" type="String">Fa struktúra</Resource>
+
+	<!-- DocumentReservationWidget's texts -->
+	<Resource key="ReserveButtonCaption" type="String">Lefoglal</Resource>
+	<Resource key="ReleaseButtonCaption" type="String">Elenged</Resource>
+	<Resource key="CancelButtonCaption" type="String">Mégsem</Resource>
+	<Resource key="ReservationCommentLabel" type="String">Megjegyzés:</Resource>
+	<Resource key="ReservationArtifactsLabel" type="String">Lefoglalt munkatermékek:</Resource>
+	<Resource key="ReserveAcceptedMessage" type="String">Lefoglalva.</Resource>
+	<Resource key="ReleaseAcceptedMessage" type="String">Elengedve.</Resource>
+	<Resource key="IOError" type="String">IO hiba.</Resource>
+	<Resource key="MissingFileFromLocal" type="String">Hiányzik a lokális file!(</Resource>
+	<Resource key="NotSelectedItems" type="String">Figyelem! Nincs kijelolve semmi vagy rossz kijelölt elem!</Resource>
+
+	<!-- DocumentRelationtionshipWidget's texts -->
+	<Resource key="NewRelationButtonCaption" type="String">Új kapcsolat</Resource>
+	<Resource key="DelRelationButtonCaption" type="String">Kapcsolat törlése</Resource>
+	<Resource key="NewFileButtonCaption" type="String">Új kapcsolódó fájl</Resource>
+	<Resource key="CancelButtonCaption" type="String">Mégsem</Resource>
+	<Resource key="DocumentSelectLabel" type="String">Válassza ki a kapcsolni kívánt dokumentumokat:</Resource>
+	<Resource key="DocumentConfirmRemoveLabel" type="String">Biztos benne, hogy teljesen eltávolítja a kiválasztott kapcsolatot?</Resource>
+	<Resource key="SelectRelatedFileLabel" type="String">Válassza ki a kapcsolni kívánt fájlt:</Resource>
+	<Resource key="NewRelationButtonClickCaption" type="String">Csatolás</Resource>
+	<Resource key="DelRelationButtonClickCaption" type="String">Igen</Resource>
+	<Resource key="BrowseFileLabelText" type="String">Fájl</Resource>
+	<Resource key="UploadFileButtonText" type="String">Feltölt</Resource>
+	<Resource key="BrowseButtonText" type="String">Tallóz</Resource>
+	<Resource key="SelectedArtifact" type="String">Kiválasztva</Resource>
+
+	<!-- PlanManagerWidget's texts -->
+	<Resource key="DeleteActionButtonCaption" type="String">Törlés</Resource>
+	<Resource key="InsertActionButtonCaption" type="String">Beszúrás</Resource>
+
+	<!-- ProductCatalogWidget's texts -->
+	<Resource key="ui.PlanManagerWidget.Tree.Label" type="String">Katalógus fa:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Label" type="String">Kiválasztott elem:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Name.Label" type="String">Megnevezés:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Description.Label" type="String">Leírás:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Images.Label" type="String">Képek:</Resource>
+	<Resource key="ui.PlanManagerWidget.SelectedItem.Documents.Label" type="String">Dokumentációk:</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Label" type="String">Termékek:</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Identifier" type="String">Azonosító</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Designation" type="String">Megnevezés</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Properties" type="String">Tulajdonságok</Resource>
+	<Resource key="ui.PlanManagerWidget.CatalogEntryList.Column.Price" type="String">Ár</Resource>
+	<Resource key="ui.PlanManagerWidget.SearchResultList.Label" type="String">Találatok:</Resource>
+
+	<!-- Tree Internationalization -->
+	<Resource key="Processes" type="String">Folyamatok</Resource>
+	<Resource key="Roles" type="String">Szerepek</Resource>
+	<Resource key="Artifacts" type="String">Munkatermékek</Resource>
+	<Resource key="Documents" type="String">Dokumentumok</Resource>
+
+	<!-- Processes -->
+	<Resource key="systemIntegrationProject" type="String">Rendszerintegrációs projekt</Resource>
+	<Resource key="projectPreparation" type="String">Projekt előkészítés</Resource>
+	<Resource key="projectControlling" type="String">Projekt irányítás</Resource>
+	<Resource key="projectSealing" type="String">Projekt lezárás</Resource>
+	<Resource key="projectExecution" type="String">Projekt végrehajtás</Resource>
+	<Resource key="computerProductSales" type="String">Számítástechnikai termékértékesítés</Resource>
+	<Resource key="giveQuotation" type="String">Árajánlat adás</Resource>
+	<Resource key="toTender" type="String">Ajánlattétel</Resource>
+	<Resource key="sealing" type="String">Lezárás</Resource>
+	<Resource key="agreement" type="String">Megállapodás</Resource>
+	<Resource key="accomplishment" type="String">Teljesítések</Resource>
+	<Resource key="operationSupport" type="String">Üzemeltetés támogatás</Resource>
+	<Resource key="systemOperation" type="String">Rendszerüzemeltetés</Resource>	
+		
+	<Resource key="startOffer" type="String">Ajánlat indítása</Resource>
+	<Resource key="preCalculation" type="String">Előkalkuláció</Resource>
+	<Resource key="supplierRequestForQuotation" type="String">Beszállítói ajánlatkérés</Resource>
+	<Resource key="takeRequiredExperts" type="String">Igényelt szakértők bevonása</Resource>
+	<Resource key="offerPreparation" type="String">Ajánlat előkészítése</Resource>
+	<Resource key="developOfferProfessionalContent" type="String">Szakmai tartalom elkészítése</Resource>
+	<Resource key="offerPreparationCheckup" type="String">Ajánlat előkészítés ellenőrzése</Resource>
+	<Resource key="technicalContentPreparation" type="String">Technikai tartalom előkészítése</Resource>
+	<Resource key="technicalContentPreparationCheckup" type="String">Tecknikai tartalom előkészítés ellenőrzése</Resource>
+	<Resource key="priceConciliation" type="String">Ár egyeztetés</Resource>
+	<Resource key="priceConciliationCheckup" type="String">Ár egyeztetés ellenőrzése</Resource>
+	<Resource key="projectResourcePlanCreation" type="String">Projekt erőforrás terv készítés</Resource>
+	<Resource key="projectResourcePlanCreationCheckup" type="String">Projekt erőforrás terv készítés ellenőrzése</Resource>
+	<Resource key="legalEconomicContentPreparation" type="String">Jogi-Gazdasági tartalom előkészítés</Resource>
+	<Resource key="legalEconomicContentPreparationCheckup" type="String">Jogi-Gazdasági tartalom előkészítés ellenőrzése</Resource>
+	
+	<Resource key="finalizeOffer" type="String">Ajánlat véglegesítése</Resource>
+	<Resource key="releaseOffer" type="String">Ajánlat kiadása</Resource>
+	<Resource key="recordOffer" type="String">Megrendelés rögzítése</Resource>
+	<Resource key="recordContract" type="String">Szerződés rögzítése</Resource>
+	<Resource key="orderManagement" type="String">Megrendelések kezelése</Resource>
+	
+	<Resource key="serviceCommissionToAcquisition" type="String">Szervíz megbízása beszerzésre</Resource>
+	<Resource key="orderFromSupplier" type="String">Megrendelés beszállítótól</Resource>
+	<Resource key="supplierOrderFeedback" type="String">Beszállítói megrendelés visszajelzés</Resource>
+	<Resource key="shipmentReception" type="String">Beszállítás fogadása</Resource>
+	<Resource key="shipmentCheckup" type="String">Beszállítás ellenőrzése</Resource>
+
+	<!-- Roles -->
+	<Resource key="accountTrader" type="String">Account kereskedő</Resource>
+	<Resource key="commercialAssistant" type="String">Kereskedelmi asszisztens</Resource>
+	<Resource key="commercialExecutive" type="String">Kereskedelmi vezető</Resource>
+	<Resource key="offerResponsible" type="String">Ajánlattételi felelős</Resource>
+	<Resource key="productTrader" type="String">Termék kereskedő</Resource>
+	<Resource key="projectExecutive" type="String">Projekt vezető</Resource>
+	
+	<Resource key="finance" type="String">Pénzügy</Resource>
+	<Resource key="financeLeader" type="String">Pénzügyi vezető</Resource>
+	<Resource key="financer" type="String">Pénzügyes</Resource>
+	
+	<Resource key="generalEngineer" type="String">Általános mérnök</Resource>
+	<Resource key="generalSystemEngineer" type="String">Általános rendszermérnök</Resource>
+	<Resource key="buyingAgent" type="String">Anyagbeszerző</Resource>
+	<Resource key="storageAdministrator" type="String">Raktár adminisztrátor</Resource>
+	<Resource key="specialtySystemEngineer" type="String">Szakterületi rendszermérnök</Resource>
+	<Resource key="serviceExecutive" type="String">Szerviz vezető</Resource>
+	
+	<Resource key="beOnDuty" type="String">Ügyeletes</Resource>
+	
+	<Resource key="managementAndAdministration" type="String">Vezetés és adminisztráció</Resource>
+	<Resource key="manager" type="String">Ügyvezető</Resource>
+
+	<!-- Artifacts (Documents) -->
+	<Resource key="commerce" type="String">Kereskedelem</Resource>
+	<Resource key="offer" type="String">Ajánlatok</Resource>
+	<Resource key="offerPreCalculation" type="String">Ajánlat előkalkuláció</Resource>
+	<Resource key="supplierQuotation" type="String">Beszállítói árajánlat</Resource>
+	<Resource key="order" type="String">Megrendelések</Resource>
+	<Resource key="projectManagement" type="String">Projektvezetés</Resource>
+	<Resource key="projectPlan" type="String">Projekt terv</Resource>
+	<Resource key="storageAndInventoryAdjustment" type="String">Raktár- és készletgazdálkodás</Resource>
+	<Resource key="service" type="String">Szerviz</Resource>
+	<Resource key="technologicalQuotation" type="String">Műszaki árajánlat</Resource>
+	<Resource key="companyManagement" type="String">Vállalatirányítás</Resource>
+	<Resource key="contract" type="String">Szerződések</Resource>
+	<Resource key="SystemAdministration" type="String">Rendszer adminisztráció</Resource>
+	<Resource key="CountryList" type="String">Ország lista</Resource>
+	<Resource key="SettlementList" type="String">Település lista</Resource>
+	<Resource key="PersonList" type="String">Személy lista</Resource>
+	<Resource key="UserList" type="String">Felhasználó lista</Resource>
+	<Resource key="CompanyList" type="String">Cég lista</Resource>
+	<Resource key="OrganizationUnitList" type="String">Szerv. Egység lista</Resource>
+	<Resource key="Notes" type="String">Feljegyzések</Resource>
+	<Resource key="notesForm" type="String">Űrlap nézet</Resource>
+	<Resource key="notesDocument" type="String">Dokumentum nézet</Resource>
+	<Resource key="ActionList" type="String">Tevékenység lista</Resource>
+	<Resource key="OfferList" type="String">Ajánlat lista</Resource>
+	<Resource key="ContractList" type="String">Szerződés lista</Resource>
+	<Resource key="ArtifactList" type="String">Munkatermék lista</Resource>
+	<Resource key="coWorkerList" type="String">Munkatárs lista</Resource>
+	<Resource key="CoWorkerList" type="String">Munkatárs lista</Resource>
+	<Resource key="supplierOffer" type="String">Szállítói ajánlatok</Resource>
+	<Resource key="supplierContract" type="String">Szállítói szerződések</Resource>
+	<Resource key="SupplierOfferList" type="String">Szállítói ajánlat lista</Resource>
+	<Resource key="SupplierContractList" type="String">Szállítói szerződés lista</Resource>
+	<Resource key="OrderList" type="String">Megrendelés lista</Resource>
+	<Resource key="AccomplishmentList" type="String">Teljesítés lista</Resource>
+	<Resource key="ProjectManagement" type="String">Projekt Vezetés</Resource>
+	<Resource key="OrganizationList" type="String">Szervezet Lista</Resource>
+	<Resource key="PlanList" type="String">Terv lista</Resource>
+	<Resource key="ProcessPlanList" type="String">Üzleti folyamatok</Resource>
+	<Resource key="PartnerRegistration" type="String">Partner regisztráció</Resource>
+	<Resource key="RegistrationList" type="String">Regisztráció lista</Resource>
+	<Resource key="CompanyDataList" type="String">Cégadatok lista</Resource>
+	<Resource key="ProductAdministration" type="String">Termék adminisztráció</Resource>
+	<Resource key="ProductCatalogList" type="String">Termékkatalógus lista</Resource>
+	<Resource key="PriceTypeList" type="String">Ártípus lista</Resource>
+	<Resource key="ProductTypeList" type="String">Terméktípus lista</Resource>
+	<Resource key="PurchaseOrderList" type="String">Vevői megrendelés lista</Resource>
+	<Resource key="OrderConfirmationList" type="String">Megrendelés megerősítése lista</Resource>
+	<Resource key="BillOfDeliveryList" type="String">Szállítólevél lista</Resource>
+	<Resource key="InvoiceList" type="String">Számla lista</Resource>
+	<Resource key="PromptNoteList" type="String">Fizetési felszólítás lista</Resource>
+	<Resource key="SalesTaxPolicyList" type="String">Áfakulcsok lista</Resource>
+	
+	<!-- Documents Subitems -->
+	<Resource key="artifactList" type="String">Munkatermék lista</Resource>
+
+	<!-- BackUp/Restore -->
+	<Resource key="backup" type="String">Biztonsági mentés</Resource>
+	<Resource key="restore" type="String">Helyreállítás</Resource>
+	<Resource key="welcome" type="String">Üdvözöljük az Adatbázis Adminisztrációban!</Resource>
+	<Resource key="adminInfo" type="String">Most biztonsági mentést készíthet az egész adatbázisról vagy helyreállíthatja az elmentett adatbázist a következő gombok segítségével.</Resource>
+	<Resource key="schemaDropWarning" type="String">Figyelem! Ha eldobja az adatbázis sémát az összes adat véglegesen elveszik!</Resource>
+	<Resource key="schemaDropConfirmation" type="String">Biztos, hogy teljesen eltávolítja az összes adatot az adatbázisból?</Resource>
+	<Resource key="noExistingBackupWarningPart1" type="String">Figyelem! Még nem készült biztonsági mentés vagy biztonsági mentés nem érhető el!</Resource>
+	<Resource key="noExistingBackupWarningPart2" type="String">Legalább egy biztonsági mentést kell készítenie a helyreállítás elindításához!</Resource>
+	<Resource key="abort" type="String">Megszakítás</Resource>
+
+	<!--  DataRetriever  -->
+	<Resource key="WarningTextForAjax" type="String">Kérem várjon!</Resource>
+	<Resource key="AjaxNotSupported" type="String">A böngésző nem támogatja az AJAX technológiát!</Resource>
+	<Resource key="AjaxWasProblem" type="String">Probléma lépett fel a kérés közben.</Resource>
+	
+	<!--  FolderManagerWidget -->
+	<Resource key="fmw_CREATE_WINDOW_TITLE" type="String">Új csomópont létrehozása</Resource>
+	<Resource key="fmw_RENAME_WINDOW_TITLE" type="String">Csomópont átnevezése</Resource>
+	<Resource key="fmw_MOVE_WINDOW_TITLE" type="String">Csomópont mozgatása</Resource>
+	<Resource key="fmw_DELETE_WINDOW_TITLE" type="String">Csomópont törlése</Resource>
+
+	<Resource key="fmw_CANCEL_BUTTON_TEXT" type="String">Mégsem</Resource>
+	<Resource key="fmw_CREATE_BUTTON_TEXT" type="String">Létrehoz</Resource>
+	<Resource key="fmw_RENAME_BUTTON_TEXT" type="String">Átnevez</Resource>
+	<Resource key="fmw_MOVE_BUTTON_TEXT" type="String">Mozgatás</Resource>
+	<Resource key="fmw_DELETE_BUTTON_TEXT" type="String">Törlés</Resource>
+
+	<Resource key="fmw_NEW_NAME_LABEL" type="String">Új név: </Resource>
+	<Resource key="fmw_SELECTED_LABEL" type="String">Kiválasztott: </Resource>
+	
+	<Resource key="fmw_PICTURE_DOCTYPE" type="String">Kép</Resource>
+	<Resource key="fmw_DOCUMENT_DOCTYPE" type="String">Dokumentum</Resource>
+	<Resource key="fmw_INNERPIC_DOCSUBTYPE" type="String">Belső kép</Resource>
+	<Resource key="fmw_OUTERPIC_DOCSUBTYPE" type="String">Külső kép</Resource>
+
+	<Resource key="fmw_TREE_TITLE_CREATE_NODE_LABEL" type="String">Válassza ki az új csomópont szülőjét:</Resource>
+	<Resource key="fmw_TREE_TITLE_RENAME_NODE_LABEL" type="String">Válassza ki az átnevezendő csomópontot:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_FROM_NODE_LABEL" type="String">Válassza ki az áthelyezendő csomópontot:</Resource>
+	<Resource key="fmw_TREE_TITLE_MOVE_TO_NODE_LABEL" type="String">Válassza ki az áthelyezendő csomópontot szülőjét:</Resource>
+	<Resource key="fmw_TREE_TITLE_DELETE_NODE_LABEL" type="String">Válassza ki a törlendő csomópontot:</Resource>
+
+	<Resource key="fmw_WARNING_EMPTY_NEW_NAME" type="String">Az új név mező nincs kitöltve!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED" type="String">Válasszon egy csomópontot!</Resource>
+	<Resource key="fmw_WARNING_NOT_SELECTED2" type="String">Válassza a csomópontot és annak új szülőjét is!</Resource>
+	<Resource key="fmw_WARNING_SEPARATOR_IN_NAME" type="String">Az új név tartalmazza az elválasztójelet: </Resource>
+	
+	<!-- Process Management -->
+	<Resource key="ProcessManagementMenu" type="String">Folyamatok kezelése</Resource>
+	<Resource key="newProcessName" type="String">Új Folyamat</Resource>
+	<Resource key="Subject" type="String">Tárgy</Resource>
+	
+	<!-- Artifact Management -->
+	<Resource key="ArtifactManagementMenu" type="String">Munkatermékek kezelése</Resource>
+	<Resource key="newArtifactName" type="String">Új munkatermék</Resource>
+	<Resource key="delArtifactName" type="String">Munkatermék törlése</Resource>
+	<Resource key="renameArtifactName" type="String">Munkatermék átnevezése</Resource>
+	<Resource key="moveArtifactName" type="String">Munkatermék áthelyezése</Resource>
+
+	<!-- Artifact Folder Management -->
+	<Resource key="ArtifactFolderManagementMenu" type="String">Mappák kezelése</Resource>
+	<Resource key="newFolderName" type="String">Új mappa</Resource>
+	<Resource key="delFolderName" type="String">Mappa törlése</Resource>
+	<Resource key="renameFolderName" type="String">Mappa átnevezése</Resource>
+	<Resource key="moveFolderName" type="String">Mappa áthelyezése</Resource>
+
+	<!-- System Administration - append	-->
+	<Resource key="userManagementName" type="String">Felhasználók kezelése</Resource>
+	<Resource key="organizationManagementName" type="String">Cégek kezelése</Resource>
+
+	<!-- Commands -->	
+	<Resource key="LifecycleName" type="String">Protokoll: </Resource>
+	<Resource key="Name" type="String">Név: </Resource>
+	<Resource key="Description" type="String">Leírás: </Resource>
+	
+	<Resource key="SettlementLabel" type="String">Település: </Resource>
+	<Resource key="TopographicalNumberLabel" type="String">Helyrajzi szám: </Resource>
+	<Resource key="CreateNewSettlement" type="String">Új település létrehozása</Resource>
+	<Resource key="CreateNewPerson" type="String">Új felhasználó létrehozása</Resource>
+	<Resource key="FamilyNameLabel" type="String">Vezetéknév: </Resource>
+	<Resource key="GivenNameLabel" type="String">Keresztnév: </Resource>
+	<Resource key="UserNameLabel" type="String">Név: </Resource>
+	<Resource key="CreateNewCompany" type="String">Új cég létrehozása</Resource>
+	<Resource key="CompanyNameLabel" type="String">Cégnév: </Resource>
+	<Resource key="CompanyTypeLabel" type="String">Típus: </Resource>
+	<Resource key="CompanyAddress" type="String">Cím: </Resource>
+	<Resource key="ProtocolLabel" type="String">Protokoll: </Resource>
+	<Resource key="SubjectLabel" type="String">Tárgy: </Resource>
+	<Resource key="OfferNameLabel" type="String">Ajánlat neve: </Resource>
+	<Resource key="CompSalesLabel" type="String">Számítástechnikai termékértékesítés</Resource>
+	<Resource key="SysOpLabel" type="String">Rendszerüzemeltetés</Resource>
+	<Resource key="OpSupportLabel" type="String">Üzemeltetés támogatás</Resource>
+	<Resource key="SysIntProjLabel" type="String">Rendszerintegrációs projekt</Resource>
+	<Resource key="CreateNewOffer" type="String">Új ajánlat létrehozása</Resource>
+	<Resource key="ProductCatalogNameLabel" type="String">Termék katalógus név: </Resource>
+	<Resource key="ProductTypeIdentifierLabel" type="String">Termék azonosító: </Resource>
+	<Resource key="ProductTypeNameLabel" type="String">Termék név: </Resource>
+	<Resource key="PriceTypeNameLabel" type="String">Árlista név: </Resource>
+	<Resource key="SalesTaxPolicyNameLabel" type="String">ÁFA kulcs név: </Resource>
+	<Resource key="ProductPurchaseOrderNameLabel" type="String">Vevői megrendelés név: </Resource>
+
+	<!-- Error -->
+	<Resource key="ui.createartifactcommand.unknownArtifactType" type="String">Ismeretlen típusú munkatermék!</Resource>
+	<Resource key="ui.createartifactcommand.unknownArtifactClass" type="String">Ismeretlen osztályú munkatermék!</Resource>
+	<Resource key="ui.createartifactcommand.illegalArgument" type="String">Illegális argumentum!</Resource>
+	<Resource key="ui.createartifactcommand.entityIdentityCollition" type="String">Entitás azonossági ütközés!</Resource>
+	<Resource key="ui.createartifactcommand.error" type="String">Hiba történt!</Resource>
+
+  </Language>
+</tns:Resources>

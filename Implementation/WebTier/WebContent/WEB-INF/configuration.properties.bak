@@ -1,0 +1,19 @@
+domain.class.repository.mapping = com.processpuzzle.configuration.OPDomainClassRepositoryMapping
+command.mapping = com.processpuzzle.framework.application_configuration.control.ObjectPuzzleCommandMapping
+persistence.strategy.name = hibernate
+persistence.strategy.configuration = /WEB-INF/persistence_configuration.properties
+
+internalization.resource.bundle = /WEB-INF/ResourceBundle
+available.locales = hu|en
+default.locale = hu
+#email.configuration = /WEB-INF/email_configuration.properties
+
+runtime.environment = local
+framework.location = C:\\Temp\\OPDocs
+framework.version = 0.1
+
+artifacttypes.definition = /ProcessDefinition/OPProcessDefinition.xml
+
+system.data.loader.class = com.processpuzzle.artifact_type.domain.ArtifactTypesLoader;com.processpuzzle.artifact.domain.SystemArtifactLoader;com.processpuzzle.configuration.OPComponentParameters;com.itcodex.anzso.configuration.domain.ANZSOComponentParameters
+#migration.data.loader.class = someMigrationLoader
+#test.data.loader.class = com.itcodex.anzso.configuration.domain.OPTestDatas

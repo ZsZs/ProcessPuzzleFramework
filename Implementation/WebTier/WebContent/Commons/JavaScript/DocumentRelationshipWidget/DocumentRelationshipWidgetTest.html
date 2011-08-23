@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<TITLE>DocumentRelationshipWidgetTest.html</TITLE>
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="javascript" src="../WebUIController/WebUIController.js"></script>
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/ArrayList.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Configuration.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Collection.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../CommonScripts/GenericBrowser.js"></script>
+	<script language="JavaScript" src="DocumentRelationshipWidget.js"></script>
+</HEAD>
+<BODY>
+<H1>DocumentRelationshipWidget.js Test Page</H1>
+
+	<p>This page contains tests for DocumentRelationshipWidget.js JavaScript class.</p>
+<!--
+		<div class="readOnlyContainer">
+		<table id="ArtifactList_ListedArtifactsForm" border="1">
+			<thead>
+				<tr>
+					<td></td>
+					<td align="center" id="artifactName" style="CURSOR:pointer" onClick="">dokumentum név</td>
+				</tr>
+			</thead>
+
+				<tr>
+					<td><input type="checkbox" id="selectCheckbox_1"></td>
+					<td><a href="#" class="listedDocumentName" onclick="documentSelection">dokumentum 1</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="selectCheckbox_2"></td>
+					<td><a href="#" class="listedDocumentName">dokumentum 2</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="selectCheckbox_3"></td>
+					<td><a href="#" class="listedDocumentName">dokumentum 3</a></td>
+				</tr>
+		</table>
+	</div>
+-->
+	<div id="relationshipWidget"></div>
+
+<!--  ///////////////////////////   -->
+
+	<script language=javascript>
+		var relationshipWidget = null;
+		var resourceBundle = new XMLResourceBundle("../../Configuration/WebUiInternalization");
+		resourceBundle.loadFile(new Locale("hu"));
+
+		function setUp(){
+			relationshipWidget = new DocumentRelationshipWidget("relationshipWidget", resourceBundle);
+			relationshipWidget.show();
+		}
+
+		function tearDown(){
+			relationshipWidget.hide();
+			relationshipWidget = null;
+		}
+
+		function testShow(){
+			assertNotNull("The newly created widget displays a form.", document.getElementById("documentRelationshipForm"));
+
+			var newRelationButton = document.getElementById("newRelationButton");
+			assertNotNull("The newly created widget has a newRelation button.", newRelationButton);
+
+			var delRelationButton = document.getElementById("delRelationButton");
+			assertNotNull("The newly created widget has a delRelation button.", delRelationButton);
+
+			var newFileButton = document.getElementById("newFileButton");
+			assertNotNull("The newly created widget has a newFile button.", newFileButton);
+
+			var cancelButton = document.getElementById("cancelButton");
+			assertNotNull("The newly created widget has a cancel button.", cancelButton);
+		}
+
+
+		function testShowNewRelationshipDivision(){
+			var newRelationButton = document.getElementById("newRelationButton");
+			assertFalse("Normally the 'newRelationButton' is enabled by default.", newRelationButton.disabled);
+
+			newRelationButton.click();
+			var newRelationshipDiv = document.getElementById("newRelationshipDivision");
+			assertNotNull("Clicking on the button the widget inserts a 'NewRelationship' division.", newRelationshipDiv);
+
+			newRelationButton.click(); 
+//			assertNull("The second click on the button hides the 'NewRelationship' division.", newRelationshipDiv);
+			assertNull("The second click also removes the comment division from the doc", findFormElementByName("div", "newRelationshipDivision"));
+		}
+
+
+		function testShowRemoveRelationshipDivision(){
+			var delRelationButton = document.getElementById("delRelationButton");
+			assertTrue("Without any document selected the 'removeRelationshipButton' is disabled.", delRelationButton.disabled);
+
+			relationshipWidget.documentSelectionEvent("aDocument");
+			assertFalse("After notifying the widget about a selection the 'removeRelationshipButton' is enabled.", delRelationButton.disabled);
+
+			delRelationButton.click();
+			var removeRelationshipDiv = document.getElementById("removeRelationshipDivision");
+			assertNotNull("Clicking on the button the widget inserts a 'RemoveRelationship' division.", removeRelationshipDiv);
+
+			delRelationButton.click(); 
+//			assertFalse("The second click on the button hides the docDeSelDiv", relationshipWidget.docDeSelDivVisibility());
+			assertNull("The second click also removes the comment division from the doc", findFormElementByName("div", "removeRelationshipDivision"));			
+		}
+
+
+		function testShowAddNewRelatedFileDivision(){
+			var newFileButton = document.getElementById("newFileButton");
+			assertFalse("Normally the 'newFileButton' is enabled by default.", newFileButton.disabled);
+
+			newFileButton.click();
+			var addNewFileDiv = document.getElementById("addNewRelatedFileDivision");
+			assertNotNull("Clicking on the button the widget inserts an 'addNewRelatedFile' division.", addNewFileDiv);
+
+			newFileButton.click(); 
+//			assertFalse("The second click on the button hides the newFileDiv", relationshipWidget.newFileDivVisibility());
+			assertNull("The second click also removes the comment division from the doc", findFormElementByName("div", "addNewRelatedFileDivision"));			
+		}
+
+
+		function testCancel(){
+			var cancelButton = document.getElementById("cancelButton");
+			assertTrue("The 'cancelButton' is disabled by default.", cancelButton.disabled);
+
+			// Testing cancel on new relationship
+			var newRelationButton = document.getElementById("newRelationButton");
+
+			newRelationButton.click();
+			var newRelationshipDiv = document.getElementById("newRelationshipDivision");
+			assertNotNull("Clicking on the button the widget inserts a 'NewRelationship' division.", newRelationshipDiv);
+
+			cancelButton.click();
+			assertNull("Click on the 'cancel' button removes the 'newRelationship' division.", findFormElementByName("div", "newRelationshipDivision"));
+
+			// Testing cancel on remove relationship
+			var delRelationButton = document.getElementById("delRelationButton");
+
+			relationshipWidget.documentSelectionEvent("aDocument");
+			assertFalse("After notifying the widget about a selection the 'removeRelationshipButton' is enabled.", delRelationButton.disabled);
+
+			delRelationButton.click();
+			var removeRelationshipDiv = document.getElementById("removeRelationshipDivision");
+			assertNotNull("Clicking on the button the widget inserts a 'RemoveRelationship' division.", removeRelationshipDiv);
+
+			cancelButton.click();
+			assertNull("Click on the 'cancel' button removes the 'removeRelationship' division.", findFormElementByName("div", "removeRelationshipDivision"));
+
+			// Testing cancel on add new related file
+			var newFileButton = document.getElementById("newFileButton");
+
+			newFileButton.click();
+			var addNewFileDiv = document.getElementById("addNewRelatedFileDivision");
+			assertNotNull("Clicking on the button the widget inserts an 'addNewRelatedFile' division.", addNewFileDiv);
+
+			cancelButton.click(); 
+			assertNull("Click on the 'cancel' button removes the 'addNewRelatedFile' division.", findFormElementByName("div", "addNewRelatedFileDivision"));			
+		}
+
+//----------------------
+
+		function findFormElementByName (tagName, elementName) {
+			var returnValue = null;
+			var elements = document.getElementsByTagName(tagName);
+			for( var i = 0; i < elements.length; i++ ) {
+				var element = elements[i];
+				if (element.getAttribute("name") == elementName) {
+					returnValue = element;
+					break;
+				}
+			}
+			return returnValue;
+		}
+
+	function runTestFunction(){
+		setUp();
+		// testCancel();
+		tearDown();
+	}
+
+	runTestFunction();
+
+	</script>
+</BODY>
+</HTML>

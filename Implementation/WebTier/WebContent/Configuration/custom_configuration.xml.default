@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Here your can override the values defined in default_configuration.xml file
+It is also possible to add your own configuration values -->
+<processPuzzleConfiguration>
+	<dataLoaders>
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.address.settlement.artifact.SettlementDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/itcodex/objectpuzzle/address/settlement/artifact/TestSettlement.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/itcodex/objectpuzzle/address/settlement/artifact/Settlement.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.party_management.party.artifact.CompanyDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/itcodex/objectpuzzle/party_management/party/artifact/TestCompany.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/itcodex/objectpuzzle/party_management/party/artifact/Company.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+		
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.party_management.party.artifact.PersonDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/itcodex/objectpuzzle/party_management/party/artifact/TestPerson.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/itcodex/objectpuzzle/party_management/party/artifact/Person.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+		
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.product.artifact.PriceTypeDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/TestPriceType.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/PriceType.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.order.artifact.SalesTaxPolicyDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/processpuzzle/order/artifact/TestSalesTaxPolicy.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/processpuzzle/order/artifact/SalesTaxPolicy.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+		
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.product.domain.producttype.ProductTypeDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/TestProductType.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/ProductType.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.product.domain.productcatalog.ProductCatalogDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/TestProductType.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/ProductType.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.product.domain.producttype.PriceDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/TestProductPrice.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/processpuzzle/product/artifact/ProductPrice.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+
+		<dataLoader kind="system">
+			<dataLoaderClass>com.processpuzzle.order.domain.order.OrderDataLoader</dataLoaderClass>
+			<instantiationArguments>
+				<argument name="sourcePath" type="java.lang.String">classpath:com/processpuzzle/order/artifact/TestOrder.xml</argument>
+				<argument name="schemePath" type="java.lang.String">classpath:com/processpuzzle/order/artifact/Order.xsd</argument>
+			</instantiationArguments>
+		</dataLoader>
+	</dataLoaders>
+
+</processPuzzleConfiguration>

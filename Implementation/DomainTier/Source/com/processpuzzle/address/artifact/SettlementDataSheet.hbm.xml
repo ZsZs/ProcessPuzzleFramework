@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.address.settlement.artifact.SettlementDataSheet"
+		table="T_SETTLEMENT_DATA_SHEET"
+		extends="com.processpuzzle.artifact.domain.Artifact">
+
+		<many-to-one  lazy="false" cascade="all" name="settlement" class="com.processpuzzle.address.settlement.domain.Settlement"  unique="true" />
+	</union-subclass>
+</hibernate-mapping>

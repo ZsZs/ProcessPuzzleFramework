@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<title>Test page for Collection.js</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../MooTools/mootools-core-1.3.js"></script>
+    <script type="text/javascript"  src="../JsUnit/app/jsUnitCore.js"></script>
+	
+	<script type="text/javascript" src="Collection.js"></script>
+	<script type="text/javascript" src="AssertUtil.js"></script>
+</head>
+
+<body>
+	<script language="javascript">
+
+		var aCollection;
+		var obj1;
+		var obj2;
+		
+		function setUp() {
+			aCollection = new Collection();
+			obj1 = new Object();
+			obj2 = new Object();
+		}
+		
+		function tearDown () {
+			aCollection = null;
+			obj1 = null;
+			obj2 = null;
+		}
+
+		function testAdd(){
+			aCollection.add("key1", obj1);
+			assertEquals("Count of object int the collection should be 1", aCollection.getCountOfObjects(), 1);
+
+			aCollection.add("key2", obj2);
+			assertEquals("Count of object int the collection now should be 2", aCollection.getCountOfObjects(), 2);
+		}
+
+		function testExists(){
+			aCollection.add("key1", obj1);
+			assertTrue("obj1, identifited with key1 should exists in the collection.", aCollection.exists("key1"));
+		}
+
+		function testGetItemByIndex(){
+			aCollection.add("key1", obj1);
+			aCollection.add("key2", obj2);
+			assertEquals("The first object should be obj1.", aCollection.getItemByIndex(0), obj1);
+			assertEquals("The second object should be obj2.", aCollection.getItemByIndex(1), obj2);
+		}
+
+		function testMoveFirst(){
+			aCollection.add("key1", obj1);
+			aCollection.add("key2", obj2);
+			aCollection.moveFirst();
+			assertEquals("obj1 should be retrieved by getNext() function.", aCollection.getNext(), obj1);
+		}
+
+		function testGetNext(){
+			aCollection.add("key1", obj1);
+			aCollection.add("key2", obj2);
+			aCollection.moveFirst();
+			assertEquals("obj1 should be retrieved by getNext() function.", aCollection.getNext(), obj1);
+			assertEquals("Second call of getNext() should retrieve obj2.", aCollection.getNext(), obj2);
+			assertNull("Calling getNext() again, should return null.", aCollection.getNext());
+		}
+
+
+		function testRemove_ForLast(){
+			aCollection.add("key1", obj1);
+			aCollection.add("key2", obj2);
+			aCollection.remove("key2");
+			assertFalse("No object found for key: 'key2'", aCollection.exists("key2"));
+			assertEquals("The count of object decremented to 1.", 1, aCollection.getCountOfObjects());
+			assertEquals("The 'obj1' remains in the collection.", obj1, aCollection.item("key1"));
+		}
+
+		function testRemove_ForFirst(){
+			aCollection.add("key1", obj1);
+			aCollection.add("key2", obj2);
+			aCollection.remove("key1");
+			assertFalse("No object found for key: 'key1'", aCollection.exists("key1"));
+			assertEquals("The count of object decremented to 1.", 1, aCollection.getCountOfObjects());
+			assertEquals("The 'obj2' remains in the collection.", obj2, aCollection.item("key2"));
+		}
+
+		function testRemove_ForReuseKeys(){
+			aCollection.add("key1", obj1);
+			aCollection.add("key2", obj2);
+			aCollection.remove("key2");
+			
+			obj3 = new Object();
+			aCollection.add("key2", obj3);	//we add a new object with the previously removed key.
+			assertEquals("We get 'obj3' with the 'key2' key.", obj3, aCollection.item("key2"));
+		}
+
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			testRemove();
+			tearDown();
+		}
+
+//		runTestFunction();
+
+	</script>
+
+<h1>CollectionTest.js test page</h1>
+<p>This page contains tests for Collection.js javascript class.</p>
+
+</body>
+</html>

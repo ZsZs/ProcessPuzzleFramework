@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.processpuzzle.artifact_type.domain.PropertyDefinition"
+		table="T_PROPERTY_DEFINITION"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+
+		<property name="name" />
+		<property name="type" />
+		<property name="value" />
+	</union-subclass>
+</hibernate-mapping>

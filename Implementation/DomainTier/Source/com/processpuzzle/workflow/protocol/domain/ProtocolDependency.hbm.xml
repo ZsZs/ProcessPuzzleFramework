@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.protocol.domain.ProtocolDependency"
+		table="T_PROTOCOL_DEPENDENCY">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="PROTOCOL_DEPENDENCY_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<many-to-one lazy="false" name="dependentProtocol" class="com.processpuzzle.workflow.protocol.domain.ProtocolCallAction" column="PROTOCOL_REFERENCE_DEP_ID"/>		
+		<many-to-one lazy="false" name="consequentProtocol" class="com.processpuzzle.workflow.protocol.domain.ProtocolCallAction" column="PROTOCOL_REFERENCE_CON_ID"/>		
+		<property name="strict"></property>
+	</class>
+</hibernate-mapping>

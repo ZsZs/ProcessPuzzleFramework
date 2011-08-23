@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<adi_db>
+	<PartyRoleTypeAggregates>
+	  <com.itcodex.objectpuzzle.party_role_type.domain.PartyRoleType id="1" kind="rootObject">
+	    <PartyRoleType.name kind="attribute">Employee</PartyRoleType.name>
+	    <PartyRoleType.description kind="attribute">Employee is a person in employment relationship with a company.</PartyRoleType.description>
+	    <PartyRoleType.validTypesOfParty kind="composition">
+	      <com.itcodex.objectpuzzle.party_role_type.domain.PartyRoleConstraint id="1">
+	        <PartyRoleConstraint.typeOfParty kind="attribute">Person</PartyRoleConstraint.typeOfParty>
+	      </com.itcodex.objectpuzzle.party_role_type.domain.PartyRoleConstraint>
+	      <com.itcodex.objectpuzzle.party_role_type.domain.PartyRoleConstraint id="2">
+	        <PartyRoleConstraint.typeOfParty kind="attribute">Employee</PartyRoleConstraint.typeOfParty>
+	      </com.itcodex.objectpuzzle.party_role_type.domain.PartyRoleConstraint>
+	    </PartyRoleType.validTypesOfParty>
+	  </com.itcodex.objectpuzzle.party_role_type.domain.PartyRoleType>
+	</PartyRoleTypeAggregates>
+	</adi_db>

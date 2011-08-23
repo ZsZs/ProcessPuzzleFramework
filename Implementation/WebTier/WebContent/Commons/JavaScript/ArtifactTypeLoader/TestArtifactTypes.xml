@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ArtifactTypeList>
+		<artifactType name="ArtifactFolder"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.artifact.domain.ArtifactFolder"
+			pessimisticLock="false"
+			isSystem="false"
+			isVersionControlled="false"
+			isSingleton="false"
+			createOnStartUp="false">
+			<caption>artifactFolder</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					presentationUri=""
+					clientType="NativeView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PropertyView">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactFolder&amp;viewName=PropertyView</viewAccessUrl>
+				</propertyViewType>		
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="ArtifactList"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.project_management.domain.ArtifactList"
+			pessimisticLock="false"
+			isSystem="true"
+			isVersionControlled="false"
+			isSingleton="true"
+			createOnStartUp="true">
+			<caption>artifactList</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ArtifactList_Properties.jsp"
+					clientType="NativeView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PropertyView">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactList&amp;viewName=PropertyView</viewAccessUrl>
+				</propertyViewType>
+				<artifactListViewType name="ArtifactList"
+					presentationUri="/ProcessInstantiation/ProjectAdministration/ArtifactList_ListedArtifacts.jsp"
+					clientType="BrowseView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_ListView"
+					listedArtifactType="ArtifactDataSheet"
+					isDefault="true">
+					<viewCaption>list</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowListView&amp;artifactName=ArtifactList</viewAccessUrl>
+				</artifactListViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentComments&amp;artifactName=ArtifactList</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowAccessRightsView&amp;artifactName=ArtifactList&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<printViewType name="Print"
+					clientType="PrintView"
+					viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PrintView"
+					xmlToFoXsltPath="">
+					<viewCaption>print</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowPrintView&amp;artifactName=ArtifactList</viewAccessUrl>
+				</printViewType>
+			</availableViews>
+		</artifactType>
+		
+		<artifactType name="ArtifactDataSheet"
+			group="SystemAdministration"
+			artifactClassName="com.processpuzzle.artifact.domain.ArtifactDataSheet"
+			createOnStartUp="false"
+			isSingleton="false"
+			isSystem="false"
+			isVersionControlled="false"
+			pessimisticLock="false">
+			<caption>artifactDataSheet</caption>
+			<baseUri></baseUri>
+			<availableViews>
+				<propertyViewType name="Properties" clientType="NativeView" isDefault="true">
+					<viewCaption>properties</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=PropertyView</viewAccessUrl>
+				</propertyViewType>		
+				<relatedArtifactsViewType name="RelatedArtifacts" clientType="NativeView">
+					<viewCaption>relatedArtifacts</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+				</relatedArtifactsViewType>
+				<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+					<viewCaption>comments</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowDocumentComments</viewAccessUrl>
+				</artifactCommentsViewType>
+				<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+					<viewCaption>accessRights</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowAccessRightsView&amp;viewName=AccessRightsView</viewAccessUrl>
+				</accessRightsViewType>
+				<artifactModificationsViewType name="Versions" clientType="NativeView">
+					<viewCaption>documentHistory</viewCaption>
+					<viewAccessUrl>../CommandControllerServlet?action=ShowView&amp;viewName=ArtifactModificationsView</viewAccessUrl>
+				</artifactModificationsViewType>
+			</availableViews>
+		</artifactType>
+
+		<artifactType name="MessageWall" 
+			group="SystemAdministration"
+			artifactClassName="">
+			<caption>messageWall</caption>
+			<baseUri>../CommandControllerServlet?action=ShowMessageWall</baseUri>
+			<availableViews>
+				<editableTextViewType name="unvisible" 
+					isDefault="true" 
+					clientType="EditableHtmlView"
+					xmlToHtmlXsltPath="">
+					<viewCaption>unvisible</viewCaption>
+				</editableTextViewType>
+			</availableViews>
+		</artifactType>
+</ArtifactTypeList>

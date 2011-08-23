@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.util.domain.VersionTimePeriod"
+		table="T_VERSION_TIME_PERIOD">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="VERSION_TIME_PERIOD_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+
+	</class>
+</hibernate-mapping>

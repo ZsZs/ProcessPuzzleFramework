@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.party.domain.PartyRelationship"
+		table="T_PARTY_RELATIONSHIP">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="PARTY_RELATIONSHIP_ID" not-null="true" />
+			<generator class="hilo" />
+		</id>
+		<property name="version" column="VERSION"/>
+		<property name="name"></property>
+		<property name="description"></property>
+		<many-to-one lazy="false" name="relationshipType" class="com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType" />
+
+	</class>
+</hibernate-mapping>

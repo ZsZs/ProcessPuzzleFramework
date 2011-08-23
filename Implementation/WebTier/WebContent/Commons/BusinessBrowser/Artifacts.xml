@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<TreeView>
+	<RootNode visible="false">
+		<TreeNode NodeId="Magunkrol" caption="Magunkról" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="CegProfil" caption="Cégprofil" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_cegprofil.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Kuldetesunk" caption="Küldetésünk" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_kuldetesunk.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Vizionk" caption="Víziónk" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_vizio.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Cegtortenet" caption="Cégtörténet" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_cegtortenet.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Minosegpolitika" caption="Minőségpolitika" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_minosegpolitika.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Munkatarsaink" caption="Munkatársaink" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_szervezet.html" target="ContentFrame"></TreeNode>
+		</TreeNode>
+		<TreeNode NodeId="Partnereink" caption="Partnereink" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="ViszonteladoPartnereink" caption="Viszonteladó partnereink" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_partnereink.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Szervizpartnereink" caption="Szervizpartnereink" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_szervizpartnerek.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="UNIOR" caption="UNIOR" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_unior.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="PERLES" caption="PERLES" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_perles.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Snap-on" caption="Snap-on" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_snapon.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="VevoiElegedettseg" caption="Vevői elégedettség" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_vevoelegedettseg.html" target="ContentFrame"></TreeNode>
+		</TreeNode>
+		<TreeNode NodeId="Termekek" caption="Termékek" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="TermekkatalogusMegrendeles" caption="Termékkatalógus, megrendelés" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="KatalogusokArlistakLetoltese" caption="Katalógusok, árlisták letöltése" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_ialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="TanusitvanyokSzabvanyok" caption="Tanúsítványok, szabványok" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="HasznalatiUtasitasokLetoltese" caption="Használati utasítások letöltése" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+		</TreeNode>
+		<TreeNode NodeId="Marketing" caption="Marketing" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="AktualisKampanyokAkciók" caption="Aktuális kampányok, akciók" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="ReklamanyagKatalogus" caption="Reklámanyag katalógus" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="Elemzesek" caption="Elemzések" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+		</TreeNode>
+		<TreeNode NodeId="Tamogatas" caption="Támogatás" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="Ugyfelszolgalat" caption="Ügyfélszolgálat" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="GaranciaEsSzerviz" caption="Garancia és szerviz" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="AltalanosUzletiFeltetelek" caption="Általános üzleti feltételek" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/kialakitasalatt.html" target="ContentFrame"></TreeNode>
+			<TreeNode nodeId="AltalanosGarancialisFeltetelek" caption="Általános garanciális feltételek" type="page" image="images/artifact.gif" url="../Skins/Energometall/Layout/StaticPages/_garancia.html" target="ContentFrame"></TreeNode>
+		</TreeNode>
+		
+		<TreeNode NodeId="ProductAdministration" caption="ProductAdministration" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="ProductCatalogList" caption="ProductCatalogList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('ProductCatalogList','ProductCatalogList');"></TreeNode>
+			<TreeNode nodeId="ProductTypeList" caption="ProductTypeList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('ProductTypeList','ProductTypeList');"></TreeNode>
+			<TreeNode nodeId="PriceTypeList" caption="PriceTypeList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('PriceTypeList','PriceTypeList');"></TreeNode>
+			<TreeNode nodeId="SalesTaxPolicyList" caption="SalesTaxPolicyList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('SalesTaxPolicyList','SalesTaxPolicyList');"></TreeNode>
+		</TreeNode>
+
+		<TreeNode NodeId="OrderManagement" caption="orderManagement" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="PurchaseOrderList" caption="PurchaseOrderList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('PurchaseOrderList','PurchaseOrderList');"></TreeNode>
+		</TreeNode>
+	
+		<TreeNode NodeId="SystemAdministration" caption="SystemAdministration" type="folder" state="closed" image="images/artifacts.gif">
+			<TreeNode nodeId="UserList" caption="UserList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('UserList','UserList');"></TreeNode>
+			<TreeNode nodeId="PersonList" caption="PersonList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('PersonList','PersonList');"></TreeNode>
+			<TreeNode nodeId="CompanyList" caption="CompanyList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('CompanyList','CompanyList');"></TreeNode>
+			<TreeNode nodeId="SettlementList" caption="SettlementList" type="page" image="images/artifact.gif" url="javascript:webUIController.loadDocumentByName('SettlementList','SettlementList');"></TreeNode>
+		</TreeNode>
+	</RootNode>
+</TreeView>

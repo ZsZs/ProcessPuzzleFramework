@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass
+		name="com.processpuzzle.party.domain.Replacement"
+		table="T_REPLACEMENT"
+		extends="com.processpuzzle.party.domain.PartyRelationship">
+		<key column="REPLACEMENT_ID"></key>
+		<property name="validFrom"></property>
+		<property name="validTo"></property>
+	</joined-subclass>
+</hibernate-mapping>

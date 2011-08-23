@@ -1,0 +1,137 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Test page for Authentication.js</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/ArrayList.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Configuration.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Collection.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../CommonScripts/GenericBrowser.js"></script>
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="JavaScript" src="../ArtifactTypeLoader/ArtifactTypeLoader.js"></script>
+	<script language="JavaScript" src="../WebUIController/WebUIController.js"></script>
+	<script language="JavaScript" src="AuthenticationWidget.js"></script>
+</head>
+
+<body>
+	<h1>Authentication.js test page</H1>
+	<p>This page contains tests for Authentication.js JavaScript class.</P>
+	<DIV id="loginWidget"></DIV>
+
+	<script language="javascript">
+
+		var authenticationWidget = null;
+		var webUIController = new WebUiController(); 
+		webUIController.loadResourceBundle("../../Configuration/WebUiInternalization", new Locale("hu"));
+
+		function setUp() {
+			authenticationWidget = new AuthenticationWidget("loginWidget", webUIController, null, "AcceptedLogin.xml");
+		}
+
+		function tearDown() {
+			authenticationWidget.remove();
+			authenticationWidget = null;
+		}
+
+		function testAuthenticationWidget_ForConstructor() {
+			assertNotNull("The newly created widget displays the login form.", document.getElementById("LoginForm"));
+		}
+
+		function testLogin_Constituents() {
+			assertNotNull("The form contains an input field for user name.", findFormElementByName("input", "userName"));
+			assertNotNull("The form contains an input field for password.", findFormElementByName("input", "password"));
+			
+			var loginButton = findFormElementByName("input", "login");
+			assertEquals("According to the 'Hungarian' locale settings the caption is:", "Bejelentkezés", loginButton.value);
+		}
+
+		function testLogin_ForSuccess() {
+			var loginButton = findFormElementByName("input", "login");
+			loginButton.click();
+			assertEquals("returns hello", "Bárczi Benő", authenticationWidget.getUser());
+			assertNotNull("Successful login displays the logout form.", findFormElementByName("form", "Logout"));
+		}
+
+		function testLogin_ForUnSuccess() {
+			authenticationWidget.remove();
+
+			var widget = new AuthenticationWidget("loginWidget", webUIController, null, "RefusedLogin.xml");
+			var loginButton = findFormElementByName("input", "login");
+			loginButton.click();
+			assertNull("Current user is undefined.", widget.getUser());
+			assertNotNull("Unsuccessful login displays 'try agin' form.", findFormElementByName("form", "Failure"));
+
+			widget.remove();
+			widget = null;
+		}
+
+		function testLogin_ForServerError () {
+			authenticationWidget.remove();
+
+			var widget = new AuthenticationWidget("loginWidget", webUIController, null, "Unknown.xml");
+			var loginButton = findFormElementByName("input", "login");
+			loginButton.click();
+			assertNull("Current user is undefined.", widget.getUser());
+			assertNotNull("On error, an error form is displayed.", findFormElementByName("form", "Error"));
+
+			widget.remove();
+			widget = null;
+		}
+
+		function testLogin_ForPrefferedLanguage() {
+			var loginButton = findFormElementByName("input", "login");
+			loginButton.click();
+
+			assertEquals("The preffered language is 'hu' for this test.", "hu", webUIController.getPrefferedLanguage());
+		}
+
+		function testLogout_Constituents() {
+			var loginButton = findFormElementByName("input", "login");
+			loginButton.click();
+
+			assertNotNull("The logout form contains a 'Logout' button.", findFormElementByName("input", "logout"));
+		}
+
+		function findFormElementByName(tagName, elementName) {
+			var returnValue = null;
+			var elements = document.getElementsByTagName(tagName);
+			for(var i = 0; i < elements.length; i++) {
+				var element = elements[i];
+				if(element.getAttribute("name") == elementName) {
+					returnValue = element;
+					break;
+				}
+			}
+			return returnValue;
+		}
+
+	function runTestFunction(){
+		setUp();
+		testLogin_ForSuccess();
+		tearDown();
+	}
+
+	runTestFunction();
+
+	</script>
+</body></html>

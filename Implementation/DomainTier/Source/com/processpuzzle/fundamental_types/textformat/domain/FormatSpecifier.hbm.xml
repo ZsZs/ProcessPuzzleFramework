@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.fundamental_types.textformat.domain.FormatSpecifier"
+		table="T_FORMAT_SPECIFIER">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="FORMAT_SPECIFIER_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<property name="defaultPattern"></property>
+		<joined-subclass name="com.processpuzzle.fundamental_types.textformat.domain.AddressFormatSpecifier" table="T_ADDRESS_FORMAT_SPECIFIER">
+			<key column="ADDRESS_FORMAT_SPECIFIER_ID"/>
+		</joined-subclass>
+		<joined-subclass name="com.processpuzzle.fundamental_types.textformat.domain.DateFormatSpecifier" table="T_DATE_FORMAT_SPECIFIER">
+			<key column="DATE_FORMAT_SPECIFIER_ID"/>
+			<property name="fullDatePattern"/>
+			<property name="longDatePattern"/>
+			<property name="mediumDatePattern"/>
+			<property name="shortDatePattern"/>
+			<property name="fullTimePattern"/>
+			<property name="longTimePattern"/>
+			<property name="mediumTimePattern"/>
+			<property name="shortTimePattern"/>
+		</joined-subclass>
+		<joined-subclass name="com.processpuzzle.fundamental_types.textformat.domain.PersonNameFormatSpecifier" table="T_PERSON_NAME_FORMAT_SPECIFIER">
+			<key column="PERSON_NAME_FORMAT_SPECIFIER_ID"/>
+		</joined-subclass>
+		<joined-subclass name="com.processpuzzle.fundamental_types.textformat.domain.QuantityFormatSpecifier" table="T_QUANTITY_FORMAT_SPECIFIER">
+			<key column="QUANTITY_FORMAT_SPECIFIER_ID"/>
+			<property name="minimumIntegerDigits"/>
+			<property name="maximumIntegerDigits"/>
+			<property name="minimumFractionDigits"/>
+			<property name="maximumFractionDigits"/>
+			<property name="decimalSeparator"/>
+			<property name="groupingSeparator"/>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

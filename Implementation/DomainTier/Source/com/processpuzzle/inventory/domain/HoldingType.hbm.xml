@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.inventory.domain.HoldingType"
+		table="T_HOLDING_TYPE"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+
+		<property name="name" />
+		<property name="description" />
+	</union-subclass>
+</hibernate-mapping>

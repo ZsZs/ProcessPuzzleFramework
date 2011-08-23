@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+TABLE {
+	font-size: 10pt;
+	position: relative;
+	top: 25px;
+}
+
+input {
+	width: 120px;
+}
+input.buttonSmall{
+	background-color: transparent;
+	background-image: url("../Images/buttonSmall.jpg");
+	background-repeat: no-repeat;
+	height:22px;
+	width:106px;
+	border:0px;
+	
+}
+
+

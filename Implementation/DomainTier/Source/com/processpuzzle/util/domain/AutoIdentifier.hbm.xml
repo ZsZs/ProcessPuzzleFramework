@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass extends="com.processpuzzle.fundamental_types.domain.GenericEntity" 
+		name="com.processpuzzle.util.domain.AutoIdentifier"
+		table="T_AUTO_IDENTIFIER">
+		<property name="qualifier"/>
+		<property name="year"/>
+		<property name="cnt"/>
+		<property name="idType"/>
+	</union-subclass>
+</hibernate-mapping>
+		

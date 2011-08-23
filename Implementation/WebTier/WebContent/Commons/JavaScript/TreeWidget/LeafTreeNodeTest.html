@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Test page for LeafTreeNode.js</title>
+	<link type="text/css" href="../JsUnit/app/css/jsUnitStyle.css" rel="stylesheet"></link>
+
+	<link type="text/css" href="TreeWidget.css" rel=stylesheet></link>
+	
+    <script type="text/javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+    <script type="text/javascript" src="../JsHamcrest/JsHamcrest.js"></script>
+    <script type="text/javascript" src="../JSMockito/jsmockito-1.0.2.js"></script>
+    
+    <script type="text/javascript" src="../MooTools/mootools-core-1.3.js"></script>
+    <script type="text/javascript" src="../Log4JavaScript/log4javascript.js"></script>
+    
+	<script type="text/javascript" src="../CommonScripts/AssertUtil.js"></script>
+	<script type="text/javascript" src="../CommonScripts/UserException.js"></script>
+	<script type="text/javascript" src="../WebUIController/WebUIController.js"></script>
+	<script type="text/javascript" src="../WebUIController/WebUILogger.js"></script>
+	<script type="text/javascript" src="TreeNodeType.js"></script>
+	<script type="text/javascript" src="TreeNode.js"></script>
+	<script type="text/javascript" src="CompositeTreeNode.js"></script>
+	<script type="text/javascript" src="LeafTreeNode.js"></script>
+	<script type="text/javascript" src="TreePath.js"></script>
+	
+	<script type="text/javascript">
+		window.addEvent('domready', function() {
+			//runTestFunction();
+		});
+
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			testShow_WhenNewlyCreated_BuildsHtmlRepresentations();
+			tearDown();
+		}
+	</script>
+</head>
+<body>
+	<h1>Test page for LeafTreeNode.js</h1>
+
+</body>
+</html>

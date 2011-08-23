@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?><actionResponse><actionOutcomeStatus>true</actionOutcomeStatus>
+
+<pp:plan xmlns:pp="http://www.processpuzzle.com/type_definition/project_planning" id="8">
+   <name>Audi rendszerintegrációs projekt</name>
+   <pp:plan id="5">
+      <name>ProjectControlling</name>
+   </pp:plan>
+   <pp:plan id="7">
+      <name>ProjectSealing</name>
+   </pp:plan>
+   <pp:plan id="6">
+      <name>ProjectExecution</name>
+   </pp:plan>
+   <pp:plan id="1">
+      <name>ProjectPreparation</name>
+      <pp:proposed-action id="3" implementable="false">
+         <name>Agreement</name>
+      </pp:proposed-action>
+      <pp:proposed-action id="2" implementable="false">
+         <name>PrepareQutation</name>
+      </pp:proposed-action>
+      <pp:proposed-action id="4" implementable="false">
+         <name>Accomplishment</name>
+      </pp:proposed-action>
+   </pp:plan>
+</pp:plan>
+
+</actionResponse>

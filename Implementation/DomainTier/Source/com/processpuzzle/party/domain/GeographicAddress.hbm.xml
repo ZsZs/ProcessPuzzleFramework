@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass
+		extends="com.processpuzzle.party.domain.Address"
+		name="com.processpuzzle.party.domain.GeographicAddress"
+		table="T_GEOGRAPHIC_ADDRESS">
+ 		<key column="ID" />
+		<property name="street" />
+		<property name="buildingNumber" />
+		<property name="floor" />
+		<property name="door" />
+		<property name="topographicalNumber" />
+		<many-to-one lazy="false" name="zipCode" class="com.processpuzzle.address.zipcode.domain.ZipCode" />
+		<many-to-one lazy="false" name="settlement" class="com.processpuzzle.address.settlement.domain.Settlement" />
+ 	</joined-subclass>
+
+</hibernate-mapping>

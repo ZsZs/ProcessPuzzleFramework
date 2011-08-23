@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity" 
+		name="com.processpuzzle.address.domain.Country" 
+		table="T_COUNTRY">
+		<property name="name"/>
+		<set name="settlements" lazy = "false">
+			<key column="COUNTRY_ID"></key>
+			<one-to-many class="com.processpuzzle.address.domain.Settlement"/>
+		</set>
+	</union-subclass>
+</hibernate-mapping>

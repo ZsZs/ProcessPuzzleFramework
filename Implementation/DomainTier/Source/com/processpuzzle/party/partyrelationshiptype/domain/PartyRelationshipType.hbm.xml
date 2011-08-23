@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass name="com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType"
+		table="T_PARTY_RELATIONSHIP_TYPE"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<property name="name" />
+		<property name="description" />
+		
+		<set name="validRolePairs" cascade="all" lazy="false">
+			<key column="PARTY_RELATIONSHIP_TYPE_ID" not-null="true" />
+			<one-to-many class="com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipConstraint" />
+		</set>
+		
+		<many-to-one lazy="false" unique="true" name="requirementsForRelationship" cascade="all" class="com.processpuzzle.party.domain.RuleSet" />
+	</union-subclass>
+</hibernate-mapping>

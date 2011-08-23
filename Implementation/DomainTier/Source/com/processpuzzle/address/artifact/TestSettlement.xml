@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot 
+	xmlns = "http://www.processpuzzle.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ ../Settlement.xsd">
+		
+<country name="Magyarország">
+	<settlement name="Baja">
+		<zipcode code="6503" />
+		<zipcode code="6500" />
+	</settlement>
+	<settlement name="Barcs">
+		<zipcode code="7570" />
+		<zipcode code="7557" />
+	</settlement>
+	<settlement name="Budapest">
+		<district name="I. kerület">
+			<zipcode code="1011" />
+			<zipcode code="1012" />
+			<zipcode code="1013" />
+			<zipcode code="1014" />
+			<zipcode code="1015" />
+			<zipcode code="1016" />
+			<zipcode code="1017" />
+			<zipcode code="1018" />
+			<zipcode code="1019" />
+		</district>
+		<district name="II. kerület">
+			<zipcode code="1021" />
+			<zipcode code="1022" />
+			<zipcode code="1023" />
+			<zipcode code="1024" />
+			<zipcode code="1025" />
+			<zipcode code="1026" />
+			<zipcode code="1027" />
+			<zipcode code="1028" />
+			<zipcode code="1029" />
+		</district>
+		<district name="III. kerület">
+			<zipcode code="1031" />
+			<zipcode code="1032" />
+			<zipcode code="1033" />
+			<zipcode code="1034" />
+			<zipcode code="1035" />
+			<zipcode code="1036" />
+			<zipcode code="1037" />
+			<zipcode code="1038" />
+			<zipcode code="1039" />
+		</district>
+		<district name="IV. kerület">
+			<zipcode code="1041" />
+			<zipcode code="1042" />
+			<zipcode code="1043" />
+			<zipcode code="1044" />
+			<zipcode code="1045" />
+			<zipcode code="1046" />
+			<zipcode code="1047" />
+			<zipcode code="1048" />
+			<zipcode code="1049" />
+		</district>
+		<district name="V. kerület">
+			<zipcode code="1051" />
+			<zipcode code="1052" />
+			<zipcode code="1053" />
+			<zipcode code="1054" />
+			<zipcode code="1055" />
+			<zipcode code="1056" />
+			<zipcode code="1057" />
+			<zipcode code="1058" />
+			<zipcode code="1059" />
+		</district>
+		<district name="VI. kerület">
+			<zipcode code="1061" />
+			<zipcode code="1062" />
+			<zipcode code="1063" />
+			<zipcode code="1064" />
+			<zipcode code="1065" />
+			<zipcode code="1066" />
+			<zipcode code="1067" />
+			<zipcode code="1068" />
+			<zipcode code="1069" />
+		</district>
+		<district name="VII. kerület">
+			<zipcode code="1071" />
+			<zipcode code="1072" />
+			<zipcode code="1073" />
+			<zipcode code="1074" />
+			<zipcode code="1075" />
+			<zipcode code="1076" />
+			<zipcode code="1077" />
+			<zipcode code="1078" />
+			<zipcode code="1079" />
+		</district>
+		<district name="VIII. kerület">
+			<zipcode code="1081" />
+			<zipcode code="1082" />
+			<zipcode code="1083" />
+			<zipcode code="1084" />
+			<zipcode code="1085" />
+			<zipcode code="1086" />
+			<zipcode code="1087" />
+			<zipcode code="1088" />
+			<zipcode code="1089" />
+		</district>
+		<district name="IX. kerület">
+			<zipcode code="1091" />
+			<zipcode code="1092" />
+			<zipcode code="1093" />
+			<zipcode code="1094" />
+			<zipcode code="1095" />
+			<zipcode code="1096" />
+			<zipcode code="1097" />
+			<zipcode code="1098" />
+			<zipcode code="1099" />
+		</district>
+		<district name="X. kerület">
+			<zipcode code="1101" />
+			<zipcode code="1102" />
+			<zipcode code="1103" />
+			<zipcode code="1104" />
+			<zipcode code="1105" />
+			<zipcode code="1106" />
+			<zipcode code="1107" />
+			<zipcode code="1108" />
+			<zipcode code="1109" />
+		</district>
+		<district name="XI. kerület">
+			<zipcode code="1111" />
+			<zipcode code="1112" />
+			<zipcode code="1113" />
+			<zipcode code="1114" />
+			<zipcode code="1115" />
+			<zipcode code="1116" />
+			<zipcode code="1117" />
+			<zipcode code="1118" />
+			<zipcode code="1119" />
+		</district>
+		<district name="XII. kerület">
+			<zipcode code="1121" />
+			<zipcode code="1122" />
+			<zipcode code="1123" />
+			<zipcode code="1124" />
+			<zipcode code="1125" />
+			<zipcode code="1126" />
+			<zipcode code="1127" />
+			<zipcode code="1128" />
+			<zipcode code="1129" />
+		</district>
+		<district name="XIII. kerület">
+			<zipcode code="1131" />
+			<zipcode code="1132" />
+			<zipcode code="1133" />
+			<zipcode code="1134" />
+			<zipcode code="1135" />
+			<zipcode code="1136" />
+			<zipcode code="1137" />
+			<zipcode code="1138" />
+			<zipcode code="1139" />
+		</district>
+		<district name="XIV. kerület">
+			<zipcode code="1141" />
+			<zipcode code="1142" />
+			<zipcode code="1143" />
+			<zipcode code="1144" />
+			<zipcode code="1145" />
+			<zipcode code="1146" />
+			<zipcode code="1147" />
+			<zipcode code="1148" />
+			<zipcode code="1149" />
+		</district>
+		<district name="XV. kerület">
+			<zipcode code="1151" />
+			<zipcode code="1152" />
+			<zipcode code="1153" />
+			<zipcode code="1154" />
+			<zipcode code="1155" />
+			<zipcode code="1156" />
+			<zipcode code="1157" />
+			<zipcode code="1158" />
+			<zipcode code="1159" />
+		</district>
+		<district name="XVI. kerület">
+			<zipcode code="1161" />
+			<zipcode code="1162" />
+			<zipcode code="1163" />
+			<zipcode code="1164" />
+			<zipcode code="1165" />
+			<zipcode code="1166" />
+			<zipcode code="1167" />
+			<zipcode code="1168" />
+			<zipcode code="1169" />
+		</district>
+		<district name="XVII. kerület">
+			<zipcode code="1171" />
+			<zipcode code="1172" />
+			<zipcode code="1173" />
+			<zipcode code="1174" />
+			<zipcode code="1175" />
+			<zipcode code="1176" />
+			<zipcode code="1177" />
+			<zipcode code="1178" />
+			<zipcode code="1179" />
+		</district>
+		<district name="XVIII. kerület">
+			<zipcode code="1181" />
+			<zipcode code="1182" />
+			<zipcode code="1183" />
+			<zipcode code="1184" />
+			<zipcode code="1185" />
+			<zipcode code="1186" />
+			<zipcode code="1187" />
+			<zipcode code="1188" />
+			<zipcode code="1189" />
+		</district>
+		<district name="XIX. kerület">
+			<zipcode code="1191" />
+			<zipcode code="1192" />
+			<zipcode code="1193" />
+			<zipcode code="1194" />
+			<zipcode code="1195" />
+			<zipcode code="1196" />
+			<zipcode code="1197" />
+			<zipcode code="1198" />
+			<zipcode code="1199" />
+		</district>
+		<district name="XX. kerület">
+			<zipcode code="1201" />
+			<zipcode code="1202" />
+			<zipcode code="1203" />
+			<zipcode code="1204" />
+			<zipcode code="1205" />
+			<zipcode code="1206" />
+			<zipcode code="1207" />
+			<zipcode code="1208" />
+			<zipcode code="1209" />
+		</district>
+		<district name="XXI. kerület">
+			<zipcode code="1211" />
+			<zipcode code="1212" />
+			<zipcode code="1213" />
+			<zipcode code="1214" />
+			<zipcode code="1215" />
+			<zipcode code="1216" />
+			<zipcode code="1217" />
+			<zipcode code="1218" />
+			<zipcode code="1219" />
+		</district>
+		<district name="XXII. kerület">
+			<zipcode code="1221" />
+			<zipcode code="1222" />
+			<zipcode code="1223" />
+			<zipcode code="1224" />
+			<zipcode code="1225" />
+			<zipcode code="1226" />
+			<zipcode code="1227" />
+			<zipcode code="1228" />
+			<zipcode code="1229" />
+		</district>
+		<district name="XXIII. kerület">
+			<zipcode code="1231" />
+			<zipcode code="1232" />
+			<zipcode code="1233" />
+			<zipcode code="1234" />
+			<zipcode code="1235" />
+			<zipcode code="1236" />
+			<zipcode code="1237" />
+			<zipcode code="1238" />
+			<zipcode code="1239" />
+		</district>
+	</settlement>
+	<settlement name="Debrecen">
+		<zipcode code="4033" />
+		<zipcode code="4027" />
+		<zipcode code="4028" />
+		<zipcode code="4030" />
+		<zipcode code="4031" />
+		<zipcode code="4032" />
+		<zipcode code="4029" />
+		<zipcode code="4225" />
+		<zipcode code="4002" />
+		<zipcode code="4025" />
+		<zipcode code="4063" />
+		<zipcode code="4034" />
+		<zipcode code="4024" />
+		<zipcode code="4026" />
+	</settlement>
+	<settlement name="Eger">
+		<zipcode code="3300" />
+		<zipcode code="3323" />
+		<zipcode code="3304" />
+	</settlement>
+	<settlement name="Gödöllő">
+		<zipcode code="2100" />
+	</settlement>
+	<settlement name="Győr">
+		<zipcode code="9019" />
+		<zipcode code="9012" />
+		<zipcode code="9011" />
+	</settlement>
+	<settlement name="Hegykő">
+		<zipcode code="9437" />
+	</settlement>
+	<settlement name="Iborfia">
+		<zipcode code="8984" />
+	</settlement>
+	<settlement name="Jászberény">
+		<zipcode code="5100" />
+		<zipcode code="5152" />
+	</settlement>
+	<settlement name="Kapuvár">
+		<zipcode code="9330" />
+		<zipcode code="9339" />
+	</settlement>
+	<settlement name="Nagykanizsa">
+		<zipcode code="8800" />
+		<zipcode code="8808" />
+		<zipcode code="8809" />
+		<zipcode code="8831" />
+	</settlement>
+	<settlement name="Nagyrécse">
+		<zipcode code="8756" />
+	</settlement>
+	<settlement name="Nemesvid">
+		<zipcode code="8738" />
+	</settlement>
+	<settlement name="Nyíregyháza">
+		<zipcode code="4400" />
+		<zipcode code="4246" />
+		<zipcode code="4433" />
+		<zipcode code="4432" />
+		<zipcode code="4551" />
+		<zipcode code="4431" />
+		<zipcode code="4481" />
+		<zipcode code="4405" />
+	</settlement>
+	<settlement name="Rácalmás">
+		<zipcode code="2459" />
+	</settlement>
+	<settlement name="Rétság">
+		<zipcode code="2651" />
+	</settlement>
+	<settlement name="Szada">
+		<zipcode code="2111" />
+	</settlement>
+	<settlement name="Szeged">
+		<zipcode code="6726" />
+		<zipcode code="6753" />
+		<zipcode code="6727" />
+		<zipcode code="6724" />
+		<zipcode code="6729" />
+		<zipcode code="6791" />
+		<zipcode code="6722" />
+		<zipcode code="6723" />
+		<zipcode code="6710" />
+		<zipcode code="6725" />
+		<zipcode code="6750" />
+		<zipcode code="6728" />
+		<zipcode code="6757" />
+		<zipcode code="6720" />
+		<zipcode code="6771" />
+		<zipcode code="6721" />
+	</settlement>
+	<settlement name="Szekszárd">
+		<zipcode code="7100" />
+	</settlement>
+	<settlement name="Székesfehérvár">
+		<zipcode code="8000" />
+	</settlement>
+	<settlement name="Szolnok">
+		<zipcode code="5000" />
+		<zipcode code="5008" />
+	</settlement>
+	<settlement name="Szombathely">
+		<zipcode code="9700" />
+		<zipcode code="9719" />
+		<zipcode code="9707" />
+	</settlement>
+	<settlement name="Tatabánya">
+		<zipcode code="2800" />
+	</settlement>
+	<settlement name="Tiszafüred">
+		<zipcode code="5350" />
+		<zipcode code="5358" />
+		<zipcode code="5244" />
+		<zipcode code="5359" />
+	</settlement>
+	<settlement name="Tószeg">
+		<zipcode code="5091" />
+	</settlement>
+	<settlement name="Veresegyház">
+		<zipcode code="2112" />
+	</settlement>
+	<settlement name="Vitnyéd">
+		<zipcode code="9371" />
+	</settlement>
+	<settlement name="Zalaegerszeg">
+		<zipcode code="8900" />
+		<zipcode code="8904" />
+	</settlement>
+</country>
+</dataroot>

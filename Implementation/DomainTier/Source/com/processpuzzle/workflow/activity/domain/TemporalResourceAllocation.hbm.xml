@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.activity.domain.TemporalResourceAllocation"
+		table="T_TEMPORAL_RESOURCE_ALLOCATION">
+		<id name="id" type="integer" unsaved-value="null" >
+			<column name="ID" not-null="true" />
+			<generator class="hilo" />
+		</id>
+		<property name="version" column="VERSION"/>
+		
+		<!-- component name="timePeriod" class="com.processpuzzle.fundamental_types.domain.TimePeriod">
+			<component name="begin" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+			<property name="value" column="BEGIN_VALUE" type="java.util.Date"></property>
+			</component>
+			
+			<component name="end" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+			<property name="value" column="END_VALUE" type="java.util.Date"></property>
+			</component>
+			</component-->
+
+		<many-to-one lazy="false" name="implementedAction"
+			column="IMPLEMENTED_ACTION_ID"
+			class="com.processpuzzle.workflow.activity.domain.ImplementedAction"
+			cascade="save-update" />
+
+	</class>
+</hibernate-mapping>

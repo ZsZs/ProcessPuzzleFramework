@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.processpuzzle.application.security.domain.User" 
+		table="T_USER"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<property name="userName"/>
+		<property name="password"/>
+		<property name="location"></property>
+		<property name="language"></property>
+		<property name="country"></property>
+		<set name="accessRights" cascade="all">
+				<key column="USER_ID"></key>
+				<one-to-many class="com.processpuzzle.application.security.domain.AccessRight"/>
+		</set>
+	</union-subclass>
+</hibernate-mapping>

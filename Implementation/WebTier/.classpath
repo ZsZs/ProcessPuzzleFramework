@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ObjectTests"/>
+	<classpathentry kind="src" path="PerformanceTests"/>
+	<classpathentry kind="src" path="Source"/>
+	<classpathentry kind="src" path="UiTests"/>
+	<classpathentry kind="src" path="AcceptanceTests"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LiTest Domain Tier"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ProcessPuzzle-Development-Dependencies"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/ProcessPuzzle-Production-Dependencies"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ProcessPuzzleCommons - Domain Tier"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ProcessPuzzle - Domain Tier"/>
+	<classpathentry kind="output" path="Binaries"/>
+</classpath>

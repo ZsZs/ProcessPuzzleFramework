@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adi_db>
+	<PartyRoleTypeAggregates>
+		  <com.processpuzzle.party_role_type.domain.PartyRoleType id="1" kind="rootObject">
+		    <PartyRoleType.name kind="attribute">EmployeeRoleType</PartyRoleType.name>
+		    <PartyRoleType.description kind="attribute">Employee is a person in employment relationship with a company.</PartyRoleType.description>
+		  </com.processpuzzle.party_role_type.domain.PartyRoleType>
+	
+		  <com.processpuzzle.party_role_type.domain.PartyRoleType id="2" kind="rootObject">
+		    <PartyRoleType.name kind="attribute">EmployerRoleType</PartyRoleType.name>
+		  </com.processpuzzle.party_role_type.domain.PartyRoleType>
+	
+		  <com.processpuzzle.party_role_type.domain.PartyRoleType id="3" kind="rootObject">
+		    <PartyRoleType.name kind="attribute">VentureRoleType</PartyRoleType.name>
+		  </com.processpuzzle.party_role_type.domain.PartyRoleType>
+	</PartyRoleTypeAggregates>
+
+  <PartyRelationshipTypeAggregates>
+    <com.processpuzzle.party_relationship_type.domain.PartyRelationshipType kind="rooObject" id="1">
+      <PartyRelationshipType.name kind="attribute">EmploymentRelationshipType</PartyRelationshipType.name>
+      <PartyRelationshipType.description kind="attribute">Description of Employment relationship.</PartyRelationshipType.description>
+      <PartyRelationshipType.validRolePairs kind="association">
+        <com.processpuzzle.party_relationship_type.domain.PartyRelationshipConstraint kind="componentObject" id="2">
+          <PartyRelationshipConstraint.clientRoleType kind="association">
+            <com.processpuzzle.party_role_type.domain.PartyRoleType id="3" kind="externalLink"/>
+          </PartyRelationshipConstraint.clientRoleType>
+          <PartyRelationshipConstraint.supplierRoleType kind="association">
+            <com.processpuzzle.party_role_type.domain.PartyRoleType id="1" kind="externalLink"/>
+          </PartyRelationshipConstraint.supplierRoleType>
+        </com.processpuzzle.party_relationship_type.domain.PartyRelationshipConstraint>
+        <com.processpuzzle.party_relationship_type.domain.PartyRelationshipConstraint kind="componentObject" id="1">
+          <PartyRelationshipConstraint.clientRoleType kind="association">
+            <com.processpuzzle.party_role_type.domain.PartyRoleType id="2" kind="externalLink"/>
+          </PartyRelationshipConstraint.clientRoleType>
+          <PartyRelationshipConstraint.supplierRoleType kind="association">
+            <com.processpuzzle.party_role_type.domain.PartyRoleType id="1" kind="externalLink"/>
+          </PartyRelationshipConstraint.supplierRoleType>
+        </com.processpuzzle.party_relationship_type.domain.PartyRelationshipConstraint>
+      </PartyRelationshipType.validRolePairs>
+    </com.processpuzzle.party_relationship_type.domain.PartyRelationshipType>
+  </PartyRelationshipTypeAggregates>
+</adi_db>
+  

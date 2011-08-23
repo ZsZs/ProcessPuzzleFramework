@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+  <class name="com.processpuzzle.party.domain.Affiliation" table="T_AFFILIATION">
+	<id name="id" type="integer" unsaved-value="null" >
+      <column name="AFFILIATION_ID" not-null="true"/>
+      <generator class="identity"/>
+    </id>
+	<many-to-one lazy="false" name="person" column="PERSON_ID" class="com.processpuzzle.party.domain.Person" not-null="true"/>
+    
+  </class>
+</hibernate-mapping>

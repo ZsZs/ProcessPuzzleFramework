@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.workflow.activity.artifact.PersonalTodoList"
+		table="T_PERSONAL_TODO_LIST"
+		extends="com.processpuzzle.artifact.artifact.ArtifactList">
+	</union-subclass>
+</hibernate-mapping>

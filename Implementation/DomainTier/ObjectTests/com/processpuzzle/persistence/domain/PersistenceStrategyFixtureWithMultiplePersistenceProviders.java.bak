@@ -1,0 +1,15 @@
+package com.itcodex.objectpuzzle.framework.persistence.domain;
+
+import hu.itkodex.litest.fixture.GenericTestFixtureConfiguration;
+import hu.itkodex.litest.fixture.TestFixtureConfiguration;
+
+public class PersistenceStrategyFixtureWithMultiplePersistenceProviders extends PersistenceStrategyFixture {      
+   @Override
+   public void setUp() { 
+      TestFixtureConfiguration fixtureConfiguration = new GenericTestFixtureConfiguration();
+      fixtureConfiguration.addProperty( PersistenceStrategyTest.ADD_ONE_MORE_PERSISTENCE_PROVIDER , true );
+      
+      super.setUp();
+   }
+}
+

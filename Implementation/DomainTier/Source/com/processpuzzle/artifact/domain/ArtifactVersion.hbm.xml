@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.artifact.domain.ArtifactVersion" table="T_ARTIFACT_VERSION">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="ARTIFACT_VERSION_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<property name="name" />
+		<property name="creation" type="java.util.Date" />
+		<property name="modification" type="java.util.Date" />
+		<many-to-one lazy="false" name="responsible" class="com.processpuzzle.application.security.domain.User"/>
+		<property name="isVersionControlled" />
+<!-- 
+		<many-to-one lazy="false" name="artifactType" class="com.processpuzzle.artifact_type.domain.ArtifactType" />	
+		<many-to-one lazy="false" name="commentList" class="com.processpuzzle.artifact.domain.CommentList" cascade="all"/>
+ -->
+
+		<many-to-one lazy="false" name="containingFolder" class="com.processpuzzle.artifact.domain.ArtifactFolder" cascade="none"/>	
+		
+		<set name="relatedArtifacts" cascade="save-update">
+			<key column="ARTIFACT_VERSION_ID" />
+			<one-to-many class="com.processpuzzle.artifact.domain.Artifact"/>
+		</set>
+		
+		<many-to-one lazy="false" name="nextModification" class="com.processpuzzle.artifact.domain.Modification" cascade="all" />
+		<one-to-one lazy="false" name="previousModification" class="com.processpuzzle.artifact.domain.Modification" property-ref="targetVersion" />
+<!-- 
+		<joined-subclass name="com.processpuzzle.artifact.domain.DocumentVersion"
+			table="T_DOCUMENT_VERSION">
+			<key column="DOCUMENT_VERSION_ID" />
+			<property name="title" />
+			<property name="subject" />
+			<property name="content" />
+		</joined-subclass>
+		
+		<joined-subclass name="com.processpuzzle.artifact.domain.FileVersion"
+			table="T_FILE_VERSION">
+			<key column="FILE_VERSION_ID" />
+			<property name="originalFileName" />
+			<property name="source" />
+			<property name="contentType" />
+			<property name="uploadDate" />
+			<property name="size" />
+			<joined-subclass name="com.processpuzzle.artifact.domain.ImageFileVersion"
+				table="T_IMAGE_FILE_VERSION">
+				<key column="IMAGE_FILE_VERSION_ID" />
+			</joined-subclass>
+
+		</joined-subclass>
+ -->		
+
+	</class>
+</hibernate-mapping>

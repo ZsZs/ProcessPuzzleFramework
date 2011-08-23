@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.artifact_type.domain.ArtifactViewType"
+		table="T_ARTIFACT_VIEW_TYPE">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="ARTIFACT_VIEW_TYPE_ID" not-null="true" />
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<property name="clientType" />
+		<property name="viewClassName" />
+		<property name="isDefault" />
+		<property name="isStatic" />
+		<property name="viewCaption" />
+		<property name="viewAccessUrl" />
+		<property name="presentationUri"/>
+		<bag name="associatedMenuItems" cascade="all" lazy="false" >
+			<key column="ARTIFACT_VIEW_TYPE_ID" />
+			<one-to-many class="com.processpuzzle.artifact_type.domain.ArtifactMenu" />
+		</bag>
+
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.EditableTextViewType" table="T_ARTIFACT_EDITABLETEXT_VIEW_TYPE">
+			<key column="ARTIFACT_EDITABLETEXT_VIEW_TYPE_ID"></key>
+			<property name="xmlToHtmlXsltPath"></property>
+		</joined-subclass>
+
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.RelatedArtifactsViewType" table="T_RELATED_ARTIFACTS_VIEW_TYPE">
+		<key column="RELATED_ARTIFACTS_VIEW_TYPE_ID"></key>
+		</joined-subclass>
+		
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ArtifactPropertyViewType" table="T_ARTIFACT_PROPERTY_VIEW_TYPE">
+			<key column="RELATED_ARTIFACTS_VIEW_TYPE_ID"></key>
+		</joined-subclass>
+		
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ArtifactListViewType" table="T_ARTIFACT_LIST_VIEW_TYPE">
+			<key column="ARTIFACT_LIST_VIEW_TYPE_ID"></key>
+			<property name="listedArtifactType"></property>
+			<property name="orderBy"></property>
+			<property name="ord"></property>
+		</joined-subclass>
+		
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ArtifactModificationsViewType" table="T_ARTIFACT_MODIFICATIONS_VIEW_TYPE">
+			<key column="ARTIFACT_MODIFICATIONS_VIEW_TYPE_ID"></key>
+		</joined-subclass>
+		
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ArtifactCommentsViewType" table="T_ARTIFACT_COMMENTS_VIEW_TYPE">
+			<key column="ARTIFACT_COMMENTS_VIEW_TYPE_ID"></key>
+		</joined-subclass>
+
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ArtifactAccessRightsViewType" table="T_ARTIFACT_ACCESSRIGHTS_VIEW_TYPE">
+			<key column="ARTIFACT_ACCESSRIGHTS_VIEW_TYPE_ID"></key>
+		</joined-subclass>
+
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ListQueryViewType" table="T_LIST_QUERY_VIEW_TYPE">
+			<key column="LIST_QUERY_VIEW_TYPE_ID"></key>
+			<property name="targetPropertyView"/>
+ 			<bag name="preDefinedQueries" cascade="all" lazy="false">
+				<key column="LIST_QUERY_VIEW_TYPE_ID" />
+				<one-to-many class="com.processpuzzle.persistence.query.domain.DefaultQuery" />
+			</bag>
+		</joined-subclass>
+
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ArtifactCustomFormViewType" table="T_ARTIFACT_CUSTOMFORM_VIEW_TYPE">
+			<key column="ARTIFACT_CUSTOMFORM_VIEW_TYPE_ID"></key>
+		</joined-subclass>
+
+		<joined-subclass name="com.processpuzzle.artifact_type.domain.ArtifactPrintViewType" table="T_ARTIFACT_PRINT_VIEW_TYPE">
+			<key column="ARTIFACT_PRINT_VIEW_TYPE_ID"></key>
+			<property name="xmlToFoXsltPath"></property>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

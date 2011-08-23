@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.application.security.domain.AccessControlledObject"
+		table="T_ACCESS_CONTROLLED_OBJECT">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="ACCESS_CONTROLLED_OBJECT_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+	</class>
+</hibernate-mapping>

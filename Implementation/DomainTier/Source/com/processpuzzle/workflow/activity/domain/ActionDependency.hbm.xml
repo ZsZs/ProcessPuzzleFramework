@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.activity.domain.ActionDependency"
+		table="T_ACTION_DEPENDENCY">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="ACTION_DEPENDENCY_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<many-to-one lazy="false" name="dependentAction" class="com.processpuzzle.workflow.activity.domain.ActionReference" column="ACTION_REFERENCE_DEP_ID" cascade="save-update"/>		
+		<many-to-one lazy="false" name="consequentAction" class="com.processpuzzle.workflow.activity.domain.ActionReference" column="ACTION_REFERENCE_CON_ID"  cascade="save-update"/>		
+		<property name="strict"></property>
+	</class>
+</hibernate-mapping>

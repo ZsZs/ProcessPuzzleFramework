@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.artifact.domain.Artifact"
+		abstract="true"
+		table="T_ARTIFACT">
+		<id name="id" type="integer" unsaved-value="null" column="ID">
+			<generator class="hilo" />
+		</id>
+		<property name="version" column="VERSION"/>
+
+		<property name="name" />
+		<property name="path" />
+		
+		<many-to-one 
+			lazy="false" 
+			name="containingFolder" 
+			column="ARTIFACT_FOLDER_ID"
+			class="com.processpuzzle.artifact.domain.ArtifactFolder" 
+			cascade="none"/>
+
+		<many-to-one 
+			lazy="false" 
+			name="type" 
+			class="com.processpuzzle.artifact_type.domain.ArtifactType"
+			cascade="none" />
+<!-- 
+		<map name="versions" cascade="all,delete-orphan">
+			<key column="ARTIFACT_ID" />
+			<map-key column="VERSION_NUMBER_KEY" type="java.lang.Integer" />
+			<one-to-many class="com.processpuzzle.artifact.domain.ArtifactVersion" />
+		</map>
+		
+		<bag name="htmlAttributeFormats" cascade="all,delete-orphan">
+			<key column="ARTIFACT_ID"></key>
+			<one-to-many class="com.processpuzzle.util.domain.HtmlAttributeFormat" />
+		</bag>
+ -->
+
+	</class>
+</hibernate-mapping>

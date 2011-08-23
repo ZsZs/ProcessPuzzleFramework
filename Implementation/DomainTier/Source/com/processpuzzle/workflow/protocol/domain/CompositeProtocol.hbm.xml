@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.workflow.protocol.domain.CompositeProtocol"
+		table="T_COMPOSITE_PROTOCOL"
+		extends="com.processpuzzle.workflow.protocol.domain.Protocol">
+		<set name="steps" inverse="true" cascade="all">
+			<key column="COMPOSITE_PROTOCOL_ID"></key>
+			<one-to-many
+				class="com.processpuzzle.workflow.protocol.domain.ProtocolCallAction" />
+		</set>
+	</union-subclass>
+</hibernate-mapping>

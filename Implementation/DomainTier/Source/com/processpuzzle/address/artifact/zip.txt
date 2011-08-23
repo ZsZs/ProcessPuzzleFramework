@@ -1,0 +1,3600 @@
+Aba;8127
+Aba (Belsõbáránd);8128
+Abádszalók;5241
+Abaliget;7678
+Abasár;3261
+Abaújalpár;3882
+Abaújkér;3882
+Abaújlak;3815
+Abaújszántó;3881
+Abaújszolnok;3809
+Abaújvár;3898
+Abda;9151
+Abod;3753
+Abony;2740
+Ábrahámhegy;8256
+Ács;2941
+Acsa;2683
+Acsád;9746
+Acsalag;9168
+Ácsteszér;2887
+Adács;3292
+Ádánd;8653
+Adásztevel;8561
+Adony;2457
+Adorjánháza;8497
+Adorjás;7841
+Ág;7381
+Agárd -> Gárdony;2484
+Ágasegyháza;6076
+Ágfalva;9423
+Aggtelek;3759
+Agostyán -> Tata;2835
+Agyagosszergény;9441
+Ajak;4524
+Ajka;8400
+Ajka (Ajkarendek);8447
+Ajka (Bakonygyepes);8448
+Ajka (Padragkút);8451
+Ajkarendek -> Ajka;8447
+Aka;2862
+Akasztó;6221
+Alacska;3779
+Alap;7011
+Alattyán;5142
+Albertirsa;2730
+Alcsútdoboz;8087
+Aldebrõ;3353
+Algyõ -> Szeged;6750
+Alibánfa;8921
+Állampuszta -> Harta;6327
+Almamellék;7934
+Almásfüzitõ;2931
+Almásháza;8935
+Almáskamarás;5747
+Almáskeresztúr;7932
+Álmosd;4285
+Alpár -> Tiszaalpár;6066
+Alsóbélatelep -> Fonyód;8644
+Alsóberecki;3985
+Alsóbogát;7443
+Alsódobsza;3717
+Alsógagy;3837
+Alsógöd -> Göd;2131
+Alsómocsolád;7345
+Alsónána;7147
+Alsónémedi;2351
+Alsónemesapáti;8924
+Alsónyék;7148
+Alsóörs;8226
+Alsópáhok;8394
+Alsópetény;2617
+Alsórajk;8767
+Alsóregmec;3989
+Alsószenterzsébet;8973
+Alsószentiván;7012
+Alsószentmárton;7826
+Alsószölnök;9983
+Alsószuha;3726
+Alsótelekes;3735
+Alsótold;3069
+Alsóújlak;9842
+Alsóvadász;3811
+Alsózsolca;3571
+Ambrózfalva;6916
+Anarcs;4546
+Andocs;8675
+Andornaktálya;3399
+Andrásfa;9811
+Andráshida -> Zalaegerszeg;8904
+Apácatorna;8477
+Apagy;4553
+Apaj;2345
+Aparhant;7186
+Apátfalva;6931
+Apátistvánfalva;9982
+Apátszállás -> Baracs;2427
+Apátvarasd;7720
+Apc;3032
+Áporka;2338
+Apostag;6088
+Aradványpuszta -> Nyíradony;4253
+Aranyosapáti;4634
+Aranyosgadány;7671
+Arka;3885
+Arló;3663
+Arnót;3713
+Ároktõ;3467
+Árpádhalom;6623
+Árpás;9132
+Ártánd;4115
+Ásotthalom;6783
+Ásványráró;9177
+Aszaló;3841
+Ászár -> Kisbér;2881
+Aszód;2170
+Aszódfõ;8241
+Áta;7763
+Átány;3371
+Atkár;3213
+Attala;7252
+Babarc;7757
+Babarcszõlõs;7814
+Babócsa;7584
+Bábolna;2943
+Bábonymegyer;8658
+Babosdöbréte;8983
+Babót;9351
+Bácsalmás;6430
+Bácsbokod;6453
+Bácsborsód;6454
+Bácsszentgyörgy;6511
+Bácsszõlõs;6425
+Badacsony -> Badacsonytomaj;8261
+Badacsonylábdihegy -> Badacsonytomaj;8262
+Badacsonyörs -> Badacsonytomaj;8257
+Badacsonytomaj;8258
+Badacsonytomaj (Badacsony);8261
+Badacsonytomaj (Badacsonyörs);8257
+Badacsonytördemic;8263
+Badacsonytördemic (Badacsonylábdihegy);8262
+Bag;2191
+Bagamér;4286
+Baglad;8977
+Baglyasalja -> Salgótarján;3102
+Bagod;8992
+Bágyogszovát;9145
+Baj;2836
+Baja;6500
+Baja (Bajaszentistván);6503
+Bajánsenye;9944
+Bajaszentistván -> Baja;6503
+Bajna;2525
+Bajót;2533
+Bak;8945
+Bakháza;7585
+Bakóca;7393
+Bakonszeg;4164
+Bakonya;7675
+Bakonybánk;2885
+Bakonybél;8427
+Bakonycsernye;8056
+Bakonygyepes -> Ajka;8448
+Bakonygyirót;8433
+Bakonyjákó;8581
+Bakonykoppány;8571
+Bakonykúti;8045
+Bakonynána;8422
+Bakonyoszlop;8418
+Bakonypéterd;8436
+Bakonypölöske;8457
+Bakonyság;8557
+Bakonysárkány;2861
+Bakonyszentiván;8557
+Bakonyszentkirály;8430
+Bakonyszentlászló;8431
+Bakonyszombathely;2884
+Bakonyszücs;8572
+Bakonytamási;8555
+Baks;6768
+Baksa;7834
+Baktakék;3836
+Baktalórántháza;4561
+Baktüttös;8946
+Balajt;3780
+Balassagyarmat;2660
+Balástya;6764
+Balaton;3347
+Balatonakali;8243
+Balatonakarattya -> Balatonkenese;8172
+Balatonalmádi;8220
+Balatonarács -> Balatonfüred;8236
+Balatonberény;8649
+Balatonboglár;8630
+Balatonboglár (Szõlõskislak);8691
+Balatonbozsok -> Enying;8131
+Balatoncsicsó;8272
+Balatonederics;8312
+Balatonendréd;8613
+Balatonfenyves;8646
+Balatonföldvár;8623
+Balatonfõkajár;8164
+Balatonfüred;8230
+Balatonfüred (Balatonarács);8236
+Balatonfûzfõ;8175
+Balatonfûzfõ (Fûzfõgyártelep);8184
+Balatongyörök;8313
+Balatonhenye;8275
+Balatonkenese;8174
+Balatonkenese (Balatonakarattya);8172
+Balatonkeresztúr;8648
+Balatonkiliti -> Siófok;8611
+Balatonlelle;8638
+Balatonmagyaród;8753
+Balatonmáriafürdõ;8647
+Balatonõszöd;8636
+Balatonrendes;8255
+Balatonszabadi;8651
+Balatonszárszó;8624
+Balatonszemes;8636
+Balatonszepezd;8252
+Balatonszéplak -> Siófok;8609
+Balatonszerntgyörgy;8710
+Balatonszõlõs;8230
+Balatonudvari;8242
+Balatonújlak;8712
+Balatonvilágos;8171
+Balf -> Sopron;9494
+Balinka;8055
+Balinka (Eszény);8054
+Balkány;4233
+Ballószög;6035
+Balmazújváros;4060
+Balogunyom;9771
+Balotaszállás;6412
+Balsa;4468
+Bálványos;8614
+Bana;2944
+Bánd;8443
+Bánfa;7914
+Bánhalma -> Kenderes;5349
+Bánhorváti;3642
+Bánk;2653
+Bánk -> Debrecen;4079
+Bánkút -> Medgyesegyháza;5752
+Bánokszentgyörgy;8891
+Bánréve;3654
+Bánszállás -> ózd;3604
+Bár;7711
+Barabás;4937
+Baracs;2426
+Baracs (Apátszállás);2427
+Baracska;2471
+Báránd;4161
+Baranyajenõ;7384
+Baranyaszentgyörgy;7383
+Baranyhidvég;7841
+Barbacs;9169
+Barcs;7570
+Barcs (Somogytarnóca);7557
+Bárdudvarnok;7478
+Barlahida;8948
+Bárna;3126
+Barnag;8291
+Bársonyos;2883
+Basal;7922
+Bashalom -> Tiszaeszlár;4446
+Baskó;3881
+Báta;7149
+Bátaapáti;7164
+Bátaszék;7140
+Baté;7258
+Bátmonostor;6528
+Bátonyterenye (Kisterenye);3078
+Bátonyterenye (Nagybátony);3070
+Bátonyterenye (Rákóczitelep);3151
+Bátor;3336
+Bátorliget;4343
+Battonya;5830
+Bátya;6351
+Batyk;8797
+Bázakerettye;8887
+Bazsi;8352
+Béb;8565
+Becsehely;8866
+Becske;2693
+Becskeháza;3768
+Becsvölgye;8985
+Bedegkér;8666
+Bedõ;4128
+Bejcgyertyános;9683
+Békás;8515
+Bekecs;3903
+Békés;5630
+Békéscsaba;5600
+Békéscsaba (Gerla);5623
+Békéscsaba (Mezõmegyer);5671
+Békéssámson;5946
+Békésszentandrás;5561
+Bekölce;3343
+Bélapátfalva;3346
+Bélavár;7589
+Belecska;7061
+Beled;9343
+Beleg;7543
+Belezna;8855
+Bélmegyer;5643
+Beloiannisz;2455
+Belsõbáránd -> Aba;8128
+Belsõsárd;8978
+Belvárdgyula;7747
+Benk;4643
+Bénye;2216
+Bér;3045
+Bérbaltavár;9831
+Bercel;2687
+Beregdaróc;4934
+Beregsurány;4933
+Berekböszörmény;4116
+Berekfürdõ;5309
+Beremend;7827
+Berente -> Kazincbarcika;3704
+Beret;3834
+Berettyószentmárton -> Berettyóújfalu;4103
+Berettyóújfalu;4100
+Berettyóújfalu (Berettyószentmárton);4103
+Berhida;8181
+Berhida (Peremarton gyártelep);8182
+Berkenye;2641
+Berkesd;7664
+Berkesz;4521
+Bernecebaráti;2639
+Berzék;3575
+Berzence;7516
+Besence;7964
+Besenyõ;2456
+Besenyõd;4557
+Besenyõtelek;3373
+Besenyszög;5071
+Beszterec;4488
+Bezedek;7782
+Bezenye;9223
+Bezeréd;8934
+Bezi;9162
+Biatorbágy;2051
+Bicsérd;7671
+Bicske;2060
+Bicske (Obarok);2063
+Bihardancsháza;4175
+Biharkeresztes;4110
+Biharnagybajom;4172
+Bihartorda;4174
+Biharugra;5538
+Bikács;7043
+Bikal;7346
+Biri;4235
+Birján;7747
+Bisse;7811
+Bize -> Marcali;8714
+Boba;9542
+Bocfölde;8943
+Boconád;3368
+Bócsa;6235
+Bocska;8776
+Bocskaikert;4241
+Boda;7672
+Bodajk;8053
+Bodaszõlõ -> Hajdúböszörmény;4224
+Bodmér;8085
+Bodoglár -> Kiskunmajsa;6137
+Bodolyabér;7394
+Bodonhely;9134
+Bodony;3243
+Bodorfa;8471
+Bodrgkeresztúr;3916
+Bodrog;7439
+Bodroghalom;3987
+Bodrogkisfalud;3917
+Bodrogolaszi;3943
+Bódvalenke;3768
+Bódvarákó;3764
+Bódvaszilas;3763
+Bogács;3412
+Bogád;7741
+Bogádmindszent;7836
+Bogaras -> Tiszakürt;5472
+Bogdása;7966
+Bogyiszló;7132
+Bogyoszló;9324
+Bojt;4114
+Bókaháza;8741
+Bokod;2855
+Bokor;3066
+Bokros -> Csongrád;6648
+Boldog;3016
+Boldogasszonyfa;7937
+Boldogkõújfalu;3884
+Boldogkõváralja;3885
+Boldva;3794
+Bolhás;7517
+Bolhó;7586
+Bóly;7754
+Boncodfölde;8992
+Bonnya;7281
+Bonyhád;7150
+Bonyhád (Majos);7187
+Bonyhádvarasd;7158
+Borbánya -> Nyíregyháza;4405
+Bordány;6795
+Borgáta;9554
+Borjád;7756
+Borota;6445
+Borsfa;8885
+Borsodbóta;3658
+Borsodgeszt;3426
+Borsodivánka;3462
+Borsodnádasd;3671
+Borsodnádasd (Lemezgyár);3672
+Borsodszentgyörgy;3623
+Borsodszirák;3796
+Borsosberény;2644
+Borsosgyõr -> Pápa;8511
+Borszörcsök;8479
+Borzavár;8428
+Bosta;7811
+Botpalád;4955
+Botykapeterd;7900
+Bozzai;9752
+Bozsok;9727
+Bózsva;3994
+Böde;8991
+Bödeháza;8969
+Bögöt;9612
+Bögöte;9675
+Böhönye;8719
+Bököny;4231
+Bölcske;7025
+Börcs;9152
+Börzönce;8772
+Bõ;9625
+Bõcs;3574
+Bõny;9073
+Bõsárkány;9167
+Bõszénfa;7475
+Brennbergbánya -> Sopron;9408
+Bucsa;5527
+Bucsu;9792
+Bucsuszentlászló;8925
+Bucsuta;8893
+Budai út -> Cegléd;2738
+Budajenõ;2093
+Budakalász;2011
+Budakeszi;2092
+Budaörs;2040
+Budapest I. kerület;1011|1012|1013|1014|1015|1016|1017|1018|1019
+Budapest II. kerület;1021|1022|1023|1024|1025|1026|1027|1028|1029
+Budapest III. kerület;1031|1032|1033|1034|1035|1036|1037|1038|1039
+Budapest IV. kerület;1041|1042|1043|1044|1045|1046|1047|1048|1049
+Budapest IX. kerület;1091|1092|1093|1094|1095|1096|1097|1098|1099
+Budapest V. kerület;1051|1052|1053|1054|1055|1056|1057|1058|1059
+Budapest VI. kerület;1061|1062|1063|1064|1065|1066|1067|1068|1069
+Budapest VII. kerület;1071|1072|1073|1074|1075|1076|1077|1078|1079
+Budapest VIII. kerület;1081|1082|1083|1084|1085|1086|1087|1088|1089
+Budapest X. kerület;1101|1102|1103|1104|1105|1106|1107|1108|1109
+Budapest XI. kerület;1111|1112|1113|1114|1115|1116|1117|1118|1119
+Budapest XII. kerület;1121|1122|1123|1124|1125|1126|1127|1128|1129
+Budapest XIII. kerület;1131|1132|1133|1134|1135|1136|1137|1138|1139
+Budapest XIV. kerület;1141|1142|1143|1144|1145|1146|1147|1148|1149
+Budapest XIX. kerület;1191|1192|1193|1194|1195|1196|1197|1198|1199
+Budapest XV. kerület;1151|1152|1153|1154|1155|1156|1157|1158|1159
+Budapest XVI. kerület;1161|1162|1163|1164|1165|1166|1167|1168|1169
+Budapest XVII. kerület;1171|1172|1173|1174|1175|1176|1177|1178|1179
+Budapest XVIII. kerület;1181|1182|1183|1184|1185|1186|1187|1188|1189
+Budapest XX. kerület;1201|1202|1203|1204|1205|1206|1207|1208|1209
+Budapest XXI. kerület;1211|1212|1213|1214|1215|1216|1217|1218|1219
+Budapest XXII. kerület;1221|1222|1223|1224|1225|1226|1227|1228|1229
+Budapest XXIII. kerület;1231|1232|1233|1234|1235|1236|1237|1238|1239
+Bugac;6114
+Bugacpusztaháza;6114
+Bugyi;2347
+Buj;4483
+Buják;3047
+Butykatelep -> Nyíregyháza;4246
+Buzsák;8695
+Bük;9737
+Bük (Bükfürdõ);9740
+Bükfürdõ -> Bük;9740
+Bükkábrány;3422
+Bükkaranyos;3554
+Bükkmogyorósd;3648
+Bükkösd;7682
+Bükkszék;3335
+Bükkszenterzsébet;3257
+Bükkszentkereszt;3557
+Bükkszentlászló -> Miskolc;3510
+Bükkszentmárton;3346
+Bükkzsérc;3414
+Bürüs;7973
+Büssü;7273
+Büttös;3821
+Cák;9725
+Cakóháza;9165
+Cece;7013
+Cégénydányád;4732
+Cegléd;2700
+Cegléd (Budai út);2738
+Ceglédbercel;2737
+Celldömölk;9500
+Celldömölk (Izsákfa);9541
+Center -> ózd;3651
+Cered;3123
+Chernelházadamonya;9624
+Cibakháza;5462
+Cigánd;3973
+Cikó;7161
+Cirák;9364
+Cukorgyár -> Ercsi;2452
+Cún;7843
+Csabacsûd;5551
+Csabaszabadi;5609
+Csabdi;2064
+Csabrendek;8474
+Csáford -> Zalaszentgrót;8795
+Csáfordjánosfa;9375
+Csaholc;4967
+Csajág;8163
+Csákány;8735
+Csákánydoroszló;9919
+Csákberény;8073
+Csákvár;8083
+Csanádalberti;6915
+Csanádapáca;5662
+Csanádpalota;6913
+Csánig;9654
+Csány;3015
+Csányoszró;7964
+Csanytelek;6647
+Csapi;8756
+Csapod;9372
+Csárdaszállás;5621
+Csarnóta;7811
+Csaroda;4844
+Császár;2858
+Császártöltés;6239
+Császló;4973
+Csátalja;6523
+Csatár;8943
+Csataszög;5064
+Csatka;2888
+Csávoly;6448
+Csebény;7935
+Csécse;3052
+Csegöld;4742
+Csehbánya;8445
+Csehi;9833
+Csehimindszent;9834
+Csém;2949
+Csemõ;2713
+Csempeszkopács;9764
+Csengele;6765
+Csenger;4765
+Csengersima;4743
+Csengerújfalu;4764
+Csengõd;6222
+Csénye;9611
+Csenyéte;3833
+Csép;2946
+Csépa;5475
+Csepreg;9735
+Csér;9375
+Cserdi;7683
+Cserebökény -> Szentes;6613
+Cserénfa;7472
+Cserépfalu;3413
+Cserépváralja;3417
+Cserháthaláp;2694
+Cserhátsurány;2676
+Cserhátszentiván;3066
+Cserkeszõlõ;5465
+Cserkút;7673
+Csernely;3648
+Cserszegtomaj;8372
+Csertalakos;8951
+Csertõ;7900
+Csesznek;8419
+Csesztreg;8973
+Csesztve;2678
+Csetény;8417
+Csévharaszt;2212
+Csibrák;7225
+Csikéria;6424
+Csikóstõttõs;7341
+Csikvánd;8534
+Csincse;3442
+Csipkerek;9836
+Csitár;2673
+Csobád;3848
+Csobaj;3927
+Csobánka;2014
+Csókakõ;8074
+Csokonyavisonta;7555
+Csokvaomány;3647
+Csolnok;2521
+Csólyospálos;6135
+Csoma;7253
+Csomád;2161
+Csombárd;7432
+Csongrád;6640
+Csongrád (Bokros);6648
+Csonkahegyhát;8918
+Csonkamindszent;7940
+Csopak;8229
+Csór;8041
+Csorna;9300
+Csorvás;5920
+Csót;8558
+Csöde;8991
+Csögle;8495
+Csökmõ;4145
+Csököly;7526
+Csömend;8700
+Csömödér;8957
+Csömör;2141
+Csönge;9513
+Csörnyeföld;8873
+Csörötnek;9962
+Csõsz;8122
+Csõvár;2615
+Csurgó;8840
+Csurgónagymarton;8840
+Dabas;2370
+Dabas (Gyón);2373
+Dabas (Sári);2371
+Dabronc;8345
+Dabrony;8485
+Dad;2854
+Dág;2522
+Dáka;8592
+Dalmand;7211
+Damak;3780
+Dámóc;3978
+Dánszentmiklós;2735
+Dány;2118
+Daraboshegy;9917
+Darány;7988
+Darnó;4737
+Darnózseli;9232
+Darvas;4144
+Dávod;6524
+Debercsény;2694
+Debrecen;4033|4027|4028|4030|4031|4032|4029|4225|4002|4025|4063|4034|4024|4026
+Debrecen (Józsa);4225
+Debrecen (Nagymacs);4063
+Debréte;3825
+Decs;7144
+Dédestapolcsány;3643
+Dég;8135
+Dejtár;2649
+Délegyháza;2337
+Demecser;4516
+Demjén;3395
+Dencsháza;7915
+Dénesfa;9365
+Derecske;4130
+Derekegyház;6621
+Deszk;6772
+Detek;3834
+Detk;3275
+Dévaványa;5510
+Devecser;8460
+Dinnyeberki;7683
+Dinnyés -> Gárdony;2485
+Diósberény;7072
+Diósd;2049
+Diósjenõ;2643
+Dióskál;8764
+Diósviszló;7817
+Diszel -> Tapolca;8297
+Doba;8482
+Doboz;5624
+Dobri;8874
+Dobronhegy;8917
+Dóc;6766
+Domaháza;3627
+Domaszék;6781
+Dombegyház;5836
+Dombiratos;5745
+Dombori -> Fadd;7139
+Dombóvár;7200
+Dombrád;4492
+Domony;2182
+Domoszló;3263
+Dormánd;3374
+Dorog;2510
+Dorogháza;3153
+Dozmat;9791
+Döbörce;8357
+Döbörhegy;9914
+Döbrököz;7228
+Döbrönte;8597
+Döge;4495
+Dömös;2027
+Dömsöd;2344
+Dör;9147
+Dörgicse;8244
+Döröske;9913
+Dötk;8799
+Dövény;3721
+Drágszél;6342
+Drávacsehi;7851
+Drávacsepely;7846
+Drávafok;7967
+Drávagárdony;7977
+Drávaiványi;7960
+Drávakeresztúr;7967
+Drávapalkonya;7851
+Drávapisti;7843
+Drávaszabolcs;7851
+Drávaszerdahely;7847
+Drávasztára;7960
+Drávatamási;7979
+Drégelypalánk;2646
+Dubicsány;3635
+Dudar;8416
+Duka;9556
+Dunaalmás;2545
+Dunabogdány;2023
+Dunaegyháza;6323
+Dunafalva;7713
+Dunaföldvár;7020
+Dunaharaszti;2330
+Dunakeszi;2120
+Dunakiliti;9225
+Dunakömlõd -> Paks;7027
+Dunapataj;6328
+Dunapataj (Szelidi tó);6329
+Dunaremete;9235
+Dunaszeg;9174
+Dunaszekcsõ;7712
+Dunaszentbenedek;6333
+Dunaszentgyörgy;7135
+Dunaszentmiklós;2897
+Dunaszentpál;9175
+Dunasziget;9226
+Dunatetétlen;6325
+Dunaújváros;2400
+Dunaújváros (Pálhalma);2407
+Dunavarsány;2336
+Dunavecse;6087
+Dusnok;6353
+Dúzs;7224
+Ebergõc;9451
+Ebes;4211
+Écs;9083
+Ecséd;3013
+Ecseg;3053
+Ecsegfalva;5515
+Ecseny;7457
+Ecser;2233
+Edde;7443
+Edelény;3780
+Edelény (Finke);3783
+Edve;9343
+Eger;3300
+Eger (Felnémet);3304
+Eger (Szarvaskõ);3323
+Egerág;7763
+Egeralja;8497
+Egeraracsa;8765
+Egerbakta;3321
+Egerbocs;3337
+Egercsehi;3341
+Egerfarmos;3379
+Egerlövõ;3461
+Egerszalók;3394
+Egerszólát;3328
+Égerszög;3757
+Egervár;8913
+Egervölgy;9684
+Egyed;9314
+Egyek;4669
+Egyek (Telekháza);4067
+Egyetemváros -> Miskolc;3515
+Egyházasdengeleg;3043
+Egyházasfalu;9473
+Egyházasgerge;3185
+Egyházasharaszti;7824
+Egyházashetye;9554
+Egyházashollós;9781
+Egyházaskeszõ;8523
+Egyházaskozár;7347
+Egyházasrádóc;9783
+Elek;5742
+Ellend;7744
+Elõszállás;2424
+Elõszállás (Kisszentmiklóstelep);2423
+Emõd;3432
+Encs;3860
+Encs (Gibárt);3854
+Encsencs;4374
+Endrefalva;3165
+Endrõc;7973
+Endrõd -> Gyomaendrõd;5502
+Enese;9143
+Enying;8130
+Enying (Balatonbozsok);8131
+Eperjes;6624
+Eperjeske;4646
+Eplény;8413
+Epöl;2526
+Ercsi;2451
+Ercsi (Cukorgyár);2452
+Ercsi (Sinatelep);2453
+Érd;2030
+Érd (Érdliget);2036
+Érd (Parkváros);2035
+Érdliget -> Érd;2036
+Erdõbénye;3932
+Erdõhorváti;3935
+Erdõkertes;2113
+Erdõkövesd;3252
+Erdõkürt;2176
+Erdõsmárok;7735
+Erdõsmecske;7723
+Erdõtarcsa;2177
+Erdõtelek;3358
+Erk;3295
+Érpatak;4245
+Érsekcsanád;6347
+Érsekhalma;6348
+Érsekvadkert;2659
+Értény;7093
+Erzsébet;7661
+Eszény -> Balinka;8054
+Esztár;4124
+Eszteregnye;8882
+Esztergályhorváti;8742
+Esztergom;2500
+Ete;2947
+Etes;3136
+Etyek;2091
+Fábiánháza;4354
+Fábiánsebestyén;6625
+Fácánkert;7136
+Fadd;7133
+Fadd (Dombori);7139
+Fáj;3865
+Fajsz;6352
+Fancsal;3855
+Farád;9321
+Farkasfa -> Szentgotthárd;9981
+Farkasgyepû;8582
+Farkaslyuk-bányatelep -> ózd;3608
+Farmos;2765
+Fazekasboda;7732
+Fedémes;3255
+Fegyvernek;5231
+Fegyvernek (Szapárfalu);5213
+Fehérgyarmat;4900
+Fehértó;9163
+Fehérvárcsurgó;8052
+Feked;7724
+Feketeerdõ;9211
+Felcsút;8086
+Feldebrõ;3352
+Felgyõ;6645
+Felnémet -> Eger;3304
+Felpéc;9122
+Felsõberecki;3985
+Felsõcsatár;9794
+Felsõdobsza;3847
+Felsõegerszeg;7370
+Felsõgagy;3837
+Felsõgöd -> Göd;2132
+Felsõjánosfa;9934
+Felsõkelecsény;3722
+Felsõlajos;6055
+Felsõmarác;9918
+Felsõmocsolád;7456
+Felsõnána;7175
+Felsõnyárád;3721
+Felsõnyék;7099
+Felsõörs;8227
+Felsõpáhok;8380
+Felsõpakony;2363
+Felsõpetény;2615
+Felsõrajk;8767
+Felsõregmec;3989
+Felsõsima -> Nyíregyháza;4433
+Felsõszenterzsébet;8973
+Felsõszentiván;6447
+Felsõszentmárton;7968
+Felsõszölnök;9985
+Felsõtárkány;3324
+Felsõtelekes;3735
+Felsõtold;3067
+Felsõvadász;3814
+Felsõzsolca;3561
+Fényeslitke;4621
+Fenyõfõ;8432
+Ferencszállás;6774
+Fertõboz;9493
+Fertõd;9431
+Fertõd (Tõzeggyármajor);9433
+Fertõendréd;9442
+Fertõhomok;9492
+Fertõrákos;9421
+Fertõszentmiklós;9444
+Fertõszéplak;9436
+Fertõújlak -> Sarród;9434
+Fiad;7282
+Filkeháza;3994
+Finke -> Edelény;3783
+Fityeház;8835
+Foktõ;6331
+Folyás;4090
+Fonó;7271
+Fony;3893
+Fonyód;8640
+Fonyód (Alsóbélatelep);8644
+Forráskút;6793
+Forró;3849
+Fót;2151
+Fót (Gyermekváros);2153
+Földeák;6922
+Földes;4177
+Fõnyed;8732
+Fulókércs;3864
+Furta;4141
+Füle;8157
+Fülesd;4964
+Fülöp;4266
+Fülöpháza;6042
+Fülöpjakab;6116
+Fülöpszállás;6085
+Fülpösdaróc;4754
+Fürged;7087
+Füzér;3996
+Füzérkajata;3994
+Füzérkomlós;3997
+Füzérradvány;3993
+Füzesabony;3390
+Füzesgyarmat;5525
+Fûzfõgyártelep -> Balatonfûzfõ;8184
+Fûzvölgy;8777
+Gáborján;4122
+Gáborjánháza;8969
+Gábortelep -> Medgyesbodzás;5664
+Gacsály;4972
+Gadács;7276
+Gadány;8716
+Gadna;3815
+Gádoros;5932
+Gagyapáti;3837
+Gagybátor;3817
+Gagyvendégi;3816
+Galambok;8754
+Galgaguta;2686
+Galgagyörk;2681
+Galgahévíz;2193
+Galgamácsa;2183
+Gálosfa;7473
+Galvács;3752
+Galyatetõ -> Mátraszentimre;3234
+Gamás;8685
+Ganna;8597
+Gánt;8082
+Gara;6522
+Garáb;3067
+Garabonc;8747
+Garadna;3873
+Garbolc;4976
+Gárdony;2483
+Gárdony (Agárd);2484
+Gárdony (Dinnyés);2485
+Gárdony (Zichyújfalu);8112
+Garé;7812
+Gasztony;9952
+Gátér;6111
+Gáva -> Gávavencsellõ;4471
+Gávavencsellõ (Gáva);4471
+Gávavencsellõ (Vencsellõ);4472
+Géberjén;4754
+Gecse;8543
+Géderlak;6334
+Gégény;4517
+Gelej;3444
+Gelénes;4935
+Gellénháza;8981
+Gelse;8774
+Gelsesziget;8774
+Gemzse;4567
+Gencsapáti;9721
+Gérce;9672
+Gerde;7951
+Gerendás;5925
+Gerényes;7362
+Geresdlak;7733
+Gergelyiugornya -> Vásárosnamény;4803
+Gerjen;7134
+Gerla -> Békéscsaba;5623
+Gersekarát;9813
+Geszt;5734
+Gesztely;3715
+Gesztely (Újharangod);3923
+Gesztenyés -> Komló;7308
+Geszteréd;4232
+Gétye;8762
+Gicc;8435
+Gige;7527
+Gilbárt -> Encs;3854
+Gilvánfa;7954
+Girincs;3578
+Gizellatelep -> Visegrád;2026
+Gógánfa;8346
+Golop;3906
+Gomba;2217
+Gombosszeg;8984
+Gór;9625
+Gordisa;7853
+Gosztola;8960
+Göd (Alsógöd);2131
+Göd (Felsõgöd);2132
+Gödöllõ;2100
+Gödre (Gödrekeresztúr);7386
+Gödre (Gödreszentmárton);7385
+Gödrekeresztúr -> Gödre;7386
+Gödreszentmárton -> Gödre;7385
+Gölle;7272
+Gömörszõlõs;3728
+Gönc;3895
+Göncruszka;3894
+Gönyû;9071
+Görbeháza;4075
+Görcsöny;7833
+Görcsönydoboka;7728
+Görgeteg;7553
+Görömböly -> Miskolc;3516
+Gõsfa;8913
+Grábóc;7162
+Gulács;4842
+Gutorfölde;8951
+Gyál;2360
+Gyálarét -> Szeged;6757
+Gyalóka;9474
+Gyanógeregye;9774
+Gyarmat;8545
+Gyékényes;8851
+Gyenesdiás;8315
+Gyepükaján;8473
+Gyermekváros -> Fót;2153
+Gyermely;2821
+Gyimrót -> Gyõr;9019
+Gyód;7668
+Gyoma -> Gyomaendrõd;5500
+Gyomaendrõd (Endrõd);5502
+Gyomaendrõd (Gyoma);5500
+Gyón -> Dabas;2373
+Gyopárosfürdõ -> Orosháza;5904
+Gyóró;9363
+Gyömöre;9124
+Gyömrõ;2230
+Gyöngyfa;7954
+Gyöngyös;3200
+Gyöngyös (Kékestetõ);3221
+Gyöngyös (Mátrafüred);3232
+Gyöngyös (Mátraháza);3233
+Gyöngyösfalu;9724
+Gyöngyöshalász;3212
+Gyöngyösmellék;7972
+Gyöngyösoroszi;3211
+Gyöngyöspatak;3035
+Gyöngyössolymos;3231
+Gyöngyöstarján;3036
+Gyönk;7064
+Györe;7352
+Györgytarló;3954
+Györköny;7045
+Gyõr;9012|9025|9026|9023|9022|9021|9011|9030|9029|9028|9024|9027|9019
+Gyõr (Gyirmót);9019
+Gyõr (Gyõrszentiván);9011
+Gyõr (Ménfõcsanak);9012
+Gyõrasszonyfa;9093
+Gyõrladamér;9173
+Gyõröcske;4625
+Gyõrság;9084
+Gyõrsövényház;9161
+Gyõrszemere;9121
+Gyõrszentiván -> Gyõr;9011
+Gyõrtelek;4752
+Gyõrújbarát;9081
+Gyõrújfalu;9171
+Gyõrvár;9821
+Gyõrzámoly;9172
+Gyugy;8692
+Gyula;5700
+Gyula (Gyulavári);5711
+Gyula (József Attila Szanatórium);5703
+Gyulafirátót -> Veszprém;8412
+Gyulaháza;4545
+Gyulaj;7227
+Gyulakeszi;8286
+Gyulavári -> Gyula;5711
+Gyúró;2464
+Gyügye;4733
+Gyüre;4813
+Gyûrûs;8932
+Hács;8694
+Hagyárosbörönd;8992
+Hahót;8771
+Hajdúbagos;4273
+Hajdúböszörmény;4220
+Hajdúböszörmény (Bodaszõlõ);4224
+Hajdúböszörmény (Hajdúvid);4086
+Hajdúböszörmény (Nagyapród);4074
+Hajdúdorog;4087
+Hajdúhadház;4242
+Hajdúnánás;4080
+Hajdúnánás (Tedej);4085
+Hajdúsámson;4251
+Hajdúszoboszló;4200
+Hajdúszovát;4212
+Hajdúvid -> Hajdúböszörmény;4086
+Hajmás;7473
+Hajmáskér;8192
+Hajós;6344
+Halastó;9814
+Halászi;9228
+Halásztelek;2314
+Halimba;8452
+Halmaj;3842
+Halmajugra;3273
+Halogy;9917
+Hangács;3795
+Hangony;3626
+Hánta -> Kisbér;2879
+Hantos;2434
+Harasztifalu;9784
+Harc;7172
+Harka;9422
+Harkakötöny;6136
+Harkány;7815
+Háromfa;7585
+Háromhuta;3936
+Harsány;3555
+Hárskút;8442
+Harta;6326
+Harta (Állampuszta);6327
+Hásságy;7745
+Hasznos -> Pásztó;3065
+Hatvan;3000
+Hatvan (Kerekharaszt);3009
+Hédervár;9178
+Hedrehely;7533
+Hegyesd;8296
+Hegyeshalom;9222
+Hegyfalu;9631
+Hegyháthodász;9915
+Hegyhátmaróc;7348
+Hegyhátsál;9915
+Hegyhátszentjakab;9934
+Hegyhátszentmárton;9931
+Hegyhátszentpéter;9821
+Hegykõ;9437
+Hegymagas;8265
+Hegymeg;3786
+Hegyszentmárton;7837
+Héhalom;3041
+Hejce;3892
+Hejõbába;3593
+Hejõcsaba -> Miskolc;3508
+Hejõkeresztúr;3597
+Hejõkürt;3588
+Hejõpapi;3594
+Hejõszalonta;3595
+Helesfa;7683
+Helvécia;6034
+Hencida;4123
+Hencse;7532
+Herceghalom;2053
+Hercegkút;3958
+Hercegszántó;6525
+Heréd;3011
+Héreg;2832
+Herencsény;2677
+Herend;8440
+Herény -> Szombathely;9707
+Heresznye;7587
+Hermánszeg;4735
+Hernád;2376
+Hernádbüd;3853
+Hernádcéce;3887
+Hernádkak;3563
+Hernádkércs;3846
+Hernádnémeti;3564
+Hernádpetri;3874
+Hernádszentandrás;3852
+Hernádszurdok;3875
+Hernádvécse;3874
+Hernyék;8957
+Hét;3655
+Hetefejércse;4843
+Hetényegyháza -> Kecskemét;6044
+Hetes;7432
+Hetvehely;7681
+Hetyefõ;8344
+Heves;3360
+Hevesaranyos;3322
+Hevesvezekény;3383
+Hévíz;8380
+Hévízgyörk;2192
+Hidas;7696
+Hidasnémeti;3876
+Hidegkút;8247
+Hidegség;9491
+Hidvégardó;3768
+Hímesháza;7735
+Himod;9362
+Hird -> Pécs;7693
+Hirics;7838
+Hobol;7971
+Hodász;4334
+Hódmezõvásárhely;6800
+Hódmezõvásárhely (Szikáncs);6806
+Hódoscsépány -> ózd;3661
+Hollád;8731
+Hollóháza;3999
+Hollókõ;3176
+Homok -> Tiszaföldvár;5461
+Homokbödöge;8563
+Homokkomárom;8777
+Homokmégy;6341
+Homokszentgyörgy;7537
+Homokterenye -> Mátraterenye;3145
+Homorúd;7716
+Homrogd;3812
+Hont;2647
+Horpács;2658
+Hort;3014
+Hortobágy;4071
+Horváthertelend;7935
+Horvátkút -> Marcali;8709
+Horvátlövõ;9796
+Horvátnádalja -> Körmend;9909
+Horvátzsidány;9733
+Hosszúhát -> Szerep;4162
+Hosszúhetény;7694
+Hosszúpályi;4274
+Hosszúpereszteg;9676
+Hosszúvíz;8716
+Hosszúvölgy;8777
+Hosztót;8475
+Hottó;8991
+Hövej;9361
+Hõgyész;7191
+Hugyag;2672
+Hunya;5555
+Hunyadfalva;5063
+Husztót;7678
+Ibafa;7935
+Iborfia;8984
+Ibrány;4484
+Igal;7275
+Igar;7015
+Igar (Vámszõlõhegy);7016
+Igrici;3459
+Iharos;8726
+Iharosberény;8725
+Ihász -> Marcaltõ;8531
+Ikervár;9756
+Iklad;2181
+Iklanberény;9634
+Iklódbördõce;8958
+Ikrény;9141
+Iliny;2675
+Ilk;4566
+Illocsa;7775
+Imola;3724
+Imrehegy;6238
+Ináncs;3851
+Inárcs;2365
+Inke;8724
+Inota -> Várpalota;8103
+Inotai Erõmû -> Várpalota;8104
+Ipacsfa;7847
+Ipolydamásd;2631
+Ipolytarnóc;3138
+Ipolytölgyes;2633
+Ipolyvece;2669
+Iregszemcse;7095
+Irota;3786
+Isaszeg;2117
+Ispánk;9941
+Istenmezeje;3253
+Istvándi;7987
+Iszkaszentgyörgy;8043
+Iszkáz;8493
+Isztimér;8045
+Ivád;3248
+Iván;9374
+Ivánbattyán;7772
+Ivánc;9931
+Iváncsa;2454
+Ivándárda;7782
+Izmény;7353
+Izsák;6070
+Izsákfa -> Celldömölk;9541
+Izsófalva;3741
+Jágónak;7362
+Ják;9798
+Jakabszállás;6078
+Jákfa;9643
+Jákfalva;3721
+Jákó;7525
+Jánd;4841
+Jánkmajdis;4741
+Jánoshalma;6440
+Jánosháza;9545
+Jánoshida;5143
+Jánossomorja (Mosonszentjános);9241
+Jánossomorja (Pusztasomorja);9242
+Járdánháza;3664
+Jármi;4337
+Jásd;8424
+Jászágó;5124
+Jászalsószentgyörgy;5054
+Jászapáti;5130
+Jászárokszállás;5123
+Jászberény;5100
+Jászberény (Portelek);5152
+Jászboldogháza;5144
+Jászdózsa;5122
+Jászfelsõszentgyörgy;5111
+Jászfényszaru;5126
+Jászivány;5135
+Jászjákóhalma;5121
+Jászkarajenõ;2746
+Jászkisér;5137
+Jászladány;5055
+Jászszentandrás;5136
+Jászszentlászló;6133
+Jásztelek;5141
+Jéke;4611
+Jenõ;8146
+Jobaháza;9323
+Jobbágyi;3063
+Jósvafõ;3758
+Józsa -> Debrecen;4225
+József Attila Szanatórium -> Gyula;5703
+Juta;7431
+Kaba;4183
+Kacorlak;8773
+Kács;3424
+Kacsóta;7940
+Kadarkút;7530
+Kádárta -> Veszprém;8411
+Kajárpéc;9123
+Kajászó;2472
+Kajdacs;7051
+Kakasd;7122
+Kákics;7958
+Kakucs;2366
+Kál;3350
+Kalaznó;7194
+Káld;9673
+Kálló;2175
+Kallósd;8785
+Kállósemjén;4324
+Kálmáncsa;7538
+Kálmánháza;4434
+Kálócfa;8988
+Kalocsa;6300
+Káloz;8124
+Kám;9841
+Kamond;8469
+Kamut;5673
+Kánó;3735
+Kántorjánosi;4335
+Kány;3821
+Kánya;8667
+Kányavár;8956
+Kapolcs;8294
+Kápolna;3355
+Kápolnásnyék;2475
+Kapoly;8671
+Kaposfõ;7523
+Kaposgyarmat;7473
+Kaposhomok;7261
+Kaposkeresztúr;7258
+Kaposmérõ;7521
+Kapospula;7251
+Kaposszekcsõ;7361
+Kaposszerdahely;7476
+Kaposújlak;7522
+Kaposvár;7400
+Káptalanfa;8471
+Káptalantóti;8283
+Kapuvár;9330
+Kapuvár (Öntésmajor);9339
+Kára;7285
+Karácsond;3281
+Karád;8676
+Karakó;9547
+Karakószörcsök;8491
+Karancsalja;3181
+Karancsberény;3137
+Karancskeszi;3183
+Karancslapujtõ;3182
+Karancsság;3163
+Kárász;7333
+Karcag;5300
+Karcsa;3963
+Kardos;5552
+Kardoskút;5945
+Karmacs;8354
+Károlyfalva -> Sátoraljaújhely;3944
+Karos;3962
+Kartal;2173
+Kásád;7827
+Kaskantyú;6211
+Kastélyosdombó;7977
+Kaszaper;5948
+Kaszó;7563
+Katádfa;7914
+Katafa;9915
+Kátoly;7661
+Katymár;6455
+Káva;2215
+Kávás;8994
+Kazár;3127
+Kazár (Mizserfa);3147
+Kazincbarcika;3700
+Kazincbarcika (Berente);3704
+Kázsmárk;3831
+Kazsok;7274
+Kecel;6237
+Kecskéd;2852
+Kecskemét;6000
+Kecskemét (Hetényegyháza);6044
+Kecskemét (Méntelek);6008
+Kehidakustány;8784
+Kék;4515
+Kékcse;4494
+Kéked;3899
+Kékesd;7661
+Kékestetõ -> Gyöngyös;3221
+Kékkút;8254
+Kelebia;6423
+Keléd;9549
+Kelemér;3728
+Kéleshalom;6444
+Kelevíz;8714
+Kemecse;4501
+Kemence;2638
+Kemendollár;8931
+Kemeneshõgyész;8516
+Kemeneskápolna;9553
+Kemenesmagasi;9522
+Kemenesmihályfa;9511
+Kemenespálfa;9544
+Kemenessömjén;9517
+Kemenesszentmárton;9521
+Kemenesszentpéter;8518
+Kemenestaródfa;9923
+Keménfa;8995
+Kémes;7843
+Kemse;7839
+Kenderes;5331
+Kenderes (Bánhalma);5349
+Kenéz;9752
+Kenézlõ;9355
+Kengyel;5083
+Kenyeri;9514
+Kercaszomor;9945
+Kercseliget;7256
+Kerecsend;3396
+Kerecseny;8745
+Kerekegyháza;6041
+Kerekharaszt -> Hatvan;3009
+Kereki;8618
+Kerékteleki;2882
+Kerepes;2144
+Kerepes (Szilasliget);2145
+Keresztéte;3821
+Kerkabarabás;8971
+Kerkafalva;8973
+Kerkakutas;8973
+Kerkáskápolna;9944
+Kerkaszentkirály;8874
+Kerkateskánd;8879
+Kérsemjén;4912
+Kerta;8492
+Kertészsziget;5526
+Keszeg;2616
+Kesznyéteny;3579
+Keszõhidegkút;7062
+Keszthely;8360
+Kesztölc;2517
+Keszü;7668
+Kétbodony;2655
+Kétegyháza;5741
+Kétérköz -> Tiszatelek;4486
+Kéthely;8713
+Kétpó;5411
+Kétsoprony;5674
+Kéttornyúlak -> Pápa;8591
+Kétújfalu;7975
+Kétvölgy;9982
+Kéty;7174
+Kevermes;5744
+Kilimán;8774
+Kimle;9181
+Kincsesbánya;8044
+Királd;3657
+Királyegyháza;7953
+Királyhegyes;6911
+Királyszentistván;8195
+Kisapáti;8284
+Kisapostag;2428
+Kisar;4921
+Kisasszond;7523
+Kisasszonyfa;7954
+Kisbabot;9133
+Kisbágyon;3046
+Kisbajcs;9062
+Kisbajom;7542
+Kisbárapáti;7282
+Kisbárkány;3075
+Kisbér;2870
+Kisbér (Ászár);2881
+Kisbér (Hánta);2879
+Kisberény;8693
+Kisberzseny;8477
+Kisbeszterce;7391
+Kisbodak;9234
+Kisbucsa;8925
+Kisbudmér;7756
+Kiscsécs;3578
+Kiscsehi;8888
+Kiscsõsz;8494
+Kisdér;7814
+Kisdobsza;7985
+Kisdombegyház;5837
+Kisdorog;7159
+Kisecset;2655
+Kisfalud;9341
+Kisfástanya -> Tiszalök;4447
+Kisfüzes;3256
+Kisgörbõ;8356
+Kisgyalán;7279
+Kisgyõr;3556
+Kishajmás;7391
+Kisharsány;7800
+Kishartyán;3161
+Kisherend;7763
+Kishódos;4977
+Kishuta;3994
+Kisigmánd;2948
+Kisjakabfalva;7773
+Kiskassa;7766
+Kiskinizs;3843
+Kiskomárom -> Zalakomár;8751
+Kiskorpád;7524
+Kisköre;3384
+Kiskõrös;6200
+Kiskundorozsma -> Szeged;6791
+Kiskunfélegyháza;6100
+Kiskunhalas;6400
+Kiskunlacháza;2340
+Kiskunmajsa;6120
+Kiskunmajsa (Bodoglár);6137
+Kiskutas;8911
+Kisláng;8156
+Kisléta;4325
+Kislippó;7775
+Kislõd;8446
+Kismányok;7356
+Kismarja;4126
+Kismaros;2623
+Kisnamény;4737
+Kisnána;3264
+Kisnémedi;2165
+Kisnyárád;7759
+Kisoroszi;2024
+Kispalád;4956
+Kispáli;8912
+Kispirit;8496
+Kisrákos;9936
+Kisrécse;8756
+Kisrozvágy;3965
+Kissikátor;3627
+Kissomlyó;9555
+Kisszállás;6421
+Kisszékely;7082
+Kisszekeres;4963
+Kisszentmárton;7841
+Kisszentmiklóstelep -> Elõszállás;2423
+Kissziget;8954
+Kisszõlõs;8483
+Kistamási;7981
+Kistapolca;7823
+Kistarcsa;2143
+Kistelek;6760
+Kisterenye -> Bátonyterenye;3078
+Kistokaj;3553
+Kistolmács;8868
+Kistormás;7068
+Kistótfalu;7768
+Kisújszállás;5310
+Kisunyom;9772
+Kisvárda;4600
+Kisvarsány;4811
+Kisvásárhely;8341
+Kisvaszar;7381
+Kisvejke;7183
+Kiszombor;6775
+Kiszsidány;9733
+Klárafalva;6773
+Kocs;2898
+Kocsér;2755
+Kocsola;7212
+Kocsord;4751
+Kócsújfalu -> Tiszafüred;5359
+Kóka;2243
+Kokad;4284
+Kolontár;8468
+Komádi;4138
+Komárom;2900
+Komárom (Koppánymonostor);2903
+Komárom (Szõny);2921
+Komárváros -> Zalakomár;8752
+Komjáti;3765
+Komló;7300
+Komló (Gesztenyés);7308
+Komló (Mecsekjánosi);7305
+Komlódtótfalu;4765
+Komlósd;7582
+Komlóska;3937
+Komoró;4622
+Kompolt;3356
+Kondó;3775
+Kondorfa;9943
+Kondoros;5553
+Kóny;9144
+Konyár;4133
+Kópháza;9495
+Koppánymonostor -> Komárom;2903
+Koppányszántó;7094
+Korlát;3886
+Koroncó;9113
+Kórós;7841
+Kosd;2612
+Kóspallag;2625
+Kótaj;4482
+Kovácshida;7847
+Kovácsszénája;7678
+Kovácsvágás;3992
+Kozárd;3053
+Kozármisleny;7761
+Kozmadombja;8988
+Köblény;7334
+Köcsk;9553
+Kökény;7668
+Kölcse;4965
+Kölesd;7052
+Kölked;7717
+Kömlõ;3372
+Kömlõd;2853
+Kömörõ;4943
+Kömpöc;6134
+Körmend;9900
+Körmend (Horvátnádalja);9909
+Környe;2851
+Köröm;3577
+Körösladány;5516
+Körösnagyharsány;5539
+Körösszakál;4136
+Körösszegapáti;4135
+Köröstarcsa;5622
+Körösújfalu;5536
+Kötcse;8627
+Kötegyán;5725
+Kövegy;6912
+Köveskál;8274
+Kõkút;7530
+Kõröshegy;8617
+Kõröstetétlen;2745
+Kõszárhegy;8152
+Kõszeg;9730
+Kõszegdoroszló;9725
+Kõszegpaty;9739
+Kõszegszerdahely;9725
+Kõtelek;5062
+Kõvágóörs;8254
+Kõvágószõlõs;7673
+Kõvágótõttõs;7675
+Krasznokvajda;3821
+Kulcs;2458
+Kunadacs;6097
+Kunágota;5746
+Kunbaja;6435
+Kunbaracs;6043
+Kuncsorba;5412
+Kunfehértó;6413
+Kungyalu -> Kunszentmárton;5449
+Kunhegyes;5340
+Kunmadaras;5321
+Kunpeszér;6096
+Kunszállás;6115
+Kunszentmárton;5440
+Kunszentmárton (Kungyalu);5449
+Kunszentmiklós;6090
+Kunsziget;9184
+Kup;8595
+Kupa;3813
+Kurd;7226
+Kurityán;3732
+Kustánszeg;8919
+Kutas;7541
+Kutasó;3066
+Kübekháza;6755
+Külsõsárd;8978
+Külsõvat;9532
+Küngös;8162
+Lábatlan;2541
+Lábod;7551
+Lácacséke;3967
+Lad;7535
+Ladánybene;6045
+Ládbesenyõ;3780
+Lajoskomárom;8136
+Lajosmizse;6050
+Lak;3786
+Lakhegy;8913
+Lakitelek;6065
+Lakócsa;7918
+Lánkapuszta -> Sárvár;9609
+Lánycsók;7759
+Lápafõ;7214
+Lapáncsa;7775
+Laskod;4543
+Lasztonya;8887
+Látrány;8681
+Lázi;8437
+Leányfalu;2016
+Leányvár;2518
+Lébény;9155
+Legénd;2619
+Legyesbénye;3904
+Léh;3832
+Lemezgyár -> Borsodnádasd;3672
+Lénárddaróc;3648
+Lendvadedes;8978
+Lendvajakabfa;8977
+Lengyel;7184
+Lengyeltóti;8693
+Lenti;8960
+Lenti (Lentikápolna);8966
+Lentikápolna -> Lenti;8966
+Lepsény;8132
+Lesencefalu;8318
+Lesenceistvánd;8319
+Lesenceistvánd (Uzsa);8321
+Lesencetomaj;8318
+Létavértes (Nagyléta);4281
+Létavértes (Vértes);4283
+Letenye;8868
+Letkés;2632
+Levél;9221
+Levelek;4555
+Libickozma;8707
+Lickóvadamos;8981
+Liget;7331
+Ligetfalva;8782
+Lillafüred -> Miskolc;3517
+Lipót;9233
+Lippó;7781
+Liptód;7757
+Lispeszentadorján;8888
+Liszó;8831
+Litér;8196
+Litka;3866
+Litke;3186
+Lócs;9634
+Lókút;8425
+Lónya;4836
+Lórév;2309
+Lothárd;7763
+Lovas;8228
+Lovasberény;8093
+Lovászhetény;7720
+Lovászi;8878
+Lovászpatona;8553
+Lökösháza;5743
+Lövõ;9461
+Lövõpetri;4633
+Lõrinci;3021
+Lõrinci (Mátravidéki Erõmû);3022
+Lõrinci (Selyp);3024
+Lucfalva;3129
+Ludányhalászi;3188
+Ludas;3274
+Lukácsháza;9724
+Lulla;8660
+Lúzsok;7838
+Mád;3909
+Madaras;6456
+Madocsa;7026
+Maglóca;9169
+Maglód;2234
+Mágocs;7342
+Magosliget;4953
+Magy;4556
+Magyaralmás;8071
+Magyaratád;7463
+Magyarbánhegyes;5667
+Magyarbóly;7775
+Magyarcsanád;6932
+Magyardombegyház;5838
+Magyaregregy;7332
+Magyaregres;7441
+Magyarföld;8973
+Magyargéc;3133
+Magyargencs;8517
+Magyarhertelend;7394
+Magyarhomorog;4137
+Magyarkeresztúr;9346
+Magyarkeszi;7098
+Magyarlak;9962
+Magyarlukafa;7925
+Magyarmecske;7954
+Magyarnádalja;9909
+Magyarnándor;2694
+Magyarpolány;8449
+Magyarsarlós;7761
+Magyarszecsõd;9912
+Magyarszék;7396
+Magyarszentmiklós;8776
+Magyarszerdahely;8776
+Magyarszombatfa;9946
+Magyartelek;7954
+Majos -> Bonyhád;7187
+Majosháza;2339
+Majs;7783
+Makád;2322
+Makkoshotyka;3959
+Maklár;3397
+Makó;6900
+Makó (Rákos);6903
+Malomsok;8533
+Mályi;3434
+Mályinka;3645
+Mánd;4942
+Mándok;4644
+Mánfa;7304
+Mány;2065
+Maráza;7733
+Marcalgergelyi;7534
+Marcali;8700
+Marcali (Bize);8714
+Marcali (Horvátkút);8709
+Marcaltõ;8532
+Marcaltõ (Ihász);8531
+Márfa;7817
+Máriagyûd -> Siklós;7818
+Máriahalom;2527
+Máriakálnok;9231
+Máriakéménd;7663
+Márianosztra;2629
+Máriapócs;4326
+Markaz;3262
+Márkháza;3075
+Márkó;8441
+Markóc;7967
+Markotabödöge;9164
+Maróc;8888
+Marócsa;7960
+Márok;7774
+Márokföld;8976
+Márokpapi;4932
+Mároslele;4921
+Mártély;6636
+Martfû;5435
+Martonfa;7720
+Martonvásár;2462
+Martonyi;7355
+Mátészalka;4700
+Mátételke;6452
+Mátraballa;3247
+Mátraderecske;3246
+Mátrafüred -> Gyöngyös;3232
+Mátraháza -> Gyöngyös;3233
+Mátrai Erõmû -> Visonta;3272
+Mátrakeresztes -> Pásztó;3082
+Mátramindszent;3155
+Mátranovák;3143
+Mátranovák (Bányatelep);3144
+Mátraszele;3142
+Mátraszentimre;3235
+Mátraszentimre (Galyatetõ);3234
+Mátraszõlõs;3068
+Mátraterenye (Homokterenye);3145
+Mátraterenye (Nádújfalu);3146
+Mátraverebély;3077
+Mátravidéki Erõmû -> Lõrinci;3022
+Matty;7854
+Mátyásdomb;8134
+Mátyus;4835
+Máza;7351
+Mecsekjánosi -> Komló;7305
+Mecseknádasd;7695
+Mecsekpölöske;7305
+Mecsér;9176
+Medgyesbodzás;5663
+Medgyesbodzás (Gábortelep);5664
+Medgyesegyháza;5666
+Medgyesegyháza (Bánkút);5752
+Medina;7057
+Meggyeskovácsi;9757
+Megyaszó;3718
+Megyehíd;9754
+Megyer;8348
+Méhkerék;5726
+Méhtelek;4975
+Mekényes;7344
+Mélykút;6449
+Mencshely;8271
+Mende;2235
+Ménfõcsanak -> Gyõr;9012
+Méntelek -> Kecskemét;6008
+Méra;3871
+Merenye;7981
+Mérges;9136
+Mérk;4352
+Mernye;7453
+Mersevát;9531
+Mesterháza;9662
+Mesteri;9551
+Mesterszállás;5452
+Meszes;3754
+Meszlen;9745
+Mesztegnyõ;8716
+Mezõberény;5650
+Mezõcsát;3450
+Mezõcsokonya;7434
+Mezõd;7370
+Mezõfalva;2422
+Mezõgyán;5732
+Mezõhegyes;5820
+Mezõhék;5453
+Mezõkeresztes;3441
+Mezõkomárom;8137
+Mezõkovácsháza;5800
+Mezõkövesd;3400
+Mezõladány;4641
+Mezõlak;8514
+Mezõmegyer -> Békéscsaba;5671
+Mezõnagymihály;3443
+Mezõnyárád;3421
+Mezõörs;9097
+Mezõörs (Mindszentpuszta);9098
+Mezõpeterd;4118
+Mezõsas;4134
+Mezõszemere;3378
+Mezõszentgyörgy;8133
+Mezõszilas;7017
+Mezõtárkány;3375
+Mezõtúr;5400
+Mezõzombor;3931
+Miháld;8825
+Mihályfa;8341
+Mihálygerge;3184
+Mihályháza;8513
+Mihályi;9342
+Mike;7512
+Mikebuda;2736
+Mikekarácsonyfa;8949
+Mikepércs;4271
+Miklósfa -> Nagykanizsa;8831
+Miklósi;7286
+Mikófalva;3344
+Mikóháza;3989
+Mikosszéplak;9835
+Milejszeg;8917
+Milota;4948
+Mindszent;6630
+Mindszentgodisa;7391
+Mindszentkálla;8282
+Mindszentpuszta -> Mezõörs;9098
+Misefa;8935
+Miske;6343
+Miskolc;3531|3519|3532|3508|3530|3524|3527|3529|3501|3526|3516|3521|3518|3534|3525|3528|3535|3533|3510|3515|3517|3500
+Miskolc (Bükkszentlászló);3510
+Miskolc (Egyetemváros);3515
+Miskolc (Görömböly);3516
+Miskolc (Hejõcsaba);3508
+Miskolc (Lillafüred);3517
+Miskolc (Pereces);3518
+Miskolc (Szirma);3521
+Miskolc (Tapolcafürdõ);3519
+Miszla;7065
+Mizserfa -> Kazár;3147
+Mocsa;2911
+Mogyoród;2146
+Mogyorósbánya;2535
+Mogyoróska;3893
+Moha;8042
+Mohács;7700
+Mohács (Sárhát);7715
+Mohács (Újmohács);7714
+Mohora;2698
+Molnári;8863
+Molnaszecsõd;9912
+Molvány;7981
+Monaj;3812
+Monok;3905
+Monor;2200
+Monor (Monori Erdõ);2213
+Mónosbél;3345
+Monostorapáti;8296
+Monostorpályi;4275
+Monoszló;8273
+Monyoród;7751
+Mór;8060
+Mórágy;7165
+Mórahalom;6782
+Móricgát;6132
+Mórichida;9131
+Mosdós;7257
+Mosonmagyaróvár;9200
+Mosonszentjános -> Jánossomorja;9241
+Mosonszentmiklós;9154
+Mosonszentmiklós (Mosonújhely);9183
+Mosonszolnok;9245
+Mosonújhely -> Mosonszentmiklós;9183
+Mozsgó;7932
+Mõcsény;7163
+Mõzs -> Tolna;7131
+Mucsfa;7185
+Mucsi;7195
+Múcsony;3744
+Muhi;3552
+Murakeresztúr;8834
+Murarátka;8868
+Muraszemenye;8872
+Murga;7176
+Murony;5672
+Nábrád;4911
+Nadap;8097
+Nádasd;9915
+Nádasdladány;8145
+Nádudvar;4181
+Nádújfalu -> Mátraterenye;3146
+Nágocs;8674
+Nagyacsád;8521
+Nagyalásony;8484
+Nagyar;4922
+Nagyatád;7500
+Nagybajcs;9063
+Nagybajom;7561
+Nagybakónak;8821
+Nagybánhegyes;5668
+Nagybaracska;6527
+Nagybarca;3641
+Nagybárkány;3075
+Nagybátony -> Bátonyterenye;3070
+Nagyberény;8656
+Nagyberki;7255
+Nagybörzsöny;2634
+Nagybudmér;7756
+Nagycenk;9485
+Nagycsány;7964
+Nagycsécs;3598
+Nagycsepely;8628
+Nagycserkesz;4445
+Nagydém;8554
+Nagydobos;4823
+Nagydobsza;7985
+Nagydorog;7044
+Nagyecsed;3455
+Nagyér;6917
+Nagyesztergár;8415
+Nagyfüged;3282
+Nagygeresd;9664
+Nagygörbõ;8356
+Nagygyimót;8551
+Nagyhajmás;7343
+Nagyhalász;4485
+Nagyharsány;7822
+Nagyhegyes;4064
+Nagyhódos;4977
+Nagyhuta;3994
+Nagyigmánd;2942
+Nagyiván;5363
+Nagykálló;4320
+Nagykamarás;5751
+Nagykanizsa;8800
+Nagykanizsa (Miklósfa);8831
+Nagykanizsa (Palin);8808
+Nagykanizsa (Sánc);8809
+Nagykapornak;8935
+Nagykarácsony;2425
+Nagykáta;2760
+Nagykereki;4127
+Nagykinizs;3844
+Nagykónyi;7092
+Nagykopárd;7545
+Nagykovácsi;2094
+Nagykozár;7741
+Nagykökényes;3012
+Nagykölked;9784
+Nagykörû;5065
+Nagykõrös;2750
+Nagykutas;8911
+Nagylak;6933
+Nagylengyel;8983
+Nagyléta -> Létavértes;4281
+Nagylóc;3175
+Nagylók;2435
+Nagylózs;9482
+Nagymacs -> Debrecen;4063
+Nagymágocs;6622
+Nagymányok;7355
+Nagymaros;2626
+Nagymizdó;7713
+Nagynyárád;7784
+Nagyoroszi;2645
+Nagypáli;8912
+Nagypall;7731
+Nagypeterd;7912
+Nagypirit;8496
+Nagypród -> Hajdúböszörmény;4074
+Nagyrábé;4173
+Nagyrada;8746
+Nagyrákos;9938
+Nagyrécse;8756
+Nagyréde;3214
+Nagyrév;5463
+Nagyrozvágy;3965
+Nagysáp;2524
+Nagysimonyi;9561
+Nagyszakácsi;8739
+Nagyszékely;7085
+Nagyszekeres;4962
+Nagyszénás;5931
+Nagyszentjános;9072
+Nagyszokoly;7097
+Nagytálya;3397
+Nagytarcsa;2142
+Nagytevel;8562
+Nagytilaj;9832
+Nagytótfalu;7800
+Nagytõke;6612
+Nagyút;3357
+Nagyvarsány;4812
+Nagyváty;7940
+Nagyvázsony;8291
+Nagyvejke;7186
+Nagyveleg;8065
+Nagyvenyim;2421
+Nagyvisnyó;3349
+Nak;7215
+Napkor;4552
+Nárai;9797
+Narda;9793
+Naszály;2899
+Négyes;3463
+Nekézseny;3646
+Nemesapáti;8923
+Nemesbikk;3592
+Nemesborzova;4942
+Nemesbõd;9749
+Nemesbük;8371
+Nemescsó;9739
+Nemesdéd;8722
+Nemesgörzsöny;8522
+Nemesgulács;8284
+Nemeshany;8471
+Nemeshetés;8925
+Nemeske;7981
+Nemeskér;9471
+Nemeskeresztúr;9548
+Nemeskisfalud;8717
+Nemeskocs;9542
+Nemeskolta;9775
+Nemesládony;9663
+Nemesmedves;9953
+Nemesnádudvar;6345
+Nemesnép;8976
+Nemespátró;8856
+Nemesrádó;8915
+Nemesrempehollós;9782
+Nemessándorháza;8925
+Nemesszalók;9533
+Nemesszentandrás;8925
+Nemesvámos;8248
+Nemesvid;8738
+Nemesvita;8311
+Németbánya;8581
+Németfalu;8918
+Németkér;7039
+Nemti;3152
+Neszmély;2544
+Nézsa;2618
+Nick;9652
+Nikla;8706
+Nógrád;2642
+Nógrádkövesd;2691
+Nógrádmarcal;2675
+Nógrádmegyer;3132
+Nógrádsáp;2685
+Nógrádsipek;3179
+Nógrádszakál;3187
+Nóráp;8591
+Noszlop;8456
+Noszvaj;3325
+Nova;8948
+Novaj;3327
+Novajidrány;3872
+Nõtincs;2610
+Nyalka;9096
+Nyárád;8512
+Nyáregyháza;2723
+Nyárlõrinc;6032
+Nyársapát;2712
+Nyékládháza;3433
+Nyergesújfalu;2536
+Nyergesújfalu (Viscosa);2537
+Nyésta;3809
+Nyim;8612
+Nyírábrány;4264
+Nyíracsád;4262
+Nyirád;8454
+Nyíradony;4254
+Nyíradony (Aradványpuszta);4253
+Nyíradony (Tamásipuszta);4252
+Nyírbátor;4300
+Nyírbéltek;4372
+Nyírbogát;4361
+Nyírbogdány;4511
+Nyírcsaholy;4356
+Nyírcsászári;4331
+Nyírderzs;4332
+Nyíregyháza;4400
+Nyíregyháza (Borbánya);4405
+Nyíregyháza (Butykatelep);4246
+Nyíregyháza (Felsõsima);4433
+Nyíregyháza (Nyírszõlõs);4432
+Nyíregyháza (Oros);4551
+Nyíregyháza (Sóstófürdõ);4431
+Nyíregyháza (Sóstóhegy);4481
+Nyírgelse;4362
+Nyírgyulaj;4311
+Nyíri;3997
+Nyíribrony;4535
+Nyírjákó;4541
+Nyírkarász;4544
+Nyírkáta;4333
+Nyírkércs;4537
+Nyírlövõ;4632
+Nyírlugos;4371
+Nyírmada;4564
+Nyírmártonfalva;4263
+Nyírmeggyes;4722
+Nyírmihálydi;4363
+Nyírparasznya;4822
+Nyírpazony;4531
+Nyírpilis;4376
+Nyírszõlõs -> Nyíregyháza;4432
+Nyírtass;4522
+Nyírtelek;4461
+Nyírtét;4554
+Nyírtura;4532
+Nyírvasvári;4341
+Nyomár;3795
+Nyõgér;9682
+Nyugotszenterzsébet;7912
+Nyúl;9082
+Óbánya;7695
+Óbarok -> Bicske;2063
+Óbudavár;8272
+Ócsa;2364
+Ócsárd;7814
+Ófalu;7695
+Ófehértó;4558
+Óföldeák;6923
+Óhíd;8342
+Okány;5534
+Okorág;7957
+Okorvölgy;7681
+Olasz;7745
+Olaszfa;9824
+Olaszfalu;8414
+Olaszliszka;3933
+Olcsva;4826
+Olcsvaapáti;4914
+Old;7824
+Ólmod;9733
+Oltárc;8886
+Onga;3562
+Ónod;3551
+Ópályi;4821
+Ópusztaszer;6767
+Orbányosfa;8935
+Orci;7400
+Ordacsehi;8635
+Ordas;6335
+Orfalu;9982
+Orfû;7677
+Orgovány;6077
+Ormándlak;8983
+Ormosbánya;3743
+Oros -> Nyíregyháza;4551
+Orosháza;5900
+Orosháza (Gyopárosfürdõ);5904
+Orosháza (Rákóczitelep);5903
+Orosháza (Szentetornya);5905
+Oroszi;8458
+Oroszlány;2840
+Oroszló;7370
+Orosztony;8744
+Ortaháza;8954
+Osli;9354
+Ostffyasszonyfa;9512
+Ostoros;3326
+Oszkó;9825
+Oszlár;3591
+Osztopány;7444
+Ózd;3600
+Ózd (Bánszállás);3604
+Ózd (Center);3651
+Ózd (Farkaslyuk-bányatelep);3608
+Ózd (Hódoscsépány);3661
+Ózd (Sajóvárkony);3603
+Ózd (Somsálybánya);3662
+Ózd (Szentsimon);3625
+Ózd (Uraj);3621
+Ózdfalu;7836
+Ozmánbük;8998
+Ozora;7086
+Öcs;8292
+Öcsöd;5451
+Ököritófülpös;4755
+Ölbõ;9621
+Ömböly;4373
+Öntésmajor -> Kapuvár;9339
+Öregcsertõ;6311
+Öreglak;8697
+Örkény;2377
+Örményes;5222
+Örménykút;5556
+Örvényes;8242
+Öskü;8191
+Öttevény;9153
+Öttömös;6784
+Ötvöskönyi;7511
+Õcsény;7143
+Õr;4336
+Õrbottyán;2162
+Õrhalom;2671
+Õrimagyarósd;9933
+Õriszentpéter;9941
+Õrtilos;8854
+Õsagárd;2616
+Õsi;8161
+Pácin;3964
+Pacsa;8761
+Pácsony;9823
+Padár;8935
+Padragkút -> Ajka;8451
+Páhi;6075
+Páka;8956
+Pakod;8799
+Pákozd;8095
+Paks;7030
+Paks (Dunakömlõd);7027
+Palé;7370
+Pálfa;7042
+Pálfiszeg;8917
+Pálhalma -> Dunaújváros;2407
+Pálháza;3994
+Páli;9345
+Palin -> Nagykanizsa;8808
+Palkonya;7771
+Pálmajor;7561
+Pálmonostora;6112
+Palotabozsok;7727
+Palotás;3042
+Paloznak;8229
+Pamlény;3821
+Pamuk;8698
+Pánd;2214
+Pankasz;9937
+Pannonhalma;9090
+Pányok;3898
+Panyola;4913
+Pap;4631
+Pápa;8500
+Pápa (Borsosgyõr);8511
+Pápa (Kéttornyúlak);8591
+Pápa (Tapolcafõ);8598
+Pápadereske;8593
+Pápakovácsi;8596
+Pápasalamon;8594
+Pápateszér;8556
+Papkeszi;8183
+Pápoc;9515
+Papos;4338
+Páprád;7838
+Parád;3240
+Parád (Parádfürdõ);3244
+Parádfürdõ -> Parád;3244
+Parádsasvár;3242
+Parasznya;3777
+Pári -> Tamási;7091
+Parkváros -> Érd;2035
+Paszab;4475
+Pásztó;3060
+Pásztó (Hasznos);3065
+Pásztó (Mátrakeresztes);3082
+Pásztori;9311
+Pat;8825
+Patak;2648
+Patalon;7463
+Patapoklosi;7922
+Patca;7477
+Pátka;8092
+Patosfa;7536
+Pátroha;4523
+Patvarc;2668
+Páty;2071
+Pátyod;4766
+Pázmánd;2476
+Pázmándfalu;9085
+Pécel;2119
+Pecöl;9754
+Pécs;7691|7634|7633|7626|7632|7625|7623|7636|7631|7629|7624|7627|7630|7635|7622|7628|7621|7693
+Pécs (Hird);7693
+Pécs (Vasas);7691
+Pécsbagota;7951
+Pécsdevecser;7766
+Pécsely;8245
+Pécsudvar;7762
+Pécsvárad;7720
+Pellérd;7831
+Pélpuszta -> Szabadhidvég;8139
+Pély;3381
+Penc;2614
+Penészlek;4267
+Penyige;4941
+Pénzesgyõr;8426
+Pér;9099
+Perbál;2074
+Pere;3853
+Pereces -> Miskolc;3518
+Perecse;3821
+Pereked;7664
+Peremarton Gyártelep -> Berhida;8182
+Peresznye;9734
+Pereszteg;9484
+Perkáta;2431
+Perkupa;3756
+Pernye;9722
+Perõcsény;2637
+Pételi;2209
+Peterd;7766
+Péterhida;7582
+Pétervására;3250
+Pétfürdõ -> Várpalota;8105
+Pethõhenye;8921
+Petneháza;4542
+Petõfibánya;3023
+Petõfiszállás;6113
+Petõháza;9443
+Petõmihályfa;9826
+Petrikeresztúr;8984
+Petrivente;8866
+Pettend;7972
+Pilis;2721
+Pilisborosjenõ;2097
+Piliscsaba;2081
+Piliscsév;2519
+Pilisjászfalu;2080
+Pilismarót;2028
+Pilisszántó;2095
+Pilisszentiván;2084
+Pilisszentkereszt;2098
+Pilisszentlászló;2009
+Pilisvörösvár;2085
+Pincehely;7084
+Pinkamindszent;9922
+Pinnye;9481
+Piricse;4375
+Piriny;3134
+Pirtó;6414
+Piskó;7838
+Pitvaros;6914
+Pócsa;7756
+Pocsaj;4125
+Pócsmegyer;2017
+Pócspetri;4327
+Pogány;7666
+Pogányszentpéter;8728
+Pókaszepetk;8932
+Polány;7458
+Polgár;4090
+Polgárdi;8154
+Pomáz;2013
+Porcsalma;4761
+Pornóapáti;9796
+Poroszló;3388
+Porpác;9612
+Porrog;8858
+Porrogszentkirály;8858
+Porrogszentpál;8858
+Porszombat;8986
+Portelek -> Jászberény;5152
+Porva;8429
+Pósfa;9636
+Potony;7977
+Potyond;9324
+Pölöske;8929
+Pölöskefõ;8773
+Pörböly;7142
+Pördefölde;8956
+Pötréte;8767
+Prügy;3925
+Pula;8291
+Pusztaapáti;8986
+Pusztaberki;2658
+Pusztacsalád;9373
+Pusztacsó;9739
+Pusztadobos;4564
+Pusztaederics;8946
+Pusztaegres -> Sárbogárd;7018
+Pusztafalu;3995
+Pusztahencse;7038
+Pusztakovácsi;8707
+Pusztamagyaród;8895
+Pusztamérges;6785
+Pusztamiske;8455
+Pusztamonostor;5125
+Pusztaottlaka;5665
+Pusztaradvány;3874
+Pusztasomorja -> Jánossomorja;9242
+Pusztaszabolcs;2490
+Pusztaszemes;8619
+Pusztaszentlászló;8896
+Pusztaszer;6769
+Pusztaszõlõs -> Tótkomlós;5949
+Pusztavacs;2378
+Pusztavám;8066
+Pusztazámor;2039
+Pusztföldvár;5919
+Putnok;3630
+Püski;9235
+Püspökhatvan;2682
+Püspökladány;4150
+Püspökmolnári;9776
+Püspökszilágy;2166
+Rábacsanak;9313
+Rábacsécsny;9136
+Rábafüzes -> Szentgotthárd;9955
+Rábagyarmat;9961
+Rábahidvég;9777
+Rábakecöl;9344
+Rábapatona;9142
+Rábapaty;9641
+Rábapordány;9146
+Rábasebes;9327
+Rábasömjén -> Sárvár;9608
+Rábaszentandrás;9316
+Rábaszentmihály;9135
+Rábaszentmiklós;9133
+Rábatamási;9322
+Rábatöttös;9766
+Rábcakapi;9165
+Rácalmás;2459
+Ráckeresztúr;2465
+Ráckeve;2300
+Rád;2613
+Rádfalva;7846
+Rádockölked;9784
+Radostyán;3776
+Ragály;3724
+Rajka;9224
+Rakaca;3825
+Rakacaszend;3826
+Rakamaz;4465
+Rákóczifalva;5085
+Rákóczitelep -> Bátonyterenye;3151
+Rákóczitelep -> Orosháza;5903
+Rákócziújfalu;5084
+Rákos -> Makó;6903
+Ráksi;7464
+Ramocsa;8973
+Ramocsaháza;4536
+Rápolt;4756
+Ráposka;8300
+Rásonysápberencs;3833
+Rátka;3908
+Rátót;9951
+Ravazd;9091
+Recsk;3245
+Réde;2886
+Rédics;8978
+Regéc;3893
+Regenye;7833
+Regöly;7193
+Rém;6446
+Répáskuta;3559
+Répcelak;9653
+Répceszemere;9375
+Répceszentgyörgy;9623
+Répcevis;9475
+Resznek;8977
+Rétalap;9074
+Rétközberencs;4525
+Rétság;2651
+Révfülöp;8253
+Révleányvár;3976
+Rezi;8373
+Ricse;3974
+Rigács;8348
+Rigyác;8883
+Rimóc;3177
+Rinyabesenyõ;7552
+Rinyakovácsi;7527
+Rinyaszentkirály;7513
+Rinyújlak;7556
+Rinyújnép;7584
+Rohod;4563
+Románd;8434
+Romhány;2654
+Romonya;7761
+Rózsafa;7914
+Rozsály;4971
+Rózsaszentmárton;3033
+Röjtökmuzsaj;9451
+Rönök;9954
+Röszke;6758
+Rudabánya;3733
+Rudabányácska -> Sátoraljaújhely;3945
+Rudolftelep;3742
+Rum;9766
+Ruzsa;6786
+Ságújfalu;3162
+Ságvár;8654
+Sajóbábony;3792
+Sajóecseg;3793
+Sajógalgóc;3636
+Sajóhidvég;3576
+Sajóivánka;3720
+Sajókápolna;3773
+Sajókaza;3720
+Sajókeresztúr;3791
+Sajólád;3572
+Sajólászlófalva;3773
+Sajómercse;3656
+Sajónémeti;3652
+Sajóörs;3586
+Sajópálfala;3714
+Sajópetri;3573
+Sajópüspöki;3653
+Sajósenye;3712
+Sajószentpéter;3770
+Sajószöged;3599
+Sajóvámos;3712
+Sajóvárkony -> Ózd;3603
+Sajóvelezd;3656
+Sajtoskál;9632
+Salföld;8256
+Salgóbánya -> Salgótarján;3109
+Salgótarján;3100
+Salgótarján (Baglyasalja);3102
+Salgótarján (Salgóbánya);3109
+Salgótarján (Somoskõújfalu);3121
+Salgótarján (Zagyvapálfalva);3104
+Salgótarján (Zagyvaróna);3141
+Salköveskút;9742
+Salomvár;8995
+Sály;3425
+Sámod;7841
+Sámsonháza;3074
+Sánc -> Nagykanizsa;8809
+Sand;8824
+Sándorfalva;6762
+Sántos;7479
+Sáp;4176
+Sáránd;4272
+Sárazsadány;3942
+Sárbogárd;7000
+Sárbogárd (Pusztaegres);7018
+Sárbogárd (Sárszentmiklós);7003
+Sáregres;7014
+Sárfimizdó;9813
+Sárhát -> Mohács;7715
+Sárhida;8944
+Sári -> Dabas;2371
+Sárisáp;2523
+Sarkad;5720
+Sarkad (Cukorgyár);5722
+Sarkadkeresztúr;5731
+Sárkeresztes;8051
+Sárkeresztúr;8125
+Sárkeszi;8144
+Sármellék;8391
+Sárok;7782
+Sárosd;2433
+Sárospatak;3950
+Sárospatak (Végardó);3952
+Sárpilis;7145
+Sárrétudvari;4171
+Sarród;9435
+Sarród (Fertõújlak);9434
+Sárszentágota;8126
+Sárszentlõrinc;7047
+Sárszentmihály;8143
+Sárszentmiklós -> Sárbogárd;7003
+Sarúd;3386
+Sárvár;9600
+Sárvár (Lánkapuszta);9609
+Sárvár (Rábasömjén);9608
+Sásd;7370
+Sáska;8308
+Sáta;3659
+Sátoraljaújhely;3980
+Sátoraljaújhely (Károlyfalva);3944
+Sátoraljaújhely (Rudabányácska);3945
+Sátoraljaújhely (Széphalom);3988
+Sátorhely;7785
+Sávoly;8732
+Sé;9789
+Segesd;7562
+Sellye;7960
+Selyeb;3809
+Selyp -> Lõrinci;3024
+Semjén;3974
+Semjénháza;8862
+Sénye;8788
+Sényõ;4533
+Seregélyes;8111
+Serényfalva;3729
+Sérsekszõlõs;8660
+Sikátor;8439
+Siklós;7800
+Siklós (Máriagyûd);7818
+Siklósbodony;7814
+Siklósnagyfalu;7823
+Sima;3881
+Simaság;9633
+Simonfa;7474
+Simontornya;7081
+Sinatelep -> Ercsi;2453
+Sióagárd;7171
+Siófok;8600
+Siófok (Balatonkiliti);8611
+Siófok (Balatonszéplak);8609
+Siójut;8652
+Sirok;3332
+Sitke;9671
+Sobor;9315
+Sokorópátka;9112
+Solt;6320
+Soltszentimre;6223
+Soltvadkert;6230
+Soly;8193
+Solymár;2083
+Som;8655
+Somberek;7728
+Somlójenõ;8478
+Somlószõlõs;8483
+Somlóvásárhely;8481
+Somlóvecse;8484
+Somodor;7454
+Somogyacsa;7283
+Somogyapáti;7922
+Somogyaracs;7584
+Somogyaszaló;7452
+Somogybabod;8684
+Somogybükkösd;8858
+Somogycsicsó;8726
+Somogydöröcske;7284
+Somogyegres;8660
+Somogyfajsz;8708
+Somogygeszti;7455
+Somogyhárságy;7925
+Somogyhatvan;7921
+Somogyjád;7443
+Somogymeggyes;8673
+Somogysámson;8733
+Somogysárd;7435
+Somogysimonyi;8737
+Somogyszentpál;8705
+Somogyszil;7276
+Somogyszob;7563
+Somogytarnóca -> Barcs;7557
+Somogytúr;8683
+Somogyudvarhely;7515
+Somogyvámos;8699
+Somogyvár;8698
+Somogyviszló;7922
+Somogyzsitfa;8734
+Somoskõújfalu -> Salgótarján;3121
+Somsálybánya -> Ózd;3662
+Sonkád;4954
+Soponya;8123
+Sopron;9400
+Sopron (Balf);9494
+Sopron (Brennbergbánya);9408
+Sopron (Sopronkõhida);9407
+Sopronhorpács;9463
+Sopronkövesd;9483
+Sopronkõhida -> Sopron;9407
+Sopronnémeti;9325
+Sorkifalud;9774
+Sorkikápolna;9774
+Sormás;8881
+Sorokpolány;9773
+Sósbertike;7960
+Sóshartyán;3131
+Sóskút;2038
+Sóstófalva;3716
+Sóstófürdõ -> Nyíregyháza;4431
+Sóstóhegy -> Nyíregyháza;4481
+Sótony;9681
+Söjtör;8897
+Söpte;9743
+Söréd;8072
+Sukoró;8096
+Sumony;7960
+Súr;2889
+Surd;8856
+Surjány -> Törökszentmiklós;5212
+Sükösd;6346
+Sülysáp (Tápiósáp);2242
+Sülysáp (Tápiósüly);2241
+Sümeg;8330
+Sümegcsehi;8357
+Sümegprága;8351
+Süttõ;2543
+Szabadbattyán;8151
+Szabadegyháza;2432
+Szabadhidvég;8138
+Szabadhidvég (Pélpuszta);8139
+Szabadi;7253
+Szabadkígyós;5712
+Szabadszállás;6080
+Szabadszentkirály;7951
+Szabás;7544
+Szabolcs;4467
+Szabolcsbáka;4547
+Szabolcsveresmart;4496
+Szada;2111
+Szágy;7383
+Szajk;7753
+Szajla;3334
+Szajol;5081
+Szakácsi;3786
+Szakadát;7071
+Szakáld;3596
+Szakály;7192
+Szakcs;7213
+Szakmár;6336
+Szaknyér;9934
+Szakoly;4234
+Szakony;9474
+Szakonyfalu;9983
+Szákszend;2856
+Szalafõ;9942
+Szalánta;7811
+Szalapa;8341
+Szalaszend;3863
+Szalatnak;7334
+Szálka;7121
+Szalkaszentmárton;6086
+Szalmatercs;3163
+Szalonna;3754
+Szamosangyalos;4767
+Szamosbecs;4745
+Szamoskér;4721
+Szamossályi;4735
+Szamosszeg;4824
+Szamostatárfalva;4746
+Szamosújlak;4734
+Szanda;2697
+Szandaszõlõs -> Szolnok;5008
+Szank;6131
+Szántód -> Zamárdi;8622
+Szany;9317
+Szápár;8423
+Szapárfalu -> Fegyvernek;5213
+Szaporca;7843
+Szár;2066
+Szárász;7184
+Szárazd;7063
+Szárföld;9353
+Szárliget;2067
+Szarvas;5540
+Szarvasgede;3051
+Szarvaskend;9913
+Szarvaskõ -> Eger;3323
+Szászberek;5053
+Szászfa;3821
+Szászhalombatta;2440
+Szászvár;7349
+Szatmárcseke;4945
+Szátok;2656
+Szatta;9938
+Szatymaz;4743
+Szava;7813
+Szebény;7725
+Szécsénke;2692
+Szécsény;3170
+Szécsényfelfalu;3135
+Szécsisziget;8879
+Szederkény;7751
+Szedres;7056
+Szeged;6726|6753|6727|6724|6729|6791|6722|6723|6710|6725|6750|6728|6757|6720|6771|6721
+Szeged (Algyõ);6750
+Szeged (Gyálarét);6757
+Szeged (Kiskundorozsma);6791
+Szeged (Szentmihály);6710
+Szeged (Szõreg);6771
+Szeged (Tápé);6753
+Szegerdõ;8711
+Szeghalom;5520
+Szegi;3918
+Szegilong;3918
+Szegvár;6635
+Székely;4534
+Székelyszabar;7737
+Székesfehérvár;8000
+Székkutas;6821
+Szekszárd;7100
+Szeleste;9622
+Szelevény;5476
+Szelidi tó -> Dunapataj;6329
+Szellõ;7661
+Szemely;7763
+Szemenye;9685
+Szemere;3866
+Szendehely;2640
+Szendrõ;3752
+Szendrõlád;3751
+Szenna;7477
+Szenta;8849
+Szentantalfa;8272
+Szentbalázs;7472
+Szentbékkálla;8281
+Szentborbás;7918
+Szentdénes;7913
+Szentdomonkos;3258
+Szente;2655
+Szentegát;7915
+Szentendre;2000
+Szentes;6600
+Szentes (Cserebökény);6613
+Szentetornya -> Orosháza;5905
+Szentgál;8444
+Szentgáloskér;7465
+Szentgotthárd;9970
+Szentgotthárd (Farkasfa);9981
+Szentgotthárd (Rábafüzes);9955
+Szentgyörgyvár;8393
+Szentgyörgyvölgy;8975
+Szentimrefalva;8475
+Szentistván;3418
+Szentistvánbaksa;3844
+Szentjakabfa;8272
+Szentkatalin;7681
+Szentkirály;6031
+Szentkirály -> Szombathely;9719
+Szentkirályszabadja;8225
+Szentkozmadombja;8947
+Szentlászló;7936
+Szentliszló;8893
+Szentlõrinc;7940
+Szentlõrinckáta;2255
+Szentmargitfalva;8872
+Szentmártonkáta;2254
+Szentmihály -> Szeged;6710
+Szentpéterfa;9799
+Szentpéterfölde;8953
+Szentpéterszeg;4121
+Szentpéterúr;8762
+Szentsimon -> Ózd;3625
+Szenyér;8717
+Szepetnek;8861
+Széphalom -> Sátoraljaújhely;3988
+Szerecseny;8544
+Szeremle;6512
+Szerencs;3900
+Szerep;4163
+Szerep (Hosszúhát);4162
+Szergény;9523
+Szigetbecse;2321
+Szigetcsép;2317
+Szigethalom;2315
+Szigetmonostor;2015
+Szigetszentmárton;2318
+Szigetszentmiklós;2310
+Szigetújfalu;2319
+Szigetvár;7900
+Szigliget;8264
+Szihalom;3377
+Szijártóháza;8969
+Szikáncs -> Hódmezõvásárhely;6806
+Szikszó;3800
+Szil;9326
+Szilágy;7664
+Szilasliget -> Kerepes;2145
+Szilaspogony;3125
+Szilsárkány;9312
+Szilvágy;8986
+Szilvás;7833
+Szilvásszentmárton;7477
+Szilvásvárad;3348
+Szin;3761
+Szinpetri;3761
+Szirák;3044
+Szirma -> Miskolc;3521
+Szirmabesenyõ;3711
+Szob;2628
+Szokolya;2624
+Szólád;8625
+Szolnok;5000
+Szolnok (Szandaszõlõs);5008
+Szombathely;9700
+Szombathely (Herény);9707
+Szombathely (Szentkirály);9719
+Szomód;2896
+Szomolya;3411
+Szomor;2822
+Szorosad;7285
+Szögliget;3762
+Szörény;7976
+Szõc;8452
+Szõce;9935
+Szõd;2134
+Szõdliget;2133
+Szõke;7833
+Szõkéd;7763
+Szõkedencs;8736
+Szõlõsardó;3757
+Szõlõsgyörök;8692
+Szõlõskislak -> Balatonboglár;8691
+Szõny -> Komárom;2921
+Szõreg -> Szeged;6771
+Szúcs;3341
+Szuha;3154
+Szuhafõ;3726
+Szuhakálló;3731
+Szuhogy;3734
+Szulimán;7932
+Szulok;7539
+Szurdokpüspöki;3064
+Szücsi;3034
+Szügy;2699
+Szûr;7735
+Tab;8660
+Tabajd;8088
+Tabdi;6224
+Táborfalva;2381
+Tác;8121
+Tagyon;8272
+Tahi -> Tahitótfalu;2022
+Tahitótfalu;2021
+Tahitótfalu (Tahi);2022
+Takácsi;8541
+Tákos;4845
+Taksony;2335
+Taktabáj;3926
+Taktaharkány;3922
+Taktakenéz;3924
+Taktaszada;3921
+Taliándörögd;8295
+Tállya;3907
+Tamási;7090
+Tamási (Pári);7091
+Tamásipuszta -> Nyíradony;4252
+Tanakajd;9762
+Táp;9095
+Tápé -> Szeged;6753
+Tápióbicske;2764
+Tápióság;2253
+Tápiósáp -> Sülysáp;2242
+Tápiósüly -> Sülysáp;2241
+Tápiószecsõ;2251
+Tápiószele;2766
+Tápiószentmárton;2711
+Tápiószõlõs;2769
+Táplánszentkereszt;9761
+Tápoiógyörgye;2767
+Tapolca;8300
+Tapolca (Diszel);8297
+Tapolcafõ -> Pápa;8598
+Tapolcafürdõ -> Miskolc;3519
+Tapsony;8718
+Tápszentmiklós;9094
+Tar;3073
+Tarany;7514
+Tarcal;3915
+Tard;3416
+Tardona;3644
+Tardos;2834
+Tarhos;5641
+Tarján;2831
+Tarjánpuszta;9092
+Tárkány;2945
+Tarnabod;3369
+Tarnalelesz;3258
+Tarnaméra;3284
+Tarnaörs;3294
+Tarnaszentmária;3331
+Tarnaszentmiklós;3382
+Tarnazsadány;3283
+Tárnok;2461
+Tárnokréti;9165
+Tarpa;4931
+Tarrós;9362
+Táska;8696
+Tass;6098
+Taszár;7261
+Tát;2534
+Tata;2890
+Tata (Agostyán);2835
+Tatabánya;2800
+Tataháza;6451
+Tatárszentgyörgy;2375
+Tázlár;6236
+Tedej -> Hajdúnánás;4085
+Téglás;4243
+Tekenye -> Zalaszentgrót;8793
+Tékes;7381
+Teklafalu;7973
+Telekes;9812
+Telekgerendás;5675
+Telekháza -> Egyek;4067
+Teleki;8626
+Telki;2089
+Telkibánya;3896
+Tengelic;7054
+Tengeri;7834
+Tengõd;8668
+Tenk;3359
+Tényõ;9111
+Tépe;4132
+Terem;4342
+Terény;2696
+Tereske;2652
+Teresztenye;3757
+Terpes;3334
+Tés;8109
+Tésa;2635
+Tésenfa;7843
+Téseny;7834
+Teskánd;8991
+Tét;9100
+Tetétlen;4184
+Tevel;7181
+Tibolddaróc;3423
+Tiborszállás;4353
+Tihany;8237
+Tikos;8731
+Tilaj;8782
+Timár;4466
+Tinnye;2086
+Tiszaadony;4833
+Tiszaalpár (Alpár);6066
+Tiszaalpár (Tiszaújfalu);6067
+Tiszabábolna;3465
+Tiszabecs;4951
+Tiszabercel;4474
+Tiszaberek;4969
+Tiszabezdéd;4624
+Tiszabög -> Tiszakécske;6062
+Tiszabõ;5232
+Tiszabura;5235
+Tiszacsécse;4947
+Tiszacsege;4066
+Tiszacsermely;3972
+Tiszadada;4455
+Tiszaderzs;5243
+Tiszadob;4456
+Tiszadorogma;3466
+Tiszaeszlár;4464
+Tiszaeszlár (Bashalom);4446
+Tiszaföldvár;5430
+Tiszaföldvár (Homok);5461
+Tiszafüred;5350
+Tiszafüred (Kócsújfalu);5359
+Tiszafüred (Tiszaörvény);5358
+Tiszafüred (Tiszaszõlõs);5244
+Tiszagyenda;5233
+Tiszagyulaháza;4097
+Tiszaigar;5361
+Tiszainoka;5464
+Tiszajenõ;5094
+Tiszakanyár;4493
+Tiszakarád;3971
+Tiszakécske;6060
+Tiszakécske (Tiszabög);6062
+Tiszakerecseny;4834
+Tiszakeszi;3458
+Tiszakóród;4946
+Tiszakürt;5471
+Tiszakürt (Bogaras);5472
+Tiszaladány;3929
+Tiszalök;4450
+Tiszalök (Kisfástanya);4447
+Tiszalúc;3565
+Tiszamogyorós;4645
+Tiszanagyfalu;4463
+Tiszanána;3385
+Tiszaörs;5362
+Tiszaörvény -> Tiszafüred;5358
+Tiszapalkonya;3587
+Tiszapüspöki;5211
+Tiszarád;4503
+Tiszaroff;5234
+Tiszasas;5474
+Tiszasüly;5061
+Tiszaszalka;4831
+Tiszaszentimre;5322
+Tiszaszentimre (Újszentgyörgy);5323
+Tiszaszentmárton;4628
+Tiszasziget;6756
+Tiszaszõlõs -> Tiszafüred;5244
+Tiszatardos;3928
+Tiszatarján;3589
+Tiszatelek;4487
+Tiszatelek (Kétérköz);4486
+Tiszatenyõ;5082
+Tiszaug;5473
+Tiszaújfalu -> Tiszaalpár;6067
+Tiszaújváros;3580
+Tiszavalk;3464
+Tiszavárkony;5092
+Tiszavasvári;4440
+Tiszavid;4832
+Tivadar;4921
+Tóalmás;2252
+Tófalu;3354
+Tófej;8946
+Tófû;7348
+Tokaj;3910
+Tokod;2531
+Tokodaltáró;2532
+Tokorcs;9561
+Tolcsva;3934
+Told;4117
+Tolmács;2657
+Tolna;7130
+Tolna (Mõzs);7131
+Tolnanémedi;7083
+Tomajmonostora;5324
+Tomor;3787
+Tompa;6422
+Tompaládony;9662
+Tordas;2463
+Tormafölde;8876
+Tormás;7383
+Tormásliget;9736
+Tornabarakony;3765
+Tornakápolna;3757
+Tornanádaska;3767
+Tornaszentandrás;3765
+Tornaszentjakab;3769
+Tornyiszentmiklós;8877
+Tornyosnémeti;3877
+Tornyospálca;4642
+Torony;9791
+Torvaj;8660
+Tószeg;5091
+Tótkomlós;5940
+Tótkomlós (Pusztaszõlõs);5949
+Tótszentgyörgy;7981
+Tótszentmárton;8865
+Tótszerdahely;8864
+Tótújfalu;7918
+Tótvázsony;8246
+Tök;2073
+Tököl;2316
+Töltéstava;9086
+Tömörd;9738
+Tömörkény;6646
+Törökbálint;2045
+Törökkoppány;7285
+Törökszentmiklós;5200
+Törökszentmiklós (Surjány);5212
+Törtel;2747
+Töttös;7755
+Tõzeggyármajor -> Fertõd;9433
+Trizs;3724
+Tunyogmatolcs;4731
+Tura;2194
+Túristvándi;4944
+Túrkeve;5420
+Túrony;7811
+Túrricse;4968
+Tuzsér;4623
+Türje;8796
+Tüskevár;8477
+Tyukod;4762
+Udvar;7718
+Udvari;7066
+Ugod;8564
+Újbarok;2066
+Újcsalános;3716
+Újdombrád;4491
+Újfehértó;4244
+Újharangod -> Geszthely;3923
+Újhartyán;2367
+Újiráz;4146
+Újireg;7095
+Újkenéz;4635
+Újkér;9472
+Újkígyós;5661
+Újlengyel;2724
+Újléta;4288
+Újlõrincfalva;3387
+Újmohács -> Mohács;7714
+Újpetre;7766
+Újrónafõ;9244
+Újsolt;6320
+Újszalonta;5727
+Újszász;5052
+Újszentgyörgy -> Tiszaszentimre;5323
+Újszentiván;6754
+Újszentmargita;4065
+Újszilvás;2768
+Újtelek;6337
+Újtikos;4096
+Újudvar;8778
+Újvárfalva;7436
+Ukk;8347
+Und;9464
+Úny;2528
+Uppony;3622
+Ura;4763
+Uraiújfalu;9651
+Uraj -> Ózd;3621
+Úrhida;8142
+Úri;2244
+Úrkút;8409
+Uszka;4952
+Uszód;6332
+Uzsa -> Lesenceistvánd;8321
+Üllés;6794
+Üllõ;2225
+Üröm;2096
+Vác;2600
+Vácduka;2167
+Vácegres;2184
+Váchartyán;2164
+Váckisújfalu;2185
+Vácrátót;2163
+Vácszentlászló;2115
+Vadna;3636
+Vadosfa;9346
+Vág;9327
+Vágáshuta;3992
+Vaja;4562
+Vajdácska;3961
+Vajszló;7838
+Vajta;7041
+Vál;2473
+Valkó;2114
+Valkonya;8885
+Vállaj;4351
+Vállus;8316
+Vámosatya;4936
+Vámoscsalád;9665
+Vámosgyörk;3291
+Vámosmikola;2635
+Vámosoroszi;4966
+Vámospércs;4287
+Vámosszabadi;9061
+Vámosújfalu;3941
+Vámszõlõhegy -> Igar;7016
+Váncsod;4119
+Vanyarc;2688
+Vanyola;8552
+Várad;7973
+Váralja;7354
+Varászló;8723
+Váraszó;3254
+Várbalog;9243
+Varbó;3778
+Varbóc;3756
+Várda;7442
+Várdomb;7146
+Várfölde;8891
+Varga;7370
+Várgesztes;2824
+Várkeszõ;8523
+Várong;7214
+Városföld;6033
+Városlõd;8445
+Várpalota;8100
+Várpalota (Inota);8103
+Várpalota (Inotai Erõmû);8104
+Várpalota (Pétfürdõ);8105
+Varsád;7067
+Varsány;3178
+Várvölgy;8316
+Vasad;2211
+Vasalja;9921
+Vásárosbéc;7926
+Vásárosdombó;7362
+Vásárosfalu;9343
+Vásárosmiske;9552
+Vásárosnamény;4800
+Vásárosnamény (Gergelyiugornya);4803
+Vásárosnamény (Vitka);4804
+Vasas -> Pécs;7691
+Vasasszonyfa;9744
+Vasboldogasszony;8914
+Vasegerszeg;9661
+Vashosszúfalu;9674
+Vaskeresztes;9795
+Vaskút;6521
+Vasmegyer;4502
+Vaspör;8998
+Vassurány;9741
+Vasszécsény;9763
+Vasszentmihály;9953
+Vasszilvágy;9747
+Vasvár;9800
+Vaszar;8542
+Vászoly;8245
+Vát;9748
+Vatta;3431
+Vázsnok;7370
+Vécs;3265
+Vecsés;2220
+Végardó -> Sárospatak;3952
+Végegyháza;5811
+Vejti;7838
+Vékény;7333
+Vekerd;4143
+Velem;9726
+Velemér;9946
+Velence;2481
+Velény;7951
+Véménd;7726
+Vencsellõ -> Gávavencsellõ;4472
+Vének;9062
+Vép;9751
+Vereb;2477
+Veresegyház;2112
+Verõce;2621
+Verpelét;3351
+Verseg;2174
+Versend;7752
+Vértes -> Létavértes;4283
+Vértesacsa;8089
+Vértesboglár;8085
+Vérteskethely;2859
+Vértessomló;2823
+Vértesszõlõs;2837
+Vértestolna;2833
+Vése;8721
+Veszkény;9352
+Veszprém;8200
+Veszprém (Gyulafirátót);8412
+Veszprém (Kádárta);8411
+Veszprémfajsz;8248
+Veszprémgalsa;8475
+Veszprémvarsány;8438
+Vésztõ;5530
+Vezseny;5093
+Vid;8484
+Vigántpetend;8294
+Villány;7773
+Villánykövesd;7772
+Vilmány;3891
+Vilonya;8194
+Vilyvitány;3991
+Vinár;9534
+Vindornyafok;8354
+Vindornyalak;8353
+Vindornyaszõlõs;8355
+Viscosa -> Nyergesújfalu;2537
+Visegrád;2025
+Visegrád (Gizellatelep);2026
+Visnye;7533
+Visonta;3271
+Visonta (Mátrai Erõmû);3272
+Viss;3956
+Visz;8681
+Viszák;9932
+Viszló;3825
+Visznek;3293
+Vitka -> Vásárosnamény;4804
+Vitnyéd;9371
+Vízvár;7588
+Vizslás;3128
+Vizsoly;3888
+Vokány;7768
+Vonyarcvashegy;8314
+Vöckönd;8931
+Völcsej;9462
+Vönöck;9516
+Vöröstó;8291
+Vörs;8711
+Zabar;3124
+Zádor;7976
+Zádorfalva;3726
+Zagyvapálfalva -> Salgótarján;3104
+Zagyvarékas;5051
+Zagyvaróna -> Salgótarján;3141
+Zagyvaszántó;3031
+Záhony;4625
+Zajk;8868
+Zajta;4974
+Zákány;8853
+Zákányszék;6787
+Zala;8660
+Zalaapáti;8741
+Zalabaksa;8971
+Zalabér;8798
+Zalaboldogfa;8992
+Zalacsány;8782
+Zalacséb;8996
+Zalaegerszeg;8900
+Zalaegerszeg (Andráshida);8904
+Zalaerdõd;8344
+Zalagyömörõ;8349
+Zalahaláp;8308
+Zalaháshegy;8997
+Zalaigrice;8761
+Zalaistvánd;8932
+Zalakaros;8749
+Zalakomár (Kiskomárom);8751
+Zalakomár (Komárváros);8752
+Zalakoppány -> Zalaszentgrót;8785
+Zalakövesút;8354
+Zalalövõ;8999
+Zalameggyes;8348
+Zalamerenye;8747
+Zalasárszeg;8756
+Zalaszabar;8743
+Zalaszántó;8353
+Zalaszegvár;8476
+Zalaszentbalázs;8772
+Zalaszentgrót;8790
+Zalaszentgrót (Csáford);8795
+Zalaszentgrót (Tekenye);8793
+Zalaszentgrót (Zalakoppány);8785
+Zalaszentgrót (Zalaudvarnok);8789
+Zalaszentgyörgy;8994
+Zalaszentiván;8921
+Zalaszentjakab;8827
+Zalaszentlászló;8788
+Zalaszentlõrinc;8921
+Zalaszentmárton;8764
+Zalaszentmihály;8936
+Zalaszombatfa;8969
+Zaláta;7839
+Zalatárnok;8947
+Zalaudvarnok -> Zalaszentgrót;8789
+Zalaújlak;8822
+Zalavár;8392
+Zalavég;8792
+Zalkod;3957
+Zamárdi;8621
+Zamárdi (Szántód);8622
+Zámoly;8081
+Zánka;8251
+Zaránk;3296
+Závod;7182
+Zebecke;8954
+Zebegény;2627
+Zemplénagárd;3977
+Zengõvárkony;7720
+Zichyújfalu -> Gárdony;8112
+Zics;8672
+Ziliz;3794
+Zimány;7471
+Zirc;8420
+Zók;7671
+Zomba;7173
+Zubogy;3723
+Zsadány;5537
+Zsáka;4142
+Zsámbék;2072
+Zsámbok;2116
+Zsana;6411
+Zsarolyán;4961
+Zsebeháza;9346
+Zsédeny;9635
+Zselickisfalud;7477
+Zselickislak;7400
+Zselicszentpál;7474
+Zsennye;9766
+Zsira;9476
+Zsombó;6792
+Zsujta;3897
+Zsurk;4627

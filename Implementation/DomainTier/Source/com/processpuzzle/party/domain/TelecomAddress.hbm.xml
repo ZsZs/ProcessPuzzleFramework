@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass extends="com.processpuzzle.party.domain.Address"
+		name="com.processpuzzle.party.domain.TelecomAddress"
+		table="T_TELECOM_ADDRESS">
+	    <key column="ID" />
+		<property name="countryCode" />
+		<property name="nationalDirectDialingPrefix" />
+		<property name="areaCode" />
+		<property name="number" />
+		<property name="extension" />
+		<property name="physicalType" />
+	</joined-subclass>
+</hibernate-mapping>

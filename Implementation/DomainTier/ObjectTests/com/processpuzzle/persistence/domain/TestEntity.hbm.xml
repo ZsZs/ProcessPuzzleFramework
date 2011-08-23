@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.persistence.domain.TestEntity"
+		table="T_TEST_ENTITY"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		<!-- <key column="T_TEST_ENTITY_ID"/> -->
+		<property name="name"></property>
+		<property name="textAttribute"></property>
+		<property name="numberAttribute"></property>
+		<property name="dateAttribute"></property>
+		
+		<property name="timePoint" type="com.processpuzzle.persistence.typemapping.domain.TimePointToTimeStampMapping">
+			<column name="timePoint"/>
+		</property>
+		
+		<property name="timePeriod" type="com.processpuzzle.persistence.typemapping.domain.TimePeriodTypeMapping">
+			<column name="timePeriodBegin"/>
+			<column name="timePeriodEnd"/>
+		</property>
+		
+		<property name="quantity" type="com.processpuzzle.persistence.typemapping.domain.QuantityTypeMapping">
+			<column name="quantityAmount"/>
+			<column name="quantityUnit"/>
+		</property>
+		
+ 		<property name="possibleValues" type="com.processpuzzle.fundamental_types.possiblevalue.domain.PossibleValueDefinitionTypeMapping">
+			<column name="valueDefinitionClassDiscriminator"/>
+			<column name="minAmount"/>
+			<column name="minUnit"/>
+			<column name="maxAmount"/>
+			<column name="maxUnit"/>
+ 			<column name="possibleValues"/>	
+		</property>
+
+		<set name="components" cascade="all">
+			<key column="TEST_ENTITY_ID"></key>
+			<one-to-many class="com.processpuzzle.persistence.domain.TestEntityComponent" />
+		</set>
+		<many-to-one lazy="false" name="enitiyComponentWithoutCascade"
+			class="com.processpuzzle.persistence.domain.TestEntityComponent"
+			cascade="none" />
+		<many-to-one lazy="false" name="enitiyComponentWithCascade"
+			class="com.processpuzzle.persistence.domain.TestEntityComponent"
+			cascade="all" />
+	</union-subclass>
+</hibernate-mapping>

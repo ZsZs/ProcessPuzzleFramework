@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace = "http://www.processpuzzle.com/"
+	elementFormDefault="qualified"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.processpuzzle.com/">
+
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="country" type="CountryDef"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+ 
+   <xsd:complexType name="CountryDef">
+   <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+     <xsd:element name="settlement" type="SettlementDef"/>
+   </xsd:sequence>
+   <xsd:attribute name="name" type="xsd:string"/>
+ </xsd:complexType>
+
+ <xsd:complexType name="SettlementDef">
+   <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+     	<xsd:element name="zipcode" minOccurs="0" maxOccurs="unbounded" type="ZipCodeDef"/>
+     	<xsd:element name="district" minOccurs="0" maxOccurs="unbounded" type="DistrictDef"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string"/>
+ </xsd:complexType>
+
+<xsd:complexType name="ZipCodeDef">
+    <xsd:attribute name="code" type="xsd:string"/>
+ </xsd:complexType>
+
+<xsd:complexType name="DistrictDef">
+    <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+     	<xsd:element name="zipcode" type="ZipCodeDef"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string"/>
+ </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,84 @@
+.MenuWidget {
+	position:relative;
+	top:25px;
+	left:5px;
+	font-size: 8pt;
+}
+
+dl, dt, dd, ul, li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.dlcn {
+	width: 9em;
+	margin: 0;
+	padding: 0;
+	font: 80% verdana, arial, sans-serif;
+}
+
+.dtcn {
+}
+
+.dtscn {
+	cursor: pointer;
+	margin: 0px;
+	padding-top: 3px;
+	height: 22px;
+	width: 174px;
+	/*line-height: 20px;*/
+	text-align: center;
+	font-weight: bold;
+	/*border: 1px solid gray;*/
+	/*background: #ccc;*/
+	background-image: url("../Images/composite_menu_button.jpg");
+}
+
+.ddcn {
+	cursor: pointer;
+	margin-left: 0em;
+	height: 22px;
+	width: 174px;
+	padding: 0;
+	background: #eee;
+	text-align: center;
+	font: 100% verdana, arial, sans-serif;
+	/*border: 1px solid gray;*/
+}
+
+.dlcn dd {
+	margin-left: 0em;
+	margin: 2px 0;
+	height: 20px;
+	line-height: 20px;
+	text-align: left;
+	background-image: url("../Images/menu_button.jpg");
+}
+
+.dtcn dd {
+	margin-bottom: 2px;
+	margin-left: 2px; /* kicsit beljebb toltam probakent */
+	/*width: 170px;*/
+	text-align: left;
+	padding-left: 10px;
+	background-image: url("../Images/submenu_button.jpg");
+}
+
+.ddcn a {
+	color: #000;
+	text-decoration: none;
+	border: 0 none;
+	height: 100%;
+}
+
+.ddcn a:hover {
+    color:#FF0000;	
+/*	background: #fff;*/
+}
+
+.ddcn span input {
+	width: 20px;
+	margin-left: 3px;
+	margin-right: 3px;
+}

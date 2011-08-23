@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?><actionResponse><actionOutcomeStatus>true</actionOutcomeStatus>
+
+<catalog id="65687">
+<name>Energometall Katalógus</name>
+<description>Nincs meghatározva</description>
+<status>true</status>
+<rootCategory id="UNIOR">
+<name>UNIOR</name>
+<description></description>
+<compositeCategory id="UNIOR|Teljes katalógus">
+<name>Teljes katalógus</name>
+<description></description>
+<compositeCategory id="UNIOR|Teljes katalógus|Kulcsok">
+<name>Kulcsok</name>
+<description></description>
+<productGroup id="UNIOR|Teljes katalógus|Kulcsok|110/1">
+<name>110/1</name>
+<description></description>
+<catalogEntries>
+<catalogEntry id="UN 110/1 4x4.5">
+<catalogEntryIdentifier>UN 110/1 4x4.5</catalogEntryIdentifier>
+<designation>villáskulcs, 4x4.5</designation>
+<featureDescription>Méret( 4x4.5 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>496 HUF</price>
+<eanCode>3838909033167</eanCode>
+<producerCode>603316</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 4x5">
+<catalogEntryIdentifier>UN 110/1 4x5</catalogEntryIdentifier>
+<designation>villáskulcs, 4x5</designation>
+<featureDescription>Méret( 4x5 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>3838909033174</eanCode>
+<producerCode>603317</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 5x5.5">
+<catalogEntryIdentifier>UN 110/1 5x5.5</catalogEntryIdentifier>
+<designation>villáskulcs, 5x5.5</designation>
+<featureDescription>Méret( 5x5.5 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>571 HUF</price>
+<eanCode>3838909033181</eanCode>
+<producerCode>603318</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 5x7">
+<catalogEntryIdentifier>UN 110/1 5x7</catalogEntryIdentifier>
+<designation>villáskulcs, 5x7</designation>
+<featureDescription>Méret( 5x7 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>453 HUF</price>
+<eanCode>3838909000596</eanCode>
+<producerCode>600059</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 5.5x7">
+<catalogEntryIdentifier>UN 110/1 5.5x7</catalogEntryIdentifier>
+<designation>villáskulcs, 5.5x7</designation>
+<featureDescription>Méret( 5.5x7 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>762 HUF</price>
+<eanCode>3838909000602</eanCode>
+<producerCode>600060</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 6x7">
+<catalogEntryIdentifier>UN 110/1 6x7</catalogEntryIdentifier>
+<designation>villáskulcs, 6x7</designation>
+<featureDescription>Méret( 6x7 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000619</eanCode>
+<producerCode>600061</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 7x8">
+<catalogEntryIdentifier>UN 110/1 7x8</catalogEntryIdentifier>
+<designation>villáskulcs, 7x8</designation>
+<featureDescription>Méret( 7x8 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000626</eanCode>
+<producerCode>600062</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 7x9">
+<catalogEntryIdentifier>UN 110/1 7x9</catalogEntryIdentifier>
+<designation>villáskulcs, 7x9</designation>
+<featureDescription>Méret( 7x9 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000633</eanCode>
+<producerCode>600063</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 8x9">
+<catalogEntryIdentifier>UN 110/1 8x9</catalogEntryIdentifier>
+<designation>villáskulcs, 8x9</designation>
+<featureDescription>Méret( 8x9 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000640</eanCode>
+<producerCode>600064</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 8x10">
+<catalogEntryIdentifier>UN 110/1 8x10</catalogEntryIdentifier>
+<designation>villáskulcs, 8x10</designation>
+<featureDescription>Méret( 8x10 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000657</eanCode>
+<producerCode>600065</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 9x10">
+<catalogEntryIdentifier>UN 110/1 9x10</catalogEntryIdentifier>
+<designation>villáskulcs, 9x10</designation>
+<featureDescription>Méret( 9x10 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000664</eanCode>
+<producerCode>600066</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 9x11">
+<catalogEntryIdentifier>UN 110/1 9x11</catalogEntryIdentifier>
+<designation>villáskulcs, 9x11</designation>
+<featureDescription>Méret( 9x11 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000671</eanCode>
+<producerCode>600067</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 10x11">
+<catalogEntryIdentifier>UN 110/1 10x11</catalogEntryIdentifier>
+<designation>villáskulcs, 10x11</designation>
+<featureDescription>Méret( 10x11 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000688</eanCode>
+<producerCode>600068</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 10x12">
+<catalogEntryIdentifier>UN 110/1 10x12</catalogEntryIdentifier>
+<designation>villáskulcs, 10x12</designation>
+<featureDescription>Méret( 10x12 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000695</eanCode>
+<producerCode>600069</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 10x13">
+<catalogEntryIdentifier>UN 110/1 10x13</catalogEntryIdentifier>
+<designation>villáskulcs, 10x13</designation>
+<featureDescription>Méret( 10x13 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000701</eanCode>
+<producerCode>600070</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 10x14">
+<catalogEntryIdentifier>UN 110/1 10x14</catalogEntryIdentifier>
+<designation>villáskulcs, 10x14</designation>
+<featureDescription>Méret( 10x14 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000718</eanCode>
+<producerCode>600071</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 11x13">
+<catalogEntryIdentifier>UN 110/1 11x13</catalogEntryIdentifier>
+<designation>villáskulcs, 11x13</designation>
+<featureDescription>Méret( 11x13 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000725</eanCode>
+<producerCode>600072</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 11x14">
+<catalogEntryIdentifier>UN 110/1 11x14</catalogEntryIdentifier>
+<designation>villáskulcs, 11x14</designation>
+<featureDescription>Méret( 11x14 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000732</eanCode>
+<producerCode>600073</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 12x13">
+<catalogEntryIdentifier>UN 110/1 12x13</catalogEntryIdentifier>
+<designation>villáskulcs, 12x13</designation>
+<featureDescription>Méret( 12x13 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000749</eanCode>
+<producerCode>600074</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 12x14">
+<catalogEntryIdentifier>UN 110/1 12x14</catalogEntryIdentifier>
+<designation>villáskulcs, 12x14</designation>
+<featureDescription>Méret( 12x14 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000756</eanCode>
+<producerCode>600075</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 13x14">
+<catalogEntryIdentifier>UN 110/1 13x14</catalogEntryIdentifier>
+<designation>villáskulcs, 13x14</designation>
+<featureDescription>Méret( 13x14 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000763</eanCode>
+<producerCode>600076</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 13x15">
+<catalogEntryIdentifier>UN 110/1 13x15</catalogEntryIdentifier>
+<designation>villáskulcs, 13x15</designation>
+<featureDescription>Méret( 13x15 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000770</eanCode>
+<producerCode>600077</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 13x16">
+<catalogEntryIdentifier>UN 110/1 13x16</catalogEntryIdentifier>
+<designation>villáskulcs, 13x16</designation>
+<featureDescription>Méret( 13x16 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909038469</eanCode>
+<producerCode>603846</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 13x17">
+<catalogEntryIdentifier>UN 110/1 13x17</catalogEntryIdentifier>
+<designation>villáskulcs, 13x17</designation>
+<featureDescription>Méret( 13x17 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000787</eanCode>
+<producerCode>600078</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 14x15">
+<catalogEntryIdentifier>UN 110/1 14x15</catalogEntryIdentifier>
+<designation>villáskulcs, 14x15</designation>
+<featureDescription>Méret( 14x15 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000794</eanCode>
+<producerCode>600079</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 14x17">
+<catalogEntryIdentifier>UN 110/1 14x17</catalogEntryIdentifier>
+<designation>villáskulcs, 14x17</designation>
+<featureDescription>Méret( 14x17 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000800</eanCode>
+<producerCode>600080</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 15x17">
+<catalogEntryIdentifier>UN 110/1 15x17</catalogEntryIdentifier>
+<designation>villáskulcs, 15x17</designation>
+<featureDescription>Méret( 15x17 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000817</eanCode>
+<producerCode>600081</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 16x17">
+<catalogEntryIdentifier>UN 110/1 16x17</catalogEntryIdentifier>
+<designation>villáskulcs, 16x17</designation>
+<featureDescription>Méret( 16x17 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000824</eanCode>
+<producerCode>600082</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 16x18">
+<catalogEntryIdentifier>UN 110/1 16x18</catalogEntryIdentifier>
+<designation>villáskulcs, 16x18</designation>
+<featureDescription>Méret( 16x18 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909031217</eanCode>
+<producerCode>603121</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 17x19">
+<catalogEntryIdentifier>UN 110/1 17x19</catalogEntryIdentifier>
+<designation>villáskulcs, 17x19</designation>
+<featureDescription>Méret( 17x19 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000831</eanCode>
+<producerCode>600083</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 17x22">
+<catalogEntryIdentifier>UN 110/1 17x22</catalogEntryIdentifier>
+<designation>villáskulcs, 17x22</designation>
+<featureDescription>Méret( 17x22 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000848</eanCode>
+<producerCode>600084</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 18x19">
+<catalogEntryIdentifier>UN 110/1 18x19</catalogEntryIdentifier>
+<designation>villáskulcs, 18x19</designation>
+<featureDescription>Méret( 18x19 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000855</eanCode>
+<producerCode>600085</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 18x21">
+<catalogEntryIdentifier>UN 110/1 18x21</catalogEntryIdentifier>
+<designation>villáskulcs, 18x21</designation>
+<featureDescription>Méret( 18x21 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909038476</eanCode>
+<producerCode>603847</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 19x22">
+<catalogEntryIdentifier>UN 110/1 19x22</catalogEntryIdentifier>
+<designation>villáskulcs, 19x22</designation>
+<featureDescription>Méret( 19x22 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000862</eanCode>
+<producerCode>600086</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 19x24">
+<catalogEntryIdentifier>UN 110/1 19x24</catalogEntryIdentifier>
+<designation>villáskulcs, 19x24</designation>
+<featureDescription>Méret( 19x24 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000879</eanCode>
+<producerCode>600087</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 20x22">
+<catalogEntryIdentifier>UN 110/1 20x22</catalogEntryIdentifier>
+<designation>villáskulcs, 20x22</designation>
+<featureDescription>Méret( 20x22 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000886</eanCode>
+<producerCode>600088</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 21x23">
+<catalogEntryIdentifier>UN 110/1 21x23</catalogEntryIdentifier>
+<designation>villáskulcs, 21x23</designation>
+<featureDescription>Méret( 21x23 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000893</eanCode>
+<producerCode>600089</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 22x24">
+<catalogEntryIdentifier>UN 110/1 22x24</catalogEntryIdentifier>
+<designation>villáskulcs, 22x24</designation>
+<featureDescription>Méret( 22x24 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000909</eanCode>
+<producerCode>600090</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 110/1 22x27">
+<catalogEntryIdentifier>UN 110/1 22x27</catalogEntryIdentifier>
+<designation>villáskulcs, 22x27</designation>
+<featureDescription>Méret( 22x27 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>1 000 HUF</price>
+<eanCode>3838909000916</eanCode>
+<producerCode>600091</producerCode>
+</catalogEntry>
+</catalogEntries>
+</productGroup>
+</compositeCategory>
+<compositeCategory id="UNIOR|Teljes katalógus|Munkavédelem, biztonság">
+<name>Munkavédelem, biztonság</name>
+<description></description>
+<productGroup id="UNIOR|Teljes katalógus|Munkavédelem, biztonság|1800">
+<name>1800</name>
+<description></description>
+<catalogEntries>
+<catalogEntry id="UN 1805 38">
+<catalogEntryIdentifier>UN 1805 38</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 38</designation>
+<featureDescription>Méret( 38 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618379</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 39">
+<catalogEntryIdentifier>UN 1805 39</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 39</designation>
+<featureDescription>Méret( 39 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618380</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 40">
+<catalogEntryIdentifier>UN 1805 40</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 40</designation>
+<featureDescription>Méret( 40 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618381</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 41">
+<catalogEntryIdentifier>UN 1805 41</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 41</designation>
+<featureDescription>Méret( 41 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618382</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 42">
+<catalogEntryIdentifier>UN 1805 42</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 42</designation>
+<featureDescription>Méret( 42 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618383</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 43">
+<catalogEntryIdentifier>UN 1805 43</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 43</designation>
+<featureDescription>Méret( 43 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618384</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 44">
+<catalogEntryIdentifier>UN 1805 44</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 44</designation>
+<featureDescription>Méret( 44 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618385</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 45">
+<catalogEntryIdentifier>UN 1805 45</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 45</designation>
+<featureDescription>Méret( 45 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618386</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 46">
+<catalogEntryIdentifier>UN 1805 46</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 46</designation>
+<featureDescription>Méret( 46 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618387</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805 47">
+<catalogEntryIdentifier>UN 1805 47</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, normál, 47</designation>
+<featureDescription>Méret( 47 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618388</producerCode>
+</catalogEntry>
+</catalogEntries>
+</productGroup>
+<productGroup id="UNIOR|Teljes katalógus|Munkavédelem, biztonság|1800L">
+<name>1800L</name>
+<description></description>
+<catalogEntries>
+<catalogEntry id="UN 1805L 38">
+<catalogEntryIdentifier>UN 1805L 38</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 38</designation>
+<featureDescription>Méret( 38 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618389</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 39">
+<catalogEntryIdentifier>UN 1805L 39</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 39</designation>
+<featureDescription>Méret( 39 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618390</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 40">
+<catalogEntryIdentifier>UN 1805L 40</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 40</designation>
+<featureDescription>Méret( 40 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618391</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 41">
+<catalogEntryIdentifier>UN 1805L 41</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 41</designation>
+<featureDescription>Méret( 41 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618392</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 42">
+<catalogEntryIdentifier>UN 1805L 42</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 42</designation>
+<featureDescription>Méret( 42 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618393</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 43">
+<catalogEntryIdentifier>UN 1805L 43</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 43</designation>
+<featureDescription>Méret( 43 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618394</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 44">
+<catalogEntryIdentifier>UN 1805L 44</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 44</designation>
+<featureDescription>Méret( 44 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618395</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 45">
+<catalogEntryIdentifier>UN 1805L 45</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 45</designation>
+<featureDescription>Méret( 45 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618396</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 46">
+<catalogEntryIdentifier>UN 1805L 46</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 46</designation>
+<featureDescription>Méret( 46 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618397</producerCode>
+</catalogEntry>
+<catalogEntry id="UN 1805L 47">
+<catalogEntryIdentifier>UN 1805L 47</catalogEntryIdentifier>
+<designation>munkavédelmi cip?, magasszárú, 47</designation>
+<featureDescription>Méret( 47 ),  Csomagolási egység( 1 pc )</featureDescription>
+<price>Nincs meghatározva</price>
+<eanCode>Nincs meghatározva</eanCode>
+<producerCode>618398</producerCode>
+</catalogEntry>
+</catalogEntries>
+</productGroup>
+</compositeCategory>
+</compositeCategory>
+</rootCategory>
+</catalog>
+</actionResponse>

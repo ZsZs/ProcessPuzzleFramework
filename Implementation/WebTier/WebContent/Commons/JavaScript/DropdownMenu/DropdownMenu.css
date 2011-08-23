@@ -1,0 +1,64 @@
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#nav a {
+	font-weight: bold;
+	color: green;
+	text-decoration: none;
+}
+
+#nav li li a {
+	display: block;
+	font-weight: normal;
+	color: #060;
+	padding: 0.2em 10px;
+}
+
+#nav li li a:hover {
+	padding: 0.2em 5px;
+	border: 5px solid #7d6340;
+	border-width: 0 5px;
+}
+
+li {
+	float: left;
+	position: relative;
+	width: 10em;
+	text-align: center;
+	cursor: default;
+	background-color: white;
+	border: 1px solid #7d6340;
+	border-width: 1px 0;
+}
+
+li#first {border-left-width: 1em;}
+
+li#last {border-right-width: 1em;}
+
+li ul {
+	display: none;
+	position: absolute; 
+	top: 1em;
+	left: 0;
+	font-weight: normal;
+	background: url(images/ddbg3.gif) bottom left no-repeat;
+	padding: 0.5em 0 1em 0;
+	border-right: solid 1px #7d6340;
+}
+
+li > ul {
+	top: auto;
+	left: auto;
+}
+
+li li {
+	display: block;
+	float: none;
+	background-color: transparent;
+	border: 0;
+}
+
+li:hover ul, li.over ul{ display: block; }

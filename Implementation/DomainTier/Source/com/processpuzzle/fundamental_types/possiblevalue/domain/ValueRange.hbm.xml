@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.processpuzzle.fundamental_types.possible_value.domain.ValueRange" 
+		table="T_VALUE_RANGE"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+
+		<property name="minValue" type="com.processpuzzle.persistence.typemapping.domain.QuantityTypeMapping">
+			<column name="minValueAmount"/>
+			<column name="minValueUnit"/>
+		</property>
+
+		<property name="maxValue" type="com.processpuzzle.persistence.typemapping.domain.QuantityTypeMapping">
+			<column name="maxValueAmount"/>
+			<column name="maxValueUnit"/>
+		</property>
+
+	</union-subclass>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.processpuzzle.workflow.activity.domain.Action" 
+		table="T_ACTION"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		
+		<property name="name"></property>
+		<property name="description"></property>
+
+		<set name="simpleDependentActions" inverse="true" cascade="save-update">
+			<key column="ACTION_SIMP_CON_ID"></key>
+			<one-to-many class="com.processpuzzle.workflow.activity.domain.SimpleActionDependency" />
+		</set>
+
+		<set name="simpleConsequentActions" inverse="true" cascade="save-update">
+			<key column="ACTION_SIMP_DEP_ID"></key>
+			<one-to-many class="com.processpuzzle.workflow.activity.domain.SimpleActionDependency" />
+		</set>
+
+		<component name="timePeriod" class="com.processpuzzle.fundamental_types.domain.TimePeriod">
+			<component name="begin" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+				<property name="value" column="BEGIN_VALUE" type="java.util.Date"></property>
+			</component>
+
+			<component name="end" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+				<property name="value" column="END_VALUE" type="java.util.Date"></property>
+			</component>
+		</component>
+		
+		<many-to-one lazy="false" name="protocol" column="PROTOCOL_ID" class="com.processpuzzle.workflow.protocol.domain.Protocol" />
+		<many-to-one lazy="false" name="location" column="LOCATION_ID" class="com.processpuzzle.inventory.domain.Location" cascade="all" />
+		<many-to-one lazy="false" name="owner" column="OWNER_ID" class="com.processpuzzle.party.domain.Party" />
+		<many-to-one lazy="false" name="performer" column="PERFORMER_ID" class="com.processpuzzle.party.domain.Party" />
+
+		<set name="resourceAllocations" cascade="all">
+			<key column="ACTION_ID" />
+			<one-to-many class="com.processpuzzle.workflow.activity.domain.ResourceAllocation" />
+		</set>
+
+		<many-to-one lazy="false" name="suspension" class="com.processpuzzle.workflow.activity.domain.Suspension" cascade="all" />
+
+		<set name="projectPIncludedIn" inverse="true" cascade="save-update">
+			<key column="ACTION_ID" />
+			<one-to-many class="com.processpuzzle.workflow.activity.domain.ActionReference" />
+		</set>
+
+		<many-to-one lazy="false" name="status" class="com.processpuzzle.workflow.activity.domain.ActionStatus" cascade="all" />
+
+		<set name="actionEvents" inverse="true" cascade="all">
+			<key column="ACTION_ID" />
+			<one-to-many class="com.processpuzzle.workflow.activity.domain.ActionEvent" />
+		</set>
+
+		<property name="priority" />
+
+	</union-subclass>
+</hibernate-mapping>

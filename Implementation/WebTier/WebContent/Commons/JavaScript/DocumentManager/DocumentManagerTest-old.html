@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+	<TITLE>DocumentManagerTest.html</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link type="text/css" rel="stylesheet" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<link type="text/css" rel="stylesheet" href="../TabWidget/tab.css">
+	<link type="text/css" rel="stylesheet" href="../TabWidget/invertedTab.css">
+	<link type="text/css" rel="stylesheet" href="../MenuWidget/MenuWidget.css">
+
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="JavaScript" src="../CommonScripts/Collection.js"></script>
+	<script language="JavaScript" src="../CommonScripts/BrowserEvent.js"></script>
+	<script language="JavaScript" src="../CommonScripts/GenericBrowser.js"></script>
+	<script language="JavaScript" src="../CommonScripts/CList.js"></script>
+	<!-- script language="JavaScript" src="../CommonScripts/CCallWrapper.js"></script -->
+	<script language="JavaScript" src="../CommonScripts/CSimpleObservable.js"></script>
+	<script language="JavaScript" src="../CommonScripts/JavaCollection.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../TabWidget/TabEvents.js"></script>
+	<script language="JavaScript" src="../TabWidget/Tab-old.js"></script>
+	<script language="javascript" src="../TabWidget/TabWidget.js" ></script>
+	<script language="javascript" src="../TabWidget/InvertedTabWidget.js" ></script>
+	<script language="javascript" src="../MenuWidget/MenuItem.js" ></script>
+	<script language="javascript" src="../MenuWidget/SubMenuItem.js" ></script>
+	<script language="javascript" src="../MenuWidget/DualStateMenuItem.js" ></script>
+	<script language="javascript" src="../MenuWidget/CompositMenuItem.js" ></script>
+	<script language="javascript" src="../MenuWidget/MenuWidget.js" ></script>	
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="javascript" src="../WebUiCommands/WebUiCommand.js"></script>
+	<script language="javascript" src="../WebUiCommands/CloseActiveDocumentCommand.js"></script>
+	<script language="javascript" src="../WebUiCommands/PrintActiveDocumentCommand.js"></script>
+	<script language="javascript" src="../WebUiCommands/OpenDocumentSelectedInListCommand.js"></script>
+	<script language="javascript" src="../WebUiCommands/SwitchToDocumentCommand.js"></script>
+	<script language="javascript" src="../WebUiCommands/CustomCommand.js"></script>
+	<script language="javascript" src="../WebUiCommands/CreateNewDocumentCommand.js"></script>
+	<script language="javascript" src="../WebUiCommands/TestCustomCommand.js"></script>
+	<script language="JavaScript" src="../ArtifactTypeLoader/ArtifactTypeLoader.js"></script>
+	<script language="javascript" src="../WebUIController/WebUIController.js"></script>
+	<script language="javascript" src="Document.js" ></script>
+	<script language="javascript" src="DocumentEvents.js" ></script>
+	<script language="javascript" src="DocumentView.js" ></script>
+	<script language="javascript" src="PrintView.js" ></script>
+	<script language="javascript" src="BrowseView.js" ></script>
+	<script language="javascript" src="NativeView.js" ></script>
+	<script language="javascript" src="DocumentManager-old.js" ></script>
+</HEAD>
+<BODY>
+	<H1>DocumentManager.js Test Page.</H1>
+	<p>This page contains tests for tabWidgetigatorTest.js javascript class.</p>
+	<h2>Document selector</h2>
+	<div id="TabWidget"></div>
+	<h2>View selector</h2>
+	<div id="InvertedTabWidget"></div>
+	<div id="InfoPanelSelector"><h1>Info Panel Selector</h1></div>
+	<h2>Menu</h2>
+	<div id="MenuWidget"></div>
+
+	<script language="javascript">
+		var manager;
+		var tabsDiv = document.getElementById("TabWidget");
+		var invTabsDiv = document.getElementById("InvertedTabWidget");
+		var menuDiv = document.getElementById("MenuWidget");
+		var infoPanelSelectorDiv = document.getElementById("InfoPanelSelector");
+		var tabWidget;
+		var invTabWidget;
+		var menuWidget;
+		var webUIController;
+		
+		function setUp() {
+			webUIController = new WebUiController();
+			webUIController.loadResourceBundle("../Internalization/TestResources");
+			webUIController.loadArtifactTypeLoader(new ArtifactTypeLoader());
+			webUIController.loadArtifactTypes("../DocumentManager/TestArtifactTypes.xml"); //ComplexDocument
+			webUIController.loadArtifactTypes("../DocumentManager/doc1.xml"); //SimpleDocument
+			webUIController.loadArtifactTypes("../DocumentManager/doc2.xml"); //NormalDocument
+
+			tabWidget = new TabWidget(tabsDiv);
+			invTabWidget = new InvertedTabWidget(invTabsDiv);
+			manager = new DocumentManager(webUIController, tabWidget, invTabWidget);
+
+			menuWidget = new MenuWidget(menuDiv);
+		}
+
+		function tearDown(){
+			manager.hideDocumentSelector();
+			invTabWidget.hide();
+			manager = null;
+			if (menuWidget) menuWidget.hide();
+		}
+
+		function testConstructor(){
+			assertNotNull("Document manager is created", manager);
+		}
+
+		function testConstructor_ForTargetFrame(){
+			var anotherManager = new DocumentManager(webUIController, tabWidget, invTabWidget, "_blank");
+			assertNotNull("Document manager is created", anotherManager);
+			anotherManager.loadDocument("SimpleDocument", "Document 1"); //doc1.xml
+			assertTrue("Newly loaded document exist in the 'loadedDocuments' collection", anotherManager.loadedDocuments().exists("Document 1"));
+			anotherManager.hideDocumentSelector();
+			anotherManager = null;
+		}
+
+		function testShowDocumentSelector(){
+			manager.showDocumentSelector();
+			var className = document.getElementById("TabWidget").firstChild.className;
+			assertEquals("Showing the tab widget adds an <ul> tab whithin the division.", "Tabs", className);
+		}
+
+/* loadDocument() tests...*/
+		function testLoadDocument_ForExistanceInLoadedDocuments(){
+			manager.loadDocument("SimpleDocument", "Document 1");
+			assertTrue("Newly loaded document exist in the 'loadedDocuments' collection", manager.loadedDocuments().exists("Document 1"));
+		}
+
+		function testLoadDocument_ForAppConfig(){
+			manager.showDocumentSelector();
+			manager.loadDocument("ComplexDocument", "ComplexDoc_1", "", "_blank");
+			assertEquals("The last loaded document's type is 'ComplexDocument'", "ComplexDocument", manager.loadedDocuments().item("ComplexDoc_1").getDocumentType());
+		}
+
+		function testLoadDocument_ForDifferentTargets(){
+			manager.loadDocument("SimpleDocument", "Document 1", "", "_blank");
+			manager.loadDocument("NormalDocument", "Document 2");
+			assertTrue("Newly loaded document exist in the 'loadedDocuments' collection", manager.loadedDocuments().exists("Document 1"));
+		}
+
+		function testLoadDocument_ForActivity(){
+			manager.showDocumentSelector();
+			manager.loadDocument("SimpleDocument", "Document 1");
+			assertEquals("Newly loaded document is the active document", "Document 1", manager.getActiveDocument().getDocumentName());
+		}
+
+		function testLoadDocument_ForTabExistance(){
+			manager.showDocumentSelector();
+			manager.loadDocument("SimpleDocument", "Document1");
+			assertNotNull("Newly loaded document is associated with a tab.", document.getElementById("tab_Document1"));
+		}
+
+		function testLoadDocument_ForBrowserContent(){
+			manager.showDocumentSelector();
+			manager.loadDocument("SimpleDocument", "Document 1");
+			assertTrue("Newly loaded document is into a new browser window.", true);
+		}
+
+		function testLoadDocument_WithTwoDocuments(){
+			manager.loadDocument("SimpleDocument", "Document 1");
+			manager.loadDocument("NormalDocument", "Document 2");
+			assertEquals("The count of documents is 2.", 2, manager.getDocumentCount());
+		}
+
+		function testLoadDocument_WithTwoDocuments_ForAcitivity(){
+			manager.showDocumentSelector();
+			manager.loadDocument("SimpleDocument", "Document 1");
+			manager.loadDocument("NormalDocument", "Document 2");
+			assertEquals("The newly loaded document is the active document.", "Document 2", manager.getActiveDocument().getDocumentName());
+		}
+
+/* kiveve */		function _testLoadDocument_ForUndefinedPropertyFile(){
+			manager.showDocumentSelector();
+			manager.loadDocument("", "Document 4", "../DocumentManager/doc4.htm", "_blank");
+			assertTrue("If no property file exists for the given document than the default should be applied.", manager.getActiveDocument().getPropertyFile().search("DefaultDocumentProperties.xml") >= 0);
+		}
+
+/* kiveve */		function _testLoadDocument_ForMissingViewsInDocumentProperyFile(){
+			try {manager.loadDocument("", "Document 3", "../DocumentManager/doc3.htm", "_blank");}
+			catch(e) {	
+				assertTrue("If document's property file doesn't contains Views section than a MissingViewsInDocumentProperyFileException should be thrown.", 
+					e instanceof MissingViewsInDocumentProperyFileException);
+				return;
+			}
+			fail("No exception was thrown.");
+		}
+
+		function testActivateDocument(){
+			manager.showDocumentSelector();
+			manager.loadDocument("SimpleDocument", "Doc1");
+			manager.loadDocument("NormalDocument", "Doc2");
+
+			var tabId = manager.getDocumentSelector().getTabByName("Doc1").getId();
+		
+			document.getElementById(tabId).click();			
+			assertEquals("Clicking on the first document's tab activates it.", "Doc1", manager.getActiveDocument().getDocumentName());			
+		}
+
+		function testUnLoadDocument(){
+			manager.showDocumentSelector(true);
+			manager.loadDocument("SimpleDocument", "Document 1");
+			manager.unLoadDocument("Document 1");
+			assertEquals("There is no document", 0, manager.getDocumentCount());
+		}
+
+		function testMenu(){
+			menuWidget.show();
+			manager = new DocumentManager(webUIController, tabWidget, invTabWidget, null, menuWidget);
+			manager.showDocumentSelector();
+			manager.loadDocument("SimpleDocument", "Document 1");
+			manager.loadDocument("NormalDocument", "Document 2");
+		}
+
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			testConstructor();
+			tearDown();
+		}
+
+		//runTestFunction();
+		
+	</script>
+
+</BODY>
+</HTML>

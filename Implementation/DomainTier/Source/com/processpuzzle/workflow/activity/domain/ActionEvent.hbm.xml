@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class name="com.processpuzzle.workflow.activity.domain.ActionEvent" table="T_ACTION_EVENT">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="ACTION_EVENT_ID" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<property name="name" />
+		<many-to-one lazy="false" name="eventSource" column="ACTION_ID" class="com.processpuzzle.workflow.activity.domain.Action" />
+		<component name="occuredOn" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+			<property name="value" column="occuredOn" type="java.util.Date"></property>
+		</component>
+		<many-to-one lazy="false" name="nextStatus" class="com.processpuzzle.workflow.activity.domain.ActionStatus" />
+	</class>
+</hibernate-mapping>

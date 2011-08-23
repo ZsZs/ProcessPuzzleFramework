@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+   
+<hibernate-mapping default-access="field">
+	<class
+		abstract="true" 
+		name="com.processpuzzle.party.domain.Party"
+		table="T_PARTY">
+		<id name="id" type="integer" unsaved-value="null" column="ID">
+			<generator class="hilo" />
+		</id>
+		<property name="version" column="VERSION"/>
+		
+		<!-- <key column="PARTY_ID" /> -->
+		<property name="valid" type="com.processpuzzle.persistence.typemapping.domain.TimePeriodTypeMapping">
+			<column name="validBegin"/>
+			<column name="validEnd"/>
+		</property>
+
+		<set name="addresses" cascade="all,delete-orphan" lazy="false">
+			<key column="PARTY_ID"></key>
+			<one-to-many class="com.processpuzzle.party.domain.Address" />
+		</set>
+		
+		<set name="partyRoles" inverse="true" cascade="all">
+			<key column="PARTY_ID"></key>
+			<one-to-many
+				class="com.processpuzzle.party.domain.PartyRole" />
+		</set>
+		
+	 	<many-to-one lazy="false" name="partyName" cascade="all" class="com.processpuzzle.party.domain.PartyName" />
+
+	 	<many-to-one lazy="false" name="type" class="com.processpuzzle.party.partytype.domain.PartyType" />
+		
+		<set name="otherNames" cascade="all">
+			<key column="PARTY_ID" />
+			<one-to-many class="com.processpuzzle.party.domain.PartyName" />
+		</set>
+		
+		<property name="description" />
+	</class>
+</hibernate-mapping>

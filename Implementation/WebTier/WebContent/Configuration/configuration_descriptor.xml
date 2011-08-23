@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration 
+	xmlns:pp="http://www.processpuzzle.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com http://www.processpuzzle.com/Schemas/ProcessPuzzleConfigurationDescriptor.xsd" >
+	<header>
+		<!-- Meta data about the resulting combined configuration -->
+		<result delimiterParsingDisabled="true"
+                forceReloadCheck="true">
+			<nodeCombiner config-class="org.apache.commons.configuration.tree.OverrideCombiner"/>
+			<expressionEngine config-class="org.apache.commons.configuration.tree.xpath.XPathExpressionEngine"/>
+		</result>
+	</header>
+	
+	<override>
+		<!-- Configuration declarations with override semantics -->
+		<xml config-name="custom_configuration"
+             fileName="custom_configuration.xml"
+             optional="true" config-forceCreate="true"
+             delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy"/>
+		</xml>
+
+		<xml config-name="default_configuration" fileName="default_configuration.xml" throwExceptionOnMissing="true" delimiterParsingDisabled="true">
+		</xml>
+	</override>
+	
+	<additional>
+		<!-- Configuration declarations that form a union configuration -->
+	</additional>
+</configuration>

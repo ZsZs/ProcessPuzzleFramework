@@ -1,0 +1,1887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<businessDefinition xmlns="http://www.processpuzzle.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.processpuzzle.com/ http://www.processpuzzle.com/Schemas/BusinessDefinition.xsd ">
+
+	<!-- PartyTypes: Defines acceptable types of parties. -->
+	<partyTypes>
+		<partyType name = "PersonType" partyClassName="com.processpuzzle.party.domain.Person" />
+		<partyType name = "CompanyType" partyClassName="com.processpuzzle.party.domain.Company"/>
+	</partyTypes>
+
+	<!--
+		PartyRoleTypes: Defines the roles can be filled in the workflows.
+	-->
+	<partyRoleTypes>
+		<partyRoleType name="ProcessPuzzleAdministrator">
+			<description>Administrator of the ProcessPuzzle application.</description>
+			<partyRoleConstraints>
+				<partyRoleConstraint typeOfParty="PersonType" />
+			</partyRoleConstraints>
+		</partyRoleType>
+
+	</partyRoleTypes>
+
+	<artifactTypes>
+		<artifactTypeGroup name="ProcessManagement">
+			<artifactType 
+				name="ActionList" 
+				
+				group="ProcessManagement" 
+				artifactClassName="com.processpuzzle.workflow.activity.artifact.ActionList" 
+				pessimisticLock="false" 
+				isSystem="true" 
+				isVersionControlled="false" 
+				isSingleton="true"
+				createOnStartUp="true">
+				<caption>ui.Pantokrator.ActionList</caption>
+				<baseUri>../../../../</baseUri>
+				<availableViews>
+					<artifactListViewType 
+						name="ActionList_ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						presentationUri="/Commonst/BusinessImplementation/ProjectManagement/ActionList_ListView.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionList_ListView" 
+						listedArtifactType="com.processpuzzle.workflow.activity.artifact.ActionDataSheet">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=ActionList&amp;viewName=ActionList_ListView</viewAccessUrl>
+					</artifactListViewType>
+					
+					<listQueryViewType 
+						name="ActionList_ListQueryView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/ActionList_ListQueryView.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionList_ListQueryView" 
+						clientType="ListQueryView"
+						targetPropertyView="">
+						<viewCaption>ui.viewCaption.listQuery</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=ActionList_ListQueryView</viewAccessUrl>
+						<preDefinedQueries>
+							<query name="A betűs tevékenységek">
+								<description>Az 'a' betűvel kezdődő tevékenységeket listázza ki.</description>
+								<statement>from ActionDataSheet r where r.actionName = 'a'</statement>
+							</query>
+						</preDefinedQueries>
+					</listQueryViewType>
+					
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+					</artifactCommentsViewType>
+					
+					<printViewType 
+						name="ActionList_PrintView" 
+						clientType="PrintView" 
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionList_PrintView" 
+						xmlToFoXsltPath="/stylesheet/actionlist.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowPrintView&amp;artifactName=ActionList&amp;viewName=ActionList_PrintView</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+	
+			<artifactType 
+				name="ActionDataSheet" 
+				group="ProcessManagement" 
+				artifactClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet" 
+				pessimisticLock="true" 
+				isSystem="false" 
+				isVersionControlled="true"
+				isSingleton="false" 
+				createOnStartUp="false">
+				<caption>actionDataSheet</caption>
+				<baseUri>../../../../</baseUri>
+				<availableViews>
+					<propertyViewType 
+						name="ActionDataSheet_PropertyView" 
+						clientType="PropertyView" 
+						isDefault="true" 
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/ActionDataSheet_PropertyView.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_PropertyView</viewAccessUrl>
+					</propertyViewType>
+					
+					<artifactCustomFormViewType 
+						name="ActionDataSheet_BaseData" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/ActionDataSheet_BaseData.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_BaseData</viewAccessUrl>
+					</artifactCustomFormViewType>
+					
+					<artifactCustomFormViewType 
+						name="ActionDataSheet_GeneralResourceAllocations" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/ActionDataSheet_GeneralResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet_GeneralResourceAllocations">
+						<viewCaption>ui.viewCaption.generalResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_GeneralResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType 
+						name="ActionDataSheet_SpecificResourceAllocations" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/ActionDataSheet_SpecificResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet_SpecificResourceAllocations">
+						<viewCaption>ui.viewCaption.specificResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_SpecificResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+					
+					<artifactCustomFormViewType 
+						name="ActionDataSheet_Sequence" 
+						clientType="CustomFormView"
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/ActionDataSheet_SequenceView.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet_Sequence">
+						<viewCaption>ui.viewCaption.sequence</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_Sequence</viewAccessUrl>
+					</artifactCustomFormViewType>
+					
+					<artifactCustomFormViewType 
+						name="ActionDataSheet_EventHistory" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/ActionDataSheet_EventHistory.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet_EventHistory">
+						<viewCaption>ui.viewCaption.eventHistory</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_EventHistory</viewAccessUrl>
+					</artifactCustomFormViewType>
+					
+					<relatedArtifactsViewType 
+						name="RelatedArtifactsListView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					
+					<printViewType 
+						name="ActionDataSheet_PrintView" 
+						viewClassName="com.processpuzzle.workflow.activity.artifact.ActionDataSheet_PrintView" 
+						clientType="PrintView" 
+						xmlToFoXsltPath="/stylesheet/actiondata.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowPrintView&amp;viewName=ActionDataSheet_PrintView</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+			
+			<artifactType 
+				name="PersonalTodoList" 
+				group="ProcessManagement" 
+				artifactClassName="com.processpuzzle.workflow.activity.artifact.PersonalTodoList" 
+				pessimisticLock="false" 
+				isSystem="true" 
+				isVersionControlled="false"
+				isSingleton="true" 
+				createOnStartUp="true">
+				<caption>ui.Pantokrator.ActionList</caption>
+				<baseUri>../../../../</baseUri>
+				<availableViews>
+					<artifactListViewType 
+						name="PersonalTodoList_ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						presentationUri="/Commons/BusinessImplementation/ProjectManagement/PersonalToDoList.jsp"
+						viewClassName="com.processpuzzle.workflow.activity.artifact.PersonalTodoList_ListView" 
+						listedArtifactType="com.processpuzzle.workflow.activity.artifact.ActionDataSheet">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=PersonalTodoList&amp;viewName=PersonalTodoList_ListView</viewAccessUrl>
+					</artifactListViewType>
+				</availableViews>
+			</artifactType>
+
+		</artifactTypeGroup>
+		
+		<artifactTypeGroup name="SystemAdministration">
+			<defaultAccessRights>
+				<accessRight partyRoleType="Coach" canCreate="true"
+					canDelete="true" canModify="true" canRead="true" />
+			</defaultAccessRights>
+
+			<artifactType 
+				name="RootArtifactFolder"
+				artifactClassName="com.processpuzzle.artifact.domain.RootArtifactFolder"
+				createOnStartUp="false" 
+				group="SystemAdministration" 
+				isSingleton="true"
+				isSystem="true" 
+				isVersionControlled="false" 
+				pessimisticLock="false"
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Root of all other artifact folders.</description>
+				<caption>Root Folder</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="RootArtifactFolder_PropertyView" 
+						clientType="PropertyView"
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="uri"
+						viewClassName="com.processpuzzle.artifact.domain.RootArtifactFolder_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+						</associatedMenuItems>
+					</propertyViewType>
+				</availableViews>
+				<associatedMenuItems></associatedMenuItems>
+			</artifactType>
+
+			<artifactType 
+				name="ArtifactFolder"
+				artifactClassName="com.processpuzzle.artifact.domain.ArtifactFolder"
+				createOnStartUp="false" 
+				group="SystemAdministration" 
+				isSingleton="false"
+				isSystem="true" 
+				isVersionControlled="false" 
+				pessimisticLock="false"
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Describes a folder of artifacts.</description>
+				<caption>Artifact Folder</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="ArtifactFolder_PropertyView" 
+						clientType="PropertyView"
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="uri"
+						viewClassName="com.processpuzzle.artifact.domain.ArtifactFolder_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintFolderProperties" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+			<artifactType 
+				name="CommentList" 
+				group="SystemAdministration" 
+				artifactClassName="com.processpuzzle.artifact.domain.CommentList" 
+				pessimisticLock="false" 
+				isSystem="false" 
+				isVersionControlled="false" 
+				isSingleton="false"
+				createOnStartUp="false">
+				<caption>commentList</caption>
+				<baseUri>../../../../</baseUri>
+			</artifactType>
+
+			<artifactType 
+				name="MessageWall" 
+				group="SystemAdministration"
+				artifactClassName="com.processpuzzle.artifact.domain.CommentList"
+				pessimisticLock="false" 
+				isSystem="true" 
+				isVersionControlled="false" 
+				isSingleton="true"
+				createOnStartUp="true">
+				<caption>messageWall</caption>
+				<baseUri>../../../../</baseUri>
+				<availableViews>
+					<editableTextViewType 
+						name="unvisible" 
+						isDefault="true" 
+						isStatic="false"
+						clientType="EditableHtmlView" 
+						xmlToHtmlXsltPath=""
+						presentationUri="/Commons/MessageWall/MessageWall.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.CommentList_EditableTextView">
+						<viewCaption>ui.viewCaption.unvisible</viewCaption>
+					</editableTextViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="PersonList"
+				artifactClassName="com.processpuzzle.party.artifact.PersonList"
+				createOnStartUp="true" 
+				group="SystemAdministration" 
+				isSingleton="true"
+				isSystem="true" 
+				isVersionControlled="false" 
+				pessimisticLock="false"
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description></description>
+				<caption>personList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue></defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<artifactListViewType 
+						name="PersonList_ListView"
+						clientType="BrowseView" 
+						isDefault="true" 
+						isStatic="false"
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/PersonList_ListView.jsp"
+						viewClassName="com.processpuzzle.party.artifact.PersonList_ListView"
+						listedArtifactType="com.processpuzzle.party.artifact.PersonDataSheet"
+						orderBy="name" 
+						order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowPerson" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/personlist.xsl"
+						viewClassName="com.processpuzzle.party.artifact.PersonList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPersons" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=PersonList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+			
+			<artifactType 
+				name="PersonDataSheet" 
+				group="SystemAdministration" 
+				artifactClassName="com.processpuzzle.party.artifact.PersonDataSheet" 
+				domainClassName="com.processpuzzle.party.domain.Person"
+				createOnStartUp="false" 
+				isSingleton="false" 
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="false">
+				<caption>personDataSheet</caption>
+				<baseUri>../../../../</baseUri>
+				<creationProperties>
+					<creationProperty name="familyName" type="string" />
+					<creationProperty name="givenName" type="string" />
+					<creationProperty name="userName" type="string" />
+					<creationProperty name="password" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PersonDataSheet_PropertyView" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/PersonDataSheet_PropertyView.jsp" 
+						isDefault="false" 
+						isStatic="false" 
+						clientType="PropertyView"
+						viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="PersonDataSheet_BaseDataView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/PersonDataSheet_BaseData.jsp" 
+						isDefault="true"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PersonDataSheet_BaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/persondata.xsl"
+						viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPersons" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+			
+			<artifactType 
+				name="CompanyList" 
+				artifactClassName="com.processpuzzle.party.artifact.CompanyList" 
+				createOnStartUp="true" 
+				group="SystemAdministration" 
+				isSingleton="true" 
+				isSystem="true" 
+				isVersionControlled="false" 
+				pessimisticLock="false" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description></description>
+				<caption>companyList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue></defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PropertyView" 
+						clientType="PropertyView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						viewClassName="com.processpuzzle.party.artifact.CompanyList_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems></associatedMenuItems>
+					</propertyViewType>
+					<artifactListViewType 
+						name="ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/CompanyList_ListView.jsp" 
+						viewClassName="com.processpuzzle.party.artifact.CompanyList_ListView"
+						listedArtifactType="com.processpuzzle.party.artifact.CompanyDataSheet"
+						orderBy="name"
+						order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=CompanyList&amp;viewName=CompanyList_ListView</viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowCompany" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/companylist.xsl"
+						viewClassName="com.processpuzzle.party.artifact.CompanyList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintCompanies" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateCompanyList" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+			
+		<artifactType 
+				name="CompanyDataSheet" 
+				group="SystemAdministration" 
+				artifactClassName="com.processpuzzle.party.artifact.CompanyDataSheet" 
+				domainClassName="com.processpuzzle.party.domain.Company"
+				createOnStartUp="false" 
+				isSingleton="false" 
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="false">
+				<caption>companyDataSheet</caption>
+				<baseUri>../../../../</baseUri>
+				<creationProperties>
+					<creationProperty name="companyName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="Properties" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/CompanyDataSheet_PropertyView.jsp" 
+						clientType="PropertyView"
+						viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="BaseData" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/CompanyDataSheet_BaseData.jsp" 
+						isDefault="true"
+						viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=CompanyDataSheet_BaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+				  	<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/companydata.xsl"
+						viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPersons" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+ 				</availableViews>
+			</artifactType>
+
+			<artifactType 
+				name="SettlementList" 
+				group="SystemAdministration" 
+				artifactClassName="com.processpuzzle.address.settlement.artifact.SettlementList" 
+				pessimisticLock="false" 
+				isSystem="true" 
+				isVersionControlled="false" 
+				isSingleton="true"
+				createOnStartUp="true">
+				<caption>settlementList</caption>
+				<baseUri>../../../../</baseUri>
+				<availableViews>
+					<artifactListViewType 
+						name="SettlementList" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/SettlementList_ListView.jsp" 
+						clientType="BrowseView"
+						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementList_ListView" 
+						listedArtifactType="com.processpuzzle.address.settlement.artifact.SettlementDataSheet" 
+						isDefault="true">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=SettlementList&amp;viewName=SettlementList_ListView</viewAccessUrl>
+					</artifactListViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=SettlementList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+			</artifactType>
+			
+			<artifactType 
+				name="SettlementDataSheet" 
+				group="SystemAdministration" 
+				artifactClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet" 
+				domainClassName="com.processpuzzle.address.settlement.domain.Settlement"
+				createOnStartUp="false" 
+				isSingleton="false" 
+				isSystem="false"
+				isVersionControlled="false" 
+				pessimisticLock="false">
+				<caption>settlementDataSheet</caption>
+				<baseUri>../../../../</baseUri>
+				<creationProperties>
+					<creationProperty name="settlementName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="Properties" 
+						clientType="PropertyView" 
+						isDefault="true" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/SettlementDataSheet_PropertyView.jsp"
+						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=SettlementProperties</viewAccessUrl>
+					</propertyViewType>
+			 		<artifactCustomFormViewType
+						name="BaseData"
+						isDefault="false"
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/SettlementDataSheet_BaseData.jsp"
+						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=SettlementBaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType 
+						name="RelatedArtifacts" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_RelatedArtifactsView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType 
+						name="AccessRights" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectAdministration/Artifact_AccessRights.jsp" 
+						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="UserList"
+				artifactClassName="com.processpuzzle.party.artifact.UserList"
+				createOnStartUp="true" group="SystemAdministration" isSingleton="true"
+				isSystem="true" isVersionControlled="false" pessimisticLock="false"
+				refreshOnDocumentActivation="true" refreshOnViewActivation="true">
+				<description></description>
+				<caption>userList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="ProcessPuzzleAdministrator"
+						canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue></defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<artifactListViewType name="ListView"
+						clientType="BrowseView" isDefault="true" isStatic="false"
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/UserList_ListView.jsp"
+						viewClassName="com.processpuzzle.party.artifact.UserList_ListView"
+						listedArtifactType="com.processpuzzle.party.artifact.UserDataSheet"
+						orderBy="name" order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=UserList&amp;viewName=UserList_ListView</viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowUser" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath=""
+						viewClassName="com.processpuzzle.party.artifact.UserList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintUsers" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=UserList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+	
+			<artifactType 
+				name="UserDataSheet" 
+				group="SystemAdministration" 
+				artifactClassName="com.processpuzzle.party.artifact.UserDataSheet" 
+				domainClassName="com.processpuzzle.application.security.domain.User"
+				createOnStartUp="false" 
+				isSingleton="false" 
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="false">
+				<caption>userDataSheet</caption>
+				<baseUri>../../../../</baseUri>
+				<creationProperties>
+					<creationProperty name="userName" type="string" />
+					<creationProperty name="password" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="Properties" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/UserDataSheet_PropertyView.jsp" 
+						clientType="PropertyView"
+						viewClassName="com.processpuzzle.party.artifact.UserDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=UserDataSheet&amp;viewName=UserDataSheet_PropertyView</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="BaseData" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/SystemAdministration/UserDataSheet_BaseData.jsp" 
+						isDefault="true"
+						viewClassName="com.processpuzzle.party.artifact.UserDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=UserDataSheet&amp;viewName=UserDataSheet_BaseData</viewAccessUrl>
+					</artifactCustomFormViewType>
+<!-- 					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView" presentationUri="/BusinessImplementation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.itcodex.objectpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType 
+						name="AccessRights" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProjectAdministration/Artifact_AccessRights.jsp" 
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+-->
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="ImageFileType" 
+				artifactClassName="com.processpuzzle.artifact.domain.ImageFile" 
+				createOnStartUp="false" 
+				group="SystemAdministration" 
+				isSingleton="false" 
+				isSystem="true" 
+				isVersionControlled="false" 
+				pessimisticLock="false" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Describes an image file of artifacts.</description>
+				<caption>Image File</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PropertyView" 
+						clientType="PropertyView" 
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="uri" 
+						viewClassName="com.processpuzzle.artifact.domain.ImageFile_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintFolderProperties" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+			<artifactType name="DocumentType" 
+				artifactClassName="com.processpuzzle.artifact.domain.Document" 
+				createOnStartUp="false" 
+				group="SystemAdministration" 
+				isSingleton="false" 
+				isSystem="true" 
+				isVersionControlled="false" 
+				pessimisticLock="false" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Describes an image file of artifacts.</description>
+				<caption>Image File</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PropertyView" 
+						clientType="PropertyView" 
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="uri" 
+						viewClassName="com.processpuzzle.artifact.domain.ImageFile_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintFolderProperties" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+		</artifactTypeGroup>
+		
+		<artifactTypeGroup name="Trading">
+			<defaultAccessRights>
+				<accessRight partyRoleType="Coach" canCreate="true" canDelete="true" canModify="true" canRead="true" />
+				<accessRight partyRoleType="XPTeamMember" canCreate="true" canDelete="false" canModify="true" canRead="true" />
+			</defaultAccessRights>
+
+			<artifactType 
+				name="PurchaseOrderList" 
+				artifactClassName="com.processpuzzle.order.artifact.PurchaseOrderList" 
+				createOnStartUp="true" 
+				group="Trading" 
+				isSingleton="true" 
+				isSystem="false" 
+				isVersionControlled="false" 
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Purchase Order list</description>
+				<caption>PurchaseOrderList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<artifactListViewType 
+						name="ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/Order/PurchaseOrderList_ListView.jsp" 
+						viewClassName="com.processpuzzle.order.artifact.PurchaseOrderList_ListView"
+						listedArtifactType="com.processpuzzle.order.artifact.PurchaseOrderDataSheet"
+						orderBy="name"
+						order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=PurchaseOrderList&amp;viewName=PurchaseOrderList_ListView</viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowPurchaseOrder" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<listQueryViewType 
+						name="PurchaseOrderList_QueryView" 
+						presentationUri="/Commons/BusinessImplementation/Order/PurchaseOrderList_QueryView.jsp"
+						viewClassName="com.processpuzzle.order.artifact.PurchaseOrderList_QueryView" 
+						clientType="ListQueryView"
+						targetPropertyView="">
+						<viewCaption>ui.viewCaption.listQuery</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=PurchaseOrderList&amp;viewName=PurchaseOrderList_QueryView</viewAccessUrl>
+						<preDefinedQueries>
+							<query name="Kiss Katalin kapcsolattartó">
+								<description>Kiss Katalin kapcsolattartó</description>
+								<statement>from PurchaseOrderDataSheet o where o.order.contactPerson.name = 'Kiss Katalin'</statement>
+							</query>
+						</preDefinedQueries>
+					</listQueryViewType>
+					<printViewType 
+						name="PurchaseOrderList_PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/purchaseorderlist.xsl"
+						viewClassName="com.processpuzzle.order.artifact.PurchaseOrderList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPurchaseOrders" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=PurchaseOrderList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivatePurchaseOrder" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+			<artifactType
+				name="PurchaseOrderDataSheet" 
+				artifactClassName="com.processpuzzle.order.artifact.PurchaseOrderDataSheet"
+				domainClassName="com.processpuzzle.order.domain.order.PurchaseOrder"
+                createOnStartUp="false" 
+                group="Trading" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Purchase Order datasheet</description>
+				<caption>Purchase Order Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PropertyView"
+						clientType="PropertyView"
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/Order/PurchaseOrderDataSheet_PropertyView.jsp" 
+						viewClassName="com.processpuzzle.order.artifact.PurchaseOrderDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPurchaseOrderProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="PurchaseOrderDataSheet_BaseDataView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/Order/PurchaseOrderDataSheet_BaseData.jsp" 
+						isDefault="true"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.order.artifact.PurchaseOrderDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</artifactCustomFormViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/purchaseorderdata.xsl"
+						viewClassName="com.processpuzzle.order.artifact.PurchaseOrderDataSheet_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPurchaseOrder" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivatePurchaseOrder" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+<!-- -->
+
+			<artifactType
+				name="OrderLineDataSheet" 
+				artifactClassName="com.processpuzzle.order.artifact.OrderLineDataSheet"
+				domainClassName="com.processpuzzle.order.domain.order.OrderLine"
+                createOnStartUp="false" 
+                group="Trading" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Orderline datasheet</description>
+				<caption>Order Line Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="OrderLineDataSheet_PropertyView"
+						clientType="PropertyView"
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri=""
+						viewClassName="com.processpuzzle.order.artifact.OrderLineDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPurchaseOrderProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="OrderLineDataSheet_BaseDataView" 
+						clientType="CustomFormView" 
+						presentationUri="" 
+						isDefault="true"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.order.artifact.OrderLineDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivatePurchaseOrder" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+			<artifactType 
+				name="ProductCatalogList" 
+				artifactClassName="com.processpuzzle.product.artifact.ProductCatalogList" 
+				createOnStartUp="true" 
+				group="Trading" 
+				isSingleton="true" 
+				isSystem="false" 
+				isVersionControlled="false" 
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Product catalog list</description>
+				<caption>ProductCatalogList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<artifactListViewType 
+						name="ProductCatalogList_ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						isStatic="true" 
+						presentationUri="/Commons/BusinessImplementation/ProductCatalog/ProductCatalogList_ListView.jsp" 
+						viewClassName="com.processpuzzle.product.artifact.ProductCatalogList_ListView"
+						listedArtifactType="com.processpuzzle.product.artifact.ProductCatalogDataSheet"
+						orderBy="name"
+						order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>CommandControllerServlet?action=ShowListView&amp;artifactType=ProductCatalogList&amp;artifactName=ProductCatalogList&amp;viewName=ProductCatalogList_ListView</viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/productcataloglist.xsl"
+						viewClassName="com.processpuzzle.product.artifact.ProductCatalogList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintProductCatalogs" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ProductCatalogList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+			
+			<artifactType
+				name="ProductCatalogDataSheet" 
+				artifactClassName="com.processpuzzle.product.artifact.ProductCatalogDataSheet"
+				domainClassName="com.processpuzzle.product.domain.productcatalog.ProductCatalog"
+                createOnStartUp="false" 
+                group="Business" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Product catalog is a hierarchically structured list of available product types.</description>
+				<caption>Product Catalog Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="productCatalogName" type="string"></creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="ProductCatalogDataSheet_PropertyView"
+						clientType="PropertyView"
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/ProductCatalog/ProductCatalogDataSheet_PropertyView.jsp" 
+						viewClassName="com.processpuzzle.product.artifact.ProductCatalogDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintProductCatalogProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="ProductCatalogDataSheet_BaseDataView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProductCatalog/ProductCatalogDataSheet_BaseDataView.jsp" 
+						isDefault="true"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.product.artifact.ProductCatalogDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType 
+						name="ProductCatalogDataSheet_TreeView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProductCatalog/ProductCatalogDataSheet_TreeView.jsp" 
+						isDefault="false"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.product.artifact.ProductCatalogDataSheet_TreeView">
+						<viewCaption>ui.viewCaption.treeData</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+			
+			<artifactType
+				name="CompositeCategoryDataSheet" 
+				artifactClassName="com.processpuzzle.product.artifact.CompositeCategoryDataSheet"
+				domainClassName="com.processpuzzle.product.domain.productcatalog.CompositeCategory"
+                createOnStartUp="false" 
+                group="Business" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Product catalog is a hierarchically structured list of available product types.</description>
+				<caption>Product Catalog Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PropertyView"
+						clientType="PropertyView"
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="uri" 
+						viewClassName="com.processpuzzle.product.artifact.CompositeCategoryDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintProductCatalogProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+			
+			<artifactType
+				name="ProductGroupDataSheet" 
+				artifactClassName="com.processpuzzle.product.artifact.ProductGroupDataSheet"
+				domainClassName="com.processpuzzle.product.domain.productcatalog.ProductGroup"
+                createOnStartUp="false" 
+                group="Business" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Product catalog is a hierarchically structured list of available product types.</description>
+				<caption>Product Catalog Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PropertyView"
+						clientType="PropertyView"
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="uri" 
+						viewClassName="com.processpuzzle.product.artifact.ProductGroupDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintProductCatalogProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+			
+			<artifactType
+				name="CatalogEntryDataSheet" 
+				artifactClassName="com.processpuzzle.product.artifact.CatalogEntryDataSheet"
+				domainClassName="com.processpuzzle.product.domain.productcatalog.CatalogEntry"
+                createOnStartUp="false" 
+                group="Business" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Product catalog is a hierarchically structured list of available product types.</description>
+				<caption>Product Catalog Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PropertyView"
+						clientType="NativeView"
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="uri" 
+						viewClassName="com.processpuzzle.product.artifact.CatalogEntryDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintProductCatalogProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductCatalog" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+			
+			<artifactType 
+				name="ProductTypeList" 
+				artifactClassName="com.processpuzzle.product.artifact.ProductTypeList" 
+				createOnStartUp="true" 
+				group="Trading" 
+				isSingleton="true" 
+				isSystem="false" 
+				isVersionControlled="false" 
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Product type list</description>
+				<caption>ProductTypeList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<artifactListViewType 
+						name="ProductTypeList_ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/ProductType/ProductTypeList_ListView.jsp" 
+						viewClassName="com.processpuzzle.product.artifact.ProductTypeList_ListView"
+						listedArtifactType="com.processpuzzle.product.artifact.ProductTypeDataSheet"
+						orderBy="name"
+						order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowProductType" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/producttypelist.xsl"
+						viewClassName="com.processpuzzle.product.artifact.ProductTypeList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintProductTypes" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+
+					<listQueryViewType 
+						name="ProductTypeList_QueryView" 
+						presentationUri="/Commons/BusinessImplementation/ProductType/ProductTypeList_QueryView.jsp"
+						viewClassName="com.processpuzzle.product.artifact.ProductTypeList_QueryView" 
+						clientType="ListQueryView"
+						targetPropertyView="">
+						<viewCaption>ui.viewCaption.listQuery</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=ProductTypeList&amp;viewName=ProductTypeList_QueryView</viewAccessUrl>
+						<preDefinedQueries>
+							<query name="A 600075-ös termék">
+								<description>A 600075-ös kulcsot listázza ki</description>
+								<statement>from ProductTypeDataSheet o where o.productType.identifier.identifier= '600075'</statement>
+							</query>
+						</preDefinedQueries>
+					</listQueryViewType>
+
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ProductTypeList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateProductType" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+			<artifactType
+				name="ProductTypeDataSheet" 
+				artifactClassName="com.processpuzzle.product.artifact.ProductTypeDataSheet"
+				domainClassName="com.processpuzzle.product.domain.producttype.ProductType"
+                createOnStartUp="false" 
+                group="Business" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Product type.</description>
+				<caption>Producttype Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="productIdentifier" type="string"></creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="ProductTypeDataSheet_PropertyView"
+						clientType="PropertyView"
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/ProductType/ProductTypeDataSheet_PropertyView.jsp" 
+						viewClassName="com.processpuzzle.product.artifact.ProductTypeDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintProductTypeProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="ProductTypeDataSheet_BaseDataView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/ProductType/ProductTypeDataSheet_BaseData.jsp" 
+						isDefault="true"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.product.artifact.ProductTypeDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Show">
+						<command name="ShowPerson" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+<!--  -->
+
+			<artifactType 
+				name="PriceTypeList" 
+				artifactClassName="com.processpuzzle.product.artifact.PriceTypeList" 
+				createOnStartUp="true" 
+				group="Trading" 
+				isSingleton="true" 
+				isSystem="false" 
+				isVersionControlled="false" 
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Price type list</description>
+				<caption>PriceTypeList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<artifactListViewType 
+						name="ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/PriceType/PriceTypeList_ListView.jsp" 
+						viewClassName="com.processpuzzle.product.artifact.PriceTypeList_ListView"
+						listedArtifactType="com.processpuzzle.product.artifact.PriceTypeDataSheet"
+						orderBy="name"
+						order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=PriceTypeList&amp;viewName=PriceTypeList_ListView</viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowPriceType" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/pricetypelist.xsl"
+						viewClassName="com.processpuzzle.product.artifact.PriceTypeList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPriceTypes" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=PriceTypeList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivatePriceType" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+			
+			<artifactType
+				name="PriceTypeDataSheet" 
+				artifactClassName="com.processpuzzle.product.artifact.PriceTypeDataSheet"
+				domainClassName="com.processpuzzle.product.domain.pricetype.PriceType"
+                createOnStartUp="false" 
+                group="Trading" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Price Type datasheet</description>
+				<caption>Product Catalog Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="priceTypeName" type="string"></creationProperty>
+					<creationProperty name="validFrom" type="string"></creationProperty>
+					<creationProperty name="validTo" type="string"></creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="PriceTypeDataSheet_PropertyView"
+						clientType="PropertyView"
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/PriceType/PriceTypeDataSheet_PropertyView.jsp" 
+						viewClassName="com.processpuzzle.product.artifact.PriceTypeDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintPriceTypeProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="PriceTypeDataSheet_BaseDataView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/PriceType/PriceTypeDataSheet_BaseDataView.jsp" 
+						isDefault="true"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.product.artifact.PriceTypeDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivatePriceType" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+<!--  -->
+
+			<artifactType 
+				name="SalesTaxPolicyList" 
+				artifactClassName="com.processpuzzle.order.artifact.SalesTaxPolicyList" 
+				createOnStartUp="true" 
+				group="Trading" 
+				isSingleton="true" 
+				isSystem="false" 
+				isVersionControlled="false" 
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true" 
+				refreshOnViewActivation="true">
+				<description>Salex tax list</description>
+				<caption>SalesTaxPolicyList</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="aProperty" type="string">
+						<defaultValue>A property value</defaultValue>
+					</creationProperty>
+				</creationProperties>
+				<availableViews>
+					<artifactListViewType 
+						name="ListView" 
+						clientType="BrowseView" 
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/SalesTaxPolicy/SalesTaxPolicyList_ListView.jsp" 
+						viewClassName="com.processpuzzle.order.artifact.SalesTaxPolicyList_ListView"
+						listedArtifactType="com.processpuzzle.order.artifact.SalesTaxPolicyDataSheet"
+						orderBy="name"
+						order="desc">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=SalesTaxPolicyList&amp;viewName=SalesTaxPolicyList_ListView</viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Show">
+								<command name="ShowSalesTaxPolicy" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</artifactListViewType>
+					<printViewType 
+						name="PrintView" 
+						clientType="PrintView" 
+						isDefault="false" 
+						isStatic="false" 
+						presentationUri="uri" 
+						xmlToFoXsltPath="/stylesheet/salestaxpolicylist.xsl"
+						viewClassName="com.processpuzzle.order.artifact.SalesTaxPolicyList_PrintView">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintSalesTaxPolicy" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</printViewType>
+					<artifactCommentsViewType 
+						name="Comments" 
+						clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=SalesTaxPolicyList</viewAccessUrl>
+					</artifactCommentsViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Activate">
+						<command name="ActivateSalesTaxPolicy" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+
+			<artifactType
+				name="SalesTaxPolicyDataSheet" 
+				artifactClassName="com.processpuzzle.order.artifact.SalesTaxPolicyDataSheet"
+				domainClassName="com.processpuzzle.order.domain.salestaxpolicy.SalesTaxPolicy"
+                createOnStartUp="false" 
+                group="Trading" 
+                isSingleton="false"
+				isSystem="false" 
+				isVersionControlled="false"
+				pessimisticLock="true" 
+				refreshOnDocumentActivation="true"
+				refreshOnViewActivation="true">
+				<description>Sales Tax Policy datasheet</description>
+				<caption>Sales Tax Policy Data Sheet</caption>
+				<baseUri>../../../../</baseUri>
+				<defaultAccessRights>
+					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</defaultAccessRights>
+				<creationProperties>
+					<creationProperty name="taxationType" type="string"></creationProperty>
+					<creationProperty name="taxationRate" type="string"></creationProperty>
+				</creationProperties>
+				<availableViews>
+					<propertyViewType 
+						name="SalesTaxPolicyDataSheet_PropertyView"
+						clientType="PropertyView"
+						isDefault="true" 
+						isStatic="false" 
+						presentationUri="/Commons/BusinessImplementation/SalesTaxPolicy/SalesTaxPolicyDataSheet_PropertyView.jsp" 
+						viewClassName="com.processpuzzle.order.artifact.SalesTaxPolicyDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+						<associatedMenuItems>
+							<menuItem name="Print">
+								<command name="PrintSalesTaxPolicyProperties" 
+										 description="" 
+										 type="CustomCommand" 
+										 actionStatement="" 
+										 customPrefix="" />
+							</menuItem>
+						</associatedMenuItems>
+					</propertyViewType>
+					<artifactCustomFormViewType 
+						name="SalesTaxPolicyDataSheet_BaseDataView" 
+						clientType="CustomFormView" 
+						presentationUri="/Commons/BusinessImplementation/SalesTaxPolicy/SalesTaxPolicyDataSheet_BaseDataView.jsp" 
+						isDefault="true"
+						isStatic="false" 
+						viewClassName="com.processpuzzle.order.artifact.SalesTaxPolicyDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl></viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+				<associatedMenuItems>
+					<menuItem name="Show">
+						<command name="ShowSalesTaxPolicy" 
+								 description="" 
+								 type="CustomCommand" 
+								 actionStatement="" 
+								 customPrefix="" />
+					</menuItem>
+				</associatedMenuItems>
+			</artifactType>
+<!-- End of ArtifactTypes -->
+
+		</artifactTypeGroup>
+	</artifactTypes>
+
+	<!-- Protocols: Defines the workflows can be run by the system. -->
+	<!-- 
+	<protocols>
+		<activities>
+			<activity name="DefineAcceptanceTest" performerRole="Customer" />
+			<activity name="HoldStandUpMeeting" performerRole="Coach" />
+			<activity name="Develop" performerRole="Developer" />
+			<activity name="IterationPlanning" performerRole="EmployingXPProject" />
+		</activities>
+		
+		<workflowDetails>
+			<workflowDetail name="DailyDevelopment">
+				<activity>HoldStandUpMeeting</activity>
+				<activity>DefineAcceptanceTest</activity>
+				<activity>Develop</activity>
+			</workflowDetail>
+		</workflowDetails>
+		
+		<lifecycleProtocol name="XPProject" prefix="xp">
+			<lifecyclePhase name="Iteration">
+				<activity>IterationPlanning</activity>
+			</lifecyclePhase>
+		</lifecycleProtocol>
+	</protocols>
+	 -->
+	 
+</businessDefinition>

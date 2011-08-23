@@ -1,0 +1,100 @@
+<html>
+<head>
+	<LINK href="../TreeWidget/TreeWidget.css" rel=stylesheet >
+
+	<script language="JavaScript" src="FolderManagerWidget.js"></script>
+
+	<script language="JavaScript" src="../FundamentalTypes/XmlResource.js"></script>
+	<script language="JavaScript" src="../CommonScripts/UserException.js"></script>
+	<script language="javascript" src="../TreeWidget/TreeNode.js"></script>
+	<script language="javascript" src="../TreeWidget/TreeWidget.js"></script>
+
+	<script language="JavaScript" src="../Internationalization/Locale.js"></script>
+	<script language="JavaScript" src="../Internationalization/LocaleUtil.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceKey.js"></script>
+	<script language="JavaScript" src="../Internationalization/ResourceCache.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLBundleParser.js"></script>
+	<script language="JavaScript" src="../Internationalization/XMLResourceBundle.js"></script>
+	<script language="JavaScript" src="../XMLforScript/xmlsax.js"></script>
+	<script language="JavaScript" src="../XMLforScript/preMadeSaxEventHandler.js"></script>
+	<script language="JavaScript" src="../CommonScripts/AssertUtil.js"></script>
+	<script language="JavaScript" src="../CommonScripts/inheritFrom.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/HashMap.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringBuffer.js"></script>
+	<script language="JavaScript" src="../CommonScripts/StringUtil.js"></script>
+	<script language="JavaScript" src="../FundamentalTypes/ArrayList.js"></script>
+
+	<script language="javascript">
+		var fmToCreate = null;
+		var fmToRename = null;
+		var fmToMove = null;
+		var fmToDelete = null;
+
+		var resourceBundleHu = new XMLResourceBundle("ResourceBundle");
+		var localeHu = new Locale("hu");
+		resourceBundleHu.loadFile(localeHu);
+
+		var resourceBundleEn = new XMLResourceBundle("ResourceBundle");
+		var localeEn = new Locale("en");
+		resourceBundleEn.loadFile(localeEn);
+
+		function myEventHandler(selected,newName,selected2) {
+			var s = "Selected: "+selected;
+			if (newName!="") s+="\nNewName: "+newName;
+			if (selected2!="") s+="\nselected2: "+selected2;
+			alert(s);
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<div id="content1" style="width:350px;"></div>	
+	<script>
+		var createDiv = document.getElementById("content1");
+		fmToCreate = new FolderManagerWidget("alma",1,resourceBundleHu,createDiv);
+		fmToCreate.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+		fmToCreate.setTransformationDefFileName("FTConverterToTWT.xsl");
+		fmToCreate.setEventHandler(myEventHandler);
+		fmToCreate.createNewNode();
+	</script>
+
+	<br><hr><br>
+
+	<div id="content2" style="width:350px;"></div>	
+	<script>
+		var renameDiv = document.getElementById("content2");
+		fmToRename = new FolderManagerWidget("alma",1,resourceBundleHu,renameDiv);
+		fmToRename.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+		fmToRename.setTransformationDefFileName("FTConverterToTWT.xsl");
+		fmToRename.setEventHandler(myEventHandler);
+		fmToRename.renameNode();
+	</script>
+
+	<br><hr><br>
+
+	<div id="content3" style="width:350px;"></div>	
+	<script>
+		var moveDiv = document.getElementById("content3");
+		fmToMove = new FolderManagerWidget("alma",1,resourceBundleHu,moveDiv);
+		fmToMove.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+		fmToMove.setTransformationDefFileName("FTConverterToTWT.xsl");
+		fmToMove.setEventHandler(myEventHandler);
+		fmToMove.moveNode();
+	</script>
+
+	<br><hr><br>
+
+	<div id="content4" style="width:350px;"></div>	
+	<script>
+		var deleteDiv = document.getElementById("content4");
+		fmToDelete = new FolderManagerWidget("alma",1,resourceBundleHu,deleteDiv);
+		fmToDelete.setFolderTreeDefFileName("ArtifactPackageTree.xml");
+		fmToDelete.setTransformationDefFileName("FTConverterToTWT.xsl");
+		fmToDelete.setEventHandler(myEventHandler);
+		fmToDelete.deleteNode();
+	</script>
+
+</body>
+</html>

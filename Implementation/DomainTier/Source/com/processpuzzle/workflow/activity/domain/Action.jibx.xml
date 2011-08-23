@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<binding forwards="false" >
+	<mapping class="com.itcodex.objectpuzzle.project_planning.action.domain.Action" abstract="true">
+		<value name="id" field="id" style="attribute"/>
+		<value name="name" field="name" />
+		<value name="description" field="description" usage="optional"/>
+	</mapping>
+ 
+ 	<mapping 
+		name="activity" 
+		class="com.itcodex.objectpuzzle.project_planning.action.domain.Activity" 
+		extends="com.itcodex.objectpuzzle.project_planning.action.domain.Action">
+		<namespace prefix="pp" uri="http://www.processpuzzle.com/type_definition/project_planning" default="elements"/>
+		<structure map-as="com.itcodex.objectpuzzle.project_planning.action.domain.Action" />
+		<value name="implementable" get-method="isImplementable" set-method="canStart"/>
+	</mapping>
+
+	<mapping 
+		name="plan" 
+		class="com.itcodex.objectpuzzle.project_planning.action.domain.Plan" 
+		extends="com.itcodex.objectpuzzle.project_planning.action.domain.Action">
+		<namespace prefix="pp" uri="http://www.processpuzzle.com/type_definition/project_planning" default="elements"/>
+		<structure map-as="com.itcodex.objectpuzzle.project_planning.action.domain.Action" />
+		<collection name="subActions" field="actions" get-method="getSubActions" item-type="com.itcodex.objectpuzzle.project_planning.action.domain.Action" create-type="java.util.HashSet"/>
+	</mapping>
+	
+	<mapping class="com.itcodex.objectpuzzle.project_planning.action.domain.GenericAction" abstract="true">
+		
+	</mapping>
+</binding>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.artifact.domain.HTMLDocument"
+		table="T_HTMLDOCUMENT"
+		extends="com.processpuzzle.artifact.domain.Document">
+	</union-subclass>
+</hibernate-mapping>

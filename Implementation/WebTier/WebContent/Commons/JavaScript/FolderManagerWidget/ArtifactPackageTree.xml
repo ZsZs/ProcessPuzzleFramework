@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageStructure>
+	<ArtifactPackage name="OPRoot">
+		<ArtifactPackage name="SystemPackage">
+		</ArtifactPackage>
+		<ArtifactPackage name="ProsessesPackage">
+	    		<ArtifactPackage name="SomethingNice">
+			</ArtifactPackage>
+		</ArtifactPackage>
+	</ArtifactPackage>
+	<ArtifactPackage name="SomethingGood">
+	</ArtifactPackage>
+</PackageStructure>

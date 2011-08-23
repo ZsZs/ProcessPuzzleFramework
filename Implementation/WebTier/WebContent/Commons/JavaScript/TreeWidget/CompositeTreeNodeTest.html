@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Test page for CompositeTreeNode.js</title>
+	<link type="text/css" href="../JsUnit/app/css/jsUnitStyle.css" rel="stylesheet"></link>
+
+	<link type="text/css" href="TreeWidget.css" rel=stylesheet></link>
+	
+    <script type="text/javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+    <script type="text/javascript" src="../JsHamcrest/JsHamcrest.js"></script>
+    <script type="text/javascript" src="../JSMockito/jsmockito-1.0.2.js"></script>
+    
+    <script type="text/javascript" src="../MooTools/mootools-core-1.3.js"></script>
+    <script type="text/javascript" src="../Log4JavaScript/log4javascript.js"></script>
+    
+	<script type="text/javascript" src="../CommonScripts/AssertUtil.js"></script>
+	<script type="text/javascript" src="../CommonScripts/UserException.js"></script>
+	<script type="text/javascript" src="../WebUIController/WebUIController.js"></script>
+	<script type="text/javascript" src="../WebUIController/WebUILogger.js"></script>
+	<script type="text/javascript" src="TreeNodeType.js"></script>
+	<script type="text/javascript" src="CompositeTreeNodeType.js"></script>
+	<script type="text/javascript" src="TreeNode.js"></script>
+	<script type="text/javascript" src="CompositeTreeNode.js"></script>
+	<script type="text/javascript" src="LeafTreeNode.js"></script>
+	<script type="text/javascript" src="TreePath.js"></script>
+	<script type="text/javascript" src="RootTreeNode.js"></script>
+	
+	<script type="text/javascript">
+		window.addEvent('domready', function() {
+			runTestFunction();
+		});
+
+		var NODE_ID = "treeNodeId";
+		var NODE_NAME = "treeNodeName";
+		var NODE_CAPTION = "caption of tree node";
+		var compositeTreeNode;
+		var leafTreeNode;
+		var grandChildNode1;
+		var rootCompositeNode;
+		var webUiController;
+
+		function setUp() {
+			webUiController = JsMockito.mock( WebUiController );
+			JsMockito.when( webUiController ).getText( NODE_ID ).thenReturn( NODE_CAPTION );
+			 
+			rootCompositeNode = new CompositeTreeNode( "ND-0-1", folderNodeType, webUiController, {state : 'opened'} );
+			compositeTreeNode = new CompositeTreeNode( "ND-1-1", folderNodeType, webUiController );
+			leafTreeNode = new LeafTreeNode( "ND-1-2", pageNodeType, webUiController );
+			grandChildNode1 = new LeafTreeNode( "ND-2-1", pageNodeType, webUiController );
+			rootCompositeNode.appendChild( compositeTreeNode );
+			rootCompositeNode.appendChild( leafTreeNode );
+			compositeTreeNode.appendChild( grandChildNode1 );
+		}
+
+		function tearDown(){
+			rootCompositeNode = null;
+			compositeTreeNode = null;
+			leafTreeNode = null;
+			grandChildNode1 = null;
+		}
+		
+		function testInitialization() {
+			assertEquals( "By default the node 'state' is:", folderNodeType.CLOSED_STATE, compositeTreeNode.options.state );
+		}
+
+		function testAppendChild_WhenChildsAreValid_ConfiguresSiblingAndParentalRelationship() {
+			//SETUP: see setUp();
+			//EXCERCISE: see setUp();
+			
+			//VERIFY:
+			assertEquals( 2, rootCompositeNode.childs.length );
+			assertEquals( 1, compositeTreeNode.childs.length );
+			
+			assertTrue( rootCompositeNode.childs.contains( compositeTreeNode ));
+			assertTrue( rootCompositeNode.childs.contains( leafTreeNode ));
+			assertTrue( compositeTreeNode.childs.contains( grandChildNode1 ));
+			
+			assertEquals( rootCompositeNode, compositeTreeNode.parentNode );
+			assertEquals( rootCompositeNode, leafTreeNode.parentNode );
+			assertEquals( compositeTreeNode, grandChildNode1.parentNode );
+			
+			assertEquals( compositeTreeNode.nextNode, leafTreeNode );
+			assertEquals( leafTreeNode.prevNode, compositeTreeNode );
+		}
+		
+		function testBubbleUpNames() {
+		}
+		
+		function testCollapse_WhenExpanded_DoesntChangesVisibility() {
+			rootCompositeNode.show();
+			rootCompositeNode.collapse();
+			
+			assertTrue ( "Collapse keeps the node itself visible.", rootCompositeNode.isVisible() );
+		}
+		
+		function testCollapse_WhenExpanded_ChangesNodeStatus() {
+			rootCompositeNode.show();
+			rootCompositeNode.collapse();
+			
+			assertEquals( "Collapse changes the status to:", folderNodeType.getStateNameWhenClosed(), rootCompositeNode.getState() );
+		}
+		
+		function testCollapse_WhenExpanded_HidesChildNodes() {
+			rootCompositeNode.show();
+			rootCompositeNode.collapse();
+			
+			assertEquals( "Collapse changes the status to:", folderNodeType.getStateNameWhenClosed(), rootCompositeNode.getState() );
+			assertTrue ( "Collapse keeps the node itself visible.", rootCompositeNode.isVisible() );
+			assertFalse( "Collapse hides all childs.", compositeTreeNode.isVisible() );
+			assertFalse( "Collapse hides all childs.", leafTreeNode.isVisible() );
+		}
+		
+		function testDetermineLevel_SumsLevelsUpToRoot() {
+			assertEquals( 0, rootCompositeNode.determineLevel() );
+			assertEquals( 1, compositeTreeNode.determineLevel() );
+			assertEquals( 2, grandChildNode1.determineLevel() );
+		}
+		
+		function testDeterminePath_ConcatenatesNodeNamesUpToRoot() {
+			assertEquals( "ND-0-1/ND-1-1/", compositeTreeNode.determinePath().getPath() );
+			assertEquals( "ND-0-1/ND-1-2/", leafTreeNode.determinePath().getPath() );
+			assertEquals( "ND-0-1/ND-1-1/ND-2-1/", grandChildNode1.determinePath().getPath() );
+		}
+		
+		function testExpand_WhenClosed_ChangesNodeStatus() {
+			rootCompositeNode.show();
+			compositeTreeNode.expand();
+			
+			assertEquals( "Collapse changes the status to:", folderNodeType.getStateNameWhenOpened(), compositeTreeNode.getState() );
+		}
+
+		function testExpand_WhenClosed_ShowsChildNodes() {
+			rootCompositeNode.show();
+			compositeTreeNode.expand();
+			
+			assertTrue( grandChildNode1.isVisible() );
+		}
+
+		function testExpand_WhenParentIsHidden_ThrowsException() {
+			try{
+				compositeTreeNode.expand();
+	      		fail( "Exception was expected. Parent of 'compositeTreeNode' is hidden, so child can't be expanded." );
+			}catch( e ) {
+	      		assertTrue( "IllegalMethodCallException is expected.", e instanceof IllegalMethodCallException );
+			}
+		}
+		
+		function testGetParent() {
+			assertEquals("The parent is", compositeTreeNode.getParentNode().getID(), rootCompositeNode.getID() );
+			assertEquals("The parent is", leafTreeNode.getParentNode().getID(), rootCompositeNode.getID() );
+		}
+
+		function testRemoveChild() {
+			assertTrue( "Child node is removed", rootCompositeNode.removeChild( compositeTreeNode ));
+			assertTrue( "The latest is the first", rootCompositeNode.getFirstChild().getID() == "ND-1-2");
+			rootCompositeNode.removeChild( leafTreeNode );
+			assertFalse("Parent doesn't have mode childs", rootCompositeNode.hasChilds());
+		}
+		
+		function testShow_WhenClosed_DoesNotEffectChildNodes() {
+			rootCompositeNode.show();
+			
+			compositeTreeNode.getChilds().each( function( childNode, serialNumber ){
+				assertFalse( childNode.isVisible() );
+				assertNull( childNode.getContainerElement() );
+			});
+		}
+		
+		function testShow_WhenNewlyCreated_BuildsHtmlRepresentation() {
+			//ASSUME:
+			assertFalse( rootCompositeNode.isVisible() );
+			assertEquals( folderNodeType.OPENED_STATE, rootCompositeNode.getState() );
+			assertNull( rootCompositeNode.getContainerElement() );
+			
+			assertFalse( compositeTreeNode.isVisible() );
+			assertNull( compositeTreeNode.getContainerElement() );
+
+			assertFalse( leafTreeNode.isVisible() );
+			assertNull( leafTreeNode.getContainerElement() );
+			
+			//EXCERCISE:
+			rootCompositeNode.show();
+			
+			//VERIFY:
+			verifyNodeImage();
+			verifyTrailingImages();
+		}
+		
+		function testShow_WhenOpened_ShowsChildNodes() {
+			rootCompositeNode.show();
+			
+			rootCompositeNode.getChilds().each( function( childNode, serialNumber ){
+				assertTrue( childNode.isVisible() );
+				assertNotNull( childNode.getContainerElement() );
+				assertTrue( childNode.getContainerElement().hasClass( folderNodeType.getNodeClassWhenVisible() ));
+			});
+		}
+		
+		function testShow_WhenParentIsHidden_ThrowsException() {
+			try{
+				leafTreeNode.show();
+	      		fail( "Exception was expected. Parent of 'leafTreeNode' is hidden, so child can't be shown." );
+			}catch( e ) {
+	      		assertTrue( "IllegalMethodCallException is expected.", e instanceof IllegalMethodCallException );
+			}
+		}
+		
+		function verifyNodeImage() {
+			var nodeImageElement = rootCompositeNode.getNodeImageElement();
+			var expectedNodeImage = folderNodeType.determineNodeImage( folderNodeType.OPENED_STATE );
+			assertEquals( expectedNodeImage, nodeImageElement.get( 'src' ));
+			assertTrue( nodeImageElement.hasEvent( 'click', rootCompositeNode.onFolderClickHandler ));
+		}
+		
+		function verifyTrailingImages() {
+			var expectedProperty = folderNodeType.getLineImageWhenLast( folderNodeType.getStateNameWhenOpened() );
+			var trailerImageElement = rootCompositeNode.getContainerElement().getChildren( 'img' )[0];
+			assertEquals( expectedProperty, trailerImageElement.get( 'src' ));
+			assertTrue( trailerImageElement.hasClass( folderNodeType.getNodeImageClass() ));
+			
+			expectedProperty = folderNodeType.getLineImageWhenHasNext( folderNodeType.getStateNameWhenClosed() );
+			trailerImageElement = compositeTreeNode.getContainerElement().getChildren( 'img' )[1];
+			assertEquals( expectedProperty, trailerImageElement.get( 'src' ));
+			
+			expectedProperty = pageNodeType.getTrailingImageWhenLast();
+			trailerImageElement = leafTreeNode.getContainerElement().getChildren( 'img' )[0];
+			assertEquals( expectedProperty, trailerImageElement.get( 'src' ));
+			
+			expectedProperty = pageNodeType.getLineImageWhenLast();
+			trailerImageElement = leafTreeNode.getContainerElement().getChildren( 'img' )[1];
+			assertEquals( expectedProperty, trailerImageElement.get( 'src' ));
+		}
+		
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			testCollapse_WhenExpanded_HidesChildNodes();
+			tearDown();
+		}
+	</script>
+</head>
+<body>
+	<h1>Test page for CompositeTreeNode.js</h1>
+
+</body>
+</html>

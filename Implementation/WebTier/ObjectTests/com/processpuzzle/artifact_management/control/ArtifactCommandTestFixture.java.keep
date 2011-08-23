@@ -1,0 +1,5 @@
+package com.processpuzzle.artifact_management.control;
+
+public class ArtifactCommandTestFixture {
+
+}

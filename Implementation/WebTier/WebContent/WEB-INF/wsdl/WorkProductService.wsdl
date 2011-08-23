@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+	name="WorkProductService"	
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+	targetNamespace="http://www.processpuzzle.com" 
+	xmlns:pp="http://www.processpuzzle.com">
+
+	<wsdl:types>
+	  <xsd:schema 
+	  	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	  	targetNamespace="http://www.processpuzzle.com" 
+	  	xmlns:pp="http://www.processpuzzle.com">
+	    <xsd:complexType name="WorkProduct">
+	      <xsd:sequence>
+	        <xsd:element name="id" type="xsd:integer"/>
+	      </xsd:sequence>
+	    </xsd:complexType>
+	  </xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="FindByIdRequest">
+		<wsdl:part name="id" type="xsd:string" />
+	</wsdl:message>
+
+	<wsdl:message name="FindByIdResponse">
+		<wsdl:part name="workProduct" type="xsd:string" />
+	</wsdl:message>
+
+	<wsdl:portType name="WorkProductService">
+		<wsdl:operation name="findById">
+			<wsdl:input message="pp:FindByIdRequest" name="FindByIdRequest" wsaw:Action="http://www.processpuzzle.com/WorkProduct/findByIdRequest" />
+			<wsdl:output message="pp:FindByIdResponse" name="FindByIdResponse" wsaw:Action="http://www.processpuzzle.com/WorkProduc/findByIdResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="WorkProductBinding" type="pp:WorkProductService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<wsdl:operation name="findById">
+			<soap:operation soapAction="http://www.processpuzzle.com/WorkProduct/findById" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+	<wsdl:service name="WorkProductService">
+		<wsdl:port name="WorkProductPort" binding="pp:WorkProductBinding">
+			<soap:address location="http://localhost:8080/ProcessPuzzle" />
+		</wsdl:port>
+	</wsdl:service>
+	
+</wsdl:definitions>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<class
+		name="com.processpuzzle.workflow.activity.domain.GeneralResourceAllocation"
+		table="T_GENERAL_RESOURCE_ALLOCATION">
+		<id name="id" type="integer" unsaved-value="null">
+			<column name="GENERAL_RESOURCE_ALLOCATION_ID"
+				not-null="true" />
+			<generator class="identity" />
+		</id>
+
+		<many-to-one lazy="false" name="partyRoleType"
+			column="PARTY_ROLE_TYPE_ID"
+			class="com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType" />
+		<many-to-one lazy="false" name="proposedAction"
+			column="PROPOSED_ACTION_ID"
+			class="com.processpuzzle.workflow.activity.domain.ProposedAction"
+			cascade="save-update" />
+
+	</class>
+</hibernate-mapping>

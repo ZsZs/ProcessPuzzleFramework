@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace = "http://www.processpuzzle.com/"
+	elementFormDefault="qualified"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.processpuzzle.com/">
+
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="person" type="PersonDef"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+ 
+  <xsd:complexType name="PersonDef">
+   <xsd:sequence minOccurs="1" maxOccurs="1">
+   	 <xsd:element name="prefix" type="xsd:string"/>
+     <xsd:element name="familyName" type="xsd:string"/>
+     <xsd:element name="givenName" type="xsd:string"/>
+     <xsd:element name="birthday" type="xsd:string"/>
+     <xsd:element name="address1_UsedFor" type="xsd:string"/>
+     <xsd:element name="address1_Land" type="xsd:string"/>
+     <xsd:element name="address1_ZipCode" type="xsd:string"/>
+     <xsd:element name="address1_Settlement" type="xsd:string"/>
+     <xsd:element name="address1_Street" type="xsd:string"/>
+     <xsd:element name="address1_BuildingNumber" type="xsd:string"/>
+     <xsd:element name="phone1_CountryCode" type="xsd:string"/>
+     <xsd:element name="phone1_AreaCode" type="xsd:string"/>
+     <xsd:element name="phone1_Number" type="xsd:string"/>
+     <xsd:element name="emailAddress1" type="xsd:string"/>
+     <xsd:element name="address2_UsedFor" type="xsd:string"/>
+     <xsd:element name="address2_Land" type="xsd:string"/>
+     <xsd:element name="address2_ZipCode" type="xsd:string"/>
+     <xsd:element name="address2_Settlement" type="xsd:string"/>
+     <xsd:element name="address2_Street" type="xsd:string"/>
+     <xsd:element name="address2_BuildingNumber" type="xsd:string"/>
+     <xsd:element name="phone2_CountryCode" type="xsd:string"/>
+     <xsd:element name="phone2_AreaCode" type="xsd:string"/>
+     <xsd:element name="phone2_Number" type="xsd:string"/>
+     <xsd:element name="emailAddress2" type="xsd:string"/>
+     <xsd:element name="address3_UsedFor" type="xsd:string"/>
+     <xsd:element name="address3_Land" type="xsd:string"/>
+     <xsd:element name="address3_ZipCode" type="xsd:string"/>
+     <xsd:element name="address3_Settlement" type="xsd:string"/>
+     <xsd:element name="address3_Street" type="xsd:string"/>
+     <xsd:element name="address3_BuildingNumber" type="xsd:string"/>
+     <xsd:element name="phone3_CountryCode" type="xsd:string"/>
+     <xsd:element name="phone3_AreaCode" type="xsd:string"/>
+     <xsd:element name="phone3_Number" type="xsd:string"/>
+     <xsd:element name="emailAddress3" type="xsd:string"/>
+     <xsd:element name="webAddress" type="xsd:string"/>
+   </xsd:sequence>
+ </xsd:complexType>
+</xsd:schema>

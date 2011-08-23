@@ -1,0 +1,23 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+	background-color:#F5C594;
+	
+	Scrollbar-Face-Color:#8F5545;
+	Scrollbar-Arrow-Color:#F2DAC0;
+	Scrollbar-Track-Color:#F2DAC0;
+	Scrollbar-3Dlight-Color:#F2DAC0;
+	Scrollbar-Darkshadow-Color:#F2DAC0;
+	Scrollbar-Highlight-Color:#F2DAC0;
+	Scrollbar-Shadow-Color:#F2DAC0;
+}
+
+input.buttonSmall{
+	background-color: transparent;
+	background-image: url("../../images/buttonSmall.jpg");
+	background-repeat: no-repeat;
+	height:22px;
+	width:106px;
+	border:0px;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.artifact_type.domain.ArtifactMenu"
+		table="T_ARTIFACT_MENU"
+		extends="com.processpuzzle.fundamental_types.domain.GenericEntity">
+		
+		<property name="name"/>
+		<many-to-one lazy="false" name="command" class="com.processpuzzle.artifact_type.domain.ArtifactMenuCommand" cascade="all" />
+	</union-subclass>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.workflow.activity.domain.Plan"
+		table="T_PLAN"
+		extends="com.processpuzzle.workflow.activity.domain.Action">
+		<!-- <key column="T_PLAN_ID"/> -->
+
+		<set name="actions" inverse="true" cascade="all">
+			<key column="PLAN_ID" />
+			<one-to-many
+				class="com.processpuzzle.workflow.activity.domain.ActionReference" />
+		</set>
+
+	</union-subclass>
+</hibernate-mapping>

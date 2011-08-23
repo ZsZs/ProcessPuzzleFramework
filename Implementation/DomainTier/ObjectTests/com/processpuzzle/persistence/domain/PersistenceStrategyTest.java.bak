@@ -1,0 +1,144 @@
+package com.itcodex.objectpuzzle.framework.persistence.domain;
+
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.nullValue;
+import static org.hamcrest.core.IsSame.sameInstance;
+import static org.junit.Assert.assertThat;
+import hu.itkodex.litest.fixture.FixtureFactory;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.itcodex.objectpuzzle.framework.fundamental_types.domain.PersistentObject;
+import com.itcodex.objectpuzzle.framework.persistence.domain.query.Query;
+
+public class PersistenceStrategyTest {
+   public static String ADD_ONE_MORE_PERSISTENCE_PROVIDER = "AddOneMorePersistenceProvider";
+   public static String EXCLUDE_PERSISTENCE_PROVIDER = "ExcludePersistenceProvider";
+   private PersistenceStrategy persistenceStrategy;
+   private PersistenceStrategyFixture fixtureWithManyDifferentEventHandlers;
+   private List<RepositoryEventHandler> repositoryEventHandlers;
+   private UnitOfWork testWork;
+   private TestEntity testEntityToSave;
+   private Query queryForAllObjets;
+   
+   @Before
+   public void beforeEachTests() {
+      testWork = new UnitOfWork( true );
+   
+      testEntityToSave = new TestEntity();
+      
+      fixtureWithManyDifferentEventHandlers = FixtureFactory.createTransientFreshFixture( PersistenceStrategy.class, PersistenceStrategyFixture.class );
+      
+      repositoryEventHandlers = fixtureWithManyDifferentEventHandlers.defineDOC( List.class );
+      
+      fixtureWithManyDifferentEventHandlers.setUp();
+      persistenceStrategy = fixtureWithManyDifferentEventHandlers.getSUT();
+      persistenceStrategy.configure();
+   }
+   
+   @Test 
+   public void testConfigure_ForStatus() {
+      assertThat("After calling 'configure()' method the PersistenceStrategy is configured.", persistenceStrategy.isConfigured(), is(true));
+   }
+   
+   @Test
+   public void testConfigure_ForEventHandlers() {
+      assertThat( "Configure() also makes available the event handler list.", 
+            persistenceStrategy.getEventHandlers(), sameInstance( fixtureWithManyDifferentEventHandlers.getExpectedResultForProperty()) );
+   }
+   
+   @Test
+   public void testConfigure_ForUniquePersistenceProvider() {
+      assertThat( "configure() selects the first PersistenceProvider as driver provider.", 
+            persistenceStrategy.getDriverPersistenceProvider(), sameInstance( fixtureWithManyDifferentEventHandlers.getDriverPersistenceProvider() ));
+   }
+   
+   @Test (expected = MultiplePersistenceProviderException.class )
+   public void testConfigure_ForMultiplePersistenceProviders() {
+      //Set up
+      PersistenceStrategyFixtureWithMultiplePersistenceProviders fixture = new PersistenceStrategyFixtureWithMultiplePersistenceProviders();
+      fixture.setUp();
+      persistenceStrategy = fixture.getSUT();
+      
+      //Excercise SUT
+      persistenceStrategy.configure();
+   }
+   
+   @Test (expected = UndefinedPersistenceProviderException.class )
+   public void testConfigure_ForUndefinedPersistenceProvider() {
+      //Set up
+      PersistenceStrategyWithoutPersistenceProvider fixture = new PersistenceStrategyWithoutPersistenceProvider();
+      fixture.setUp();
+      persistenceStrategy = fixture.getSUT();
+      
+      //Excercise SUT
+      persistenceStrategy.configure();
+   }
+   
+   @Test
+   public void testRelese_ForStatus() {
+      persistenceStrategy.release();
+      assertThat("After releasing a PersistenceStrategy it's status is:", persistenceStrategy.isConfigured(), is( false ));
+      assertThat(" ... it's event handler list is empty.", persistenceStrategy.getEventHandlers().isEmpty(), is(true));
+      assertThat(" ... it's unique persistence provider is null.", persistenceStrategy.getDriverPersistenceProvider(), nullValue() );
+   }
+   
+   @Test
+   public void testAdd_ForId() {
+      assertThat( "add() method returns the id givent to the persisted entity.", 
+            persistenceStrategy.add( testWork, TestEntity.class, testEntityToSave ), equalTo( testEntityToSave.getId() ));
+   }
+   
+   @Test
+   public void testFindById_ForExpectedObject() {
+      TestEntity retrievedObject = (TestEntity) persistenceStrategy.findById( testWork, TestEntity.class, fixtureWithManyDifferentEventHandlers.getExpectedId() );
+      TestEntity expectedObject = fixtureWithManyDifferentEventHandlers.getExpectedPersistentObject();
+      
+      assertThat( retrievedObject, sameInstance( expectedObject ));
+      assertThat( retrievedObject.getId(), equalTo( expectedObject.getId() ));
+   }
+   
+   @SuppressWarnings("unchecked")
+   @Test
+   public void testFindAll_ForExpectedObjects() {
+      //Excercise SUT
+      RepositoryResultSet<PersistentObject> retrievedResultSet = persistenceStrategy.findAll( testWork, TestEntity.class );
+      
+      //Verify
+      assertThat( retrievedResultSet.size(), equalTo( fixtureWithManyDifferentEventHandlers.getExpectedResultSet().size() ));
+      assertThat( retrievedResultSet, equalTo( fixtureWithManyDifferentEventHandlers.getExpectedResultSet() ));
+   }
+   
+   @SuppressWarnings("unchecked")
+   @Test
+   public void testFindByQuery_ForExpectedObjects() {
+      //Excercise SUT
+      RepositoryResultSet<PersistentObject> retrievedResultSet = persistenceStrategy.findByQuery( testWork, queryForAllObjets );
+      
+      //Verify
+      assertThat( retrievedResultSet.size(), equalTo( fixtureWithManyDifferentEventHandlers.getExpectedResultSet().size() ));
+      assertThat( retrievedResultSet, equalTo( fixtureWithManyDifferentEventHandlers.getExpectedResultSet() ));
+   }
+   
+   @After
+   public void afterEachTests() {
+      testWork.finish();
+      persistenceStrategy.release();
+      persistenceStrategy = null;
+   }   
+   
+   private List<RepositoryEventHandler> createListOfRepositoryEventHandlers( PersistenceProvider driverProvider, SynchronizationProvider synchronizationProvider ) {
+      List<RepositoryEventHandler> eventHandlers = new LinkedList<RepositoryEventHandler>();
+      
+      eventHandlers.add( driverProvider );
+      eventHandlers.add( synchronizationProvider );
+      
+      return eventHandlers;
+   }
+}

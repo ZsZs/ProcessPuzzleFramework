@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Test page for RootNode.js</title>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- JavaScript Unit -->
+	<link rel="stylesheet" type="text/css" href="../jsunit/jsUnitStyle.css">
+	<script language="javascript" src="../JsUnit/app/jsUnitCore.js"></script>
+	<!-- JavaScript Unit -->
+
+	<link href="TreeWidget.css" rel=stylesheet>
+
+	<script language=javascript src="../CommonScripts/UserException.js"></script>
+	<script language=javascript src="../CommonScripts/BrowserEvent.js"></script>
+	<script language=javascript src="TreeNode.js"></script>
+	<script language=javascript src="RootTreeNode.js"></script>
+	<script language=javascript src="TreeWidget.js"></script>
+</head>
+<body>
+	<h1>RootNode.js test page</h1>
+	<p>This page contains tests for RootNode.js javascript class.</p>
+
+	<!-- ***************************************** -->
+	<div id="TreeView"></div>
+	<!-- ***************************************** -->
+
+	<script language=javascript>
+		var rootNode;
+		var childNode1;
+		var childNode2;
+		var treeDiv = document.getElementById("TreeView");
+		
+		function setUp() {
+			rootNode = new RootNode("ND-0:0", "Root");
+			childNode1 = new TreeNode("ND-1:1", "child-1", 1);
+			childNode2 = new TreeNode("ND-1:2", "child-2", 2);
+		}
+		
+		function tearDown(){
+			rootNode = null;
+			childNode1 = null;
+			childNode2 = null;
+		}
+
+		function testRootNodeCreation() {
+			assertEquals("The node id equals", rootNode.getID(), "ND-0:0");
+		}
+		
+		function testAdd() {
+			rootNode.addChild(childNode1);
+			assertTrue("Root has childs.", rootNode.hasChilds());
+			assertEquals("Root has 1 child.", rootNode.getChildCount(), 1);
+		}
+
+		function testSetWidgetId() {
+			//Given an improper widget id, the root node throws an error.
+			try {rootNode.setWidgetId("undefined");}
+			catch (exception) {
+				assertEquals("Method throws UndefinedWidgetId error.", exception.name, "UndefinedWidgetId");
+			}
+			
+			rootNode.setWidgetId("TreeView");
+			assertEquals("Setting widget id, bounds root node to the given document element.",
+			rootNode.getWidgetElement(), document.getElementById("TreeView"));
+		}	
+
+		function testShow() {
+			//If the tree widget document element is undefined, the root node throws an error.
+			try {
+				rootNode.show();
+			}
+			catch (exception) {
+				assertEquals("Method throws UndefinedWidget error.", exception.name, "UndefinedWidget");
+			}
+			rootNode.setWidgetId("TreeView");
+			
+			//If the tree widget is undefined, the root node throws an error.
+			try {
+				rootNode.show();
+			}
+			catch (exception) {
+				assertEquals("Method throws UndefinedWidget error.", exception.name, "UndefinedWidget");
+			}
+			
+			var widget = new TreeWidget(treeDiv);
+			rootNode.setTreeWidget(widget);
+			rootNode.show();
+
+			//The 'Show root setting default to false.
+			assertFalse("Root node is visible.", rootNode.isVisible());
+			//widget.setShowRootNode(true);
+			//rootNode.show();
+			//assertTrue("Root node is visible.", rootNode.isVisible());
+			//assertNotNull("Root node added a division with id: ND-0:0", document.findElementById("ND-0:0"));
+			//assertEquals("The added elemen is a division.", document.findElementById("ND-0:0").nodeName, "DIV");
+		}
+		
+		//runs a test funcition during debugging
+		function runTestFunction(){
+			setUp();
+			//testShow();
+			tearDown();
+		}
+
+		runTestFunction();
+	</script>
+	
+</body></html>

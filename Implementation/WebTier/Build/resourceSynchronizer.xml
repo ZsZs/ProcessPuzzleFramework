@@ -1,0 +1,180 @@
+<project name="Synchronize Resources" default="synchronize_objectPuzzle" basedir=".">
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+	<taskdef name="stringutil" classname="ise.antelope.tasks.StringUtilTask" />
+
+	<property file="resourceSynchronizer.properties" />
+
+	<target name="set_properties">
+
+	</target>
+
+	<path id="resourcePath">
+		<fileset dir="${objectpuzzle}/${op.webcontent.dir}">
+			<include name="**/*.js" />
+			<include name="**/*.jsp" />
+			<include name="**/*.htm" />
+			<include name="**/*.html" />
+			<include name="**/*.xml" />
+			<include name="**/*.xsd" />
+			<include name="**/*.xsl" />
+			<include name="**/*.css" />
+			<include name="**/*.gif" />
+			<include name="**/*.png" />
+			<include name="**/*.bmp" />
+			<include name="**/*.jpg" />
+			<include name="**/*.ico" />
+			<include name="**/*.GIF" />
+			<include name="**/*.PNG" />
+			<include name="**/*.BMP" />
+			<include name="**/*.JPG" />
+			<include name="**/*.ICO" />
+			<include name="**/*.jar" />
+			<include name="**/itkodexstore" />
+			<exclude name="**/.copyarea.db" />
+			<exclude name="**/*.xsd" />
+			<exclude name="**/*Test*.htm" />
+			<exclude name="**/*Test*.html" />
+			<exclude name="**/*test*.htm" />
+			<exclude name="**/*test*.html" />
+			<exclude name="**/ProjectBrowser/Documents.xml" />
+			<exclude name="**/ProjectBrowser/Processes.xml" />
+			<exclude name="**/ProjectBrowser/Roles.xml" />
+			<exclude name="**/JavaScript/*.xml" />
+			<exclude name="**/JavaScript/*.htm" />
+			<exclude name="**/JavaScript/*.html" />
+			<exclude name="**/index.htm" />
+			<include name="**/WEB-INF/OP_ResourceBundle*.xml" />
+			<include name="**/ProcessDefinition/OPProcessDefinition.xml" />
+		</fileset>
+	</path>
+
+	<target name="synchronize_objectPuzzle" depends="set_properties">
+		<foreach param="file_var" target="find_most_recent">
+			<path refid="resourcePath" />
+		</foreach>
+	</target>
+
+	<target name="find_most_recent">
+
+		<property name="anzsoPath" location="${anzso}" />
+		<property name="haisystemsPath" location="${haisystems}" />
+		<property name="aamiPath" location="${aami}" />
+		<property name="adiPath" location="${adi}" />
+		<property name="objectpuzzlePath" location="${objectpuzzle}" />
+
+		<stringutil string="${objectpuzzlePath}/${op.webcontent.dir}" property="objectPuzzlePathLength">
+			<length />
+		</stringutil>
+		<stringutil string="${file_var}" property="generalPath">
+			<substring beginindex="${objectPuzzlePathLength}" />
+		</stringutil>
+
+		<timestampselector property="most.recent" count="1">
+			<path>
+				<pathelement path="${haisystemsPath}/${project.webcontent.dir}${generalPath}" />
+				<pathelement path="${aamiPath}/${project.webcontent.dir}${generalPath}" />
+				<pathelement path="${anzsoPath}/${project.webcontent.dir}${generalPath}" />
+				<pathelement path="${adiPath}/${project.webcontent.dir}${generalPath}" />
+			</path>
+		</timestampselector>
+
+		<if>
+			<available file="${most.recent}" />
+			<then>
+				<outofdate>
+					<sourcefiles path="${most.recent}" />
+					<targetfiles path="${file_var}" />
+					<sequential>
+						<antcall target="run_cleartool_checkout">
+							<param name="file_to_copy" value="${most.recent}" />
+							<param name="file_to_refresh" value="${file_var}" />
+						</antcall>
+					</sequential>
+				</outofdate>
+			</then>
+		</if>
+
+	</target>
+
+	<target name="synchronizeProjects">
+		<foreach param="file_var" target="iterateProjects">
+			<path refid="resourcePath" />
+		</foreach>
+	</target>
+
+	<target name="iterateProjects">
+
+		<property name="anzsoPath" location="${anzso}" />
+		<property name="haisystemsPath" location="${haisystems}" />
+		<property name="aamiPath" location="${aami}" />
+		<property name="adiPath" location="${adi}" />
+		<property name="objectpuzzlePath" location="${objectpuzzle}" />
+
+		<stringutil string="${objectpuzzlePath}/${op.webcontent.dir}" property="objectPuzzlePathLength">
+			<length />
+		</stringutil>
+		<stringutil string="${file_var}" property="generalPath">
+			<substring beginindex="${objectPuzzlePathLength}" />
+		</stringutil>
+
+		<foreach param="project_file_var" target="find_out_of_date">
+			<path>
+				<pathelement path="${haisystemsPath}/${project.webcontent.dir}${generalPath}" />
+				<pathelement path="${aamiPath}/${project.webcontent.dir}${generalPath}" />
+				<pathelement path="${anzsoPath}/${project.webcontent.dir}${generalPath}" />
+				<pathelement path="${adiPath}/${project.webcontent.dir}${generalPath}" />
+			</path>
+		</foreach>
+	</target>
+
+	<target name="find_out_of_date">
+
+		<if>
+			<available file="${project_file_var}" />
+			<then>
+				<outofdate>
+					<sourcefiles path="${file_var}" />
+					<targetfiles path="${project_file_var}" />
+					<sequential>
+						<antcall target="run_cleartool_checkout">
+							<param name="file_to_copy" value="${file_var}" />
+							<param name="file_to_refresh" value="${project_file_var}" />
+						</antcall>
+					</sequential>
+				</outofdate>
+			</then>
+			<else>
+				<antcall target="run_cleartool_mkelement">
+					<param name="file_to_copy" value="${file_var}" />
+					<param name="file_to_create" value="${project_file_var}" />
+				</antcall>
+			</else>
+		</if>
+	</target>
+
+	<target name="run_cleartool_mkelement">
+
+		<echo message="creating element: ---${file_to_create}---">
+		</echo>
+
+		<copy file="${file_to_copy}" tofile="${file_to_create}" />
+
+		<exec executable="cleartool">
+			<arg line="mkelem -mkpath -ci ${file_to_create}" />
+		</exec>
+
+	</target>
+
+	<target name="run_cleartool_checkout">
+
+		<echo message="refreshing element ---${file_to_refresh}--- with ---${file_to_copy}---">
+		</echo>
+
+		<cccheckout viewpath="${file_to_refresh}" reserved="true" nowarn="true" comment="Automatic synchronization" />
+		<copy preservelastmodified="true" overwrite="true" file="${file_to_copy}" tofile="${file_to_refresh}" />
+		<cccheckin viewpath="${file_to_refresh}" preservetime="true" nowarn="true" identical="true" />
+
+	</target>
+
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<union-subclass
+		name="com.processpuzzle.artifact.domain.ArtifactFolder"
+		table="T_ARTIFACT_FOLDER"
+		extends="com.processpuzzle.artifact.domain.Artifact">
+		
+		<set name="childArtifacts" cascade="save-update,delete" lazy="false" inverse="true">
+			<key column="ARTIFACT_FOLDER_ID" />
+			<one-to-many class="com.processpuzzle.artifact.domain.Artifact"/>
+		</set>
+	</union-subclass>
+</hibernate-mapping>

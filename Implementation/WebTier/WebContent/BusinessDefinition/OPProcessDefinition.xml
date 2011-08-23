@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ProcessDefinition xmlns="http://www.processpuzzle.com/type_definition/ProcessModelTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.processpuzzle.com/type_definition/ProcessModelTypes ProcessDefinition.xsd">
+
+	<artifactTypes>
+		<artifactTypeGroup name="SystemAdministration">
+
+			<defaultAccessRights>
+				<accessRight partyRoleType="Administrator" canRead="true" canCreate="true" canModify="true" canDelete="true"/>
+				<accessRight partyRoleType="User" canRead="true" canCreate="true" canModify="true" canDelete="true"/>
+			</defaultAccessRights>
+
+			<artifactType name="ArtifactFolder" group="SystemAdministration" artifactClassName="com.processpuzzle.artifact.domain.ArtifactFolder"
+				pessimisticLock="false" isSystem="false" isVersionControlled="false" isSingleton="false" createOnStartUp="false">
+				<caption>artifactFolder</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<propertyViewType name="Properties" presentationUri="" clientType="NativeView"
+						viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactFolder&amp;viewName=PropertyView</viewAccessUrl>
+					</propertyViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="ArtifactList" group="SystemAdministration" artifactClassName="com.processpuzzle.project_management.domain.ArtifactList"
+				pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>artifactList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="ArtifactList" presentationUri="/ProcessInstantiation/ProjectAdministration/ArtifactList_ListedArtifacts.jsp"
+						clientType="BrowseView" viewClassName="com.processpuzzle.project_management.domain.ArtifactList_ListView" listedArtifactType="Artifact"
+						isDefault="true">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=ArtifactList&amp;viewName=ArtifactList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ArtifactList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<printViewType name="Print" clientType="PrintView" viewClassName="com.processpuzzle.project_management.domain.ArtifactList_PrintView"
+						xmlToFoXsltPath="">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowPrintView&amp;artifactName=ArtifactList</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="ArtifactDataSheet" group="SystemAdministration" artifactClassName="com.processpuzzle.artifact.domain.ArtifactDataSheet"
+				createOnStartUp="false" isSingleton="false" isSystem="false" isVersionControlled="false" pessimisticLock="false">
+				<caption>artifactDataSheet</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<propertyViewType name="Properties" clientType="NativeView" isDefault="true">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PropertyView</viewAccessUrl>
+					</propertyViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="NativeView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentComments</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<artifactModificationsViewType name="Versions" clientType="NativeView">
+						<viewCaption>ui.viewCaption.documentHistory</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ArtifactModificationsView</viewAccessUrl>
+					</artifactModificationsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="CompanyList" group="SystemAdministration" artifactClassName="com.processpuzzle.party.artifact.CompanyList"
+				pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>organizationList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="CompanyList" presentationUri="/ProcessInstantiation/SystemAdministration/CompanyList_ListView.jsp"
+						clientType="BrowseView" viewClassName="com.processpuzzle.party.artifact.CompanyList_ListView" listedArtifactType="CompanyDataSheet"
+						orderBy="party.partyName.name" order="asc" isDefault="true">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=CompanyList&amp;viewName=CompanyList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=CompanyList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=CompanyList&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="CompanyDataSheet" group="SystemAdministration" artifactClassName="com.processpuzzle.party.artifact.CompanyDataSheet"
+				createOnStartUp="false" isSingleton="false" isSystem="false" isVersionControlled="false" pessimisticLock="false">
+				<caption>companyDataSheet</caption>
+				<baseUri></baseUri>
+				<creationProperties>
+					<creationProperty name="companyName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType name="Properties" presentationUri="/ProcessInstantiation/SystemAdministration/CompanyDataSheet_PropertyView.jsp"
+						clientType="NativeView" viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=CompanyDataSheet_PropertyView</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/CompanyDataSheet_BaseData.jsp" isDefault="true"
+						viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=CompanyDataSheet_BaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="Addresses" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyDataSheet_Addresses.jsp"
+						viewClassName="com.processpuzzle.party.artifact.PartyDataSheet_AddressesView">
+						<viewCaption>ui.viewCaption.addressData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PartyDataSheet_AddressesView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<artifactCustomFormViewType name="PartyRelationship" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyRelationship.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.Party_RelationshipView">
+						<viewCaption>ui.viewCaption.partyRelationship</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=Party_RelationshipView</viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="OrganizationUnitList" group="SystemAdministration"
+				artifactClassName="com.processpuzzle.party.artifact.OrganizationUnitList" pessimisticLock="false" isSystem="true" isVersionControlled="false"
+				isSingleton="true" createOnStartUp="true">
+				<caption>organizationList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="CompanyList" presentationUri="/ProcessInstantiation/SystemAdministration/OrganizationUnitList_ListView.jsp"
+						clientType="BrowseView" viewClassName="com.processpuzzle.party.artifact.OrganizationUnitList_ListView"
+						listedArtifactType="OrganizationUnitDataSheet" orderBy="party.partyName.name" order="asc" isDefault="true">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=OrganizationUnitList&amp;viewName=OrganizationUnitList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=OrganizationUnitList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowView&amp;artifactName=OrganizationUnitList&amp;viewName=AccessRightsView
+						</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="OrganizationUnitDataSheet" group="SystemAdministration"
+				artifactClassName="com.processpuzzle.party.artifact.OrganizationUnitDataSheet" createOnStartUp="false" isSingleton="false" isSystem="false"
+				isVersionControlled="false" pessimisticLock="false">
+				<caption>companyDataSheet</caption>
+				<baseUri></baseUri>
+				<creationProperties>
+					<creationProperty name="organizationUnitName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType name="Properties" presentationUri="/ProcessInstantiation/SystemAdministration/OrganizationUnitDataSheet_PropertyView.jsp"
+						clientType="NativeView" viewClassName="com.processpuzzle.party.artifact.OrganizationUnitDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=OrganizationUnitDataSheet_PropertyView</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/OrganizationUnitDataSheet_BaseData.jsp" isDefault="true"
+						viewClassName="com.processpuzzle.party.artifact.OrganizationUnitDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=OrganizationUnitDataSheet_BaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="Addresses" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyDataSheet_Addresses.jsp"
+						viewClassName="com.processpuzzle.party.artifact.PartyDataSheet_AddressesView">
+						<viewCaption>ui.viewCaption.addressData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PartyDataSheet_AddressesView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<artifactCustomFormViewType name="PartyRelationship" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyRelationship.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.Party_RelationshipView">
+						<viewCaption>ui.viewCaption.partyRelationship</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=Party_RelationshipView</viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="SettlementDataSheet" group="SystemAdministration"
+				artifactClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet" createOnStartUp="false" isSingleton="false" isSystem="false"
+				isVersionControlled="false" pessimisticLock="false">
+				<caption>settlementDataSheet</caption>
+				<baseUri></baseUri>
+				<creationProperties>
+					<creationProperty name="settlementName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType name="Properties" clientType="NativeView" isDefault="true"
+						presentationUri="/ProcessInstantiation/SystemAdministration/Settlement_Properties.jsp"
+						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementProperties">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=SettlementProperties</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/Settlement_BaseData.jsp"
+						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementBaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=SettlementBaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="SettlementList" group="SystemAdministration"
+				artifactClassName="com.processpuzzle.address.settlement.artifact.SettlementList" pessimisticLock="false" isSystem="true" isVersionControlled="false"
+				isSingleton="true" createOnStartUp="true">
+				<caption>settlementList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="SettlementList" presentationUri="/ProcessInstantiation/SystemAdministration/Settlement_List.jsp"
+						clientType="BrowseView" viewClassName="com.processpuzzle.address.settlement.artifact.SettlementList_ListView"
+						listedArtifactType="SettlementDataSheet" orderBy="settlement.name" order="asc" isDefault="true">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=SettlementList&amp;viewName=SettlementList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=SettlementList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=SettlementList&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="MessageWall" group="SystemAdministration" artifactClassName="">
+				<caption>messageWall</caption>
+				<baseUri>../CommandControllerServlet?action=ShowMessageWall</baseUri>
+				<availableViews>
+					<editableTextViewType name="unvisible" isDefault="true" clientType="EditableHtmlView" xmlToHtmlXsltPath="">
+						<viewCaption>ui.viewCaption.unvisible</viewCaption>
+					</editableTextViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="FileStorage" group="SystemAdministration" artifactClassName="com.processpuzzle.artifact.domain.FileStorage"
+				pessimisticLock="false" isSystem="false" isVersionControlled="false" isSingleton="false" createOnStartUp="false">
+				<caption>fileStorage</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<propertyViewType name="Properties" presentationUri="/ProcessInstantiation/ProjectAdministration/FileStorage_Properties.jsp"
+						isDefault="true" clientType="NativeView" viewClassName="com.processpuzzle.artifact.domain.FileStorageProperties">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=FileStorageProperties</viewAccessUrl>
+					</propertyViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="CommentList" group="SystemAdministration" artifactClassName="com.processpuzzle.artifact.domain.CommentList"
+				pessimisticLock="false" isSystem="false" isVersionControlled="false" isSingleton="false" createOnStartUp="false">
+				<caption>commentList</caption>
+				<baseUri></baseUri>
+			</artifactType>
+
+			<artifactType name="PersonList" group="SystemAdministration" artifactClassName="com.processpuzzle.party.artifact.PersonList"
+				pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>personList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="PersonList" presentationUri="/ProcessInstantiation/SystemAdministration/PersonList.jsp" clientType="BrowseView"
+						viewClassName="com.processpuzzle.party.artifact.PersonList_ListView" listedArtifactType="PersonDataSheet" orderBy="party.partyName.name"
+						order="asc" isDefault="true">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=PersonList&amp;viewName=PersonList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=PersonList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=PersonList&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="PersonDataSheet" group="SystemAdministration" artifactClassName="com.processpuzzle.party.artifact.PersonDataSheet"
+				createOnStartUp="false" isSingleton="false" isSystem="false" isVersionControlled="false" pessimisticLock="false">
+				<caption>personDataSheet</caption>
+				<baseUri></baseUri>
+				<creationProperties>
+					<creationProperty name="familyName" type="string" />
+					<creationProperty name="givenName" type="string" />
+					<creationProperty name="userName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType name="Properties" presentationUri="/ProcessInstantiation/SystemAdministration/PersonDataSheet_Properties.jsp"
+						clientType="NativeView" viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_Properties">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactList&amp;viewName=PersonDataSheet_Properties
+						</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PersonDataSheet_BaseData.jsp" isDefault="true"
+						viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PersonDataSheet_BaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="Addresses" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyDataSheet_Addresses.jsp"
+						viewClassName="com.processpuzzle.party.artifact.PartyDataSheet_AddressesView">
+						<viewCaption>ui.viewCaption.addressData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PartyDataSheet_AddressesView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<artifactCustomFormViewType name="PartyRelationship" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyRelationship.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.Party_RelationshipView">
+						<viewCaption>ui.viewCaption.partyRelationship</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=Party_RelationshipView</viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+			</artifactType>
+			
+<!-- ////////////////////////// -->
+			<artifactType name="CoWorkerList" group="SystemAdministration" artifactClassName="com.processpuzzle.party.artifact.CoWorkerList"
+				pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>coWorkerList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="CoWorkerList" presentationUri="/ProcessInstantiation/SystemAdministration/CoWorkerList_ListView.jsp" clientType="BrowseView"
+						viewClassName="com.processpuzzle.party.artifact.CoWorkerList_ListView" listedArtifactType="CoWorkerDataSheet" orderBy="party.partyName.name"
+						order="asc" isDefault="true">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=CoWorkerList&amp;viewName=CoWorkerList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=CoWorkerList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=CoWorkerList&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="CoWorkerDataSheet" group="SystemAdministration" artifactClassName="com.processpuzzle.party.artifact.CoWorkerDataSheet"
+				createOnStartUp="false" isSingleton="false" isSystem="false" isVersionControlled="false" pessimisticLock="false">
+				<caption>personDataSheet</caption>
+				<baseUri></baseUri>
+				<creationProperties>
+					<creationProperty name="familyName" type="string" />
+					<creationProperty name="givenName" type="string" />
+					<creationProperty name="userName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType name="Properties" presentationUri="/ProcessInstantiation/SystemAdministration/CoWorkerDataSheet_Properties.jsp"
+						clientType="NativeView" viewClassName="com.processpuzzle.party.artifact.CoWorkerDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowView&amp;artifactName=ArtifactList&amp;viewName=CoWorkerDataSheet_PropertyView
+						</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/CoWorkerDataSheet_BaseData.jsp" isDefault="true"
+						viewClassName="com.processpuzzle.party.artifact.CoWorkerDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=CoWorkerDataSheet_BaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="Addresses" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyDataSheet_Addresses.jsp"
+						viewClassName="com.processpuzzle.party.artifact.PartyDataSheet_AddressesView">
+						<viewCaption>ui.viewCaption.addressData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PartyDataSheet_AddressesView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="PartyRelationship" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/SystemAdministration/PartyRelationship.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.Party_RelationshipView">
+						<viewCaption>ui.viewCaption.partyRelationship</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=Party_RelationshipView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+				</availableViews>
+			</artifactType>
+<!-- ///////////////////////// -->
+
+			<artifactType name="ImageFile" group="SystemAdministration" artifactClassName="com.processpuzzle.artifact.domain.ImageFile"
+				pessimisticLock="false" isSystem="false" isVersionControlled="false" isSingleton="false" createOnStartUp="false">
+				<caption>imageFile</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<propertyViewType name="Properties" clientType="NativeView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/ImageFile_Properties.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.ImageProperties">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ImageProperties</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/ImageFile_ImageView.jsp" isDefault="true"
+						viewClassName="com.processpuzzle.artifact.domain.ImageFile_ImageView">
+						<viewCaption>ui.viewCaption.imageView</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ImageFile_ImageView</viewAccessUrl>
+					</artifactCustomFormViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="Memo" group="SystemAdministration" artifactClassName="com.processpuzzle.artifact.domain.Memo" createOnStartUp="false"
+				isSingleton="false" isSystem="false" isVersionControlled="false" pessimisticLock="false">
+				<caption>Memo</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactCustomFormViewType name="MemoCustomFormView" clientType="CustomFormView" isDefault="true"
+						presentationUri="/ProcessInstantiation/SystemAdministration/Notes_Form.jsp" viewClassName="com.processpuzzle.artifact.domain.MemoCustomFormView">
+						<viewCaption>ui.viewCaption.MemoForm</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=Memo&amp;viewName=MemoCustomFormView</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<editableTextViewType name="MemoEditableTextView" clientType="EditableHtmlView" isDefault="false"
+						presentationUri="/ProcessInstantiation/SystemAdministration/Notes_Document.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.MemoEditableTextView" xmlToHtmlXsltPath="">
+						<viewCaption>ui.viewCaption.Editable</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=Memo&amp;viewName=MemoEditableTextView</viewAccessUrl>
+					</editableTextViewType>
+				</availableViews>
+			</artifactType>
+
+		</artifactTypeGroup>
+
+		<artifactTypeGroup name="ProcessManagement">
+
+			<defaultAccessRights>
+				<accessRight partyRoleType="Administrator" canRead="true" canCreate="true" canModify="true" canDelete="true"/>
+				<accessRight partyRoleType="User" canRead="true" canCreate="true" canModify="true" canDelete="true"/>
+			</defaultAccessRights>
+
+			<artifactType name="ActionList" group="ProcessManagement" artifactClassName="com.processpuzzle.project_planning.action.artifact.ActionList"
+				pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>ui.Pantokrator.ActionList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="ActionList_ListView" clientType="BrowseView" isDefault="true"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionList_ListView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionList_ListView" listedArtifactType="ActionDataSheet">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=ActionList&amp;viewName=ActionList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/ProjectManagement/ActionList_ListQueryView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionList_ListQueryView" clientType="ListQueryView"
+						targetPropertyView="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.listQuery</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=ActionList_ListQueryView
+						</viewAccessUrl>
+						<preDefinedQueries>
+							<query name="A betűs tevékenységek">
+								<description>Az 'a' betűvel kezdődő tevékenységeket listázza ki.</description>
+								<statement>from ActionDataSheet r where r.actionName = 'a'</statement>
+							</query>
+						</preDefinedQueries>
+					</listQueryViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRightsView" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<printViewType name="PrintView" clientType="PrintView"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionList_PrintView" xmlToFoXsltPath="/stylesheet/actionlist.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowPrintView&amp;artifactName=ActionList&amp;viewName=ActionList_PrintView
+						</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="ActionDataSheet" group="ProcessManagement"
+				artifactClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet" pessimisticLock="true" isSystem="false"
+				isVersionControlled="true" isSingleton="false" createOnStartUp="false">
+				<caption>actionDataSheet</caption>
+				<baseUri></baseUri>
+				<creationProperties>
+					<creationProperty name="name" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType name="Properties" clientType="PropertyView" isDefault="true"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_PropertyView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_PropertyView</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_BaseData.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_BaseData</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="GeneralResources" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_GeneralResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_GeneralResourceAllocations">
+						<viewCaption>ui.viewCaption.generalResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_GeneralResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="SpecificResources" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_SpecificResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_SpecificResourceAllocations">
+						<viewCaption>ui.viewCaption.specificResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_SpecificResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="Sequence" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_SequenceView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_Sequence">
+						<viewCaption>ui.viewCaption.sequence</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_Sequence</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="EventHistory" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_EventHistory.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_EventHistory">
+						<viewCaption>ui.viewCaption.eventHistory</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_EventHistory</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<printViewType name="Print" viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_PrintView"
+						clientType="PrintView" xmlToFoXsltPath="/stylesheet/actiondata.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowPrintView&amp;viewName=ActionDataSheet_PrintView</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="PlanList" group="ProcessManagement" artifactClassName="com.processpuzzle.project_planning.action.artifact.PlanList"
+				pessimisticLock="false" isSystem="true" isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>ui.Pantokrator.PlanList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="PlanList_ListView" clientType="BrowseView" isDefault="true"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanList_ListView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanList_ListView" listedArtifactType="PlanDataSheet">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=PlanList&amp;viewName=PlanList_ListView</viewAccessUrl>
+					</artifactListViewType>
+					<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/ProjectManagement/ActionList_ListQueryView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionList_ListQueryView" clientType="ListQueryView"
+						targetPropertyView="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.listQuery</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=PlanList&amp;viewName=ActionList_ListQueryView</viewAccessUrl>
+						<preDefinedQueries>
+							<query name="A betűs munkafolyamatok">
+								<description>Teszt leírás</description>
+								<statement>from PlanDataSheet r where r.actionName = 'a'</statement>
+							</query>
+						</preDefinedQueries>
+					</listQueryViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRightsView" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=ActionList&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<printViewType name="PrintView" clientType="PrintView"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanList_PrintView" xmlToFoXsltPath="/stylesheet/planlist.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowPrintView&amp;artifactName=PlanList&amp;viewName=PlanList_PrintView</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="PlanDataSheet" group="ProcessManagement"
+				artifactClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet" pessimisticLock="true" isSystem="false"
+				isVersionControlled="true" isSingleton="false" createOnStartUp="false">
+				<caption>planDataSheet</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<propertyViewType name="Properties" clientType="PropertyView" isDefault="true"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_PropertyView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_PropertyView</viewAccessUrl>
+					</propertyViewType>
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_BaseData.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_BaseData">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_BaseData</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="ActionList" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_ActionList.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_ActionHierarchy">
+						<viewCaption>ui.viewCaption.actionList</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_ActionList</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="GeneralResources" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_GeneralResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_GeneralResourceAllocations">
+						<viewCaption>ui.viewCaption.generalResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_GeneralResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="SpecifcResources" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_SpecificResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_SpecificResourceAllocations">
+						<viewCaption>ui.viewCaption.specificResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_SpecificResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<artifactCustomFormViewType name="EventHistory" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_EventHistory.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_EventHistory">
+						<viewCaption>ui.viewCaption.eventHistory</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_EventHistory</viewAccessUrl>
+					</artifactCustomFormViewType>
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<printViewType name="Print" viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_PrintView"
+						clientType="PrintView" xmlToFoXsltPath="/stylesheet/plandata.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowPrintView&amp;viewName=PlanDataSheet_PrintView</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="ProcessPlanList" group="ProcessManagement"
+				artifactClassName="com.processpuzzle.project_planning.action.artifact.ProcessPlanList" pessimisticLock="false" isSystem="true"
+				isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>ui.Pantokrator.ProcessPlanList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="PlanList_ListView" clientType="BrowseView" isDefault="true"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ProcessPlanList_ListView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanList_ListView" listedArtifactType="ProcessPlanDataSheet">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=ProcessPlanList&amp;viewName=PlanList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+					<listQueryViewType name="ListQuery" presentationUri="/ProcessInstantiation/ProjectManagement/ActionList_ListQueryView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionList_ListQueryView" clientType="ListQueryView"
+						targetPropertyView="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.listQuery</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowView&amp;artifactName=ProcessPlanList&amp;viewName=ActionList_ListQueryView
+						</viewAccessUrl>
+						<preDefinedQueries>
+							<query name="A betűs munkafolyamatok">
+								<description>Teszt leírás</description>
+								<statement>from PlanDataSheet r where r.actionName = 'a'</statement>
+							</query>
+						</preDefinedQueries>
+					</listQueryViewType>
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=ActionList</viewAccessUrl>
+					</artifactCommentsViewType>
+					<accessRightsViewType name="AccessRightsView" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=ProcessPlanList&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+					<printViewType name="PrintView" clientType="PrintView"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanList_PrintView" xmlToFoXsltPath="/stylesheet/planlist.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowPrintView&amp;artifactName=ProcessPlanList&amp;viewName=PlanList_PrintView
+						</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="ProcessPlanDataSheet" group="ProcessManagement"
+				artifactClassName="com.processpuzzle.project_planning.action.artifact.ProcessPlanDataSheet" pessimisticLock="true" isSystem="false"
+				isVersionControlled="true" isSingleton="false" createOnStartUp="false">
+				<caption>planDataSheet</caption>
+				<baseUri></baseUri>
+				<creationProperties>
+					<creationProperty name="pplanSubject" type="string" />
+					<creationProperty name="lifecycleName" type="string" />
+				</creationProperties>
+				<availableViews>
+					<propertyViewType name="Properties" clientType="PropertyView" isDefault="true"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_PropertyView.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ProcessPlanDataSheet_PropertyView">
+						<viewCaption>ui.viewCaption.properties</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ProcessPlanDataSheet_PropertyView</viewAccessUrl>
+					</propertyViewType>
+
+					<artifactCustomFormViewType name="BaseData" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_BaseData.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ProcessPlanDataSheet_BaseDataView">
+						<viewCaption>ui.viewCaption.baseData</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ProcessPlanDataSheet_BaseDataView</viewAccessUrl>
+					</artifactCustomFormViewType>
+
+					<artifactListViewType name="ActionList" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_ActionList.jsp" listedArtifactType="ActionDataSheet"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_ActionList">
+						<viewCaption>ui.viewCaption.actionList</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_ActionList</viewAccessUrl>
+					</artifactListViewType>
+
+					<artifactCustomFormViewType name="ActionHierarchy" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_ActionHierarchy.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_ActionHierarchy">
+						<viewCaption>ui.viewCaption.actionHierarchy</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_ActionHierarchy</viewAccessUrl>
+					</artifactCustomFormViewType>
+
+					<artifactCustomFormViewType name="GeneralResources" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_GeneralResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_GeneralResourceAllocations">
+						<viewCaption>ui.viewCaption.generalResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_GeneralResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+
+					<artifactCustomFormViewType name="SpecifcResources" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_SpecificResourceAllocations.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_SpecificResourceAllocations">
+						<viewCaption>ui.viewCaption.specificResources</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_SpecificResourceAllocations</viewAccessUrl>
+					</artifactCustomFormViewType>
+
+					<artifactCustomFormViewType name="RoleAssignments" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PlanDataSheet_RoleAssignments.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_RoleAssignments">
+						<viewCaption>ui.viewCaption.roleAssignments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PlanDataSheet_RoleAssignments</viewAccessUrl>
+					</artifactCustomFormViewType>
+
+					<artifactCustomFormViewType name="EventHistory" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectManagement/ActionDataSheet_EventHistory.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.ActionDataSheet_EventHistory">
+						<viewCaption>ui.viewCaption.eventHistory</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=ActionDataSheet_EventHistory</viewAccessUrl>
+					</artifactCustomFormViewType>
+
+					<relatedArtifactsViewType name="RelatedArtifacts" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
+						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
+					</relatedArtifactsViewType>
+
+
+					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<viewCaption>ui.viewCaption.comments</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
+					</artifactCommentsViewType>
+
+					<accessRightsViewType name="AccessRights" clientType="CustomFormView"
+						presentationUri="/ProcessInstantiation/ProjectAdministration/Artifact_AccessRights.jsp"
+						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
+						<viewCaption>ui.viewCaption.accessRights</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
+					</accessRightsViewType>
+
+					<printViewType name="Print" viewClassName="com.processpuzzle.project_planning.action.artifact.PlanDataSheet_PrintView"
+						clientType="PrintView" xmlToFoXsltPath="/stylesheet/plandata.xsl">
+						<viewCaption>ui.viewCaption.print</viewCaption>
+						<viewAccessUrl>./CommandControllerServlet?action=ShowPrintView&amp;viewName=PlanDataSheet_PrintView</viewAccessUrl>
+					</printViewType>
+				</availableViews>
+			</artifactType>
+
+			<artifactType name="PersonalTodoList" group="ProcessManagement"
+				artifactClassName="com.processpuzzle.project_planning.action.artifact.PersonalTodoList" pessimisticLock="false" isSystem="true"
+				isVersionControlled="false" isSingleton="true" createOnStartUp="true">
+				<caption>ui.Pantokrator.ActionList</caption>
+				<baseUri></baseUri>
+				<availableViews>
+					<artifactListViewType name="PersonalTodoList_ListView" clientType="BrowseView" isDefault="true"
+						presentationUri="/ProcessInstantiation/ProjectManagement/PersonalToDoList.jsp"
+						viewClassName="com.processpuzzle.project_planning.action.artifact.PersonalTodoList_ListView" listedArtifactType="ActionDataSheet">
+						<viewCaption>ui.viewCaption.list</viewCaption>
+						<viewAccessUrl>
+							./CommandControllerServlet?action=ShowListView&amp;artifactName=PersonalToDoList&amp;viewName=PersonalTodoList_ListView
+						</viewAccessUrl>
+					</artifactListViewType>
+				</availableViews>
+			</artifactType>
+
+		</artifactTypeGroup>
+
+	</artifactTypes>
+
+</ProcessDefinition>

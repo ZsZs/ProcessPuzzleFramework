@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<title>ProcessPuzzle</title>
+			
+    <script type="text/javascript" src="Commons/JavaScript/MooTools/mootools-core-1.3.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/MooTools/mootools-more-1.3.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/Singleton/Singleton.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/WebUIMessageBus/WebUIMessage.js"></script>
+    
+	<!--[if IE]>
+	    <script type="text/javascript" src="Commons/JavaScript/MochaUI/excanvas.js"></script>
+	<![endif]--> 
+    
+    <script type="text/javascript" src="Commons/JavaScript/MochaUI/Core.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/MochaUI/Dock.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/MochaUI/Layout.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/MochaUI/Tabs.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/MochaUI/Window.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/MochaUI/WebKitShadower.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/MochaUI/Modal.js"></script>
+    
+	<script type="text/javascript" src="Commons/JavaScript/Sarissa/sarissa.js"></script>  
+    <script type="text/javascript" src="Commons/JavaScript/Sarissa/sarissa_ieemu_xpath.js"></script>
+    
+    <script type="text/javascript" src="Commons/JavaScript/BrowserWidget/BrowserWidget.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/CommonScripts/AssertUtil.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/CommonScripts/inheritFrom.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/CommonScripts/StringUtil.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/CommonScripts/StringBuffer.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/CommonScripts/UserException.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/ComponentStateManager/DefaultStateUriTransformer.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/ComponentStateManager/ComponentStateManager.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/DesktopConfigurator/DesktopConfigurator.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/DesktopConfigurator/DesktopStructure.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/DesktopConfigurator/PanelInterpreter.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/DocumentManager/DocumentManager.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/FundamentalTypes/ArrayList.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/FundamentalTypes/HashMap.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/FundamentalTypes/JavaCompatibility.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/FundamentalTypes/LinkedHashMap.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/FundamentalTypes/StringTokenizer.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/FundamentalTypes/WebUIException.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/FundamentalTypes/XmlResource.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/HierarchicalMenuWidget/MenuSelectedMessage.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/HierarchicalMenuWidget/HierarchicalMenuWidget.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/Internationalization/Locale.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/Internationalization/LocaleUtil.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/Internationalization/ResourceKey.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/Internationalization/ResourceCache.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/Internationalization/XMLBundleParser.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/Internationalization/XMLResourceBundle.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/LanguageSelectorWidget/LanguageChangedMessage.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/LanguageSelectorWidget/LanguageSelectorWidget.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/Log4JavaScript/log4javascript.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/SkinSelectorWidget/SkinChangedMessage.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/SkinSelectorWidget/SkinSelectorWidget.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/TabWidget/DuplicatedTabException.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/TabWidget/Tab.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/TabWidget/TabSelectedMessage.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/TabWidget/TabWidget.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/XMLforScript/xmlIO.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/XMLforScript/xmlEscape.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/XMLforScript/xmlsax.js"></script>
+	<script type="text/javascript" src="Commons/JavaScript/XMLforScript/preMadeSaxEventHandler.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/WebUIController/UnconfiguredWebUIControllerException.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/WebUIConfiguration/WebUIConfiguration.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/WebUIController/WebUIController.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/WebUILogger/WebUILogger.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/WebUIController/WebUIStateRestoredMessage.js"></script>
+    <script type="text/javascript" src="Commons/JavaScript/WebUIMessageBus/WebUIMessageBus.js"></script>
+
+    <script type="text/javascript" >
+      window.addEvent('domready', function() {
+      	var controller = new WebUIController({ contextRootPrefix : "", configurationUri : "Configuration/default_configuration.xml" });
+      	controller.configure();
+  	  });
+    </script>
+  	
+</head>
+
+<body>
+	<div style="HEIGHT: 1042px" id=desktop></div>
+</body>
+</html>

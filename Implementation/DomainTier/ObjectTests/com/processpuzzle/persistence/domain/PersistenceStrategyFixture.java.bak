@@ -1,0 +1,90 @@
+package com.itcodex.objectpuzzle.framework.persistence.domain;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.stub;
+import hu.itkodex.litest.fixture.GenericTestFixture;
+import hu.itkodex.litest.fixture.TestFixtureConfiguration;
+import hu.itkodex.litest.fixture.TransientFreshFixture;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import com.itcodex.objectpuzzle.framework.fundamental_types.domain.PersistentObject;
+import com.itcodex.objectpuzzle.framework.persistence.domain.query.Query;
+
+public class PersistenceStrategyFixture extends GenericTestFixture<PersistenceStrategy> implements TransientFreshFixture<PersistenceStrategy> {
+   private static String STRATEGY_NAME = "TestStrategy";
+   private PersistenceStrategy persistenceStrategy;
+   private List<RepositoryEventHandler> repositoryEventHandlers;
+   private PersistenceProvider driverPersistenceProvider;
+   private SynchronizationProvider synchronizationProvider;
+   private RepositoryResultSet<PersistentObject> expectedResultSet;
+   
+   public List<RepositoryEventHandler> getExpectedResultForProperty() { return repositoryEventHandlers; }
+   public Integer getExpectedId() { return testEntityToSave.getId(); }
+   public TestEntity getExpectedPersistentObject() { return testEntityToSave; }
+   public RepositoryResultSet<PersistentObject> getExpectedResultSet() { return expectedResultSet; }
+   public PersistenceProvider getDriverPersistenceProvider() { return driverPersistenceProvider; }
+
+   @Override
+   public void setUp() { 
+      queryForAllObjets = new Query( TestEntity.class, "", "" );
+      setUpTestEntityToSave();
+      setUpExpectedResultSet();
+      setUpDriverPersistenceProvider();
+      setUpSynchronizationProvider();
+
+      repositoryEventHandlers = createListOfRepositoryEventHandlers( driverPersistenceProvider, synchronizationProvider );
+
+//      takeIntoAccountSetUpParameters( testConfiguraton );
+         
+   }
+
+   @Override
+   protected PersistenceStrategy instantiateSUT() { 
+      persistenceStrategy = new PersistenceStrategy( STRATEGY_NAME, repositoryEventHandlers );
+      return persistenceStrategy; 
+   }
+   
+   private void setUpTestEntityToSave() {
+      testEntityToSave = mock( TestEntity.class );
+      stub( testEntityToSave.getId() ).toReturn( 1 );         
+   }
+   
+   private void setUpExpectedResultSet() {
+      List<PersistentObject> entities = new LinkedList<PersistentObject>();
+      entities.add( testEntityToSave );
+      expectedResultSet = new SimpleResultSet<PersistentObject>( entities );
+   }
+   
+   private void setUpDriverPersistenceProvider() {
+      driverPersistenceProvider = mock( PersistenceProvider.class );
+      stub( driverPersistenceProvider.configure() ).toReturn( true );
+      stub( driverPersistenceProvider.add( testWork, TestEntity.class, testEntityToSave )).toReturn( 1 );         
+      stub( driverPersistenceProvider.findById( testWork, TestEntity.class, testEntityToSave.getId() )).toReturn( testEntityToSave );
+      stub( driverPersistenceProvider.findAll( testWork, TestEntity.class )).toReturn( expectedResultSet );
+      stub( driverPersistenceProvider.findByQuery( testWork, queryForAllObjets )).toReturn( expectedResultSet );
+   }
+   
+   private void setUpSynchronizationProvider() {
+      synchronizationProvider = mock( SynchronizationProvider.class );
+      stub( synchronizationProvider.configure() ).toReturn( true );         
+   }
+   
+   @SuppressWarnings("unused")
+   private void takeIntoAccountSetUpParameters( TestFixtureConfiguration testConfiguraton ) {
+      if( testConfiguraton != null && ( testConfiguraton.getProperty( PersistenceStrategyTest.EXCLUDE_PERSISTENCE_PROVIDER, true ) != null )) {
+         repositoryEventHandlers.remove( driverPersistenceProvider );            
+      }
+      else if( testConfiguraton != null && ( testConfiguraton.getProperty( PersistenceStrategyTest.ADD_ONE_MORE_PERSISTENCE_PROVIDER, true ) != null )) {
+         PersistenceProvider yetAnotherPersistenceProvider = mock( PersistenceProvider.class );
+         stub( yetAnotherPersistenceProvider.configure() ).toReturn( true );
+         repositoryEventHandlers.add( yetAnotherPersistenceProvider );
+      }
+   }
+   public void afterEachTests() {
+      // TODO Auto-generated method stub
+      
+   }      
+}
+

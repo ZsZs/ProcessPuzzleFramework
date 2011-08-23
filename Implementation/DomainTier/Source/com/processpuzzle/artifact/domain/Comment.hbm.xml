@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+	<union-subclass 
+		name="com.processpuzzle.artifact.domain.Comment" 
+		table="T_COMMENT"
+		extends="com.processpuzzle.artifact.domain.HTMLText">
+		<many-to-one lazy="false" name="author" class="com.processpuzzle.party.domain.Person"></many-to-one>
+		<property name="title"></property>
+		<component name="creationDate" class="com.processpuzzle.fundamental_types.domain.TimePoint">
+			<property name="value" column="creationDate" type="java.util.Date"></property>
+		</component>
+	</union-subclass>
+</hibernate-mapping>
