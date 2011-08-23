@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:locales xmlns:tns="http://www.example.org/LocaleDefinitions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../../../../../../../src/com/itcodex/objectpuzzle/framework/internalization/domain/LocaleDefinitions.xsd ">
+  <tns:locale country="HU" language="hu" variant="ProcessPuzzle" default="true">
+    <tns:quantityFormatSpecifier decimalSeparator=",">
+      <!-- <tns:decimalSeparator>,</tns:decimalSeparator> -->
+    </tns:quantityFormatSpecifier>
+    <tns:currency name="Hungarian Forint" symbol="HUF"/>
+  </tns:locale>
+  <tns:locale country="US" language="en" variant="ProcessPuzzle" default="true">
+    <tns:quantityFormatSpecifier groupingSeparator=" ">
+      <!-- <tns:groupingSeparator> </tns:groupingSeparator> -->
+    </tns:quantityFormatSpecifier>
+    <tns:currency name="Pound Sterling" symbol="GBP"/>
+    <tns:dateFormatSpecifier>
+		<dateFormat>
+			<fullPattern>dd/MM/yyyy G z</fullPattern>
+			<longPattern>dd/MM/yyyy Z</longPattern>
+			<mediumPattern>dd/MM/yyyy</mediumPattern>	<!-- Ez a default! -->		
+			<shortPattern>dd/MM</shortPattern>
+		</dateFormat>
+		<timeFormat>
+			<fullPattern>HH:mm:ss.SSS</fullPattern>
+			<longPattern>HH:mm:ss</longPattern>
+			<mediumPattern>HH:mm</mediumPattern>			
+			<shortPattern>HH a</shortPattern>
+		</timeFormat>
+
+    </tns:dateFormatSpecifier>
+  </tns:locale>
+    <tns:locale country="GB" language="en" variant="ProcessPuzzle" default="true">
+    <tns:quantityFormatSpecifier groupingSeparator=" ">
+      <!-- <tns:groupingSeparator> </tns:groupingSeparator> -->
+    </tns:quantityFormatSpecifier>
+    <tns:currency name="Pound Sterling" symbol="GBP"/>
+    <tns:dateFormatSpecifier>
+		<dateFormat>
+			<fullPattern>dd/MM/yyyy G z</fullPattern>
+			<longPattern>dd/MM/yyyy Z</longPattern>
+			<mediumPattern>dd/MM/yyyy</mediumPattern>	<!-- Ez a default! -->		
+			<shortPattern>dd/MM</shortPattern>
+		</dateFormat>
+		<timeFormat>
+			<fullPattern>HH:mm:ss.SSS</fullPattern>
+			<longPattern>HH:mm:ss</longPattern>
+			<mediumPattern>HH:mm</mediumPattern>			
+			<shortPattern>HH a</shortPattern>
+		</timeFormat>
+
+    </tns:dateFormatSpecifier>
+  </tns:locale>
+</tns:locales>

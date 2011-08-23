@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<adi_db>
+  <ArtifactAggregates>
+    <com.itcodex.objectpuzzle.project_management.domain.ArtifactList kind="root" id="1">
+      <Artifact.name kind="attribute">artifactList</Artifact.name>
+    </com.itcodex.objectpuzzle.project_management.domain.ArtifactList>
+    <com.itcodex.objectpuzzle.artifact.domain.ProcessDataSheet kind="root" id="2">
+      <Artifact.name kind="attribute">processDataSheet</Artifact.name>
+      <Artifact.type kind="association">
+        <com.itcodex.objectpuzzle.artifact_type.domain.ArtifactType id="1" kind="externalLink"/>
+      </Artifact.type>
+    </com.itcodex.objectpuzzle.artifact.domain.ProcessDataSheet>
+    <com.itcodex.objectpuzzle.artifact.domain.Document kind="root" id="3">
+      <Artifact.name kind="attribute">document</Artifact.name>
+    </com.itcodex.objectpuzzle.artifact.domain.Document>
+    <com.itcodex.objectpuzzle.artifact.domain.CommentList kind="root" id="4">
+      <Artifact.name kind="attribute">commentList</Artifact.name>
+    </com.itcodex.objectpuzzle.artifact.domain.CommentList>
+    <com.itcodex.objectpuzzle.artifact.domain.HTMLDocument kind="root" id="5">
+      <Artifact.name kind="attribute">htmlDocument</Artifact.name>
+    </com.itcodex.objectpuzzle.artifact.domain.HTMLDocument>
+    <com.itcodex.objectpuzzle.artifact.domain.EditableHTMLDocument kind="root" id="6">
+      <Artifact.name kind="attribute">editableHtmlDocument</Artifact.name>
+    </com.itcodex.objectpuzzle.artifact.domain.EditableHTMLDocument>
+  </ArtifactAggregates>
+</adi_db>

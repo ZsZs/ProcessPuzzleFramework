@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <bean id="userRequestContextFactory" class="com.processpuzzle.user_session.domain.DefaultUserRequestContextFactory"/>
+
+  <!-- Entity factories -->
+  <bean id="userFactory" class="com.processpuzzle.application.security.domain.UserFactory" lazy-init="true"/>
+  <bean id="testEntityFactory" class="com.processpuzzle.persistence.domain.TestEntityFactory" lazy-init="true"/>  
+  
+  <bean id="predefinedUsersLoader" class="com.processpuzzle.application.security.domain.PredefinedUsersLoader"/>
+</beans>

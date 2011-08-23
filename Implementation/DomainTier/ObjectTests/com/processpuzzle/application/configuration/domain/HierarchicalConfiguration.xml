@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<aProperty>hello</aProperty>
+	<items>
+		<anotherProperty>alsoHello</anotherProperty>
+		<item name="itemOne" description="description one">
+			<singleProperty>Single property value one</singleProperty>
+			<subItem>Sub Item One</subItem>
+			<subItem>Sub Item Two</subItem>
+		</item>
+		
+		<item name="itemTwo" description="description two">
+			<singleProperty>Single property value two</singleProperty>
+			<subItem>Sub Item Three</subItem>
+			<subItem>Sub Item Four</subItem>
+		</item>
+	</items>
+</configuration>

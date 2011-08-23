@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources xmlns:tns="http://www.itcodex.com/ResourceBundle"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.itcodex.com/ResourceBundle ../../../../../../../WebContent/Configuration/ResourceBundle.xsd ">
+	<Language name="en">
+		<Country name="US">
+			<Resource key="Key_4" type="String">Overwritten value 4</Resource>
+		</Country>
+	</Language>
+</tns:Resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+	<joined-subclass
+		name="com.processpuzzle.artifact.domain.TestEntityDataSheet"
+		table="T_TEST_ENTITY_DATA_SHEET"
+		extends="com.processpuzzle.artifact.domain.Artifact">
+		<key column="TEST_ENTITY_DATA_SHEET_ID" />
+		<many-to-one lazy="false" name="testEntity" class="com.processpuzzle.persistence.domain.TestEntity" cascade="all"/>
+	</joined-subclass>
+</hibernate-mapping>

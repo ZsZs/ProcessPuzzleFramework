@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:rootElement xmlns:p="http://www.itcodex.com/ResourceBundle"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.itcodex.com/ResourceBundle TestSchema.xsd ">
+	<Resource>Resource</Resource>
+	<Language>Language</Language>
+</p:rootElement>

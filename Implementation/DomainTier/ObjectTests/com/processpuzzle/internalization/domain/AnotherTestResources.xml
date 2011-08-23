@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Resources xmlns:tns="http://www.itcodex.com/ResourceBundle" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.itcodex.com/ResourceBundle ../../../../../../../WebContent/Configuration/ResourceBundle.xsd ">
+  <Language name="en">
+	<Resource key="Key_33" type="String">Text_3</Resource>
+	<Resource key="Key_44" type="String">Text_4</Resource>
+	<Resource key="Key_55" type="String">Text_5</Resource>
+  </Language>
+  <Language name="hu">
+	<Resource key="Kulcs_55" type="String">Szöveg_55</Resource>
+  </Language>
+</tns:Resources>

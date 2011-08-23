@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot 
+	xmlns = "http://www.processpuzzle.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ ../Person.xsd">
+	
+	<person>
+		<prefix>Dr.</prefix>
+		<familyName>Keszeg</familyName>
+		<givenName>József</givenName>
+		<birthday>1980.10.10.</birthday>
+		<address1_UsedFor>levelezési cím</address1_UsedFor>
+		<address1_Land>Magyarország</address1_Land>
+		<address1_ZipCode>2111</address1_ZipCode>
+		<address1_Settlement>Veresegyház</address1_Settlement>
+		<address1_Street>Állomás utca</address1_Street>
+		<address1_BuildingNumber>19.</address1_BuildingNumber>
+		<phone1_CountryCode>36</phone1_CountryCode>
+		<phone1_AreaCode>25</phone1_AreaCode>
+		<phone1_Number>443-111</phone1_Number>
+		<emailAddress1>k.j@freemail.hu</emailAddress1>
+		<address2_UsedFor>szállítási cím</address2_UsedFor>
+		<address2_Land>Magyarország</address2_Land>
+		<address2_ZipCode>2111</address2_ZipCode>
+		<address2_Settlement>Veresegyház</address2_Settlement>
+		<address2_Street>Állomás utca</address2_Street>
+		<address2_BuildingNumber>19.</address2_BuildingNumber>
+		<phone2_CountryCode>36</phone2_CountryCode>
+		<phone2_AreaCode>28</phone2_AreaCode>
+		<phone2_Number>389 849</phone2_Number>
+		<emailAddress2>jozsi@keszeg.hu</emailAddress2>
+		<address3_UsedFor></address3_UsedFor>
+		<address3_Land></address3_Land>
+		<address3_ZipCode></address3_ZipCode>
+		<address3_Settlement></address3_Settlement>
+		<address3_Street></address3_Street>
+		<address3_BuildingNumber></address3_BuildingNumber>
+		<phone3_CountryCode></phone3_CountryCode>
+		<phone3_AreaCode></phone3_AreaCode>
+		<phone3_Number></phone3_Number>
+		<emailAddress3></emailAddress3>
+		<webAddress>http://www.keszegjozsi.hu</webAddress>
+	</person>
+	<person>
+		<prefix></prefix>
+		<familyName>Kis</familyName>
+		<givenName>Margit</givenName>
+		<birthday>1968.12.01.</birthday>
+		<address1_UsedFor>levelezési cím</address1_UsedFor>
+		<address1_Land>Magyarország</address1_Land>
+		<address1_ZipCode>5450</address1_ZipCode>
+		<address1_Settlement>Szarvas</address1_Settlement>
+		<address1_Street>Strand u.</address1_Street>
+		<address1_BuildingNumber>19.</address1_BuildingNumber>
+		<phone1_CountryCode>36</phone1_CountryCode>
+		<phone1_AreaCode>65</phone1_AreaCode>
+		<phone1_Number>555-111</phone1_Number>
+		<emailAddress1>margit@freemail.hu</emailAddress1>
+		<address2_UsedFor></address2_UsedFor>
+		<address2_Land></address2_Land>
+		<address2_ZipCode></address2_ZipCode>
+		<address2_Settlement></address2_Settlement>
+		<address2_Street></address2_Street>
+		<address2_BuildingNumber></address2_BuildingNumber>
+		<phone2_CountryCode></phone2_CountryCode>
+		<phone2_AreaCode></phone2_AreaCode>
+		<phone2_Number></phone2_Number>
+		<emailAddress2></emailAddress2>
+		<address3_UsedFor></address3_UsedFor>
+		<address3_Land></address3_Land>
+		<address3_ZipCode></address3_ZipCode>
+		<address3_Settlement></address3_Settlement>
+		<address3_Street></address3_Street>
+		<address3_BuildingNumber></address3_BuildingNumber>
+		<phone3_CountryCode></phone3_CountryCode>
+		<phone3_AreaCode></phone3_AreaCode>
+		<phone3_Number></phone3_Number>
+		<emailAddress3></emailAddress3>
+		<webAddress>http://www.margita.hu</webAddress>
+	</person>
+	<person>
+		<prefix>id.</prefix>
+		<familyName>Kovács</familyName>
+		<givenName>Béla</givenName>
+		<birthday>1978.02.13.</birthday>
+		<address1_UsedFor>levelezési cím</address1_UsedFor>
+		<address1_Land>Magyarország</address1_Land>
+		<address1_ZipCode>1098</address1_ZipCode>
+		<address1_Settlement>Budapest</address1_Settlement>
+		<address1_Street>Epreserdő 32.</address1_Street>
+		<address1_BuildingNumber>1</address1_BuildingNumber>
+		<phone1_CountryCode>36</phone1_CountryCode>
+		<phone1_AreaCode>89</phone1_AreaCode>
+		<phone1_Number>525-537</phone1_Number>
+		<emailAddress1>balazs.tihanyi@energometall.hu</emailAddress1>
+		<address2_UsedFor>szállítási cím</address2_UsedFor>
+		<address2_Land></address2_Land>
+		<address2_ZipCode></address2_ZipCode>
+		<address2_Settlement></address2_Settlement>
+		<address2_Street></address2_Street>
+		<address2_BuildingNumber></address2_BuildingNumber>
+		<phone2_CountryCode></phone2_CountryCode>
+		<phone2_AreaCode></phone2_AreaCode>
+		<phone2_Number></phone2_Number>
+		<emailAddress2></emailAddress2>
+		<address3_UsedFor></address3_UsedFor>
+		<address3_Land></address3_Land>
+		<address3_ZipCode></address3_ZipCode>
+		<address3_Settlement></address3_Settlement>
+		<address3_Street></address3_Street>
+		<address3_BuildingNumber></address3_BuildingNumber>
+		<phone3_CountryCode></phone3_CountryCode>
+		<phone3_AreaCode></phone3_AreaCode>
+		<phone3_Number></phone3_Number>
+		<emailAddress3></emailAddress3>
+		<webAddress></webAddress>
+	</person>
+	<person>
+		<prefix></prefix>
+		<familyName>Kiss</familyName>
+		<givenName>Katalin</givenName>
+		<birthday>1963.02.13.</birthday>
+		<address1_UsedFor>levelezési cím</address1_UsedFor>
+		<address1_Land>Magyarország</address1_Land>
+		<address1_ZipCode>2740</address1_ZipCode>
+		<address1_Settlement>Abony</address1_Settlement>
+		<address1_Street>Vasút u.</address1_Street>
+		<address1_BuildingNumber>16.</address1_BuildingNumber>
+		<phone1_CountryCode>36</phone1_CountryCode>
+		<phone1_AreaCode>28</phone1_AreaCode>
+		<phone1_Number>111-222</phone1_Number>
+		<emailAddress1>kiss.k@hun.hu</emailAddress1>
+		<address2_UsedFor></address2_UsedFor>
+		<address2_Land></address2_Land>
+		<address2_ZipCode></address2_ZipCode>
+		<address2_Settlement></address2_Settlement>
+		<address2_Street></address2_Street>
+		<address2_BuildingNumber></address2_BuildingNumber>
+		<phone2_CountryCode></phone2_CountryCode>
+		<phone2_AreaCode></phone2_AreaCode>
+		<phone2_Number></phone2_Number>
+		<emailAddress2></emailAddress2>
+		<address3_UsedFor></address3_UsedFor>
+		<address3_Land></address3_Land>
+		<address3_ZipCode></address3_ZipCode>
+		<address3_Settlement></address3_Settlement>
+		<address3_Street></address3_Street>
+		<address3_BuildingNumber></address3_BuildingNumber>
+		<phone3_CountryCode></phone3_CountryCode>
+		<phone3_AreaCode></phone3_AreaCode>
+		<phone3_Number></phone3_Number>
+		<emailAddress3></emailAddress3>
+		<webAddress></webAddress>
+	</person>
+	<person>
+		<prefix></prefix>
+		<familyName>Nagy</familyName>
+		<givenName>Virág</givenName>
+		<birthday>1977.07.17.</birthday>
+		<address1_UsedFor>levelezési cím</address1_UsedFor>
+		<address1_Land>Magyarország</address1_Land>
+		<address1_ZipCode>7627</address1_ZipCode>
+		<address1_Settlement>Pécs</address1_Settlement>
+		<address1_Street>Gólya dűlő</address1_Street>
+		<address1_BuildingNumber>5.</address1_BuildingNumber>
+		<phone1_CountryCode>36</phone1_CountryCode>
+		<phone1_AreaCode>72</phone1_AreaCode>
+		<phone1_Number>567 222</phone1_Number>
+		<emailAddress1>virag@gmail.com</emailAddress1>
+		<address2_UsedFor></address2_UsedFor>
+		<address2_Land></address2_Land>
+		<address2_ZipCode></address2_ZipCode>
+		<address2_Settlement></address2_Settlement>
+		<address2_Street></address2_Street>
+		<address2_BuildingNumber></address2_BuildingNumber>
+		<phone2_CountryCode></phone2_CountryCode>
+		<phone2_AreaCode></phone2_AreaCode>
+		<phone2_Number></phone2_Number>
+		<emailAddress2></emailAddress2>
+		<address3_UsedFor></address3_UsedFor>
+		<address3_Land></address3_Land>
+		<address3_ZipCode></address3_ZipCode>
+		<address3_Settlement></address3_Settlement>
+		<address3_Street></address3_Street>
+		<address3_BuildingNumber></address3_BuildingNumber>
+		<phone3_CountryCode></phone3_CountryCode>
+		<phone3_AreaCode></phone3_AreaCode>
+		<phone3_Number></phone3_Number>
+		<emailAddress3></emailAddress3>
+		<webAddress></webAddress>
+	</person>
+</dataroot>
+
+ 

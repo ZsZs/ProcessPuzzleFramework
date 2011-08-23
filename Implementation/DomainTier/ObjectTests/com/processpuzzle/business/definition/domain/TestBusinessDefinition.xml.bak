@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<op:ArtifactTypeList 
+	xmlns:op="http://www.itkodex.hu/processpuzzle"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://www.itkodex.hu/processpuzzle ../../../../../../../FrameworkWebTier/WebContent/ProcessDefinition/Artifacts/ArtifactTypeList.xsd">
+	
+	<xi:include href="OPPartyTypes.xml"/>
+
+	<partyRoleType name="Administrator"></partyRoleType>
+	<partyRoleType name="User"></partyRoleType>
+	
+	<artifactTypeGroup name="TestGroup_1">
+		<artifactType name="ArtifactSubClass"
+			group="TestGroup_1"
+			artifactClassName="com.itcodex.objectpuzzle.artifact.ArtifactSubClass"
+			createOnStartUp="false" isSingleton="false" isSystem="false"
+			isVersionControlled="false" pessimisticLock="false"
+			refreshOnDocumentActivation="false"
+			refreshOnViewActivation="false">
+			<description>This type of aritifact is only for testing purposes.</description>
+			<caption>caption</caption>
+			<baseUri>baseUri</baseUri>
+
+			<defaultAccessRights>
+				<accessRight partyRoleType="User">
+					<read>true</read>
+					<create>true</create>
+					<modify>false</modify>
+					<delete>false</delete>
+				</accessRight>
+			</defaultAccessRights>
+			
+			<creationProperties>
+				<creationProperty name="token" type="string" />
+			</creationProperties>
+			<availableViews>
+				<propertyViewType name="PropertyViewType"
+					clientType="NativeView" 
+					isDefault="true"
+					isStatic="false" 
+					presentationUri="a-presentation-uri"
+					viewClassName="a-view-class-name"> 
+					<viewCaption>A View Caption</viewCaption>
+					<viewAccessUrl>a.view.access.url</viewAccessUrl>
+				</propertyViewType>
+				<accessRightsViewType name="AccessRights"	clientType="NativeView">
+					<viewCaption>Hozzáférési jogok</viewCaption>
+				</accessRightsViewType>
+				<artifactCommentsViewType name="Comments" clientType="NativeView">
+					<viewCaption>Megjegyzések</viewCaption>
+				</artifactCommentsViewType>
+				<relatedArtifactsViewType name="RelatedArtifacts" clientType="NativeView">
+					<viewCaption>Kapcsolódó munkatermékek</viewCaption>
+				</relatedArtifactsViewType>
+				<artifactListViewType name="ListView" clientType="BrowseView">
+					<viewCaption>Lista</viewCaption>
+				</artifactListViewType>
+				<artifactModificationsViewType name="Modifications" clientType="NativeView">
+					<viewCaption>Módosítások</viewCaption>
+				</artifactModificationsViewType>
+				<listQueryViewType name="ListQueryView" clientType="NativeView">
+					<viewCaption>Szűrés</viewCaption>
+					<preDefinedQueries>
+						<query name="query_1">
+							<description>Description of 'query_1'</description>
+							<statement>select * from artifact</statement>
+						</query>
+						<query name="query_2">
+							<description>Description of 'query_2'</description>
+							<statement>select * from artifactType</statement>
+						</query>
+					</preDefinedQueries>
+				</listQueryViewType>
+				<printViewType name="PrintViewType"
+					clientType="PrintView" 
+					isDefault="false"
+					isStatic="true" 
+					presentationUri="token"
+					viewClassName="token"
+					xmlToFoXsltPath="filePath"> 
+					<viewCaption>viewCaption</viewCaption>
+					<viewAccessUrl>viewAccessUrl</viewAccessUrl>
+				</printViewType>
+				<editableTextViewType name="TextViewType"
+					clientType="EditableHtmlView" 
+					isDefault="false"
+					isStatic="true" 
+					presentationUri="token"
+					viewClassName="token"
+					xmlToHtmlXsltPath="filePath"> 
+					<viewCaption>viewCaption</viewCaption>
+					<viewAccessUrl>viewAccessUrl</viewAccessUrl>
+				</editableTextViewType>
+			</availableViews>
+			
+		</artifactType>
+	</artifactTypeGroup>
+</op:ArtifactTypeList>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pp:propertyView 
+	xmlns:pp="http://www.processpuzzle.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<pp:artifactId>1</pp:artifactId>
+	<pp:artifactName>Test Entity for Artifact Test</pp:artifactName>
+	<pp:viewName>PropertyView</pp:viewName>
+	<pp:preferredLanguage>hu</pp:preferredLanguage>
+	<pp:viewType>PropertyView</pp:viewType>
+	<pp:artifactTypeName>Test Entity</pp:artifactTypeName>
+	<pp:creationDate>2010.02.22</pp:creationDate>
+	<pp:isReserved>false</pp:isReserved>
+	<pp:isVersionControlled>false</pp:isVersionControlled>
+	<pp:lastModificationDate>2010.02.22</pp:lastModificationDate>
+	<pp:lastModifierName>Gipsz Jakab</pp:lastModifierName>
+	<pp:responsibleName>Gipsz Jakab</pp:responsibleName>
+	<pp:usedBy>N/A</pp:usedBy>
+</pp:propertyView>

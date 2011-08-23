@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ProcessPuzzle default configuration values. Don not change them! -->
+<processPuzzleConfiguration>
+	<application>
+		<version>1.0</version>
+		<serverWorkingFolder>c:\\processpuzzle</serverWorkingFolder>
+		<clientWorkingFolder>c:\\processpuzzle</clientWorkingFolder>
+	</application>
+	
+	<runtime>
+		<environment>local</environment>
+	</runtime>
+	
+	<frontController>
+		<commandMapping>
+			<class>com.itcodex.objectpuzzle.framework.application_configuration.control.ObjectPuzzleCommandMapping</class>
+		</commandMapping>
+	</frontController>
+	
+	<persistence>
+		<repositoryMapping>
+			<class>com.itcodex.objectpuzzle.framework.application_configuration.domain.TestClassMapping</class>
+		</repositoryMapping>
+		<strategy name="hibernate">
+			<propertyUrl>classpath:com/itcodex/objectpuzzle/framework/configuration/domaintier/domaintier_persistence_configuration.properties</propertyUrl>
+			<!-- For mssql (database:ObjectPuzzle_dt_test, login:opuser)
+			<connection>
+				<driver_class>net.sourceforge.jtds.jdbc.Driver</driver_class>
+				<url>jdbc:jtds:sqlserver://localhost/ObjectPuzzle_dt_test</url>
+				<username>opuser</username>
+				<password>opuser</password>
+			</connection>
+			<dialect>org.hibernate.dialect.SQLServerDialect</dialect>
+			 -->
+			 
+			<!-- For HSQL -->
+			<connection>
+				<driver_class>org.hsqldb.jdbcDriver</driver_class>
+				<url>jdbc:hsqldb:mem:DOMAINTIER_TEST_DB</url>
+				<username>sa</username>
+				<password></password>
+			</connection> 
+			<dialect>org.hibernate.dialect.HSQLDialect</dialect>
+			
+			<!-- common --> 
+			<current_session_context_class>thread</current_session_context_class>
+			<show_sql>false</show_sql>
+			<transaction>
+				<factory_class>org.hibernate.transaction.JDBCTransactionFactory</factory_class>
+			</transaction>
+			<cache>
+				<provider_class>org.hibernate.cache.HashtableCacheProvider</provider_class>
+				<use_second_level_cache>true</use_second_level_cache>
+				<use_query_cache>true</use_query_cache>
+			</cache>
+			<c3p0>
+				<max_size>5</max_size>
+				<min_size>2</min_size>
+				<timeout>5000</timeout>
+				<max_statements>100</max_statements>
+				<idle_test_period>3000</idle_test_period>
+				<acquire_increment>2</acquire_increment>
+				<validate>false</validate>
+			</c3p0>
+			<hbm2ddl>
+				<auto>create-drop</auto>
+			</hbm2ddl>
+		</strategy>
+		<entities>
+		</entities>
+	</persistence>
+	
+	<internalization>
+		<resourceBundle>classpath:com/itcodex/objectpuzzle/framework/internalization/domain/TestResources</resourceBundle>
+		<resourceBundle>classpath:NoneExsitingFile</resourceBundle>
+		<availableLocales>
+			<locale>hu, HU</locale>
+			<locale>en, US</locale>
+		</availableLocales>
+		<defaultLocale>hu, HU</defaultLocale>
+		<localeDefinitions>classpath:com/itcodex/objectpuzzle/framework/internalization/domain/LocaleDefinitions.xml</localeDefinitions>
+	</internalization>
+	
+	<dataLoaders>
+		<dataLoader kind="system">
+			<dataLoaderClass>com.itcodex.objectpuzzle.configuration.domaincomponents.OPTestDatas</dataLoaderClass>
+			<instantiationArguments>
+				<argument></argument>
+			</instantiationArguments>
+		</dataLoader>
+	</dataLoaders>
+	
+	<emailing>
+		<system>
+			<activation>passive</activation>
+		</system>
+		<host>
+			<systemUser>
+				<name>gabox01</name>
+				<password>ggmail81</password>
+			</systemUser>
+		</host>
+		<smtp>
+			<host>smtp.gmail.com</host>
+			<auth>true</auth>
+			<debug>true</debug>
+			<port>465</port>
+			<socketFactory>
+				<port>465</port>
+				<class>javax.net.ssl.SSLSocketFactory</class>
+				<fallback>false</fallback>
+			</socketFactory>
+		</smtp>
+	</emailing>
+	
+</processPuzzleConfiguration>

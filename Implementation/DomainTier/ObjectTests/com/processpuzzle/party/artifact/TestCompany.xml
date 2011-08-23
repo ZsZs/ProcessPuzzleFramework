@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot 
+	xmlns = "http://www.processpuzzle.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ ../Company.xsd">
+	
+<company>
+<shortName>Energometall Kft.</shortName>
+<longName>Energometall Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8756</address1_ZipCode>
+<address1_Settlement>Nagyrécse</address1_Settlement>
+<address1_Street>Napfény utca</address1_Street>
+<address1_BuildingNumber>1.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>42</phone1_AreaCode>
+<phone1_Number>389 849</phone1_Number>
+<emailAddress1>balazs.tihanyi@energometall.hu</emailAddress1>
+<address2_UsedFor></address2_UsedFor>
+<address2_Land></address2_Land>
+<address2_ZipCode></address2_ZipCode>
+<address2_Settlement></address2_Settlement>
+<address2_Street></address2_Street>
+<address2_BuildingNumber></address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor></address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+<phone3_AreaCode></phone3_AreaCode>
+<phone3_Number></phone3_Number>
+<webAddress></webAddress>
+</company>
+<company>
+<shortName>VE ABTROLL</shortName>
+<longName>ABT ROLL Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>4405</address1_ZipCode>
+<address1_Settlement>Nyíregyháza</address1_Settlement>
+<address1_Street>Debreceni u.</address1_Street>
+<address1_BuildingNumber>148.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>42</phone1_AreaCode>
+<phone1_Number>450 146</phone1_Number>
+<emailAddress1>info@abtroll.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>4405</address2_ZipCode>
+<address2_Settlement>Nyíregyháza</address2_Settlement>
+<address2_Street>Debreceni u.</address2_Street>
+<address2_BuildingNumber>148.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>42</phone3_AreaCode>
+<phone3_Number>450 004</phone3_Number>
+<webAddress>www.abtroll.hu</webAddress>
+</company>
+<company>
+<shortName>VE ACCEL</shortName>
+<longName>Accell Hunland Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>5091</address1_ZipCode>
+<address1_Settlement>Tószeg</address1_Settlement>
+<address1_Street>Parkoló tér</address1_Street>
+<address1_BuildingNumber>1.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>56</phone1_AreaCode>
+<phone1_Number>586 481</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>5091</address2_ZipCode>
+<address2_Settlement>Tószeg</address2_Settlement>
+<address2_Street>Parkoló tér</address2_Street>
+<address2_BuildingNumber>1.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+</company>
+<company>
+<shortName>VE AEROSPARES</shortName>
+<longName>Aerospares Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>1171</address1_ZipCode>
+<address1_Settlement>Budapest</address1_Settlement>
+<address1_Street>Nyitány u.</address1_Street>
+<address1_BuildingNumber>56</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>1</phone1_AreaCode>
+<phone1_Number>257 6600</phone1_Number>
+<emailAddress1>reka@aerospares.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>1171</address2_ZipCode>
+<address2_Settlement>Budapest</address2_Settlement>
+<address2_Street>Nyitány u.</address2_Street>
+<address2_BuildingNumber>56</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>1</phone3_AreaCode>
+<phone3_Number>256 8840</phone3_Number>
+</company>
+<company>
+<shortName>VE AERZEN</shortName>
+<longName>Aerzen Hungaria Kft</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>1036</address1_ZipCode>
+<address1_Settlement>Budapest</address1_Settlement>
+<address1_Street>Bécsi út</address1_Street>
+<address1_BuildingNumber>52.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>1</phone1_AreaCode>
+<phone1_Number>439 2200</phone1_Number>
+<emailAddress1>info@aerzenhungaria.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>1036</address2_ZipCode>
+<address2_Settlement>Budapest</address2_Settlement>
+<address2_Street>Bécsi út</address2_Street>
+<address2_BuildingNumber>52. III./4.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>1</phone3_AreaCode>
+<phone3_Number>439 1922</phone3_Number>
+</company>
+<company>
+<shortName>VE ÁÉSÁ</shortName>
+<longName>Á és Á Kereskedelmi és Szolgáltató Bt.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>2100</address1_ZipCode>
+<address1_Settlement>Gödöllő</address1_Settlement>
+<address1_Street>Kossuth L. utca</address1_Street>
+<address1_BuildingNumber>6.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>28</phone1_AreaCode>
+<phone1_Number>422 884</phone1_Number>
+<emailAddress1>profi_szerszam@invitel.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>2100</address2_ZipCode>
+<address2_Settlement>Gödöllő</address2_Settlement>
+<address2_Street>Kossuth L. utca</address2_Street>
+<address2_BuildingNumber>6.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>28</phone3_AreaCode>
+<phone3_Number>422 884</phone3_Number>
+</company>
+<company>
+<shortName>VE AFT</shortName>
+<longName>AFT-Európa Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>2651</address1_ZipCode>
+<address1_Settlement>Rétság</address1_Settlement>
+<address1_Street>Ipari Park</address1_Street>
+<address1_BuildingNumber>5.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>35</phone1_AreaCode>
+<phone1_Number>551 000</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>2651</address2_ZipCode>
+<address2_Settlement>Rétság</address2_Settlement>
+<address2_Street>Ipari Park</address2_Street>
+<address2_BuildingNumber>5.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>35</phone3_AreaCode>
+<phone3_Number>551 090</phone3_Number>
+</company>
+<company>
+<shortName>VE ÁGOSTON</shortName>
+<longName>Ágoston Tibor egyéni vállalkozó</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8800</address1_ZipCode>
+<address1_Settlement>Nagykanizsa</address1_Settlement>
+<address1_Street>Miklósfa u.</address1_Street>
+<address1_BuildingNumber>85</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>93</phone1_AreaCode>
+<phone1_Number>315 966</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>8800</address2_ZipCode>
+<address2_Settlement>Nagykanizsa</address2_Settlement>
+<address2_Street>Miklósfa u.</address2_Street>
+<address2_BuildingNumber>85</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+</company>
+<company>
+<shortName>VE AGROCOOL</shortName>
+<longName>Agrocool Trió Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>7100</address1_ZipCode>
+<address1_Settlement>Szekszárd</address1_Settlement>
+<address1_Street>damjanich u.</address1_Street>
+<address1_BuildingNumber>33-35.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>74</phone1_AreaCode>
+<phone1_Number>510 382</phone1_Number>
+<emailAddress1>budaiszerszam@bumik.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>74</phone3_AreaCode>
+<phone3_Number>510 382</phone3_Number>
+<webAddress>www.bumik.hu</webAddress>
+</company>
+<company>
+<shortName>VE AGROSPED</shortName>
+<longName>Agrosped Hungary Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8800</address1_ZipCode>
+<address1_Settlement>Nagykanizsa</address1_Settlement>
+<address1_Street>Fő u.</address1_Street>
+<address1_BuildingNumber>22.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>93</phone1_AreaCode>
+<phone1_Number>536 316</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>8800</address2_ZipCode>
+<address2_Settlement>Nagykanizsa</address2_Settlement>
+<address2_Street>Fő u.</address2_Street>
+<address2_BuildingNumber>22.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>93</phone3_AreaCode>
+<phone3_Number>312 639</phone3_Number>
+</company>
+<company>
+<shortName>VE AGROVID</shortName>
+<longName>AGRO-VID Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8738</address1_ZipCode>
+<address1_Settlement>Nemesvid</address1_Settlement>
+<address1_Street>Gardospuszta</address1_Street>
+<phone1_CountryCode></phone1_CountryCode>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>8738</address2_ZipCode>
+<address2_Settlement>Nemesvid</address2_Settlement>
+<address2_Street>Gardospuszta</address2_Street>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+</company>
+<company>
+<shortName>VE AGSYSTECH</shortName>
+<longName>AG-SYSTECH</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>9371</address1_ZipCode>
+<address1_Settlement>Vitnyéd</address1_Settlement>
+<address1_Street>Vasút u.</address1_Street>
+<address1_BuildingNumber>28</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>96</phone1_AreaCode>
+<phone1_Number>240 620</phone1_Number>
+<emailAddress1>info@ag-systech.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>9330</address2_ZipCode>
+<address2_Settlement>Kapuvár</address2_Settlement>
+<address2_Street>Akácfa u.</address2_Street>
+<address2_BuildingNumber>11.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>96</phone3_AreaCode>
+<phone3_Number>240 620</phone3_Number>
+<webAddress>www.ag-systech.hu</webAddress>
+</company>
+<company>
+<shortName>VE AKMÉ</shortName>
+<longName>AKMÉ Kereskedelmi és Szolgáltató Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>9700</address1_ZipCode>
+<address1_Settlement>Szombathely</address1_Settlement>
+<address1_Street>Mátyás király utca</address1_Street>
+<address1_BuildingNumber>36.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>94</phone1_AreaCode>
+<phone1_Number>505 655</phone1_Number>
+<emailAddress1>akme@axelero.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>9700</address2_ZipCode>
+<address2_Settlement>Szombathely</address2_Settlement>
+<address2_Street>Mátyás király utca</address2_Street>
+<address2_BuildingNumber>36.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>94</phone3_AreaCode>
+<phone3_Number>505 656</phone3_Number>
+</company>
+<company>
+<shortName>VE ALBY</shortName>
+<longName>ALBY Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>1063</address1_ZipCode>
+<address1_Settlement>Budapest</address1_Settlement>
+<address1_Street>Szív. u.</address1_Street>
+<address1_BuildingNumber>11.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>1</phone1_AreaCode>
+<phone1_Number>342 4799</phone1_Number>
+<emailAddress1>info@alby.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>1063</address2_ZipCode>
+<address2_Settlement>Budapest</address2_Settlement>
+<address2_Street>Szív u.</address2_Street>
+<address2_BuildingNumber>11.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>1</phone3_AreaCode>
+<phone3_Number>342 4799</phone3_Number>
+<webAddress>www.alby.hu</webAddress>
+</company>
+<company>
+<shortName>VE ALFA</shortName>
+<longName>ALFA Szerszámcentrum Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>4030</address1_ZipCode>
+<address1_Settlement>Debrecen</address1_Settlement>
+<address1_Street>Rigó utca</address1_Street>
+<address1_BuildingNumber>1.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>52</phone1_AreaCode>
+<phone1_Number>531-063</phone1_Number>
+<emailAddress1>alfa@alfaszerszam.t-online.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>4030</address2_ZipCode>
+<address2_Settlement>Debrecen</address2_Settlement>
+<address2_Street>Rigó utca</address2_Street>
+<address2_BuildingNumber>1.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>52</phone3_AreaCode>
+<phone3_Number>531 062</phone3_Number>
+</company>
+<company>
+<shortName>VE ALFABETA</shortName>
+<longName>ALFABETA Kereskedelmi Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>2459</address1_ZipCode>
+<address1_Settlement>Rácalmás</address1_Settlement>
+<address1_Street>Népfront út</address1_Street>
+<address1_BuildingNumber>88.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>25</phone1_AreaCode>
+<phone1_Number>508 470</phone1_Number>
+<emailAddress1>baloghj@alfabeta.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>2459</address2_ZipCode>
+<address2_Settlement>Rácalmás</address2_Settlement>
+<address2_Street>Népfront út</address2_Street>
+<address2_BuildingNumber>88.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>25</phone3_AreaCode>
+<phone3_Number>507-870</phone3_Number>
+</company>
+<company>
+<shortName>VE ANDRISKA</shortName>
+<longName>Andriska Barkács Szaküzlet</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>5100</address1_ZipCode>
+<address1_Settlement>Jászberény</address1_Settlement>
+<address1_Street>Hatvani út</address1_Street>
+<address1_BuildingNumber>54.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>57</phone1_AreaCode>
+<phone1_Number>410 684</phone1_Number>
+<emailAddress1>andriskabarkacs@freemail.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>5100</address2_ZipCode>
+<address2_Settlement>Jászberény</address2_Settlement>
+<address2_Street>Hatvani út</address2_Street>
+<address2_BuildingNumber>54.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>57</phone3_AreaCode>
+<phone3_Number>410 684</phone3_Number>
+</company>
+<company>
+<shortName>VE APHRODITE</shortName>
+<longName>Aphrodite 2005 Bt.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>5000</address1_ZipCode>
+<address1_Settlement>Szolnok</address1_Settlement>
+<address1_Street>Karczag László út</address1_Street>
+<address1_BuildingNumber>5. X/82</address1_BuildingNumber>
+<phone1_CountryCode></phone1_CountryCode>
+<emailAddress1>adler1889@citromail.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>5000</address2_ZipCode>
+<address2_Settlement>Szolnok</address2_Settlement>
+<address2_Street>Karczag László út</address2_Street>
+<address2_BuildingNumber>5. X/81</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+</company>
+<!-- <company>
+<shortName>VE AQUARO</shortName>
+<longName>Aquaro Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8800</address1_ZipCode>
+<address1_Settlement>Nagykanizsa</address1_Settlement>
+<address1_Street>Űrhajós út</address1_Street>
+<address1_BuildingNumber>1.</address1_BuildingNumber>
+<phone1_CountryCode></phone1_CountryCode>
+<emailAddress1>aquaro@chello.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>8800</address2_ZipCode>
+<address2_Settlement>Nagykanizsa</address2_Settlement>
+<address2_Street>Űrhajós út</address2_Street>
+<address2_BuildingNumber>1.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>30</phone3_AreaCode>
+<phone3_Number>312 473</phone3_Number>
+</company>
+<company>
+<shortName>VE ÁRKII</shortName>
+<longName>Árki István</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>9437</address1_ZipCode>
+<address1_Settlement>Hegykő</address1_Settlement>
+<address1_Street>Kossuth L. u.</address1_Street>
+<address1_BuildingNumber>28.</address1_BuildingNumber>
+<phone1_CountryCode></phone1_CountryCode>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>9437</address2_ZipCode>
+<address2_Settlement>Hegykő</address2_Settlement>
+<address2_Street>Kossuth L. u.</address2_Street>
+<address2_BuildingNumber>28.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+</company>
+<company>
+<shortName>VE ARTHERM</shortName>
+<longName>AR-THERM Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>9028</address1_ZipCode>
+<address1_Settlement>Győr</address1_Settlement>
+<address1_Street>Régi-Veszprémi út</address1_Street>
+<address1_BuildingNumber>14-16</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>96</phone1_AreaCode>
+<phone1_Number>415 855</phone1_Number>
+<emailAddress1>artherm@artherm.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>9028</address2_ZipCode>
+<address2_Settlement>Győr</address2_Settlement>
+<address2_Street>Régi-Veszprémi út</address2_Street>
+<address2_BuildingNumber>14-16</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>96</phone3_AreaCode>
+<phone3_Number>526 525</phone3_Number>
+</company>
+<company>
+<shortName>VE ARZENÁL</shortName>
+<longName>ARZENÁL &apos;90 Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8000</address1_ZipCode>
+<address1_Settlement>Székesfehérvár</address1_Settlement>
+<address1_Street>Széchenyi út</address1_Street>
+<address1_BuildingNumber>144.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>22</phone1_AreaCode>
+<phone1_Number>505 063</phone1_Number>
+<emailAddress1>sveda@arzenal.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>8000</address2_ZipCode>
+<address2_Settlement>Székesfehérvár</address2_Settlement>
+<address2_Street>Széchenyi út</address2_Street>
+<address2_BuildingNumber>144.</address2_BuildingNumber>
+<phone2_CountryCode>36</phone2_CountryCode>
+<phone2_AreaCode>22</phone2_AreaCode>
+<phone2_Number>511 420</phone2_Number>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>22</phone3_AreaCode>
+<phone3_Number>340 591</phone3_Number>
+<webAddress>www.arzenal.hu</webAddress>
+</company>
+<company>
+<shortName>VE ASGKER</shortName>
+<longName>ASG-KER Műszaki Kereskedelmi Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>2800</address1_ZipCode>
+<address1_Settlement>Tatabánya</address1_Settlement>
+<address1_Street>Vértanúk tere</address1_Street>
+<address1_BuildingNumber>20.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>34</phone1_AreaCode>
+<phone1_Number>313 402</phone1_Number>
+<emailAddress1>asgker@t-online.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>2800</address2_ZipCode>
+<address2_Settlement>Tatabánya</address2_Settlement>
+<address2_Street>Vértanúk tere</address2_Street>
+<address2_BuildingNumber>20.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>34</phone3_AreaCode>
+<phone3_Number>314 202</phone3_Number>
+</company>
+<company>
+<shortName>VE ASTRE</shortName>
+<longName>ASTRE Bt.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>1174</address1_ZipCode>
+<address1_Settlement>Budapest</address1_Settlement>
+<address1_Street>Szilágyi Dezső utca</address1_Street>
+<address1_BuildingNumber>35.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>1</phone1_AreaCode>
+<phone1_Number>257 3275</phone1_Number>
+<emailAddress1>astrebt@t-online.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>1174</address2_ZipCode>
+<address2_Settlement>Budapest</address2_Settlement>
+<address2_Street>Szilágyi Dezső utca</address2_Street>
+<address2_BuildingNumber>35.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>1</phone3_AreaCode>
+<phone3_Number>257 3275</phone3_Number>
+</company>
+<company>
+<shortName>VE ATLANTI</shortName>
+<longName>Atlanti-Szerszám Kereskedelmi és Szolgáltató Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>6728</address1_ZipCode>
+<address1_Settlement>Szeged</address1_Settlement>
+<address1_Street>Fonógyári út</address1_Street>
+<address1_BuildingNumber>9.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>62</phone1_AreaCode>
+<phone1_Number>444 021</phone1_Number>
+<emailAddress1>info@atlanti-szerszam.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>6728</address2_ZipCode>
+<address2_Settlement>Szeged</address2_Settlement>
+<address2_Street>Fonógyári út</address2_Street>
+<address2_BuildingNumber>9.</address2_BuildingNumber>
+<phone2_CountryCode>36</phone2_CountryCode>
+<phone2_AreaCode>1</phone2_AreaCode>
+<phone2_Number>433 2678</phone2_Number>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>62</phone3_AreaCode>
+<phone3_Number>440 753</phone3_Number>
+<webAddress>www.atlanti-szerszam.hu</webAddress>
+</company>
+<company>
+<shortName>VE AUTOFÜRED</shortName>
+<longName>Autó-Füred Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>5350</address1_ZipCode>
+<address1_Settlement>Tiszafüred</address1_Settlement>
+<address1_Street>Aradi vértanuk útja</address1_Street>
+<address1_BuildingNumber>2/B.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>59</phone1_AreaCode>
+<phone1_Number>350 939</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>5350</address2_ZipCode>
+<address2_Settlement>Tiszafüred</address2_Settlement>
+<address2_Street>Aradi vértanuk útja</address2_Street>
+<address2_BuildingNumber>2/B.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>59</phone3_AreaCode>
+<phone3_Number>511 291</phone3_Number>
+</company>
+<company>
+<shortName>VE AUTOKANIZSA</shortName>
+<longName>Auto-Kanizsa Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8800</address1_ZipCode>
+<address1_Settlement>Nagykanizsa</address1_Settlement>
+<address1_Street>Balatoni u.</address1_Street>
+<address1_BuildingNumber>33.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>93</phone1_AreaCode>
+<phone1_Number>537 000</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>8800</address2_ZipCode>
+<address2_Settlement>Nagykanizsa</address2_Settlement>
+<address2_Street>Balatoni u.</address2_Street>
+<address2_BuildingNumber>33.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>93</phone3_AreaCode>
+<phone3_Number>537 000</phone3_Number>
+</company>
+<company>
+<shortName>VE AUTÓLÁSZLÓ</shortName>
+<longName>Autó-László Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>7570</address1_ZipCode>
+<address1_Settlement>Barcs</address1_Settlement>
+<address1_Street>Darányi utca</address1_Street>
+<address1_BuildingNumber>39469</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>82</phone1_AreaCode>
+<phone1_Number>565 212</phone1_Number>
+<emailAddress1>autolaszlo@fibermail.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>7570</address2_ZipCode>
+<address2_Settlement>Barcs</address2_Settlement>
+<address2_Street>Darányi utca</address2_Street>
+<address2_BuildingNumber>212/1.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>82</phone3_AreaCode>
+<phone3_Number>565 212</phone3_Number>
+</company>
+<company>
+<shortName>VE AUTOMAGIC</shortName>
+<longName>Auto Magic Eger Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>3300</address1_ZipCode>
+<address1_Settlement>Eger</address1_Settlement>
+<address1_Street>Kisasszony út</address1_Street>
+<address1_BuildingNumber>25.</address1_BuildingNumber>
+<phone1_CountryCode></phone1_CountryCode>
+<emailAddress1>info@automagic.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>3300</address2_ZipCode>
+<address2_Settlement>Eger</address2_Settlement>
+<address2_Street>Faiskola u. 15. Ipari-Park, K2 10-es műhely</address2_Street>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+<webAddress>www.automagic.hu</webAddress>
+</company>
+<company>
+<shortName>VE AUTOMOBIL</shortName>
+<longName>Angyalosi Autóház Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8800</address1_ZipCode>
+<address1_Settlement>Nagykanizsa</address1_Settlement>
+<address1_Street>Teleki u.</address1_Street>
+<address1_BuildingNumber>21.</address1_BuildingNumber>
+<phone1_CountryCode></phone1_CountryCode>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+</company>
+<company>
+<shortName>VE AUTOPRESS</shortName>
+<longName>Autopress Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>4405</address1_ZipCode>
+<address1_Settlement>Nyíregyháza</address1_Settlement>
+<address1_Street>Tünde utca</address1_Street>
+<address1_BuildingNumber>18/A</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>42</phone1_AreaCode>
+<phone1_Number>461 100</phone1_Number>
+<emailAddress1>rudi.janos@axelero.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>4400</address2_ZipCode>
+<address2_Settlement>Nyíregyháza</address2_Settlement>
+<address2_Street>Tünde út</address2_Street>
+<address2_BuildingNumber>18/A.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>42</phone3_AreaCode>
+<phone3_Number>461 100</phone3_Number>
+</company>
+<company>
+<shortName>VE AUTÓTITÁN</shortName>
+<longName>Autó Titán Kereskedelmi és Szolgáltató Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>4400</address1_ZipCode>
+<address1_Settlement>Nyíregyháza</address1_Settlement>
+<address1_Street>Debreceni út</address1_Street>
+<address1_BuildingNumber>222.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>42</phone1_AreaCode>
+<phone1_Number>501 370</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>4400</address2_ZipCode>
+<address2_Settlement>Nyíregyháza</address2_Settlement>
+<address2_Street>Debreceni út</address2_Street>
+<address2_BuildingNumber>222.</address2_BuildingNumber>
+<phone2_CountryCode>36</phone2_CountryCode>
+<phone2_AreaCode>42</phone2_AreaCode>
+<phone2_Number>501 371</phone2_Number>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>42</phone3_AreaCode>
+<phone3_Number>501 372</phone3_Number>
+</company>
+<company>
+<shortName>VE AVERMANN</shortName>
+<longName>Avermann-Horváth Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>7570</address1_ZipCode>
+<address1_Settlement>Barcs</address1_Settlement>
+<address1_Street>Drávapart</address1_Street>
+<address1_BuildingNumber>2.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>82</phone1_AreaCode>
+<phone1_Number>565 866</phone1_Number>
+<emailAddress1>info@avermann-horvath.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>7570</address2_ZipCode>
+<address2_Settlement>Barcs</address2_Settlement>
+<address2_Street>Drávapart</address2_Street>
+<address2_BuildingNumber>2.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>82</phone3_AreaCode>
+<phone3_Number>463 169</phone3_Number>
+<webAddress>www.avermann-horvath.hu</webAddress>
+</company>
+<company>
+<shortName>VE AXIÁL</shortName>
+<longName>AXIÁL Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>6500</address1_ZipCode>
+<address1_Settlement>Baja</address1_Settlement>
+<address1_Street>Szegedi út</address1_Street>
+<address1_BuildingNumber>147.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>79</phone1_AreaCode>
+<phone1_Number>525 481</phone1_Number>
+<emailAddress1>szilagyit@axial.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>6500</address2_ZipCode>
+<address2_Settlement>Baja</address2_Settlement>
+<address2_Street>Szegedi út</address2_Street>
+<address2_BuildingNumber>147.</address2_BuildingNumber>
+<phone2_CountryCode>36</phone2_CountryCode>
+<phone2_AreaCode>79</phone2_AreaCode>
+<phone2_Number>525 483</phone2_Number>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>79</phone3_AreaCode>
+<phone3_Number>520 411</phone3_Number>
+<webAddress>www.axial.hu</webAddress>
+</company>
+<company>
+<shortName>VE BAGI</shortName>
+<longName>Bagi Kenéstechnika Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>1158</address1_ZipCode>
+<address1_Settlement>Budapest</address1_Settlement>
+<address1_Street>Késmárk utca</address1_Street>
+<address1_BuildingNumber>39670</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>1</phone1_AreaCode>
+<phone1_Number>4150 386</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>1158</address2_ZipCode>
+<address2_Settlement>Budapest</address2_Settlement>
+<address2_Street>Késmárk utca</address2_Street>
+<address2_BuildingNumber>39670</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>1</phone3_AreaCode>
+<phone3_Number>415 0386</phone3_Number>
+</company>
+<company>
+<shortName>VE BAHOR</shortName>
+<longName>BAHOR Kereskedelmi és Szolgáltató Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>9024</address1_ZipCode>
+<address1_Settlement>Győr</address1_Settlement>
+<address1_Street>Hunyadi út</address1_Street>
+<address1_BuildingNumber>3/b</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>96</phone1_AreaCode>
+<phone1_Number>583 065</phone1_Number>
+<emailAddress1>bcs2007@citromail.hu</emailAddress1>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>9024</address2_ZipCode>
+<address2_Settlement>Győr</address2_Settlement>
+<address2_Street>Hunyadi út</address2_Street>
+<address2_BuildingNumber>3/b</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>96</phone3_AreaCode>
+<phone3_Number>583 066</phone3_Number>
+</company>
+<company>
+<shortName>VE BAJMÓCI</shortName>
+<longName>Bajmóci Invest Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>1113</address1_ZipCode>
+<address1_Settlement>Budapest</address1_Settlement>
+<address1_Street>Karolina út</address1_Street>
+<address1_BuildingNumber>65.</address1_BuildingNumber>
+<phone1_CountryCode></phone1_CountryCode>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode></phone3_CountryCode>
+</company>
+<company>
+<shortName>VE BAKI</shortName>
+<longName>Baki és Társa Kft.</longName>
+<address1_UsedFor>levelezési cím</address1_UsedFor>
+<address1_Land>Magyarország</address1_Land>
+<address1_ZipCode>8984</address1_ZipCode>
+<address1_Settlement>Iborfia</address1_Settlement>
+<address1_Street>Fő utca</address1_Street>
+<address1_BuildingNumber>8.</address1_BuildingNumber>
+<phone1_CountryCode>36</phone1_CountryCode>
+<phone1_AreaCode>30</phone1_AreaCode>
+<phone1_Number>947 1126</phone1_Number>
+<address2_UsedFor>szállítási cím</address2_UsedFor>
+<address2_Land>Magyarország</address2_Land>
+<address2_ZipCode>8900</address2_ZipCode>
+<address2_Settlement>Zalaegerszeg</address2_Settlement>
+<address2_Street>Dózsa utca</address2_Street>
+<address2_BuildingNumber>54.</address2_BuildingNumber>
+<phone2_CountryCode></phone2_CountryCode>
+<phone2_AreaCode></phone2_AreaCode>
+<phone2_Number></phone2_Number>
+<emailAddress2></emailAddress2>
+<address3_UsedFor>fax</address3_UsedFor>
+<address3_Land></address3_Land>
+<address3_ZipCode></address3_ZipCode>
+<address3_Settlement></address3_Settlement>
+<address3_Street></address3_Street>
+<address3_BuildingNumber></address3_BuildingNumber>
+<phone3_CountryCode>36</phone3_CountryCode>
+<phone3_AreaCode>92</phone3_AreaCode>
+<phone3_Number>511 253</phone3_Number>
+</company>
+ -->
+</dataroot>
+
+ 
