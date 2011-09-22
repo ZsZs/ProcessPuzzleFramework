@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Termékcsoport Adatlap Alapadatok</title>
+</head>
+<body>
+	<center>
+	<h1>Termékcsoport Adatlap Alapadatok</h1>
+	</center>
+
+	<form name="form" id="productGroupBaseDataForm" method="post" action="${artifactView.codeBase}">
+	
+	<br/><br/>
+	
+		<div class="editableContainer">
+			<fieldset style="width: 400px; border-color: white;">
+			<legend>Termékcsoport</legend>
+				<div class="row">
+					<span class="label">Termékcsoportnév:</span>
+					<span class="formw"><input type="text" id="nameEdit" value=""/></span>
+				</div>
+				<div class="row">
+					<span class="label">Rövid leírás:</span>
+					<span class="formw"><textarea rows="5" cols="50" id="shortDescriptionArea" onchange="setToDirty();"></textarea></span>
+				</div>
+				<div class="row">
+					<span class="label">Hosszú leírás:</span>
+					<span class="formw"><textarea rows="5" cols="50" id="longDescriptionArea" onchange="setToDirty();"></textarea></span>
+				</div>
+			</fieldset>
+		</div>
+		
+	<br/><br/>
+
+		<div class="readOnlyContainer">
+			<input type="button" class="buttonSmall" style="margin-left: 150px;" value="Mentés"/>
+			<input type="button" class="buttonSmall" value="Mégse" />
+		</div>
+	</form>
+		
+
+
+</body>
+</html>

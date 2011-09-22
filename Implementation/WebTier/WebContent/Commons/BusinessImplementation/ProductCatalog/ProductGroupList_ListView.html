@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Termékcsoportlista</title>
+</head>
+<body>
+
+	<form name="form" id="productGroupListForm" method="post" action="${artifactView.codeBase}">
+	
+	<center>
+	<h1>Termékcsoportlista</h1>
+	
+	<br/><br/>
+
+		<div class="readOnlyContainer">
+			<table style="width: 700px;" class="sortable" id="productGroupListTable">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Csoportnév</th>
+						<th>Rövid leírás</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="${classNameForRow}">
+						<td><input type="radio" name="radio"></td>
+						<td><a href="#">Csoportnév</a></td>
+						<td>Rövid leírás</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</center>	
+	</form>
+
+</body>
+</html>

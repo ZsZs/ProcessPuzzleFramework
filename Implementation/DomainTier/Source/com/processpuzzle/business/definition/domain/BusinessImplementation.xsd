@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace="http://www.processpuzzle.com/"
+	elementFormDefault="qualified" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns="http://www.processpuzzle.com/">
+
+    <xsd:include schemaLocation="BusinessDefinition.xsd"></xsd:include>
+    
+    <xsd:element name="businessImplementation">
+		<xsd:complexType>
+			<xsd:sequence maxOccurs="1">
+				<xsd:element name="artifacts" type="Artifacts" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="Artifacts">
+		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="artifactList" type="ArtifactList" />
+				<xsd:element name="personList" type="PersonList" />
+				<xsd:element name="companyList" type="CompanyList" />
+				<xsd:element name="partyDataSheet" type="PartyDataSheet" />
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Asset" abstract="true" >
+		<xsd:attribute name="name" type="xsd:token" use="required" />
+		<xsd:attribute name="type" type="xsd:token" use="required" />
+	</xsd:complexType>
+
+    <!-- Artifacts -->
+    <xsd:complexType name="Artifact" abstract="true">
+    	<xsd:complexContent>
+    		<xsd:extension base="Asset"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="PartyDataSheet">
+		<xsd:complexContent>
+			<xsd:extension base="Artifact"></xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+
+    <!-- Artifact lists -->
+	<xsd:complexType name="ArtifactList">
+		<xsd:complexContent>
+			<xsd:extension base="Artifact"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+    <xsd:complexType name="PersonList">
+    	<xsd:complexContent>
+    		<xsd:extension base="ArtifactList"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="CompanyList">
+    	<xsd:complexContent>
+    		<xsd:extension base="ArtifactList"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

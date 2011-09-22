@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:pp="http://www.processpuzzle.com/" 
+	targetNamespace="http://www.processpuzzle.com/" 
+	elementFormDefault="qualified">
+	
+	<xsd:element name="findArtifactResponse">
+		<xsd:complexType>
+			<xsd:sequence maxOccurs="1">
+				<xsd:element name="artifactName" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

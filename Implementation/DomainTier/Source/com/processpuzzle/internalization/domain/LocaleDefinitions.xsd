@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/LocaleDefinitions" xmlns:tns="http://www.example.org/LocaleDefinitions" elementFormDefault="qualified">
+
+<element name="locales">
+	<complexType>
+		<sequence>
+			<element name="locale" maxOccurs="unbounded">
+				<complexType>
+					<all>
+						<element name="quantityFormatSpecifier">
+							<complexType>
+								<all>					
+									<element name="maxIntDigits" type="nonNegativeInteger"/>
+									<element name="minIntDigits" type="nonNegativeInteger"/>
+									<element name="maxFractDigits" type="nonNegativeInteger"/>
+									<element name="minFractDigits" type="nonNegativeInteger"/>
+								</all>
+								<attribute name="groupingSeparator" type="string" default=","/>
+								<attribute name="decimalSeparator" type="string" default="."/>
+							</complexType>
+						</element>
+						<element name="dateFormatSpecifier" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="dateFormat" minOccurs="1">
+										<complexType>
+											<all>
+												<element name="fullPattern" type="normalizedString"/>
+												<element name="longPattern" type="normalizedString"/>
+												<element name="mediumPattern" type="normalizedString" minOccurs="1"/>
+												<element name="shortPattern" type="normalizedString"/>
+											</all>
+										</complexType>
+									</element>
+									<element name="timeFormat" minOccurs="1">
+										<complexType>
+											<all>
+												<element name="fullPattern" type="normalizedString"/>
+												<element name="longPattern" type="normalizedString"/>
+												<element name="mediumPattern" type="normalizedString" minOccurs="1"/>
+												<element name="shortPattern" type="normalizedString"/>
+											</all>
+										</complexType>
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="currency">
+						<complexType>
+							<attribute name="symbol" use="required">
+								<simpleType>
+									<restriction base="normalizedString">
+										<minLength value="3"/>
+										<maxLength value="3"/>
+									</restriction>
+								</simpleType>
+							</attribute>
+							<attribute name="name" use="required" type="normalizedString"/>
+						</complexType>
+						</element>
+					</all>
+					<attribute name="language" type="language" use="required"/>
+					<attribute name="country">
+						<simpleType>
+							<restriction base="normalizedString">
+								<minLength value="1"/>
+							</restriction>
+						</simpleType>
+					</attribute>
+					<attribute name="variant">
+						<simpleType>
+							<restriction base="normalizedString">
+								<minLength value="1"/>
+							</restriction>
+						</simpleType>
+					</attribute>
+					<attribute name="default" type="boolean" use="optional" default="false"/>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+</schema>
