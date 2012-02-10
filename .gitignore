@@ -14,15 +14,22 @@
 /Implementation/DomainTier/Build/Distribution
 /Implementation/DomainTier/Build/Libraries
 /Implementation/DomainTier/Build/Reports
+/Implementation/DomainTier/Build/Temp/
 /Implementation/DomainTier/Build/build.num
 /Implementation/DomainTier/Build/local.build.properties
 /Implementation/DomainTier/Configuration/hsqlrun.bat
 /Implementation/DomainTier/Configuration/toolrun.bat
 /Implementation/DomainTier/Logs/ProcessPuzzle.log
 /Implementation/WebTier/.settings
-/Implementation/WebTier/Binaries
+/Implementation/WebTier/Binaries/
+/Implementation/WebTier/Build/Distribution/
+/Implementation/WebTier/Build/Logs/
+/Implementation/WebTier/Build/Reports/
+/Implementation/WebTier/Build/Temp/
+/Implementation/WebTier/Build/build.num
 /Implementation/WebTier/Build/local.build.properties
 /Implementation/WebTier/Logs/ProcessPuzzle.log
+/Implementation/WebTier/TEST-net.jsunit.StandaloneTest.xml
 
 
 
