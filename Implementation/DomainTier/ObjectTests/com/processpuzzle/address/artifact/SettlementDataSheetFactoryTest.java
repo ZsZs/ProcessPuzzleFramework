@@ -12,7 +12,6 @@ import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class SettlementDataSheetFactoryTest extends ArtifactFactoryTestTemplate<SettlementDataSheetFactory, SettlementDataSheetFactoryTestFixture, SettlementDataSheet>{
-   private SettlementDataSheet budapest;
    
    public SettlementDataSheetFactoryTest() {
       super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
@@ -24,18 +23,18 @@ public class SettlementDataSheetFactoryTest extends ArtifactFactoryTestTemplate<
       //SETUP: Imlicit setup.
       
       //EXCERCISE:
-      SettlementDataSheet budapest = sut.create( "Budapest" );
+      SettlementDataSheet settlement = sut.create( templatedFixture.getSettlementName(), templatedFixture.getCountryName() );
       
       //VERIFY:
-      assertThat( budapest.getName(), equalTo( "Budapest" ));  
+      assertThat( settlement.getName(), equalTo( templatedFixture.getSettlementName() ));  
    }
    
    @Test (expected = EntityIdentityCollitionException.class ) 
    @Override public void create_ForCollision() {
-      budapest = sut.create( "Budapest" );      
-      templatedFixture.getSettlementDataSheetRepository().add( budapest );
+      SettlementDataSheet settlement = sut.create( templatedFixture.getSettlementName(), templatedFixture.getCountryName() );      
+      templatedFixture.getSettlementDataSheetRepository().add( settlement );
       
       //EXCERCISE:
-      sut.create( "Budapest" );
+      sut.create( templatedFixture.getSettlementName(), templatedFixture.getCountryName() );
    }
 }

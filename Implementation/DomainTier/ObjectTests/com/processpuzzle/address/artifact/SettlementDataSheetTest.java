@@ -31,7 +31,6 @@ public class SettlementDataSheetTest {
    public void tearDown() throws Exception {
    }
  
-   @Ignore
    @Test
    public void create() {
       assertNotNull("The create() method also creates a Settlement object.", budapestSheet.getSettlement());

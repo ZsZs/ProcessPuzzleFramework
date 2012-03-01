@@ -7,19 +7,21 @@ import com.processpuzzle.address.artifact.SettlementDataSheetFactory;
 import com.processpuzzle.address.artifact.SettlementDataSheetRepository;
 import com.processpuzzle.address.domain.SettlementRepository;
 
-public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFixture<SettlementDataSheetFactory> {
+public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFixture<SettlementDataSheetFactory, SettlementDataSheet> {
+   public static final String COUNTRY_NAME = "Magyarország";
+   private static final String SETTLEMENT_NAME = "Szada";
    private SettlementDataSheetRepository settlementDataSheetRepository;
    private SettlementRepository settlementRepository;
 
    //Constructors
-   protected SettlementDataSheetFactoryTestFixture( ArtifactFactoryTestEnvironment<SettlementDataSheetFactory, ?> testEnvironment ) {
+   public SettlementDataSheetFactoryTestFixture( ArtifactFactoryTestEnvironment<SettlementDataSheetFactory, ?> testEnvironment ) {
       super( testEnvironment );
    }
 
    //Properties
-   public SettlementDataSheetRepository getSettlementDataSheetRepository() {
-      return settlementDataSheetRepository;
-   }
+   public String getCountryName() { return COUNTRY_NAME; }
+   public SettlementDataSheetRepository getSettlementDataSheetRepository() { return settlementDataSheetRepository; }
+   public String getSettlementName() { return SETTLEMENT_NAME; }
 
    public SettlementRepository getSettlementRepository() {
       return settlementRepository;
@@ -35,15 +37,8 @@ public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFi
 
    @Override protected void configureAfterSutInstantiation() {}
 
-   @Override
-   protected SettlementDataSheetFactory instantiateSUT() {
+   @Override protected void releaseResources() {
       // TODO Automatikusan elõállított metóduscsonk
-      return null;
    }
 
-   @Override
-   protected void releaseResources() {
-      // TODO Automatikusan elõállított metóduscsonk
-      
-   }
 }

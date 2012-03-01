@@ -4,7 +4,7 @@ import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
 
 import com.processpuzzle.artifact.domain.ArtifactFactory;
 
-public class ArtifactFactoryTestEnvironment<S extends ArtifactFactory<?>, F extends ArtifactFactoryTestFixture<S>> extends GenericTestEnvironment<S> {
+public class ArtifactFactoryTestEnvironment<S extends ArtifactFactory<?>, F extends ArtifactFactoryTestFixture<S,?>> extends GenericTestEnvironment<S> {
    private Class<F> factoryTestFixtureClass;
 
    @SuppressWarnings("unchecked")

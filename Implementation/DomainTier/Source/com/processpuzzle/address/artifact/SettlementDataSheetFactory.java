@@ -43,11 +43,6 @@ public class SettlementDataSheetFactory extends ArtifactFactory<SettlementDataSh
       super();
    }
 
-/*   public SettlementDataSheet create( String settlementName ) throws EntityIdentityCollitionException {
-      System.out.println( UserRequestManager.getInstance().currentUser().getUserName() );
-      return this.create( settlementName, null );
-   }*/
-
    public SettlementDataSheet create( String settlementName, String countryName ) {
       // create settlement
       Settlement settlement = null;
