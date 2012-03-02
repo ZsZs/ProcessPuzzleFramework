@@ -1,28 +1,30 @@
 package com.processpuzzle.artifact_type_group.domain;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
 import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Test;
 
-import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
+import com.processpuzzle.artifact_type.domain.ArtifactType;
+import com.processpuzzle.sharedfixtures.artifact.ArtifactLayerTestConfiguration;
 
 public class ArtifactTypeGroupRepositoryTest extends RepositoryTestTemplate<ArtifactTypeGroupRepository, ArtifactTypeGroupRepositoryTestFixture, ArtifactTypeGroup> {
 
    public ArtifactTypeGroupRepositoryTest() {
-      super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
+      super( ArtifactLayerTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
    }
 
    @Override @Test
    public void testAdd_ForOwnedAttributesAndComponents() {
-      assertEquals( root.getName(), databaseSpy.retrieveColumnFromRow( "T_ARTIFACT_TYPE_GROUP", root.getId(), String.class, "name" ) );
-
+      assertThat( databaseSpy.retrieveColumnFromRow( "T_ARTIFACT_TYPE_GROUP", root.getId(), String.class, "name" ), equalTo( root.getName() ));
    }
 
    @Override
    public void testAdd_ForReferencedAggregateRoots() {
-   // TODO Auto-generated method stub
-
+      for( ArtifactType artifactType : root.getArtifactTypes() ){
+         assertThat( databaseSpy.retrieveColumnFromRow( "T_ARTIFACT_TYPE", artifactType.getId(), Integer.class, "artifact_type_group_id" ), equalTo( root.getId() ));
+      }
    }
 
    @Override

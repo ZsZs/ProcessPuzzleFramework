@@ -49,9 +49,6 @@ import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 
-/**
- * @author zsolt.zsuffa
- */
 public class ArtifactTypeGroup extends GenericEntity<ArtifactTypeGroup> implements AggregateRoot {
    private @XmlAttribute @XmlID String name;
    @XmlElementWrapper( name = "defaultAccessRights" ) @XmlElement( name = "accessRight" )
@@ -69,7 +66,7 @@ public class ArtifactTypeGroup extends GenericEntity<ArtifactTypeGroup> implemen
       artifactTypes.add( aType );
    }
 
-   // Public accessors
+   // Public accessors and mutators
    public DefaultAccessRight findAccessRightsFor( String partyRoleName ) {
       for( DefaultAccessRight anAccessRight : defaultAccessRights ) {
          if( anAccessRight.getUserRoleName().equals( partyRoleName )) return anAccessRight;

@@ -51,8 +51,8 @@
 						<pr:hibernate>
 							<pr:connection>
 								<pr:driver_class>org.hsqldb.jdbcDriver</pr:driver_class>
-								<pr:url>jdbc:hsqldb:mem:mymemdb</pr:url>
-								<!-- <pr:url>jdbc:hsqldb:hsql://localhost/test_db</pr:url> -->
+								<!-- <pr:url>jdbc:hsqldb:mem:mymemdb</pr:url>-->
+								<pr:url>jdbc:hsqldb:hsql://localhost/test_db</pr:url> 
 								<ge:userName>SA</ge:userName>
 								<ge:password></ge:password>
 							</pr:connection> 
