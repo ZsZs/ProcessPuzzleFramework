@@ -5,8 +5,6 @@ import hu.itkodex.litest.template.ArtifactFactoryTestEnvironment;
 import hu.itkodex.litest.template.ArtifactFactoryTestFixture;
 import hu.itkodex.litest.template.DefaultApplicationFixture;
 
-import com.processpuzzle.address.artifact.SettlementDataSheetFactory;
-import com.processpuzzle.address.artifact.SettlementDataSheetRepository;
 import com.processpuzzle.address.domain.Country;
 import com.processpuzzle.address.domain.CountryFactory;
 import com.processpuzzle.address.domain.CountryRepository;
@@ -23,6 +21,7 @@ public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFi
    private CountryFactory countryFactory;
    private CountryRepository countryRepository;
    private SettlementDataSheetRepository settlementDataSheetRepository;
+   private ArtifactType settlementDataSheetType;
    private SettlementRepository settlementRepository;
 
    //Constructors
@@ -57,17 +56,18 @@ public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFi
    @Override protected void releaseResources() {
       UnitOfWork work = new DefaultUnitOfWork( true );
       countryRepository.delete( work, country );
+      artifactTypeRepository.delete( work, settlementDataSheetType );
       work.finish();
    }
    
    private void createArtifactTypeForSettlementDataSheet(){
-      ArtifactType settlementDataSheetType = artifactTypeFactory.createArtifactType( SETTLEMENT_DATA_SHEET_TYPE_NAME, DefaultApplicationFixture.SYSTEM_ADMINISTRATION_ARTIFACT_TYPE_GROUP, SettlementDataSheet.class );
-      settlementDataSheetType.setDomainClassName( Settlement.class.getName() );
       UnitOfWork work = new DefaultUnitOfWork( true );
+      settlementDataSheetType = artifactTypeFactory.createArtifactType( work, SETTLEMENT_DATA_SHEET_TYPE_NAME, DefaultApplicationFixture.SYSTEM_ADMINISTRATION_ARTIFACT_TYPE_GROUP, SettlementDataSheet.class );
+      settlementDataSheetType.setDomainClassName( Settlement.class.getName() );
       artifactTypeRepository.add( work, settlementDataSheetType );
       work.finish();
    }
-
+   
    private void lookUpRepositoriesAndFactories() {
       settlementDataSheetRepository = applicationContext.getRepository( SettlementDataSheetRepository.class );
       settlementRepository = applicationContext.getRepository( SettlementRepository.class );

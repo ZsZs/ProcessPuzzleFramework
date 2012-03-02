@@ -24,7 +24,7 @@
 			column="ARTIFACT_TYPE_GROUP_ID" 
 			class="com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup"
 			lazy="false"
-			not-null="false"
+			not-null="true"
  			insert="false"
 			update="false">
 		</many-to-one>

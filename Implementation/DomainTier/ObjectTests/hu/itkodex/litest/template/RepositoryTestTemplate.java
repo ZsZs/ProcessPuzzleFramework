@@ -45,6 +45,7 @@ public abstract class RepositoryTestTemplate<R extends GenericRepository<?>, F e
    @Override public void beforeEachTest() {
       super.beforeEachTest();
       databaseSpy = templatedFixture.getDatabaseSpy();
+      root = (A) templatedFixture.getRoot();
    }
 
    @Test public abstract void testAdd_ForOwnedAttributesAndComponents() throws Exception;

@@ -34,6 +34,8 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.artifact_type.domain;
 
+import hu.itkodex.commons.persistence.UnitOfWork;
+
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
@@ -58,6 +60,19 @@ public class ArtifactTypeFactory extends GenericFactory<ArtifactType> {
          DefaultUnitOfWork work = new DefaultUnitOfWork( true );
          group = repository.findByName( work, groupName );
          work.finish();
+      }
+
+      ArtifactType artifactType = new ArtifactType( typeName, group, artifactClass );
+      checkEntityIdentityCollition( artifactType.getDefaultIdentity() );
+      return artifactType;
+   }
+
+   public ArtifactType createArtifactType( UnitOfWork work, String typeName, String groupName, Class<? extends Artifact<?>> artifactClass ) {
+      ArtifactTypeGroup group = null;
+
+      if( groupName != null ){
+         ArtifactTypeGroupRepository repository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
+         group = repository.findByName( work, groupName );
       }
 
       ArtifactType artifactType = new ArtifactType( typeName, group, artifactClass );

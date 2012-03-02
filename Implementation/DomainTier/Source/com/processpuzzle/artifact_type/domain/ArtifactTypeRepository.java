@@ -48,8 +48,20 @@ public class ArtifactTypeRepository extends GenericRepository<ArtifactType> {
       super( strategy, applicationContext );
    }
 
+   public void add( ArtifactType artifactType ) {
+      UnitOfWork work = new DefaultUnitOfWork( true );
+      add( work, artifactType );
+      work.finish();
+   }
+
    public void addArtifactType( DefaultUnitOfWork work, ArtifactType artifactType ) {
       add( work, artifactType );
+   }
+
+   public void delete( ArtifactType artifactType ) {
+      UnitOfWork work = new DefaultUnitOfWork( true );
+      delete( work, artifactType );
+      work.finish();
    }
 
    public void deleteArtifactType( DefaultUnitOfWork work, ArtifactType artifactType ) {

@@ -57,6 +57,7 @@ public class ArtifactTypeTestFixture {
 
    protected static ArtifactTypeTestFixture fixtureInstance;
    protected static ProcessPuzzleContext applicationContext;
+   private static ArtifactTypeGroupFactory groupFactory;
    private static ArtifactTypeGroupRepository groupRepository;
    private static ArtifactTypeRepository typeRepository;
    private ArtifactType folderType;
@@ -92,8 +93,9 @@ public class ArtifactTypeTestFixture {
 
    public void setUp() {
       artifactTypeFactory = applicationContext.getEntityFactory( ArtifactTypeFactory.class );
-      groupRepository = (ArtifactTypeGroupRepository) applicationContext.getRepository( ArtifactTypeGroupRepository.class );
-      typeRepository = (ArtifactTypeRepository) applicationContext.getRepository( ArtifactTypeRepository.class );
+      groupFactory = applicationContext.getEntityFactory( ArtifactTypeGroupFactory.class );
+      groupRepository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
+      typeRepository = applicationContext.getRepository( ArtifactTypeRepository.class );
       setUpArtifactTypeGroup();
       setUpArtifactSubClassType();
       setUpArtifactType();
@@ -115,7 +117,7 @@ public class ArtifactTypeTestFixture {
 
    private void setUpArtifactTypeGroup() {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      typeGroup = ArtifactTypeGroupFactory.createArtifactTypeGroup( TYPE_GROUP_NAME );
+      typeGroup = groupFactory.create( TYPE_GROUP_NAME );
       groupRepository.addArtifactTypeGroup( work, typeGroup );
       work.finish();
    }

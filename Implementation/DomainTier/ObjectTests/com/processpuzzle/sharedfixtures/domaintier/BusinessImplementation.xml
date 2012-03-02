@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<businessImplementation 
+	xmlns="http://www.processpuzzle.com/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://www.processpuzzle.com/ ../../../../../Schemas/BusinessImplementation.xsd 
+						http://www.processpuzzle.com/ ../../../../../Schemas/BusinessDefinition.xsd ">
+	
+	<artifacts>
+	<!-- 
+		<companyList name="CompanyList" type="CompanyList"/>
+	 -->
+	</artifacts>
+</businessImplementation>

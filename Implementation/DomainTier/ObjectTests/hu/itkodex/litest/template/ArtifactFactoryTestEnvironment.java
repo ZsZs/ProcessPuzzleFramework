@@ -14,7 +14,7 @@ public class ArtifactFactoryTestEnvironment<S extends ArtifactFactory<?>, F exte
       this.sutClass = (Class<S>) GenericTypeParameterInvestigator.getTypeParameter( factoryTestFixtureClass, 0 );
    }
    
-   public ConfigurableApplicationFixture getApplicationFixture() { return getFixture( ConfigurableApplicationFixture.class ); }
+   public DefaultApplicationFixture getApplicationFixture() { return getFixture( ConfigurableApplicationFixture.class ); }
 
    @Override
    protected void defineComponentTypes() {

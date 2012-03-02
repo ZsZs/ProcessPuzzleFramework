@@ -8,7 +8,7 @@
 
 		<property name="name"/>
 		<bag name="artifactTypes" cascade="all,delete-orphan" lazy="false">
-			<key column="ARTIFACT_TYPE_GROUP_ID"  not-null="false" />
+			<key column="ARTIFACT_TYPE_GROUP_ID"  not-null="true" />
 			<one-to-many class="com.processpuzzle.artifact_type.domain.ArtifactType"/>
 		</bag>
 		

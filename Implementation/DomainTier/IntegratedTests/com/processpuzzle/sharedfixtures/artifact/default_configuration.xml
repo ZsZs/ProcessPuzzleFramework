@@ -177,7 +177,7 @@
 	</em:emailing>
 	
 	<bc:beanContainer>
-		<bc:containerDefinitionPath>classpath:com/processpuzzle/sharedfixtures/domaintier/ComponentsContainerDefinition.xml</bc:containerDefinitionPath>
+		<bc:containerDefinitionPath>classpath:com/processpuzzle/sharedfixtures/artifact/ComponentsContainerDefinition.xml</bc:containerDefinitionPath>
 	</bc:beanContainer>
 	
 </pp:processPuzzleConfiguration>

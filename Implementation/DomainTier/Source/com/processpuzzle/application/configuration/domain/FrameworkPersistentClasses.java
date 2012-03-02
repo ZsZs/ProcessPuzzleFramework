@@ -32,7 +32,6 @@ You should have received a copy of the GNU General Public License along with thi
 package com.processpuzzle.application.configuration.domain;
 
 import com.processpuzzle.address.artifact.SettlementDataSheet;
-import com.processpuzzle.address.artifact.SettlementList;
 import com.processpuzzle.address.domain.Country;
 import com.processpuzzle.address.domain.District;
 import com.processpuzzle.address.domain.Settlement;
@@ -45,15 +44,6 @@ import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.artifact.artifact.ArtifactList;
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact.domain.ArtifactFolder;
-import com.processpuzzle.artifact.domain.ArtifactVersion;
-import com.processpuzzle.artifact.domain.Comment;
-import com.processpuzzle.artifact.domain.CommentList;
-import com.processpuzzle.artifact.domain.Document;
-import com.processpuzzle.artifact.domain.FileStorage;
-import com.processpuzzle.artifact.domain.HTMLText;
-import com.processpuzzle.artifact.domain.ImageFile;
-import com.processpuzzle.artifact.domain.Modification;
-import com.processpuzzle.artifact.domain.RootArtifactFolder;
 import com.processpuzzle.artifact_type.domain.ArtifactMenu;
 import com.processpuzzle.artifact_type.domain.ArtifactMenuCommand;
 import com.processpuzzle.artifact_type.domain.ArtifactType;
@@ -62,79 +52,12 @@ import com.processpuzzle.artifact_type.domain.PropertyDefinition;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.fundamental_types.uniqueidentifier.domain.LastIdNumber;
-import com.processpuzzle.inventory.domain.Holding;
-import com.processpuzzle.inventory.domain.HoldingType;
-import com.processpuzzle.inventory.domain.InventoryEntry;
-import com.processpuzzle.inventory.domain.Location;
-import com.processpuzzle.inventory.domain.Transfer;
-import com.processpuzzle.party.artifact.CompanyDataSheet;
-import com.processpuzzle.party.artifact.CompanyList;
-import com.processpuzzle.party.artifact.PartyDataSheet;
-import com.processpuzzle.party.artifact.PersonDataSheet;
-import com.processpuzzle.party.artifact.PersonList;
 import com.processpuzzle.party.artifact.UserDataSheet;
 import com.processpuzzle.party.artifact.UserList;
-import com.processpuzzle.party.domain.Address;
-import com.processpuzzle.party.domain.Affiliation;
-import com.processpuzzle.party.domain.Company;
-import com.processpuzzle.party.domain.EmailAddress;
-import com.processpuzzle.party.domain.GeographicAddress;
-import com.processpuzzle.party.domain.Group;
-import com.processpuzzle.party.domain.Organization;
-import com.processpuzzle.party.domain.OrganizationName;
-import com.processpuzzle.party.domain.OrganizationUnit;
-import com.processpuzzle.party.domain.Party;
-import com.processpuzzle.party.domain.PartyName;
-import com.processpuzzle.party.domain.PartyRelationship;
-import com.processpuzzle.party.domain.PartyRole;
-import com.processpuzzle.party.domain.PartySummary;
-import com.processpuzzle.party.domain.Person;
-import com.processpuzzle.party.domain.PersonGroup;
-import com.processpuzzle.party.domain.PersonName;
-import com.processpuzzle.party.domain.Project;
-import com.processpuzzle.party.domain.RuleSet;
-import com.processpuzzle.party.domain.TelecomAddress;
-import com.processpuzzle.party.domain.WebPageAddress;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipConstraint;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleConstraint;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
-import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.persistence.domain.PersistentClassList;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
 import com.processpuzzle.util.domain.AutoIdentifier;
 import com.processpuzzle.util.domain.HtmlAttributeFormat;
-import com.processpuzzle.workflow.activity.artifact.ActionDataSheet;
-import com.processpuzzle.workflow.activity.artifact.ActionList;
-import com.processpuzzle.workflow.activity.artifact.PersonalTodoList;
-import com.processpuzzle.workflow.activity.domain.AbandonedAction;
-import com.processpuzzle.workflow.activity.domain.Action;
-import com.processpuzzle.workflow.activity.domain.ActionDependency;
-import com.processpuzzle.workflow.activity.domain.ActionEvent;
-import com.processpuzzle.workflow.activity.domain.ActionReference;
-import com.processpuzzle.workflow.activity.domain.ActionStatus;
-import com.processpuzzle.workflow.activity.domain.Activity;
-import com.processpuzzle.workflow.activity.domain.CompletedAction;
-import com.processpuzzle.workflow.activity.domain.GeneralResourceAllocation;
-import com.processpuzzle.workflow.activity.domain.GenericAction;
-import com.processpuzzle.workflow.activity.domain.ImplementedAction;
-import com.processpuzzle.workflow.activity.domain.Plan;
-import com.processpuzzle.workflow.activity.domain.ProcessPlan;
-import com.processpuzzle.workflow.activity.domain.ProposedAction;
-import com.processpuzzle.workflow.activity.domain.ResourceAllocation;
-import com.processpuzzle.workflow.activity.domain.SimpleActionDependency;
-import com.processpuzzle.workflow.activity.domain.Suspension;
-import com.processpuzzle.workflow.activity.domain.TemporalResourceAllocation;
-import com.processpuzzle.workflow.protocol.domain.ActivityProtocol;
-import com.processpuzzle.workflow.protocol.domain.CompositeProtocol;
-import com.processpuzzle.workflow.protocol.domain.Discipline;
-import com.processpuzzle.workflow.protocol.domain.LifecyclePhaseProtocol;
-import com.processpuzzle.workflow.protocol.domain.LifecycleProtocol;
-import com.processpuzzle.workflow.protocol.domain.Protocol;
-import com.processpuzzle.workflow.protocol.domain.ProtocolCallAction;
-import com.processpuzzle.workflow.protocol.domain.ProtocolDependency;
-import com.processpuzzle.workflow.protocol.domain.SimpleProtocolDependency;
-import com.processpuzzle.workflow.protocol.domain.WorkflowDetailProtocol;
 
 public class FrameworkPersistentClasses extends PersistentClassList {
 
@@ -163,7 +86,7 @@ public class FrameworkPersistentClasses extends PersistentClassList {
       //aggregateRoots.add( PersonDataSheet.class );
       //aggregateRoots.add( RootArtifactFolder.class );
       //aggregateRoots.add( SettlementList.class );
-      //aggregateRoots.add( SettlementDataSheet.class );
+      aggregateRoots.add( SettlementDataSheet.class );
       aggregateRoots.add( UserList.class );
       aggregateRoots.add( UserDataSheet.class );
 
@@ -255,7 +178,6 @@ public class FrameworkPersistentClasses extends PersistentClassList {
 //      entities.add( WebPageAddress.class );
 //      entities.add( WorkflowDetailProtocol.class );
       entities.add( ZipCode.class );
-
    }
 
    @Override

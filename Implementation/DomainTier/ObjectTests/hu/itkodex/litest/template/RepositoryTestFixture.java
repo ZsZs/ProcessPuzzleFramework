@@ -67,14 +67,14 @@ public abstract class RepositoryTestFixture<R extends Repository<A>, A extends A
    //Properties
    public DatabaseSpy getDatabaseSpy() { return databaseSpy; }
    public R getRepository() { return repository; }
+   public A getRoot() { return root; }
 
    // Protected abstract and helper methods
    protected abstract void afterAggregateCreation();
    protected abstract void afterAggregateDeletion();
    protected abstract void beforeAggregateCreation();
    
-   @Override
-   protected void configureBeforeSutInstantiation() {
+   @Override protected void configureBeforeSutInstantiation() {
       applicationContext = applicationFixture.getApplicationContext();
       
       saveCurrentUser();

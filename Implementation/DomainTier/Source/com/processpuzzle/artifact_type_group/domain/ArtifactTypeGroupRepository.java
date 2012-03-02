@@ -36,6 +36,7 @@ package com.processpuzzle.artifact_type_group.domain;
 
 import hu.itkodex.commons.persistence.PersistenceStrategy;
 import hu.itkodex.commons.persistence.RepositoryResultSet;
+import hu.itkodex.commons.persistence.UnitOfWork;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
@@ -52,11 +53,22 @@ public class ArtifactTypeGroupRepository extends GenericRepository<ArtifactTypeG
 
    public ArtifactTypeGroupRepository( PersistenceStrategy strategy, ProcessPuzzleContext applicationContext ) {
       super( strategy, applicationContext );
-      // TODO Auto-generated constructor stub
+   }
+
+   public void add( ArtifactTypeGroup typeGroup ) {
+      UnitOfWork work = new DefaultUnitOfWork( true );
+      add( work, typeGroup );
+      work.finish();
    }
 
    public void addArtifactTypeGroup( DefaultUnitOfWork work, ArtifactTypeGroup typeGroup ) {
       add( work, typeGroup );
+   }
+
+   public void delete( ArtifactTypeGroup typeGroup ) {
+      UnitOfWork work = new DefaultUnitOfWork( true );
+      delete( work, typeGroup );
+      work.finish();
    }
 
    public void deleteArtifactTypeGroup( DefaultUnitOfWork work, ArtifactTypeGroup typeGroup ) {
@@ -82,7 +94,7 @@ public class ArtifactTypeGroupRepository extends GenericRepository<ArtifactTypeG
       return group;
    }
 
-   public ArtifactTypeGroup findByName( DefaultUnitOfWork work, String groupName ) {
+   public ArtifactTypeGroup findByName( UnitOfWork work, String groupName ) {
       DefaultQuery query = new DefaultQuery( ArtifactTypeGroup.class );
       query.getQueryCondition().addAttributeCondition( new TextAttributeCondition( "name", groupName, ComparisonOperators.EQUAL_TO ) );
       ArtifactTypeGroup typeGroup = null;

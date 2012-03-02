@@ -5,7 +5,7 @@ import hu.itkodex.litest.template.RepositoryTestFixture;
 
 public class UserRepositoryTestFixture extends RepositoryTestFixture<UserRepository, User> {
 
-   protected UserRepositoryTestFixture( RepositoryTestEnvironment<UserRepository, RepositoryTestFixture<UserRepository,User>> testEnvironment ) {
+   public UserRepositoryTestFixture( RepositoryTestEnvironment<UserRepository, RepositoryTestFixture<UserRepository,User>> testEnvironment ) {
       super( testEnvironment );
    }
 

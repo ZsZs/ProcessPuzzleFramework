@@ -54,6 +54,7 @@ public class OrganizationDataSheetFixture {
    private PartyRelationshipType organizationHierarchy;
    private ArtifactTypeRepository artifactTypeRepository;
    private ArtifactType type;
+   private ArtifactTypeGroupFactory artifactTypeGroupFactory;
    private ArtifactTypeGroupRepository artifactTypeGroupRepository;
    private ArtifactTypeGroup group;
    private OrganizationUnitFactory organizationUnitFactory;
@@ -81,8 +82,9 @@ public class OrganizationDataSheetFixture {
       organizationUnitDataSheetFactory = config.getEntityFactory( OrganizationUnitDataSheetFactory.class );
 
       artifactTypeFactory = config.getEntityFactory( ArtifactTypeFactory.class );
-      group = ArtifactTypeGroupFactory.createArtifactTypeGroup("Group");
-      artifactTypeGroupRepository = (ArtifactTypeGroupRepository) config.getRepository(ArtifactTypeGroupRepository.class);
+      group = artifactTypeGroupFactory.create( "Group" );
+      artifactTypeGroupFactory = config.getEntityFactory( ArtifactTypeGroupFactory.class );
+      artifactTypeGroupRepository = config.getRepository(ArtifactTypeGroupRepository.class );
       artifactTypeGroupRepository.addArtifactTypeGroup(work, group);
 
       type = artifactTypeFactory.createArtifactType("CompanyDataSheet", "Group");

@@ -6,19 +6,16 @@ import hu.itkodex.litest.template.ArtifactFactoryTestTemplate;
 
 import org.junit.Test;
 
-import com.processpuzzle.address.artifact.SettlementDataSheet;
-import com.processpuzzle.address.artifact.SettlementDataSheetFactory;
 import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;
-import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
+import com.processpuzzle.sharedfixtures.artifact.ArtifactLayerTestConfiguration;
 
 public class SettlementDataSheetFactoryTest extends ArtifactFactoryTestTemplate<SettlementDataSheetFactory, SettlementDataSheetFactoryTestFixture, SettlementDataSheet>{
    
    public SettlementDataSheetFactoryTest() {
-      super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
+      super( ArtifactLayerTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
    }
 
-   @Test
-   @Override 
+   @Test @Override 
    public void create_ForSuccess() {
       //SETUP: Imlicit setup.
       
