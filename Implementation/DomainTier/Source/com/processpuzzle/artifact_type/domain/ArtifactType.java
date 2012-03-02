@@ -87,6 +87,7 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
    private List<ArtifactMenu> associatedMenuItems = new ArrayList<ArtifactMenu>();
    @XmlIDREF @XmlAttribute( name = "group" ) private ArtifactTypeGroup group;
 
+   //Constructors
    ArtifactType( String typeName, ArtifactTypeGroup typeGroup, Class<? extends Artifact<?>> artifactClass ) {
       this.name = typeName ;
       this.group = typeGroup;
@@ -103,7 +104,11 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
       this( typeName, null );
    }
 
-   // Public accessors
+   // Public accessors and mutators
+   public void addViewType( ArtifactViewType aView ) {
+      this.availableViews.add( aView );
+   }
+
    public boolean canPlayRole( String what, String partyRoleTypeName ) {
       for( Iterator<DefaultAccessRight> iter = defaultAccessRights.iterator(); iter.hasNext(); ){
          DefaultAccessRight defaultAccessRight = iter.next();
@@ -129,6 +134,10 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
          }
       }
       return false;
+   }
+
+   @Override public int compareTo( ResourceType o ) {
+      return 0;
    }
 
    public DefaultAccessRight findAccessRightsFor( String partyRoleName ) {
@@ -205,119 +214,13 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
       }
    }
 
-   public String getArtifactClassName() {
-      return artifactClassName;
-   }
-
-   public void setArtifactClassName( String artifactClassName ) {
-      this.artifactClassName = artifactClassName;
-   }
-
-   public List<ArtifactViewType> getAvailableViews() {
-      return availableViews;
-   }
-
-   public void setAvailableViews( List<ArtifactViewType> availableViews ) {
-      this.availableViews = availableViews;
-   }
-
-   public String getBaseUri() {
-      return baseUri;
-   }
-
-   public void setBaseUri( String baseUri ) {
-      this.baseUri = baseUri;
-   }
-
-   public String getCaption() {
-      return caption;
-   }
-
-   public void setCaption( String caption ) {
-      this.caption = caption;
-   }
-
-   public boolean isCreateOnStartup() {
-      return createOnStartup;
-   }
-
-   public void setCreateOnStartup( boolean createOnStartup ) {
-      this.createOnStartup = createOnStartup;
-   }
-
-   public ArtifactTypeGroup getGroup() {
-      return group;
-   }
-
-   public void setGroup( ArtifactTypeGroup group ) {
-      this.group = group;
-   }
-
-   public boolean isSingleton() {
-      return isSingleton;
-   }
-
-   public void setSingleton( boolean isSingleton ) {
-      this.isSingleton = isSingleton;
-   }
-
-   public boolean isSystem() {
-      return isSystem;
-   }
-
-   public void setSystem( boolean isSystem ) {
-      this.isSystem = isSystem;
-   }
-
-   public boolean isVersionControlled() {
-      return isVersionControlled;
-   }
-
-   public void setVersionControlled( boolean isVersionControlled ) {
-      this.isVersionControlled = isVersionControlled;
-   }
-
-   public boolean isRefreshOnDocumentActivation() {
-      return refreshOnDocumentActivation;
-   }
-
-   public boolean isRefreshOnViewActivation() {
-      return refreshOnViewActivation;
-   }
-
-   public boolean isPessimisticLock() {
-      return pessimisticLock;
-   }
-
-   public void setPessimisticLock( boolean pessimisticLock ) {
-      this.pessimisticLock = pessimisticLock;
-   }
-
-   public List<PropertyDefinition> getPropertyDefinitions() { return propertyDefinitions; }
-
-   public void setPropertyDefinitions( List<PropertyDefinition> propertyDefinitions ) {
-      this.propertyDefinitions = propertyDefinitions;
-   }
-
-   public void addViewType( ArtifactViewType aView ) {
-      this.availableViews.add( aView );
-   }
-
-   public ArtifactViewType getViewType( String viewTypeName ) {
-      for( Iterator<ArtifactViewType> iter = availableViews.iterator(); iter.hasNext(); ){
-         ArtifactViewType viewType = iter.next();
-         if( viewType.getName().equals( viewTypeName ) )
-            return viewType;
-      }
-      return null;
-   }
-
+   //Properties
+   public String getArtifactClassName() { return artifactClassName; }
+   public List<ArtifactViewType> getAvailableViews() { return availableViews; }
+   public String getBaseUri() { return baseUri; }
+   public String getCaption() { return caption; }
    public List<DefaultAccessRight> getDefaultAccessRights() { return defaultAccessRights; }
-
-   public void setDefaultAccessRights( List<DefaultAccessRight> defaultAccessRights ) {
-      this.defaultAccessRights = defaultAccessRights;
-   }
-
+   public @Override <I extends DefaultIdentityExpression<ArtifactType>> I getDefaultIdentity() { return null; }
    public DefaultAccessRight getDefaultRightByUserRole( String roleName ) {
       for( Iterator<DefaultAccessRight> iter = this.getDefaultAccessRights().iterator(); iter.hasNext(); ){
          DefaultAccessRight defaultAccessRight = iter.next();
@@ -334,21 +237,12 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
       }
       return null;
    }
-
-   public String getDomainClassName() {
-      return domainClassName;
-   }
-
-   public @Override <I extends DefaultIdentityExpression<ArtifactType>> I getDefaultIdentity() {
-      // TODO Auto-generated method stub
-      return null;
-   }
-
+   
    public @Override String getDescription() { return description; }
-
-   @Override
-   public String getName() { return name; }
-
+   public String getDomainClassName() { return domainClassName; }
+   public ArtifactTypeGroup getGroup() { return group; }
+   @Override public String getName() { return name; }
+   
    public String getInstanceFolderName() {
       if( instanceFolder == null ) 
          instanceFolder = artifactClassName.substring( artifactClassName.lastIndexOf( "." ) +1 ) + "Instances";
@@ -362,18 +256,40 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
       return path;
    }
 
-   @Override
-   public void setDescription( String description ) {
-      // TODO Auto-generated method stub
-      
+   public List<PropertyDefinition> getPropertyDefinitions() { return propertyDefinitions; }
+   public ArtifactViewType getViewType( String viewTypeName ) {
+      for( Iterator<ArtifactViewType> iter = availableViews.iterator(); iter.hasNext(); ){
+         ArtifactViewType viewType = iter.next();
+         if( viewType.getName().equals( viewTypeName ) )
+            return viewType;
+      }
+      return null;
    }
-
-   @Override
-   public int compareTo( ResourceType o ) {
-      // TODO Auto-generated method stub
-      return 0;
-   }
-
+   
+   public boolean isCreateOnStartup() { return createOnStartup; }
+   public boolean isSingleton() { return isSingleton; }
+   public boolean isSystem() { return isSystem; }
+   public boolean isVersionControlled() { return isVersionControlled; }
+   public boolean isRefreshOnDocumentActivation() { return refreshOnDocumentActivation; }
+   public boolean isRefreshOnViewActivation() { return refreshOnViewActivation; }
+   public boolean isPessimisticLock() { return pessimisticLock; }
+   
+   public void setArtifactClassName( String artifactClassName ) { this.artifactClassName = artifactClassName; }
+   public void setAvailableViews( List<ArtifactViewType> availableViews ) { this.availableViews = availableViews; }
+   public void setBaseUri( String baseUri ) { this.baseUri = baseUri; }
+   public void setCaption( String caption ) { this.caption = caption; }
+   public void setCreateOnStartup( boolean createOnStartup ) { this.createOnStartup = createOnStartup; }
+   public void setDefaultAccessRights( List<DefaultAccessRight> defaultAccessRights ) { this.defaultAccessRights = defaultAccessRights; }
+   @Override public void setDescription( String description ) { this.description = description; }
+   public void setDomainClassName( String domainClassName ) { this.domainClassName = domainClassName; }
+   public void setGroup( ArtifactTypeGroup group ) { this.group = group; }
+   public void setPessimisticLock( boolean pessimisticLock ) { this.pessimisticLock = pessimisticLock; }
+   public void setPropertyDefinitions( List<PropertyDefinition> propertyDefinitions ) { this.propertyDefinitions = propertyDefinitions; }
+   public void setSingleton( boolean isSingleton ) { this.isSingleton = isSingleton; }
+   public void setSystem( boolean isSystem ) { this.isSystem = isSystem; }
+   public void setVersionControlled( boolean isVersionControlled ) { this.isVersionControlled = isVersionControlled; }
+   
+   //Protected, private helper methods
    protected @Override void defineIdentityExpressions() {
       defaultIdentity = new ArtifactTypeIdentity();
       identities.add( defaultIdentity );
@@ -402,7 +318,13 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
       return viewConstructor;
    }
 
-   @SuppressWarnings("unchecked")
+   private ArtifactView<?> instantiateView( Constructor<?> viewConstructor, Class<?>[] argumentClasses, Object[] arguments ) 
+         throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+      
+      ArtifactView<?> artifactView = (ArtifactView<?>) viewConstructor.newInstance( arguments );
+      return artifactView;
+   }
+   
    private boolean tryToReplaceSpecificArtifactWithMoreGenericArtifact( Class<?>[] argumentClasses, Class<? extends Artifact> artifactSubClass ) {
       //Class<?>[] replacedClasses = new Class<?>[argumentClasses.length];
       boolean replaceHappened = false;
@@ -419,10 +341,4 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
       return replaceHappened;
    }
 
-   private ArtifactView<?> instantiateView( Constructor<?> viewConstructor, Class<?>[] argumentClasses, Object[] arguments ) 
-      throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-      
-      ArtifactView<?> artifactView = (ArtifactView<?>) viewConstructor.newInstance( arguments );
-      return artifactView;
-   }
 }
