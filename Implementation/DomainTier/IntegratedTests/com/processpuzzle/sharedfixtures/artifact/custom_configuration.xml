@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Here your can override the values defined in default_configuration.xml file
+It is also possible to add your own configuration values -->
+<processPuzzleConfiguration>
+
+</processPuzzleConfiguration>

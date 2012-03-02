@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <!-- Mocked fixtures for object tests -->
+  <bean id="requestContextInMockedApplicationFixture" class="com.processpuzzle.sharedfixtures.domaintier.RequestContextInMockedApplicationFixture" />
+
+  <bean id="mockProcessPuzzleContext" class="com.processpuzzle.sharedfixtures.domaintier.MockProcessPuzzleContext" >
+    <constructor-arg>
+      <ref bean="requestContextInMockedApplicationFixture"/>
+    </constructor-arg>
+  </bean>
+
+  <!-- Real fixtures for integration tests -->
+  <bean id="configurableApplicationFixture" class="hu.itkodex.litest.template.ConfigurableApplicationFixture" >
+  	<constructor-arg type="java.lang.String" value="classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml" />
+  </bean>
+
+</beans>
