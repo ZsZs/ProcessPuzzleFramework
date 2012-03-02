@@ -19,6 +19,7 @@
 /Implementation/DomainTier/Build/local.build.properties
 /Implementation/DomainTier/Configuration/hsqlrun.bat
 /Implementation/DomainTier/Configuration/toolrun.bat
+/Implementation/DomainTier/Logs/
 /Implementation/DomainTier/Logs/ProcessPuzzle.log
 /Implementation/WebTier/.settings
 /Implementation/WebTier/Binaries/
