@@ -44,7 +44,6 @@ public class SettlementDataSheetFactory extends ArtifactFactory<SettlementDataSh
    }
 
    public SettlementDataSheet create( String settlementName, String countryName ) {
-      // create settlement
       Settlement settlement = null;
       
       SettlementFactory settlementFactory = applicationContext.getEntityFactory( SettlementFactory.class ); 
@@ -56,9 +55,7 @@ public class SettlementDataSheetFactory extends ArtifactFactory<SettlementDataSh
          settlement = settlementFactory.createSettlement( settlementName, country );
       }
       
-      // create settlementdatasheet
-      //ArtifactType dataSheetType = findTypeFor( SettlementDataSheet.class );
-      SettlementDataSheet dataSheet = super.create( settlementName, settlement );
+      SettlementDataSheet dataSheet = super.create( settlement.getName(), settlement );
       return dataSheet;
    }
 }
