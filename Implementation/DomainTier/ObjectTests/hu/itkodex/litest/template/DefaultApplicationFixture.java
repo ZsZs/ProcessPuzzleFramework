@@ -17,6 +17,7 @@ import com.processpuzzle.user_session.domain.UserSessionHolder;
 public abstract class DefaultApplicationFixture extends GenericTestFixture<Application> implements ApplicationFixture<Application> {
    public static final String CONFIGURATION_DESCRIPTOR_PATH_1 = "classpath:com/processpuzzle/sharedfixtures/domaintier/ApplicationOneDescriptor.xml";
    public static final String CONFIGURATION_DESCRIPTOR_PATH_2 = "classpath:com/processpuzzle/sharedfixtures/domaintier/ApplicationTwoDescriptor.xml";
+   public static final String SYSTEM_ADMINISTRATION_ARTIFACT_TYPE_GROUP = "SystemAdministration";
    protected String configurationPath;
    protected ApplicationRepository applicationRepository;
    protected Application application;
@@ -65,12 +66,6 @@ public abstract class DefaultApplicationFixture extends GenericTestFixture<Appli
       }
       if( applicationStoragePath != null ) return applicationStoragePath;
       else return DomainTierTestConfiguration.APPLICATION_REPOSITORY_STORAGE_PATH;
-   }
-
-   @Override
-   protected Application instantiateSUT() {
-      // TODO Auto-generated method stub
-      return null;
    }
 
    @Override
