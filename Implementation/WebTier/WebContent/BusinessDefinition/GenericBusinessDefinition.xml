@@ -619,8 +619,8 @@
 			<artifactType 
 				name="SettlementDataSheet" 
 				group="SystemAdministration" 
-				artifactClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet" 
-				domainClassName="com.processpuzzle.address.settlement.domain.Settlement"
+				artifactClassName="com.processpuzzle.address.artifact.SettlementDataSheet" 
+				domainClassName="com.processpuzzle.address.domain.Settlement"
 				createOnStartUp="false" 
 				isSingleton="false" 
 				isSystem="false"
@@ -637,7 +637,7 @@
 						clientType="PropertyView" 
 						isDefault="true" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/SettlementDataSheet_PropertyView.jsp"
-						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_PropertyView">
+						viewClassName="com.processpuzzle.address.artifact.SettlementDataSheet_PropertyView">
 						<viewCaption>ui.viewCaption.properties</viewCaption>
 						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=SettlementProperties</viewAccessUrl>
 					</propertyViewType>
@@ -646,7 +646,7 @@
 						isDefault="false"
 						clientType="CustomFormView" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/SettlementDataSheet_BaseData.jsp"
-						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_BaseDataView">
+						viewClassName="com.processpuzzle.address.artifact.SettlementDataSheet_BaseDataView">
 						<viewCaption>ui.viewCaption.baseData</viewCaption>
 						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=SettlementBaseDataView</viewAccessUrl>
 					</artifactCustomFormViewType>
@@ -654,7 +654,7 @@
 						name="RelatedArtifacts" 
 						clientType="CustomFormView" 
 						presentationUri="/Commons/BusinessImplementation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
-						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_RelatedArtifactsView">
+						viewClassName="com.processpuzzle.address.artifact.SettlementDataSheet_RelatedArtifactsView">
 						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
 						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
 					</relatedArtifactsViewType>
@@ -666,7 +666,7 @@
 						name="AccessRights" 
 						clientType="CustomFormView" 
 						presentationUri="/Commons/BusinessImplementation/ProjectAdministration/Artifact_AccessRights.jsp" 
-						viewClassName="com.processpuzzle.address.settlement.artifact.SettlementDataSheet_AccessRightsView">
+						viewClassName="com.processpuzzle.address.artifact.SettlementDataSheet_AccessRightsView">
 						<viewCaption>ui.viewCaption.accessRights</viewCaption>
 						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
 					</accessRightsViewType>

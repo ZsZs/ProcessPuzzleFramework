@@ -28,8 +28,7 @@ public class SettlementDataSheetFactoryTest extends ArtifactFactoryTestTemplate<
    
    @Test (expected = EntityIdentityCollitionException.class ) 
    @Override public void create_ForCollision() {
-      SettlementDataSheet settlement = sut.create( templatedFixture.getSettlementName(), templatedFixture.getCountryName() );      
-      templatedFixture.getSettlementDataSheetRepository().add( settlement );
+      templatedFixture.createAndSaveTheSubjectSettlement();
       
       //EXCERCISE:
       sut.create( templatedFixture.getSettlementName(), templatedFixture.getCountryName() );

@@ -3,30 +3,31 @@ package com.processpuzzle.address.artifact;
 import hu.itkodex.commons.persistence.UnitOfWork;
 import hu.itkodex.litest.template.ArtifactFactoryTestEnvironment;
 import hu.itkodex.litest.template.ArtifactFactoryTestFixture;
-import hu.itkodex.litest.template.DefaultApplicationFixture;
 
 import com.processpuzzle.address.domain.Country;
 import com.processpuzzle.address.domain.CountryFactory;
 import com.processpuzzle.address.domain.CountryRepository;
-import com.processpuzzle.address.domain.Settlement;
 import com.processpuzzle.address.domain.SettlementRepository;
-import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFixture<SettlementDataSheetFactory, SettlementDataSheet> {
    public static final String COUNTRY_NAME = "Magyarország";
-   private static final String SETTLEMENT_DATA_SHEET_TYPE_NAME = "SettlementDataSheet";
    private static final String SETTLEMENT_NAME = "Szada";
    private Country country;
    private CountryFactory countryFactory;
    private CountryRepository countryRepository;
+   private SettlementDataSheet settlementDataSheet;
    private SettlementDataSheetRepository settlementDataSheetRepository;
-   private ArtifactType settlementDataSheetType;
    private SettlementRepository settlementRepository;
 
    //Constructors
    public SettlementDataSheetFactoryTestFixture( ArtifactFactoryTestEnvironment<SettlementDataSheetFactory, ?> testEnvironment ) {
       super( testEnvironment );
+   }
+
+   public void createAndSaveTheSubjectSettlement() {
+      settlementDataSheet = sut.create( SETTLEMENT_NAME, COUNTRY_NAME );      
+      settlementDataSheetRepository.add( settlementDataSheet );
    }
 
    //Properties
@@ -43,7 +44,6 @@ public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFi
    protected void configureBeforeSutInstantiation() {
       super.configureBeforeSutInstantiation();
       lookUpRepositoriesAndFactories();
-      createArtifactTypeForSettlementDataSheet();
    }
 
    @Override protected void configureAfterSutInstantiation() {
@@ -55,16 +55,9 @@ public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFi
 
    @Override protected void releaseResources() {
       UnitOfWork work = new DefaultUnitOfWork( true );
+      if( settlementDataSheet != null ) settlementDataSheetRepository.delete( work, settlementDataSheet );
+
       countryRepository.delete( work, country );
-      artifactTypeRepository.delete( work, settlementDataSheetType );
-      work.finish();
-   }
-   
-   private void createArtifactTypeForSettlementDataSheet(){
-      UnitOfWork work = new DefaultUnitOfWork( true );
-      settlementDataSheetType = artifactTypeFactory.createArtifactType( work, SETTLEMENT_DATA_SHEET_TYPE_NAME, DefaultApplicationFixture.SYSTEM_ADMINISTRATION_ARTIFACT_TYPE_GROUP, SettlementDataSheet.class );
-      settlementDataSheetType.setDomainClassName( Settlement.class.getName() );
-      artifactTypeRepository.add( work, settlementDataSheetType );
       work.finish();
    }
    

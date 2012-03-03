@@ -69,14 +69,20 @@ public class ArtifactTypeFactory extends GenericFactory<ArtifactType> {
 
    public ArtifactType createArtifactType( UnitOfWork work, String typeName, String groupName, Class<? extends Artifact<?>> artifactClass ) {
       ArtifactTypeGroup group = null;
-
+      ArtifactTypeGroupRepository groupRepository = null;
+      
       if( groupName != null ){
-         ArtifactTypeGroupRepository repository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
-         group = repository.findByName( work, groupName );
+         groupRepository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
+         group = groupRepository.findByName( work, groupName );
       }
 
       ArtifactType artifactType = new ArtifactType( typeName, group, artifactClass );
       checkEntityIdentityCollition( artifactType.getDefaultIdentity() );
+      
+      if( group != null ) {
+         group.addType( artifactType );
+         groupRepository.update( work, group );
+      }
       return artifactType;
    }
 

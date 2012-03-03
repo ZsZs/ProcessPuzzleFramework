@@ -47,8 +47,10 @@ import com.processpuzzle.user_session.domain.UserRequestManager;
 import com.processpuzzle.workflow.protocol.domain.ProtocolRepository;
 
 public abstract class ArtifactFactory<A extends Artifact<?>> extends GenericFactory<A> {
+   protected ArtifactFolderRepository artifactFolderRepository;
    protected DefaultArtifactRepository artifactRepository;
    protected ArtifactTypeRepository artifactTypeRepository;
+   protected ArtifactFolder containingFolder;
    protected PartyTypeRepository partyTypeRepository;
    protected ProtocolRepository protocolRepository;
    protected ArtifactType subjectArtifactType;
@@ -57,6 +59,7 @@ public abstract class ArtifactFactory<A extends Artifact<?>> extends GenericFact
    @SuppressWarnings( "unchecked" )
    public ArtifactFactory() {
       super();
+      artifactFolderRepository = applicationContext.getRepository( ArtifactFolderRepository.class );
       artifactRepository = applicationContext.getRepository( DefaultArtifactRepository.class );
       artifactTypeRepository = applicationContext.getRepository( ArtifactTypeRepository.class );
       partyTypeRepository = applicationContext.getRepository( PartyTypeRepository.class );
@@ -93,6 +96,8 @@ public abstract class ArtifactFactory<A extends Artifact<?>> extends GenericFact
          Class<?>[] argumentClasses = new Class[] { String.class, ArtifactType.class, User.class, Class.forName( type.getDomainClassName() ) };
          Object[] arguments = new Object[] { artifactName, type, creator, referencedDomainObject };
          A newArtifact = instantiateEntity( argumentClasses, arguments );
+         containingFolder = artifactFolderRepository.findByPath( type.getInstanceFolderPath() );
+         newArtifact.setContainingFolder( containingFolder );
          checkEntityIdentityCollition( newArtifact.getDefaultIdentity() );
          return newArtifact;
       }catch( ClassNotFoundException e ){
