@@ -1,191 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ProcessPuzzle default configuration values. Don not change them! -->
-<processPuzzleConfiguration
-	xmlns="http://www.processpuzzle.com"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.processpuzzle.com http://www.processpuzzle.com/Schemas/ProcessPuzzleConfiguration.xsd">
-	<application>
-		<name>ProcessPuzzle</name>
-		<version>1.0</version>
-		<serverWorkingFolder>c:\\processpuzzle</serverWorkingFolder>
-		<clientWorkingFolder>c:\\processpuzzle</clientWorkingFolder>
-		<defaultUserAccount>
-			<name>ProcessPuzzle</name>
-			<password>ProcessPuzzle</password>
-		</defaultUserAccount>
-		<persistentDataInitializationStrategy>dropAndCreate</persistentDataInitializationStrategy>
-	</application>
+<pp:processPuzzleConfiguration
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:ac="http://www.processpuzzle.com/ApplicationConfiguration" 
+   xmlns:bc="http://www.processpuzzle.com/BeanContainerConfiguration" 
+   xmlns:bd="http://www.processpuzzle.com/BusinessDefinitionsConfiguration" 
+   xmlns:bi="http://www.processpuzzle.com/BusinessImplementationsConfiguration" 
+   xmlns:dl="http://www.processpuzzle.com/DataLoadersConfiguration" 
+   xmlns:em="http://www.processpuzzle.com/EmailConfiguration" 
+   xmlns:fc="http://www.processpuzzle.com/FrontControllerConfiguration" 
+   xmlns:ge="http://www.processpuzzle.com/GlobalElements" 
+   xmlns:in="http://www.processpuzzle.com/InternationalizationConfiguration" 
+   xmlns:pr="http://www.processpuzzle.com/PersistenceConfiguration" 
+   xmlns:rt="http://www.processpuzzle.com/RuntimeConfiguration" 
+   xmlns:wui="http://www.processpuzzle.com/WebUIConfiguration" 
+   xsi:schemaLocation="http://www.processpuzzle.com http://www.processpuzzle.com/Schemas/ProcessPuzzleConfiguration.xsd"> 
+   
+	<ac:application>
+		<ac:name>ProcessPuzzle</ac:name>
+		<ac:version>1.0</ac:version>
+		<ac:serverWorkingFolder>c:\\processpuzzle</ac:serverWorkingFolder>
+		<ac:clientWorkingFolder>c:\\processpuzzle</ac:clientWorkingFolder>
+		<ac:defaultUserAccount>
+			<ge:name>ProcessPuzzle</ge:name>
+			<ge:password>ProcessPuzzle</ge:password>
+		</ac:defaultUserAccount>
+		<ac:persistentDataInitializationStrategy>dropAndCreate</ac:persistentDataInitializationStrategy>
+	</ac:application>
 	
-	<runtime>
-		<environment>local</environment>
-	</runtime>
+	<rt:runtime>
+		<rt:environment>local</rt:environment>
+	</rt:runtime>
 	
-	<frontController>
-		<commandMapping>
-			<class>com.itcodex.objectpuzzle.framework.application_configuration.control.ObjectPuzzleCommandMapping</class>
-		</commandMapping>
-	</frontController>
+	<fc:frontController>
+		<fc:commandMapping>
+			<ge:fullClassName>com.itcodex.objectpuzzle.framework.application_configuration.control.ObjectPuzzleCommandMapping</ge:fullClassName>
+		</fc:commandMapping>
+	</fc:frontController>
 	
-	<persistence>
-		<persistenceStrategies>
-			<persistenceStrategy name="TEST_STRATEGY">
-				<repositoryEventHandlers>
-					<repositoryEventHandler name="TEST_PROVIDER" description="Hibernate provider configured to use MS SQL Server, ObjectPuzzle_dc_test database">
-						<eventHandlerClass>com.processpuzzle.persistence.domain.HibernatePersistenceProvider</eventHandlerClass>
+	<pr:persistence>
+		<pr:persistenceStrategies>
+			<pr:persistenceStrategy name="TEST_STRATEGY">
+				<pr:repositoryEventHandlers>
+					<pr:repositoryEventHandler name="TEST_PROVIDER" description="Hibernate provider configured to use MS SQL Server, ObjectPuzzle_dc_test database">
+						<pr:eventHandlerClass>com.processpuzzle.persistence.domain.HibernatePersistenceProvider</pr:eventHandlerClass>
 						<!--  <propertyUrl>classpath:com/itcodex/objectpuzzle/framework/configuration/domaintier/domaintier_persistence_configuration.properties</propertyUrl> -->
 	
 						<!-- MS SQL specific properties(database:ObjectPuzzle_dt_test, login:opuser) -->
-						<hibernate>
-							<connection>
-								<driver_class>net.sourceforge.jtds.jdbc.Driver</driver_class>
-								<url>jdbc:jtds:sqlserver://localhost/ObjectPuzzle_dc_test</url>
-								<username>opuser</username>
-								<password>opuser</password>
-							</connection>
-							<dialect>org.hibernate.dialect.SQLServerDialect</dialect>
+						<pr:hibernate>
+							<pr:connection>
+								<pr:driver_class>net.sourceforge.jtds.jdbc.Driver</pr:driver_class>
+								<pr:url>jdbc:jtds:sqlserver://localhost/ObjectPuzzle_dc_test</pr:url>
+								<ge:username>opuser</ge:username>
+								<ge:password>opuser</ge:password>
+							</pr:connection>
+							<pr:dialect>org.hibernate.dialect.SQLServerDialect</pr:dialect>
 		
 							<!-- Generic properties --> 
-							<current_session_context_class>thread</current_session_context_class>
-							<show_sql>false</show_sql>
-							<transaction>
-								<factory_class>org.hibernate.transaction.JDBCTransactionFactory</factory_class>
-							</transaction>
-							<cache>
-								<provider_class>org.hibernate.cache.HashtableCacheProvider</provider_class>
-								<use_second_level_cache>true</use_second_level_cache>
-								<use_query_cache>true</use_query_cache>
-							</cache>
-							<c3p0>
-								<max_size>5</max_size>
-								<min_size>2</min_size>
-								<timeout>5000</timeout>
-								<max_statements>100</max_statements>
-								<idle_test_period>3000</idle_test_period>
-								<acquire_increment>2</acquire_increment>
-								<validate>false</validate>
-							</c3p0>
-							<hbm2ddl>
-								<auto>create-drop</auto>
-							</hbm2ddl>
-						</hibernate>
-					</repositoryEventHandler>
-				</repositoryEventHandlers>			
-			</persistenceStrategy>
-			<persistenceStrategy name="HSQL-Test_DB_With_Synchronization">
-				<repositoryEventHandlers>
-					<repositoryEventHandler name="HIBERNATE-HSQL-DOMAINTIER_TEST_DB" description="Hibernate provider, configured to use HSQL DB Server, DOMAINTIER_TEST_DB dabase.">
-						<eventHandlerClass>com.processpuzzle.persistence.domain.HibernatePersistenceProvider</eventHandlerClass>
+							<pr:current_session_context_class>thread</pr:current_session_context_class>
+							<pr:show_sql>false</pr:show_sql>
+							<pr:transaction>
+								<pr:factory_class>org.hibernate.transaction.JDBCTransactionFactory</pr:factory_class>
+							</pr:transaction>
+							<pr:cache>
+								<pr:provider_class>org.hibernate.cache.HashtableCacheProvider</pr:provider_class>
+								<pr:use_second_level_cache>true</pr:use_second_level_cache>
+								<pr:use_query_cache>true</pr:use_query_cache>
+							</pr:cache>
+							<pr:c3p0>
+								<pr:max_size>5</pr:max_size>
+								<pr:min_size>2</pr:min_size>
+								<pr:timeout>5000</pr:timeout>
+								<pr:max_statements>100</pr:max_statements>
+								<pr:idle_test_period>3000</pr:idle_test_period>
+								<pr:acquire_increment>2</pr:acquire_increment>
+								<pr:validate>false</pr:validate>
+							</pr:c3p0>
+							<pr:hbm2ddl>
+								<pr:auto>create-drop</pr:auto>
+							</pr:hbm2ddl>
+						</pr:hibernate>
+					</pr:repositoryEventHandler>
+				</pr:repositoryEventHandlers>			
+			</pr:persistenceStrategy>
+			<pr:persistenceStrategy name="HSQL-Test_DB_With_Synchronization">
+				<pr:repositoryEventHandlers>
+					<pr:repositoryEventHandler name="HIBERNATE-HSQL-DOMAINTIER_TEST_DB" description="Hibernate provider, configured to use HSQL DB Server, DOMAINTIER_TEST_DB dabase.">
+						<pr:eventHandlerClass>com.processpuzzle.persistence.domain.HibernatePersistenceProvider</pr:eventHandlerClass>
 	
 						<!-- HSQL specific properties-->
-						<hibernate>
-							<connection>
-								<driver_class>org.hsqldb.jdbcDriver</driver_class>
-								<url>jdbc:hsqldb:mem:test_db;shutdown=false</url>
-								<username>sa</username>
-								<password></password>
-							</connection> 
-							<dialect>org.hibernate.dialect.HSQLDialect</dialect>
+						<pr:hibernate>
+							<pr:connection>
+								<pr:driver_class>org.hsqldb.jdbcDriver</pr:driver_class>
+								<pr:url>jdbc:hsqldb:mem:test_db;shutdown=false</pr:url>
+								<ge:username>sa</ge:username>
+								<ge:password></ge:password>
+							</pr:connection> 
+							<pr:dialect>org.hibernate.dialect.HSQLDialect</pr:dialect>
 		
 							<!-- Generic properties --> 
-							<current_session_context_class>thread</current_session_context_class>
-							<show_sql>false</show_sql>
-							<transaction>
-								<factory_class>org.hibernate.transaction.JDBCTransactionFactory</factory_class>
-							</transaction>
-							<cache>
-								<provider_class>org.hibernate.cache.HashtableCacheProvider</provider_class>
-								<use_second_level_cache>true</use_second_level_cache>
-								<use_query_cache>true</use_query_cache>
-							</cache>
-							<c3p0>
-								<max_size>5</max_size>
-								<min_size>2</min_size>
-								<timeout>5000</timeout>
-								<max_statements>100</max_statements>
-								<idle_test_period>3000</idle_test_period>
-								<acquire_increment>2</acquire_increment>
-								<validate>false</validate>
-							</c3p0>
-							<hbm2ddl>
-								<auto>create-drop</auto>
-							</hbm2ddl>
-						</hibernate>
-					</repositoryEventHandler>
-					<repositoryEventHandler name="BIDIRECTIONAL_SYNCHRONIZATION-DOMAINTIER_TEST_DB">
-						<eventHandlerClass>com.processpuzzle.persistence.domain.BidirectionalSynchronizationStrategy</eventHandlerClass>
-						<persistenceProviders>
-							<repositoryEventHandler>
-								<persistenceProviderClass>com.processpuzzle.persistence.domain.InMemoryPersistenceProvider</persistenceProviderClass>
-							</repositoryEventHandler>
-							<repositoryEventHandler>
-								<persistenceProviderClass>com.itcodex.objectpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</persistenceProviderClass>
-							</repositoryEventHandler>
-						</persistenceProviders>
-					</repositoryEventHandler>
-				</repositoryEventHandlers>
-			</persistenceStrategy>
-		</persistenceStrategies>
+							<pr:current_session_context_class>thread</pr:current_session_context_class>
+							<pr:show_sql>false</pr:show_sql>
+							<pr:transaction>
+								<pr:factory_class>org.hibernate.transaction.JDBCTransactionFactory</pr:factory_class>
+							</pr:transaction>
+							<pr:cache>
+								<pr:provider_class>org.hibernate.cache.HashtableCacheProvider</pr:provider_class>
+								<pr:use_second_level_cache>true</pr:use_second_level_cache>
+								<pr:use_query_cache>true</pr:use_query_cache>
+							</pr:cache>
+							<pr:c3p0>
+								<pr:max_size>5</pr:max_size>
+								<pr:min_size>2</pr:min_size>
+								<pr:timeout>5000</pr:timeout>
+								<pr:max_statements>100</pr:max_statements>
+								<pr:idle_test_period>3000</pr:idle_test_period>
+								<pr:acquire_increment>2</pr:acquire_increment>
+								<pr:validate>false</pr:validate>
+							</pr:c3p0>
+							<pr:hbm2ddl>
+								<pr:auto>create-drop</pr:auto>
+							</pr:hbm2ddl>
+						</pr:hibernate>
+					</pr:repositoryEventHandler>
+					<pr:repositoryEventHandler name="BIDIRECTIONAL_SYNCHRONIZATION-DOMAINTIER_TEST_DB">
+						<pr:eventHandlerClass>com.processpuzzle.persistence.domain.BidirectionalSynchronizationStrategy</pr:eventHandlerClass>
+						<pr:persistenceProviders>
+							<pr:repositoryEventHandler>
+								<pr:persistenceProviderClass>com.processpuzzle.persistence.domain.InMemoryPersistenceProvider</pr:persistenceProviderClass>
+							</pr:repositoryEventHandler>
+							<pr:repositoryEventHandler>
+								<pr:persistenceProviderClass>com.itcodex.objectpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</pr:persistenceProviderClass>
+							</pr:repositoryEventHandler>
+						</pr:persistenceProviders>
+					</pr:repositoryEventHandler>
+				</pr:repositoryEventHandlers>
+			</pr:persistenceStrategy>
+		</pr:persistenceStrategies>
 
-		<repositories>
-			<repository class="com.processpuzzle.application.domain.ApplicationEventRepository" strategy="TEST_STRATEGY"/>
-			<repository class="com.processpuzzle.application.security.domain.UserRepository" strategy="TEST_STRATEGY"/>
-			<repository class="com.processpuzzle.fundamental_types.uniqueidentifier.domain.LastIdNumberRepository" strategy="TEST_STRATEGY"/>
+		<pr:repositories>
+			<pr:repository class="com.processpuzzle.application.domain.ApplicationEventRepository" strategy="TEST_STRATEGY"/>
+			<pr:repository class="com.processpuzzle.application.security.domain.UserRepository" strategy="TEST_STRATEGY"/>
+			<pr:repository class="com.processpuzzle.fundamental_types.uniqueidentifier.domain.LastIdNumberRepository" strategy="TEST_STRATEGY"/>
 
-			<repository class="com.processpuzzle.persistence.domain.TestEntityRepository" strategy="TEST_STRATEGY"/>
-		</repositories>
+			<pr:repository class="com.processpuzzle.persistence.domain.TestEntityRepository" strategy="TEST_STRATEGY"/>
+		</pr:repositories>
 
-		<persistentClasses>
-			<persistentClassList class="com.processpuzzle.application.configuration.domain.TestClassList"/>
-		</persistentClasses>
+		<pr:persistentClasses>
+			<pr:persistentClassList class="com.processpuzzle.application.configuration.domain.TestClassList"/>
+		</pr:persistentClasses>
 
-	</persistence>
+	</pr:persistence>
 	
-	<internalization>
-		<resourceBundle>classpath:com/processpuzzle/internalization/domain/TestResources</resourceBundle>
-		<resourceBundle>classpath:com/processpuzzle/internalization/domain/AnotherTestResources</resourceBundle>
-		<availableLocales>
-			<locale>hu, HU</locale>
-			<locale>en, US</locale>
-			<locale>en, GB</locale>
-		</availableLocales>
-		<defaultLocale>hu, HU</defaultLocale>
-		<localeDefinitions>classpath:com/processpuzzle/internalization/domain/LocaleDefinitions.xml</localeDefinitions>
-	</internalization>
+	<in:internalization>
+		<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/TestResources</in:resourceBundle>
+		<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/AnotherTestResources</in:resourceBundle>
+		<in:availableLocales>
+			<in:locale>hu, HU</in:locale>
+			<in:locale>en, US</in:locale>
+			<in:locale>en, GB</in:locale>
+		</in:availableLocales>
+		<in:defaultLocale>hu, HU</in:defaultLocale>
+		<in:localeDefinitions>classpath:com/processpuzzle/internalization/domain/LocaleDefinitions.xml</in:localeDefinitions>
+	</in:internalization>
 	
-	<dataLoaders>
-		<dataLoader>
-			<dataLoaderClass>com.processpuzzle.sharedfixtures.domaintier.FrameworkDomaintierTestDatas</dataLoaderClass>
-			<instantiationArguments>
-				<argument></argument>
-			</instantiationArguments>
-		</dataLoader>
-	</dataLoaders>
+	<dl:dataLoaders>
+		<dl:dataLoader>
+			<dl:dataLoaderClass>com.processpuzzle.sharedfixtures.domaintier.FrameworkDomaintierTestDatas</dl:dataLoaderClass>
+			<dl:instantiationArguments>
+				<dl:argument></dl:argument>
+			</dl:instantiationArguments>
+		</dl:dataLoader>
+	</dl:dataLoaders>
 	
-	<emailing>
-		<system>
-			<activation>passive</activation>
-		</system>
-		<host>
-			<systemUser>
-				<name>gabox01</name>
-				<password>ggmail81</password>
-			</systemUser>
-		</host>
-		<smtp>
-			<host>smtp.gmail.com</host>
-			<auth>true</auth>
-			<debug>true</debug>
-			<port>465</port>
-			<socketFactory>
-				<port>465</port>
-				<class>javax.net.ssl.SSLSocketFactory</class>
-				<fallback>false</fallback>
-			</socketFactory>
-		</smtp>
-	</emailing>
+	<em:emailing>
+		<em:system>
+			<em:activation>passive</em:activation>
+		</em:system>
+		<em:host>
+			<em:systemUser>
+				<ge:userName>gabox01</ge:userName>
+				<ge:password>ggmail81</ge:password>
+			</em:systemUser>
+		</em:host>
+		<em:smtp>
+			<em:host>smtp.gmail.com</em:host>
+			<em:auth>true</em:auth>
+			<em:debug>true</em:debug>
+			<em:port>465</em:port>
+			<em:socketFactory>
+				<em:port>465</em:port>
+				<em:class>javax.net.ssl.SSLSocketFactory</em:class>
+				<em:fallback>false</em:fallback>
+			</em:socketFactory>
+		</em:smtp>
+	</em:emailing>
 	
-	<beanContainer>
-		<containerDefinitionPath>classpath:com/processpuzzle/application/configuration/domain/BeanContainerDefinition.xml</containerDefinitionPath>
-	</beanContainer>
+	<bc:beanContainer>
+		<bc:containerDefinitionPath>classpath:com/processpuzzle/application/configuration/domain/BeanContainerDefinition.xml</bc:containerDefinitionPath>
+	</bc:beanContainer>
 	
-</processPuzzleConfiguration>
+</pp:processPuzzleConfiguration>
