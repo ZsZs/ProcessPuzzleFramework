@@ -204,10 +204,6 @@ public class InternalizationContext extends TransientApplicationContext implemen
       return false;
    }
 
-   // public void add(ProcessPuzzleLocale locale){
-   // supportedLocales.add(locale);
-   // }
-
    // Private helper methods
    private void determineSourceUrls() {
       List<String> resourceBundleUrls = propertyContext.getPropertyList( PropertyKeys.INTERNALIZATION_RESOURCE_BUNDLE.getDefaultKey() );

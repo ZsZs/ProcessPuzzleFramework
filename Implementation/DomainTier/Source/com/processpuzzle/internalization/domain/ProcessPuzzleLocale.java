@@ -123,7 +123,6 @@ public class ProcessPuzzleLocale implements AggregateRoot, Comparable<Object> {
       
       ProcessPuzzleLocale locale = null;
       try {
-//         locale = new ProcessPuzzleLocale( language, country, variant );
     	  if (country==null)
     		  locale=new ProcessPuzzleLocale(language);
     	  else if (variant==null)
@@ -136,11 +135,8 @@ public class ProcessPuzzleLocale implements AggregateRoot, Comparable<Object> {
       return locale;
    }
 
-//Public mutators
-   // This method does not upgrade the id,language,country,variant attributes!
+   //Public mutators
    public void update(ProcessPuzzleLocale newLocal) {
-
-      // Updating dateFormat
       if ((newLocal.getDateFormat() != null)) {
          dateFormat = newLocal.getDateFormat();
       }
