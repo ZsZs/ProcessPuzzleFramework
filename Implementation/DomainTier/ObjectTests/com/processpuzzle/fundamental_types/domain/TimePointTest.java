@@ -38,8 +38,8 @@ public class TimePointTest {
       
       TimePoint newTimePoint = new TimePoint( aTimePoint.getValue(), TimePrecision.YEAR );
       assertThat( newTimePoint.getYear(), equalTo( SAMPLE_YEAR ));
-      assertThat( newTimePoint.getMonth(), nullValue() );
-      assertThat( newTimePoint.getDay(), nullValue() );
+      assertThat( newTimePoint.getMonth(), equalTo( 0 ));
+      assertThat( newTimePoint.getDay(), equalTo( 0 ));
    }
    
    @Test public final void instantiation_WhenTimeIsSpecifiedAsString_UsesDefaultPrecission(){

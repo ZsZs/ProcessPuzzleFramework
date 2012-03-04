@@ -291,7 +291,7 @@ public class TimePoint implements Comparable<TimePoint> {
    private void determineDateFragments(){
       Calendar calendar = Calendar.getInstance();
       calendar.setTime( value );
-      if( precision.compare( TimePrecision.YEAR ) == 1 ){
+      if( precision.compare( TimePrecision.YEAR ) <= 0 ){
          year = calendar.get( Calendar.YEAR );
       }
       if( precision.compare( TimePrecision.MONTH ) == 1 ) {
