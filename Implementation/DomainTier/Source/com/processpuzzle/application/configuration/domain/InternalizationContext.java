@@ -49,6 +49,7 @@ import com.processpuzzle.fundamental_types.domain.OpAssertion;
 import com.processpuzzle.internalization.domain.InvalidResourcePathException;
 import com.processpuzzle.internalization.domain.LocaleDefinitionNotFoundException;
 import com.processpuzzle.internalization.domain.LocaleLoader;
+import com.processpuzzle.internalization.domain.LocaleParseException;
 import com.processpuzzle.internalization.domain.NoneExistingResourceKeyException;
 import com.processpuzzle.internalization.domain.ProcessPuzzleLocale;
 import com.processpuzzle.internalization.domain.UnsupportedLocaleException;
@@ -218,7 +219,11 @@ public class InternalizationContext extends TransientApplicationContext implemen
 
    private void determineDefaultLocale() {
       String defaultLocaleSpecifier = propertyContext.getProperty( PropertyKeys.INTERNALIZATION_DEFAULT_LOCALE.getDefaultKey() );
-      defaultLocale = ProcessPuzzleLocale.parse( defaultLocaleSpecifier );
+      try{
+         defaultLocale = ProcessPuzzleLocale.parse( defaultLocaleSpecifier );
+      }catch( LocaleParseException e ){
+         throw new InternalizationContextSetUpException( propertyContext, e );
+      }
    }
 
    private void determineSupportedLocales() {

@@ -42,7 +42,6 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
 
 import com.processpuzzle.application.configuration.domain.MeasurementContext;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
-import com.processpuzzle.fundamental_types.domain.OpAssertion;
 import com.processpuzzle.fundamental_types.quantity.money.domain.Currency;
 import com.processpuzzle.fundamental_types.textformat.domain.AddressFormatSpecifier;
 import com.processpuzzle.fundamental_types.textformat.domain.DateFormatSpecifier;
@@ -106,7 +105,7 @@ public class ProcessPuzzleLocale implements AggregateRoot, Comparable<Object> {
    protected ProcessPuzzleLocale() {}
 
    public static ProcessPuzzleLocale parse( String localeSpecifier ) {
-      OpAssertion.ppAssert( localeSpecifier != null, "Locale specifier can't be null." );
+      if( localeSpecifier == null ) throw new LocaleParseException( localeSpecifier);
       String language = null;
       String country = null;
       String variant = null;

@@ -22,6 +22,7 @@ import org.mockito.MockitoAnnotations;
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.internalization.domain.ProcessPuzzleLocale;
 import com.processpuzzle.internalization.domain.UnsupportedLocaleException;
+import com.processpuzzle.internalization.domain.XMLResourceBundle;
 
 public class InternalizationContextTest extends ContextTest {
    private static String ERRONEOUS_CONFIGURATION_DESCRIPTOR = "classpath:com/processpuzzle/application/configuration/domain/erroneous_configuration_descriptor.xml";
@@ -56,47 +57,39 @@ public class InternalizationContextTest extends ContextTest {
    }
 
    @Test
-   public void testInstantiation() {
+   public void setUp_determinesSourceUrls() {
       assertFalse( "After instantiation we know the urls of resource files.", internalizationContext.getSourceUrls().isEmpty() );
       assertThat( internalizationContext.getSourceUrls().size(), equalTo( propertyContext.getPropertyList( PropertyKeys.INTERNALIZATION_RESOURCE_BUNDLE.getDefaultKey() ).size() ));
    }
 
    @Test
    public void setUp_ForResourceBundles() {
-      Map resourceBundles = internalizationContext.getResourceBundles();
+      Map<ProcessPuzzleLocale, XMLResourceBundle> resourceBundles = internalizationContext.getResourceBundles();
       assertFalse( "'setUp()' instantiates XMLResourceBundles from the source files.", resourceBundles.isEmpty() );
       assertEquals( "'setUp()' loads 2 resource bundles.", 3, resourceBundles.size() );
 
       // InternalizationContext contains a XMLResourceBundle for each supported locale
-      for( Iterator iter = internalizationContext.getSupportedLocales().iterator(); iter.hasNext(); ) {
+      for( Iterator<ProcessPuzzleLocale> iter = internalizationContext.getSupportedLocales().iterator(); iter.hasNext(); ) {
          ProcessPuzzleLocale supportedLocale = (ProcessPuzzleLocale) iter.next();
          assertTrue( resourceBundles.containsKey( supportedLocale ) );
       }
    }
 
    @Test(expected = InternalizationContextSetUpException.class)
-   public void setUp_ForInvalidSourcePath() {
+   public void setUp_whenConfigurationDescriptorIsErroneous_throwsContextSetUpException() {
       PropertyContext erroneousPropertyContext = new PropertyContext( application, ERRONEOUS_CONFIGURATION_DESCRIPTOR );
       erroneousPropertyContext.setUp( Application.Action.start );
       when( applicationContext.getPropertyContext() ).thenReturn( erroneousPropertyContext );
 
-      MeasurementContext measurementContext = new MeasurementContext( application );
-      measurementContext.setUp( Application.Action.start );
-      when( applicationContext.getMeasurementContext() ).thenReturn( measurementContext );
-      
       InternalizationContext anotherContext = new InternalizationContext( application );
       anotherContext.setUp(  Application.Action.start );
    }
 
    @Test(expected = InternalizationContextSetUpException.class)
-   public void setUp_ForNoLocaleDefinition() {
+   public void setUp_whenLocaleDefinitionIsMissing_throwsContextSetUpException() {
       PropertyContext erroneousPropertyContext = new PropertyContext( application, CONFIGURATION_DESCRIPTOR_WITH_NO_LOCALE_DEFINITION );
       erroneousPropertyContext.setUp( Application.Action.start );
-      stub( applicationContext.getPropertyContext() ).toReturn( erroneousPropertyContext );
-      
-      MeasurementContext measurementContext = new MeasurementContext( application );
-      measurementContext.setUp(  Application.Action.start );
-      stub( applicationContext.getMeasurementContext() ).toReturn( measurementContext );
+      when( applicationContext.getPropertyContext() ).thenReturn( erroneousPropertyContext );
       
       InternalizationContext anotherContext = new InternalizationContext( application );
       anotherContext.setUp(  Application.Action.stop );
@@ -105,7 +98,7 @@ public class InternalizationContextTest extends ContextTest {
    @Test
    public void getSupportedLocales() {
       Set<ProcessPuzzleLocale> locales = internalizationContext.getSupportedLocales();
-      for( Iterator i = locales.iterator(); i.hasNext(); ) {
+      for( Iterator<ProcessPuzzleLocale> i = locales.iterator(); i.hasNext(); ) {
          System.out.println( ( (ProcessPuzzleLocale) i.next() ).getCountry() );
       }
       assertEquals( "'default_configuration.xml' defines 2 supported locale.", 3, internalizationContext.getSupportedLocales().size() );
