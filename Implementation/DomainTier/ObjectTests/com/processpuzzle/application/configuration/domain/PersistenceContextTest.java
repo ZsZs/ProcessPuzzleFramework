@@ -19,26 +19,20 @@ import hu.itkodex.commons.persistence.query.Query;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
-import org.mockito.Mock;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.persistence.domain.BidirectionalSynchronizationStrategy;
-import com.processpuzzle.persistence.domain.DefaultPersistenceStrategy;
-import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.HibernatePersistenceProvider;
 import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.domain.TestEntityRepository;
-import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
-import com.processpuzzle.persistence.query.domain.DefaultQuery;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class PersistenceContextTest {
 //   private static String ERRONEOUS_CONFIGURATION_DESCRIPTOR = "classpath:com/itcodex/objectpuzzle/framework/application_configuration/domain/erroneous_configuration_descriptor.xml";
-   @Mock private static Application application;
-   @Mock private static ProcessPuzzleContext applicationContext;
+   private static Application application;
+   private static ProcessPuzzleContext applicationContext;
    private static PropertyContext propertyContext;
    private PersistenceContext persistenceContext;
    private PersistenceStrategy strategy_1;
@@ -88,7 +82,6 @@ public class PersistenceContextTest {
       assertTrue("The second event handler is:", strategy_2.getEventHandlers().get(1) instanceof BidirectionalSynchronizationStrategy );
    }
    
-   @Ignore
    @Test
    public void setUp_ForRepositories() {
       assertEquals("According to 'default_configuration.xml' the number of instantiated repositories is:", 3, persistenceContext.getAvailableRepositories().size());
@@ -146,49 +139,14 @@ public class PersistenceContextTest {
    }
    
    private class DummyRepository implements Repository<AggregateRoot> {
-      public Integer add(DefaultUnitOfWork work, AggregateRoot entity) { return null; }
-      public void delete(DefaultUnitOfWork work, AggregateRoot entity) {}
-      public RepositoryResultSet<AggregateRoot> findAll(DefaultUnitOfWork work) {return null;}
-      public AggregateRoot findById(DefaultUnitOfWork work, Integer id) {return null;}
-      public AggregateRoot findByIdentityExpression(DefaultUnitOfWork work, DefaultIdentityExpression<?> identity) {return null;}
-      public RepositoryResultSet<AggregateRoot> findByQuery(DefaultUnitOfWork work, DefaultQuery query) {return null;}
-      public void update(DefaultUnitOfWork work, AggregateRoot entity) {}
       public PersistenceStrategy getPersistenceStrategy() { return null; }
       public Class<? extends AggregateRoot> getSupportedAggregateRootClass() { return null; }
-      @Override
-      public Integer add( UnitOfWork work, AggregateRoot entity ) {
-         // TODO Auto-generated method stub
-         return null;
-      }
-      @Override
-      public void delete( UnitOfWork work, AggregateRoot entity ) {
-         // TODO Auto-generated method stub
-         
-      }
-      @Override
-      public RepositoryResultSet<AggregateRoot> findAll( UnitOfWork work ) {
-         // TODO Auto-generated method stub
-         return null;
-      }
-      @Override
-      public AggregateRoot findById( UnitOfWork work, Integer id ) {
-         // TODO Auto-generated method stub
-         return null;
-      }
-      @Override
-      public AggregateRoot findByIdentityExpression( UnitOfWork work, IdentityExpression<?> identity ) {
-         // TODO Auto-generated method stub
-         return null;
-      }
-      @Override
-      public RepositoryResultSet<AggregateRoot> findByQuery( UnitOfWork work, Query query ) {
-         // TODO Auto-generated method stub
-         return null;
-      }
-      @Override
-      public void update( UnitOfWork work, AggregateRoot entity ) {
-         // TODO Auto-generated method stub
-         
-      }
+      @Override public Integer add( UnitOfWork work, AggregateRoot entity ) { return null; }
+      @Override public void delete( UnitOfWork work, AggregateRoot entity ) {}
+      @Override public RepositoryResultSet<AggregateRoot> findAll( UnitOfWork work ) { return null; }
+      @Override public AggregateRoot findById( UnitOfWork work, Integer id ) { return null; }
+      @Override public AggregateRoot findByIdentityExpression( UnitOfWork work, IdentityExpression<?> identity ) { return null; }
+      @Override public RepositoryResultSet<AggregateRoot> findByQuery( UnitOfWork work, Query query ) { return null; }
+      @Override public void update( UnitOfWork work, AggregateRoot entity ) {}
    }
 }
