@@ -1,9 +1,10 @@
 package com.processpuzzle.application.configuration.domain;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
@@ -11,11 +12,12 @@ import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 public class ContextTest {
    protected static String configurationDescriptorPath = DomainTierTestConfiguration.APPLICATION_CONFIGURATION_DESCRIPTOR_PATH; 
    protected static PropertyContext propertyContext;
-   @Mock protected static Application application;
+   protected static Application application;
 
    @BeforeClass
    public static void beforeAllTests() {
-      MockitoAnnotations.initMocks( ContextTest.class );
+      application = mock( Application.class );
+      when( application.getApplicationName() ).thenReturn( "JUnitTest" );
       propertyContext = new PropertyContext( application, configurationDescriptorPath );
       propertyContext.setUp( Application.Action.start );
    }

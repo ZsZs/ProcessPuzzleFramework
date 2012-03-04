@@ -1,10 +1,13 @@
 package com.processpuzzle.application.configuration.domain;
 
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.stub;
+import static org.mockito.Mockito.when;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -13,8 +16,8 @@ import java.util.Set;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.internalization.domain.ProcessPuzzleLocale;
@@ -32,12 +35,16 @@ public class InternalizationContextTest extends ContextTest {
    
    @Before
    public void beforeEachTest() {
-      MockitoAnnotations.initMocks( InternalizationContextTest.class );
-      stub( application.getContext() ).toReturn( applicationContext );
+      MockitoAnnotations.initMocks( this );
+      
+      when( application.getContext() ).thenReturn( applicationContext );
       
       measurementContext = new MeasurementContext( application );
       measurementContext.setUp( Application.Action.start );
-      stub( applicationContext.getMeasurementContext() ).toReturn( measurementContext );
+      
+      when( applicationContext.getPropertyContext() ).thenReturn( propertyContext );
+      when( applicationContext.getMeasurementContext() ).thenReturn( measurementContext );
+      
       internalizationContext = new InternalizationContext( application );
       internalizationContext.setUp(  Application.Action.start );
    }
@@ -51,7 +58,7 @@ public class InternalizationContextTest extends ContextTest {
    @Test
    public void testInstantiation() {
       assertFalse( "After instantiation we know the urls of resource files.", internalizationContext.getSourceUrls().isEmpty() );
-      assertEquals( "In this case the number of resource files is:", 3, internalizationContext.getSourceUrls().size() );
+      assertThat( internalizationContext.getSourceUrls().size(), equalTo( propertyContext.getPropertyList( PropertyKeys.INTERNALIZATION_RESOURCE_BUNDLE.getDefaultKey() ).size() ));
    }
 
    @Test
@@ -71,11 +78,11 @@ public class InternalizationContextTest extends ContextTest {
    public void setUp_ForInvalidSourcePath() {
       PropertyContext erroneousPropertyContext = new PropertyContext( application, ERRONEOUS_CONFIGURATION_DESCRIPTOR );
       erroneousPropertyContext.setUp( Application.Action.start );
-      stub( applicationContext.getPropertyContext() ).toReturn( erroneousPropertyContext );
+      when( applicationContext.getPropertyContext() ).thenReturn( erroneousPropertyContext );
 
       MeasurementContext measurementContext = new MeasurementContext( application );
       measurementContext.setUp( Application.Action.start );
-      stub( applicationContext.getMeasurementContext() ).toReturn( measurementContext );
+      when( applicationContext.getMeasurementContext() ).thenReturn( measurementContext );
       
       InternalizationContext anotherContext = new InternalizationContext( application );
       anotherContext.setUp(  Application.Action.start );
