@@ -27,12 +27,6 @@ import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 import com.processpuzzle.user_session.domain.UserSessionManager;
 
-/**
- * @author zsolt.zsuffa
- * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
- */
 public class ProcessPuzzleContextTest {
    private static final String ANOTHER_CONFIGURATION_DESCRIPTOR = "classpath:com/processpuzzle/application/configuration/domain/another_configuration_descriptor.xml";
    private static ProcessPuzzleContext config;

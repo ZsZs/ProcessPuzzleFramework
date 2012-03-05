@@ -11,8 +11,6 @@ import static org.mockito.Mockito.when;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -28,13 +26,14 @@ import com.processpuzzle.user_session.domain.UserSessionHolder;
 
 public class BeanContainerTest {
    private static String CONTAINER_DEFINITION_PATH = "classpath:com/processpuzzle/application/configuration/domain/BeanContainerDefinition.xml";
-   @Mock private static Application application;
-   @Mock private static ProcessPuzzleContext applicationContext;
+   private static Application application;
+   private static ProcessPuzzleContext applicationContext;
    private BeanContainer container = null;
    
    @Before public final void beforeEachTests() {
-      MockitoAnnotations.initMocks( BeanContainerTest.class );
-
+      application = mock( Application.class );
+      applicationContext = mock( ProcessPuzzleContext.class );
+      
       defineUserRequestContext();
       defineMockApplication();
       
@@ -59,6 +58,7 @@ public class BeanContainerTest {
    }
    
    @Test public void getEntityFactoryByEntityClass_DeterminesFactoryFromEntityClass() {
+      String className = UserFactory.class.getName();
       assertThat( container.getEntityFactoryByEntityClass( TestEntity.class ), instanceOf( TestEntityFactory.class ));
    }
    
