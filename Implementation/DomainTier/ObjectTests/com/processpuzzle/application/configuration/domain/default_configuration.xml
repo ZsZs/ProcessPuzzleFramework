@@ -18,12 +18,12 @@
    xsi:schemaLocation="http://www.processpuzzle.com http://www.processpuzzle.com/Schemas/ProcessPuzzleConfiguration.xsd"> 
    
 	<ac:application>
-		<ac:name>ProcessPuzzle</ac:name>
+		<ac:applicationName>ProcessPuzzle</ac:applicationName>
 		<ac:version>1.0</ac:version>
 		<ac:serverWorkingFolder>c:\\processpuzzle</ac:serverWorkingFolder>
 		<ac:clientWorkingFolder>c:\\processpuzzle</ac:clientWorkingFolder>
 		<ac:defaultUserAccount>
-			<ge:name>ProcessPuzzle</ge:name>
+			<ge:userName>ProcessPuzzle</ge:userName>
 			<ge:password>ProcessPuzzle</ge:password>
 		</ac:defaultUserAccount>
 		<ac:persistentDataInitializationStrategy>dropAndCreate</ac:persistentDataInitializationStrategy>
@@ -52,7 +52,7 @@
 							<pr:connection>
 								<pr:driver_class>net.sourceforge.jtds.jdbc.Driver</pr:driver_class>
 								<pr:url>jdbc:jtds:sqlserver://localhost/ObjectPuzzle_dc_test</pr:url>
-								<ge:username>opuser</ge:username>
+								<ge:userName>opuser</ge:userName>
 								<ge:password>opuser</ge:password>
 							</pr:connection>
 							<pr:dialect>org.hibernate.dialect.SQLServerDialect</pr:dialect>
@@ -94,7 +94,7 @@
 							<pr:connection>
 								<pr:driver_class>org.hsqldb.jdbcDriver</pr:driver_class>
 								<pr:url>jdbc:hsqldb:mem:test_db;shutdown=false</pr:url>
-								<ge:username>sa</ge:username>
+								<ge:userName>sa</ge:userName>
 								<ge:password></ge:password>
 							</pr:connection> 
 							<pr:dialect>org.hibernate.dialect.HSQLDialect</pr:dialect>
@@ -127,12 +127,8 @@
 					<pr:repositoryEventHandler name="BIDIRECTIONAL_SYNCHRONIZATION-DOMAINTIER_TEST_DB">
 						<pr:eventHandlerClass>com.processpuzzle.persistence.domain.BidirectionalSynchronizationStrategy</pr:eventHandlerClass>
 						<pr:persistenceProviders>
-							<pr:repositoryEventHandler>
-								<pr:persistenceProviderClass>com.processpuzzle.persistence.domain.InMemoryPersistenceProvider</pr:persistenceProviderClass>
-							</pr:repositoryEventHandler>
-							<pr:repositoryEventHandler>
-								<pr:persistenceProviderClass>com.itcodex.objectpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</pr:persistenceProviderClass>
-							</pr:repositoryEventHandler>
+							<pr:persistenceProviderClass>com.processpuzzle.persistence.domain.InMemoryPersistenceProvider</pr:persistenceProviderClass>
+							<pr:persistenceProviderClass>com.itcodex.objectpuzzle.framework.persistence.domain.InMemoryPersistenceProvider</pr:persistenceProviderClass>
 						</pr:persistenceProviders>
 					</pr:repositoryEventHandler>
 				</pr:repositoryEventHandlers>
@@ -153,9 +149,12 @@
 
 	</pr:persistence>
 	
-	<in:internalization>
-		<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/TestResources</in:resourceBundle>
-		<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/AnotherTestResources</in:resourceBundle>
+	<in:internationalization>
+      <in:resouceBundles nameSpace="xmlns:pp='http://www.processpuzzle.com/ResourceBundle'">
+ 		   <in:resourceBundle>classpath:com/processpuzzle/internalization/domain/TestResources</in:resourceBundle>
+ 	    	<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/AnotherTestResources</in:resourceBundle>
+      </in:resouceBundles>
+  
 		<in:availableLocales>
 			<in:locale>hu, HU</in:locale>
 			<in:locale>en, US</in:locale>
@@ -163,14 +162,11 @@
 		</in:availableLocales>
 		<in:defaultLocale>hu, HU</in:defaultLocale>
 		<in:localeDefinitions>classpath:com/processpuzzle/internalization/domain/LocaleDefinitions.xml</in:localeDefinitions>
-	</in:internalization>
+	</in:internationalization>
 	
 	<dl:dataLoaders>
 		<dl:dataLoader>
 			<dl:dataLoaderClass>com.processpuzzle.sharedfixtures.domaintier.FrameworkDomaintierTestDatas</dl:dataLoaderClass>
-			<dl:instantiationArguments>
-				<dl:argument></dl:argument>
-			</dl:instantiationArguments>
 		</dl:dataLoader>
 	</dl:dataLoaders>
 	
@@ -191,7 +187,7 @@
 			<em:port>465</em:port>
 			<em:socketFactory>
 				<em:port>465</em:port>
-				<em:class>javax.net.ssl.SSLSocketFactory</em:class>
+				<ge:fullClassName>javax.net.ssl.SSLSocketFactory</ge:fullClassName>
 				<em:fallback>false</em:fallback>
 			</em:socketFactory>
 		</em:smtp>

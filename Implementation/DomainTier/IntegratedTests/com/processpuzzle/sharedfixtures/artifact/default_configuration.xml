@@ -110,8 +110,8 @@
 	</pr:persistence>
 	
 	<!-- Internationalization Configuration -->
-	<in:internationalization nameSpace="xmlns:pp='http://www.processpuzzle.com/ResourceBundle'">
-		<in:resouceBundles>
+	<in:internationalization>
+		<in:resouceBundles nameSpace="xmlns:pp='http://www.processpuzzle.com/ResourceBundle'">
 			<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/TestResources</in:resourceBundle>
 			<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/AnotherTestResources</in:resourceBundle>
 		</in:resouceBundles>
