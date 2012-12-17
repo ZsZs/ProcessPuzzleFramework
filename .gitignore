@@ -22,6 +22,7 @@
 /Implementation/DomainTier/Configuration/toolrun.bat
 /Implementation/DomainTier/Logs/
 /Implementation/DomainTier/Logs/ProcessPuzzle.log
+/Implementation/DomainTier/ObjectTests/com/processpuzzle/application/configuration/domain/custom_configuration.xml
 /Implementation/WebTier/.settings
 /Implementation/WebTier/Binaries/
 /Implementation/WebTier/Build/Distribution/
