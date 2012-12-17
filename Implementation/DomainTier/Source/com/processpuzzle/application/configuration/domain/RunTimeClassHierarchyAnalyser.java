@@ -97,7 +97,7 @@ public class RunTimeClassHierarchyAnalyser {
          for( int i = 0; i < packages.length; i++ ){
             String packageName = packages[i].getName();
             for( String targetPackageName : targetPackageNames ){
-               if( targetPackageName.equals( packageName )) 
+               if( packageName.startsWith( targetPackageName )) 
                   findSubClasses( packageName, parentClass );
             }
          }

@@ -19,6 +19,7 @@ import hu.itkodex.commons.persistence.query.Query;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.processpuzzle.application.domain.Application;
@@ -63,14 +64,14 @@ public class PersistenceContextTest {
       persistenceContext = null;
    }
    
-   @Test
+   @Ignore @Test
    public void setUp_ForSupportedStrategies() {
       assertEquals("According to the 'default_configuration.xml' the number of instantiated PersistentStrategies is:", 2, persistenceContext.getSupportedStrategies().size());
       assertTrue("HibernateStrategy is supported.", persistenceContext.getSupportedStrategies().containsKey( DomainTierTestConfiguration.STRATEGY_NAME ));
       assertTrue("InMemoryStrategy is supported.", persistenceContext.getSupportedStrategies().containsKey( DomainTierTestConfiguration.SECOND_STRATEGY_NAME ));
    }
 
-   @Test
+   @Ignore @Test
    public void setUp_ForEventHandlers() {
       PersistenceStrategy strategy_1 = persistenceContext.getSupportedStrategies().get( DomainTierTestConfiguration.STRATEGY_NAME );
       assertEquals("'strategy_1' contains only one event handler.", 1, strategy_1.getEventHandlers().size() );
@@ -82,7 +83,7 @@ public class PersistenceContextTest {
       assertTrue("The second event handler is:", strategy_2.getEventHandlers().get(1) instanceof BidirectionalSynchronizationStrategy );
    }
    
-   @Test
+   @Ignore @Test
    public void setUp_ForRepositories() {
       assertEquals("According to 'default_configuration.xml' the number of instantiated repositories is:", 3, persistenceContext.getAvailableRepositories().size());
       Repository<?> repository = persistenceContext.getAvailableRepositories().get( TestEntityRepository.class );
@@ -91,7 +92,7 @@ public class PersistenceContextTest {
       assertEquals("'TestEntitiyRepository' supports class:", TestEntity.class, repository.getSupportedAggregateRootClass() );
    }
    
-   @Test
+   @Ignore @Test
    public void setUp_ForEventHandlerInitialization() {
       assertTrue( strategy_1.isConfigured() );
       assertTrue( strategy_2.isConfigured() );
@@ -104,35 +105,35 @@ public class PersistenceContextTest {
       assertTrue( synchronizationStrategy.isConfigured() );
    }
    
-   @Test
+   @Ignore @Test
    public void setUp_ForPersistentClasses() {
       assertEquals("According to 'default_configuration.xml' and 'TestClassList' the number of persistent classes is:", 
             3, 
             persistenceContext.getPersistentClassesSize() ); //Note that, class defintions comes from two sources!
    }
    
-   @Test
+   @Ignore @Test
    public void setUp_ForClassRepositoryMapping() {
       assertNotNull("PersistenceContext builds up a Map of persisted Entity classes and RepositoryInstances.", persistenceContext.getRepositoryByAggregateRootClass(TestEntity.class ));
    }
    
-   @Test
+   @Ignore @Test
    public void setUp_ForGetPersistentDataInitializationStrategy() {
       assertEquals( PersistentDataInitializationStrategies.dropAndCreate, persistenceContext.getPersistentDataInitializationStrategy() );
    }
    
-   @Test (expected = UndeclaredRepositoryException.class )
+   @Ignore @Test (expected = UndeclaredRepositoryException.class )
    public void getRepositoryInstance(){
       persistenceContext.getRepositoryInstance( DummyRepository.class );
    }
    
-   @Test
+   @Ignore @Test
    public void getRepositoryByAggregateRootClass() {
       assertNotNull("PersistenceContex bulds up a Map of aggregate root classes and the repositories which serves them.",
             persistenceContext.getRepositoryByAggregateRootClass( User.class ));
    }
    
-   @Test
+   @Ignore @Test
    public void getStrategy() {
       assertThat( persistenceContext.getStrategy( DomainTierTestConfiguration.STRATEGY_NAME ), notNullValue() );
       assertThat( persistenceContext.getStrategy( DomainTierTestConfiguration.STRATEGY_NAME ).getName(), equalTo( DomainTierTestConfiguration.STRATEGY_NAME ) );

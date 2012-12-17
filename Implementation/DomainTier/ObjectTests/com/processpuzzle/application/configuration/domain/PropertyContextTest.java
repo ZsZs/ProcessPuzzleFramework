@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.stub;
 
 import java.io.IOException;
@@ -17,14 +18,11 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.commons.configuration.CombinedConfiguration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.XMLConfiguration;
-import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
+import org.apache.commons.configuration.tree.DefaultExpressionEngine;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
-import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -35,8 +33,8 @@ import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class PropertyContextTest {
    private static String CONFIGURATION_DESCRIPTOR_PATH = "classpath:com/processpuzzle/application/configuration/domain/configuration_descriptor.xml";
-   @Mock private static Application application;
-   @Mock private static ProcessPuzzleContext applicationContext;
+   private static Application application;
+   private static ProcessPuzzleContext applicationContext;
    private String expectedConnectionUrl = "";
    private String expectedWorkingDirectory = "";
    private PropertyContext propertyContext = null;
@@ -46,7 +44,8 @@ public class PropertyContextTest {
 
    @BeforeClass
    public static void beforeAllTests() {
-      MockitoAnnotations.initMocks( PropertyContextTest.class );
+      application = mock( Application.class );
+      applicationContext = mock( ProcessPuzzleContext.class );
       stub( application.getContext() ).toReturn( applicationContext );
    }
    
@@ -61,13 +60,12 @@ public class PropertyContextTest {
       determineExpectedValues();
    }
    
-   @Ignore
    @Test 
    public void testSeUp_ForCombinedConfiguration() {
       assertTrue( "PropertyContext loads in a CombinedConfiguration.", configuration instanceof CombinedConfiguration );
       assertTrue( "Configuration is combined from: ", customConfig instanceof XMLConfiguration );
       assertTrue( "Configuration is combined from: ", defaultConfig instanceof XMLConfiguration );
-      assertTrue( "Expression engine is:", configuration.getExpressionEngine() instanceof XPathExpressionEngine );
+      assertTrue( "Expression engine is:", configuration.getExpressionEngine() instanceof DefaultExpressionEngine );
    }
    
    @Test ( expected = UndefinedPropertyDescriptorException.class )
@@ -85,8 +83,8 @@ public class PropertyContextTest {
    
    @Test
    public void testGetProperty_ForHieracrhicalAccess() {
-      assertTrue( "Keys should be defined with XPath syntax.", configuration.containsKey("colors/background"));
-      assertEquals( "#808080", configuration.getString( "colors/background" ));
+      assertTrue( "Keys should be defined with hierarchical syntax.", customConfig.containsKey("colors.background"));
+      assertEquals( "#808080", customConfig.getString( "colors.background" ));
    }
    
    @Test
@@ -107,8 +105,8 @@ public class PropertyContextTest {
 
    @Test
    public void testAddProperty_ForXPathNodeSelector() {
-      configuration.addProperty("tables/table[1] type", "system");
-      configuration.addProperty("colors foreground", "#000000");
+      configuration.addProperty("tables/table[1]/type", "system");
+      configuration.addProperty("colors/foreground", "#000000");
       
       assertEquals( "system", configuration.getString("tables/table[1]/type"));
       assertEquals( "#000000", configuration.getString("colors/foreground"));
@@ -143,7 +141,7 @@ public class PropertyContextTest {
    @Test
    public void testSetUp_ForOverride() {
       assertEquals("Properties in 'custom_configuration.xml' should override properties defined in 'default_configuration.xml'.",
-            expectedWorkingDirectory, configuration.getString("application/serverWorkingFolder"));
+            expectedWorkingDirectory, configuration.getString("ac:application.ac:serverWorkingFolder"));
       
       String key = MessageFormat.format( PropertyKeys.PERSISTENCE_STRATEGY_EVENT_HANDLER_PROPERTIES.getDefaultKey(), 
                    new Object[] { DomainTierTestConfiguration.STRATEGY_NAME, DomainTierTestConfiguration.PERSISTENCE_PROVIDER_NAME });
@@ -185,13 +183,13 @@ public class PropertyContextTest {
       XPathExpression  xPathExpression = null;
       InputSource inputSource = null;
 
-      String key = MessageFormat.format( PropertyKeys.PERSISTENCE_STRATEGY_EVENT_HANDLER_PROPERTIES.getDefaultKey(), 
+      String key = MessageFormat.format( PropertyKeys.PERSISTENCE_STRATEGY_EVENT_HANDLER_PROPERTIES.getXPathKey(), 
             new Object[] { DomainTierTestConfiguration.STRATEGY_NAME, DomainTierTestConfiguration.PERSISTENCE_PROVIDER_NAME });
-      key += "/hibernate/connection/url";
+      key += "/pr:hibernate/pr:connection/pr:url";
       
       try {
          inputSource = new InputSource( resource.getInputStream() );
-         xPathExpression = xPath.compile( "/processPuzzleConfiguration/" + key );
+         xPathExpression = xPath.compile( "/pp:processPuzzleConfiguration/" + key );
          expectedConnectionUrl = xPathExpression.evaluate( inputSource );
       } catch( XPathExpressionException e ) {
          fail( "Coudn't set up expected value: 'expectedDatabaseName'" );
@@ -207,7 +205,7 @@ public class PropertyContextTest {
       
       try {
          inputSource = new InputSource( resource.getInputStream() );
-         xPathExpression = xPath.compile( "/processPuzzleConfiguration/" + PropertyKeys.APPLICATION_SERVER_WORKING_FOLDER.getDefaultKey() );
+         xPathExpression = xPath.compile( "/pp:processPuzzleConfiguration/" + PropertyKeys.APPLICATION_SERVER_WORKING_FOLDER.getXPathKey() );
          expectedWorkingDirectory = xPathExpression.evaluate( inputSource );
       } catch( XPathExpressionException e ) {
          fail( "Coudn't set up expected values: 'expectedWorkingDirectory'");

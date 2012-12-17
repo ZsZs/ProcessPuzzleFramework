@@ -58,7 +58,6 @@ public class BeanContainerTest {
    }
    
    @Test public void getEntityFactoryByEntityClass_DeterminesFactoryFromEntityClass() {
-      String className = UserFactory.class.getName();
       assertThat( container.getEntityFactoryByEntityClass( TestEntity.class ), instanceOf( TestEntityFactory.class ));
    }
    
