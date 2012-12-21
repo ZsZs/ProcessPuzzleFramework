@@ -53,7 +53,6 @@ public class PropertyContext extends TransientApplicationContext implements Appl
    private String configurationDescriptorUrl;
    private org.apache.commons.configuration.CombinedConfiguration configuration;
    private ResourceLoader loader;
-   private boolean isConfigured = false;
    public static final String PROPERTY_ARRAY_BEGIN = "(";
    public static final String PROPERTY_ARRAY_END = ")";
    public static final String ATTRIBUTE_SIGNER = "@";
@@ -151,8 +150,6 @@ public class PropertyContext extends TransientApplicationContext implements Appl
       return configuration.getString( PropertyKeys.APPLICATION_SERVER_WORKING_FOLDER.getDefaultKey() );
    }
 
-   public boolean isConfigured() { return isConfigured; }
-   
    //Protected, private helper methods
    @Override protected void setUpTransientComponents() {
       File resourceFile = null;

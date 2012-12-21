@@ -188,9 +188,10 @@ public class ProcessPuzzleContextTest {
 
    @Test
    public void addProperty() {
-      config.addProperty( PropertyKeys.APPLICATION.getDefaultKey(), "aNewPropertyKey", "aNewPropertyValue");
+      config.addProperty( PropertyKeys.APPLICATION_NAME.getDefaultKey(), "ac:aNewPropertyKey", "aNewPropertyValue");
+      config.getProperty( "ac:application.ac:aNewPropertyKey" );
       assertEquals("ProcessPuzzleContext is a facade to PropertyContext. You can add new properties at runtime.", 
-            "aNewPropertyValue", config.getProperty(PropertyKeys.APPLICATION.getDefaultKey() + "/" + "aNewPropertyKey"));
+            "aNewPropertyValue", config.getProperty(PropertyKeys.APPLICATION.getDefaultKey() + "." + "aNewPropertyKey"));
    }
    
    @Test
