@@ -77,8 +77,6 @@ import com.processpuzzle.user_session.domain.UserRequestManager;
 
 public abstract class Application extends GenericEntity<Application> implements AggregateRoot {
    private static final String PARAMETER_TYPE_ELEMENT_NAME = "type";
-   private static final String PARAMETER_NAME_ELEMENT_NAME = "name";
-   private static final String ARGUMENT_ELEMENT_NAME = "dl:argument";
    private static final String INSTANTIATION_ARGUMENTS_SELECTOR = "dl:instantiationArguments.dl:argument";
    private static Logger log = LoggerFactory.getLogger( Application.class );
    protected ResourceLoader resourceLoader;
@@ -318,6 +316,8 @@ public abstract class Application extends GenericEntity<Application> implements 
          case restore:
             event = new RestoreEvent();
             break;
+         default:
+            break;
       }
       
       eventList.add( event );
@@ -441,7 +441,7 @@ public abstract class Application extends GenericEntity<Application> implements 
       DataLoader dataLoader = null;
       Constructor<DataLoader> dataLoaderConstructor;
 
-      List<String> arguments = dataLoaderConfig.configurationsAt( INSTANTIATION_ARGUMENTS_SELECTOR );
+      List<HierarchicalConfiguration> arguments = dataLoaderConfig.configurationsAt( INSTANTIATION_ARGUMENTS_SELECTOR );
       Class<?>[] parameterTypes = new Class[arguments.size()];
       Object[] parameterValues = new Object[arguments.size()];
       

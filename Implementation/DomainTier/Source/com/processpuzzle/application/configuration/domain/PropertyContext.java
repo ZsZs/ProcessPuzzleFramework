@@ -46,6 +46,8 @@ import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Lists;
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.fundamental_types.domain.ProcessPuzzleEnumeration;
 
@@ -143,8 +145,12 @@ public class PropertyContext extends TransientApplicationContext implements Appl
       if( configuration != null ) return configuration.getString( key );
       else return null;
    }
-   @SuppressWarnings("unchecked")
-   public List<String> getPropertyList(String pathKey) { return configuration.getList( pathKey ); }
+
+   public List<String> getPropertyList(String pathKey) { return Lists.transform( configuration.getList( pathKey ), new Function<Object, String>(){
+         @Override public String apply( Object configurationElement ) {
+      if( configurationElement != null ) return configurationElement.toString();
+      else return "null";
+   }});}
    public ResourceLoader getResourceLoader() { return loader; }
    public String getServerWorkingFolder() {
       return configuration.getString( PropertyKeys.APPLICATION_SERVER_WORKING_FOLDER.getDefaultKey() );

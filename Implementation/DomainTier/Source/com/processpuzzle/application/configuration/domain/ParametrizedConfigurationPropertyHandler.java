@@ -37,6 +37,7 @@ import java.util.List;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 import org.apache.commons.lang.StringUtils;
 
+import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 
 public class ParametrizedConfigurationPropertyHandler {
@@ -77,16 +78,22 @@ public class ParametrizedConfigurationPropertyHandler {
       determineSelectorSegments();
       String finalSelector = determineFinalSelector();
       
-      @SuppressWarnings( "unchecked" )
-      List<String> searchedItems = Lists.newArrayList( configuration.getList( finalSelector ));
+      List<String> searchedItems = Lists.newArrayList( Lists.transform( configuration.getList( finalSelector ), new Function<Object, String>(){
+         @Override public String apply( Object configurationElement ) {
+             if( configurationElement != null ) return configurationElement.toString();
+             else return "null";
+         }}));
       return searchedItems;
    }
 
    private String determineFinalSelector() {
       String currentSelector = selectorBeforeCondition + selectorAfterCondition;
       
-      @SuppressWarnings( "unchecked" )
-      List<String> parentItems = configuration.getList( currentSelector );
+      List<String> parentItems = Lists.transform( configuration.getList( currentSelector ), new Function<Object, String>(){
+         @Override public String apply( Object configurationElement ) {
+            if( configurationElement != null ) return configurationElement.toString();
+            else return "null";
+      }});
       
       Integer listIndex = determineParentNodeIdex( parentItems );
       
