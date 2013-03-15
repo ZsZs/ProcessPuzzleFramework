@@ -2,14 +2,17 @@ package com.processpuzzle.application.configuration.domain;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.stub;
 
 import java.io.IOException;
 import java.text.MessageFormat;
 
+import javax.xml.namespace.NamespaceContext;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
@@ -143,10 +146,10 @@ public class PropertyContextTest {
       assertEquals("Properties in 'custom_configuration.xml' should override properties defined in 'default_configuration.xml'.",
             expectedWorkingDirectory, configuration.getString("ac:application.ac:serverWorkingFolder"));
       
-      String key = MessageFormat.format( PropertyKeys.PERSISTENCE_STRATEGY_EVENT_HANDLER_PROPERTIES.getDefaultKey(), 
+      String key = MessageFormat.format( PropertyKeys.PERSISTENCE_STRATEGY_EVENT_HANDLER_PROPERTIES.getXPathKey(), 
                    new Object[] { DomainTierTestConfiguration.STRATEGY_NAME, DomainTierTestConfiguration.PERSISTENCE_PROVIDER_NAME });
-      key += "/hibernate/connection/url";
-      assertEquals( expectedConnectionUrl, configuration.getString( key ));
+      key += "/pr:hibernate/pr:connection/pr:url";
+      assertThat( configuration.getString( key ), equalTo( expectedConnectionUrl ));
    }
    
    @Test
@@ -172,6 +175,9 @@ public class PropertyContextTest {
       ResourceLoader loader = null; 
       Resource resource = null;
 
+      NamespaceContext context = new ProcessPuzzleContextNamespace();
+      xPath.setNamespaceContext( context );
+      
       loader = (ResourceLoader) new DefaultResourceLoader();
       resource = loader.getResource( customConfigurationPath );
       
@@ -194,7 +200,6 @@ public class PropertyContextTest {
       } catch( XPathExpressionException e ) {
          fail( "Coudn't set up expected value: 'expectedDatabaseName'" );
       } catch( IOException e ) {
-         // TODO Auto-generated catch block
          e.printStackTrace();
       }
    }
@@ -210,7 +215,6 @@ public class PropertyContextTest {
       } catch( XPathExpressionException e ) {
          fail( "Coudn't set up expected values: 'expectedWorkingDirectory'");
       } catch( IOException e ) {
-         // TODO Auto-generated catch block
          e.printStackTrace();
       }
    }
