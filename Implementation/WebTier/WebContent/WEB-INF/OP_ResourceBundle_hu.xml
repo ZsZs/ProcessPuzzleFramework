@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Resources xmlns:tns="http://www.itcodex.com/ResourceBundle" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.itcodex.com/ResourceBundle ../../WebContent/Configuration/ResourceBundle.xsd ">
+<pp:Resources 
+	xmlns:pp="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
 	<Language name="hu">
 
 		<Resource key="com.processpuzzle.party.domain.TelecomAddress" type="String">Telefonszám</Resource>
@@ -294,4 +297,4 @@
 		<Resource key="ui.label.intakeNewGeneralResource" type="String">Új általános erőforrás felvétele</Resource>
 	
 	</Language>
-</tns:Resources>
+</pp:Resources>
