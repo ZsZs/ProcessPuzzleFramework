@@ -3,6 +3,9 @@
 	<name>ProcessPuzzle - Web Tier</name>
 	<comment></comment>
 	<projects>
+		<project>ProcessPuzzleCommons - Domain Tier</project>
+		<project>LiTest Domain Tier</project>
+		<project>ProcessPuzzle - Domain Tier</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

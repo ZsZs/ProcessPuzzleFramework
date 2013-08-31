@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ProcessPuzzle - Domain Tier">
+        <wb-resource deploy-path="/" source-path="/Source"/>
+        <wb-resource deploy-path="/" source-path="/ObjectTests"/>
+        <wb-resource deploy-path="/" source-path="/AcceptanceTests"/>
+        <wb-resource deploy-path="/" source-path="/PerformanceTests"/>
+        <wb-resource deploy-path="/" source-path="/Configuration"/>
+        <wb-resource deploy-path="/" source-path="/IntegratedTests"/>
+    </wb-module>
+</project-modules>
