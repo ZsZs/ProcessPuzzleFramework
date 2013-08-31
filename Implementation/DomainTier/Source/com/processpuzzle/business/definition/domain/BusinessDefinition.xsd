@@ -72,7 +72,7 @@
 
 	<!-- PartyType Begin -->
 	<xsd:complexType name = "PartyTypes">
-		<xsd:sequence minOccurs = "1" maxOccurs = "unbounded">
+		<xsd:sequence minOccurs = "0" maxOccurs = "unbounded">
 			<xsd:element name = "partyType" type = "PartyType" />
 		</xsd:sequence>
 	</xsd:complexType>
@@ -87,7 +87,7 @@
 	
 	<!-- PartyRoleTypeDefinition Begin -->
 	<xsd:complexType name="PartyRoleTypes">
-		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
 			<xsd:element name="partyRoleType" type="PartyRoleType" />
 		</xsd:sequence>
 	</xsd:complexType>
@@ -111,7 +111,7 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="PartyRelationshipTypes">
-		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
 			<xsd:element name="partyRelationshipType" type="PartyRelationshipType" />
 		</xsd:sequence>
 	</xsd:complexType>

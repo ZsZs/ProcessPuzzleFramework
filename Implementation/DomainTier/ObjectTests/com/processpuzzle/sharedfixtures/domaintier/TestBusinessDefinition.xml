@@ -94,7 +94,7 @@
 				</defaultAccessRights>
 				<creationProperties>
 					<creationProperty name="aProperty" type="string">
-						<value>A property value</value>
+						<defaultValue>aPropertyValue</defaultValue>
 					</creationProperty>
 				</creationProperties>
 				<availableViews>
@@ -117,7 +117,7 @@
 				</defaultAccessRights>
 				<creationProperties>
 					<creationProperty name="aProperty" type="string">
-						<value>A property value</value>
+						<defaultValue>A property value</defaultValue>
 					</creationProperty>
 				</creationProperties>
 				<availableViews>

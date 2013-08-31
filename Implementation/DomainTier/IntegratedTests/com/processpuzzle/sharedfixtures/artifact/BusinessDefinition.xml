@@ -6,6 +6,9 @@
 
 	<!-- PartyTypes: Defines acceptable types of parties. -->
 	<partyTypes>
+		<partyType name = "PersonType" />
+		<partyType name = "CompanyType" />
+		<partyType name = "XPProject" />
 	</partyTypes>
 	
 	<!-- PartyRoleTypes: Defines the roles can be filled in the workflows. -->
@@ -31,7 +34,7 @@
 				</defaultAccessRights>
 				<creationProperties>
 					<creationProperty name="aProperty" type="string">
-						<value>A property value</value>
+						<defaultValue>A property value</defaultValue>
 					</creationProperty>
 				</creationProperties>
 				<availableViews>
@@ -54,7 +57,7 @@
 				</defaultAccessRights>
 				<creationProperties>
 					<creationProperty name="aProperty" type="string">
-						<value>A property value</value>
+						<defaultValue>A property value</defaultValue>
 					</creationProperty>
 				</creationProperties>
 				<availableViews>
