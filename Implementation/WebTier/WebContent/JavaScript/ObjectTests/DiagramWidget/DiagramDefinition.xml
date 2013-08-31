@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dd:diagramDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:pp="http://www.processpuzzle.com"
+   xmlns:dd="http://www.processpuzzle.com/Diagram"
+   xmlns:uml="http://www.processpuzzle.com/Diagram/UML" 
+   xsi:schemaLocation="http://www.processpuzzle.com/Diagram http://processpuzzle.com/Schemas/SmartDiagram.xsd">
+   
+   <dd:title>DiagramWidget.title</dd:title>
+   <dd:description>DiagramWidget.description</dd:description>
+   <dd:author>Zsolt Zsuffa</dd:author>
+   
+   <dd:canvas height="200" width="300"></dd:canvas>
+   
+   <dd:figurePalettes>
+      <dd:figurePalette/>
+   </dd:figurePalettes>
+   
+   <dd:figurePropertyWindows>
+      <dd:figurePropertyWindow/>
+   </dd:figurePropertyWindows>
+   
+   <dd:figures>
+      <dd:annotation name="DiagramAnnotation" height="40" width="100" positionX="50" positionY="50">
+         <dd:text>DiagramWidget.annotation.text</dd:text>
+      </dd:annotation>
+   
+      <uml:class name="DiagramFigure" positionX="50" positionY="50">
+         <uml:attributes>
+            <uml:attribute name="canvas" type="draw2d.workflow" defaultValue="null"/>
+            <uml:attribute name="name" type="String"/>
+            <uml:attribute name="internationalization" type="LocalizationResource" defaultValue="null"/>
+         </uml:attributes>
+         
+         <uml:operations>
+            <uml:operation name="construct" type="void"></uml:operation>
+            <uml:operation name="destroy" type="void"></uml:operation>
+            <uml:operation name="draw" type="void">
+            	<uml:operationArguments>
+            		<uml:operationArgument  name="parentFigure" type="Figure"/>
+            	</uml:operationArguments>
+            </uml:operation>
+         </uml:operations>
+      </uml:class>
+      
+      <uml:class name="ClassFigure" positionX="50" positionY="100">
+         <uml:operations>
+            <uml:operation name="drawAttributes"></uml:operation>
+            <uml:operation name="drawOperations"></uml:operation>
+         </uml:operations>
+      </uml:class>
+      
+      <uml:class name="AttributeFigure" positionX="50" positionY="100">
+         <uml:attributes>
+            <uml:attribute name="defaultValue" type="String"/>
+            <uml:attribute name="type" type="String"/>
+         </uml:attributes>
+      </uml:class>
+      
+      <uml:class name="OperationFigure" positionX="50" positionY="100">
+         <uml:attributes>
+            <uml:attribute name="arguments" type="String"/>
+            <uml:attribute name="type" type="String"/>
+         </uml:attributes>
+      </uml:class>
+      
+      <uml:inheritanceConnection name="ClassIsSpecializedFigure" source="ClassFigure" target="DiagramFigure"/>
+      
+      <uml:inheritanceConnection name="ClassIsSpecializedFigure_1" source="AttributeFigure" target="DiagramFigure"/>
+      
+      <uml:inheritanceConnection name="ClassIsSpecializedFigure_2" source="OperationFigure" target="DiagramFigure"/>
+      
+      <uml:associationConnection name="has" source="ClassFigure" target="AttributeFigure">
+         <uml:sourceRole name="" multiplicity="1..n" containment="by value"/>
+         <uml:targetRole name="attributes" multiplicity="*" containment="by reference"/>
+      </uml:associationConnection>
+      
+      <uml:associationConnection name="has_1" source="ClassFigure" target="OperationFigure">
+         <uml:sourceRole name="" multiplicity="1..n" containment="by value"/>
+         <uml:targetRole name="operations" multiplicity="*" containment="by reference"/>
+      </uml:associationConnection>
+   </dd:figures>
+</dd:diagramDefinition>

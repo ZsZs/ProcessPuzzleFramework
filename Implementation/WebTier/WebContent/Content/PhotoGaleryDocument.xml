@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   
+   <sd:name>Photo Galery Document</sd:name>
+   <sd:description>Demonstrates Photo Galery widget embeded into a Smart Document.</sd:description>
+   <sd:version>0.5</sd:version>
+   
+   <sd:resources>
+      <sd:styleSheets></sd:styleSheets>
+      <sd:images></sd:images>
+      <sd:javaScripts></sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentHeader tag="div" id="photoGaleryDocumentHeader">
+      <sd:compositeElement tag="div" id="headerWrapper">
+         <sd:element tag="h1">PhotoGaleryDocument.title</sd:element>
+         <sd:element tag="h2">PhotoGaleryDocument.subTitle</sd:element>
+      </sd:compositeElement>
+   </sd:documentHeader>
+   
+   <sd:documentBody tag="div" id="smartDocumentBody">
+      <sd:element tag="p">PhotoGaleryDocument.introduction</sd:element>
+      <sd:element tag="p">PhotoGaleryDocument.exampleDescription</sd:element>
+      <sd:element tag="div" id="PhotoGaleryContainer" elementStyle="slideshow">
+         <sd:plugin>
+            <sd:widget name="MediaPlayerWidget">
+               <sd:options>
+                  <sd:option name="widgetContainerId" value="'PhotoGaleryContainer'"/>
+                  <sd:option name="widgetDefinitionURI" value="'Content/PhotoGaleryDefinition.xml'"/>
+                  <sd:option name="widgetDataURI" value="'Content/PhotoGaleryData.xml'"/>
+               </sd:options>
+            </sd:widget>
+         </sd:plugin>
+      </sd:element>
+   </sd:documentBody>
+   
+</sd:smartDocumentDefinition>

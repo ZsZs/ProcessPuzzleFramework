@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   
+   <sd:name>Twitter Messages</sd:name>
+   <sd:description>Presents Twitter messages to the visitor by using NewsReaderWidget.</sd:description>
+   <sd:version>0.5</sd:version>
+   
+   <sd:resources>
+      <sd:styleSheets></sd:styleSheets>
+      <sd:images></sd:images>
+      <sd:javaScripts></sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentBody tag="div" id="newsDocumentBody">
+      <sd:element tag="div" id="socialNetworkMessages">
+         <sd:plugin>
+            <sd:widget name="NewsReaderWidget">
+               <sd:options>
+                  <sd:option name="channelOptions" value="{ showDescription : false, showTitle : false, itemOptions : { truncateDescription : true }}"/>
+                  <sd:option name="componentName" value="'TwitterWidget'"/>
+                  <sd:option name="widgetContainerId" value="'socialNetworkMessages'"/>
+                  <sd:option name="widgetDataURI" value="'Content/System/Twitter.xml'"/>
+                  <sd:option name="widgetDefinitionURI" value="'Content/System/TwitterWidget.xml'"/>
+               </sd:options>
+            </sd:widget>
+         </sd:plugin>
+      </sd:element>
+   </sd:documentBody>
+   
+</sd:smartDocumentDefinition>

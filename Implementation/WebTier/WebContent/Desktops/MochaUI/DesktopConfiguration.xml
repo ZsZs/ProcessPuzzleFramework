@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<desktopConfiguration 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:dc="http://www.processpuzzle.com/DesktopConfiguration"
+   xmlns:pp="http://www.processpuzzle.com"
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument"
+   xsi:noNamespaceSchemaLocation="file:///e:/GitRepositories/ProcessPuzzleUI/Implementation/WebTier/Schemas/DesktopConfiguration.xsd">
+
+	<name>MochaUI Desktop</name>
+	<version>1.0</version>
+	<description>This is full flagged desktop configuration.</description>
+   <containerId>desktop</containerId>
+
+	<sd:resources>
+		<sd:styleSheets>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Content.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Core.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Dock.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Form.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Layout.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Panels.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/ScrollBar.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Tabs.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/ToolBar.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/Window.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/PhotoGalery.css</sd:styleSheet>
+         <sd:styleSheet>Desktops/MochaUI/Styles/TreeWidget.css</sd:styleSheet>
+		</sd:styleSheets>
+		<sd:images></sd:images>
+		<sd:javaScripts></sd:javaScripts>
+	</sd:resources>
+	
+   <header documentDefinition="Desktops/MochaUI/DesktopHeader.xml"/>
+	
+   <windowDocker tag="div" id="dockWrapper" />
+
+   <contentArea tag="div" id="pageWrapper" />
+
+   <footer documentDefinition="Desktops/MochaUI/DesktopFooter.xml"/>
+   
+	<columns>
+		<column name='mainColumn' placement='main' minimumWidth='100' maximumWidth='300' />
+      <column name='rightColumn' placement='right' width='300' minimumWidth='200' maximumWidth='400' />
+	</columns>
+	
+	<panels>
+		<panel name='documents-panel' columnReference='mainColumn' showHeader='true' handleMenuSelectedEvents="true"  storeState="true" storeStateInUri="true" eventOriginators="['exmapleMenuWidget', 'horizontalMenuBar', 'menuTree', 'verticalMenuColumn', 'webUIController']">
+			<title>DesktopConfigurator.Panel.documentsTitle</title>
+         <panelHeader>
+            <plugin>
+               <sd:resources></sd:resources>
+               <sd:widget name="ToolBarWidget">
+                  <sd:options>
+                     <sd:option name="componentName " value="'documentEditorToolBar'"/>
+                     <sd:option name="dividerIconImageUri" value="'Desktops/ProcessPuzzle/Images/ToolboxDivider.jpg'"/>
+                     <sd:option name="widgetContainerId" value="'documents-panel_headerToolbox'"/>
+                     <sd:option name="widgetDataURI" value="'Configuration/DocumentEditorToolBar.xml'"/>
+                     <sd:option name="widgetDefinitionURI" value="'Desktops/MochaUI/Widgets/DocumentEditorToolBarDefinition.xml'" />
+                  </sd:options>
+               </sd:widget>
+            </plugin>
+         </panelHeader>
+		</panel>
+		
+      <panel name='consolePanel' columnReference='mainColumn' height='200' showHeader='true' handleTabSelectedEvents="true" storeState="false" eventOriginators="['consoleTabs']">
+         <title>DesktopConfigurator.Panel.consoleTitle</title>
+         <panelHeader contentStyle="documentTabs">
+            <plugin>
+               <sd:resources>
+                  <sd:styleSheets>
+                     <sd:styleSheet>Desktops/ProcessPuzzle/Styles/ConsoleTabs.css</sd:styleSheet>
+                  </sd:styleSheets>
+               </sd:resources>
+               <sd:widget name="TabWidget">
+                  <sd:options>
+                     <sd:option name="componentName " value="'consoleTabs'"/>
+                     <sd:option name="widgetContainerId" value="'consolePanel_headerToolbox'"/>
+                     <sd:option name="widgetDataURI" value="'Configuration/ConsoleTabsDefinition.xml'"/>
+                     <sd:option name="widgetDefinitionURI" value="'Desktops/MochaUI/Widgets/TabWidgetDefinition.xml'" />
+                  </sd:options>
+               </sd:widget> 
+            </plugin>
+         </panelHeader>
+         <document tag="div" id="consoleDocumentWrapper" elementStyle="documentWrapper" type="SmartDocument">
+             <documentDefinitionUri>Content/System/DocumentCommentsDefinition.xml</documentDefinitionUri>
+             <documentContentUri></documentContentUri>
+         </document>
+      </panel>
+		
+      <panel name='eventsPanel' columnReference='rightColumn' showHeader='true' >
+         <title>DesktopConfigurator.Panel.eventsTitle</title>
+         <contentURL>Desktops/ProcessPuzzle/Pages/EventsPanel.html</contentURL>
+         <plugin>
+            <sd:resources>
+               <sd:styleSheets>
+                  <sd:styleSheet>Desktops/MochaUI/Styles/EventsPanel.css</sd:styleSheet>
+               </sd:styleSheets>
+            </sd:resources>
+            <sd:widget name="PartyEventWidget">
+               <sd:options>
+                  <sd:option name="widgetContainerId" value="'UpcommingEvents'"/>
+                  <sd:option name="widgetDataURI" value="'Content/WidgetExamples/UpcommingEvents.xml'"/>
+                  <sd:option name="widgetDefinitionURI" value="'Content/WidgetExamples/UpcommingEventsDefinition.xml'"/>
+                  <sd:option name="componentName" value="'UpcommingEventsWidget'"/>
+                  <sd:option name="eventOptions" value="{ showDescription : true, showTitle : true, truncateDescription : true }"/>
+               </sd:options>
+            </sd:widget>
+         </plugin>
+      </panel>
+      
+      <panel name='newsPanel' columnReference='rightColumn' height='350' showHeader='true'>
+         <title>DesktopConfigurator.Panel.newsTitle</title>
+         <contentURL>Desktops/ProcessPuzzle/Pages/NewsPanel.html</contentURL>
+         <plugin>
+            <sd:resources>
+               <sd:styleSheets>
+                  <sd:styleSheet>Desktops/MochaUI/Styles/NewsPanel.css</sd:styleSheet>
+               </sd:styleSheets>
+            </sd:resources>
+            <sd:widget name="NewsReaderWidget">
+               <sd:options>
+                  <sd:option name="widgetContainerId" value="'TopNews'"/>
+                  <sd:option name="widgetDataURI" value="'Content/WidgetExamples/SiteNews.xml'"/>
+                  <sd:option name="widgetDefinitionURI" value="'Content/WidgetExamples/SiteNewsDefinition.xml'"/>
+                  <sd:option name="componentName" value="'TopNewsWidget'"/>
+                  <sd:option name="channelOptions" value="{ showDescription : false, showTitle : false, itemOptions : { truncateDescription : true }}"/>
+               </sd:options>
+            </sd:widget>
+         </plugin>
+      </panel>
+      
+      <panel name='communityPanel' columnReference='rightColumn' height='150' showHeader='true' handleTabSelectedEvents="true" eventOriginators="['communityTabs']">
+         <title>DesktopConfigurator.Panel.comunityTitle</title>
+         <panelHeader contentStyle="panelTabs">
+            <plugin>
+               <sd:resources>
+                  <sd:styleSheets>
+                     <sd:styleSheet>Desktops/MochaUI/Styles/CommunityPanelTabs.css</sd:styleSheet>
+                  </sd:styleSheets>
+               </sd:resources>
+               <sd:widget name="TabWidget">
+                  <sd:options>
+                     <sd:option name="componentName" value="'communityTabs'"/>
+                     <sd:option name="widgetContainerId" value="'communityPanel_headerToolbox'"/>
+                     <sd:option name="widgetDataURI" value="'Configuration/CommunityTabsDefinition.xml'"/>
+                     <sd:option name="widgetDefinitionURI" value="'Desktops/MochaUI/Widgets/TabWidgetDefinition.xml'" />
+                  </sd:options>
+               </sd:widget> 
+            </plugin>
+         </panelHeader>
+         <document tag="div" id="communityDocumentWrapper" elementStyle="documentWrapper" type="SmartDocument">
+             <documentDefinitionUri>Content/System/FacebookPanelContent.xml</documentDefinitionUri>
+             <documentContentUri>Content/System/Facebook.xml</documentContentUri>
+         </document>
+      </panel>
+	</panels>
+	
+   <windows>
+      <window name='about' height='400' width='600'>
+         <title>DesktopWindow.about.title</title>
+         <contentURL>Content/System/About.html</contentURL>
+      </window>
+      
+      <window name="documentExplorer" height="400" width="600">
+         <title>DesktopWindow.documentExplorer.title</title>
+      </window>
+   </windows>
+
+</desktopConfiguration>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   
+   <sd:name>Static Document</sd:name>
+   <sd:description>Demonstrates static content of a Smart Document.</sd:description>
+   <sd:version>0.5</sd:version>
+   <sd:contentUri>Content/WidgetExamples/UpcommingEvents.xml</sd:contentUri>
+   
+   <sd:resources>
+      <sd:styleSheets></sd:styleSheets>
+      <sd:images></sd:images>
+      <sd:javaScripts></sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentBody tag="div" id="eventDocumentBody">
+      <sd:compositeDataElement tag="div" id="eventWrapper" bind="/pe:eventList/pe:events/pe:event[{index}]" maxOccures="1">
+         <sd:dataElement tag="h1" elementStyle="title" id="itemTitle" bind="/pe:eventList/pe:events/pe:event[{index}]/pe:title"/>
+         <sd:dataElement tag="div" elementStyle="description" id="itemDescription" bind="/pe:eventList/pe:events/pe:event[{index}]/pe:description"/>
+         <sd:formElement id="eventProperties" method="post" bind="/pe:eventList/pe:events/pe:event[{index}]">
+            <sd:formField id="program" label="EventWidget.program" bind="/pe:eventList/pe:events/pe:event[{index}]/pe:program/pe:description"/>
+            <sd:formField id="link" label="EventWidget.schedule" bind="/pe:eventList/pe:events/pe:event[{index}]/pe:schedule/pe:startDate"/>
+            <sd:formField id="location" label="EventWidget.location" bind="/pe:eventList/pe:events/pe:event[{index}]/pe:location/pe:address"/>
+            <sd:formField id="registration" label="EventWidget.registration" bind="/pe:eventList/pe:events/pe:event[{index}]/pe:registration/pe:link"/>
+         </sd:formElement>
+      </sd:compositeDataElement>
+   </sd:documentBody>
+</sd:smartDocumentDefinition>

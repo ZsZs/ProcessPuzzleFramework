@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   
+   <sd:name>Event Detail</sd:name>
+   <sd:description>Presents all the details of a single event.</sd:description>
+   <sd:version>0.5</sd:version>
+   <sd:contentUri>Content/Workflow.xml</sd:contentUri>
+   
+   <sd:resources>
+      <sd:styleSheets></sd:styleSheets>
+      <sd:images></sd:images>
+      <sd:javaScripts></sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentBody tag="div" id="eventDocumentBody">
+      <sd:compositeDataElement tag="div" id="activityWrapper" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]" indexVariable="activityIndex" maxOccures="1">
+         <sd:dataElement tag="h1" elementStyle="title" id="itemTitle" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]/name"/>
+         <sd:dataElement tag="p" elementStyle="description" id="itemDescription" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]/description"/>
+         <sd:formElement id="eventProperties" method="post" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]">
+            <sd:formField id="duration" label="Workflow.ActivityDetail.duration" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]/duration"/>
+            <sd:formField id="duration" label="Workflow.ActivityDetail.performerRole" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]/performerRole"/>
+            <sd:formField id="duration" label="Workflow.ActivityDetail.performerParty" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]/performerParty"/>
+         </sd:formElement>
+      </sd:compositeDataElement>
+      
+      <sd:element tag="h3">Workflow.ActivityDetail.inputs</sd:element>
+      <sd:tableElement id="inputsTableContainer" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]/inputs/input[{inputIndex}]" indexVariable="inputIndex" maxOccures="unbounded">
+         <sd:tableColumn id="activityName" label="Workflow.ActivityDetail.Inputs.name" bind="."/>
+      </sd:tableElement>
+      
+      <sd:element tag="h3">Workflow.ActivityDetail.outputs</sd:element>
+      <sd:tableElement id="outputsTableContainer" bind="//pp:workflow/workflowDetail[{workflowDetailIndex}]/activities/activity[{activityIndex}]/outputs/output[{outputIndex}]" indexVariable="outputIndex" maxOccures="unbounded">
+         <sd:tableColumn id="activityName" label="Workflow.ActivityDetail.Outputs.name" bind="."/>
+      </sd:tableElement>
+   </sd:documentBody>
+</sd:smartDocumentDefinition>

@@ -19,7 +19,7 @@
 
 	<!-- Application -->
 	<ac:application>
-		<ac:applicationName>ProcessPuzzle</ac:applicationName>
+		<ac:applicationName>ProcessPuzzleUI</ac:applicationName>
 		<ac:version>1.0</ac:version>
 		<ac:serverWorkingFolder>c:\\processpuzzle</ac:serverWorkingFolder>
 		<ac:clientWorkingFolder>c:\\processpuzzle</ac:clientWorkingFolder>
@@ -35,21 +35,19 @@
 		<wui:desktop>
 			<wui:menu definitionURI="Configuration/WebUIMenuDefinition.xml"></wui:menu>
 			<wui:availableSkins>
-				<wui:skin name="AgileCE" relativePath="Commons/Skins/AgileCE" configurationURI="Commons/Skins/AgileCE/DesktopConfiguration.xml" />
-				<wui:skin name="AgileRenovation" relativePath="Commons/Skins/AgileRenovation" configurationURI="Commons/Skins/AgileRenovation/DesktopConfiguration.xml" />
-				<wui:skin name="MochaUI" relativePath="Commons/Skins/MochaUI" configurationURI="Commons/Skins/MochaUI/DesktopConfiguration.xml" />
-				<wui:skin name="ProcessPuzzle" relativePath="Commons/Skins/ProcessPuzzle" configurationURI="Commons/Skins/ProcessPuzzle/DesktopConfiguration.xml" />
+				<wui:skin name="MochaUI" relativePath="Desktops/MochaUI" configurationURI="Desktops/MochaUI/DesktopConfiguration.xml" />
+				<wui:skin name="ProcessPuzzle" relativePath="Desktops/ProcessPuzzle" configurationURI="Desktops/ProcessPuzzle/DesktopConfiguration.xml" />
 			</wui:availableSkins>
-			<wui:defaultSkin name="ProcessPuzzle"></wui:defaultSkin>
+			<wui:defaultSkin name="MochaUI"></wui:defaultSkin>
 		</wui:desktop>
 			
 		<wui:logging>
 			<wui:loggers>
-				<wui:logger name="WebUI" level="debug" isDefault="true"><wui:appenderReference name="formattedPopUpAppender"/></wui:logger>
+				<wui:logger name="WebUI" level="error" isDefault="true"><wui:appenderReference name="formattedPopUpAppender"/></wui:logger>
 			</wui:loggers>
 			
 			<wui:layouts>
-				<wui:patternLayout name="formattedLayout" pattern="%d{HH:mm:ss} %-5p - %c: %m%n"/>
+				<wui:patternLayout name="formattedLayout" pattern="%d{HH:mm:ss,SSS} %p - %m"/>
 			</wui:layouts>
 
 			<wui:appenders>
@@ -60,17 +58,17 @@
 					complainAboutPopUpBlocking="true"
 					focusPopUp="true"
 					lazyInit="true"
-					threshold="debug"
+					threshold="trace"
 					maxMessages="1000"
 					newestMessageAtTop="true"
-					height="600"
+					height="800"
 					reopenWhenClosed="true"
 					scrollToLatestMessage="true"
 					showCommandLine="true"
-					initiallyMinimized="true"
+					initiallyMinimized="false"
 					useDocumentWrite="false"
 					useOldPopUp="true"
-					width="800"/>
+					width="1600"/>
 			</wui:appenders>			
 		</wui:logging>
 	</wui:webUI>
@@ -168,9 +166,9 @@
 	<in:internationalization>
 		<in:resouceBundles nameSpace="xmlns:pp='http://www.processpuzzle.com/ResourceBundle'">
 			<in:resourceBundle>Configuration/DesktopInternationalization</in:resourceBundle>
-			<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/DomainTier_Resources</in:resourceBundle>
-			<in:resourceBundle>classpath:com/processpuzzle/internalization/domain/DomainComponents_Resources</in:resourceBundle>
-			<in:resourceBundle>classpath:com/processpuzzle/internationalization/control/WebTier_Resources</in:resourceBundle>
+         <in:resourceBundle>Configuration/ConsoleInternationalization</in:resourceBundle>
+         <in:resourceBundle>Configuration/PhotoGaleryInternationalization</in:resourceBundle>
+         <in:resourceBundle>Content/WidgetExamples/WidgetExamplesInternationalization</in:resourceBundle>
 		</in:resouceBundles>
 		
 		<in:availableLocales>

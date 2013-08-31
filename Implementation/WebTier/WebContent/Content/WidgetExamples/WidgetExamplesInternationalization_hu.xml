@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file contains internalization resources for Desktop Configurator. -->
+<pp:Resources 
+	xmlns:pp="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
+
+  <Language name="hu">
+    <Resource key="DiagramWidget.Annotation.text" type="String">Ez egy megjegyzés, magyarázó szöveg a digramhoz.</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.name" type="String">Diagram alakzat</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Attributes.canvas" type="String">vászon</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Operations.construct" type="String">felépít</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Operations.destroy" type="String">lebont</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Operations.draw" type="String">megrajzol</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.name" type="String">Osztály alakzat</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Attributes.attributes" type="String">tulajdonságok</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Attributes.operations" type="String">műveletek</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Operations.drawAttributes" type="String">tulajdonságokat megrajzol</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Operations.drawOperations" type="String">műveleteket megrajzol</Resource>
+    
+    <Resource key="HierarchicalMenuWidgetDocument.exampleDescription" type="String">leírás</Resource>
+    <Resource key="HierarchicalMenuWidgetDocument.introduction" type="String">bevezetés</Resource>
+    <Resource key="HierarchicalMenuWidgetDocument.subTitle" type="String">Hierarhikus menu</Resource>
+    <Resource key="HierarchicalMenuWidgetDocument.title" type="String">Felhasználói komponens</Resource>
+    
+    <Resource key="MenuExample.mainItemOne" type="String">Fő menü egy</Resource>
+    <Resource key="MenuExample.mainItemTwo" type="String">Fő menü kettő</Resource>
+    <Resource key="MenuExample.mainItemThree" type="String">Fő menü három</Resource>
+    <Resource key="MenuExample.itemOne" type="String">Menü elem egy</Resource>
+    <Resource key="MenuExample.itemTwo" type="String">Menü elem kettő</Resource>
+    <Resource key="MenuExample.itemThree" type="String">Menü elem három</Resource>
+    
+    <Resource key="TreeWidget.Branch1" type="String">Mappa egy</Resource>
+    <Resource key="TreeWidget.Branch1-1" type="String">Almappa egy</Resource>
+    <Resource key="TreeWidget.Branch2" type="String">Mappa kettő</Resource>
+    <Resource key="TreeWidget.Document1" type="String">Dokumentum egy</Resource>
+    <Resource key="TreeWidget.Document2" type="String">Dokumentum kettő</Resource>
+    <Resource key="TreeWidget.Document3" type="String">Dokumentum három</Resource>
+    <Resource key="TreeWidget.Document4" type="String">Dokumnetum négy</Resource>
+    <Resource key="TreeWidget.Document5" type="String">Dokumentum öt</Resource>
+    <Resource key="TreeWidget.Document6" type="String">Dokumentum hat</Resource>
+  </Language>
+</pp:Resources>

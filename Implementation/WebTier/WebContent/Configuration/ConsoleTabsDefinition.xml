@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<td:tabsDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:td="http://www.processpuzzle.com/TabsDefinition" 
+   xsi:schemaLocation="http://www.processpuzzle.com/TabsDefinition http://processpuzzle.com/Schemas/TabsDefinition.xsd">
+	
+	<td:tabs>
+		<td:tab tabId="ConsoleTab.properties" caption="ConsoleTabs.properties">
+         <pp:messageProperties>{ activityType : AbstractDocument.Activity.LOAD_DOCUMENT, documentURI : 'Content/System/DocumentPropertiesDefinition.xml', documentContentURI : 'Content/System/DocumentProperties', documentType : AbstractDocument.Types.SMART }</pp:messageProperties>         
+      </td:tab>
+		<td:tab tabId="ConsoleTab.comments" caption="ConsoleTabs.comments" isDefault="true">
+         <pp:messageProperties>{ activityType : AbstractDocument.Activity.LOAD_DOCUMENT, documentURI : 'Content/System/DocumentCommentsDefinition.xml', documentType : AbstractDocument.Types.SMART }</pp:messageProperties>         
+      </td:tab>
+		<td:tab tabId="ConsoleTab.todo" caption="ConsoleTabs.todo">
+         <pp:messageProperties>{ activityType : AbstractDocument.Activity.LOAD_DOCUMENT, documentURI : 'Content/System/PersonalToDoListDefinition.xml', documentContentURI : 'Content/System/Workflow.xml', documentType : AbstractDocument.Types.SMART }</pp:messageProperties>         
+      </td:tab>
+	</td:tabs>
+	
+</td:tabsDefinition>

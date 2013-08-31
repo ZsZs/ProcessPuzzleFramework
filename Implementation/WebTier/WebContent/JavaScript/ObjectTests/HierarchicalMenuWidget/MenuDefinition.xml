@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:menuDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:md="http://www.processpuzzle.com/MenuDefinition"
+	xsi:schemaLocation="http://www.processpuzzle.com/MenuDefinition http://processpuzzle.com/Schemas/MenuDefinition.xsd">
+	
+	<md:menuItem menuItemId="MenuWidget">
+		<md:menuItem menuItemId="mainItemOne" caption="HierarchicalMenuWidget.mainItemOne" isDefault="true">
+			<pp:messageProperties>{actionType : 'loadMenu'}</pp:messageProperties>			
+				
+			<md:menuItem menuItemId="itemOneOfOne" caption="HierarchicalMenuWidget.itemOne" isDefault="true">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentOne'}</pp:messageProperties>			
+			</md:menuItem>
+			
+			<md:menuItem menuItemId="itemTwoOfOne" caption="HierarchicalMenuWidget.itemTwo">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentTwo'}</pp:messageProperties>
+			</md:menuItem>
+			
+			<md:menuItem menuItemId="itemThreeOfOne" caption="HierarchicalMenuWidget.itemThree">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentThree'}</pp:messageProperties>
+			</md:menuItem>
+		</md:menuItem>
+		
+		<md:menuItem menuItemId="mainItemTwo" caption="HierarchicalMenuWidget.mainItemTwo" isDefault="true">
+			<pp:messageProperties>{actionType : 'loadMenu'}</pp:messageProperties>			
+				
+			<md:menuItem menuItemId="itemOneOfTwo" caption="HierarchicalMenuWidget.itemOne">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentOne'}</pp:messageProperties>			
+			</md:menuItem>
+			
+			<md:menuItem menuItemId="itemTwoOfTwo" caption="HierarchicalMenuWidget.itemTwo" isDefault="true">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentTwo'}</pp:messageProperties>
+			</md:menuItem>
+			
+			<md:menuItem menuItemId="itemThreeOfTwo" caption="HierarchicalMenuWidget.itemThree">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentThree'}</pp:messageProperties>
+			</md:menuItem>
+		</md:menuItem>
+		
+		<md:menuItem menuItemId="mainItemThree" caption="HierarchicalMenuWidget.mainItemThree">
+			<pp:messageProperties>{actionType : 'loadMenu'}</pp:messageProperties>			
+				
+			<md:menuItem menuItemId="itemOneOfThree" caption="HierarchicalMenuWidget.itemOne">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentOne'}</pp:messageProperties>			
+			</md:menuItem>
+			
+			<md:menuItem menuItemId="itemTwoOfThree" caption="HierarchicalMenuWidget.itemTwo">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentTwo'}</pp:messageProperties>
+			</md:menuItem>
+			
+			<md:menuItem menuItemId="itemThreeOfThree" caption="HierarchicalMenuWidget.itemThree" isDefault="true">
+				<pp:messageProperties>{actionType : 'loadDocument', documentURI : 'Content/SampleContentThree'}</pp:messageProperties>
+			</md:menuItem>
+		</md:menuItem>
+	</md:menuItem>
+</md:menuDefinition>

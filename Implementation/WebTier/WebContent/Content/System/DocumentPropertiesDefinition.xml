@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   
+   <sd:name>Document Properties Document</sd:name>
+   <sd:description>Shows the properties of the selected document.</sd:description>
+   <sd:version>0.5</sd:version>
+   
+   <sd:resources>
+      <sd:styleSheets></sd:styleSheets>
+      <sd:images></sd:images>
+      <sd:javaScripts></sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentHeader tag="div" id="propertiesHeader">
+      <sd:compositeElement tag="div" id="headerWrapper">
+         <sd:element tag="h3">DocumentProperties.title</sd:element>
+      </sd:compositeElement>
+   </sd:documentHeader>
+   
+   <sd:documentBody tag="div" id="propertiesBody">
+      <sd:formElement id="documentProperties" method="post" bind="/documentProperties">
+         <sd:formField id="link" label="DocumentProperties.properties.uri" bind="/documentProperties/uri"/>
+         <sd:formField id="description" label="DocumentProperties.properties.title" bind="/documentProperties/title"/>
+         <sd:formField id="language" label="DocumentProperties.properties.subject" bind="/documentProperties/subject"/>
+         <sd:formField id="pubDate" label="DocumentProperties.properties.created" bind="/documentProperties/created"/>
+         <sd:formField id="lastBuildDate" label="DocumentProperties.properties.lastModified" bind="/documentProperties/lastModified"/>
+      </sd:formElement>
+   </sd:documentBody>   
+</sd:smartDocumentDefinition>

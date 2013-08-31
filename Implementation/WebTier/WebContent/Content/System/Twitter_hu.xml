@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pn:rss version="2.0" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pn="http://www.processpuzzle.com/PartyNews"
+   xsi:schemaLocation="http://www.processpuzzle.com/PartyNews http://processpuzzle.com/Schemas/PartyNews.xsd">
+   <pn:channel>
+      <pn:title>Twitter üzenetek</pn:title>
+      <pn:link>https://www.facebook.com/groups/processpuzzle/</pn:link>
+      <pn:description>ProcessPuzzle - Facebook group</pn:description>
+      <pn:language>hu-HU</pn:language>
+      <pn:pubDate>Mon, 13 March 2012, 04:00:00 GMT</pn:pubDate>
+      <pn:lastBuildDate>Mon, 13 March 2012, 04:00:00 GMT</pn:lastBuildDate>
+      <pn:docs>https://www.facebook.com/groups/processpuzzle/rss</pn:docs>
+      <pn:generator>Weblog Editor 2.0</pn:generator>
+      <pn:managingEditor>zsolt.zsuffa@itkodex.hu</pn:managingEditor>
+      <pn:webMaster>peter.krima@itkodex.hu</pn:webMaster>    
+    
+      <pn:item>
+         <pn:title>@zsuffazs</pn:title>
+         <pn:link>https://twitter.com/#!/zsuffazs</pn:link>
+         <pn:description>
+            Refactoring TreeWidget of #ProcessPuzzleUI. Funny how much my design style change int the last few years.
+         </pn:description>
+         <pn:pubDate>Mon, 05 March 2012, 09:39:21 GMT</pn:pubDate>
+         <pn:guid>http://processpuzzle.com#item575</pn:guid>
+      </pn:item>  
+      
+      <pn:item>
+         <pn:title>@zsuffazs</pn:title>
+         <pn:link>https://twitter.com/#!/zsuffazs</pn:link>
+         <pn:description>
+            The hype around new languages, platforms reminds me to politicians who starts to reorganize government if they've no idea what to do.
+         </pn:description>
+         <pn:pubDate>Mon, 05 March 2012, 09:39:21 GMT</pn:pubDate>
+         <pn:guid>http://processpuzzle.com#item575</pn:guid>
+      </pn:item>  
+      
+  </pn:channel>  
+</pn:rss>

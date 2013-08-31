@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   
+   <sd:name>News Details</sd:name>
+   <sd:description>Presents all the details of a single news.</sd:description>
+   <sd:version>0.5</sd:version>
+   
+   <sd:resources>
+      <sd:styleSheets></sd:styleSheets>
+      <sd:images></sd:images>
+      <sd:javaScripts></sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentBody tag="div" id="newsDocumentBody">
+      <sd:dataElement tag="h1" elementStyle="title" id="itemTitle" bind="/pn:rss/pn:channel/pn:item[{index}]/pn:title"/>
+      <sd:compositeDataElement tag="div" id="channelItemsContainer" bind="/pn:rss/pn:channel/pn:item[{index}]" maxOccures="unbounded">
+         <sd:dataElement tag="p" elementStyle="description" id="itemDescription" bind="/pn:rss/pn:channel/pn:item[{index}]/pn:description"/>
+         <sd:formElement id="newsProperties" method="post" bind="/pn:rss/pn:channel/pn:item[{index}]">
+            <sd:formField id="publicationDate" label="NewsWidget.publicationDate" bind="/pn:rss/pn:channel/pn:item[{index}]/pn:pubDate"/>
+            <sd:formField id="link" label="NewsWidget.link" bind="/pn:rss/pn:channel/pn:item[{index}]/pn:guid"/>
+         </sd:formElement>
+      </sd:compositeDataElement>
+   </sd:documentBody>
+   
+</sd:smartDocumentDefinition>

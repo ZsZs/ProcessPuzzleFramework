@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   <sd:name>Test Smart Document</sd:name>
+   <sd:description>This configuration supports testing Smart Document.</sd:description>
+   <sd:version>0.5</sd:version>
+   
+   <sd:resources>
+      <sd:styleSheets>
+         <sd:styleSheet>DummyCSS.css</sd:styleSheet>
+         <sd:styleSheet>../JsUnit/css/jsUnitStyle.css</sd:styleSheet>
+      </sd:styleSheets>
+
+      <sd:images>
+         <sd:image id="logoImage" title="ProcessPuzzle">../SmartDocument/Images/ProcessPuzzleLogo.jpg</sd:image>
+      </sd:images>
+      
+      <sd:javaScripts>
+         <sd:javaScript>../ResourceManager/DummyScript.js</sd:javaScript>
+         <sd:javaScript>../ResourceManager/ResourceManager.js</sd:javaScript>
+      </sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentHeader tag="div" id="smartDocumentHeader">
+      <sd:compositeElement tag="div" id="headerWrapper">
+         <sd:element tag="h1" elementStyle="headerText" id="SmartDocumentTitle" href="http://opensource.processpuzzle.com">SmartDocument.headerText</sd:element>
+      </sd:compositeElement>
+   </sd:documentHeader>
+   
+   <sd:documentBody tag="div" id="smartDocumentBody">
+      <sd:compositeElement tag="div" id="bodyWrapper">
+         <sd:dataElement tag="h2" elementStyle="channelTitle" id="title" bind="/rss/channel/title"/>
+         <sd:compositeElement tag="ul" id="channelProperties">
+	         <sd:dataElement tag="li" elementStyle="property" id="link" bind="/rss/channel/link"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="description" bind="/rss/channel/description"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="language" bind="/rss/channel/language"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="pubDate" bind="/rss/channel/pubDate"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="lastBuildDate" bind="/rss/channel/lastBuildDate"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="docs" bind="/rss/channel/docs"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="generator" bind="/rss/channel/generator"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="managingEditor" bind="/rss/channel/managingEditor"/>
+	         <sd:dataElement tag="li" elementStyle="property" id="webMaster" bind="/rss/channel/webMaster"/>
+         </sd:compositeElement>
+         <sd:element  tag="h4" id="channelItems">SmartDocument.itemsTitle</sd:element>
+         <sd:compositeDataElement tag="ul" id="channelItemsContainer" bind="/rss/channel/item" maxOccures="unbounded">
+	         <sd:dataElement tag="li" elementStyle="title" id="itemTitle" bind="/rss/channel/item[{index}]/title"/>
+	         <sd:dataElement tag="li" elementStyle="description" id="itemDescription" bind="/rss/channel/item[{index}]/description"/>
+         </sd:compositeDataElement>
+      </sd:compositeElement>
+      <sd:element tag="p" id="copyright" href="http://www.processpuzzle.com">SmartDocument.copyright</sd:element>
+   </sd:documentBody>
+   
+   <sd:documentFooter tag="div" id="newsReaderFooter">
+      <sd:compositeElement tag="div" id="footerWrapper">
+         <sd:element tag="h1" elementStyle="footerText" id="headerText" href="http://opensource.processpuzzle.com">Visit Open Source ProcessPuzzle</sd:element>
+      </sd:compositeElement>
+   </sd:documentFooter>
+</sd:smartDocumentDefinition>

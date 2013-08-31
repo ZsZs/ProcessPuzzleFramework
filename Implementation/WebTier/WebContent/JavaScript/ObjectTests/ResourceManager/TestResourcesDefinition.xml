@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:abstractDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/AbstractDocument.xsd">
+   <sd:name>Test Smart Document</sd:name>
+   <sd:description>This configuration supports testing Smart Document.</sd:description>
+   <sd:version>0.5</sd:version>
+   
+   <sd:resources>
+      <sd:styleSheets>
+         <sd:styleSheet>../ResourceManager/DummyCSS.css</sd:styleSheet>
+      </sd:styleSheets>
+
+      <sd:images>
+         <sd:image id="logoImage" title="ProcessPuzzle">../SmartDocument/Images/ProcessPuzzleLogo.jpg</sd:image>
+      </sd:images>
+      
+      <sd:javaScripts>
+         <sd:javaScript>../ResourceManager/DummyScript.js</sd:javaScript>
+         <sd:javaScript>../../Source/LanguageSelectorWidget/LanguageChangedMessage.js</sd:javaScript>
+      </sd:javaScripts>
+   </sd:resources>
+</sd:abstractDocumentDefinition>

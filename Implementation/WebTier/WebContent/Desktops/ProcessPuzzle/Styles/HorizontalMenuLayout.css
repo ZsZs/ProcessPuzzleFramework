@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+#HorizontalMenuBar {
+   background:url("../Images/HorizontalMenuBackground-Right-Normal.jpg");
+   background-repeat: no-repeat;
+   background-position: left;
+   background-position-x: -153px;
+   background-position-y: 2px;
+	left: 206px;
+	height: 30px;
+	line-height: normal;
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+}
+
+#HorizontalMenuBar ul {
+   margin: 0px;
+   padding: 0px;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+#HorizontalMenuBar li {
+	float: left;
+	background:url("../Images/HorizontalMenuBackground-Right-Normal.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	margin-left: 3px;
+	margin-right: -8px;
+	padding: 0px;
+}
+
+#HorizontalMenuBar a {
+	display: block;
+	background:url("../Images/HorizontalMenuBackground-Left-Normal.gif");
+	background-repeat: no-repeat;
+	background-position: left;
+   font-weight: bold;
+   margin-left: -11px;
+	margin-right: -9px;
+	padding-left: 20px;
+	padding-right: 25px;
+	padding-bottom: 8px;
+	padding-top: 7px;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	width: 130px;
+}
+
+#HorizontalMenuBar li a:hover {
+	color: #FFFF00;
+}
+
+#HorizontalMenuBar .selectedMenuItem {
+	color: yellow;
+	background-image:url("../Images/HorizontalMenuBackground-Right-Selected.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	margin-left: 3px;
+	margin-right: -7px;
+}
+
+#HorizontalMenuBar .selectedMenuItem a {
+	background-image:url("../Images/HorizontalMenuBackground-Left-Selected.gif");
+	background-repeat: no-repeat;
+	background-position: left;
+	margin-left: -9px;
+	margin-right: -9px;
+	padding-left: 20px;
+	padding-right: 25px;
+	padding-bottom: 8px;
+	padding-top: 8px
+}

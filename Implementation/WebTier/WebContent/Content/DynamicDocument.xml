@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sd:smartDocumentDefinition 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:pp="http://www.processpuzzle.com" 
+   xmlns:sd="http://www.processpuzzle.com/SmartDocument" 
+   xsi:schemaLocation="http://www.processpuzzle.com/SmartDocument http://processpuzzle.com/Schemas/SmartDocument.xsd">
+   
+   <sd:name>Static Document</sd:name>
+   <sd:description>Demonstrates static content of a Smart Document.</sd:description>
+   <sd:version>0.5</sd:version>
+   
+   <sd:resources>
+      <sd:styleSheets><sd:styleSheet>Desktops/ProcessPuzzle/Styles/DynamicDocument.css</sd:styleSheet></sd:styleSheets>
+      <sd:images></sd:images>
+      <sd:javaScripts></sd:javaScripts>
+   </sd:resources>
+
+   <sd:documentHeader tag="div" id="dynamicDocumentHeader">
+      <sd:compositeElement tag="div" id="headerWrapper">
+         <sd:element tag="h1">DynamicDocument.title</sd:element>
+         <sd:element tag="h2">DynamicDocument.subTitle</sd:element>
+      </sd:compositeElement>
+   </sd:documentHeader>
+   
+   <sd:documentBody tag="div" id="smartDocumentBody">
+      <sd:element tag="p">DynamicDocument.introduction</sd:element>
+      <sd:element tag="p">DynamicDocument.exampleDescription</sd:element>
+      
+      <sd:dataElement tag="h2" id="title" elementStyle="channelTitle" bind="/pn:rss/pn:channel/pn:title"/>
+      <sd:formElement id="channelProperties" method="post" bind="/pn:rss/pn:channel">
+         <sd:formField id="link" label="DynamicDocument.RSS.link" bind="/pn:rss/pn:channel/pn:link"/>
+         <sd:formField id="description" label="DynamicDocument.RSS.description" bind="/pn:rss/pn:channel/pn:description"/>
+         <sd:formField id="language" label="DynamicDocument.RSS.language" bind="/pn:rss/pn:channel/pn:language"/>
+         <sd:formField id="pubDate" label="DynamicDocument.RSS.pubDate" bind="/pn:rss/pn:channel/pn:pubDate"/>
+         <sd:formField id="lastBuildDate" label="DynamicDocument.RSS.lastBuildDate" bind="/pn:rss/pn:channel/pn:lastBuildDate"/>
+         <sd:formField id="docs" label="DynamicDocument.RSS.docs" bind="/pn:rss/pn:channel/pn:docs"/>
+         <sd:formField id="generator" label="DynamicDocument.RSS.generator" bind="/pn:rss/pn:channel/pn:generator"/>
+         <sd:formField id="managingEditor" label="DynamicDocument.RSS.managingEditor" bind="/pn:rss/pn:channel/pn:managingEditor"/>
+         <sd:formField id="webMaster" label="DynamicDocument.RSS.webMaster" bind="/pn:rss/pn:channel/pn:webMaster"/>
+      </sd:formElement>
+      <sd:element  tag="h2" id="channelItems">DynamicDocument.itemsTitle</sd:element>
+      <sd:compositeDataElement tag="div" id="channelItemsContainer" bind="/pn:rss/pn:channel/pn:item[{index}]" maxOccures="unbounded">
+         <sd:dataElement tag="h4" elementStyle="title" id="itemTitle" bind="/pn:rss/pn:channel/pn:item[{index}]/pn:title"/>
+         <sd:dataElement tag="p" elementStyle="description" id="itemDescription" bind="/pn:rss/pn:channel/pn:item[{index}]/pn:description"/>
+      </sd:compositeDataElement>
+   </sd:documentBody>
+   
+   <sd:documentFooter tag="div" id="dinamicDocumentFooter">
+      <sd:compositeElement tag="div" id="footerWrapper">
+         <sd:element tag="h3">DynamicDocument.footer</sd:element>
+      </sd:compositeElement>
+   </sd:documentFooter>
+</sd:smartDocumentDefinition>

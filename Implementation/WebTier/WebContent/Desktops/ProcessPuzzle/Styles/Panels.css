@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+/*
+
+Panels.css for ProcessPuzzle.DesktopConfigurator
+
+Skin: ProcessPuzzle
+
+Copyright:
+	Copyright (c) 2012 IT Codex Llc, <http://itkodex.hu/>.
+	
+License:
+	MIT-style license.
+
+Required by:
+	DesktopConfigurator.js
+ 
+*/
+
+#documents-panel { 
+	overflow: hidden; 
+}
+
+.documentWrapper { 
+	background: transparent;
+	margin-left: 5px; 
+	margin-right: 5px; 
+	padding : 2px; 
+}
+
+.mooeditable-container { 
+   background: transparent;
+}
+
+.mooeditable-iframe { 
+   background: transparent;
+}
+
+.panelTabs {
+   background: url( ../Images/PanelTabs-Background.gif ) repeat-x;
+}

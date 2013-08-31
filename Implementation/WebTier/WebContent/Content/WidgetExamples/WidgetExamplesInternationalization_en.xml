@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file contains internalization resources for Desktop Configurator. -->
+<pp:Resources 
+	xmlns:pp="http://www.processpuzzle.com/ResourceBundle" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
+
+  <Language name="en">  
+    <Resource key="DiagramWidget.Annotation.text" type="String">This is an annotation. Makes possible to add notes to the diagram.</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.name" type="String">Diagram Figure</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Attributes.canvas" type="String">canvas</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Operations.construct" type="String">construct</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Operations.destroy" type="String">destroy</Resource>
+    <Resource key="DiagramWidget.ExampleClassOne.Operations.draw" type="String">draw</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.name" type="String">Class Figure</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Attributes.attributes" type="String">attributes</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Attributes.operations" type="String">operations</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Operations.drawAttributes" type="String">draw attributes</Resource>
+    <Resource key="DiagramWidget.ExampleClassTwo.Operations.drawOperations" type="String">draw operations</Resource>
+    
+    <Resource key="HierarchicalMenuWidgetDocument.exampleDescription" type="String">description</Resource>
+    <Resource key="HierarchicalMenuWidgetDocument.introduction" type="String">introduction</Resource>
+    <Resource key="HierarchicalMenuWidgetDocument.subTitle" type="String">Hierarhical Menu Widget</Resource>
+    <Resource key="HierarchicalMenuWidgetDocument.title" type="String">User Interface Widget</Resource>
+    
+    <Resource key="MenuExample.mainItemOne" type="String">Main Item One</Resource>
+    <Resource key="MenuExample.mainItemTwo" type="String">Main Item Two</Resource>
+    <Resource key="MenuExample.mainItemThree" type="String">Main Item Three</Resource>
+    <Resource key="MenuExample.itemOne" type="String">Menu Item One</Resource>
+    <Resource key="MenuExample.itemTwo" type="String">Menu Item Two</Resource>
+    <Resource key="MenuExample.itemThree" type="String">Menu Item Three</Resource>
+    
+    <Resource key="TreeWidget.Branch1" type="String">Folder one</Resource>
+    <Resource key="TreeWidget.Branch1-1" type="String">Nested folder one</Resource>
+    <Resource key="TreeWidget.Branch2" type="String">Folder two</Resource>
+    <Resource key="TreeWidget.Document1" type="String">Document one</Resource>
+    <Resource key="TreeWidget.Document2" type="String">Document two</Resource>
+    <Resource key="TreeWidget.Document3" type="String">Document three</Resource>
+    <Resource key="TreeWidget.Document4" type="String">Document four</Resource>
+    <Resource key="TreeWidget.Document5" type="String">Document five</Resource>
+    <Resource key="TreeWidget.Document6" type="String">Document six</Resource>
+  </Language>
+</pp:Resources>

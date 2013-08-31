@@ -6,27 +6,168 @@
 	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
 
   <Language name="hu">
-    <Resource key="DesktopConfigurator.desktopTitle" type="String"> </Resource>
+    <Resource key="CommunityTabs.faceBook" type="String">Facebook</Resource>
+    <Resource key="CommunityTabs.linkedIn" type="String">LinkedIn</Resource>
+    <Resource key="CommunityTabs.twitter" type="String">Twitter</Resource>
+    
+    <Resource key="DesktopConfigurator.desktopTitle" type="String">ProcessPuzzle</Resource>
     <Resource key="DesktopConfigurator.desktopSubTitle" type="String">Munkafolyamat- és tartalomkezelő üzleti platform</Resource>
     <Resource key="DesktopConfigurator.navigationBar" type="String">Navigációs sáv</Resource>
-    <Resource key="DesktopConfigurator.footerText" type="String">ProcessPuzzle-l támogatva - Minden jog fenntartva 2005-2011, IT Kódex Kft.</Resource>
+    <Resource key="DesktopConfigurator.footerText" type="String">Saját webhely 5 perc alatt! - ProcessPuzzle, minden jog fenntartva 2005-2012, IT Kódex Kft.</Resource>
+    <Resource key="DesktopConfigurator.Panel.comunityTitle" type="String">Közösségi háló</Resource>
+    <Resource key="DesktopConfigurator.Panel.consoleTitle" type="String">Konzol</Resource>
     <Resource key="DesktopConfigurator.Panel.contentBrowserTitle" type="String">Tartalom böngésző</Resource>
     <Resource key="DesktopConfigurator.Panel.documentsTitle" type="String">Dokumentumok</Resource>
-    <Resource key="DesktopConfigurator.Panel.consoleTitle" type="String">Konzol</Resource>
+    <Resource key="DesktopConfigurator.Panel.eventsTitle" type="String">Közeli események</Resource>
     <Resource key="DesktopConfigurator.Panel.menusTitle" type="String">Menük</Resource>
+    <Resource key="DesktopConfigurator.Panel.newsTitle" type="String">Friss hírek</Resource>
+    <Resource key="DesktopConfigurator.Panel.relationshipsTitle" type="String">Kapcsolatok</Resource>
     <Resource key="DesktopConfigurator.Panel.tipsTitle" type="String">Tippek</Resource>
     <Resource key="DesktopConfigurator.Panel.whoIsIn" type="String">Ki van bent?</Resource>
 
-    <Resource key="HierarchicalMenuWidget.yourMenu" type="String">Te menüd</Resource>
-    <Resource key="HierarchicalMenuWidget.yourMenu.sampleDocument" type="String">Példa dokumentum</Resource>
+    <Resource key="DesktopNotification.TextAreaEditor.selectionNeeded" type="String">Válasszon ki szöveget, vagy képet.</Resource>
+    <Resource key="DesktopNotification.underDevelopment" type="String">A kért funkció még fejlesztés alatt áll, kérjük próbálja meg néhány nap múlva.</Resource>
 
-    <Resource key="HierarchicalMenuWidget.administration" type="String">Adminisztráció</Resource>
-    <Resource key="HierarchicalMenuWidget.administration.users" type="String">Felhasználók</Resource>
+    <Resource key="DesktopWindow.about.title" type="String">ProcessPuzzle névjegy</Resource>
+    <Resource key="DesktopWindow.documentExplorer.title" type="String">Dokumentum intéző</Resource>
 
+    <Resource key="DiagramDocument.title" type="String">Okos dokumentum beágyazott diagrammal</Resource>
+    <Resource key="DiagramDocument.introduction" type="String">...</Resource>
+    <Resource key="DiagramDocument.exampleDescription" type="String">...</Resource>
+    <Resource key="DiagramDocument.footer" type="String">ProcessPuzzle - Windows szerű, háttér rendszer független, böngészős felhasználói felület.</Resource>
+    <Resource key="DiagramDocument.subTitle" type="String">Okos dokumentum példa</Resource>
+    
+    <Resource key="DiagramWidget.title" type="String">Sample UML Diagram</Resource>
+    <Resource key="DiagramWidget.description" type="String">Nos, ez egy nagyon egyszerű diagram.</Resource>
+    <Resource key="DiagramWidget.annotation.text" type="String">Ez a diagram Diagram felhasználói felület komponens funkcionalitását demonstrálja.</Resource>
+    
+    <Resource key="DocumentComments.introduction" type="String">Megjegyzések a kiválasztott dokumentumhoz.</Resource>
+    <Resource key="DocumentComments.title" type="String">Megjegyzések</Resource>
+    
+    <Resource key="DocumentEditorToolBar.bold" type="String">Félkövér</Resource>
+    <Resource key="DocumentEditorToolBar.italic" type="String">Dőlt</Resource>
+    <Resource key="DocumentEditorToolBar.underline" type="String">Aláhúzott</Resource>
+    <Resource key="DocumentEditorToolBar.strikethrough" type="String">Áthúzott</Resource>
+    <Resource key="DocumentEditorToolBar.unorderedList" type="String">Lista</Resource>
+    <Resource key="DocumentEditorToolBar.orderedList" type="String">Számozott lista</Resource>
+    <Resource key="DocumentEditorToolBar.indent" type="String">Behúzás balra</Resource>
+    <Resource key="DocumentEditorToolBar.outdent" type="String">Behúzás jobbra</Resource>
+    <Resource key="DocumentEditorToolBar.alignCenter" type="String">Középre</Resource>
+    <Resource key="DocumentEditorToolBar.alignJustify" type="String">Sorkizárt</Resource>
+    <Resource key="DocumentEditorToolBar.alignLeft" type="String">Balra</Resource>
+    <Resource key="DocumentEditorToolBar.alignRight" type="String">Jobbra</Resource>
+    <Resource key="DocumentEditorToolBar.undo" type="String">Visszavon</Resource>
+    <Resource key="DocumentEditorToolBar.redo" type="String">Mégis</Resource>
+    <Resource key="DocumentEditorToolBar.addLink" type="String">Hivatkozás</Resource>
+    <Resource key="DocumentEditorToolBar.removeLink" type="String">Hivatkozás visszavonása</Resource>
+    <Resource key="DocumentEditorToolBar.addImage" type="String">Kép hozzáadása</Resource>
+    <Resource key="DocumentEditorToolBar.toggleView" type="String">Nézet</Resource>
+
+    <Resource key="DocumentProperties.introduction" type="String">A kiválasztott dokumentum tulajdonságai.</Resource>
+    <Resource key="DocumentProperties.title" type="String">Dokumentum tulajdonságok</Resource>
+    <Resource key="DocumentProperties.properties.uri" type="String">azonosító:</Resource>
+    <Resource key="DocumentProperties.properties.title" type="String">cím:</Resource>
+    <Resource key="DocumentProperties.properties.subject" type="String">tárgy:</Resource>
+    <Resource key="DocumentProperties.properties.created" type="String">létrehozva:</Resource>
+    <Resource key="DocumentProperties.properties.lastModified" type="String">utoljára módosítva:</Resource>
+    
+    <Resource key="DynamicDocument.exampleDescription" type="String">Az alábbi szöveg egy RSS.xml tartalmának a beolvasásával jelenik meg. Mivel hír (item) ismétlődő elem, ezért ebből annyi jelenik meg amennyit a tartalomforrás magában foglal.</Resource>
+    <Resource key="DynamicDocument.footer" type="String">ProcessPuzzle - Windows szerű, háttér rendszer független, böngészős felhasználói felület</Resource>
+    <Resource key="DynamicDocument.introduction" type="String">Ez a példa egy olyan Okos dokumentum, amely a tartalmat egy xml adatforrásból jeleníti meg. 
+    Amennyiben a dokumentum definícióban ez engedélyezett, az ismétlődő tartalmi elemeket a dokumentum is többször jeleníti meg. Ez a tartalom, szerkeszthető, módosítható.
+    A nemzetköziesítés a tartalom xml nyelvi változataival történik.</Resource>
+    <Resource key="DynamicDocument.itemsTitle" type="String">Hírek:</Resource>
+    <Resource key="DynamicDocument.subTitle" type="String">Okos dokumentum példa</Resource>
+    <Resource key="DynamicDocument.title" type="String">Dinamikus dokumentum</Resource>
+    <Resource key="DynamicDocument.RSS.link" type="String">hivatkozás: </Resource>
+    <Resource key="DynamicDocument.RSS.description" type="String">leírás: </Resource>
+    <Resource key="DynamicDocument.RSS.language" type="String">nyelv: </Resource>
+    <Resource key="DynamicDocument.RSS.pubDate" type="String">publikálva: </Resource>
+    <Resource key="DynamicDocument.RSS.lastBuildDate" type="String">generálva: </Resource>
+    <Resource key="DynamicDocument.RSS.docs" type="String">cím: </Resource>
+    <Resource key="DynamicDocument.RSS.generator" type="String">generátor: </Resource>
+    <Resource key="DynamicDocument.RSS.managingEditor" type="String">főszerkesztő: </Resource>
+    <Resource key="DynamicDocument.RSS.webMaster" type="String">webmester: </Resource>
+
+    <Resource key="ErrorDocument.title" type="String">Működési probléma</Resource>
+    <Resource key="ErrorDocument.introduction" type="String">Sajnáljuk, az adott tartalom megjelenítése során működési hiba lépett fel.</Resource>
+
+    <Resource key="EventWidget.endDate" type="String">Befejeződik:</Resource>
+    <Resource key="EventWidget.isFullDay" type="String">Egésznapos:</Resource>
+    <Resource key="EventWidget.isMultipleDay" type="String">Többnapos:</Resource>
+    <Resource key="EventWidget.language" type="String">Nyelv:</Resource>
+    <Resource key="EventWidget.location" type="String">Hely:</Resource>
+    <Resource key="EventWidget.program" type="String">Program:</Resource>
+    <Resource key="EventWidget.recurrence" type="String">Ismétlődés:</Resource>
+    <Resource key="EventWidget.registration" type="String">Jelentkezés:</Resource>
+    <Resource key="EventWidget.schedule" type="String">Időpont:</Resource>
+    <Resource key="EventWidget.startDate" type="String">Kezdődik:</Resource>
+    <Resource key="EventWidget.title" type="String">Események</Resource>
+
+    <Resource key="WebUIMenu.administration" type="String">Adminisztráció</Resource>
+    <Resource key="WebUIMenu.administration.about" type="String">Névjegy</Resource>
+    <Resource key="WebUIMenu.administration.mochaUiSkin" type="String">MochaUI felület</Resource>
+    <Resource key="WebUIMenu.administration.processPuzzleSkin" type="String">ProcessPuzzle felület</Resource>
+    <Resource key="WebUIMenu.administration.users" type="String">Felhasználók</Resource>
+    
+    <Resource key="WebUIMenu.documentExamples" type="String">Okos dokumentum</Resource>
+    <Resource key="WebUIMenu.documentExamples.htmlContent" type="String">HTML tartalom</Resource>
+    <Resource key="WebUIMenu.documentExamples.staticDocument" type="String">Statikus dokumentum</Resource>
+    <Resource key="WebUIMenu.documentExamples.diagram" type="String">Diagram</Resource>
+    <Resource key="WebUIMenu.documentExamples.dynamicDocument" type="String">Dinamikus dokumentum</Resource>
+    <Resource key="WebUIMenu.documentExamples.photoAlbum" type="String">Fotó album</Resource>
+    <Resource key="WebUIMenu.documentExamples.taskDetail" type="String">Feladat részletek</Resource>
+    <Resource key="WebUIMenu.documentExamples.taskList" type="String">Feladat lista</Resource>
+    <Resource key="WebUIMenu.documentExamples.videoAlbum" type="String">Videó album</Resource>
+    <Resource key="WebUIMenu.documentExamples.workflowManagement" type="String">Munkafolyamat kezelés</Resource>
+
+    <Resource key="WebUIMenu.widgets" type="String">Komponensek</Resource>
+    <Resource key="WebUIMenu.widgets.eventsReader" type="String">Esemény napló</Resource>
+    <Resource key="WebUIMenu.widgets.menuWidget" type="String">Menü</Resource>
+    <Resource key="WebUIMenu.widgets.newsReader" type="String">Hírolvasó</Resource>
+    <Resource key="WebUIMenu.widgets.treeView" type="String">Fa szerkezet</Resource>
+    
     <Resource key="LanguageSelectorWidget.en" type="String">angol</Resource>
     <Resource key="LanguageSelectorWidget.hu" type="String">magyar</Resource>
     <Resource key="LanguageSelectorWidget.select" type="String">Válasszon nyelvet:</Resource>
 
+    <Resource key="NewsWidget.link" type="String">Hivatkozás:</Resource>
+    <Resource key="NewsWidget.publicationDate" type="String">Publikálva:</Resource>
+      
+    <Resource key="PhotoGaleryDocument.title" type="String">Dokumentum beépülő modullal</Resource>
+    <Resource key="PhotoGaleryDocument.introduction" type="String">Egy okos dokumentumba tetszőleges számú modul építhető be. A beépülő modulok többnyire speciális módon jelenítenek meg tartamat.</Resource>
+    <Resource key="PhotoGaleryDocument.exampleDescription" type="String">A lenti példa egy slide show modul bepítését szemlélteti.</Resource>
+    <Resource key="PhotoGaleryDocument.footer" type="String">ProcessPuzzle - Windows szerű, háttér rendszer független, böngészős felhasználói felület</Resource>
+    <Resource key="PhotoGaleryDocument.subTitle" type="String">Okos dokumentum példa</Resource>
+    
+    <Resource key="PersonalToDoList.activityDescription" type="String">Leírás</Resource>
+    <Resource key="PersonalToDoList.activityDuration" type="String">Tartam</Resource>
+    <Resource key="PersonalToDoList.activityName" type="String">Megnevezés</Resource>
+    <Resource key="PersonalToDoList.introduction" type="String">A bejelentkezett személy feladat listája.</Resource>
+    <Resource key="PersonalToDoList.title" type="String">Személyes feladat lista</Resource>
+    
     <Resource key="SkinSelectorWidget.select" type="String">Válasszon megjelenést:</Resource>
+
+    <Resource key="StaticDocument.exampleDescription" type="String">Ennek a dokumentumnak az összes eleme példa a statikus tartalom megjelenítésére.</Resource>
+    <Resource key="StaticDocument.footer" type="String">ProcessPuzzle - Windows szerű, háttér rendszer független, böngészős felhasználói felület</Resource>
+    <Resource key="StaticDocument.introduction" type="String">Ez a példa egy olyan Okos dokumentum, amely csak statikus elemeket tartalmaz. Ezen tulajdonságok jellemzően dokumentum sablon létrehozásához használhatók.</Resource>
+    <Resource key="StaticDocument.subTitle" type="String">Okos dokumentum példa</Resource>
+    <Resource key="StaticDocument.title" type="String">Statikus dokumentum</Resource>
+    
+    <Resource key="TreeWidgetDocument.exampleDescription" type="String"></Resource>
+    <Resource key="TreeWidgetDocument.footer" type="String"></Resource>
+    <Resource key="TreeWidgetDocument.introduction" type="String"></Resource>
+    <Resource key="TreeWidgetDocument.subTitle" type="String">Okos dokumentum példa</Resource>
+    <Resource key="TreeWidgetDocument.title" type="String">Fa szerkezetet tartalmazó dokumentum</Resource>
+    
+    <!-- Workflow -->
+    <!-- Activity Detail -->
+    <Resource key="Workflow.ActivityDetail.duration" type="String">Tartam:</Resource>
+    <Resource key="Workflow.ActivityDetail.inputs" type="String">Felhasznált dokumentumok</Resource>
+    <Resource key="Workflow.ActivityDetail.Inputs.name" type="String">Megnevezés</Resource>
+    <Resource key="Workflow.ActivityDetail.outputs" type="String">Eredmények</Resource>
+    <Resource key="Workflow.ActivityDetail.Outputs.name" type="String">Megnevezés</Resource>
+    <Resource key="Workflow.ActivityDetail.performerParty" type="String">Végrehajtó:</Resource>
+    <Resource key="Workflow.ActivityDetail.performerRole" type="String">Végreható szerep:</Resource>
   </Language>
 </pp:Resources>

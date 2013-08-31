@@ -5,28 +5,170 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.processpuzzle.com/ResourceBundle http://www.processpuzzle.com/Schemas/ResourceBundle.xsd ">
 
-  <Language name="en">
-    <Resource key="DesktopConfigurator.desktopTitle" type="String"> </Resource>
+  <Language name="en">  
+    <Resource key="CommunityTabs.faceBook" type="String">Facebook</Resource>
+    <Resource key="CommunityTabs.linkedIn" type="String">LinkedIn</Resource>
+    <Resource key="CommunityTabs.twitter" type="String">Twitter</Resource>
+    
+    <Resource key="DesktopConfigurator.desktopTitle" type="String">ProcessPuzzle</Resource>
     <Resource key="DesktopConfigurator.desktopSubTitle" type="String">Workflow and Content Management Business Platform</Resource>
     <Resource key="DesktopConfigurator.navigationBar" type="String">Navigation Bar</Resource>
-    <Resource key="DesktopConfigurator.footerText" type="String">Powered by ProcessPuzzle - Copyright 2005-2011, IT Codex Llc.</Resource>
+    <Resource key="DesktopConfigurator.footerText" type="String">Create your own website in 5 min! - ProcessPuzzle, copyright 2005-2012, IT Codex Llc.</Resource>
+    <Resource key="DesktopConfigurator.Panel.comunityTitle" type="String">Social Network</Resource>
+    <Resource key="DesktopConfigurator.Panel.consoleTitle" type="String">Console</Resource>
     <Resource key="DesktopConfigurator.Panel.contentBrowserTitle" type="String">Content Browser</Resource>
     <Resource key="DesktopConfigurator.Panel.documentsTitle" type="String">Documents</Resource>
-    <Resource key="DesktopConfigurator.Panel.consoleTitle" type="String">Console</Resource>
+    <Resource key="DesktopConfigurator.Panel.eventsTitle" type="String">Upcoming Events</Resource>
     <Resource key="DesktopConfigurator.Panel.menusTitle" type="String">Menus</Resource>
+    <Resource key="DesktopConfigurator.Panel.newsTitle" type="String">Top News</Resource>
+    <Resource key="DesktopConfigurator.Panel.relationshipsTitle" type="String">Relationships</Resource>
     <Resource key="DesktopConfigurator.Panel.tipsTitle" type="String">Tips</Resource>
     <Resource key="DesktopConfigurator.Panel.whoIsIn" type="String">Who is in?</Resource>
+    
+    <Resource key="DesktopNotification.TextAreaEditor.selectionNeeded" type="String">Please select text or image.</Resource>
+    <Resource key="DesktopNotification.underDevelopment" type="String">Requested feature is under development, please try again after a few days.</Resource>
+    
+    <Resource key="DesktopWindow.about.title" type="String">About ProcessPuzzle</Resource>
+    <Resource key="DesktopWindow.documentExplorer.title" type="String">Document Explorer</Resource>
 
-    <Resource key="HierarchicalMenuWidget.yourMenu" type="String">Your Menu</Resource>
-    <Resource key="HierarchicalMenuWidget.yourMenu.sampleDocument" type="String">Sample Document</Resource>
+    <Resource key="DiagramDocument.title" type="String">Document with embedded Diagram widget</Resource>
+    <Resource key="DiagramDocument.introduction" type="String">...</Resource>
+    <Resource key="DiagramDocument.exampleDescription" type="String">...</Resource>
+    <Resource key="DiagramDocument.footer" type="String">ProcessPuzzle - Desktop like, back-end agnostic browser interface.</Resource>
+    <Resource key="DiagramDocument.subTitle" type="String">Smart Document Example</Resource>
+    
+    <Resource key="DiagramWidget.description" type="String">Yeah, this is a very simple diagram.</Resource>
+    <Resource key="DiagramWidget.title" type="String">Sample UML Diagram</Resource>
+    <Resource key="DiagramWidget.annotation.text" type="String">This diagram demonstrates the functionality of Digram Widget.</Resource>
+    
+    <Resource key="DocumentComments.introduction" type="String">Comments of the active document.</Resource>
+    <Resource key="DocumentComments.title" type="String">Comments</Resource>
+    
+    <Resource key="DocumentEditorToolBar.bold" type="String">Bold</Resource>
+    <Resource key="DocumentEditorToolBar.italic" type="String">Italic</Resource>
+    <Resource key="DocumentEditorToolBar.underline" type="String">Underline</Resource>
+    <Resource key="DocumentEditorToolBar.strikethrough" type="String">Strikethrough</Resource>
+    <Resource key="DocumentEditorToolBar.unorderedList" type="String">Unordered List</Resource>
+    <Resource key="DocumentEditorToolBar.orderedList" type="String">Ordered List</Resource>
+    <Resource key="DocumentEditorToolBar.indent" type="String">Indent</Resource>
+    <Resource key="DocumentEditorToolBar.outdent" type="String">Outdent</Resource>
+    <Resource key="DocumentEditorToolBar.alignCenter" type="String">Center</Resource>
+    <Resource key="DocumentEditorToolBar.alignJustify" type="String">Justify</Resource>
+    <Resource key="DocumentEditorToolBar.alignLeft" type="String">Left</Resource>
+    <Resource key="DocumentEditorToolBar.alignRight" type="String">Right</Resource>
+    <Resource key="DocumentEditorToolBar.undo" type="String">Undo</Resource>
+    <Resource key="DocumentEditorToolBar.redo" type="String">Redo</Resource>
+    <Resource key="DocumentEditorToolBar.addLink" type="String">Add Link</Resource>
+    <Resource key="DocumentEditorToolBar.removeLink" type="String">Remove Link</Resource>
+    <Resource key="DocumentEditorToolBar.addImage" type="String">Add Image</Resource>
+    <Resource key="DocumentEditorToolBar.toggleView" type="String">Toggle View</Resource>
+    
+    <Resource key="DocumentProperties.introduction" type="String">Properties of the active document.</Resource>
+    <Resource key="DocumentProperties.title" type="String">Document Properties</Resource>
+    <Resource key="DocumentProperties.properties.uri" type="String">uri:</Resource>
+    <Resource key="DocumentProperties.properties.title" type="String">title:</Resource>
+    <Resource key="DocumentProperties.properties.subject" type="String">subject:</Resource>
+    <Resource key="DocumentProperties.properties.created" type="String">created:</Resource>
+    <Resource key="DocumentProperties.properties.lastModified" type="String">last modified:</Resource>
+    
+    <Resource key="DynamicDocument.exampleDescription" type="String">The list below is the content of an RSS.xml content source. As the item is a repeated element, more than one news is displayed.</Resource>
+    <Resource key="DynamicDocument.footer" type="String">ProcessPuzzle - Desktop like back-end agnostic browser interface</Resource>
+    <Resource key="DynamicDocument.introduction" type="String">This example - SmartDocument - retrieves it's content from content xml file. If specified, recurring content elements are repeated automatically.
+    The content elements can be edited, modified. Internationalization happens with selecting different language versions of content xml file.</Resource>
+    <Resource key="DynamicDocument.itemsTitle" type="String">News:</Resource>
+    <Resource key="DynamicDocument.subTitle" type="String">Smart Document Example</Resource>
+    <Resource key="DynamicDocument.title" type="String">Dynamic Document</Resource>
+    <Resource key="DynamicDocument.RSS.link" type="String">link: </Resource>
+    <Resource key="DynamicDocument.RSS.description" type="String">description: </Resource>
+    <Resource key="DynamicDocument.RSS.language" type="String">language: </Resource>
+    <Resource key="DynamicDocument.RSS.pubDate" type="String">publicated: </Resource>
+    <Resource key="DynamicDocument.RSS.lastBuildDate" type="String">genarated: </Resource>
+    <Resource key="DynamicDocument.RSS.docs" type="String">url: </Resource>
+    <Resource key="DynamicDocument.RSS.generator" type="String">generator: </Resource>
+    <Resource key="DynamicDocument.RSS.managingEditor" type="String">managing editor: </Resource>
+    <Resource key="DynamicDocument.RSS.webMaster" type="String">webmaster: </Resource>
+    
+    <Resource key="ErrorDocument.title" type="String">Operational Fault</Resource>
+    <Resource key="ErrorDocument.introduction" type="String">We appologize, some problem occured while loading the given content.</Resource>
 
-    <Resource key="HierarchicalMenuWidget.administration" type="String">Administration</Resource>
-    <Resource key="HierarchicalMenuWidget.administration.users" type="String">Users</Resource>
+    <Resource key="EventWidget.endDate" type="String">Ends:</Resource>
+    <Resource key="EventWidget.isFullDay" type="String">Is full day:</Resource>
+    <Resource key="EventWidget.isMultipleDay" type="String">Is multiple day:</Resource>
+    <Resource key="EventWidget.language" type="String">Language:</Resource>
+    <Resource key="EventWidget.location" type="String">Location:</Resource>
+    <Resource key="EventWidget.program" type="String">Program:</Resource>
+    <Resource key="EventWidget.recurrence" type="String">Recurrence:</Resource>
+    <Resource key="EventWidget.registration" type="String">Registration:</Resource>
+    <Resource key="EventWidget.schedule" type="String">Date:</Resource>
+    <Resource key="EventWidget.startDate" type="String">Begins:</Resource>
+    <Resource key="EventWidget.title" type="String">Events</Resource>
+      
+    <Resource key="WebUIMenu.administration" type="String">Administration</Resource>
+    <Resource key="WebUIMenu.administration.about" type="String">About ProcessPuzzle</Resource>
+    <Resource key="WebUIMenu.administration.mochaUiSkin" type="String">MochaUI Skin</Resource>
+    <Resource key="WebUIMenu.administration.processPuzzleSkin" type="String">ProcessPuzzle Skin</Resource>
+    <Resource key="WebUIMenu.administration.users" type="String">Users</Resource>
+    
+    <Resource key="WebUIMenu.documentExamples" type="String">Smart Document</Resource>
+    <Resource key="WebUIMenu.documentExamples.diagram" type="String">Diagram</Resource>
+    <Resource key="WebUIMenu.documentExamples.dynamicDocument" type="String">Dynamic Document</Resource>
+    <Resource key="WebUIMenu.documentExamples.htmlContent" type="String">HTML Content</Resource>
+    <Resource key="WebUIMenu.documentExamples.photoAlbum" type="String">Photo Album</Resource>
+    <Resource key="WebUIMenu.documentExamples.staticDocument" type="String">Static Document</Resource>
+    <Resource key="WebUIMenu.documentExamples.taskDetail" type="String">Task Detail</Resource>
+    <Resource key="WebUIMenu.documentExamples.taskList" type="String">Task List</Resource>
+    <Resource key="WebUIMenu.documentExamples.videoAlbum" type="String">Video Album</Resource>
+    <Resource key="WebUIMenu.documentExamples.workflowManagement" type="String">Workflow Management</Resource>
+
+    <Resource key="WebUIMenu.widgets" type="String">Widgets</Resource>
+    <Resource key="WebUIMenu.widgets.eventsReader" type="String">Events Reader</Resource>
+    <Resource key="WebUIMenu.widgets.menuWidget" type="String">Menu</Resource>
+    <Resource key="WebUIMenu.widgets.newsReader" type="String">News Reader</Resource>
+    <Resource key="WebUIMenu.widgets.treeView" type="String">Tree View</Resource>
     
     <Resource key="LanguageSelectorWidget.en" type="String">English</Resource>
     <Resource key="LanguageSelectorWidget.hu" type="String">Hungarian</Resource>
     <Resource key="LanguageSelectorWidget.select" type="String">Choose language:</Resource>
 
+    <Resource key="NewsWidget.link" type="String">Link:</Resource>
+    <Resource key="NewsWidget.publicationDate" type="String">Publication date:</Resource>
+      
+    <Resource key="PersonalToDoList.activityDescription" type="String">Description</Resource>
+    <Resource key="PersonalToDoList.activityDuration" type="String">Duration</Resource>
+    <Resource key="PersonalToDoList.activityName" type="String">Title</Resource>
+    <Resource key="PersonalToDoList.introduction" type="String">To Do list of the logged in user.</Resource>
+    <Resource key="PersonalToDoList.title" type="String">Personal To Do List</Resource>
+    
+    <Resource key="PhotoGaleryDocument.title" type="String">Document with embedded widget</Resource>
+    <Resource key="PhotoGaleryDocument.introduction" type="String">Any number of intelligent, interactive components i.e. widgets can be incorporated into a SmarDocument. These widget can present the content, data in a special way.</Resource>
+    <Resource key="PhotoGaleryDocument.exampleDescription" type="String">The slide show component below is an example of UI widgets.</Resource>
+    <Resource key="PhotoGaleryDocument.footer" type="String">ProcessPuzzle - Desktop like, back-end agnostic browser interface.</Resource>
+    <Resource key="PhotoGaleryDocument.subTitle" type="String">Smart Document Example</Resource>
+    
     <Resource key="SkinSelectorWidget.select" type="String">Choose skin:</Resource>
+    
+    <Resource key="StaticDocument.exampleDescription" type="String">All of this document's elements are examples to display static content.</Resource>
+    <Resource key="StaticDocument.footer" type="String">ProcessPuzzle - Desktop like back-end agnostic browser interface</Resource>
+    <Resource key="StaticDocument.introduction" type="String">This example - SmartDocument - contains only static elements defined in the definition xml. 
+    As there is no editable values in this document the definition doesn't refers to any content xml. 
+    Text values in the definition xml are automatically translated. This features facilitates of creating document templates.</Resource>
+    <Resource key="StaticDocument.subTitle" type="String">Smart Document Example</Resource>
+    <Resource key="StaticDocument.title" type="String">Static Document</Resource>
+    
+    <Resource key="TreeWidgetDocument.exampleDescription" type="String"></Resource>
+    <Resource key="TreeWidgetDocument.footer" type="String"></Resource>
+    <Resource key="TreeWidgetDocument.introduction" type="String"></Resource>
+    <Resource key="TreeWidgetDocument.subTitle" type="String">Smart Document Example</Resource>
+    <Resource key="TreeWidgetDocument.title" type="String">Tree Widget Example</Resource>
+
+    <!-- Workflow -->
+    <!-- Activity Detail -->
+    <Resource key="Workflow.ActivityDetail.duration" type="String">Duration:</Resource>
+    <Resource key="Workflow.ActivityDetail.inputs" type="String">Inputs</Resource>
+    <Resource key="Workflow.ActivityDetail.Inputs.name" type="String">Name</Resource>
+    <Resource key="Workflow.ActivityDetail.outputs" type="String">Outputs</Resource>
+    <Resource key="Workflow.ActivityDetail.Outputs.name" type="String">Name</Resource>
+    <Resource key="Workflow.ActivityDetail.performerParty" type="String">Performer Party:</Resource>
+    <Resource key="Workflow.ActivityDetail.performerRole" type="String">Performer Role:</Resource>
   </Language>
 </pp:Resources>
