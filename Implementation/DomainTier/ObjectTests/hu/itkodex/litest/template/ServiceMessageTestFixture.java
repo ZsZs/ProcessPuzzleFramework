@@ -23,7 +23,6 @@ import com.processpuzzle.commons.xml.ClasspathResourceResolver;
 import com.processpuzzle.fundamental_types.domain.ServiceMessage;
 import com.processpuzzle.litest.fixture.GenericTestFixture;
 import com.processpuzzle.litest.fixture.TransientFreshFixture;
-import com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
 
 public abstract class ServiceMessageTestFixture<S extends ServiceMessage> extends GenericTestFixture<S> implements TransientFreshFixture<S> {
    protected static final String CONTEXT_PATH = "com.cahoot";
