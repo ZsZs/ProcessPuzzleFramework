@@ -1,9 +1,5 @@
 package com.processpuzzle.fitnesse.persistence;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -16,6 +12,10 @@ import org.slf4j.LoggerFactory;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.configuration.domain.RepositoryInstantiationException;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.fundamental_types.domain.ParameterValueList;
 import com.processpuzzle.persistence.domain.SimpleResultSet;
 import com.processpuzzle.persistence.domain.TestEntity;

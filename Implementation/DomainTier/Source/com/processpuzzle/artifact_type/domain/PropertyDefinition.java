@@ -31,11 +31,11 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact_type.domain;
 
-import hu.itkodex.commons.persistence.Entity;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
+import com.processpuzzle.commons.persistence.Entity;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 

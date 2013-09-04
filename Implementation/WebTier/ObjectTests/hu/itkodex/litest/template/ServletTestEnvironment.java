@@ -2,6 +2,8 @@ package hu.itkodex.litest.template;
 
 import javax.servlet.http.HttpServlet;
 
+import com.processpuzzle.litest.template.GenericTestEnvironment;
+
 public class ServletTestEnvironment<S extends HttpServlet, F extends ServletTestFixture<S>> extends GenericTestEnvironment<S> {
 
    @Override protected void configureAfterSutInstantiation() {

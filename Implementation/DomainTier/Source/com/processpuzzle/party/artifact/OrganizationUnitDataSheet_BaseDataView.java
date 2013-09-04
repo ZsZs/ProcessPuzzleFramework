@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.party.artifact;
 
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.util.Collection;
 
@@ -43,6 +42,7 @@ import com.processpuzzle.address.domain.ZipCodeRepository;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.artifact.domain.CustomFormView;
 import com.processpuzzle.artifact_type.domain.ArtifactViewType;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.party.domain.AddressFactory;
 import com.processpuzzle.party.domain.GeographicAddress;
 import com.processpuzzle.party.domain.OrganizationName;

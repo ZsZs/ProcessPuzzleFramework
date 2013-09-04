@@ -1,6 +1,5 @@
 package com.processpuzzle.fitnesse.application;
 
-import hu.itkodex.litest.fitnesse.WorkflowFixtureSupport;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +10,7 @@ import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.domain.ApplicationException;
 import com.processpuzzle.application.domain.ApplicationFactory;
 import com.processpuzzle.application.domain.ProcessPuzzleApplication;
+import com.processpuzzle.litest.fitnesse.WorkflowFixtureSupport;
 
 import fit.Parse;
 

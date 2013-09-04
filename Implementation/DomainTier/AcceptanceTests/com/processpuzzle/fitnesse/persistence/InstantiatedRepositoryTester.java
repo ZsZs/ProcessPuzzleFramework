@@ -2,14 +2,14 @@ package com.processpuzzle.fitnesse.persistence;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.TransientFreshFixture;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.TransientFreshFixture;
 import com.processpuzzle.persistence.domain.SimpleResultSet;
 import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.domain.TestEntityRepository;

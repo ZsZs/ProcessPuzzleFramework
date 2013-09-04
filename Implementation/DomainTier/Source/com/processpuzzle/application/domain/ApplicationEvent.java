@@ -31,10 +31,10 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.application.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.Date;
 
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.fundamental_types.domain.TimePoint;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;

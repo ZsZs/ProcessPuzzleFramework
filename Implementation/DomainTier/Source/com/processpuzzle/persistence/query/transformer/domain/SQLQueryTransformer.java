@@ -31,7 +31,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.transformer.domain;
 
-import hu.itkodex.commons.persistence.query.Query;
+import com.processpuzzle.commons.persistence.query.Query;
 
 public class SQLQueryTransformer extends DefaultQueryTransformer {
 

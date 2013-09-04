@@ -34,15 +34,15 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.Repository;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.security.domain.User;
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 

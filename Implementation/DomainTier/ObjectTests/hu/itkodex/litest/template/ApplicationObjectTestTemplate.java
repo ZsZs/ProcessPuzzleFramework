@@ -1,10 +1,11 @@
 package hu.itkodex.litest.template;
 
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
-import hu.itkodex.litest.fixture.TestFixture;
-import hu.itkodex.litest.testcase.GenericTestSuite;
-import hu.itkodex.litest.testcase.NoSuchFixtureDefinitionException;
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.litest.fixture.TestFixture;
+import com.processpuzzle.litest.testcase.GenericTestSuite;
+import com.processpuzzle.litest.testcase.NoSuchFixtureDefinitionException;
+
 
 public abstract class ApplicationObjectTestTemplate<S, F extends ApplicationObjectTestFixture<S>> extends GenericTestSuite<S,F>{
    private Class<F> domainObjectFixtureClass;

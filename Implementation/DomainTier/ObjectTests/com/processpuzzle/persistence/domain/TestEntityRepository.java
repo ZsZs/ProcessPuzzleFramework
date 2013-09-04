@@ -3,10 +3,10 @@
  */
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
 import com.processpuzzle.persistence.query.domain.TextAttributeCondition;

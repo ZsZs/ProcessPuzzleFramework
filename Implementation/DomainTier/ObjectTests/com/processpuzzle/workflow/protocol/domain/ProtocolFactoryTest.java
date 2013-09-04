@@ -1,12 +1,13 @@
 package com.processpuzzle.workflow.protocol.domain;
 
 import static org.junit.Assert.assertNotNull;
-import hu.itkodex.litest.fixture.FixtureFactory;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import com.processpuzzle.litest.fixture.FixtureFactory;
 
 public class ProtocolFactoryTest {
    private static ProtocolTestFixture testFixture = FixtureFactory.createInstance().createPersistentSharedFixture( ProtocolTestFixture.class );

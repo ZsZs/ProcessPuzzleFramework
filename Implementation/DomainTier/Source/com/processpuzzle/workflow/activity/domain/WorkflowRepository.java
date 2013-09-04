@@ -34,12 +34,12 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.workflow.activity.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.UnitOfWork;
 
 import java.util.Collection;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;

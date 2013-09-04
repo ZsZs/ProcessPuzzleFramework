@@ -3,12 +3,12 @@
  */
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.fundamental_types.domain.TimePeriod;
 import com.processpuzzle.fundamental_types.domain.TimePoint;

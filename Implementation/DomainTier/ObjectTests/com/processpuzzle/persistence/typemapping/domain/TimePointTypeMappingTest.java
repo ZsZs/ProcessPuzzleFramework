@@ -1,12 +1,12 @@
 package com.processpuzzle.persistence.typemapping.domain;
 
 import static org.junit.Assert.assertEquals;
-import hu.itkodex.commons.persistence.UnitOfWork;
 import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.domain.TestEntityRepository;

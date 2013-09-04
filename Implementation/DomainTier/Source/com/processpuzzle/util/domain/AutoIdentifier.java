@@ -31,12 +31,12 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.util.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;

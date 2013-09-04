@@ -3,14 +3,14 @@
  */
 package com.processpuzzle.workflow.activity.artifact;
 
-import hu.itkodex.litest.fixture.FixtureFactory;
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.PersistentSharedFixture;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserFactory;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
+import com.processpuzzle.litest.fixture.FixtureFactory;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.PersistentSharedFixture;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.sharedfixtures.domaintier.ProcessPuzzleContextFixture;
 import com.processpuzzle.workflow.activity.artifact.ActionDataSheet;

@@ -1,6 +1,7 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.litest.template.GenericTestTemplate;
 
 public abstract class DomainObjectTestTemplate<S extends Entity, F extends DomainObjectTestFixture<S>> extends GenericTestTemplate<S,F,DomainObjectTestEnvironment<S, F>> {
 //   private Class<F> domainObjectFixtureClass;

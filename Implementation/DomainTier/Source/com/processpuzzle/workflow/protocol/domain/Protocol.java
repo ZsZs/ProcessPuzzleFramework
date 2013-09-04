@@ -37,7 +37,6 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.workflow.protocol.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -50,6 +49,7 @@ import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlIDREF;
 
 import com.processpuzzle.artifact_type.domain.ArtifactType;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 

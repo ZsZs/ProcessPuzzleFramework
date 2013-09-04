@@ -31,13 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.query.AttributeFilter;
-import hu.itkodex.commons.persistence.query.AttributeSelector;
-import hu.itkodex.commons.persistence.query.Query;
-import hu.itkodex.commons.persistence.query.QueryCondition;
-import hu.itkodex.commons.persistence.query.QueryContext;
-import hu.itkodex.commons.persistence.query.QueryOrder;
 
 import java.util.StringTokenizer;
 
@@ -47,6 +40,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.query.AttributeFilter;
+import com.processpuzzle.commons.persistence.query.AttributeSelector;
+import com.processpuzzle.commons.persistence.query.Query;
+import com.processpuzzle.commons.persistence.query.QueryCondition;
+import com.processpuzzle.commons.persistence.query.QueryContext;
+import com.processpuzzle.commons.persistence.query.QueryOrder;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
 import com.processpuzzle.persistence.query.transformer.domain.HQLQueryTransformer;
 import com.processpuzzle.persistence.query.transformer.domain.QueryTransformerFactory;

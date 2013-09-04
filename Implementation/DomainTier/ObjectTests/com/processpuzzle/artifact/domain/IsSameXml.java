@@ -1,6 +1,5 @@
 package com.processpuzzle.artifact.domain;
 
-import hu.itkodex.commons.xml.XmlDocumentComparator;
 
 import java.io.IOException;
 
@@ -9,6 +8,8 @@ import org.hamcrest.Description;
 import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeDiagnosingMatcher;
+
+import com.processpuzzle.commons.xml.XmlDocumentComparator;
 
 public class IsSameXml extends TypeSafeDiagnosingMatcher<org.dom4j.Document> {
    private final org.dom4j.Document expectedXml;

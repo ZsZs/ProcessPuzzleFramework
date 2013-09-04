@@ -1,11 +1,12 @@
 package com.processpuzzle.workflow.activity.artifact;
 
-import hu.itkodex.litest.fixture.FixtureFactory;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import com.processpuzzle.litest.fixture.FixtureFactory;
 
 public class ProcessPlanDataSheetTest {
    private ActionDataSheetTestFixture fixture = null;

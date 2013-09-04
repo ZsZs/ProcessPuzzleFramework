@@ -31,9 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.application.configuration.domain;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.spring.BeanName;
 
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -50,6 +47,9 @@ import org.springframework.core.io.Resource;
 
 import com.google.common.collect.Lists;
 import com.processpuzzle.application.domain.Application;
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.spring.BeanName;
 import com.processpuzzle.persistence.domain.EntityFactory;
 import com.processpuzzle.persistence.domain.GenericFactory;
 

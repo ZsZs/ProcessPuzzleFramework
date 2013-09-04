@@ -1,12 +1,13 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.Repository;
 
 import org.junit.Test;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.domain.Application;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.litest.template.GenericTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.EntityFactory;
 import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;

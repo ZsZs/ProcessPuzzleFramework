@@ -31,11 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.Query;
 
 import java.util.Iterator;
 import java.util.List;
@@ -57,6 +52,11 @@ import org.hibernate.exception.SQLGrammarException;
 
 import com.processpuzzle.application.configuration.domain.PersistenceContext;
 import com.processpuzzle.application.configuration.domain.PersistentDataInitializationStrategies;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.persistence.query.transformer.domain.QueryTransformerFactory;
 
 public class HibernatePersistenceProvider extends DefaultPersistenceProvider implements QLConstants {

@@ -31,12 +31,13 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.ValueObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.ValueObject;
 
 
 public abstract class PersistentClassList {

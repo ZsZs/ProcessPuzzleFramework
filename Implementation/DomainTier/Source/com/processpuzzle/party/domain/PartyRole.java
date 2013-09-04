@@ -34,8 +34,8 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.party.domain;
 
-import hu.itkodex.commons.persistence.ValueObject;
 
+import com.processpuzzle.commons.persistence.ValueObject;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
 
 public class PartyRole implements ValueObject {	

@@ -31,10 +31,11 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.processpuzzle.commons.persistence.Repository;
 
 public abstract class RepositoryClassList {
    protected List<Class<? extends Repository<?>>> repositories = new ArrayList<Class<? extends Repository<?>>>();

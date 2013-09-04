@@ -3,10 +3,11 @@
  */
 package com.processpuzzle.workflow.protocol.domain;
 
-import hu.itkodex.litest.fixture.FixtureFactory;
 
 import org.junit.After;
 import org.junit.Before;
+
+import com.processpuzzle.litest.fixture.FixtureFactory;
 
 public class CompositeProtocolTest {
    private static ProtocolTestFixture testFixture = FixtureFactory.createInstance().createPersistentSharedFixture( ProtocolTestFixture.class );

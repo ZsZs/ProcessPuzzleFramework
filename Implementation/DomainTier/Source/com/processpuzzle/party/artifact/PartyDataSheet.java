@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.party.artifact;
 
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
@@ -49,6 +48,7 @@ import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
 import com.processpuzzle.artifact_type.domain.ArtifactType;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.party.domain.GeographicAddress;
 import com.processpuzzle.party.domain.Party;
 import com.processpuzzle.party.domain.PartyName;

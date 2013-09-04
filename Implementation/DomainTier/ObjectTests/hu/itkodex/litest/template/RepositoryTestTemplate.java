@@ -1,16 +1,17 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.rdbms.DatabaseSpy;
-import hu.itkodex.litest.fixture.CompositeFixture;
 
 import java.sql.ResultSet;
 
 import org.junit.Test;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.rdbms.DatabaseSpy;
+import com.processpuzzle.litest.fixture.CompositeFixture;
+import com.processpuzzle.litest.template.GenericTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.GenericRepository;
 

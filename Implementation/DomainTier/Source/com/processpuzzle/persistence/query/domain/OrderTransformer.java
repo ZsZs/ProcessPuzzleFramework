@@ -31,10 +31,11 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.OrderSpecifier;
-import hu.itkodex.commons.persistence.query.QueryOrder;
 
 import java.util.Iterator;
+
+import com.processpuzzle.commons.persistence.query.OrderSpecifier;
+import com.processpuzzle.commons.persistence.query.QueryOrder;
 
 public abstract class OrderTransformer {
 

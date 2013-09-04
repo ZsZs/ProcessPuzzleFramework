@@ -31,8 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.party.partyrelationshiptype.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -40,6 +38,8 @@ import java.util.List;
 import java.util.Set;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.party.domain.Party;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.GenericRepository;

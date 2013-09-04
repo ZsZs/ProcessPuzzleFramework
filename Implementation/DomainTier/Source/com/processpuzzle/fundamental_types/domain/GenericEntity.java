@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.fundamental_types.domain;
 
-import hu.itkodex.commons.persistence.Entity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -39,6 +38,7 @@ import java.util.Set;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
+import com.processpuzzle.commons.persistence.Entity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 
 @XmlAccessorType( XmlAccessType.NONE )

@@ -3,9 +3,9 @@
  */
 package com.processpuzzle.workflow.activity.domain;
 
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.TransientFreshFixture;
 
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.TransientFreshFixture;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTier_ConfigurationFixture;
 
 /**

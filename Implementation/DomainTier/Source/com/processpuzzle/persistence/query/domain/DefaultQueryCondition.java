@@ -31,15 +31,15 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.AttributeCondition;
-import hu.itkodex.commons.persistence.query.BooleanOperator;
-import hu.itkodex.commons.persistence.query.DefaultConditionElement;
-import hu.itkodex.commons.persistence.query.QueryCondition;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import com.processpuzzle.commons.persistence.query.AttributeCondition;
+import com.processpuzzle.commons.persistence.query.BooleanOperator;
+import com.processpuzzle.commons.persistence.query.DefaultConditionElement;
+import com.processpuzzle.commons.persistence.query.QueryCondition;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
 
 public class DefaultQueryCondition implements QueryCondition<DefaultConditionElement> {

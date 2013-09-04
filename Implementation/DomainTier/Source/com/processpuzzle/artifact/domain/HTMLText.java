@@ -31,11 +31,11 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact.domain;
 
-import hu.itkodex.commons.persistence.Entity;
 
 import java.util.Calendar;
 import java.util.Date;
 
+import com.processpuzzle.commons.persistence.Entity;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 

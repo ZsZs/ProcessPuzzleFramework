@@ -31,8 +31,8 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.workflow.activity.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.fundamental_types.domain.TimePoint;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;

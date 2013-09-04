@@ -5,7 +5,6 @@ import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.testcase.GenericTestSuite;
 
 import org.junit.After;
 import org.junit.Test;
@@ -13,6 +12,7 @@ import org.junit.Test;
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.security.domain.AnonymousUser;
 import com.processpuzzle.application.security.domain.SystemAdministrator;
+import com.processpuzzle.litest.testcase.GenericTestSuite;
 import com.processpuzzle.sharedfixtures.domaintier.RequestContextInMockedApplicationFixture;
 
 public class UserRequestManagerTest extends GenericTestSuite<UserRequestContext, RequestContextInMockedApplicationFixture>{

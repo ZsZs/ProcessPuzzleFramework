@@ -4,13 +4,13 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import hu.itkodex.commons.persistence.UnitOfWork;
 import hu.itkodex.litest.template.ArtifactServiceTestEnvironment;
 import hu.itkodex.litest.template.ArtifactServiceTestFixture;
 
 import com.processpuzzle.artifact.service.ArtifactService;
 import com.processpuzzle.artifact.service.FindArtifactRequest;
 import com.processpuzzle.artifact.service.FindArtifactResponse;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 
 public class CommonArtifactServiceTestFixture extends ArtifactServiceTestFixture<ArtifactService>{
    public static final Integer ARTIFACT_ID = 111;

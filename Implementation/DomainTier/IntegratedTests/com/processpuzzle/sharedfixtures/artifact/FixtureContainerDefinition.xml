@@ -13,7 +13,7 @@
   </bean>
 
   <!-- Real fixtures for integration tests -->
-  <bean id="configurableApplicationFixture" class="hu.itkodex.litest.template.ConfigurableApplicationFixture" >
+  <bean id="configurableApplicationFixture" class="com.processpuzzle.litest.template.ConfigurableApplicationFixture" >
   	<constructor-arg type="java.lang.String" value="classpath:com/processpuzzle/sharedfixtures/artifact/configuration_descriptor.xml" />
   </bean>
 

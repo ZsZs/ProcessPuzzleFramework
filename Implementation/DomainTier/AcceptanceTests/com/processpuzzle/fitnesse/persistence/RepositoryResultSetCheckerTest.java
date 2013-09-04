@@ -4,7 +4,6 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -13,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.persistence.domain.SimpleResultSet;
 import com.processpuzzle.persistence.domain.TestEntity;
 

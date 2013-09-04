@@ -1,7 +1,7 @@
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.Entity;
 
+import com.processpuzzle.commons.persistence.Entity;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 

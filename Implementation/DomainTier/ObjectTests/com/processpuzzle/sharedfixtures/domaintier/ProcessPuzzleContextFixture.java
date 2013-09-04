@@ -1,13 +1,13 @@
 package com.processpuzzle.sharedfixtures.domaintier;
 
 import static org.mockito.Mockito.*;
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.ImmutableSharedFixture;
 
 import com.processpuzzle.application.security.domain.AnonymousUser;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.domain.Application;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.ImmutableSharedFixture;
 import com.processpuzzle.user_session.domain.StaticUserSessionHolder;
 import com.processpuzzle.user_session.domain.UserRequestContext;
 import com.processpuzzle.user_session.domain.UserRequestManager;

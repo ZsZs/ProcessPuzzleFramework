@@ -5,13 +5,13 @@ package com.processpuzzle.workflow.activity.artifact;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import hu.itkodex.litest.fixture.FixtureFactory;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.litest.fixture.FixtureFactory;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.workflow.activity.artifact.PlanDataSheet;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;

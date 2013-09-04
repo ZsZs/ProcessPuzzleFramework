@@ -31,10 +31,11 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.query.IdentityExpression;
 
 import java.lang.reflect.ParameterizedType;
+
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.query.IdentityExpression;
 
 
 public abstract class DefaultIdentityExpression<E extends Entity> extends DefaultQuery implements IdentityExpression<E> {

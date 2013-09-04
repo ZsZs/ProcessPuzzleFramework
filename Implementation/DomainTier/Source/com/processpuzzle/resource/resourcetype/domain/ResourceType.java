@@ -37,7 +37,7 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.resource.resourcetype.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 
 public interface ResourceType extends AggregateRoot, Comparable<ResourceType> {
    public String getName();

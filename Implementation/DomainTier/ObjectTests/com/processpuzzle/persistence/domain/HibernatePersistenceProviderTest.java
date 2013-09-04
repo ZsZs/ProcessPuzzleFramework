@@ -9,9 +9,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.query.Count;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -38,6 +35,9 @@ import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.configuration.domain.PropertyContext;
 import com.processpuzzle.application.configuration.domain.PropertyKeys;
 import com.processpuzzle.application.domain.Application;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.query.Count;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
@@ -341,7 +341,7 @@ public class HibernatePersistenceProviderTest {
          String queryStatement = MessageFormat.format( QUERY_TEST_ENTITY, new Object[] { table, id.toString() } );
          resultSet = statement.executeQuery( queryStatement );
          resultSet.next();
-         switch( hu.itkodex.commons.rdbms.DatabaseSpy.DataType.getTypeIndex( dataType )) {
+         switch( com.processpuzzle.commons.rdbms.DatabaseSpy.DataType.getTypeIndex( dataType )) {
             case DATE:
                return (D) resultSet.getDate( columnName );
             case INTEGER:

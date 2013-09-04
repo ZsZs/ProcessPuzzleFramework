@@ -1,12 +1,12 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.litest.fixture.GenericTestFixture;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.configuration.domain.PropertyContext;
 import com.processpuzzle.application.configuration.domain.PropertyKeys;
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.domain.ApplicationRepository;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
 import com.processpuzzle.sharedfixtures.domaintier.ApplicationFixture;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.user_session.domain.StaticUserSessionHolder;

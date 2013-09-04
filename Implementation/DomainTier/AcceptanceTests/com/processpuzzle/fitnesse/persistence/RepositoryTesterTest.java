@@ -10,14 +10,14 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assume.assumeThat;
 import static org.mockito.Mockito.verify;
 import fit.RowFixture;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.litest.testcase.GenericTestSuite;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.fundamental_types.domain.ParameterValueList;
+import com.processpuzzle.litest.testcase.GenericTestSuite;
 import com.processpuzzle.persistence.domain.TestEntityRepository;
 import com.processpuzzle.sharedfixtures.domaintier.MockProcessPuzzleContext;
 

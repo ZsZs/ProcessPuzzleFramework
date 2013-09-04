@@ -31,13 +31,13 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.address.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 import com.google.common.collect.ImmutableSortedSet;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;

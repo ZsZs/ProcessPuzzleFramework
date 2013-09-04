@@ -9,7 +9,6 @@ import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.commons.persistence.Repository;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -22,6 +21,7 @@ import com.processpuzzle.artifact_type.domain.ArtifactViewType;
 import com.processpuzzle.artifact_type.domain.ListQueryViewType;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
+import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipTypeRepository;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;

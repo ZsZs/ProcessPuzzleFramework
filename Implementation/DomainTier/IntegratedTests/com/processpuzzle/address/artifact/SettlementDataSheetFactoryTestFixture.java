@@ -1,6 +1,5 @@
 package com.processpuzzle.address.artifact;
 
-import hu.itkodex.commons.persistence.UnitOfWork;
 import hu.itkodex.litest.template.ArtifactFactoryTestEnvironment;
 import hu.itkodex.litest.template.ArtifactFactoryTestFixture;
 
@@ -8,6 +7,7 @@ import com.processpuzzle.address.domain.Country;
 import com.processpuzzle.address.domain.CountryFactory;
 import com.processpuzzle.address.domain.CountryRepository;
 import com.processpuzzle.address.domain.SettlementRepository;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class SettlementDataSheetFactoryTestFixture extends ArtifactFactoryTestFixture<SettlementDataSheetFactory, SettlementDataSheet> {

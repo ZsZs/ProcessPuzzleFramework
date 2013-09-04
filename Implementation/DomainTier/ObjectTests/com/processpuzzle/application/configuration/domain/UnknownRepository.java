@@ -1,7 +1,7 @@
 package com.processpuzzle.application.configuration.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
 
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
 import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.domain.TestEntity;
 

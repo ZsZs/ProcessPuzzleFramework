@@ -1,11 +1,11 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.litest.testcase.GenericTestSuite;
 
 import org.jdom.Document;
 import org.junit.Test;
 
 import com.processpuzzle.fundamental_types.domain.ServiceMessage;
+import com.processpuzzle.litest.testcase.GenericTestSuite;
 
 public abstract class ServiceMessageTest<S extends ServiceMessage, F extends ServiceMessageTestFixture<S>> extends GenericTestSuite<S, F>{
    protected Document messageAsXml;

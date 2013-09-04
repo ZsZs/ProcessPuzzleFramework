@@ -1,7 +1,7 @@
 package com.processpuzzle.fitnesse.application;
 
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.PersistentFreshFixture;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.PersistentFreshFixture;
 
 public class ApplicationTestCoordinatorFixture extends GenericTestFixture<ApplicationTestCoordinator> implements PersistentFreshFixture<ApplicationTestCoordinator> {
 

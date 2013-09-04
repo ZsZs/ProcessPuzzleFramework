@@ -31,9 +31,9 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.GenericRepository;
 

@@ -37,7 +37,6 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.application.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -69,6 +68,7 @@ import com.processpuzzle.application.resource.domain.XmlDataLoader;
 import com.processpuzzle.application.security.domain.PredefinedUsersLoader;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserRepository;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.party.artifact.PredefinedUserDataSheetsCreator;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;

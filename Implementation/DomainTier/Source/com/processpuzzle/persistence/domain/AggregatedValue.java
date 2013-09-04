@@ -31,8 +31,9 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.query.AggregateFunction;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.query.AggregateFunction;
+
 
 public class AggregatedValue implements PersistentObject {
    private Double value = null;

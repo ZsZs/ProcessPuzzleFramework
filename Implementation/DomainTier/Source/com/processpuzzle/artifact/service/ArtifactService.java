@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact.service;
 
-import hu.itkodex.commons.persistence.UnitOfWork;
 
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.soap.addressing.server.annotation.Action;
@@ -40,6 +39,7 @@ import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact.domain.ArtifactView;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 

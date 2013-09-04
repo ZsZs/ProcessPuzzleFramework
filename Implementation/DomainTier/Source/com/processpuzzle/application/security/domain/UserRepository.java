@@ -34,15 +34,15 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.application.security.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.BooleanOperator;
-import hu.itkodex.commons.persistence.query.BooleanOperators;
-import hu.itkodex.commons.persistence.query.Query;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.BooleanOperator;
+import com.processpuzzle.commons.persistence.query.BooleanOperators;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;

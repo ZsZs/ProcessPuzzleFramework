@@ -34,7 +34,6 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.workflow.activity.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.Collection;
 import java.util.Date;
@@ -43,6 +42,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import com.processpuzzle.artifact.domain.Artifact;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.fundamental_types.domain.TimePeriod;
 import com.processpuzzle.fundamental_types.domain.TimePoint;

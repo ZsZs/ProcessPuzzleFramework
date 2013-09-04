@@ -31,8 +31,8 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.transformer.domain;
 
-import hu.itkodex.commons.persistence.query.QueryCondition;
-import hu.itkodex.commons.persistence.query.QueryContext;
+import com.processpuzzle.commons.persistence.query.QueryCondition;
+import com.processpuzzle.commons.persistence.query.QueryContext;
 
 public class SQLConditionTransformer extends ConditionTransformer {
 

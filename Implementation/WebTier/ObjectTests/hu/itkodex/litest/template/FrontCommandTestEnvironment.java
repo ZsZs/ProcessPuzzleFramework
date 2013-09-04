@@ -4,10 +4,11 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
 
 import com.mockrunner.mock.web.WebMockObjectFactory;
 import com.processpuzzle.application.control.control.CommandInterface;
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.litest.template.GenericTestEnvironment;
 import com.processpuzzle.sharedfixtures.domaintier.MockProcessPuzzleContext;
 import com.processpuzzle.sharedfixtures.domaintier.RequestContextInMockedApplicationFixture;
 

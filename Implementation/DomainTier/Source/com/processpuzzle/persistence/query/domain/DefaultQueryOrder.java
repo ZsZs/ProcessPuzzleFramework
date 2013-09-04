@@ -31,13 +31,13 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.OrderSpecifier;
-import hu.itkodex.commons.persistence.query.QueryOrder;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.processpuzzle.commons.persistence.query.OrderSpecifier;
+import com.processpuzzle.commons.persistence.query.QueryOrder;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
 
 public class DefaultQueryOrder implements QueryOrder {

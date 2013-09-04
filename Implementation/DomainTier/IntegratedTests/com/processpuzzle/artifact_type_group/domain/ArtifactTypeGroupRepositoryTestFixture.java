@@ -2,9 +2,9 @@ package com.processpuzzle.artifact_type_group.domain;
 
 import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeRepository;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
-import hu.itkodex.commons.persistence.UnitOfWork;
 import hu.itkodex.litest.template.RepositoryTestEnvironment;
 import hu.itkodex.litest.template.RepositoryTestFixture;
 

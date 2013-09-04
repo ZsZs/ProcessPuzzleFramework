@@ -31,8 +31,8 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.ConditionElementType;
-import hu.itkodex.commons.persistence.query.DefaultConditionElement;
+import com.processpuzzle.commons.persistence.query.ConditionElementType;
+import com.processpuzzle.commons.persistence.query.DefaultConditionElement;
 
 public class Variable extends DefaultConditionElement{
 

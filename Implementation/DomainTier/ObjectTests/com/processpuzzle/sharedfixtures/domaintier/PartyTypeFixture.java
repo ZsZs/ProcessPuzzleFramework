@@ -1,9 +1,9 @@
 package com.processpuzzle.sharedfixtures.domaintier;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.Repository;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.party.partytype.domain.PartyTypeFactory;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;

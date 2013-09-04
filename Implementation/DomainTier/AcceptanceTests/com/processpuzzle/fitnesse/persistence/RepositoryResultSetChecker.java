@@ -1,12 +1,5 @@
 package com.processpuzzle.fitnesse.persistence;
 
-import hu.itkodex.commons.compiler.SourceCodeTemplateEnhancer;
-import hu.itkodex.commons.compiler.StringCompiler;
-import hu.itkodex.commons.compiler.StringCompilerException;
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -17,6 +10,14 @@ import org.apache.commons.lang.StringUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.processpuzzle.commons.compiler.SourceCodeTemplateEnhancer;
+import com.processpuzzle.commons.compiler.StringCompiler;
+import com.processpuzzle.commons.compiler.StringCompilerException;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 
 import fit.RowFixture;
 

@@ -1,8 +1,9 @@
 package hu.itkodex.litest.template;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.litest.template.GenericTestEnvironment;
 
-import hu.itkodex.commons.persistence.Repository;
 
 public class RepositoryTestEnvironment<R extends Repository<?>, F extends RepositoryTestFixture<R,?>> extends GenericTestEnvironment<R> {
    private Class<F> repositoryTestFixtureClass;

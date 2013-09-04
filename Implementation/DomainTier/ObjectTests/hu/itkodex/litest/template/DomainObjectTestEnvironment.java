@@ -1,8 +1,9 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
-import hu.itkodex.commons.persistence.Entity;
 
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.litest.template.GenericTestEnvironment;
 import com.processpuzzle.sharedfixtures.domaintier.MockProcessPuzzleContext;
 import com.processpuzzle.sharedfixtures.domaintier.RequestContextInMockedApplicationFixture;
 

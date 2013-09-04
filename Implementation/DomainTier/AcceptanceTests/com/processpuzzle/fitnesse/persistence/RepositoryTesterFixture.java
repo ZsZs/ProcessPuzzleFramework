@@ -1,7 +1,7 @@
 package com.processpuzzle.fitnesse.persistence;
 
-import hu.itkodex.litest.fixture.GenericCompositeFixture;
 
+import com.processpuzzle.litest.fixture.GenericCompositeFixture;
 import com.processpuzzle.sharedfixtures.domaintier.MockProcessPuzzleContext;
 import com.processpuzzle.sharedfixtures.domaintier.RequestContextInMockedApplicationFixture;
 

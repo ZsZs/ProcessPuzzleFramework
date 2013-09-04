@@ -31,13 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.application.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.IdentityExpression;
-import hu.itkodex.commons.persistence.query.Query;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -58,6 +51,13 @@ import org.springframework.core.io.ResourceLoader;
 import com.processpuzzle.application.domain.Application.ExecutionStatus;
 import com.processpuzzle.application.domain.Application.InstallationStatus;
 import com.processpuzzle.application.resource.domain.ResourceNotFoundException;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.IdentityExpression;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.IdentityCollisionException;
 import com.processpuzzle.persistence.domain.RepositoryAction;

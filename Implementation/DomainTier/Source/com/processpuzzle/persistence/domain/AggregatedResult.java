@@ -31,14 +31,15 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.List;
+
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 
 public class AggregatedResult<T extends PersistentObject> implements RepositoryResultSet<T> {
    private List<T> resultList;

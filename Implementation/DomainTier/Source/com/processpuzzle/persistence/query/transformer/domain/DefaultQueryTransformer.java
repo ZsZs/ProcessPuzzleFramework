@@ -31,13 +31,13 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.transformer.domain;
 
-import hu.itkodex.commons.persistence.query.AttributeFilter;
-import hu.itkodex.commons.persistence.query.Query;
-import hu.itkodex.commons.persistence.query.QueryCondition;
-import hu.itkodex.commons.persistence.query.QueryContext;
-import hu.itkodex.commons.persistence.query.QueryOrder;
-import hu.itkodex.commons.persistence.query.QueryTransformer;
 
+import com.processpuzzle.commons.persistence.query.AttributeFilter;
+import com.processpuzzle.commons.persistence.query.Query;
+import com.processpuzzle.commons.persistence.query.QueryCondition;
+import com.processpuzzle.commons.persistence.query.QueryContext;
+import com.processpuzzle.commons.persistence.query.QueryOrder;
+import com.processpuzzle.commons.persistence.query.QueryTransformer;
 import com.processpuzzle.persistence.query.domain.OrderTransformer;
 
 public abstract class DefaultQueryTransformer implements QueryTransformer {

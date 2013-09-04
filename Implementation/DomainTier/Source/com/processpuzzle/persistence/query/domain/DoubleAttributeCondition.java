@@ -31,8 +31,8 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.ConditionElementType;
 
+import com.processpuzzle.commons.persistence.query.ConditionElementType;
 import com.processpuzzle.fundamental_types.domain.OpAssertion;
 
 public class DoubleAttributeCondition extends NumberAttributeCondition {

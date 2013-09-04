@@ -1,7 +1,7 @@
 package com.itcodex.objectpuzzle.framework.persistence.domain;
 
-import hu.itkodex.litest.fixture.GenericTestFixtureConfiguration;
-import hu.itkodex.litest.fixture.TestFixtureConfiguration;
+import com.processpuzzle.litest.fixture.GenericTestFixtureConfiguration;
+import com.processpuzzle.litest.fixture.TestFixtureConfiguration;
 
 public class PersistenceStrategyWithoutPersistenceProvider extends PersistenceStrategyFixture {
    @Override

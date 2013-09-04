@@ -31,14 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.IdentityExpression;
-import hu.itkodex.commons.persistence.query.Query;
 
 import java.lang.reflect.ParameterizedType;
 
@@ -46,6 +38,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.IdentityExpression;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.fundamental_types.domain.OpAssertion;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
 

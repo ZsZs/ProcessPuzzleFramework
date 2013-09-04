@@ -7,9 +7,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.rdbms.NoDataAvailableException;
 import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import java.sql.Timestamp;
@@ -17,6 +14,9 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.rdbms.NoDataAvailableException;
 import com.processpuzzle.fundamental_types.domain.TimePeriod;
 import com.processpuzzle.fundamental_types.domain.TimePoint;
 import com.processpuzzle.party.partytype.domain.PartyType;

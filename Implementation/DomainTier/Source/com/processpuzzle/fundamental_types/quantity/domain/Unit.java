@@ -37,12 +37,12 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.fundamental_types.quantity.domain;
 
-import hu.itkodex.commons.persistence.PersistentObject;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.processpuzzle.commons.persistence.PersistentObject;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
 
 public class Unit implements PersistentObject {

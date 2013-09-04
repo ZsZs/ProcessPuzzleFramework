@@ -31,8 +31,8 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.resource.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.resource.resourcetype.domain.ResourceType;
 
 public interface Resource extends AggregateRoot {

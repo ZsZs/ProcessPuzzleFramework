@@ -31,11 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact.domain;
 
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.Count;
-import hu.itkodex.commons.persistence.query.Query;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -47,6 +42,11 @@ import org.slf4j.LoggerFactory;
 
 import com.processpuzzle.artifact_type.domain.ArtifactListViewType;
 import com.processpuzzle.artifact_type.domain.ArtifactViewType;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.Count;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.PersistentLong;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;

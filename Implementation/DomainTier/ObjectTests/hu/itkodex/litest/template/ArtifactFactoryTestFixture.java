@@ -1,7 +1,5 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
-import hu.itkodex.commons.persistence.UnitOfWork;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.artifact.domain.Artifact;
@@ -13,6 +11,9 @@ import com.processpuzzle.artifact_type.domain.ArtifactTypeFactory;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeRepository;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupFactory;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.litest.template.GenericTemplatedFixture;
 
 public abstract class ArtifactFactoryTestFixture<S extends ArtifactFactory<A>, A extends Artifact<?>> extends GenericTemplatedFixture<S> {
    private DefaultApplicationFixture applicationFixture;

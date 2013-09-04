@@ -5,21 +5,21 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-import hu.itkodex.commons.persistence.query.AttributeFilter;
-import hu.itkodex.commons.persistence.query.AttributeSelector;
-import hu.itkodex.commons.persistence.query.BooleanOperator;
-import hu.itkodex.commons.persistence.query.BooleanOperators;
-import hu.itkodex.commons.persistence.query.OrderSpecifier;
-import hu.itkodex.commons.persistence.query.OrderingDirections;
-import hu.itkodex.commons.persistence.query.QueryCondition;
-import hu.itkodex.commons.persistence.query.QueryContext;
-import hu.itkodex.commons.persistence.query.QueryOrder;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.commons.persistence.query.AttributeFilter;
+import com.processpuzzle.commons.persistence.query.AttributeSelector;
+import com.processpuzzle.commons.persistence.query.BooleanOperator;
+import com.processpuzzle.commons.persistence.query.BooleanOperators;
+import com.processpuzzle.commons.persistence.query.OrderSpecifier;
+import com.processpuzzle.commons.persistence.query.OrderingDirections;
+import com.processpuzzle.commons.persistence.query.QueryCondition;
+import com.processpuzzle.commons.persistence.query.QueryContext;
+import com.processpuzzle.commons.persistence.query.QueryOrder;
 import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.query.transformer.domain.QueryTransformerTest;
 

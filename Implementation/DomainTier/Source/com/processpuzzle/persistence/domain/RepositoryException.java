@@ -34,10 +34,10 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.query.Query;
 
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.fundamental_types.domain.ExceptionHelper;
 import com.processpuzzle.fundamental_types.domain.ProcessPuzzleProgrammingException;
 

@@ -37,8 +37,6 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.workflow.activity.artifact;
 
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
 
 import java.text.ParseException;
 import java.util.Collection;
@@ -48,6 +46,8 @@ import java.util.Map;
 
 import com.processpuzzle.artifact.domain.CustomFormView;
 import com.processpuzzle.artifact_type.domain.ArtifactViewType;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.party.domain.Party;
 import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.party.partytype.domain.PartyTypeRepository;

@@ -3,6 +3,8 @@ package hu.itkodex.litest.template;
 import javax.servlet.Filter;
 import javax.servlet.RequestDispatcher;
 
+import com.processpuzzle.litest.template.GenericTestTemplate;
+
 public abstract class FilterTestTemplate<S extends Filter, F extends FilterTestFixture<S>> extends GenericTestTemplate<S,F,FilterTestEnvironment<S,F>>{
    protected S filter;
 

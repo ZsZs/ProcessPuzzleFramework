@@ -1,7 +1,7 @@
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 

@@ -31,11 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.PersistenceProvider;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.Query;
 
 import java.util.HashMap;
 import java.util.List;
@@ -47,6 +42,11 @@ import org.hibernate.TransientObjectException;
 import org.hibernate.exception.DataException;
 
 import com.processpuzzle.application.configuration.domain.PersistentDataInitializationStrategies;
+import com.processpuzzle.commons.persistence.PersistenceProvider;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.Query;
 
 public abstract class DefaultPersistenceProvider extends DefaultRepositoryEventHandler implements PersistenceProvider {
    protected Map<UnitOfWork, SessionContext> ongoingSessions = new HashMap<UnitOfWork, SessionContext>();

@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact_type.domain;
 
-import hu.itkodex.commons.persistence.Entity;
 
 import java.util.List;
 
@@ -40,6 +39,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
+import com.processpuzzle.commons.persistence.Entity;
 import com.processpuzzle.fundamental_types.domain.AssertionException;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;

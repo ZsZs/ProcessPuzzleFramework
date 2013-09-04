@@ -1,10 +1,10 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.litest.fixture.UnconfiguredSharedFixtureException;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.domain.ApplicationException;
 import com.processpuzzle.application.domain.ApplicationFactory;
+import com.processpuzzle.litest.fixture.UnconfiguredSharedFixtureException;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestApplication;
 
 public class ConfigurableApplicationFixture extends DefaultApplicationFixture {

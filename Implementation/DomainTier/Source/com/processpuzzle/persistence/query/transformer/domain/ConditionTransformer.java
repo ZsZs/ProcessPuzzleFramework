@@ -31,14 +31,14 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.transformer.domain;
 
-import hu.itkodex.commons.persistence.query.BooleanOperator;
-import hu.itkodex.commons.persistence.query.ConditionElement;
-import hu.itkodex.commons.persistence.query.Operator;
-import hu.itkodex.commons.persistence.query.QueryCondition;
-import hu.itkodex.commons.persistence.query.QueryContext;
 
 import java.util.Stack;
 
+import com.processpuzzle.commons.persistence.query.BooleanOperator;
+import com.processpuzzle.commons.persistence.query.ConditionElement;
+import com.processpuzzle.commons.persistence.query.Operator;
+import com.processpuzzle.commons.persistence.query.QueryCondition;
+import com.processpuzzle.commons.persistence.query.QueryContext;
 import com.processpuzzle.persistence.query.domain.DefaultAttributeCondition;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 

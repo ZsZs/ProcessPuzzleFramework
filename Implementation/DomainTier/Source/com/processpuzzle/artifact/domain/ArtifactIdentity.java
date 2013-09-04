@@ -31,8 +31,8 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact.domain;
 
-import hu.itkodex.commons.persistence.Entity;
 
+import com.processpuzzle.commons.persistence.Entity;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;

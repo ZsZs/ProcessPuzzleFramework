@@ -31,15 +31,15 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.AggregateFunction;
-import hu.itkodex.commons.persistence.query.AttributeFilter;
-import hu.itkodex.commons.persistence.query.AttributeFilterExpression;
-import hu.itkodex.commons.persistence.query.AttributeSelector;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import com.processpuzzle.commons.persistence.query.AggregateFunction;
+import com.processpuzzle.commons.persistence.query.AttributeFilter;
+import com.processpuzzle.commons.persistence.query.AttributeFilterExpression;
+import com.processpuzzle.commons.persistence.query.AttributeSelector;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
 
 public class DefaultAttributeFilter implements AttributeFilter {

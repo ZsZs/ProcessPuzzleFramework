@@ -31,9 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.application.configuration.domain;
 
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.Repository;
 
 import java.util.Iterator;
 import java.util.List;
@@ -50,6 +47,9 @@ import org.springframework.core.io.ResourceLoader;
 import com.google.common.collect.Lists;
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.security.domain.SystemInstallerUser;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.fundamental_types.domain.AssertionException;
 import com.processpuzzle.fundamental_types.domain.ProcessPuzzleEnumeration;
 import com.processpuzzle.internalization.domain.ProcessPuzzleLocale;

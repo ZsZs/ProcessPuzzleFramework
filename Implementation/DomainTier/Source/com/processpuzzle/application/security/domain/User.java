@@ -34,12 +34,12 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.application.security.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.internalization.domain.ProcessPuzzleLocale;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;

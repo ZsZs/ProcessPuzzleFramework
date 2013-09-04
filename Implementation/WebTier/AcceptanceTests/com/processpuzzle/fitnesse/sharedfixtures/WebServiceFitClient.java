@@ -1,8 +1,8 @@
 package com.processpuzzle.fitnesse.sharedfixtures;
 
-import hu.itkodex.litest.fixture.FixtureFactory;
 import hu.itkodex.litest.template.DefaultApplicationFixture;
 
+import com.processpuzzle.litest.fixture.FixtureFactory;
 import com.processpuzzle.sharedfixtures.domaintier.ApplicationFixture;
 
 import fitlibrary.DoFixture;

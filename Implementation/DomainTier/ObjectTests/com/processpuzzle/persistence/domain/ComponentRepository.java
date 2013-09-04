@@ -1,8 +1,8 @@
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
 
 public class ComponentRepository extends GenericRepository<Component>{
 

@@ -8,13 +8,6 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.IdentityExpression;
-import hu.itkodex.commons.persistence.query.Query;
 
 import org.junit.After;
 import org.junit.Before;
@@ -24,6 +17,13 @@ import org.junit.Test;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.security.domain.User;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.IdentityExpression;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.persistence.domain.BidirectionalSynchronizationStrategy;
 import com.processpuzzle.persistence.domain.HibernatePersistenceProvider;
 import com.processpuzzle.persistence.domain.TestEntity;

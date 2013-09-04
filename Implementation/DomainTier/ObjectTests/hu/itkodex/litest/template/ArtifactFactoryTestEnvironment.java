@@ -1,8 +1,9 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
 
 import com.processpuzzle.artifact.domain.ArtifactFactory;
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.litest.template.GenericTestEnvironment;
 
 public class ArtifactFactoryTestEnvironment<S extends ArtifactFactory<?>, F extends ArtifactFactoryTestFixture<S,?>> extends GenericTestEnvironment<S> {
    private Class<F> factoryTestFixtureClass;

@@ -1,7 +1,7 @@
 package com.processpuzzle.fitnesse.persistence;
 
-import hu.itkodex.commons.persistence.Repository;
 
+import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.fundamental_types.domain.ExceptionHelper;
 import com.processpuzzle.fundamental_types.domain.ProcessPuzzleException;
 

@@ -31,9 +31,9 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.address.domain;
 
-import hu.itkodex.commons.persistence.query.BooleanOperator;
-import hu.itkodex.commons.persistence.query.BooleanOperators;
 
+import com.processpuzzle.commons.persistence.query.BooleanOperator;
+import com.processpuzzle.commons.persistence.query.BooleanOperators;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 import com.processpuzzle.persistence.query.domain.IntegerAttributeCondition;

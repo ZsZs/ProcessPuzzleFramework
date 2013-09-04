@@ -1,8 +1,5 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.xml.ClasspathResourceResolver;
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.TransientFreshFixture;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,7 +19,10 @@ import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
+import com.processpuzzle.commons.xml.ClasspathResourceResolver;
 import com.processpuzzle.fundamental_types.domain.ServiceMessage;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.TransientFreshFixture;
 import com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
 
 public abstract class ServiceMessageTestFixture<S extends ServiceMessage> extends GenericTestFixture<S> implements TransientFreshFixture<S> {

@@ -3,8 +3,6 @@ package hu.itkodex.litest.template;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.TransientFreshFixture;
 
 import java.io.FileNotFoundException;
 import java.util.Map;
@@ -32,6 +30,8 @@ import com.processpuzzle.application.domain.WebApplication;
 import com.processpuzzle.application.security.domain.AnonymousUser;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserRepository;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.TransientFreshFixture;
 import com.processpuzzle.sharedfixtures.webtier.MockServletContextFixture;
 import com.processpuzzle.user_session.domain.StaticUserSessionHolder;
 import com.processpuzzle.user_session.domain.UserRequestManager;

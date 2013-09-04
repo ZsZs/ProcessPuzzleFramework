@@ -31,9 +31,9 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.AttributeCondition;
-import hu.itkodex.commons.persistence.query.DefaultConditionElement;
 
+import com.processpuzzle.commons.persistence.query.AttributeCondition;
+import com.processpuzzle.commons.persistence.query.DefaultConditionElement;
 import com.processpuzzle.fundamental_types.domain.OpAssertion;
 
 public abstract class DefaultAttributeCondition extends DefaultConditionElement implements AttributeCondition {

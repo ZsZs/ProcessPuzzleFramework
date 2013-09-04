@@ -34,7 +34,6 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.artifact_type_group.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +45,7 @@ import javax.xml.bind.annotation.XmlID;
 
 import com.processpuzzle.application.security.domain.DefaultAccessRight;
 import com.processpuzzle.artifact_type.domain.ArtifactType;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 

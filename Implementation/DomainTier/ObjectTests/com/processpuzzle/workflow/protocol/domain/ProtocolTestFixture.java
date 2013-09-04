@@ -3,11 +3,11 @@
  */
 package com.processpuzzle.workflow.protocol.domain;
 
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.PersistentSharedFixture;
 
 import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeFactory;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.PersistentSharedFixture;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTier_ConfigurationFixture;
 
 public class ProtocolTestFixture extends GenericTestFixture<Protocol> implements PersistentSharedFixture<Protocol>{

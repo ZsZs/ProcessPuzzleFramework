@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.internalization.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
 import java.util.Locale;
 import java.util.StringTokenizer;
@@ -42,6 +41,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
 
 import com.processpuzzle.application.configuration.domain.MeasurementContext;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.quantity.money.domain.Currency;
 import com.processpuzzle.fundamental_types.textformat.domain.AddressFormatSpecifier;
 import com.processpuzzle.fundamental_types.textformat.domain.DateFormatSpecifier;

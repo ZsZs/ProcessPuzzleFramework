@@ -31,13 +31,13 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.party.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.OrderSpecifier;
-import hu.itkodex.commons.persistence.query.OrderingDirections;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.OrderSpecifier;
+import com.processpuzzle.commons.persistence.query.OrderingDirections;
 import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;

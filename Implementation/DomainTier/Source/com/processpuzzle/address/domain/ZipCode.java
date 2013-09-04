@@ -31,8 +31,8 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.address.domain;
 
-import hu.itkodex.commons.persistence.AggregateRoot;
 
+import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 
 public class ZipCode extends GenericEntity<ZipCode> implements Comparable<Object>, AggregateRoot {

@@ -37,12 +37,13 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.PersistenceProvider;
-import hu.itkodex.commons.persistence.UnitOfWork;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+
+import com.processpuzzle.commons.persistence.PersistenceProvider;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 
 public class DefaultUnitOfWork implements UnitOfWork {
    private Set<PersistenceProvider> effectedPersistenceProviders = null;

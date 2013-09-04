@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.domain;
 
-import hu.itkodex.commons.persistence.query.QueryContext;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -40,6 +39,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
 
+import com.processpuzzle.commons.persistence.query.QueryContext;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
 import com.processpuzzle.fundamental_types.domain.OpAssertion;
 

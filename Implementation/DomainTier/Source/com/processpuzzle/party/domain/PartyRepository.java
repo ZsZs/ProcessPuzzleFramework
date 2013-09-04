@@ -31,15 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.party.domain;
 
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.persistence.query.BooleanOperator;
-import hu.itkodex.commons.persistence.query.BooleanOperators;
-import hu.itkodex.commons.persistence.query.OrderSpecifier;
-import hu.itkodex.commons.persistence.query.OrderingDirections;
-import hu.itkodex.commons.persistence.query.Query;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -50,6 +41,15 @@ import java.util.List;
 import java.util.Set;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.persistence.query.BooleanOperator;
+import com.processpuzzle.commons.persistence.query.BooleanOperators;
+import com.processpuzzle.commons.persistence.query.OrderSpecifier;
+import com.processpuzzle.commons.persistence.query.OrderingDirections;
+import com.processpuzzle.commons.persistence.query.Query;
 import com.processpuzzle.party.artifact.PartyDataSheet;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;

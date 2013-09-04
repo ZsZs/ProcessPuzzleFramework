@@ -34,7 +34,7 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.application.security.domain;
 
-import hu.itkodex.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.PersistentObject;
 
 /**
  * @author zsolt.zsuffa

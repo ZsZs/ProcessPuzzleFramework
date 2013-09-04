@@ -37,10 +37,10 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.fundamental_types.quantity.domain;
 
-import hu.itkodex.commons.persistence.ValueObject;
 
 import java.util.Locale;
 
+import com.processpuzzle.commons.persistence.ValueObject;
 import com.processpuzzle.fundamental_types.domain.AssertionException;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
 import com.processpuzzle.fundamental_types.domain.ProcessPuzzleParseException;

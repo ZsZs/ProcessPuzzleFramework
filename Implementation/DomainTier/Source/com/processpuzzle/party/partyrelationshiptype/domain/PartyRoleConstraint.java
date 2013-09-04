@@ -37,13 +37,13 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.party.partyrelationshiptype.domain;
 
-import hu.itkodex.commons.persistence.ValueObject;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlIDREF;
 
 import org.springframework.util.Assert;
 
+import com.processpuzzle.commons.persistence.ValueObject;
 import com.processpuzzle.party.domain.Company;
 import com.processpuzzle.party.domain.Department;
 import com.processpuzzle.party.domain.Division;

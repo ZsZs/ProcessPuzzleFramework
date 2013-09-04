@@ -1,14 +1,6 @@
 package hu.itkodex.litest.template;
 
 import static org.junit.Assert.fail;
-import hu.itkodex.commons.persistence.AggregateRoot;
-import hu.itkodex.commons.persistence.PersistenceProvider;
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.RepositoryEventHandler;
-import hu.itkodex.commons.persistence.UnitOfWork;
-import hu.itkodex.commons.rdbms.DatabaseSpy;
-import hu.itkodex.litest.fixture.TransientFreshFixture;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -30,6 +22,15 @@ import com.processpuzzle.application.configuration.domain.PropertyKeys;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserFactory;
 import com.processpuzzle.application.security.domain.UserRepository;
+import com.processpuzzle.commons.persistence.AggregateRoot;
+import com.processpuzzle.commons.persistence.PersistenceProvider;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.RepositoryEventHandler;
+import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.commons.rdbms.DatabaseSpy;
+import com.processpuzzle.litest.fixture.TransientFreshFixture;
+import com.processpuzzle.litest.template.GenericTemplatedFixture;
 import com.processpuzzle.persistence.domain.DefaultPersistenceStrategy;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.HibernatePersistenceProvider;

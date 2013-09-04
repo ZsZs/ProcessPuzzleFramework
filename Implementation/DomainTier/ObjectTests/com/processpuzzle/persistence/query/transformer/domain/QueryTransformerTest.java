@@ -1,18 +1,18 @@
 package com.processpuzzle.persistence.query.transformer.domain;
 
 import static org.junit.Assert.assertEquals;
-import hu.itkodex.commons.persistence.query.BooleanOperator;
-import hu.itkodex.commons.persistence.query.BooleanOperators;
-import hu.itkodex.commons.persistence.query.Count;
-import hu.itkodex.commons.persistence.query.Maximum;
-import hu.itkodex.commons.persistence.query.OrderSpecifier;
-import hu.itkodex.commons.persistence.query.OrderingDirections;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.commons.persistence.query.BooleanOperator;
+import com.processpuzzle.commons.persistence.query.BooleanOperators;
+import com.processpuzzle.commons.persistence.query.Count;
+import com.processpuzzle.commons.persistence.query.Maximum;
+import com.processpuzzle.commons.persistence.query.OrderSpecifier;
+import com.processpuzzle.commons.persistence.query.OrderingDirections;
 import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;
 import com.processpuzzle.persistence.query.domain.DateAttributeCondition;

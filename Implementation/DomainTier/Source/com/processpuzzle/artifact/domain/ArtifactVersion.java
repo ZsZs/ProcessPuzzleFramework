@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.artifact.domain;
 
-import hu.itkodex.commons.persistence.Entity;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -39,6 +38,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import com.processpuzzle.application.security.domain.User;
+import com.processpuzzle.commons.persistence.Entity;
 
 public class ArtifactVersion implements Entity, Comparable<ArtifactVersion> {
    private Integer id;

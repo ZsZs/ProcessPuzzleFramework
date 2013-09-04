@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.business.definition.domain;
 
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -50,6 +49,7 @@ import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeRepository;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 

@@ -1,6 +1,7 @@
 package hu.itkodex.litest.template;
 
 import com.processpuzzle.artifact.domain.Artifact;
+import com.processpuzzle.litest.template.GenericTestEnvironment;
 import com.processpuzzle.sharedfixtures.domaintier.MockProcessPuzzleContext;
 import com.processpuzzle.sharedfixtures.domaintier.RequestContextInMockedApplicationFixture;
 

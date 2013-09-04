@@ -31,7 +31,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.Entity;
 
 public interface EntityFactory<E extends Entity> {
    public Class<? extends Entity> getTargetEntityClass();

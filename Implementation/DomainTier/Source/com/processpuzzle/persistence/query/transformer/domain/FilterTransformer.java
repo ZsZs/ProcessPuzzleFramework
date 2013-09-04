@@ -31,13 +31,14 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.query.transformer.domain;
 
-import hu.itkodex.commons.persistence.query.AggregateFunction;
-import hu.itkodex.commons.persistence.query.AttributeFilter;
-import hu.itkodex.commons.persistence.query.AttributeFilterExpression;
-import hu.itkodex.commons.persistence.query.AttributeSelector;
-import hu.itkodex.commons.persistence.query.QueryTransformer;
 
 import java.util.Iterator;
+
+import com.processpuzzle.commons.persistence.query.AggregateFunction;
+import com.processpuzzle.commons.persistence.query.AttributeFilter;
+import com.processpuzzle.commons.persistence.query.AttributeFilterExpression;
+import com.processpuzzle.commons.persistence.query.AttributeSelector;
+import com.processpuzzle.commons.persistence.query.QueryTransformer;
 
 public abstract class FilterTransformer {
    protected String fragment = "";

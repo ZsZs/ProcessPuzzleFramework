@@ -34,11 +34,11 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.artifact_type.domain;
 
-import hu.itkodex.commons.persistence.UnitOfWork;
 
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
+import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.persistence.domain.GenericFactory;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 

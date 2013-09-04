@@ -31,11 +31,12 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.RepositoryResultSet;
 
 import java.util.Iterator;
 import java.util.List;
+
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 
 
 public class SimpleResultSet<T extends PersistentObject> implements RepositoryResultSet<T> {

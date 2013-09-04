@@ -1,12 +1,13 @@
 package hu.itkodex.litest.template;
 
 
-import hu.itkodex.commons.xml.ObjectXmlBinder;
 
 import org.dom4j.Document;
 
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact.domain.ArtifactView;
+import com.processpuzzle.commons.xml.ObjectXmlBinder;
+import com.processpuzzle.litest.template.GenericTestTemplate;
 
 public abstract class ArtifactTestTemplate<S extends Artifact<S>, F extends ArtifactTestFixture<S>> extends GenericTestTemplate<S, F, ArtifactTestEnvironment<S, F>>{
    private ObjectXmlBinder objectXmlBinder;

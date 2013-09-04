@@ -31,11 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.application.configuration.domain;
 
-import hu.itkodex.commons.persistence.Entity;
-import hu.itkodex.commons.persistence.PersistenceStrategy;
-import hu.itkodex.commons.persistence.PersistentObject;
-import hu.itkodex.commons.persistence.Repository;
-import hu.itkodex.commons.persistence.RepositoryEventHandler;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -50,6 +45,11 @@ import java.util.Map;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 
 import com.processpuzzle.application.domain.Application;
+import com.processpuzzle.commons.persistence.Entity;
+import com.processpuzzle.commons.persistence.PersistenceStrategy;
+import com.processpuzzle.commons.persistence.PersistentObject;
+import com.processpuzzle.commons.persistence.Repository;
+import com.processpuzzle.commons.persistence.RepositoryEventHandler;
 import com.processpuzzle.fundamental_types.domain.OpAssertion;
 import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.domain.DefaultPersistenceStrategy;

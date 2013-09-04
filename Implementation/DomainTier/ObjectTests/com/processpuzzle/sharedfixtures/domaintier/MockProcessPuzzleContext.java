@@ -2,8 +2,6 @@ package com.processpuzzle.sharedfixtures.domaintier;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import hu.itkodex.litest.fixture.GenericTestFixture;
-import hu.itkodex.litest.fixture.TransientFreshFixture;
 
 import com.processpuzzle.address.domain.CountryFactory;
 import com.processpuzzle.address.domain.SettlementFactory;
@@ -12,6 +10,8 @@ import com.processpuzzle.application.configuration.domain.PropertyKeys;
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.security.domain.UserFactory;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
+import com.processpuzzle.litest.fixture.GenericTestFixture;
+import com.processpuzzle.litest.fixture.TransientFreshFixture;
 import com.processpuzzle.persistence.domain.TestEntityRepository;
 
 public class MockProcessPuzzleContext extends GenericTestFixture<ProcessPuzzleContext> implements TransientFreshFixture<ProcessPuzzleContext> {

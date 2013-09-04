@@ -1,6 +1,5 @@
 package hu.itkodex.litest.template;
 
-import hu.itkodex.commons.generics.GenericTypeParameterInvestigator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +9,8 @@ import org.junit.Before;
 
 import com.processpuzzle.application.control.control.CommandDispatcher;
 import com.processpuzzle.application.control.control.CommandInterface;
+import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
+import com.processpuzzle.litest.template.GenericTestTemplate;
 
 public abstract class FrontCommandTestTemplate<S extends CommandInterface, F extends FrontCommandTestFixture<S>> extends GenericTestTemplate<S,F,FrontCommandTestEnvironment<S, F>>{
    protected S command;
