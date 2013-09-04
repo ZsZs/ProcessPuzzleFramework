@@ -4,58 +4,36 @@
 
 	<property name="project.root" location="${basedir}" />
 	<property name="view.root.path" location="../../../" />
-	<property name="common.build.path" value="${view.root.path}/ProcessPuzzle/Environment/ANT/Scripts" />
+	<property name="common.build.path" value="${view.root.path}/BuildPuzzle/Implementation/BuildSnippets" />
 
-	<property file="${view.root.path}/ITKodex/Projects/Commons/Implementation/DomainTier/Build/buildinfo.properties" prefix="itcodexcommons"/>
-	<property file="${view.root.path}/ITKodex/Projects/LiTest/Implementation/DomainTier/Build/buildinfo.properties" prefix="litest"/>
-	<property file="${view.root.path}/ProcessPuzzle/Framework/DomainTier/Build/buildinfo.properties" prefix="processpuzzle"/>
-	<property file="${view.root.path}/ProcessPuzzle/Framework/DomainComponents/Build/buildinfo.properties" prefix="domaincomponents"/>
+	<property file="${view.root.path}/ProcessPuzzleCommons/Implementation/DomainTier/Build/component.properties" prefix="processpuzzlecommons"/>
+	<property file="${view.root.path}/LiTest/Implementation/DomainTier/Build/component.properties" prefix="litest"/>
+	<property file="${view.root.path}/ProcessPuzzleFramework/Implementation/DomainTier/Build/component.properties" prefix="processpuzzle"/>
 	<property file="${project.root}/Build/local.build.properties" />
-	<property file="${project.root}/Build/buildinfo.properties" />
+	<property file="${project.root}/Build/component.properties"/>
 	<property file="${common.build.path}/common.build.properties" />
-	
+
 	<path id="project.auxiliary.classpath">
-		<fileset dir="${distribution.base.path}/${itcodexcommons.component.distribution.dir}">
-			<include name="${itcodexcommons.component.packaged.file}" />
+		<fileset dir="${release.base.path}/${processpuzzlecommons.component.distribution.dir}">
+			<include name="${processpuzzlecommons.component.packaged.file}" />
 			<exclude name="**/*.copyarea.db" />
 		</fileset>
 		
-		<fileset dir="${distribution.base.path}/${litest.component.distribution.dir}">
+		<fileset dir="${release.base.path}/${litest.component.distribution.dir}">
 			<include name="${litest.component.packaged.file}" />
 			<exclude name="**/*.copyarea.db" />
 		</fileset>
 		
-		<fileset dir="${distribution.base.path}/${processpuzzle.component.distribution.dir}">
+		<fileset dir="${release.base.path}/${processpuzzle.component.distribution.dir}">
 			<include name="${processpuzzle.component.packaged.file}" />
 			<exclude name="**/*.copyarea.db" />
 		</fileset>
-		
-		<fileset dir="${distribution.base.path}/${domaincomponents.component.distribution.dir}">
-			<include name="${domaincomponents.component.packaged.file}" />
-			<exclude name="**/*.copyarea.db" />
-		</fileset>
 	</path>
-	
-	<patternset id="javascript.source.files">
-		<include name="MooTools/*.js" />
-		<include name="MochaUI/*.js" />
-		<include name="Sarissa/*.js" />
-		<include name="CommonScripts/*.js" />
-		<include name="FundamentalTypes/*.js" />
-		<include name="Singleton/*.js" />
-		<include name="BrowserWidget/*.js" />
-		<include name="DesktopConfigurator/*.js" />
-		<include name="FramedContentManager/*.js" />
-		<include name="Internationalization/*.js" />
-		<include name="WebUIController/*.js" />
-		<exclude name="**/*.copyarea.db" />
-	</patternset>
 
 	<target name="webtier-build">
 		<ant dir="${project.root}" antfile="${common.build.path}/${common.webtier.build.file}" target="all">
 			<property name="cobertura.data.file" value="${project.root}/${cobertura.data.file}" />
 			<reference refid="project.auxiliary.classpath"/>
-			<reference refid="javascript.source.files"/>
 		</ant>
 	</target>
 </project>
