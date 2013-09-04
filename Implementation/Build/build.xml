@@ -18,15 +18,6 @@
 		</ant>
 	</target>
 
-<!--
-	<target name="call-domaincomponents-build" depends="call-domaintier-build">
-		<ant dir="${project.archetypes.root}" antfile="${project.build.file}" inheritall="false">
-			<property name="project.root" location="${project.archetypes.root}" />
-			<property name="view.root.path" location="${view.root.path}" />
-			<property file="${project.build.dir}/local.build.properties" />
-		</ant>
-	</target>
--->
 	<target name="call-webtier-build" depends="call-domaintier-build">
 		<ant dir="${project.webtier.root}" antfile="${project.build.file}" inheritall="false">
 			<property name="project.root" location="${project.webtier.root}" />
