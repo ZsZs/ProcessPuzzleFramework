@@ -4,20 +4,20 @@
 
 	<property name="project.root" location="${basedir}" />
 	<property name="view.root.path" location="../../../" />
-	<property name="common.build.path" value="${view.root.path}/ProcessPuzzle/Environment/ANT/Scripts" />
-
-	<property file="${view.root.path}/ITKodex/Projects/Commons/Implementation/DomainTier/Build/buildinfo.properties" prefix="itcodexcommons"/>
-	<property file="${view.root.path}/ITKodex/Projects/LiTest/Implementation/DomainTier/Build/buildinfo.properties" prefix="litest"/>
+	<property name="common.build.path" value="${view.root.path}/BuildPuzzle/Implementation/BuildSnippets" />
+	
+	<property file="${view.root.path}/ProcessPuzzleCommons/Implementation/DomainTier/Build/component.properties" prefix="processpuzzlecommons"/>
+	<property file="${view.root.path}/LiTest/Implementation/DomainTier/Build/component.properties" prefix="litest"/>
 	<property file="${project.root}/Build/local.build.properties" />
-	<property file="${project.root}/Build/buildinfo.properties"/>
+	<property file="${project.root}/Build/component.properties"/>
 	<property file="${common.build.path}/common.build.properties" />
 
 	<path id="project.auxiliary.classpath">
-		<fileset dir="${distribution.base.path}/${itcodexcommons.component.distribution.dir}">
-			<include name="${itcodexcommons.component.packaged.file}" />
+		<fileset dir="${release.base.path}/${processpuzzlecommons.component.distribution.dir}">
+			<include name="${processpuzzlecommons.component.packaged.file}" />
 		</fileset>
 		
-		<fileset dir="${distribution.base.path}/${litest.component.distribution.dir}">
+		<fileset dir="${release.base.path}/${litest.component.distribution.dir}">
 			<include name="${litest.component.packaged.file}" />
 		</fileset>
 	</path>
