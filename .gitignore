@@ -25,6 +25,7 @@
 /Implementation/DomainTier/ObjectTests/com/processpuzzle/application/configuration/domain/custom_configuration.xml
 /Implementation/WebTier/.settings
 /Implementation/WebTier/Binaries/
+/Implementation/WebTier/Build/Binaries/
 /Implementation/WebTier/Build/Distribution/
 /Implementation/WebTier/Build/Libraries/
 /Implementation/WebTier/Build/Logs/
