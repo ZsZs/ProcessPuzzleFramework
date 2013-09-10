@@ -5,7 +5,6 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
 
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import java.util.Set;
 
@@ -14,6 +13,7 @@ import org.junit.Test;
 
 import com.processpuzzle.address.domain.Country;
 import com.processpuzzle.address.domain.CountryRepository;
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 

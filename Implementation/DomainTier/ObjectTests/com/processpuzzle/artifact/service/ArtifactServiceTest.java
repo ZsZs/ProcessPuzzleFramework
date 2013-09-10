@@ -6,7 +6,6 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.*;
 
-import hu.itkodex.litest.template.ArtifactServiceTestTemplate;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -16,6 +15,7 @@ import com.processpuzzle.artifact.domain.ArtifactView;
 import com.processpuzzle.artifact.domain.CommonArtifactServiceTestFixture;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
 import com.processpuzzle.commons.persistence.UnitOfWork;
+import com.processpuzzle.litest.template.ArtifactServiceTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 

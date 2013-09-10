@@ -30,14 +30,14 @@ You should have received a copy of the GNU General Public License along with thi
 */
 
 package com.processpuzzle.user_session.domain;
-//package com.itcodex.objectpuzzle.framework.application_configuration.domain.request;
+//package com.processpuzzle.framework.application_configuration.domain.request;
 //
 //import org.apache.commons.logging.Log;
 //import org.apache.commons.logging.LogFactory;
 //
-//import com.itcodex.objectpuzzle.framework.application_configuration.domain.config.ConfigHelper;
-//import com.itcodex.objectpuzzle.framework.application_configuration.domain.session.ApplicationSession;
-//import com.itcodex.objectpuzzle.framework.application_configuration.domain.session.StaticApplicationSessionHolder;
+//import com.processpuzzle.framework.application_configuration.domain.config.ConfigHelper;
+//import com.processpuzzle.framework.application_configuration.domain.session.ApplicationSession;
+//import com.processpuzzle.framework.application_configuration.domain.session.StaticApplicationSessionHolder;
 //
 ///**
 // * Add RequestContext to the executing thread and remove it again, when the call returns on

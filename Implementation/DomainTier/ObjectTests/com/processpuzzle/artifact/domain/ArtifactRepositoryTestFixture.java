@@ -1,7 +1,5 @@
 package com.processpuzzle.artifact.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserFactory;
@@ -9,6 +7,8 @@ import com.processpuzzle.application.security.domain.UserRepository;
 import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeFactory;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeRepository;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class ArtifactRepositoryTestFixture extends RepositoryTestFixture<DefaultArtifactRepository, Artifact> {

@@ -4,7 +4,7 @@
 		 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 	
 	<bean id="applicationConfiguration" 
-			class="com.itcodex.objectpuzzle.framework.application_configuration.domain.Configuration"
+			class="com.processpuzzle.framework.application_configuration.domain.Configuration"
 			factory-method="getInstance" />
 
 </beans>

@@ -1,8 +1,8 @@
 package com.processpuzzle.party.partyroletype.domain;
 
-import hu.itkodex.litest.template.FactoryTestEnvironment;
-import hu.itkodex.litest.template.FactoryTestFixture;
 
+import com.processpuzzle.litest.template.FactoryTestEnvironment;
+import com.processpuzzle.litest.template.FactoryTestFixture;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeFactory;
 import com.processpuzzle.party.partytype.domain.PartyType;

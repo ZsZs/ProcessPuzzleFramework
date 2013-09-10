@@ -3,9 +3,10 @@ package com.processpuzzle.party.partytype.domain;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Test;
+
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 
 
 public class PartyTypeRepositoryTest extends RepositoryTestTemplate<PartyTypeRepository, PartyTypeRepositoryTestFixture, PartyType> {

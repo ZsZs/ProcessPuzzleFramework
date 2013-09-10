@@ -2,8 +2,6 @@ package com.processpuzzle.artifact.domain;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import hu.itkodex.litest.template.ArtifactTestEnvironment;
-import hu.itkodex.litest.template.ArtifactTestFixture;
 
 import java.util.Date;
 
@@ -11,6 +9,8 @@ import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeFactory;
 import com.processpuzzle.artifact_type.domain.ArtifactViewType;
+import com.processpuzzle.litest.template.ArtifactTestEnvironment;
+import com.processpuzzle.litest.template.ArtifactTestFixture;
 import com.processpuzzle.persistence.domain.TestEntity;
 
 public class CommonArtifactTestFixture extends ArtifactTestFixture<TestEntityDataSheet> {

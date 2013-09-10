@@ -4,12 +4,12 @@
 package com.processpuzzle.application.security.domain;
 
 import static org.junit.Assert.assertEquals;
-import hu.itkodex.litest.template.FactoryTestTemplate;
 
 import org.junit.Ignore;
 import org.junit.Test;
 
 import com.processpuzzle.fundamental_types.domain.AssertionException;
+import com.processpuzzle.litest.template.FactoryTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;

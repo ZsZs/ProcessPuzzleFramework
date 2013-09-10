@@ -4,12 +4,12 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-import hu.itkodex.litest.template.RepositoryTest;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Test;
 
 import com.processpuzzle.fundamental_types.domain.AssertionException;
+import com.processpuzzle.litest.template.RepositoryTest;
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 import fitlibrary.specify.workflow.ParserDelegateMethod.Date;

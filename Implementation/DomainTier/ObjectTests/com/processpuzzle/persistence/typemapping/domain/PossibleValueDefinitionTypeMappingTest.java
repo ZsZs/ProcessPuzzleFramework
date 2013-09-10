@@ -7,7 +7,6 @@ import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assume.assumeThat;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import java.util.List;
 import java.util.Set;
@@ -21,6 +20,7 @@ import com.processpuzzle.fundamental_types.possiblevalue.domain.QuantityRange;
 import com.processpuzzle.fundamental_types.possiblevalue.domain.StringEnumeration;
 import com.processpuzzle.fundamental_types.quantity.domain.Quantity;
 import com.processpuzzle.fundamental_types.quantity.domain.Units;
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.domain.TestEntityRepository;

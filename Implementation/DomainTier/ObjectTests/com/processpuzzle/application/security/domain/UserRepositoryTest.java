@@ -3,12 +3,12 @@ package com.processpuzzle.application.security.domain;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import java.util.Iterator;
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class UserRepositoryTest extends RepositoryTestTemplate<UserRepository, UserRepositoryTestFixture, User> {

@@ -1,10 +1,10 @@
 package com.processpuzzle.party.artifact;
 
-import hu.itkodex.litest.template.FactoryTestEnvironment;
-import hu.itkodex.litest.template.FactoryTestFixture;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
+import com.processpuzzle.litest.template.FactoryTestEnvironment;
+import com.processpuzzle.litest.template.FactoryTestFixture;
 
 public class CompanyDataSheetFactoryTestFixture extends FactoryTestFixture<CompanyDataSheetFactory, CompanyDataSheet> {
    private DefaultArtifactRepository artifactRepository;

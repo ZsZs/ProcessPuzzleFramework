@@ -1,7 +1,7 @@
 package com.processpuzzle.workflow.protocol.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class ProtocolRepositoryTestFixture extends RepositoryTestFixture<ProtocolRepository, Protocol> {
    private XPLifecycleFixture fixture;

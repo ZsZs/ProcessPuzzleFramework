@@ -1,7 +1,7 @@
 package com.processpuzzle.address.domain;
 
-import hu.itkodex.litest.template.DomainObjectTestEnvironment;
-import hu.itkodex.litest.template.DomainObjectTestFixture;
+import com.processpuzzle.litest.template.DomainObjectTestEnvironment;
+import com.processpuzzle.litest.template.DomainObjectTestFixture;
 
 public class ZipCodeTestFixture<ZipCodex> extends DomainObjectTestFixture<ZipCode> {
    public static final Integer ANOTHER_ZIP_CODE_VALUE = 5678;

@@ -1,8 +1,8 @@
 package com.processpuzzle.party.partyrelationshiptype.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 import com.processpuzzle.sharedfixtures.domaintier.PartyRelationshipTypeFixture;
 
 public class PartyRelationshipTypeRepositoryTestFixture extends RepositoryTestFixture<PartyRelationshipTypeRepository, PartyRelationshipType> {

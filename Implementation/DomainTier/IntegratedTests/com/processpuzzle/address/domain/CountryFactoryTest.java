@@ -4,8 +4,8 @@ import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.FactoryTestTemplate;
 
+import com.processpuzzle.litest.template.FactoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class CountryFactoryTest extends FactoryTestTemplate<CountryFactory, CountryFactoryTestFixture, Country> {

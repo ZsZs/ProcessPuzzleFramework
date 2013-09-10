@@ -1,0 +1,13 @@
+domain.class.repository.mapping = com.processpuzzle.framework.application_configuration.domain.OPDomainTierClassRepositoryMapping
+persistence.strategy.name = hibernate
+persistence.strategy.configuration = classpath:com/itcodex/objectpuzzle/framework/configuration/domaintier/domaintier_persistence_configuration.properties
+
+#internalization.resource.bundle = 
+available.locales = hu|en
+default.locale = hu
+
+runtime.environment = local
+
+#system.data.loader.class = com.itcodex.objectpuzzle.configuration.domaincomponents.OPTestDatas
+#migration.data.loader.class = someMigrationLoader
+#test.data.loader.class = com.itcodex.adi.persistence.domain.ADITestDatas

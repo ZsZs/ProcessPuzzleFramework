@@ -1,10 +1,10 @@
 package com.processpuzzle.address.domain;
 
-import hu.itkodex.litest.template.DomainObjectTestEnvironment;
-import hu.itkodex.litest.template.DomainObjectTestFixture;
 
 import com.processpuzzle.address.domain.AlreadyExistingSettlementInCountryException;
 import com.processpuzzle.address.domain.Country;
+import com.processpuzzle.litest.template.DomainObjectTestEnvironment;
+import com.processpuzzle.litest.template.DomainObjectTestFixture;
 
 public class CountryTestFixture extends DomainObjectTestFixture<Country> {
    public static final String COUNTRY_NAME = "Hungary";

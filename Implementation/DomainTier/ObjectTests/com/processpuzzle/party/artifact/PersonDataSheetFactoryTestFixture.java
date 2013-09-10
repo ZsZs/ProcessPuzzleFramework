@@ -1,7 +1,5 @@
 package com.processpuzzle.party.artifact;
 
-import hu.itkodex.litest.template.FactoryTestEnvironment;
-import hu.itkodex.litest.template.FactoryTestFixture;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -10,6 +8,8 @@ import java.util.Date;
 
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
 import com.processpuzzle.fundamental_types.domain.TimePoint;
+import com.processpuzzle.litest.template.FactoryTestEnvironment;
+import com.processpuzzle.litest.template.FactoryTestFixture;
 
 public class PersonDataSheetFactoryTestFixture extends FactoryTestFixture<PersonDataSheetFactory, PersonDataSheet> {
    private DefaultArtifactRepository artifactRepository;

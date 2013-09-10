@@ -19,7 +19,7 @@
 	
 	<persistence>
 		<repositoryMapping>
-			<class>com.itcodex.objectpuzzle.framework.application_configuration.domain.TestClassMapping</class>
+			<class>com.processpuzzle.framework.application_configuration.domain.TestClassMapping</class>
 		</repositoryMapping>
 		<strategy name="hibernate">
 			<propertyUrl>classpath:com/itcodex/objectpuzzle/framework/configuration/domaintier/domaintier_persistence_configuration.properties</propertyUrl>

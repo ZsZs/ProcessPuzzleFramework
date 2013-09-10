@@ -1,10 +1,10 @@
 package com.processpuzzle.party.partyrelationshiptype.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
 import java.util.Iterator;
 
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.party.partytype.domain.PartyTypeRepository;
 import com.processpuzzle.sharedfixtures.domaintier.PartyRoleTypeFixture;

@@ -1,11 +1,11 @@
 package com.processpuzzle.address.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
 import com.processpuzzle.address.domain.Country;
 import com.processpuzzle.address.domain.CountryFactory;
 import com.processpuzzle.address.domain.CountryRepository;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class CountryRepositoryTestFixture extends RepositoryTestFixture<CountryRepository, Country> {

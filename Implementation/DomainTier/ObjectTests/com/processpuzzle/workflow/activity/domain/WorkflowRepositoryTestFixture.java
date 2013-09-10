@@ -1,8 +1,8 @@
 package com.processpuzzle.workflow.activity.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 import com.processpuzzle.party.partytype.domain.PartyTypeRepository;
 
 public class WorkflowRepositoryTestFixture extends RepositoryTestFixture<WorkflowRepository, Plan> {

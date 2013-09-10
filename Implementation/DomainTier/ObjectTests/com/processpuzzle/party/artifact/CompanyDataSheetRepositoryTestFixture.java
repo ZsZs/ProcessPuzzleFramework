@@ -1,7 +1,7 @@
 package com.processpuzzle.party.artifact;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class CompanyDataSheetRepositoryTestFixture extends RepositoryTestFixture<CompanyDataSheetRepository, CompanyDataSheet> {
    private static final String TEST_ORGANIZATION_NAME = "ITKodex Kft.";

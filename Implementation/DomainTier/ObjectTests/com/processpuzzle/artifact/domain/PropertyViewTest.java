@@ -7,12 +7,12 @@ import static com.processpuzzle.artifact.domain.IsSameXml.isSameXml;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.ArtifactTestTemplate;
 
 import java.util.Date;
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.ArtifactTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.util.domain.GeneralService;
 

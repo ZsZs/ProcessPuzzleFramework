@@ -3,13 +3,14 @@ package com.processpuzzle.persistence.domain;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.junit.Ignore;
 import org.junit.Test;
+
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 
 
 public class ComponentRepositoryTest extends RepositoryTestTemplate<ComponentRepository, ComponentRepositoryTestFixture, Component> {

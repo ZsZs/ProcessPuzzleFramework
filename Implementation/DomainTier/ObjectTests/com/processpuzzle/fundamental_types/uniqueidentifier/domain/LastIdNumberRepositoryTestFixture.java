@@ -1,7 +1,7 @@
 package com.processpuzzle.fundamental_types.uniqueidentifier.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class LastIdNumberRepositoryTestFixture extends RepositoryTestFixture<LastIdNumberRepository, LastIdNumber> {
    public static final String orderIdType = "com.processpuzzle.order.domain.order.OrderIdentifier";

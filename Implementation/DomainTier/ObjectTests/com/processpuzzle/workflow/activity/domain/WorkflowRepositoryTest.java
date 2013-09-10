@@ -1,10 +1,10 @@
 package com.processpuzzle.workflow.activity.domain;
 
 import static org.junit.Assert.assertEquals;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class WorkflowRepositoryTest extends RepositoryTestTemplate<WorkflowRepository, WorkflowRepositoryTestFixture, Plan> {

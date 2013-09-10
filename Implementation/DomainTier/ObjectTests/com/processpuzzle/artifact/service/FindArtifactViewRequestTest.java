@@ -2,7 +2,8 @@ package com.processpuzzle.artifact.service;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.ServiceMessageTest;
+
+import com.processpuzzle.litest.template.ServiceMessageTest;
 
 public class FindArtifactViewRequestTest extends ServiceMessageTest<FindArtifactRequest, FindArtifactRequestTestFixture>{
    

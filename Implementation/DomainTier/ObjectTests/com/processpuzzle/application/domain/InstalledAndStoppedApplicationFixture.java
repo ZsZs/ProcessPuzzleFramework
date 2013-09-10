@@ -1,7 +1,7 @@
 package com.processpuzzle.application.domain;
 
-import hu.itkodex.litest.template.DefaultApplicationFixture;
 
+import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.sharedfixtures.domaintier.ApplicationTwo;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 

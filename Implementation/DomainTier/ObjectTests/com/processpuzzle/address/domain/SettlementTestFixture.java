@@ -1,8 +1,8 @@
 package com.processpuzzle.address.domain;
 
 
-import hu.itkodex.litest.template.DomainObjectTestEnvironment;
-import hu.itkodex.litest.template.DomainObjectTestFixture;
+import com.processpuzzle.litest.template.DomainObjectTestEnvironment;
+import com.processpuzzle.litest.template.DomainObjectTestFixture;
 
 public class SettlementTestFixture extends DomainObjectTestFixture<Settlement>{
    public static final String OTHER_SETTLEMENT_NAME = "Gödöllõ";

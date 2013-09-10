@@ -6,11 +6,11 @@ package com.processpuzzle.workflow.protocol.domain;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class ProtocolRepositoryTest extends RepositoryTestTemplate<ProtocolRepository, ProtocolRepositoryTestFixture, Protocol> {

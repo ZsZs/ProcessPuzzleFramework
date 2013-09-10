@@ -1,7 +1,7 @@
 package com.processpuzzle.application.security.domain;
 
-import hu.itkodex.litest.template.FactoryTestEnvironment;
-import hu.itkodex.litest.template.FactoryTestFixture;
+import com.processpuzzle.litest.template.FactoryTestEnvironment;
+import com.processpuzzle.litest.template.FactoryTestFixture;
 
 public class UserFactoryTestFixture extends FactoryTestFixture<UserFactory, User> {
    private User johnSmith = null;

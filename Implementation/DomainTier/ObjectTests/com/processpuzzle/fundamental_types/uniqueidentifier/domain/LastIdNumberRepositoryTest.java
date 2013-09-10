@@ -4,11 +4,11 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class LastIdNumberRepositoryTest extends RepositoryTestTemplate<LastIdNumberRepository, LastIdNumberRepositoryTestFixture, LastIdNumber> {

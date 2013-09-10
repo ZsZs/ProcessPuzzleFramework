@@ -1,11 +1,11 @@
 package com.processpuzzle.persistence.typemapping.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
 import java.util.Date;
 
 import com.processpuzzle.fundamental_types.domain.TimePoint;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.domain.TestEntityRepository;
 

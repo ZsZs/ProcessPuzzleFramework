@@ -1,7 +1,7 @@
 package com.processpuzzle.party.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class CompanyRepositoryTestFixture extends RepositoryTestFixture<CompanyRepository, Company> {
 

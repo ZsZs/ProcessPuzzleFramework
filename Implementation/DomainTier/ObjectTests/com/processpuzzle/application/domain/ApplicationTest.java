@@ -7,7 +7,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeThat;
-import hu.itkodex.litest.template.DefaultApplicationFixture;
 
 import org.junit.After;
 import org.junit.Ignore;
@@ -16,6 +15,7 @@ import org.junit.Test;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserRepository;
+import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.litest.testcase.GenericTestSuite;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;

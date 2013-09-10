@@ -8,10 +8,10 @@ import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.FactoryTestTemplate;
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.FactoryTestTemplate;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeFactory;
 import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;

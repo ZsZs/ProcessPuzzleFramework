@@ -1,7 +1,7 @@
 package com.processpuzzle.artifact_type.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class ArtifactTypeRepositoryTestFixture extends RepositoryTestFixture<ArtifactTypeRepository, ArtifactType> {
    public static final String QUERY_VIEW_TYPE_NAME = "TestQueryViewType";

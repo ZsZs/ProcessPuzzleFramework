@@ -1,13 +1,13 @@
 package com.processpuzzle.party.domain;
 
-import hu.itkodex.litest.template.DomainObjectTestEnvironment;
-import hu.itkodex.litest.template.DomainObjectTestFixture;
 
 import java.util.Date;
 
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserFactory;
 import com.processpuzzle.fundamental_types.domain.TimePoint;
+import com.processpuzzle.litest.template.DomainObjectTestEnvironment;
+import com.processpuzzle.litest.template.DomainObjectTestFixture;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class PersonTestFixture extends DomainObjectTestFixture<Person> {

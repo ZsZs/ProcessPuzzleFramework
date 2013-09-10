@@ -6,11 +6,11 @@ package com.processpuzzle.party.partyrelationshiptype.domain;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.FactoryTestTemplate;
 
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.FactoryTestTemplate;
 import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.sharedfixtures.domaintier.PartyRelationshipTypeFixture;

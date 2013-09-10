@@ -1,8 +1,8 @@
 package com.processpuzzle.address.domain;
 
-import hu.itkodex.litest.template.FactoryTestEnvironment;
-import hu.itkodex.litest.template.FactoryTestFixture;
 
+import com.processpuzzle.litest.template.FactoryTestEnvironment;
+import com.processpuzzle.litest.template.FactoryTestFixture;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class CountryFactoryTestFixture extends FactoryTestFixture<CountryFactory, Country> {

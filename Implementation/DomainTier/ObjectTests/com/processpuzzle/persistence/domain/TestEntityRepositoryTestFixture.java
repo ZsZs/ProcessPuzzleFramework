@@ -1,7 +1,5 @@
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
 import java.util.GregorianCalendar;
 
@@ -9,6 +7,8 @@ import com.processpuzzle.fundamental_types.domain.TimePeriod;
 import com.processpuzzle.fundamental_types.domain.TimePoint;
 import com.processpuzzle.fundamental_types.quantity.domain.Quantity;
 import com.processpuzzle.fundamental_types.quantity.domain.Unit;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class TestEntityRepositoryTestFixture extends RepositoryTestFixture<TestEntityRepository, TestEntity> {
    private DefaultUnitOfWork unstartedWork = null;

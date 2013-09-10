@@ -3,8 +3,8 @@ package com.processpuzzle.artifact.domain;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class ArtifactFolderRepositoryTest extends RepositoryTestTemplate<ArtifactFolderRepository, ArtifactFolderRepositoryTestFixture, ArtifactFolder> {

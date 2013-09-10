@@ -1,9 +1,9 @@
 package com.processpuzzle.fitnesse.sharedfixtures;
 
-import hu.itkodex.litest.template.DefaultApplicationFixture;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.domain.Application;
+import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.sharedfixtures.domaintier.ApplicationFixture;
 
 public class FitNesseApplicationFixture implements ApplicationFixture<Application> {

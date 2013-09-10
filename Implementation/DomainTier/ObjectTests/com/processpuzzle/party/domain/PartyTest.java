@@ -1,6 +1,6 @@
 package com.processpuzzle.party.domain;
 
-import hu.itkodex.litest.template.DomainObjectTestTemplate;
+import com.processpuzzle.litest.template.DomainObjectTestTemplate;
 
 public class PartyTest extends DomainObjectTestTemplate<Party<?>, PartyTestFixture>{
 

@@ -19,7 +19,7 @@
 	
 	<persistence>
 		<repositoryMapping>
-			<class>com.itcodex.objectpuzzle.framework.application_configuration.domain.TestClassMapping</class>
+			<class>com.processpuzzle.framework.application_configuration.domain.TestClassMapping</class>
 		</repositoryMapping>
 		<strategy name="hibernate">
 			<strategyClass>com.itcodex.objectpuzzle.framework.persistence.domain.HibernateStrategy</strategyClass>

@@ -1,13 +1,13 @@
 package com.processpuzzle.party.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import com.processpuzzle.fundamental_types.domain.TimePeriod;
 import com.processpuzzle.fundamental_types.domain.TimePoint;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeFactory;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeRepository;

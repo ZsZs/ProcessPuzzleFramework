@@ -34,7 +34,7 @@ package com.processpuzzle.user_session.domain;
 // * $Id: EJBLocator.java,v 1.3 2004/10/28 09:54:36 finn Exp $
 // */
 //
-//package com.itcodex.objectpuzzle.framework.application_configuration.domain.business_delegate;
+//package com.processpuzzle.framework.application_configuration.domain.business_delegate;
 //
 //import java.util.HashMap;
 //import java.util.Map;

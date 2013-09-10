@@ -1,8 +1,8 @@
 package com.processpuzzle.fundamental_types.uniqueidentifier.domain;
 
-import hu.itkodex.litest.template.ApplicationObjectTestFixture;
-import hu.itkodex.litest.template.DefaultApplicationFixture;
 
+import com.processpuzzle.litest.template.ApplicationObjectTestFixture;
+import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class PrefixedIncNumberedFactoryTestFixture extends ApplicationObjectTestFixture<PrefixedIncNumberedIdFactory> {

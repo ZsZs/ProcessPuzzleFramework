@@ -6,12 +6,12 @@ import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import java.sql.SQLException;
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 

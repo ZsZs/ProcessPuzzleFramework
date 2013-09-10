@@ -4,12 +4,12 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assume.assumeThat;
-import hu.itkodex.litest.template.DomainObjectTestTemplate;
 
 import java.util.Set;
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.DomainObjectTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class SettlementTest extends DomainObjectTestTemplate<Settlement, SettlementTestFixture> {

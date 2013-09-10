@@ -1,6 +1,6 @@
 package com.processpuzzle.artifact.service;
 
-import hu.itkodex.litest.template.ServiceMessageTestFixture;
+import com.processpuzzle.litest.template.ServiceMessageTestFixture;
 
 public class FindArtifactRequestTestFixture extends ServiceMessageTestFixture<FindArtifactRequest>{
    private static final String MESSAGE_FILE = "com/processpuzzle/artifact/service/SOAPRequest.xml";

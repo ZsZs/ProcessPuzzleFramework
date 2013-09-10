@@ -1,7 +1,7 @@
 package com.processpuzzle.persistence.domain;
 
-import hu.itkodex.litest.template.RepositoryTestEnvironment;
-import hu.itkodex.litest.template.RepositoryTestFixture;
+import com.processpuzzle.litest.template.RepositoryTestEnvironment;
+import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class ComponentRepositoryTestFixture extends RepositoryTestFixture<ComponentRepository, Component> {
    public static final String COMPONENT_TABLE_NAME = "T_COMPONENT";

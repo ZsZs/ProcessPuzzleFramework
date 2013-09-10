@@ -2,10 +2,10 @@ package com.processpuzzle.address.artifact;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.ArtifactFactoryTestTemplate;
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.ArtifactFactoryTestTemplate;
 import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;
 import com.processpuzzle.sharedfixtures.artifact.ArtifactLayerTestConfiguration;
 

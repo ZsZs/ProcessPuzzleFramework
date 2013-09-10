@@ -2,11 +2,11 @@ package com.processpuzzle.artifact_type_group.domain;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
 import org.junit.Test;
 
 import com.processpuzzle.artifact_type.domain.ArtifactType;
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.artifact.ArtifactLayerTestConfiguration;
 
 public class ArtifactTypeGroupRepositoryTest extends RepositoryTestTemplate<ArtifactTypeGroupRepository, ArtifactTypeGroupRepositoryTestFixture, ArtifactTypeGroup> {

@@ -3,7 +3,6 @@ package com.processpuzzle.address.artifact;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-import hu.itkodex.litest.template.DataLoaderTestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +16,7 @@ import com.processpuzzle.address.domain.District;
 import com.processpuzzle.address.domain.Settlement;
 import com.processpuzzle.address.domain.SettlementRepository;
 import com.processpuzzle.address.domain.ZipCode;
+import com.processpuzzle.litest.template.DataLoaderTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 

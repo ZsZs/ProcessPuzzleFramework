@@ -2,8 +2,8 @@ package com.processpuzzle.party.artifact;
 
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.RepositoryTestTemplate;
 
+import com.processpuzzle.litest.template.RepositoryTestTemplate;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class PersonDataSheetRepositoryTest extends RepositoryTestTemplate<PersonDataSheetRepository, PersonDataSheetRepositoryTestFixture, PersonDataSheet> {
