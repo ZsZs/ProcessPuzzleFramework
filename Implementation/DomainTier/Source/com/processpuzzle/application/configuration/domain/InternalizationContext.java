@@ -112,8 +112,7 @@ public class InternalizationContext extends TransientApplicationContext implemen
             try{
                text = defaultBundle.getText( key );
             }catch( NoneExistingResourceKeyException e ){
-               // Log the problem and return the key
-               log.debug( "Resource with key: " + key + " was not found.", e );
+               log.info( "Resource with key: " + key + " was not found." );
                text = null;
             }
          }
