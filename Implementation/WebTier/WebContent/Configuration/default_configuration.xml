@@ -21,8 +21,8 @@
 	<ac:application>
 		<ac:applicationName>ProcessPuzzleUI</ac:applicationName>
 		<ac:version>1.0</ac:version>
-		<ac:serverWorkingFolder>c:\\processpuzzle</ac:serverWorkingFolder>
-		<ac:clientWorkingFolder>c:\\processpuzzle</ac:clientWorkingFolder>
+		<ac:serverWorkingFolder>c:/ZsZs/ProcessPuzzle</ac:serverWorkingFolder>
+		<ac:clientWorkingFolder>:/ZsZs/ProcessPuzzle</ac:clientWorkingFolder>
 		<ac:defaultUserAccount>
 			<ge:userName>ProcessPuzzle</ge:userName>
 			<ge:password>ProcessPuzzle</ge:password>
@@ -146,15 +146,14 @@
 
 		<pr:repositories>
 			<!-- Domain Tier repositories -->
-			<pr:repositoryList class="com.processpuzzle.application.configuration.domain.DomainComponentRepositories" strategy="TEST_STRATEGY"/>
+			<pr:repositoryList class="com.processpuzzle.application.configuration.domain.FrameworkRepositories" strategy="TEST_STRATEGY"/>
 			<pr:repository class="com.processpuzzle.persistence.domain.TestEntityRepository" strategy="TEST_STRATEGY"/>
 
 			<!-- Domain Components repositories -->
-			<pr:repository class="com.processpuzzle.artifact.domain.ArtifactSubClassRepository" strategy="TEST_STRATEGY"/>
 		</pr:repositories>
 
 		<pr:persistentClasses>
-			<pr:persistentClassList class="com.processpuzzle.application.configuration.domain.DomainComponentPersistentClasses"/>
+			<pr:persistentClassList class="com.processpuzzle.application.configuration.domain.FrameworkPersistentClasses"/>
 
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.TestEntity"/>
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.TestEntityComponent"/>
@@ -165,15 +164,17 @@
 	<!-- Internationalization Configuration -->
 	<in:internationalization>
 		<in:resouceBundles nameSpace="xmlns:pp='http://www.processpuzzle.com/ResourceBundle'">
-			<in:resourceBundle>Configuration/DesktopInternationalization</in:resourceBundle>
+         <in:resourceBundle>classpath:com/processpuzzle/internalization/domain/DomainTier_Resources</in:resourceBundle>
+		 <in:resourceBundle>Configuration/DesktopInternationalization</in:resourceBundle>
          <in:resourceBundle>Configuration/ConsoleInternationalization</in:resourceBundle>
          <in:resourceBundle>Configuration/PhotoGaleryInternationalization</in:resourceBundle>
+         <in:resourceBundle>Content/WidgetExamples/WidgetExamplesInternationalization</in:resourceBundle>
          <in:resourceBundle>Content/WidgetExamples/WidgetExamplesInternationalization</in:resourceBundle>
 		</in:resouceBundles>
 		
 		<in:availableLocales>
-			<in:locale>hu</in:locale>
-			<in:locale>en</in:locale>
+			<in:locale>hu_HU</in:locale>
+			<in:locale>en_US</in:locale>
 		</in:availableLocales>
 		<in:defaultLocale>hu</in:defaultLocale>
 		<in:localeDefinitions>classpath:com/processpuzzle/internalization/domain/LocaleDefinitions.xml</in:localeDefinitions>
@@ -185,9 +186,9 @@
 	
 	<!-- Business Definitions -->
 	<bd:businessDefinitions>
-		<ge:schema>classpath:BusinessDefinition.xsd</ge:schema>
-		<ge:mapping>classpath:com/processpuzzle/resource/integration/BusinessDefinitionMapping.xml</ge:mapping>
-		<bd:businessDefinition>/BusinessDefinition/GenericBusinessDefinition.xml</bd:businessDefinition>
+		<ge:schema>classpath:com/processpuzzle/business/definition/domain/BusinessDefinition.xsd</ge:schema>
+		<ge:mapping>classpath:com\processpuzzle\business\definition\domain\BusinessDefinitionMapping.xml</ge:mapping>
+		<bd:businessDefinition>/BusinessDefinition/LightWeightBusinessDefinition.xml</bd:businessDefinition>
 	</bd:businessDefinitions>
 	
 	<!-- Emailing -->
