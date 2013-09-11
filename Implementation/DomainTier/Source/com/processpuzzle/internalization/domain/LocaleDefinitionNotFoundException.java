@@ -37,7 +37,7 @@ import com.processpuzzle.fundamental_types.domain.ProcessPuzzleProgrammingExcept
 
 public class LocaleDefinitionNotFoundException extends ProcessPuzzleProgrammingException {
    private static final long serialVersionUID = -131026769078489734L;
-   private static String defaultMessagePattern = "Locale definition for the supported type: '''{0}'''_'''{1}''' not found!";
+   private static String defaultMessagePattern = "Locale definition for the supported type: ''{0}'_'{1}'' not found!";
    private String language = null;
    private String country = null;
 
