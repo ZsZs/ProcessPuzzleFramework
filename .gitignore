@@ -35,6 +35,7 @@
 /Implementation/WebTier/Build/local.build.properties
 /Implementation/WebTier/Logs/ProcessPuzzle.log
 /Implementation/WebTier/TEST-net.jsunit.StandaloneTest.xml
-
+/Implementation/WebTier/WebContent/Configuration/custom_configuration.xml
+/Implementation/WebTier/WebContent/WEB-INF/classes/log4j.properties
 
 
