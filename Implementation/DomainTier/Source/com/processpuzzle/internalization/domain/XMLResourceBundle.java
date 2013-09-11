@@ -145,8 +145,7 @@ public class XMLResourceBundle {
                numberOfLoadedFiles++;
             }catch( ResourceBundleIOException e ){
                if( i <= fileList.length - 1 ){
-                  // Log and try with another file
-                  log.debug( "Can't parse resource: " + resourcePath, e );
+                  log.info( "Can't parse resource: " + resourcePath );
                }else
                   throw new InvalidResourcePathException( fileSetPath, e );
             }
