@@ -165,7 +165,7 @@
 	<in:internationalization>
 		<in:resouceBundles nameSpace="xmlns:pp='http://www.processpuzzle.com/ResourceBundle'">
          <in:resourceBundle>classpath:com/processpuzzle/internalization/domain/DomainTier_Resources</in:resourceBundle>
-		 <in:resourceBundle>Configuration/DesktopInternationalization</in:resourceBundle>
+		   <in:resourceBundle>Configuration/DesktopInternationalization</in:resourceBundle>
          <in:resourceBundle>Configuration/ConsoleInternationalization</in:resourceBundle>
          <in:resourceBundle>Configuration/PhotoGaleryInternationalization</in:resourceBundle>
          <in:resourceBundle>Content/WidgetExamples/WidgetExamplesInternationalization</in:resourceBundle>
