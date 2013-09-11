@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<businessDefinition xmlns="http://www.processpuzzle.com/"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.processpuzzle.com/ http://www.processpuzzle.com/Schemas/BusinessDefinition.xsd ">
+<businessDefinition 
+   xmlns = "http://www.processpuzzle.com/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.processpuzzle.com/ ../com/processpuzzle/business/definition/domain/BusinessDefinition.xsd ">
 
 	<!-- PartyTypes: Defines acceptable types of parties. -->
 	<partyTypes>
@@ -24,6 +25,11 @@
 
 	<artifactTypes>
 		<artifactTypeGroup name="ProcessManagement">
+         <defaultAccessRights>
+            <accessRight partyRoleType="Coach" canCreate="true" canDelete="true" canModify="true" canRead="true" />
+            <accessRight partyRoleType="XPTeamMember" canCreate="true" canDelete="false" canModify="true" canRead="true" />
+         </defaultAccessRights>
+         
 			<artifactType 
 				name="ActionList" 
 				
