@@ -54,6 +54,19 @@ import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.fundamental_types.uniqueidentifier.domain.LastIdNumber;
 import com.processpuzzle.party.artifact.UserDataSheet;
 import com.processpuzzle.party.artifact.UserList;
+import com.processpuzzle.party.domain.Address;
+import com.processpuzzle.party.domain.Party;
+import com.processpuzzle.party.domain.PartyName;
+import com.processpuzzle.party.domain.PartyRelationship;
+import com.processpuzzle.party.domain.PartyRole;
+import com.processpuzzle.party.domain.PartySummary;
+import com.processpuzzle.party.domain.Person;
+import com.processpuzzle.party.domain.RuleSet;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipConstraint;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleConstraint;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
+import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.persistence.domain.PersistentClassList;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
 import com.processpuzzle.util.domain.AutoIdentifier;
@@ -104,14 +117,14 @@ public class FrameworkPersistentClasses extends PersistentClassList {
       aggregateRoots.add( LastIdNumber.class );
 //      aggregateRoots.add( Organization.class );
 //      aggregateRoots.add( OrganizationUnit.class );
-//      aggregateRoots.add( Party.class );
-//      aggregateRoots.add( PartyRelationshipType.class );
-//      aggregateRoots.add( PartyType.class );
-//      aggregateRoots.add( Person.class );
+      aggregateRoots.add( Party.class );
+      aggregateRoots.add( PartyRelationshipType.class );
+      aggregateRoots.add( PartyType.class );
+      aggregateRoots.add( Person.class );
 //      aggregateRoots.add( Plan.class );
 //      aggregateRoots.add( Protocol.class );
 //      aggregateRoots.add( Project.class );
-//      aggregateRoots.add( RuleSet.class );
+      aggregateRoots.add( RuleSet.class );
    }
 
    @Override
@@ -126,7 +139,7 @@ public class FrameworkPersistentClasses extends PersistentClassList {
 //      entities.add( ActionStatus.class );
 //      entities.add( Activity.class );
 //      entities.add( ActivityProtocol.class );
-//      entities.add( Address.class );
+      entities.add( Address.class );
 //      entities.add( Affiliation.class );
       entities.add( ArtifactMenu.class );
       entities.add( ArtifactMenuCommand.class );
@@ -154,11 +167,11 @@ public class FrameworkPersistentClasses extends PersistentClassList {
 //      entities.add( Location.class );
 //      entities.add( Modification.class );
 //      entities.add( OrganizationName.class );
-//      entities.add( PartyName.class );
-//      entities.add( PartyRelationship.class );
-//      entities.add( PartyRelationshipConstraint.class );
-//      entities.add( PartyRoleType.class );
-//      entities.add( PartySummary.class );
+      entities.add( PartyName.class );
+      entities.add( PartyRelationship.class );
+      entities.add( PartyRelationshipConstraint.class );
+      entities.add( PartyRoleType.class );
+      entities.add( PartySummary.class );
 //      entities.add( PersonGroup.class );
 //      entities.add( PersonName.class );
 //      entities.add( ProcessPlan.class );
@@ -182,8 +195,8 @@ public class FrameworkPersistentClasses extends PersistentClassList {
 
    @Override
    protected void defineValueObjects() {
-//      valueObjects.add( PartyRole.class );
-//      valueObjects.add( PartyRoleConstraint.class );
+      valueObjects.add( PartyRole.class );
+      valueObjects.add( PartyRoleConstraint.class );
       valueObjects.add( DefaultQuery.class );
    }
 }
