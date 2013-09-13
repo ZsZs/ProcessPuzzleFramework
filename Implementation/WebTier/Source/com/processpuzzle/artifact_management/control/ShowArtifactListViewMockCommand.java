@@ -61,7 +61,7 @@ public class ShowArtifactListViewMockCommand implements CommandInterface {
          // Artifact anArtifact = new Document ("anArtifact", new DocumentType(""), null);
          ArtifactVersion anArtifactVersion = new ArtifactVersion( "anArtifact", userFactory.createUser( "Gipsz Jakab", "" ) );
          /* Modification aModification = */
-         new Modification( anArtifactVersion, userFactory.createUser( "B·rczi Benı", "psw" ), "Mindent kijavÌtok!" );
+         new Modification( anArtifactVersion, userFactory.createUser( "B√°rczy Ben≈ë", "psw" ), "Mindent kijav√≠tok!" );
 
          // ArtifactModificationsView view = new ArtifactModificationsView(anArtifact, "modificationsView");
          // List modifications = view.getModifications();

@@ -68,9 +68,6 @@ public class DownloadFile extends HttpServlet {
 
          } catch (Exception e) {
             inputFile = null;
-            // response.getWriter().print("<html><head><title>file
-            // download</title></head><body><h3>Hiba
-            // történt</h3></body></html>");
          } finally {
             if (inputFile != null) {
                inputFile.close();

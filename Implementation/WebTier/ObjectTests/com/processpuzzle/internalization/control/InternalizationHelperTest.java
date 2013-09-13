@@ -55,7 +55,7 @@ public class InternalizationHelperTest {
          if( bundleKey.equals( "hu" ) ){
             XMLResourceBundle bundle = resourceBundles.get( new ProcessPuzzleLocale( "hu" ) );
             String text = bundle.getText( "testKey" );
-            assertEquals( "Teszt érték", text );
+            assertEquals( "Teszt Ã©rtÃ©k", text );
          }else if( bundleKey.equals( "en" ) ){
             XMLResourceBundle bundle = resourceBundles.get( new ProcessPuzzleLocale( "en" ) );
             String text = bundle.getText( "testKey" );
