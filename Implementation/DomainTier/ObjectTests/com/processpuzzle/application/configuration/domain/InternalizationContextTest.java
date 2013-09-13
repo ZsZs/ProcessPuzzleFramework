@@ -116,12 +116,12 @@ public class InternalizationContextTest extends ContextTest {
        */
       assertEquals( "'TestResources_en.xml' contains text:", "Text_1", internalizationContext.getText( "Key_1", englishUSLocale ) );
       assertEquals( "'AnotherTestResources.xml' containss text:", "Text_3", internalizationContext.getText( "Key_33", englishUSLocale ) );
-      assertEquals( "'TestResources_hu.xml contains text:", "Szöveg_1", internalizationContext.getText( "Kulcs_1", hungarianLocale ) );
+      assertEquals( "'TestResources_hu.xml contains text:", "SzÃ¶veg_1", internalizationContext.getText( "Kulcs_1", hungarianLocale ) );
    }
 
    @Test
    public void getText_ForDefaultLocale() {
-      assertEquals( "If we do not specify locale the default locale is considered. Please compare the result with the previous test.", "Szöveg_1",
+      assertEquals( "If we do not specify locale the default locale is considered. Please compare the result with the previous test.", "Szï¿½veg_1",
             internalizationContext.getText( "Kulcs_1" ) );
    }
 

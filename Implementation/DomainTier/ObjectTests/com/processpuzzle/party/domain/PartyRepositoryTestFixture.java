@@ -56,8 +56,8 @@ public class PartyRepositoryTestFixture extends RepositoryTestFixture<PartyRepos
    public Party<?> createTestPerson() {
       Set<PartyRole> testPartyRoles = new HashSet<PartyRole>();
    
-      Person testParty = personFactory.create( "Lónyai", "Alajos", "lbela", "lonyal" );
-      // Person testParty = PartyFactory.createPerson("Lónyai", "Alajos", new TimePoint(1960,11,12));
+      Person testParty = personFactory.create( "Lï¿½nyai", "Alajos", "lbela", "lonyal" );
+      // Person testParty = PartyFactory.createPerson("Lï¿½nyai", "Alajos", new TimePoint(1960,11,12));
    
       testPartyRoles.add( new PartyRole( "testRole2", testRoleType ) );
       addPartyRoles( testParty, testPartyRoles );
@@ -93,8 +93,7 @@ public class PartyRepositoryTestFixture extends RepositoryTestFixture<PartyRepos
    @Override
    protected Party<?> createNewAggregate() throws Exception {
       try{
-         // Party testParty = PartyFactory.createPerson("Bárczi", "Benõ", "bbeno", "bakfity" );
-         Party<?> testParty = personFactory.create( "Bárczi", "Benõ", new TimePoint( 2008, 10, 1 ) );
+         Party<?> testParty = personFactory.create( "BÃ¡rczi", "BenÅ‘", new TimePoint( 2008, 10, 1 ) );
          Set<PartyRole> testPartyRoles = new HashSet<PartyRole>();
 
          testRoleType = PartyRoleTypeFactory.create( "testRoleType" );

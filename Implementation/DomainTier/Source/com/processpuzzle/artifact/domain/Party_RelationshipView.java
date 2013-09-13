@@ -154,7 +154,7 @@ public class Party_RelationshipView extends CustomFormView<PartyDataSheet<?,?>> 
                   && ownPartyRole.getPartyRelationship().getRelationshipType().getName().equals( partyRelationshipType.getName() )
                   && ownPartyRole.getRoleType().getName().equals( ownType.getName() )
                   && otherPartyRole.getRoleType().getName().equals( partyType.getName() ) ){
-               this.errorMsg = "A kapcsolat m·r lÈtezik!";
+               this.errorMsg = "A kapcsolat m√°r l√©tezik!";
                return;
             }
          }

@@ -85,8 +85,8 @@ public class MemoEditableTextView extends EditableTextView<Memo> {
 
       memoXsl.append( "<xsl:template match=\"/\">" );
       memoXsl.append( "<div>" );
-      memoXsl.append( "<text>Tárgy:</text><span class=\"editable\" id=\"memo.subject\"><xsl:value-of select=\"memo/subject\"/></span><br/>" );
-      memoXsl.append( "<text>Feladó:</text><span class=\"editable\" id=\"memo.responsible\"><xsl:value-of select=\"memo/responsible\"/></span><br/>" );
+      memoXsl.append( "<text>TÃ¡rgy:</text><span class=\"editable\" id=\"memo.subject\"><xsl:value-of select=\"memo/subject\"/></span><br/>" );
+      memoXsl.append( "<text>FeladÃ³:</text><span class=\"editable\" id=\"memo.responsible\"><xsl:value-of select=\"memo/responsible\"/></span><br/>" );
       memoXsl.append( "<text>Cimzett:</text><xsl:for-each select=\"memo/recipients/recipient\">"
             + "<span class=\"editable\" id=\"memo.recipient\"><xsl:value-of select=\"name\"/></span>" );
       memoXsl.append( "</xsl:for-each><br/>" );

@@ -37,29 +37,5 @@ public class ArtifactList_ListViewTest {
 
    @Ignore
    @Test public final void testListedArtifactsPropertyViews () {
-//      UmlModel umlModel1 = new UmlModel("AModel");
-//      umlModel1.setResponsible(new Party("aladár"));
-//      assetRep.addUmlModel(umlModel1);
-//      
-//      artifactList = new ArtifactList("ArtifactList", new ArtifactType("ArtifactListType"));
-//      
-//      ArtifactList_ListView listView = new ArtifactList_ListView();
-//      
-//      String query = "from Artifact a where a.name = 'AModel' and a.responsible.name = 'aladár'";
-//      List l = (List)assetRep.find(query);
-//      System.out.println(l);
-//      
-//      List listedArtifactsPropertyViews = listView.getListedArtifactsPropertyView(query);
-//      System.out.println(listedArtifactsPropertyViews);
-//      
-//     
-//     
-//      List result = (List)assetRep.find(query);
-//      assertNotNull(result);
-//      assertNotNull(result.get(0));
-//      Artifact artifact = (Artifact)result.get(0);
-//      assertEquals(artifact.getName(), "AModel");
-//      assertEquals(artifact.getResponsible().getName(), "aladár");
-//      
    }
 }

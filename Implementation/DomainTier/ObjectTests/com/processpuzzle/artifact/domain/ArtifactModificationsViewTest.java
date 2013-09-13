@@ -48,7 +48,7 @@ public class ArtifactModificationsViewTest {
 
       userFactory = applicationContext.getEntityFactory( UserFactory.class );
 
-      firstModifier = userFactory.createUser( "B·rczi Benı", "password" );
+      firstModifier = userFactory.createUser( "B√°rczi Ben≈ë", "password" );
       secondModifier = userFactory.createUser( "Gipsz Jakab", "password" );
 
       currentUser = UserRequestManager.getInstance().currentUser();

@@ -51,7 +51,7 @@ import com.processpuzzle.application.resource.domain.XmlDataLoader;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class SettlementDataLoader extends XmlDataLoader {
-   private static final String DEFAULT_COUNTRY_NAME = "Magyarorsz·g";
+   private static final String DEFAULT_COUNTRY_NAME = "Magyarorsz√°g";
    private static final String ROOT_ELEMENT = "country";
    private static final String COUNTRY_NAME_ATTRIBUTE = "name";
    private static final String SETTLEMENT_ELEMENT = "settlement";

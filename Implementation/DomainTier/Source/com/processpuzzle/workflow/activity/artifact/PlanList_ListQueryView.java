@@ -52,7 +52,7 @@ public class PlanList_ListQueryView extends ListQueryView<PlanList> {
 
    public List<QueryProperty> getQueryProperties() {
       List<QueryProperty> queryProperties = new ArrayList<QueryProperty>();
-      queryProperties.add( new QueryProperty( "o.action.actionName", "Megnevezés" ) );
+      queryProperties.add( new QueryProperty( "o.action.actionName", "MegnevezÃ©s" ) );
       return queryProperties;
    }
 

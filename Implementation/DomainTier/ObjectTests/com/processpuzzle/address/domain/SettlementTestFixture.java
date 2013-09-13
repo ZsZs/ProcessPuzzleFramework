@@ -5,7 +5,7 @@ import com.processpuzzle.litest.template.DomainObjectTestEnvironment;
 import com.processpuzzle.litest.template.DomainObjectTestFixture;
 
 public class SettlementTestFixture extends DomainObjectTestFixture<Settlement>{
-   public static final String OTHER_SETTLEMENT_NAME = "Gödöllõ";
+   public static final String OTHER_SETTLEMENT_NAME = "GÃ¶dÃ¶llÅ‘";
    public static final Integer OTHER_ZIP_VALUE = 1015;
    public static final String SETTLEMENT_NAME = "Budapest";
    public static final Integer ZIP_VALUE = 2111;

@@ -33,8 +33,8 @@ import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
 
 public class OrganizationDataSheetFixture {
    public static String CIB_COMPANY_NAME = "CIB Rt.";
-   public static String CIB_GODOLLOI_BRANCH_NAME = "Gödöllõi fiók";
-   public static String CIB_GYONGYOSI_BRANCH_NAME = "Gyöngyösi fiók";
+   public static String CIB_GODOLLOI_BRANCH_NAME = "GÃ¶dÃ¶llÅ‘i fiÃ³k";
+   public static String CIB_GYONGYOSI_BRANCH_NAME = "GyÃ¶ngyÃ¶si fiÃ³k";
    private static ProcessPuzzleContext config = null;
    private static DefaultArtifactRepository artifactRepository = null;
    private static OrganizationDataSheetFixture fixtureInstance = null;

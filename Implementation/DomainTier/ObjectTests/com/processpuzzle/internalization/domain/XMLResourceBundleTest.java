@@ -48,7 +48,7 @@ public class XMLResourceBundleTest {
    @Test
    public void testLoadFile_ForHuLocale() throws InvalidResourcePathException, InternalizationException {
       bundle.loadResources( HUNGARIAN );
-      assertEquals("TestResources.xml defines value:", "Szöveg_5", bundle.getText("Kulcs_5"));
+      assertEquals("TestResources.xml defines value:", "SzÃ¶veg_5", bundle.getText("Kulcs_5"));
    }
    
    @Ignore
@@ -56,8 +56,8 @@ public class XMLResourceBundleTest {
    public void testLoadFile_ForMultipleResources() throws InvalidResourcePathException, InternalizationException {
       bundle = new XMLResourceBundle( RESOURCE_PATH + ";" + ANOTHER_RESOURCE_PATH );
       bundle.loadResources( HUNGARIAN );
-      assertEquals("TestResources.xml defines value:", "Szöveg_5", bundle.getText("Kulcs_5"));
-      assertEquals("AnotherTestResources.xml defines value:", "Szöveg_55", bundle.getText("Kulcs_55"));
+      assertEquals("TestResources.xml defines value:", "SzÃ¶veg_5", bundle.getText("Kulcs_5"));
+      assertEquals("AnotherTestResources.xml defines value:", "SzÃ¶veg_55", bundle.getText("Kulcs_55"));
    }
    
    @Test ( expected=InvalidResourcePathException.class ) 
@@ -89,8 +89,8 @@ public class XMLResourceBundleTest {
    @Test
    public void getText_ForHuLocale () throws InvalidResourcePathException, InternalizationException {
       bundle.loadResources( HUNGARIAN );
-      assertEquals("'TextResource_hu.xml' file defines value: ", "Szöveg_1", bundle.getText("Kulcs_1"));
-      assertEquals("'TextResource.xml' file defines value: ", "Szöveg_5", bundle.getText("Kulcs_5"));
+      assertEquals("'TextResource_hu.xml' file defines value: ", "SzÃ¶veg_1", bundle.getText("Kulcs_1"));
+      assertEquals("'TextResource.xml' file defines value: ", "SzÃ¶veg_5", bundle.getText("Kulcs_5"));
    }
    
    @Ignore

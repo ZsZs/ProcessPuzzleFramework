@@ -126,7 +126,7 @@ public class PossibleValueDefinitionTypeMappingTest extends
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       TestEntity testEntityForEnumeration = new TestEntity( "Test Entity with string enumeration possible value definition" );
       PossibleValueDefinition valueEnumeration = new StringEnumeration();
-      valueEnumeration.addPossibleValue( "körte" );
+      valueEnumeration.addPossibleValue( "kï¿½rte" );
       valueEnumeration.addPossibleValue( "alma" );
       valueEnumeration.addPossibleValue( "szilva" );
       testEntityForEnumeration.setPossibleValues( valueEnumeration );
@@ -148,7 +148,7 @@ public class PossibleValueDefinitionTypeMappingTest extends
       List<String> retrievedValues = ((StringEnumeration) retrievedValueDefinition).getValues();
       assertThat( retrievedValues.size(), is( 3 ) );
 
-      assertThat( retrievedValues.contains( "körte" ), is( true ) );
+      assertThat( retrievedValues.contains( "kÃ¶rte" ), is( true ) );
       assertThat( retrievedValues.contains( "alma" ), is( true ) );
       assertThat( retrievedValues.contains( "szilva" ), is( true ) );
 
@@ -160,7 +160,7 @@ public class PossibleValueDefinitionTypeMappingTest extends
       assertThat( databaseSpy.retrieveColumnFromRow( "T_TEST_ENTITY", retrievedTestEntity.getId(), Double.class, "maxAmount" ), nullValue() );
       assertThat( databaseSpy.retrieveColumnFromRow( "T_TEST_ENTITY", retrievedTestEntity.getId(), String.class, "maxUnit" ), nullValue() );
       assertThat( (String) databaseSpy.retrieveColumnFromRow( "T_TEST_ENTITY", retrievedTestEntity.getId(), String.class, "possibleValues" ),
-            equalTo( "körte;alma;szilva" ) );
+            equalTo( "kÃ¶rte;alma;szilva" ) );
 
    }
 

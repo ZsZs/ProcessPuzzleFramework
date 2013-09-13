@@ -45,11 +45,11 @@ public class TaskListTest {
 
    @Ignore @Test
    public void testArtifactListPropetyView() {
-      User responsible = userFactory.createUser( "Nagy Béla", "password" );
+      User responsible = userFactory.createUser( "Nagy BÃ©la", "password" );
       taskList.setResponsible(responsible);
 
       ActionList_PropertyView propertyView = (ActionList_PropertyView) taskList.getPropertyView();
-      assertEquals("Nagy Béla", propertyView.getResponsibleName());
+      assertEquals("Nagy BÃ©la", propertyView.getResponsibleName());
       // assertNotNull(propertyView.getCreationDate());
 
    }

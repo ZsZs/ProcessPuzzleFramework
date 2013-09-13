@@ -7,7 +7,7 @@ import com.processpuzzle.litest.template.DomainObjectTestEnvironment;
 import com.processpuzzle.litest.template.DomainObjectTestFixture;
 
 public class DistrictTestFixture extends DomainObjectTestFixture<District> {
-   public static final String COUNTRY_NAME = "Magyarorsz·g";
+   public static final String COUNTRY_NAME = "Magyarorsz√°g";
    public static final String SETTLEMENT_NAME = "Budapest";
    public static final String DISTRIC_NAME = "V.";
    private SettlementFactory settlementFactory;

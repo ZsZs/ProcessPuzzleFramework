@@ -66,22 +66,22 @@ public class GeneralService {
 
    public static String toHTMLEntityString( String string ) {
       Map<Character, String> HTMLEntites = new HashMap<Character, String>();
-      HTMLEntites.put( new Character( '·' ), "&aacute;" );
-      HTMLEntites.put( new Character( '¡' ), "&Aacute;" );
-      HTMLEntites.put( new Character( 'È' ), "&eacute;" );
-      HTMLEntites.put( new Character( '…' ), "&Eacute;" );
-      HTMLEntites.put( new Character( 'Ì' ), "&iacute;" );
-      HTMLEntites.put( new Character( 'Õ' ), "&Iacute;" );
-      HTMLEntites.put( new Character( 'Û' ), "&oacute;" );
-      HTMLEntites.put( new Character( '”' ), "&Oacute;" );
-      HTMLEntites.put( new Character( 'ˆ' ), "&ouml;" );
-      HTMLEntites.put( new Character( '÷' ), "&Ouml;" );
-      HTMLEntites.put( new Character( '˙' ), "&uacute;" );
-      HTMLEntites.put( new Character( '⁄' ), "&Uacute;" );
-      HTMLEntites.put( new Character( '¸' ), "&uuml;" );
-      HTMLEntites.put( new Character( '‹' ), "&Uuml;" );
-      HTMLEntites.put( new Character( '˚' ), "&ucirc;" );
-      HTMLEntites.put( new Character( '€' ), "&Ucirc;" );
+      HTMLEntites.put( new Character( '√°' ), "&aacute;" );
+      HTMLEntites.put( new Character( '√Å' ), "&Aacute;" );
+      HTMLEntites.put( new Character( '√©' ), "&eacute;" );
+      HTMLEntites.put( new Character( '√â' ), "&Eacute;" );
+      HTMLEntites.put( new Character( '√≠' ), "&iacute;" );
+      HTMLEntites.put( new Character( '√ç' ), "&Iacute;" );
+      HTMLEntites.put( new Character( '√≥' ), "&oacute;" );
+      HTMLEntites.put( new Character( '√ì' ), "&Oacute;" );
+      HTMLEntites.put( new Character( '√∂' ), "&ouml;" );
+      HTMLEntites.put( new Character( '√ñ' ), "&Ouml;" );
+      HTMLEntites.put( new Character( '√∫' ), "&uacute;" );
+      HTMLEntites.put( new Character( '√ö' ), "&Uacute;" );
+      HTMLEntites.put( new Character( '√º' ), "&uuml;" );
+      HTMLEntites.put( new Character( '√ú' ), "&Uuml;" );
+      HTMLEntites.put( new Character( '√ª' ), "&ucirc;" );
+      HTMLEntites.put( new Character( '√õ' ), "&Ucirc;" );
 
       String str = "";
 

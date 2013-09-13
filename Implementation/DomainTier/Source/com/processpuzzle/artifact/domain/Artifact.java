@@ -146,11 +146,6 @@ public abstract class Artifact<A extends Artifact<?>> extends GenericEntity<A> i
       if( !(objectToCheck instanceof Artifact )) return false;
       Artifact anotherArtifact = (Artifact) objectToCheck;
       if( !name.equals( anotherArtifact.name )) return false;
-//      if( containingFolder != null && !containingFolder.equals( anotherArtifact.containingFolder )) return false;
-//      if( !versions.equals( anotherArtifact.versions )) return false;
-//      if( !type.equals( anotherArtifact.type )) return false;
-//      if( !availableViews.equals( anotherArtifact.availableViews )) return false;
-//      if( !htmlAttributeFormats.equals( anotherArtifact.htmlAttributeFormats )) return false;
       return true;
    }
 
@@ -291,14 +286,12 @@ public abstract class Artifact<A extends Artifact<?>> extends GenericEntity<A> i
    }
 
    public void reserve( User modifier, String comment ) throws VersionControlException {
-      if( (latest().getNextModification() == null) || // verziókezelt
-            ((latest().getNextModification() != null) && // nem verzió kezelt
+      if( (latest().getNextModification() == null) || 
+            ((latest().getNextModification() != null) && 
             (latest().getNextModification().getModificationPeriod().getBegin() == null)) ){
          if( (latest().isVersionControlled()) || (!(latest().isVersionControlled()) && (latest().getNextModification() == null)) ){
-            // inicializáláskor még ugyanazt kell tenni
             new Modification( latest(), modifier, comment );
          }else if( !(latest().isVersionControlled()) && (latest().getNextModification() != null) ){
-            // ez a már legalább 1x lefoglalt nem verzió kezelt ág
             latest().getNextModification().reserve( modifier );
          }
          versions.put( new Integer( versions.size() + 1 ), latest().getNextModification().getTargetVersion() );
@@ -308,10 +301,8 @@ public abstract class Artifact<A extends Artifact<?>> extends GenericEntity<A> i
 
    // Properties
    public boolean isReserved() {
-      if( ((latest().getNextModification() != null) && isVersionControlled()) || // verziókezelt
-            ((latest().getNextModification() != null && !isVersionControlled()) && // nem
-            // verzió
-            // kezelt
+      if( ((latest().getNextModification() != null) && isVersionControlled()) || 
+            ((latest().getNextModification() != null && !isVersionControlled()) && 
             (latest().getNextModification().getModificationPeriod().getBegin() != null)) ){
          return true;
       }

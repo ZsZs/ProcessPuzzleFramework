@@ -27,8 +27,8 @@ public class StringEnumerationTest {
    @Before public void beforeEachTest() {
 
       enumeration = new StringEnumeration();
-      enumeration.addPossibleValue("kék");
-      enumeration.addPossibleValue("zöld");
+      enumeration.addPossibleValue("kÃ©k");
+      enumeration.addPossibleValue("zÃ¶ld");
       enumeration.addPossibleValue("piros");
    }
    
@@ -37,13 +37,13 @@ public class StringEnumerationTest {
       
       //Verify
       assertThat(enumeration.getValues().size(), is(3));
-      assertThat(enumeration.checkValue("kék"), is(true));
-      assertThat(enumeration.checkValue("zöld"), is(true));
+      assertThat(enumeration.checkValue("kÃ©k"), is(true));
+      assertThat(enumeration.checkValue("zÃ¶ld"), is(true));
       assertThat(enumeration.checkValue("piros"), is(true));
    }
    
    @Test public void asText() {
-      assertThat(enumeration.asText(hungarianLocale), is("( kék, zöld, piros )"));
+      assertThat(enumeration.asText(hungarianLocale), is("( kÃ©k, zÃ¶ld, piros )"));
    }
    
    @Test public void checkValue_ForNegativeOutcome() {
@@ -51,17 +51,17 @@ public class StringEnumerationTest {
    }
    
    @Test public void stringValue() {
-      assertThat(enumeration.stringValue(), is("kék;zöld;piros"));
+      assertThat(enumeration.stringValue(), is("kÃ©k;zÃ¶ld;piros"));
    }
    
    @Test public void parseFromString() {
       StringEnumeration newEnumeration = new StringEnumeration();
-      String possibleValuesDef = "lila;fekete;fehér";
+      String possibleValuesDef = "lila;fekete;fehÃ©r";
       newEnumeration.parseFromString( newEnumeration, possibleValuesDef );
       assertThat(newEnumeration.getValues().size(), is(3));
       assertThat(newEnumeration.getValues().contains( "lila" ), is(true));
       assertThat(newEnumeration.getValues().contains( "fekete" ), is(true));
-      assertThat(newEnumeration.getValues().contains( "fehér" ), is(true));
+      assertThat(newEnumeration.getValues().contains( "fehÃ©r" ), is(true));
    }
 
    @AfterClass

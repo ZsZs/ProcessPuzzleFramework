@@ -23,7 +23,7 @@ public class PersonDataSheetFactoryTest extends ArtifactFactoryTest<PersonDataSh
       PersonDataSheet personDataSheet = fixture.createTestPersonDataSheet();
 
       assertThat( personDataSheet, notNullValue() );
-      assertThat( personDataSheet.getName(), equalTo( "Keszeg József" ) );
+      assertThat( personDataSheet.getName(), equalTo( "Keszeg JÃ³zsef" ) );
    }
 
    @Ignore

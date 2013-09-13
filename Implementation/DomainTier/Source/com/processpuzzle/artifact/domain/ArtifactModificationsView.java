@@ -79,7 +79,7 @@ public class ArtifactModificationsView extends ArtifactView<Artifact<?>> {
       Modification modificationTwo = new Modification( null, null, null );
       modificationTwo.setId( new Integer( 2 ) );
       modificationTwo.setModificationPeriod( new TimePeriod( new TimePoint( 1998, 11, 22 ), new TimePoint( 1998, 11, 22 ) ) );
-      modificationTwo.setModifier( userFactory.createUser( "B·rczi Benı", "ProcessPuzzle" ) );
+      modificationTwo.setModifier( userFactory.createUser( "B√°rczi Ben≈ë", "ProcessPuzzle" ) );
       modificationTwo.setComment( "comment2" );
 
       modifications.add( modificationTwo );

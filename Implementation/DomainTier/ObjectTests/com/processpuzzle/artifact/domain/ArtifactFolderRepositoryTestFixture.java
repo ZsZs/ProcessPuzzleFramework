@@ -86,20 +86,14 @@ public class ArtifactFolderRepositoryTestFixture extends RepositoryTestFixture<A
 
    @Override
    protected void afterAggregateCreation() {
-      // TODO Automatikusan elõállított metóduscsonk
-      
    }
 
    @Override
    protected void afterAggregateDeletion() {
-      // TODO Automatikusan elõállított metóduscsonk
-      
    }
 
    @Override
    protected void beforeAggregateCreation() {
-      // TODO Automatikusan elõállított metóduscsonk
-      
    }
 
 }

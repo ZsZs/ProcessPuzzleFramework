@@ -45,7 +45,7 @@ public class PersonTestFixture extends DomainObjectTestFixture<Person> {
    protected void releaseResources() { }
 
    private static Person createTestPerson() {
-      beno = personFactory.create( "Benı", "B·rczi", new TimePoint( new Date( System.currentTimeMillis() ) ) );
+      beno = personFactory.create( "Ben≈ë", "B√°rczi", new TimePoint( new Date( System.currentTimeMillis() ) ) );
       User user = userFactory.createUser( "barczi.beno", "hello" );
       beno.setSystemUser( user );
       

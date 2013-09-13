@@ -81,8 +81,8 @@ public class PartyRepositoryTest extends RepositoryTestTemplate<PartyRepository,
    }
 
    private void findCompanyByPartyName() {
-      String companyShortName = "IT Kódex Kft.";
-      String organisationName = "IT Kódex Számítástechnikai Tanácsadó és Szolgáltató Kft.";
+      String companyShortName = "IT Kï¿½dex Kft.";
+      String organisationName = "IT Kï¿½dex Szï¿½mï¿½tï¿½stechnikai Tanï¿½csadï¿½ ï¿½s Szolgï¿½ltatï¿½ Kft.";
       Party<?> createdCompany = fixture.createTestCompany( organisationName, companyShortName );
 
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
@@ -105,8 +105,8 @@ public class PartyRepositoryTest extends RepositoryTestTemplate<PartyRepository,
    }
 
    private void findCompanyByShort() {
-      String companyShortName = "IT Kódex Kft.";
-      String organisationName = "IT Kódex Számítástechnikai Tanácsadó és Szolgáltató Kft.";
+      String companyShortName = "IT KÃ³dex Kft.";
+      String organisationName = "IT KÃ³dex SzÃ¡mÃ­tÃ¡stechnikai TanÃ¡csadÃ³ Ã©s SzolgÃ¡ltatÃ³ Kft.";
       Party<?> createdCompany = fixture.createTestCompany( organisationName, companyShortName );
 
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
@@ -127,7 +127,7 @@ public class PartyRepositoryTest extends RepositoryTestTemplate<PartyRepository,
 
    private void findPersonByPartyName() {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      String expectedPartyName = "Bárczi Benõ";
+      String expectedPartyName = "Bï¿½rczi Benï¿½";
       List<Party> parties = repository.findPartiesByPartyName( work, expectedPartyName );
       work.finish();
 
@@ -312,13 +312,13 @@ public class PartyRepositoryTest extends RepositoryTestTemplate<PartyRepository,
    // @Test
    // public void testUpdatePerson1() {
    // UnitOfWork work = new UnitOfWork(true);
-   // PersonName name = new PersonName("István", "Kiss");
+   // PersonName name = new PersonName("Istvï¿½n", "Kiss");
    // person.setPartyName(name);
    // partyRep.updatePerson(work, person);
    //
    // Person person1 = partyRep.findPersonById(work, person.getId().toString());
    // assertEquals("person now has a different name",
-   // person1.getPartyName().getName(), " István");
+   // person1.getPartyName().getName(), " Istvï¿½n");
    // work.finish();
    // }
 

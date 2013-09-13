@@ -261,7 +261,7 @@ public class PartyRelationshipTypeTest {
       Set<PartyRoleConstraint> partyRoleConstraints = new HashSet<PartyRoleConstraint>();
       partyRoleConstraints.add(partyRoleConstraint);
       partyRoleType = PartyRoleTypeFactory.create("Wife", "bla bla", person, ruleSet);
-      Party<?> party = personFactory.create( "Benı", "B·rczy" );
+      Party<?> party = personFactory.create( "Ben≈ë", "B√°rczy" );
       partyRole = new PartyRole("Wife", partyRoleType);
       partyRole.setParty(party);
 

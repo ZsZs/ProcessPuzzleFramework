@@ -73,7 +73,7 @@ public class PersonRepositoryTest extends RepositoryTestTemplate<PersonRepositor
    @Test
    public void findPersonByPartyName() {
       UnitOfWork work = new DefaultUnitOfWork( true );
-      String expectedPartyName = "Bárczi Benõ";
+      String expectedPartyName = "BÃ¡rczi BenÅ‘";
       List<Party> parties = fixture.getPartyRepository().findPartiesByPartyName( work, expectedPartyName );
       work.finish();
 

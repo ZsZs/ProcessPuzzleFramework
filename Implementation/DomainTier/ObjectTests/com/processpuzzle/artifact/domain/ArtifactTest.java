@@ -534,19 +534,4 @@ public class ArtifactTest {
       arepository.delete(work, arepository.findByName(work, "YetAnotherArtifactSubClass"));
       work.finish();
    }
-
-   // public void testAddComment() {
-   // Person author = new Person("Bárczi Benõ");
-   // String title = "megjegyzes";
-   // String text = "almafa";
-   // artifact.addComment(author, title, text);
-   // boolean found = false;
-   // Iterator i = artifact.getCommentList().getAllComments().iterator();
-   // while (!found && i.hasNext()) {
-   // Comment aComment = (Comment) i.next();
-   // if (title.equals(aComment.getTitle()) && text.equals(aComment.getText()))
-   // found = true;
-   // }
-   // assertFalse("The added comment must be there.", found);
-   // }
 }

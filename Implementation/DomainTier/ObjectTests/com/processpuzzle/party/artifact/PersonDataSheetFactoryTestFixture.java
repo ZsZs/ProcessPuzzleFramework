@@ -27,7 +27,7 @@ public class PersonDataSheetFactoryTestFixture extends FactoryTestFixture<Person
          Date birthDate = formatter.parse( birthDateStr );
          TimePoint birthDateTP = new TimePoint( birthDate );
           
-         personDataSheet = sut.create("Keszeg", "József", birthDateTP);
+         personDataSheet = sut.create("Keszeg", "JÃ³zsef", birthDateTP);
          
       } catch (ParseException e) { // can not occur
       }

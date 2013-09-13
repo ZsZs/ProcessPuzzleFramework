@@ -99,6 +99,5 @@ public class UserDataSheet_BaseData extends CustomFormView<UserDataSheet> {
 
    public void setPreferredLocale( ProcessPuzzleLocale preferredLocale ) {
       parentArtifact.getUser().setPrefferedLocale( preferredLocale );
-      // -ez nem biztos hogy jó! ki kell próbálni
    }
 }

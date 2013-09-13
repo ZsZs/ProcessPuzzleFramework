@@ -34,7 +34,7 @@ package com.processpuzzle.util.domain;
 public final class OPDomainStrings {
    
    public static final String ACTION_STATUS_PROPOSED = "Proposed";
-   public static final String ACTION_STATUS_WAITING_FOR_RESOURCE = "Erıforr·sra v·r";
+   public static final String ACTION_STATUS_WAITING_FOR_RESOURCE = "Er≈ëforr√°sra v√°r";
 
    public static final String ACTION_STATUS_IMPLEMENTABLE = "Implementable";
 
