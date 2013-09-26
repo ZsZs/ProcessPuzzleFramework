@@ -164,12 +164,11 @@
 	<!-- Internationalization Configuration -->
 	<in:internationalization>
 		<in:resouceBundles nameSpace="xmlns:pp='http://www.processpuzzle.com/ResourceBundle'">
-         <in:resourceBundle>classpath:com/processpuzzle/internalization/domain/DomainTier_Resources</in:resourceBundle>
-		   <in:resourceBundle>Configuration/DesktopInternationalization</in:resourceBundle>
-         <in:resourceBundle>Configuration/ConsoleInternationalization</in:resourceBundle>
-         <in:resourceBundle>Configuration/PhotoGaleryInternationalization</in:resourceBundle>
-         <in:resourceBundle>Content/WidgetExamples/WidgetExamplesInternationalization</in:resourceBundle>
-         <in:resourceBundle>Content/WidgetExamples/WidgetExamplesInternationalization</in:resourceBundle>
+         <in:resourceBundle isBackendOnly="true">classpath:com/processpuzzle/internalization/domain/DomainTier_Resources</in:resourceBundle>
+		   <in:resourceBundle baseNameOnlyVersionExists="true">Configuration/DesktopInternationalization</in:resourceBundle>
+         <in:resourceBundle localeSpecificVersionsExists="true">Configuration/ConsoleInternationalization</in:resourceBundle>
+         <in:resourceBundle baseNameOnlyVersionExists="true">Configuration/PhotoGaleryInternationalization</in:resourceBundle>
+         <in:resourceBundle localeSpecificVersionsExists="true">Content/WidgetExamples/WidgetExamplesInternationalization</in:resourceBundle>
 		</in:resouceBundles>
 		
 		<in:availableLocales>
