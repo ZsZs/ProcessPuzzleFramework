@@ -38,9 +38,9 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.sql.Types;
 
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.engine.SessionImplementor;
+import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
 import org.hibernate.usertype.CompositeUserType;
 
@@ -75,7 +75,7 @@ public class TimePointToTimeStampMapping implements CompositeUserType {
       // if (value==null) return null;
       // else{
       // Date dateValue=(Date)Hibernate.DATE.nullSafeGet(rs, names[0]);
-      Timestamp timeStamp = (Timestamp) Hibernate.TIMESTAMP.nullSafeGet( rs, names[0] );
+      Timestamp timeStamp = (Timestamp) StandardBasicTypes.TIMESTAMP.nullSafeGet( rs, names[0] );
       // Calendar time=GregorianCalendar.getInstance();
       // time.setTime(timeValue);
       // Calendar cal=GregorianCalendar.getInstance();
@@ -95,12 +95,12 @@ public class TimePointToTimeStampMapping implements CompositeUserType {
          st.setNull(index + 1, Types.TIMESTAMP);
       } else {
          // Hibernate.DATE.nullSafeSet(st, ((TimePoint)value).getValue(), index);
-         Hibernate.TIMESTAMP.nullSafeSet(st, ((TimePoint) value).getValue(), index);
+         StandardBasicTypes.TIMESTAMP.nullSafeSet(st, ((TimePoint) value).getValue(), index);
       }
    }
 
    public String[] getPropertyNames() { return new String[] { "timeStamp" }; }
-   public Type[] getPropertyTypes() { return new Type[] { Hibernate.TIMESTAMP }; }
+   public Type[] getPropertyTypes() { return new Type[] { StandardBasicTypes.TIMESTAMP }; }
 
    public Object getPropertyValue(Object component, int property) throws HibernateException {
       TimePoint timePoint = (TimePoint) component;
