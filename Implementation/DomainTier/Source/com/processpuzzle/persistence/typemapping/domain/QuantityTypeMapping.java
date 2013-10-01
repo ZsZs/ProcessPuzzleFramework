@@ -37,9 +37,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.engine.SessionImplementor;
+import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
 import org.hibernate.usertype.CompositeUserType;
 
@@ -71,8 +71,8 @@ public class QuantityTypeMapping implements CompositeUserType {
    }
 
    public Object nullSafeGet(ResultSet resultSet, String[] names, SessionImplementor session, Object owner) throws HibernateException, SQLException {
-      Double amount = (Double) Hibernate.DOUBLE.nullSafeGet( resultSet, names[0]);
-      String unitSymbol = (String) Hibernate.STRING.nullSafeGet( resultSet, names[1]);
+      Double amount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet( resultSet, names[0]);
+      String unitSymbol = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[1]);
       if (amount == null && unitSymbol == null)
          return null;
       else {
@@ -86,8 +86,8 @@ public class QuantityTypeMapping implements CompositeUserType {
       Quantity quantity = (Quantity) value;
       
       if( quantity != null && quantity.getAmount() != null && quantity.getUnit() != null ) {
-         Hibernate.DOUBLE.nullSafeSet( statement, quantity.getAmount(), index );
-         Hibernate.STRING.nullSafeSet(statement, quantity.getUnit().getSymbol(), index + 1);
+         StandardBasicTypes.DOUBLE.nullSafeSet( statement, quantity.getAmount(), index );
+         StandardBasicTypes.STRING.nullSafeSet(statement, quantity.getUnit().getSymbol(), index + 1);
       } else {
          statement.setNull(index, Types.DOUBLE );
          statement.setNull(index + 1, Types.VARCHAR );
@@ -99,7 +99,7 @@ public class QuantityTypeMapping implements CompositeUserType {
    }
 
    public Type[] getPropertyTypes() {
-      return new Type[] { Hibernate.DOUBLE, Hibernate.STRING };
+      return new Type[] { StandardBasicTypes.DOUBLE, StandardBasicTypes.STRING };
    }
 
    public Object getPropertyValue( Object component, int property) throws HibernateException {
