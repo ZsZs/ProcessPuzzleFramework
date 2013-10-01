@@ -37,9 +37,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.engine.SessionImplementor;
+import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
 import org.hibernate.usertype.CompositeUserType;
 
@@ -79,7 +79,7 @@ public class MoneyTypeMapping implements CompositeUserType {
    }
 
    public Type[] getPropertyTypes() {
-      return new Type[] {Hibernate.DOUBLE, Hibernate.STRING};
+      return new Type[] {StandardBasicTypes.DOUBLE, StandardBasicTypes.STRING};
    }
 
    public Object getPropertyValue(Object component, int property) throws HibernateException {
@@ -97,8 +97,8 @@ public class MoneyTypeMapping implements CompositeUserType {
    }
 
    public Object nullSafeGet(ResultSet resultSet, String[] names, SessionImplementor session, Object owner) throws HibernateException, SQLException {
-      Double amount = (Double) Hibernate.DOUBLE.nullSafeGet(resultSet, names[0]);
-      String currencySymbol = (String) Hibernate.STRING.nullSafeGet(resultSet, names[1]);
+      Double amount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet(resultSet, names[0]);
+      String currencySymbol = (String) StandardBasicTypes.STRING.nullSafeGet(resultSet, names[1]);
       if (amount == null && currencySymbol == null)
          return null;
       else {
@@ -111,15 +111,15 @@ public class MoneyTypeMapping implements CompositeUserType {
    public void nullSafeSet(PreparedStatement statement, Object value, int index, SessionImplementor session) throws HibernateException, SQLException {
       Money money = (Money) value;
       if (money != null && money.getAmount() != null && money.getUnit() != null) {
-         Hibernate.DOUBLE.nullSafeSet(statement, money.getAmount(), index);
-//         Hibernate.CURRENCY.nullSafeSet(statement, money.getUnit().getSymbol(), index+1);
+         StandardBasicTypes.DOUBLE.nullSafeSet(statement, money.getAmount(), index);
+//         StandardBasicTypes.CURRENCY.nullSafeSet(statement, money.getUnit().getSymbol(), index+1);
          String currenySymbol = money.getUnit().getSymbol();
          ProcessPuzzleContext applicationContext = UserRequestManager.getInstance().getApplicationContext();
          MeasurementContext measurementContext = applicationContext.getMeasurementContext();
          if ( measurementContext.findUnitBySymbol(currenySymbol) == null ) {
             throw new MoneyTypeMappingException("Unit must have currency symbol in MonyTypeMapping");
          }
-         Hibernate.STRING.nullSafeSet(statement, currenySymbol, index+1);
+         StandardBasicTypes.STRING.nullSafeSet(statement, currenySymbol, index+1);
       }
       else {
          statement.setNull(index, Types.DOUBLE);
