@@ -32,15 +32,15 @@ You should have received a copy of the GNU General Public License along with thi
 package com.processpuzzle.persistence.typemapping.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.Date;
 
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.engine.SessionImplementor;
+import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
 import org.hibernate.usertype.CompositeUserType;
 
@@ -74,7 +74,7 @@ public class TimePointToDateMapping implements CompositeUserType {
    }
 
    public Object nullSafeGet( ResultSet resultSet, String[] names, SessionImplementor session, Object owner ) throws HibernateException, SQLException {
-      java.util.Date savedDate = (Date) Hibernate.DATE.nullSafeGet( resultSet, names[0] );
+      java.util.Date savedDate = (Date) StandardBasicTypes.DATE.nullSafeGet( resultSet, names[0] );
       return new TimePoint( savedDate );
    }
 
@@ -82,7 +82,7 @@ public class TimePointToDateMapping implements CompositeUserType {
       if( objectToSave == null ){
          statement.setNull( index + 1, Types.DATE );
       }else{
-         Hibernate.DATE.nullSafeSet( statement, ((TimePoint) objectToSave).getValue(), index );
+         StandardBasicTypes.DATE.nullSafeSet( statement, ((TimePoint) objectToSave).getValue(), index );
       }
    }
 
@@ -91,7 +91,7 @@ public class TimePointToDateMapping implements CompositeUserType {
    }
 
    public Type[] getPropertyTypes() {
-      return new Type[] { Hibernate.DATE };
+      return new Type[] { StandardBasicTypes.DATE };
    }
 
    public Object getPropertyValue( Object component, int property ) throws HibernateException {
