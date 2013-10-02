@@ -38,7 +38,7 @@ import java.sql.SQLException;
 import java.sql.Types;
 
 import org.hibernate.HibernateException;
-import org.hibernate.engine.SessionImplementor;
+import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
 import org.hibernate.usertype.CompositeUserType;
@@ -97,8 +97,8 @@ public class MoneyTypeMapping implements CompositeUserType {
    }
 
    public Object nullSafeGet(ResultSet resultSet, String[] names, SessionImplementor session, Object owner) throws HibernateException, SQLException {
-      Double amount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet(resultSet, names[0]);
-      String currencySymbol = (String) StandardBasicTypes.STRING.nullSafeGet(resultSet, names[1]);
+      Double amount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet(resultSet, names[0], session);
+      String currencySymbol = (String) StandardBasicTypes.STRING.nullSafeGet(resultSet, names[1], session);
       if (amount == null && currencySymbol == null)
          return null;
       else {
@@ -111,7 +111,7 @@ public class MoneyTypeMapping implements CompositeUserType {
    public void nullSafeSet(PreparedStatement statement, Object value, int index, SessionImplementor session) throws HibernateException, SQLException {
       Money money = (Money) value;
       if (money != null && money.getAmount() != null && money.getUnit() != null) {
-         StandardBasicTypes.DOUBLE.nullSafeSet(statement, money.getAmount(), index);
+         StandardBasicTypes.DOUBLE.nullSafeSet(statement, money.getAmount(), index, session);
 //         StandardBasicTypes.CURRENCY.nullSafeSet(statement, money.getUnit().getSymbol(), index+1);
          String currenySymbol = money.getUnit().getSymbol();
          ProcessPuzzleContext applicationContext = UserRequestManager.getInstance().getApplicationContext();
@@ -119,7 +119,7 @@ public class MoneyTypeMapping implements CompositeUserType {
          if ( measurementContext.findUnitBySymbol(currenySymbol) == null ) {
             throw new MoneyTypeMappingException("Unit must have currency symbol in MonyTypeMapping");
          }
-         StandardBasicTypes.STRING.nullSafeSet(statement, currenySymbol, index+1);
+         StandardBasicTypes.STRING.nullSafeSet(statement, currenySymbol, index+1, session);
       }
       else {
          statement.setNull(index, Types.DOUBLE);

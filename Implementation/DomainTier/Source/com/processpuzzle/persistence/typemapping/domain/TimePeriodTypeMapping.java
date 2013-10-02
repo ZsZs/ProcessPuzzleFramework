@@ -39,7 +39,7 @@ import java.sql.Types;
 import java.util.Date;
 
 import org.hibernate.HibernateException;
-import org.hibernate.engine.SessionImplementor;
+import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
 import org.hibernate.usertype.CompositeUserType;
@@ -98,8 +98,8 @@ public class TimePeriodTypeMapping implements CompositeUserType {
    }
 
    public Object nullSafeGet(ResultSet rs, String[] names, SessionImplementor session, Object owner) throws HibernateException, SQLException {
-      Date begin = (Date) StandardBasicTypes.TIMESTAMP.nullSafeGet(rs, names[0]);
-      Date end = (Date) StandardBasicTypes.TIMESTAMP.nullSafeGet(rs, names[1]);
+      Date begin = (Date) StandardBasicTypes.TIMESTAMP.nullSafeGet(rs, names[0], session);
+      Date end = (Date) StandardBasicTypes.TIMESTAMP.nullSafeGet(rs, names[1], session);
       if (begin == null && end == null)
          return null;
       else {
@@ -110,12 +110,12 @@ public class TimePeriodTypeMapping implements CompositeUserType {
    public void nullSafeSet(PreparedStatement statement, Object value, int index, SessionImplementor session) throws HibernateException, SQLException {
       if (value != null) {
          if (((TimePeriod)value).getBegin() != null) {
-            StandardBasicTypes.TIMESTAMP.nullSafeSet(statement, ((TimePeriod) value).getBegin().getValue(), index);
+            StandardBasicTypes.TIMESTAMP.nullSafeSet(statement, ((TimePeriod) value).getBegin().getValue(), index, session);
          } else {
             statement.setNull(index, Types.TIMESTAMP );
          }
          if (((TimePeriod)value).getEnd() != null) {
-            StandardBasicTypes.TIMESTAMP.nullSafeSet(statement, ((TimePeriod) value).getEnd().getValue(), index + 1);
+            StandardBasicTypes.TIMESTAMP.nullSafeSet(statement, ((TimePeriod) value).getEnd().getValue(), index + 1, session);
          } else {
             statement.setNull(index + 1, Types.TIMESTAMP );
          }

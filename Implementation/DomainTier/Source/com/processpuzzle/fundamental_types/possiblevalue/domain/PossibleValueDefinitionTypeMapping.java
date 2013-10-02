@@ -75,12 +75,12 @@ public class PossibleValueDefinitionTypeMapping implements CompositeUserType {
    }
 
    public Object nullSafeGet(ResultSet resultSet, String[] names, SessionImplementor session, Object owner) throws HibernateException, SQLException {
-      String valueDefinitionClassDiscriminator = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[0]);
-      Double minAmount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet( resultSet, names[1]);
-      String minUnitSymbol = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[2]);
-      Double maxAmount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet( resultSet, names[3]);
-      String maxUnitSymbol = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[4]);
-      String possibleValues = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[5]);
+      String valueDefinitionClassDiscriminator = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[0], session);
+      Double minAmount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet( resultSet, names[1], session);
+      String minUnitSymbol = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[2], session);
+      Double maxAmount = (Double) StandardBasicTypes.DOUBLE.nullSafeGet( resultSet, names[3], session);
+      String maxUnitSymbol = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[4], session);
+      String possibleValues = (String) StandardBasicTypes.STRING.nullSafeGet( resultSet, names[5], session);
 
       ProcessPuzzleContext applicationContext = UserRequestManager.getInstance().getApplicationContext();
       MeasurementContext measurementContext = applicationContext.getMeasurementContext();
@@ -102,15 +102,15 @@ public class PossibleValueDefinitionTypeMapping implements CompositeUserType {
    public void nullSafeSet(PreparedStatement statement, Object value, int index, SessionImplementor session) throws HibernateException, SQLException {
       if ( value != null ) {
          PossibleValueDefinition valueDefinition = (PossibleValueDefinition) value;
-         StandardBasicTypes.STRING.nullSafeSet(statement, valueDefinition.getClass().getName(), index);
+         StandardBasicTypes.STRING.nullSafeSet(statement, valueDefinition.getClass().getName(), index, session);
          if (valueDefinition instanceof QuantityRange) {
    
             QuantityRange range = (QuantityRange)valueDefinition;
             if ( range.getMinValue()!=null && range.getMaxValue()!=null ) {
-               StandardBasicTypes.DOUBLE.nullSafeSet( statement, range.getMinValue().getAmount(), index + 1);
-               StandardBasicTypes.STRING.nullSafeSet(statement, range.getMinValue().getUnit().getSymbol(), index + 2);
-               StandardBasicTypes.DOUBLE.nullSafeSet( statement, range.getMaxValue().getAmount(), index + 3 );
-               StandardBasicTypes.STRING.nullSafeSet(statement, range.getMaxValue().getUnit().getSymbol(), index + 4);
+               StandardBasicTypes.DOUBLE.nullSafeSet( statement, range.getMinValue().getAmount(), index + 1, session);
+               StandardBasicTypes.STRING.nullSafeSet(statement, range.getMinValue().getUnit().getSymbol(), index + 2, session);
+               StandardBasicTypes.DOUBLE.nullSafeSet( statement, range.getMaxValue().getAmount(), index + 3, session );
+               StandardBasicTypes.STRING.nullSafeSet(statement, range.getMaxValue().getUnit().getSymbol(), index + 4, session);
             } else {
                statement.setNull(index + 1, Types.DOUBLE );
                statement.setNull(index + 2, Types.VARCHAR );
@@ -124,7 +124,7 @@ public class PossibleValueDefinitionTypeMapping implements CompositeUserType {
             statement.setNull(index + 2, Types.VARCHAR );
             statement.setNull(index + 3, Types.DOUBLE );
             statement.setNull(index + 4, Types.VARCHAR );
-            StandardBasicTypes.STRING.nullSafeSet(statement, ((StringParseable)valueDefinition).stringValue(), index + 5);
+            StandardBasicTypes.STRING.nullSafeSet(statement, ((StringParseable)valueDefinition).stringValue(), index + 5, session);
             
          }
       } else {
