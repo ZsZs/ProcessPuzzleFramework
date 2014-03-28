@@ -3,10 +3,13 @@
  */
 package com.processpuzzle.application.configuration.domain;
 
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.sameInstance;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Properties;
@@ -15,6 +18,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.mockito.Mockito.*;
 
 import com.processpuzzle.application.domain.Application;
@@ -118,22 +122,6 @@ public class ProcessPuzzleContextTest {
    }
 
    @Test
-   public void setUp_ForSupressingReInitialization() {
-      PropertyContext propertyContext = config.getPropertyContext();
-      
-      config = ApplicationContextFactory.create( application, DomainTierTestConfiguration.APPLICATION_CONFIGURATION_DESCRIPTOR_PATH );
-      config.setUp( Application.Action.start );
-      
-      assertEquals("Calling 'setUp()' again with the same configuration descriptor, doesn't creates a new PropertyContext object.", 
-            propertyContext, config.getPropertyContext() );
-
-      config = ApplicationContextFactory.create( application, ANOTHER_CONFIGURATION_DESCRIPTOR );
-      config.setUp( Application.Action.start );
-      assertFalse("Calling 'setUp()' again with a new configuration descriptor, doesn't creates a new PropertyContext object.", 
-            propertyContext.equals( config.getPropertyContext() ));
-   }
-
-   @Test
    public void setUp_ForReInitialization() {
       PropertyContext propertyContext = config.getPropertyContext();
       
@@ -189,9 +177,10 @@ public class ProcessPuzzleContextTest {
    @Test
    public void addProperty() {
       config.addProperty( PropertyKeys.APPLICATION_NAME.getDefaultKey(), "ac:aNewPropertyKey", "aNewPropertyValue");
-      config.getProperty( "ac:application.ac:aNewPropertyKey" );
+
+      String newPropertiesKey = PropertyKeys.APPLICATION_NAME.getDefaultKey() + "." + "ac:aNewPropertyKey";
       assertEquals("ProcessPuzzleContext is a facade to PropertyContext. You can add new properties at runtime.", 
-            "aNewPropertyValue", config.getProperty(PropertyKeys.APPLICATION.getDefaultKey() + "." + "aNewPropertyKey"));
+            "aNewPropertyValue", config.getProperty( newPropertiesKey ));
    }
    
    @Test

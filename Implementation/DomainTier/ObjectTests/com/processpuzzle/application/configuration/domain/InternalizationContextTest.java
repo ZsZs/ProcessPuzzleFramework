@@ -121,7 +121,7 @@ public class InternalizationContextTest extends ContextTest {
 
    @Test
    public void getText_ForDefaultLocale() {
-      assertEquals( "If we do not specify locale the default locale is considered. Please compare the result with the previous test.", "Sz�veg_1",
+      assertEquals( "If we do not specify locale the default locale is considered. Please compare the result with the previous test.", "Szöveg_1",
             internalizationContext.getText( "Kulcs_1" ) );
    }
 
