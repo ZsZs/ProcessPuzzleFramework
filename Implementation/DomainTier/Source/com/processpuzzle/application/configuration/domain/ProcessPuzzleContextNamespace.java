@@ -2,7 +2,6 @@ package com.processpuzzle.application.configuration.domain;
 
 import java.util.Iterator;
 
-import javax.xml.XMLConstants;
 import javax.xml.namespace.NamespaceContext;
 
 public class ProcessPuzzleContextNamespace implements NamespaceContext {
@@ -36,7 +35,7 @@ public class ProcessPuzzleContextNamespace implements NamespaceContext {
       else if( prefix.equals( "wui" ) )
          return "http://www.processpuzzle.com/WebUIConfiguration";
       else
-         return XMLConstants.NULL_NS_URI;
+         throw new IllegalArgumentException(prefix);
    }
 
    @Override
@@ -54,8 +53,7 @@ public class ProcessPuzzleContextNamespace implements NamespaceContext {
       else if( namespaceURI.equals( "http://www.processpuzzle.com/PersistenceConfiguration" )) return "pr";
       else if( namespaceURI.equals( "http://www.processpuzzle.com/RuntimeConfiguration" )) return "rt";
       else if( namespaceURI.equals( "http://www.processpuzzle.com/WebUIConfiguration" )) return "wui";
-
-      else return null;
+      else throw new IllegalArgumentException( namespaceURI );
    }
 
    @Override

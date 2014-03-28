@@ -77,7 +77,7 @@ public class PropertyContext extends TransientApplicationContext implements Appl
    
    //Public accessors and mutators
    public void addProperty( String nodeSelector, String propertyName, Object value ) {
-      configuration.addProperty( nodeSelector + " " + propertyName, value ); 
+      configuration.addProperty( nodeSelector + "." + propertyName, value ); 
    }
 
    public void overrideProperty(PropertyKeys key, String value ) {
