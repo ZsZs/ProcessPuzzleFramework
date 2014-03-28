@@ -101,7 +101,7 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
       if( resourceStream == null )
          throw new DataLoaderException( this, "Can't load resource: " + resourcePath );
    
-      String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
+      String language = javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI;
       SchemaFactory factory = SchemaFactory.newInstance( language );
       factory.setErrorHandler( new BusinessDataLoaderErrorHandler( schemaPath ));
    

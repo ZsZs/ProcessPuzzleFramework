@@ -100,7 +100,7 @@ public abstract class ServiceMessageTestFixture<S extends ServiceMessage> extend
    }
 
    private void loadSchema() {
-      SchemaFactory schemaFactory = SchemaFactory.newInstance( XMLConstants.W3C_XML_SCHEMA_NS_URI );
+      SchemaFactory schemaFactory = SchemaFactory.newInstance( javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI );
       try{
          schemaFactory.setResourceResolver( new ClasspathResourceResolver() );
          Resource schemaResource = resourceLoader.getResource( schemaPath );
