@@ -13,13 +13,6 @@
 	<property file="${common.build.path}/common.build.properties" />
 
 	<path id="project.auxiliary.classpath">
-		<fileset dir="${release.base.path}/${processpuzzlecommons.component.distribution.dir}">
-			<include name="${processpuzzlecommons.component.packaged.file}" />
-		</fileset>
-		
-		<fileset dir="${release.base.path}/${litest.component.distribution.dir}">
-			<include name="${litest.component.packaged.file}" />
-		</fileset>
 	</path>
 
 	<target name="domaintier-build">
