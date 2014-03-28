@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+       
+   <info organisation="${project.name}" module="${component.name}" revision="${component.version}" status="integration"/>
+
+   <configurations>
+      <conf name="development" description="Libraries needed for testing." />
+      <conf name="production" description="Libraries needed in production environment." />
+   </configurations>
+   	
+    <dependencies>
+    	<dependency org="com.processpuzzle" name="processpuzzle-framework-domain" rev="1.0.0" conf="production->*,!sources,!javadoc"/>
+	</dependencies>
+</ivy-module>

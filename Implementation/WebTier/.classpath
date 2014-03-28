@@ -5,14 +5,7 @@
 	<classpathentry kind="src" path="Source"/>
 	<classpathentry kind="src" path="UiTests"/>
 	<classpathentry kind="src" path="AcceptanceTests"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LiTest - Domain Tier"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ProcessPuzzle-Development-Dependencies"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/ProcessPuzzle-Production-Dependencies">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/ProcessPuzzleCommons - Domain Tier"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/ProcessPuzzle - Domain Tier"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
@@ -22,5 +15,6 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=ProcessPuzzle+-+Web+Tier&amp;ivyXmlPath=Build%2Fivy.xml&amp;confs=*"/>
 	<classpathentry kind="output" path="Binaries"/>
 </classpath>
