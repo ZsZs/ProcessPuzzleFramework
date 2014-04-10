@@ -14,20 +14,6 @@
 	<property file="${common.build.path}/common.build.properties" />
 
 	<path id="project.auxiliary.classpath">
-		<fileset dir="${release.base.path}/${processpuzzlecommons.component.distribution.dir}">
-			<include name="${processpuzzlecommons.component.packaged.file}" />
-			<exclude name="**/*.copyarea.db" />
-		</fileset>
-		
-		<fileset dir="${release.base.path}/${litest.component.distribution.dir}">
-			<include name="${litest.component.packaged.file}" />
-			<exclude name="**/*.copyarea.db" />
-		</fileset>
-		
-		<fileset dir="${release.base.path}/${processpuzzle.component.distribution.dir}">
-			<include name="${processpuzzle.component.packaged.file}" />
-			<exclude name="**/*.copyarea.db" />
-		</fileset>
 	</path>
 
 	<target name="webtier-build">
