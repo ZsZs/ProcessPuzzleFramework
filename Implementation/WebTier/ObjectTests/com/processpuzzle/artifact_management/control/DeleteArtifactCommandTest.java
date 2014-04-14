@@ -1,5 +1,8 @@
 package com.processpuzzle.artifact_management.control;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -37,7 +40,7 @@ public class DeleteArtifactCommandTest extends BasicServletTestCaseAdapter {
    private ArtifactFolder folder;
    private ArtifactFolder subFolder;
 
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       ConfigurationFixture.getInstance().setUp();
@@ -65,7 +68,7 @@ public class DeleteArtifactCommandTest extends BasicServletTestCaseAdapter {
       work.finish();
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       folder = ConfigurationFixture.getArtifactFolderRepository().findByPath( work, "folder" );
       subFolder = ConfigurationFixture.getArtifactFolderRepository().findByPath( work, "folder.subFolder" );

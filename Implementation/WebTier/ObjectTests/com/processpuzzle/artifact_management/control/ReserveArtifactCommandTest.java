@@ -3,9 +3,13 @@
  */
 package com.processpuzzle.artifact_management.control;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.BeforeClass;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 import org.w3c.dom.NodeList;
 
 import com.mockrunner.mock.web.MockHttpServletResponse;
@@ -52,7 +56,7 @@ public class ReserveArtifactCommandTest extends BasicServletTestCaseAdapter {
       documentRepository = config.getRepository( DocumentRepository.class );
    }
 
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       aDocument = documentFactory.createDocument( "aDocument" );
@@ -64,7 +68,7 @@ public class ReserveArtifactCommandTest extends BasicServletTestCaseAdapter {
       work.finish();
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       repository.delete( work, aDocument );
       aDocument = null;

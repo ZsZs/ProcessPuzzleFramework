@@ -1,7 +1,9 @@
 package com.processpuzzle.artifact_management.control;
 
+import static org.junit.Assert.assertNotNull;
+
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 
 import com.mockrunner.mock.web.MockHttpServletRequest;
 import com.mockrunner.servlet.BasicServletTestCaseAdapter;
@@ -26,14 +28,13 @@ public class ShowArtifactViewCommandTest extends BasicServletTestCaseAdapter {
    private static ProcessPuzzleContext config = null;
    private static DefaultArtifactRepository arepository;
    private static UserRepository userRepository;
-   private @Mock
-   Application mockApplication;
+   private @Mock Application mockApplication;
    private UserFactory userFactory;
    private DocumentFactory documentFactory;
    private Artifact<?> artifact;
    private User user;
 
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       MockitoAnnotations.initMocks( ShowArtifactViewCommandTest.class );
@@ -57,7 +58,7 @@ public class ShowArtifactViewCommandTest extends BasicServletTestCaseAdapter {
       work.finish();
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       arepository.delete( work, artifact );
       userRepository.deleteUser( work, user );

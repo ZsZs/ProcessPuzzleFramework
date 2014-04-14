@@ -12,12 +12,9 @@ import java.io.OutputStream;
 import java.util.Calendar;
 import java.util.List;
 
-import javax.media.jai.InterpolationNearest;
-import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
-import javax.media.jai.RenderedOp;
-
 import org.apache.commons.fileupload.FileItem;
+import org.apache.xmlgraphics.image.codec.util.ImageEncodeParam;
+import org.apache.xmlgraphics.image.codec.util.SeekableStream;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.control.control.CommandDispatcher;
@@ -33,13 +30,7 @@ import com.processpuzzle.file.control.FileServices;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 import com.processpuzzle.util.domain.GeneralService;
-import com.sun.media.jai.codec.FileSeekableStream;
-import com.sun.media.jai.codec.ImageCodec;
-import com.sun.media.jai.codec.ImageDecoder;
-import com.sun.media.jai.codec.ImageEncodeParam;
-import com.sun.media.jai.codec.ImageEncoder;
-import com.sun.media.jai.codec.JPEGEncodeParam;
-import com.sun.media.jai.codec.SeekableStream;
+import com.sun.image.codec.jpeg.JPEGEncodeParam;
 
 public class AddRelatedArtifactCommand extends ArtifactViewCommand {
    public static final String ADD_RELATED_ARTIFACT_COMMAND_NAME = "AddRelatedArtifact";
@@ -111,7 +102,7 @@ public class AddRelatedArtifactCommand extends ArtifactViewCommand {
       encodeParam.setVerticalSubsampling( 0, 1 );
       encodeParam.setVerticalSubsampling( 1, 1 );
       encodeParam.setVerticalSubsampling( 2, 1 );
-      return encodeParam;
+      return (ImageEncodeParam) encodeParam;
    }
 
    private ImageFile imageToJpeg( ImageFile sourceImage, String jpegPath ) {

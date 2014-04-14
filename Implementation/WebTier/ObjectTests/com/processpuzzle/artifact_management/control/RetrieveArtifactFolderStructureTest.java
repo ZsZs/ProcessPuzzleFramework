@@ -3,8 +3,8 @@ package com.processpuzzle.artifact_management.control;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 
 import com.mockrunner.servlet.BasicServletTestCaseAdapter;
 import com.processpuzzle.application.configuration.domain.ApplicationContextFactory;
@@ -17,7 +17,7 @@ public class RetrieveArtifactFolderStructureTest extends BasicServletTestCaseAda
    private static ProcessPuzzleContext config = null;      
    @Mock private Application mockApplication;
    
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
       
       MockitoAnnotations.initMocks( RetrieveArtifactFolderStructureTest.class );
@@ -28,7 +28,7 @@ public class RetrieveArtifactFolderStructureTest extends BasicServletTestCaseAda
       addRequestParameter("action","RetrieveArtifactFolderStructure");
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       super.tearDown();
    }
 

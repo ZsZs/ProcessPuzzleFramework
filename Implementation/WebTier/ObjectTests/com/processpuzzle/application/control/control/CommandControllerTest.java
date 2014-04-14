@@ -22,13 +22,13 @@ import com.processpuzzle.application.control.control.CommandControllerServlet;
 public class CommandControllerTest extends BasicServletTestCaseAdapter {
 
    @Before
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
       createServlet(CommandControllerServlet.class);
    }
 
    @After
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       super.tearDown();
    }
 

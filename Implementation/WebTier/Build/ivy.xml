@@ -9,6 +9,7 @@
    </configurations>
    	
     <dependencies>
+    	<dependency org="com.mockrunner" name="mockrunner-servlet" rev="1.0.0" conf="development->*,!sources,!javadoc"/>
     	<dependency org="com.processpuzzle" name="processpuzzle-framework-domain" rev="1.0.0" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework.social" name="spring-social-core" rev="1.0.3.RELEASE" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework.social" name="spring-social-facebook" rev="1.0.3.RELEASE" conf="production->*,!sources,!javadoc"/>

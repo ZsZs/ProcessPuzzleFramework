@@ -16,7 +16,7 @@ public class GenericArtifactPropertyViewTest extends BasicServletTestCaseAdapter
    private ProcessPuzzleContext applicationContext;
    private DocumentFactory documentFactory;
    
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
       new WebTestConfiguration();
       createServlet(CommandControllerServlet.class);
@@ -25,7 +25,7 @@ public class GenericArtifactPropertyViewTest extends BasicServletTestCaseAdapter
       documentFactory = applicationContext.getEntityFactory( DocumentFactory.class );
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       super.tearDown();
    }
 

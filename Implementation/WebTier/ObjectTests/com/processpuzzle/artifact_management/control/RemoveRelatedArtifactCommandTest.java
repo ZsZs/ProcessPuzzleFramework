@@ -3,8 +3,10 @@
  */
 package com.processpuzzle.artifact_management.control;
 
+import static org.junit.Assert.assertEquals;
+
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 
 import com.mockrunner.mock.web.MockHttpServletResponse;
 import com.mockrunner.servlet.BasicServletTestCaseAdapter;
@@ -38,7 +40,7 @@ public class RemoveRelatedArtifactCommandTest extends BasicServletTestCaseAdapte
    private String targetArtifactName;
    private User gipszJakab;
 
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
 
       MockitoAnnotations.initMocks( RemoveRelatedArtifactCommandTest.class );
@@ -72,7 +74,7 @@ public class RemoveRelatedArtifactCommandTest extends BasicServletTestCaseAdapte
       work.finish();
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       artifactRepository.deleteByName( work, subjectArtifactName );
       artifactRepository.deleteByName( work, targetArtifactName );

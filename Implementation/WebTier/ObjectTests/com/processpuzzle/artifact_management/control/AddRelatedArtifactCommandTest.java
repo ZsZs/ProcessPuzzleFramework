@@ -3,8 +3,10 @@
  */
 package com.processpuzzle.artifact_management.control;
 
+import static org.junit.Assert.assertEquals;
+
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 
 import com.mockrunner.mock.web.MockHttpServletResponse;
 import com.mockrunner.servlet.BasicServletTestCaseAdapter;
@@ -18,8 +20,6 @@ import com.processpuzzle.application.security.domain.UserRepository;
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
 import com.processpuzzle.artifact.domain.DocumentFactory;
-import com.processpuzzle.artifact_management.control.AddRelatedArtifactCommand;
-import com.processpuzzle.artifact_management.control.ArtifactLocator;
 import com.processpuzzle.configuration.webtier.ConfigurationConstants;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
@@ -39,7 +39,7 @@ public class AddRelatedArtifactCommandTest extends BasicServletTestCaseAdapter {
    private Artifact<?> artifact = null;
    private User gipszJakab;
 
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
 
       MockitoAnnotations.initMocks( AddRelatedArtifactCommandTest.class );
@@ -70,7 +70,7 @@ public class AddRelatedArtifactCommandTest extends BasicServletTestCaseAdapter {
       work.finish();
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       artifactRepository.deleteByName( work, subjectArtifactName );
       artifactRepository.deleteByName( work, targetArtifactName );

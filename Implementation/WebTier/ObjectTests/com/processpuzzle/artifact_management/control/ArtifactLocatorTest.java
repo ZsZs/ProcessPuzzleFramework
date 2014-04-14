@@ -27,7 +27,7 @@ public class ArtifactLocatorTest extends BasicServletTestCaseAdapter {
    private User currentUser;
    private Artifact<?> anArtifact;
 
-   protected void setUp() throws Exception {
+   public void setUp() throws Exception {
       super.setUp();
       DefaultUnitOfWork work = new DefaultUnitOfWork(true);
 
@@ -47,7 +47,7 @@ public class ArtifactLocatorTest extends BasicServletTestCaseAdapter {
       work.finish();
    }
 
-   protected void tearDown() throws Exception {
+   public void tearDown() throws Exception {
       DefaultUnitOfWork work = new DefaultUnitOfWork(true);
       repository.delete(work, anArtifact);
       typeFixture.tearDown();
