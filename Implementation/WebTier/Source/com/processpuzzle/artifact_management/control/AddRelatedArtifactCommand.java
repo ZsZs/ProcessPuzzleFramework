@@ -1,5 +1,6 @@
 package com.processpuzzle.artifact_management.control;
 
+import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.io.File;
@@ -12,9 +13,13 @@ import java.io.OutputStream;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.imageio.ImageIO;
+import javax.media.jai.InterpolationNearest;
+import javax.media.jai.JAI;
+import javax.media.jai.OpImage;
+import javax.media.jai.RenderedOp;
+
 import org.apache.commons.fileupload.FileItem;
-import org.apache.xmlgraphics.image.codec.util.ImageEncodeParam;
-import org.apache.xmlgraphics.image.codec.util.SeekableStream;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.control.control.CommandDispatcher;
@@ -30,7 +35,15 @@ import com.processpuzzle.file.control.FileServices;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 import com.processpuzzle.util.domain.GeneralService;
+import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
+import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import com.sun.media.jai.codec.FileSeekableStream;
+import com.sun.media.jai.codec.ImageCodec;
+import com.sun.media.jai.codec.ImageDecoder;
+import com.sun.media.jai.codec.ImageEncodeParam;
+import com.sun.media.jai.codec.ImageEncoder;
+import com.sun.media.jai.codec.SeekableStream;
 
 public class AddRelatedArtifactCommand extends ArtifactViewCommand {
    public static final String ADD_RELATED_ARTIFACT_COMMAND_NAME = "AddRelatedArtifact";
@@ -50,6 +63,8 @@ public class AddRelatedArtifactCommand extends ArtifactViewCommand {
    protected String uploadFormName = null;
    protected String docType = null;
    protected String docSubType = null;
+   private String filePath;
+   private String fileName;
 
    public void init( CommandDispatcher dispatcher ) {
       super.init( dispatcher );
@@ -94,14 +109,25 @@ public class AddRelatedArtifactCommand extends ArtifactViewCommand {
    }
 
    private ImageEncodeParam getJpegEncodeParam() {
-      JPEGEncodeParam encodeParam = new JPEGEncodeParam();
-      encodeParam.setQuality( 0.99f );
-      encodeParam.setHorizontalSubsampling( 0, 1 );
-      encodeParam.setHorizontalSubsampling( 1, 1 );
-      encodeParam.setHorizontalSubsampling( 2, 1 );
-      encodeParam.setVerticalSubsampling( 0, 1 );
-      encodeParam.setVerticalSubsampling( 1, 1 );
-      encodeParam.setVerticalSubsampling( 2, 1 );
+      JPEGEncodeParam encodeParam = null;
+      try{
+         BufferedImage image = ImageIO.read( new File( filePath ));
+         JPEGImageEncoder jpegEncoder = JPEGCodec.createJPEGEncoder( new FileOutputStream( filePath ) );
+
+         encodeParam = jpegEncoder.getDefaultJPEGEncodeParam( image );
+         encodeParam.setQuality( 0.99f, false );
+         encodeParam.setHorizontalSubsampling( 0, 1 );
+         encodeParam.setHorizontalSubsampling( 1, 1 );
+         encodeParam.setHorizontalSubsampling( 2, 1 );
+         encodeParam.setVerticalSubsampling( 0, 1 );
+         encodeParam.setVerticalSubsampling( 1, 1 );
+         encodeParam.setVerticalSubsampling( 2, 1 );
+      }catch( FileNotFoundException e ){
+         e.printStackTrace();
+      }catch( IOException e ){
+         e.printStackTrace();
+      }
+      
       return (ImageEncodeParam) encodeParam;
    }
 
@@ -189,18 +215,17 @@ public class AddRelatedArtifactCommand extends ArtifactViewCommand {
                if( targetFolder == null ){
                   targetFolder = (ArtifactFolder) artifactRepository.findById( work, subjectArtifact.getContainingFolder().getId() );
                }
-               String path = dispatcher.getServletContext().getRealPath( UPLOADED_FILE_FOLDER + "\\" + targetFolder.getName() );
+               filePath = dispatcher.getServletContext().getRealPath( UPLOADED_FILE_FOLDER + "\\" + targetFolder.getName() );
                FileStorage fileStorage = null;
 
                if( docType != null ){
                   if( docType.equals( "Picture" ) ){
-                     String fileNameWithoutExtension = GeneralService.getFirstToken( GeneralService.getLastToken( fileItem.getName()
-                           .toString(), "\\" ), "." );
-                     String name = fileNameWithoutExtension + "_" + System.currentTimeMillis() + ".jpg";
-                     fileStorage = imageFileFactory.createImageFile( name );
+                     String fileNameWithoutExtension = GeneralService.getFirstToken( GeneralService.getLastToken( fileItem.getName().toString(), "\\" ), "." );
+                     fileName = fileNameWithoutExtension + "_" + System.currentTimeMillis() + ".jpg";
+                     fileStorage = imageFileFactory.createImageFile( fileName );
                      targetFolder.addChildArtifact( fileStorage );
 
-                     FileServices.uploadFile( fileItem, name, loggedInUser, path, fileStorage );
+                     FileServices.uploadFile( fileItem, fileName, loggedInUser, filePath, fileStorage );
                      if( fileItem.getContentType().indexOf( "image" ) != -1 ){
                         ImageFile jpegFile = (ImageFile) fileStorage;
 
@@ -210,7 +235,7 @@ public class AddRelatedArtifactCommand extends ArtifactViewCommand {
                            jpegFile.setIsOuterPicture( true );
 
                         if( fileStorage.getContentType().indexOf( "jpeg" ) == -1 ){
-                           jpegFile = imageToJpeg( (ImageFile) fileStorage, path );
+                           jpegFile = imageToJpeg( (ImageFile) fileStorage, filePath );
                            if( jpegFile != null ){
                               jpegFile.setContainingFolder( targetFolder );
                               artifactRepository.add( work, jpegFile );
@@ -228,14 +253,13 @@ public class AddRelatedArtifactCommand extends ArtifactViewCommand {
                      artifactRepository.update( work, subjectArtifact );
                      artifactRepository.update( work, targetFolder );
                   }else if( docType.equals( "Document" ) ){
-                     String fileNameWithoutExtension = GeneralService.getFirstToken( GeneralService.getLastToken( fileItem.getName()
-                           .toString(), "\\" ), "." );
+                     String fileNameWithoutExtension = GeneralService.getFirstToken( GeneralService.getLastToken( fileItem.getName().toString(), "\\" ), "." );
                      String name = fileNameWithoutExtension + "_" + System.currentTimeMillis() + "."
                            + GeneralService.getLastToken( GeneralService.getLastToken( fileItem.getName().toString(), "\\" ), "." );
                      fileStorage = FileStorage.create( name, loggedInUser );
                      targetFolder.addChildArtifact( fileStorage );
 
-                     FileServices.uploadFile( fileItem, name, loggedInUser, path, fileStorage );
+                     FileServices.uploadFile( fileItem, name, loggedInUser, filePath, fileStorage );
 
                      subjectArtifact.addRelatedArtifact( fileStorage );
                      artifactRepository.add( work, fileStorage );
