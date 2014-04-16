@@ -1,9 +1,9 @@
 package com.processpuzzle.application.configuration.control;
 
-import hu.itkodex.litest.template.MockServletRunner;
-
 import java.io.FileNotFoundException;
+
 import javax.servlet.http.HttpSession;
+
 import static org.hamcrest.core.IsNull.*;
 import static org.hamcrest.core.IsEqual.*;
 import static org.junit.Assert.*;
@@ -19,6 +19,7 @@ import static org.mockito.Mockito.*;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.configuration.domain.PropertyContext;
 import com.processpuzzle.application.configuration.domain.PropertyKeys;
+import com.processpuzzle.litest.template.MockServletRunner;
 
 public class SkinSelectorFilterTest {
    private static MockServletRunner servletRunner;

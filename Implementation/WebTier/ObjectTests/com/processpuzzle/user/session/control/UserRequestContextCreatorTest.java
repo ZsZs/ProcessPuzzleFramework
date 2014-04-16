@@ -8,8 +8,6 @@ import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assume.assumeThat;
 
-import hu.itkodex.litest.template.MockServletRunner;
-
 import java.io.FileNotFoundException;
 
 import org.junit.After;
@@ -18,6 +16,7 @@ import org.junit.Test;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.security.domain.User;
+import com.processpuzzle.litest.template.MockServletRunner;
 import com.processpuzzle.user.session.control.HttpSessionUserSessionHolder;
 import com.processpuzzle.user.session.control.UserRequestContextCreator;
 import com.processpuzzle.user_session.domain.UserRequestContext;

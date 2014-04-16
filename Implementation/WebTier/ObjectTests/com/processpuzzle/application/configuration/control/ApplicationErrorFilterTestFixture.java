@@ -1,7 +1,7 @@
 package com.processpuzzle.application.configuration.control;
 
-import hu.itkodex.litest.template.FilterTestEnvironment;
-import hu.itkodex.litest.template.FilterTestFixture;
+import com.processpuzzle.litest.template.FilterTestEnvironment;
+import com.processpuzzle.litest.template.FilterTestFixture;
 
 public class ApplicationErrorFilterTestFixture extends FilterTestFixture<ApplicationErrorFilter> {
 

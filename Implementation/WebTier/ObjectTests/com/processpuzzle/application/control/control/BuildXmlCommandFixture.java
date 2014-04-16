@@ -1,7 +1,7 @@
 package com.processpuzzle.application.control.control;
 
-import hu.itkodex.litest.template.FrontCommandTestEnvironment;
-import hu.itkodex.litest.template.FrontCommandTestFixture;
+import com.processpuzzle.litest.template.FrontCommandTestEnvironment;
+import com.processpuzzle.litest.template.FrontCommandTestFixture;
 
 public class BuildXmlCommandFixture extends FrontCommandTestFixture<BuildXmlCommand> {
 

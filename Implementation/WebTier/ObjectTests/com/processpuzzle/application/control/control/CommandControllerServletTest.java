@@ -12,7 +12,6 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import hu.itkodex.litest.template.MockServletRunner;
 
 import org.junit.After;
 import org.junit.Before;
@@ -23,6 +22,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import com.processpuzzle.artifact_management.control.ShowArtifactCommand;
+import com.processpuzzle.litest.template.MockServletRunner;
 
 @RunWith( PowerMockRunner.class )
 @PrepareForTest( CommandFactory.class )

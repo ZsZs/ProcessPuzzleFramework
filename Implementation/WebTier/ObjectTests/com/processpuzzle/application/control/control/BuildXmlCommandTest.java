@@ -9,12 +9,13 @@ package com.processpuzzle.application.control.control;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.FrontCommandTestTemplate;
+
 
 
 
 import org.junit.Test;
 
+import com.processpuzzle.litest.template.FrontCommandTestTemplate;
 import com.processpuzzle.sharedfixtures.webtier.WebTierTestConfiguration;
 
 public class BuildXmlCommandTest extends FrontCommandTestTemplate<BuildXmlCommand, BuildXmlCommandFixture> {

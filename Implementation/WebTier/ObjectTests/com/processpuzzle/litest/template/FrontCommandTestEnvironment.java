@@ -1,4 +1,4 @@
-package hu.itkodex.litest.template;
+package com.processpuzzle.litest.template;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;

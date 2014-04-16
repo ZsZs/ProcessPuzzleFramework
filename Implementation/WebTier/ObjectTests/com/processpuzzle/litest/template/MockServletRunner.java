@@ -1,4 +1,4 @@
-package hu.itkodex.litest.template;
+package com.processpuzzle.litest.template;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

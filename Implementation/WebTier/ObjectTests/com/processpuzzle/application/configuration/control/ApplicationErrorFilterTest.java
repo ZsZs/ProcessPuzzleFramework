@@ -3,12 +3,12 @@ package com.processpuzzle.application.configuration.control;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
-import hu.itkodex.litest.template.FilterTestTemplate;
 
 import org.junit.Test;
 
 import com.processpuzzle.application.control.control.CommandControllerErrorHelper;
 import com.processpuzzle.application.domain.ApplicationException;
+import com.processpuzzle.litest.template.FilterTestTemplate;
 import com.processpuzzle.sharedfixtures.webtier.WebTierTestConfiguration;
 
 public class ApplicationErrorFilterTest extends FilterTestTemplate<ApplicationErrorFilter, ApplicationErrorFilterTestFixture>{

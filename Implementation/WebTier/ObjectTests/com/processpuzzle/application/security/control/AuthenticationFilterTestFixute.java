@@ -1,9 +1,8 @@
 package com.processpuzzle.application.security.control;
 
 import com.processpuzzle.application.security.control.AuthenticationFilter;
-
-import hu.itkodex.litest.template.FilterTestEnvironment;
-import hu.itkodex.litest.template.FilterTestFixture;
+import com.processpuzzle.litest.template.FilterTestEnvironment;
+import com.processpuzzle.litest.template.FilterTestFixture;
 
 public class AuthenticationFilterTestFixute extends FilterTestFixture<AuthenticationFilter> {
 

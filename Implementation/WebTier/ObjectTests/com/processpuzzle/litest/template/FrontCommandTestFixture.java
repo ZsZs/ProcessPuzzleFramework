@@ -1,4 +1,4 @@
-package hu.itkodex.litest.template;
+package com.processpuzzle.litest.template;
 
 import com.processpuzzle.application.control.control.CommandInterface;
 import com.processpuzzle.litest.template.GenericTemplatedFixture;
