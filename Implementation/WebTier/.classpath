@@ -5,9 +5,6 @@
 	<classpathentry kind="src" path="Source"/>
 	<classpathentry kind="src" path="UiTests"/>
 	<classpathentry kind="src" path="AcceptanceTests"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LiTest - Domain Tier"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/ProcessPuzzleCommons - Domain Tier"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/ProcessPuzzle - Domain Tier"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_51"/>
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=ProcessPuzzle+-+Web+Tier&amp;ivyXmlPath=Build%2Fivy.xml&amp;confs=*"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
