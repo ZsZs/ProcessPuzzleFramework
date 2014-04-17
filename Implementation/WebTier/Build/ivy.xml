@@ -9,8 +9,11 @@
    </configurations>
    	
     <dependencies>
-    	<dependency org="com.mockrunner" name="mockrunner-servlet" rev="1.0.0" conf="development->*,!sources,!javadoc"/>
+    	<dependency org="com.mockrunner" name="mockrunner-servlet" rev="1.0.0" conf="development->*,!sources,!javadoc">
+	        <exclude org="org.apache.tomcat" name="catalina"/>
+    	</dependency>
     	<dependency org="com.processpuzzle" name="processpuzzle-framework-domain" rev="1.0.0" conf="production->*,!sources,!javadoc"/>
+        <dependency org="org.hibernate" name="hibernate-ehcache" rev="4.3.4.Final" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework.social" name="spring-social-core" rev="1.0.3.RELEASE" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework.social" name="spring-social-facebook" rev="1.0.3.RELEASE" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework.social" name="spring-social-twitter" rev="1.0.5.RELEASE" conf="production->*,!sources,!javadoc"/>
