@@ -17,4 +17,8 @@
   	<constructor-arg type="java.lang.String" value="classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml" />
   </bean>
 
+  <bean id="defaultApplicationFixture" class="com.processpuzzle.litest.template.DefaultApplicationFixture" >
+  	<constructor-arg type="java.lang.String" value="classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml" />
+  </bean>
+  
 </beans>

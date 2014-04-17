@@ -6,6 +6,9 @@ import static org.junit.Assert.assertThat;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.litest.fixture.TestFixture;
+import com.processpuzzle.litest.testcase.NoSuchFixtureDefinitionException;
+
 public class ErroneousApplicationTest extends ApplicationTest {
 
    @Ignore
@@ -34,5 +37,5 @@ public class ErroneousApplicationTest extends ApplicationTest {
    @Override
    public void testLoginUser() throws ApplicationException {
    // Prevent running superclass test with erroneous application configuration.
-   }
+   }   
 }

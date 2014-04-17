@@ -32,7 +32,6 @@ public abstract class ApplicationTest extends GenericTestSuite<Application, Defa
       super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
    }
 
-   @Ignore
    @Test
    public void testStart() throws ApplicationException {
       //SETUP: implicit setup in beforeEachTests()
@@ -102,27 +101,4 @@ public abstract class ApplicationTest extends GenericTestSuite<Application, Defa
       work.finish();
    }
 
-      
-   /*
-    * @Ignore @Test public void loadSystemData () { //Application.loadSystemData (); UnitOfWork work = new UnitOfWork(true);
-    * 
-    * TestEntity anEntity = repository.findTestEntityByName(work, "test_entity_1"); assertNotNull("After loading test datas we can find the
-    * 'test_entity_1' object.", anEntity); repository.deleteByName( work, "test_entity_1");
-    * 
-    * work.finish(); }
-    * 
-    * @Ignore @Test public void loadMigrationData () { //Application.loadMigrationData (); UnitOfWork work = new UnitOfWork(true);
-    * 
-    * TestEntity anEntity = repository.findTestEntityByName( work, "test_entity_2" ); assertNotNull("After loading test datas we can find the
-    * 'test_entity_2' object.", anEntity); repository.deleteByName( work, "test_entity_2" );
-    * 
-    * work.finish(); }
-    * 
-    * @Ignore @Test public void loadTestData () { //Application.loadTestData (); UnitOfWork work = new UnitOfWork(true);
-    * 
-    * TestEntity anEntity = repository.findTestEntityByName(work, "test_entity_3"); assertNotNull("After loading test datas we can find the
-    * 'test_entity_3' object.", anEntity); repository.deleteByName(work, "test_entity_3");
-    * 
-    * work.finish(); }
-    */
 }
