@@ -18,6 +18,7 @@
         <dependency org="org.apache.avalon.framework" name="avalon-framework-api" rev="4.3.1" conf="production->*,!sources,!javadoc"/>
         <dependency org="org.apache.avalon.framework" name="avalon-framework-impl" rev="4.3.1" conf="production->*,!sources,!javadoc"/>   
         <dependency org="org.apache.xmlgraphics" name="fop" rev="1.1" conf="production->*,!sources,!javadoc"/>
+        <dependency org="org.hibernate" name="hibernate-ehcache" rev="4.3.4.Final" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.jdom" name="jdom" rev="2.0.2" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.jibx" name="maven-jibx-plugin" rev="1.2.5" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework" name="spring-web" rev="3.2.8.RELEASE" conf="production->*,!sources,!javadoc"/>
