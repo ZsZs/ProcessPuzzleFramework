@@ -114,6 +114,9 @@
 							<pr:cache>
 								<pr:provider_class>org.hibernate.cache.HashtableCacheProvider</pr:provider_class>
 								<pr:use_second_level_cache>true</pr:use_second_level_cache>
+								<pr:region>
+									<pr:factory_class>org.hibernate.cache.ehcache.EhCacheRegionFactory</pr:factory_class>
+								</pr:region>
 								<pr:use_query_cache>true</pr:use_query_cache>
 							</pr:cache>
 							<pr:c3p0>
