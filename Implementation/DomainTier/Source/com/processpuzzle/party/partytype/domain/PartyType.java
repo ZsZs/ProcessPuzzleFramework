@@ -44,12 +44,13 @@ import com.processpuzzle.resource.resourcetype.domain.AssetType;
 import com.processpuzzle.resource.resourcetype.domain.ResourceType;
 
 @XmlType( name="PartyType", propOrder={"name", "partyClassName", "description"} )
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType( XmlAccessType.FIELD )
 public class PartyType extends GenericEntity<PartyType> implements AssetType {
    protected @XmlAttribute @XmlID String name;
    protected @XmlAttribute String description;
    protected @XmlAttribute String partyClassName;
 
+   //Constructors
    public PartyType( String theName ) {
       this( theName, null );
    }
@@ -59,13 +60,18 @@ public class PartyType extends GenericEntity<PartyType> implements AssetType {
       this.description = description;
    }
 
+   protected PartyType() {
+   }
+
+   //Public mutators and accessors
    public @Override int compareTo( ResourceType o ) {
       return 0;
    }
    public boolean equals( Object objectToCheck ) {
-      if( !(objectToCheck instanceof PartyType) )
-         return false;
+      if( !(objectToCheck instanceof PartyType) ) return false;
+      
       PartyType anotherPartyType = (PartyType) objectToCheck;
+      if( name == null || anotherPartyType.name == null ) return false;
       return name.equals( anotherPartyType.name ) && id.equals( anotherPartyType.id );
    }
 
@@ -92,12 +98,11 @@ public class PartyType extends GenericEntity<PartyType> implements AssetType {
       return result;
    }
 
+   //Properties
    public @Override void setDescription( String description ) { this.description = description; }
-
    public void setPartyClassName( String partyClassName ) { this.partyClassName = partyClassName; }
 
-   protected PartyType() {}
-
+   //Protected, private helper methods
    protected @Override void defineIdentityExpressions() {
       identities.add( getDefaultIdentity() );
    }

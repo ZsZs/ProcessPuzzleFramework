@@ -19,6 +19,8 @@
   <bean id="systemArtifactsLoader" class="com.processpuzzle.business.definition.domain.SystemArtifactsLoader" />
   
   <!-- Entity factories -->
+  <bean id="testEntityFactory" class="com.processpuzzle.persistence.domain.TestEntityFactory" lazy-init="true"/>
+  
   <bean id="addressFactory" class="com.processpuzzle.party.domain.AddressFactory" lazy-init="true"/>
   <bean id="artifactFolderFactory" class="com.processpuzzle.artifact.domain.ArtifactFolderFactory" lazy-init="true"/>
   <bean id="artifactTypeFactory" class="com.processpuzzle.artifact_type.domain.ArtifactTypeFactory" lazy-init="true"/>

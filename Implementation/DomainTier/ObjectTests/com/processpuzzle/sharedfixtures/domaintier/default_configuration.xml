@@ -92,22 +92,18 @@
 
 		<pr:repositories>
 			<pr:repositoryList class="com.processpuzzle.application.configuration.domain.FrameworkRepositories" strategy="TEST_STRATEGY"/>
-			<!-- 
 			<pr:repository class="com.processpuzzle.persistence.domain.TestEntityRepository" strategy="TEST_STRATEGY"/>
 			<pr:repository class="com.processpuzzle.persistence.domain.ComponentRepository" strategy="TEST_STRATEGY"/>
-			 -->
 		</pr:repositories>
 
 		<pr:persistentClasses>
 			<pr:persistentClassList class="com.processpuzzle.application.configuration.domain.FrameworkPersistentClasses"/>
-			<!-- 
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.TestEntity"/>
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.TestEntityComponent"/>
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.TestEntitySubclass"/>
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.Component"/>
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.Leaf"/>
 			<pr:persistentClass class="com.processpuzzle.persistence.domain.Composite"/>
-			 -->
 		</pr:persistentClasses>
 
 	</pr:persistence>

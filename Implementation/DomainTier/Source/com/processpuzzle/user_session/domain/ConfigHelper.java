@@ -58,31 +58,18 @@ public class ConfigHelper {
 
     private static BeanFactory beanFactory;
 
-    static {
+    public ConfigHelper() {
         BeanFactoryLocator bfl = ContextSingletonBeanFactoryLocator.getInstance(BEAN_CONTEXT);
         BeanFactoryReference bfr = bfl.useBeanFactory(SPRING_BEAN_FACTORY);
         beanFactory = bfr.getFactory();
     }
 
-    /**
-     * @return The currently loaded Spring bean factory
-     */
-    public static BeanFactory getBeanFactory() {
-        return beanFactory;
-    }
+    public static BeanFactory getBeanFactory() {return beanFactory; }
 
-    /**
-     * Get the named bean from the Spring bean factory
-     * @param key The bean to lookup
-     * @return The named bean
-     */
     public static Object getBean(String key) {
         return beanFactory.getBean(key);
     }
 
-    /**
-     * @return The currently configured RequestContextFactory as loaded by Spring
-     */
     public static UserRequestContextFactory getRequestContextFactory() {
         return (UserRequestContextFactory)beanFactory.getBean(BEAN_REQUESTCONTEXTFACTORY);
     }

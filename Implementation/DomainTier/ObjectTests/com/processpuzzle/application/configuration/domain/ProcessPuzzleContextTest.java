@@ -3,14 +3,15 @@
  */
 package com.processpuzzle.application.configuration.domain;
 
+import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.sameInstance;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import java.util.Properties;
 
@@ -18,8 +19,6 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.mockito.Mockito.*;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.security.domain.AccessRight;
@@ -29,7 +28,6 @@ import com.processpuzzle.persistence.domain.TestEntity;
 import com.processpuzzle.persistence.domain.TestEntityRepository;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.user_session.domain.UserRequestManager;
-import com.processpuzzle.user_session.domain.UserSessionManager;
 
 public class ProcessPuzzleContextTest {
    private static final String ANOTHER_CONFIGURATION_DESCRIPTOR = "classpath:com/processpuzzle/application/configuration/domain/another_configuration_descriptor.xml";
@@ -45,7 +43,7 @@ public class ProcessPuzzleContextTest {
       config.setPropertyContextOverrides( propertyOverrides );
       
       when( application.getContext() ).thenReturn( config );
-      config.setUp( Application.Action.start );
+      config.setUp( Application.Action.install );
    }
 
    @Test
@@ -55,24 +53,22 @@ public class ProcessPuzzleContextTest {
    
    @Test
    public void setUp_ForAggregatedHelperObjects() {
-      assertTrue( "ProcessPuzzleContext aggregates an ", config.getPropertyContext() instanceof PropertyContext );
-      assertTrue( config.getPropertyContext().isConfigured() );
-      assertTrue( "PropertyContext aggregates a", config.getPropertyContext().getConfiguration() instanceof org.apache.commons.configuration.Configuration );
+      assertThat( "ProcessPuzzleContext aggregates an ", config.getPropertyContext(), instanceOf( PropertyContext.class ));
+      assertThat( config.getPropertyContext().isConfigured(), is( true ));
       
-      assertTrue( "ProcessPuzzleContext aggregates a", config.getInternalizationContext() instanceof InternalizationContext );
-      assertTrue( config.getInternalizationContext().isConfigured() );
+      assertThat( "PropertyContext aggregates a", config.getPropertyContext().getConfiguration(), instanceOf( org.apache.commons.configuration.Configuration.class ));
       
-      assertTrue( "ProcessPuzzleContext aggregates a", config.getMeasurementContext() instanceof MeasurementContext );
-      assertTrue( config.getMeasurementContext().isConfigured() );
+      assertThat( "ProcessPuzzleContext aggregates a", config.getInternalizationContext(), instanceOf( InternalizationContext.class ));
+      assertThat( config.getInternalizationContext().isConfigured(), is( true ));
       
-      assertTrue( "ProcessPuzzleContext aggregates a", config.getPersistenceContext() instanceof PersistenceContext );
-      assertTrue( config.getPersistenceContext().isConfigured() );
+      assertThat( "ProcessPuzzleContext aggregates a", config.getMeasurementContext(), instanceOf( MeasurementContext.class ));
+      assertThat( config.getMeasurementContext().isConfigured(), is( true ));
+      
+      assertThat( "ProcessPuzzleContext aggregates a", config.getPersistenceContext(), instanceOf( PersistenceContext.class ));
+      assertThat( config.getPersistenceContext().isConfigured(), is( true ));
 
-      assertTrue( "ProcessPuzzleContext aggregates a", config.getBeanContainer() instanceof BeanContainer );
-      assertTrue( config.getBeanContainer().isConfigured() );
-      
-      assertTrue( "ProcessPuzzleContext aggregates a", config.getUserSessionManager() instanceof UserSessionManager );
-      assertTrue( config.getUserSessionManager().isConfigured() );
+      assertThat( "ProcessPuzzleContext aggregates a", config.getBeanContainer(), instanceOf( BeanContainer.class ));
+      assertThat( config.getBeanContainer().isConfigured(), is( true ));
    }
 
    @Test
@@ -99,10 +95,10 @@ public class ProcessPuzzleContextTest {
    public void setUp_ForEmailProperties() {
       // Check availability of required properties.
       Properties emailProperties = config.getProperties( PropertyKeys.EMAIL_PROPERTIES.getDefaultKey() );
-      assertNotNull( emailProperties.getProperty("smtp.host"));
-      assertNotNull( emailProperties.getProperty("host.systemUser.name"));
-      assertNotNull( emailProperties.getProperty("host.systemUser.password"));
-      assertNotNull( emailProperties.getProperty("smtp.auth"));
+      assertNotNull( emailProperties.getProperty("em:smtp.em:host"));
+      assertNotNull( emailProperties.getProperty("em:host.em:systemUser.ge:userName"));
+      assertNotNull( emailProperties.getProperty("em:host.em:systemUser.ge:password"));
+      assertNotNull( emailProperties.getProperty("em:smtp.em:auth"));
    }
 
    @Test
@@ -144,7 +140,7 @@ public class ProcessPuzzleContextTest {
       assertEquals( config.getText( "Key_1", englishUSLocale ), config.getInternalizationContext().getText("Key_1", englishUSLocale ));
       assertEquals( config.getText( "Key_33", englishUSLocale ), config.getInternalizationContext().getText("Key_33", englishUSLocale ));
       assertEquals( "If we do not specify locale, the default is used.", config.getText("Kulcs_1"), config.getInternalizationContext().getText("Kulcs_1"));
-      assertNull("If a key doesn't exit null is returned.", config.getText("NoneExistingKey"));
+      assertNull( "If a key doesn't exit null is returned.", config.getText( "NoneExistingKey" ));
    }
    
    @Test
@@ -155,8 +151,7 @@ public class ProcessPuzzleContextTest {
    
    @Test
    public void getRepositoryByEntityClass() {
-      assertTrue("We can retrieve the the 'TestRepository' also by the enty class.",
-            config.getRepositoryByEntityClass(TestEntity.class) instanceof TestEntityRepository);
+      assertThat( config.getRepositoryByEntityClass( TestEntity.class ), instanceOf( TestEntityRepository.class ));
    }
    
    @Test (expected = UndeclaredAggregateRootRepositoryMapping.class)

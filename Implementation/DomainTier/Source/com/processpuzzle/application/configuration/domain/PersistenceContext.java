@@ -51,11 +51,11 @@ import com.processpuzzle.commons.persistence.PersistentObject;
 import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.commons.persistence.RepositoryEventHandler;
 import com.processpuzzle.fundamental_types.domain.OpAssertion;
-import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.domain.DefaultPersistenceStrategy;
+import com.processpuzzle.persistence.domain.DefaultRepositoryEventHandler;
+import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.domain.PersistentClassList;
 import com.processpuzzle.persistence.domain.RepositoryClassList;
-import com.processpuzzle.persistence.domain.DefaultRepositoryEventHandler;
 import com.processpuzzle.persistence.domain.UndefinedPersistentDataInitializationStrategyException;
 
 public class PersistenceContext extends PersistentApplicationContext implements ApplicationContext {
@@ -67,7 +67,6 @@ public class PersistenceContext extends PersistentApplicationContext implements 
    private ProcessPuzzleContext applicationContext;
    private Map<Class<? extends Repository<?>>, Repository<?>> availableRepositories = new HashMap<Class<? extends Repository<?>>, Repository<?>>();
    private Map<Class<? extends Repository<?>>, GenericRepository<?>> domainClassRepositoryMappings = new HashMap<Class<? extends Repository<?>>, GenericRepository<?>>();
-   private boolean isConfigured = false;
    private List<Class<? extends PersistentObject>> persistentClasses = new ArrayList<Class<? extends PersistentObject>>();
    private PersistentDataInitializationStrategies persistentDataInitializationStrategy = null;
    private PropertyContext propertyContext = null;
@@ -407,131 +406,4 @@ public class PersistenceContext extends PersistentApplicationContext implements 
       return repository;
    }
 
-   // private void initStrategies() {
-   // initRepositories();
-   // initEntities();
-
-   // Map<String, Object> strategyOp = new LinkedHashMap<String, Object>();
-
-   // for (Iterator iter = supportedStrategies.entrySet().iterator(); iter.hasNext();) {
-   // Map.Entry strategyEntry = (Entry) iter.next();
-   // String strategyName = (String) strategyEntry.getKey();
-   // PersistenceProvider persistenceProvider = (PersistenceProvider) strategyEntry.getValue();
-   // MessageFormat selector = new MessageFormat( PropertyKeys.PERSISTENCE_STRATEGY_PROPERTIES.getXPathKey() );
-   // Object[] arguments = {strategyName};
-   // Properties strategyProperties = propertyContext.getProperties( selector.format( arguments ) );
-   // persistenceProvider.init( strategyProperties );
-   // }
-
-   // for (Iterator is = strategies.entrySet().iterator(); is.hasNext();) {
-   // Map.Entry es = (Map.Entry) is.next();
-   // String strategyPrefix = es.getKey() + ".";
-   // PersistenceStrategy strategy = (PersistenceStrategy) es.getValue();
-   // strategyOp.clear();
-   // for (Iterator i = propertyContext.getConfiguration().getKeys(); i.hasNext();) {
-   // Map.Entry e = (Map.Entry) i.next();
-   // String name = (String) e.getKey();
-   // if (name.startsWith(strategyPrefix)) {
-   // strategyOp.put(name.substring(strategyPrefix.length()), e.getValue());
-   // }
-   // }
-   // strategy.init(strategyOp);
-   // }
-   // }
-
-   /*
-    * Private methods which are not used locally private Object instantiateObjectByPropertyKey( String propertyKey ){
-    * String className = propertyContext.getProperty( propertyKey ); return instantiateObjectByClassName(className); }
-    * private Object instantiateObjectByClass( Class theClass ){ return instantiateObjectByClassName( theClass.getName()
-    * ); } private Object instantiateObjectByClassName( String className ){ Object instantiatedObject = null; try {
-    * Class theClass = Class.forName( className ); instantiatedObject = theClass.newInstance(); } catch
-    * (IllegalAccessException e) { throw new PersistenceContextSetUpException( propertyContext, e ); } catch
-    * (InstantiationException e) { throw new PersistenceContextSetUpException( propertyContext, e ); } catch
-    * (ClassNotFoundException e) { throw new PersistenceContextSetUpException( propertyContext, e ); } return
-    * instantiatedObject; } private String getPersistenceProperty( String strategyName, String property ) {
-    * MessageFormat selector = new MessageFormat( PropertyKeys.PERSISTENCE_STRATEGY_PROPERTIES.getXPathKey() ); Object[]
-    * arguments = {strategyName}; String key = selector.format( arguments ) + "/" + property; String persistenceProperty
-    * = propertyContext.getProperty( key ); return persistenceProperty; } private String
-    * findOutStrategyClassElementName() { int indexOfLastDelimiter =
-    * PropertyKeys.PERSISTENCE_STRATEGY_CLASS.getXPathKey().lastIndexOf('/'); return
-    * PropertyKeys.PERSISTENCE_STRATEGY_CLASS.getXPathKey().substring( indexOfLastDelimiter + 1); } private
-    * List<PersistenceStrategy> buildStrategyObjectListFromClassList(List<Class> strategyClassList) {
-    * List<PersistenceStrategy> supportingStrategies = new LinkedList<PersistenceStrategy>(); for (Iterator iter =
-    * strategyClassList.iterator(); iter.hasNext();) { Class strategyClass = (Class) iter.next(); PersistenceStrategy
-    * strategyObject = supportedStrategies.get( strategyClass ); supportingStrategies.add( strategyObject ); } return
-    * supportingStrategies; }
-    */
-
-   // private void instantiateAndConfigureRepositories() {
-   // RepositoryMappings mappings = (RepositoryMappings) instantiateObjectByPropertyKey(
-   // PropertyKeys.PERSISTENCE_REPOSITORY_MAPPING_CLASS.getXPathKey() );
-   // Map<Class, List<Class>> repositoryAndStrategyMappings = mappings.getResopsitoryAndStrategyMappings();
-   // for (Iterator iter = repositoryAndStrategyMappings.entrySet().iterator(); iter.hasNext();) {
-   // Map.Entry<Class, List<Class>> mappingEntry = (Map.Entry<Class, List<Class>>) iter.next();
-   // Class repositoryClass = mappingEntry.getKey();
-   // List<Class> strategyClassList = mappingEntry.getValue();
-   // List<PersistenceStrategy> strategiesForRepository = buildStrategyObjectListFromClassList( strategyClassList );
-   // Repository repository = (Repository) instantiateRepository( repositoryClass, strategiesForRepository );
-   //    
-   // availableRepositories.put( repositoryClass , repository );
-   // }
-   // }
-   //
-   // private void initRepositories() throws Error {
-   // String mappingName = (String) propertyContext.getProperty( PropertyKeys.CLASS_REPOSITORY_MAPPING.getXPathKey() );
-   // if (mappingName == null) {
-   // throw new Error("Value for `CLASS_REPOSITORY_MAPPING` is not set");
-   // }
-   //
-   // try {
-   // RepositoryMappings mappings = (RepositoryMappings) Class.forName(mappingName).newInstance();
-   // String strategyName = (String) propertyContext.getProperty( PropertyKeys.PERSISTENCE_STRATEGY_NAME.getXPathKey()
-   // );
-   // PersistenceStrategy strategy = getStrategy(strategyName);
-   // domainClassRepositoryMappings = mappings.getEntityAndRepositoryMappings();
-   //
-   // for (Iterator iter = domainClassRepositoryMappings.keySet().iterator(); iter.hasNext();) {
-   // Class domainClass = (Class) iter.next();
-   // Class repositoryClass = (Class) domainClassRepositoryMappings.get(domainClass);
-   // Repository repository = null;
-   // if (repositoryClass != null) {
-   // repository = (Repository) repositoryClass.getConstructor(new Class[] { PersistenceProvider.class }).newInstance(
-   // new Object[] { strategy });
-   // repositories.put(repositoryClass, repository);
-   // }
-   // }
-   // } catch (Exception ex) {
-   // ex.printStackTrace();
-   // }
-   // }
-   // private void initEntities() {
-   // Map<String, Class> entityClasses = new HashMap<String, Class>();
-   // String mappingClassName = (String) propertyContext.getProperty(
-   // PropertyKeys.CLASS_REPOSITORY_MAPPING.getXPathKey() );
-   // if (mappingClassName == null) {
-   // throw new Error("Value for `CLASS_REPOSITORY_MAPPING` is not set");
-   // }
-   //
-   // try {
-   // RepositoryMappings mappings = (RepositoryMappings) Class.forName(mappingClassName).newInstance();
-   //
-   // for (Iterator iter = mappings.getEntityAndRepositoryMappings().keySet().iterator(); iter.hasNext();) {
-   // Class domainClass = (Class) iter.next();
-   // if (domainClass != null)
-   // entityClasses.put( PersistenceContext.ENTITY_CLASS_PROPERTY_NAME + "/" + domainClass.getName().replace('.', '/'),
-   // domainClass );
-   // }
-   // } catch (Exception ex) {
-   // ex.printStackTrace();
-   // }
-   // 
-   // for (Iterator iter = entityClasses.keySet().iterator(); iter.hasNext();) {
-   // String key = (String) iter.next();
-   // propertyContext.addProperty( PersistenceContext.ENTITY_CLASS_PROPERTY_NODE_SELECTOR, key, entityClasses.get(key));
-   // }
-   // }
-   //
-   // private Repository repositoryForClass(Class repositoryClass) {
-   // return (Repository) repositories.get(repositoryClass);
-   // }
 }

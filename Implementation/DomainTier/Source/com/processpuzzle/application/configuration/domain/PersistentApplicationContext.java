@@ -40,7 +40,7 @@ public abstract class PersistentApplicationContext implements ApplicationContext
    protected static Logger logger = LoggerFactory.getLogger( PersistentApplicationContext.class );
    protected Application application;
    protected Application.Action applicationAction;
-   private boolean isConfigured = false;
+   protected boolean isConfigured = false;
    
    public PersistentApplicationContext( Application application ) {
       this.application = application;

@@ -103,6 +103,8 @@ public class RunTimeClassHierarchyAnalyser {
          }
       }catch( ClassNotFoundException ex ){
          log.error( "Class " + parentClassName + " not found!", ex );
+      }catch( Throwable ex ){
+         log.error( "Unknown exception was thrown, while analysing class " + parentClassName + ".", ex );
       }
       
       return subClasses;
@@ -176,7 +178,7 @@ public class RunTimeClassHierarchyAnalyser {
             }catch( ClassNotFoundException cnfex ){
                log.error( "Class: " + className + " not found.", cnfex );
             }catch( ExceptionInInitializerError e ) {
-               // The class can't be initialized
+               log.debug( "The class: " + packageName + "." + className + " could not be initialized.", e );
             }catch( BootstrapException e ) {
                // The class can't be loaded
             }catch( NullPointerException e ) {
@@ -246,6 +248,7 @@ public class RunTimeClassHierarchyAnalyser {
       }catch( Exception e ){
          System.out.println( RunTimeClassHierarchyAnalyser.class.getName() + ": Unexpected exception occured.");
       }
+      if( superClass == null ) return false;
       if( superClass.equals( parentClass )) return true;
       else if( !( superClass.equals( Object.class )))
          return isInstanceOf( superClass, parentClass );

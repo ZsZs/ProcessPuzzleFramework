@@ -59,7 +59,6 @@ import com.processpuzzle.user_session.domain.StaticUserSessionHolder;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 import com.processpuzzle.user_session.domain.UserSession;
 import com.processpuzzle.user_session.domain.UserSessionHolder;
-import com.processpuzzle.user_session.domain.UserSessionManager;
 
 public class ProcessPuzzleContext extends PersistentApplicationContext implements ApplicationContext {
    public static final String UPLOADED_FILES_FOLDER = "uploaded.files.folder";
@@ -69,7 +68,6 @@ public class ProcessPuzzleContext extends PersistentApplicationContext implement
    private static PersistenceContext persistenceContext = null;
    private static MeasurementContext measurementContext = null;
    private static BeanContainer beanContainer = null;
-   private static UserSessionManager userSessionManager = null;
    private static InternalizationContext i18Context = null;
    private String configurationDescriptorPath = null;
    private static Logger log = LoggerFactory.getLogger( ProcessPuzzleContext.class );
@@ -176,7 +174,6 @@ public InternalizationContext getInternalizationContext() { return i18Context; }
    public ResourceLoader getResourceLoader() { return resourceLoader; }
    public PropertyContext getPropertyContext() { return propertyContext; }
    public PersistenceContext getPersistenceContext() { return persistenceContext; }
-   public UserSessionManager getUserSessionManager() { return userSessionManager; }
    public void setConfigurationDescriptorPath( String descriptorPath ) { configurationDescriptorPath = descriptorPath; }
    public void setPropertyContextOverrides( PropertyContextOverrides overrides ) { this.propertyContextOverrides = overrides; } 
    

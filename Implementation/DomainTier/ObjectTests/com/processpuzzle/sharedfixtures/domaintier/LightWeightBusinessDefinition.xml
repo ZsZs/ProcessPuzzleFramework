@@ -6,9 +6,9 @@
 
 	<!-- PartyTypes: Defines acceptable types of parties. -->
 	<partyTypes>
-		<partyType name = "PersonType" />
-		<partyType name = "CompanyType" />
-		<partyType name = "XPProject" />
+		<partyType name="PersonType" />
+		<partyType name="CompanyType" />
+		<partyType name="XPProject" />
 	</partyTypes>
 	
 	<!-- PartyRoleTypes: Defines the roles can be filled in the workflows. -->
@@ -16,7 +16,7 @@
 		<partyRoleType name="ProcessPuzzleAdministrator">
 			<description>Administrator of the ProcessPuzzle application.</description>
 			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
+				<partyRoleConstraint typeOfParty="PersonType" />
 			</partyRoleConstraints>
 		</partyRoleType>
 	</partyRoleTypes>
