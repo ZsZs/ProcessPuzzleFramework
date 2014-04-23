@@ -1,13 +1,14 @@
-package com.processpuzzle.litest.template;
+package com.processpuzzle.application.domain;
 
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.application.domain.ApplicationException;
 import com.processpuzzle.application.domain.ApplicationFactory;
 import com.processpuzzle.litest.fixture.UnconfiguredSharedFixtureException;
+import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestApplication;
 
-public class ConfigurableApplicationFixture extends DefaultApplicationFixture {
+public class ConfigurableApplicationFixture extends DefaultApplicationFixture<Application> {
    
    public ConfigurableApplicationFixture( String configurationPath ) {
       super( configurationPath );

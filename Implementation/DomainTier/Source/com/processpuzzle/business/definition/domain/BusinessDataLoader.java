@@ -27,7 +27,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package com.processpuzzle.business.definition.domain;
 
@@ -35,17 +35,21 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.ParameterizedType;
 
-import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
 
 import com.processpuzzle.application.resource.domain.DataLoaderException;
 import com.processpuzzle.application.resource.domain.XmlDataLoader;
@@ -60,32 +64,33 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
    protected Class<D> unmarshalledDataClass;
    protected D unmarshalledData;
 
-   @SuppressWarnings("unchecked")
+   @SuppressWarnings( "unchecked" )
    public BusinessDataLoader( ResourceLoader resourceLoader, String resourcePath ) {
       super( resourceLoader, resourcePath );
       this.resultInPersistentObjects = true;
       unmarshalledDataClass = (Class<D>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
    }
 
-   @Override public void loadData() throws XmlDataLoaderException {
+   @Override
+   public void loadData() throws XmlDataLoaderException {
       super.loadData();
 
       mappingPath = (String) applicationContext.getProperty( mappingKey );
-      
+
       try{
          schema = loadSchema();
          unmarshallXml( resourcePath );
-         
+
          DefaultUnitOfWork work = new DefaultUnitOfWork( true );
          saveObjects( work );
-         work.finish();         
+         work.finish();
       }catch( BusinessDataSchemaException e ){
          throw new XmlDataLoaderException( this, "Found problems with the associated schema.", e );
       }catch( BusinessDataLoaderException e ){
          throw new XmlDataLoaderException( this, "Found problems with the source data.", e );
       }
    }
-   
+
    protected abstract void saveObjects( DefaultUnitOfWork work );
 
    private Schema loadSchema() throws BusinessDataSchemaException {
@@ -97,14 +102,14 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
       }catch( IOException e ){
          throw new BusinessDataSchemaException( schemaPath, e );
       }
-   
+
       if( resourceStream == null )
          throw new DataLoaderException( this, "Can't load resource: " + resourcePath );
-   
+
       String language = javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI;
       SchemaFactory factory = SchemaFactory.newInstance( language );
-      factory.setErrorHandler( new BusinessDataLoaderErrorHandler( schemaPath ));
-   
+      factory.setErrorHandler( new BusinessDataLoaderErrorHandler( schemaPath ) );
+
       try{
          Resource schemaResource = resourceLoader.getResource( schemaPath );
          StreamSource schemaSource = new StreamSource( schemaResource.getInputStream() );
@@ -119,24 +124,40 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
       return businessDataSchema;
    }
 
-   @SuppressWarnings("unchecked")
+   @SuppressWarnings( "unchecked" )
    private void unmarshallXml( String resourcePath ) throws BusinessDataLoaderException {
       InputStream resourceStream = null;
-      try{ resourceStream = resource.getInputStream(); }
-      catch( IOException e ){ throw new BusinessDataLoaderException( resourcePath, e ); }
-      
+      try{
+         resourceStream = resource.getInputStream();
+      }catch( IOException e ){
+         throw new BusinessDataLoaderException( resourcePath, e );
+      }
+
       JAXBContext jaxbContext = null;
-      try{       
+      try{
          jaxbContext = JAXBContext.newInstance( new Class[] { unmarshalledDataClass } );
-  
+
+         final SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+         saxParserFactory.setNamespaceAware( true );
+         //saxParserFactory.setValidating( true );
+         final XMLReader reader;
+         try{
+            reader = saxParserFactory.newSAXParser().getXMLReader();
+         }catch( SAXException | ParserConfigurationException e ){
+            throw new RuntimeException( e );
+         }
+         InputSource inputSource = new InputSource( resourceStream );
+         SAXSource source = new SAXSource( reader, inputSource );
+
+         BusinessDataValidationEventHandler validationHandler = new BusinessDataValidationEventHandler( resourcePath, schemaPath );
          Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
          unmarshaller.setSchema( schema );
-         unmarshaller.setEventHandler( new BusinessDataValidationEventHandler( resourcePath, schemaPath ));
-         unmarshalledData = (D) unmarshaller.unmarshal( resourceStream );
+         unmarshaller.setEventHandler( validationHandler );
+         unmarshalledData = (D) unmarshaller.unmarshal( source );
          resourceStream.close();
       }catch( JAXBException e ){
          throw new BusinessDataLoaderException( resourcePath, e );
-      } catch ( Exception e ) {
+      }catch( Exception e ){
          throw new BusinessDataLoaderException( resourcePath, e );
       }
    }

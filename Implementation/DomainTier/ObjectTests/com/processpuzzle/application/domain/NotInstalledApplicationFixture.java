@@ -5,7 +5,7 @@ import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.sharedfixtures.domaintier.ApplicationOne;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
-public class NotInstalledApplicationFixture extends DefaultApplicationFixture {
+public class NotInstalledApplicationFixture extends DefaultApplicationFixture<Application> {
    
    public NotInstalledApplicationFixture() {
       super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );

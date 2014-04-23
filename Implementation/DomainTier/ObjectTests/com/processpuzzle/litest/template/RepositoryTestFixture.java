@@ -19,6 +19,7 @@ import com.processpuzzle.application.configuration.domain.PersistenceContext;
 import com.processpuzzle.application.configuration.domain.PersistentDataInitializationStrategies;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.configuration.domain.PropertyKeys;
+import com.processpuzzle.application.domain.ConfigurableApplicationFixture;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserFactory;
 import com.processpuzzle.application.security.domain.UserRepository;

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<businessDefinition 
-	xmlns = "http://www.processpuzzle.com/"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.processpuzzle.com/ ../../business/definition/domain/BusinessDefinition.xsd ">
+<businessDefinition xmlns="http://www.processpuzzle.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.processpuzzle.com/ ../../../../../Source/com/processpuzzle/business/definition/domain/BusinessDefinition.xsd">
 
 	<!-- PartyTypes: Defines acceptable types of parties. -->
 	<partyTypes>
-		<partyType name="PersonType" />
-		<partyType name="CompanyType" />
-		<partyType name="XPProject" />
+		<partyType name="PersonType" partyClassName="com.processpuzzle.party.domain.Person">
+			<description>Defines human beings playing a role in different context.</description>
+		</partyType>
+		
+		<partyType name="CompanyType" partyClassName="com.processpuzzle.party.domain.Company">
+			<description>Defines a business targeted organization type.</description>
+		</partyType>
+		
+		<partyType name="XPProject">
+			<description>Defines specific organization type, which applies eXtreme Programming process.</description>
+		</partyType>
 	</partyTypes>
 	
 	<!-- PartyRoleTypes: Defines the roles can be filled in the workflows. -->

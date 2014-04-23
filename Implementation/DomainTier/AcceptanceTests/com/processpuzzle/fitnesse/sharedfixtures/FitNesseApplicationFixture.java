@@ -10,7 +10,7 @@ public class FitNesseApplicationFixture implements ApplicationFixture<Applicatio
    private static FitNesseApplicationFixture soleInstance;
    private static String contextDescriptorPath;
    private boolean isApplicationConfigured = false;
-   private DefaultApplicationFixture applicationFixture;
+   private DefaultApplicationFixture<?> applicationFixture;
    private Application application;
    private ProcessPuzzleContext configuration;
    private boolean isCatalogConfigured = false;
@@ -32,7 +32,7 @@ public class FitNesseApplicationFixture implements ApplicationFixture<Applicatio
          //contextDescriptorPath = DomainComponentsTestConfiguration.FITNESSE_CONFIG_DESCRIPTOR_PATH;
          //applicationFixture = ConfigurableApplicationFixture.createInstance( contextDescriptorPath );
          applicationFixture.setUp();
-         application = applicationFixture.getSUT();
+         application = (Application) applicationFixture.getSUT();
          configuration = application.getContext();
    
          isApplicationConfigured = true;

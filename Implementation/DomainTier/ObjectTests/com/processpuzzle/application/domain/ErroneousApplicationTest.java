@@ -3,15 +3,10 @@ package com.processpuzzle.application.domain;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
-import com.processpuzzle.litest.fixture.TestFixture;
-import com.processpuzzle.litest.testcase.NoSuchFixtureDefinitionException;
+public class ErroneousApplicationTest extends ApplicationTest<Application, ConfigurableApplicationFixture> {
 
-public class ErroneousApplicationTest extends ApplicationTest {
-
-   @Ignore
    @Test( expected = ApplicationStartException.class )
    public void start_ThrowsExceptionWhenConfigurationIsInvalid() throws ApplicationException {
       assertThat( application.getInstallationStatus(), equalTo( Application.InstallationStatus.installed ) );

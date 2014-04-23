@@ -1,6 +1,6 @@
 package com.processpuzzle.application.domain;
 
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -9,7 +9,6 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeThat;
 
 import org.junit.After;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
@@ -21,10 +20,10 @@ import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 
-public abstract class ApplicationTest extends GenericTestSuite<Application, DefaultApplicationFixture>{
+public abstract class ApplicationTest<A extends Application, F extends DefaultApplicationFixture<A>> extends GenericTestSuite<A, F>{
    protected static final String DEFAULT_USER_NAME     = "ProcessPuzzle";
    protected static final String DEFAULT_USER_PASSWORD = "ProcessPuzzle";
-   protected static DefaultApplicationFixture applicationFixture;
+   protected F applicationFixture;
    protected Application application;
    protected UserRepository userRepository;
 
@@ -52,7 +51,6 @@ public abstract class ApplicationTest extends GenericTestSuite<Application, Defa
       application.stop();
    }
    
-   @Ignore
    @Test
    public void testStop() {
       //EXERCISE:
@@ -64,7 +62,6 @@ public abstract class ApplicationTest extends GenericTestSuite<Application, Defa
       assertThat( "Stop tears down ProcessPuzzleContext.", applicationContext.isConfigured(), is( false ));
    }
 
-   @Ignore
    @Test
    public void testLoginUser() throws ApplicationException {
       //SETUP: Implicit setup in 'beforeAllTests()'

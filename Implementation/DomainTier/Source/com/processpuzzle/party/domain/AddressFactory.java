@@ -27,7 +27,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package com.processpuzzle.party.domain;
 
@@ -38,31 +38,29 @@ import com.processpuzzle.persistence.domain.EntityIdentityCollitionException;
 import com.processpuzzle.persistence.domain.GenericFactory;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
-public class AddressFactory extends GenericFactory<Address> {	
+public class AddressFactory extends GenericFactory<Address> {
 
-   public EmailAddress createEmailAddress(String emailAddress) {
-      PartyRepository partyRepository = (PartyRepository)ProcessPuzzleContext.getInstance().getRepository(PartyRepository.class);
-      DefaultUnitOfWork work=new DefaultUnitOfWork(true);
-      Party party=partyRepository.findPartyByAddress(work, emailAddress);
+   public EmailAddress createEmailAddress( String emailAddress ) {
+      PartyRepository partyRepository = (PartyRepository) ProcessPuzzleContext.getInstance().getRepository( PartyRepository.class );
+      DefaultUnitOfWork work = new DefaultUnitOfWork( true );
+      Party<?> party = partyRepository.findPartyByAddress( work, emailAddress );
       work.finish();
-      if( party == null )
-      {
-         return new EmailAddress(emailAddress);
-      }
-      else throw new EntityIdentityCollitionException(EmailAddress.class.getName(), emailAddress, EmailAddress.class.getSimpleName());
+      if( party == null ){
+         return new EmailAddress( emailAddress );
+      }else
+         throw new EntityIdentityCollitionException( EmailAddress.class.getName(), emailAddress, EmailAddress.class.getSimpleName() );
    }
-   
-   public WebPageAddress createWebPageAddress(String webPageAddress) {
-      PartyRepository partyRepository = (PartyRepository)ProcessPuzzleContext.getInstance().getRepository(PartyRepository.class);
-      DefaultUnitOfWork work=new DefaultUnitOfWork(true);
-      Party party=partyRepository.findPartyByAddress(work, webPageAddress);
+
+   public WebPageAddress createWebPageAddress( String webPageAddress ) {
+      PartyRepository partyRepository = (PartyRepository) ProcessPuzzleContext.getInstance().getRepository( PartyRepository.class );
+      DefaultUnitOfWork work = new DefaultUnitOfWork( true );
+      Party<?> party = partyRepository.findPartyByAddress( work, webPageAddress );
       work.finish();
-      if( party == null )
-      {
-         return new WebPageAddress(webPageAddress);
-      }
-      else throw new EntityIdentityCollitionException(WebPageAddress.class.getName(), webPageAddress, WebPageAddress.class.getSimpleName());
-}
+      if( party == null ){
+         return new WebPageAddress( webPageAddress );
+      }else
+         throw new EntityIdentityCollitionException( WebPageAddress.class.getName(), webPageAddress, WebPageAddress.class.getSimpleName() );
+   }
 
    public TelecomAddress createTelecomAddress( String theCountryCode, String theAreaCode, String theNumber ) {
       TelecomAddress telecomaddress = new TelecomAddress( theCountryCode, theAreaCode, theNumber );
@@ -74,10 +72,7 @@ public class AddressFactory extends GenericFactory<Address> {
       return geographicAddress;
    }
 
-/*   
-	public static GeographicAddress createGeographicAddress(Settlement settlement) {
-		return new GeographicAddress(settlement);	
-	}
-
+   /*
+    * public static GeographicAddress createGeographicAddress(Settlement settlement) { return new GeographicAddress(settlement); }
     */
 }

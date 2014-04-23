@@ -2,6 +2,7 @@ package com.processpuzzle.litest.template;
 
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.application.domain.ConfigurableApplicationFixture;
 import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
 import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.commons.persistence.Entity;

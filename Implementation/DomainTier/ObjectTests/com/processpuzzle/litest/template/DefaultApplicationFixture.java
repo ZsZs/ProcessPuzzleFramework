@@ -14,7 +14,7 @@ import com.processpuzzle.user_session.domain.UserRequestContext;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 import com.processpuzzle.user_session.domain.UserSessionHolder;
 
-public abstract class DefaultApplicationFixture extends GenericTestFixture<Application> implements ApplicationFixture<Application> {
+public abstract class DefaultApplicationFixture<A extends Application> extends GenericTestFixture<A> implements ApplicationFixture<A> {
    public static final String CONFIGURATION_DESCRIPTOR_PATH_1 = "classpath:com/processpuzzle/sharedfixtures/domaintier/ApplicationOneDescriptor.xml";
    public static final String CONFIGURATION_DESCRIPTOR_PATH_2 = "classpath:com/processpuzzle/sharedfixtures/domaintier/ApplicationTwoDescriptor.xml";
    public static final String SYSTEM_ADMINISTRATION_ARTIFACT_TYPE_GROUP = "SystemAdministration";
@@ -24,7 +24,7 @@ public abstract class DefaultApplicationFixture extends GenericTestFixture<Appli
    private UserRequestContext requestContext;
    private ProcessPuzzleContext applicationContext;
 
-   protected DefaultApplicationFixture( String configurationPath ) {
+   public DefaultApplicationFixture( String configurationPath ) {
       super();
       this.configurationPath = configurationPath;
    }

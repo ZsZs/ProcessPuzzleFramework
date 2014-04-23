@@ -13,12 +13,14 @@
   </bean>
 
   <!-- Real fixtures for integration tests -->
-  <bean id="configurableApplicationFixture" class="com.processpuzzle.litest.template.ConfigurableApplicationFixture" >
+  <bean id="configurableApplicationFixture" class="com.processpuzzle.application.domain.ConfigurableApplicationFixture" >
   	<constructor-arg type="java.lang.String" value="classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml" />
   </bean>
 
-  <bean id="defaultApplicationFixture" class="com.processpuzzle.litest.template.DefaultApplicationFixture" >
-  	<constructor-arg type="java.lang.String" value="classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml" />
+  <bean id="installedAndStoppedApplicationFixture" class="com.processpuzzle.application.domain.InstalledAndStoppedApplicationFixture" >
+  </bean>
+
+  <bean id="notInstalledApplicationFixture" class="com.processpuzzle.application.domain.NotInstalledApplicationFixture" >
   </bean>
   
 </beans>

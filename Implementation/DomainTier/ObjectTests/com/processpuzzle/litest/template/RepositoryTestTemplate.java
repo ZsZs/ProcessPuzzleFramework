@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import org.junit.Test;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.application.domain.ConfigurableApplicationFixture;
 import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.commons.persistence.UnitOfWork;

@@ -1,11 +1,14 @@
 package com.processpuzzle.application.domain;
 
 
+import com.processpuzzle.application.domain.Application;
+import com.processpuzzle.application.domain.ApplicationException;
+import com.processpuzzle.application.domain.ApplicationFactory;
 import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.sharedfixtures.domaintier.ApplicationTwo;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
-public class InstalledAndStoppedApplicationFixture extends DefaultApplicationFixture {
+public class InstalledAndStoppedApplicationFixture extends DefaultApplicationFixture<Application> {
    
    public InstalledAndStoppedApplicationFixture() {
       super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );

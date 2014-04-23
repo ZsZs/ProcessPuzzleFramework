@@ -1,6 +1,7 @@
 package com.processpuzzle.litest.template;
 
 
+import com.processpuzzle.application.domain.ConfigurableApplicationFixture;
 import com.processpuzzle.commons.generics.GenericTypeParameterInvestigator;
 import com.processpuzzle.litest.template.GenericTestEnvironment;
 import com.processpuzzle.persistence.domain.EntityFactory;
