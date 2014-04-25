@@ -9,7 +9,7 @@ import com.processpuzzle.artifact.domain.DefaultArtifactRepository;
 import com.processpuzzle.business.definition.domain.BusinessImplementationLoader;
 import com.processpuzzle.sharedfixtures.domaintier.BusinessDefinitionFixture;
 
-public class BusinessImplementationLoaderTest extends BusinessDataLoaderTest<BusinessImplementationLoader> {
+public class BusinessImplementationLoaderTest extends BusinessDataLoaderTest<BusinessImplementationLoader, BusinessImplementation> {
    private static BusinessDefinitionFixture businessDefinitionFixture;
    private static Artifact<?> personList;
    private static DefaultArtifactRepository artifactRepository;

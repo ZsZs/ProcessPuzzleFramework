@@ -38,17 +38,20 @@ import java.lang.reflect.ParameterizedType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.UnmarshallerHandler;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+import org.springframework.oxm.XmlMappingException;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import org.xml.sax.XMLFilter;
 import org.xml.sax.XMLReader;
 
 import com.processpuzzle.application.resource.domain.DataLoaderException;
@@ -63,6 +66,7 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
    protected Schema schema;
    protected Class<D> unmarshalledDataClass;
    protected D unmarshalledData;
+   private InputSource inputSource;
 
    @SuppressWarnings( "unchecked" )
    public BusinessDataLoader( ResourceLoader resourceLoader, String resourcePath ) {
@@ -79,7 +83,7 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
 
       try{
          schema = loadSchema();
-         unmarshallXml( resourcePath );
+         unmarshallXmlWithSpring();
 
          DefaultUnitOfWork work = new DefaultUnitOfWork( true );
          saveObjects( work );
@@ -109,6 +113,7 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
       String language = javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI;
       SchemaFactory factory = SchemaFactory.newInstance( language );
       factory.setErrorHandler( new BusinessDataLoaderErrorHandler( schemaPath ) );
+      factory.setResourceResolver( new SchemaResourceResolver( schemaPath, resourceLoader ) );
 
       try{
          Resource schemaResource = resourceLoader.getResource( schemaPath );
@@ -124,37 +129,56 @@ public abstract class BusinessDataLoader<D> extends XmlDataLoader {
       return businessDataSchema;
    }
 
-   @SuppressWarnings( "unchecked" )
-   private void unmarshallXml( String resourcePath ) throws BusinessDataLoaderException {
+   private void openInputSource( String resourcePath ) {
       InputStream resourceStream = null;
       try{
          resourceStream = resource.getInputStream();
+         inputSource = new InputSource( resourceStream );
       }catch( IOException e ){
          throw new BusinessDataLoaderException( resourcePath, e );
       }
+   }
+   
+   @SuppressWarnings( "unchecked" )
+   private void unmarshallXmlWithSpring(){
+      org.springframework.oxm.Unmarshaller unmarshaller = (org.springframework.oxm.Unmarshaller) applicationContext.getBean( "jaxb2Unmarshaller" );
+      openInputSource( resourcePath );
+      try{
+         unmarshalledData = (D) unmarshaller.unmarshal( new StreamSource( resource.getFile() ));
+      }catch( XmlMappingException | IOException e ){
+         e.printStackTrace();
+      }
+   }
+
+   @SuppressWarnings( { "unchecked", "unused" } )
+   private void unmarshallXml( String resourcePath ) throws BusinessDataLoaderException {
+      openInputSource( resourcePath );
 
       JAXBContext jaxbContext = null;
       try{
          jaxbContext = JAXBContext.newInstance( new Class[] { unmarshalledDataClass } );
 
-         final SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
-         saxParserFactory.setNamespaceAware( true );
-         //saxParserFactory.setValidating( true );
-         final XMLReader reader;
          try{
-            reader = saxParserFactory.newSAXParser().getXMLReader();
+            final XMLFilter filter = new NamespaceFilter();
+            final SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+            saxParserFactory.setNamespaceAware( true );
+            final SAXParser saxParser = saxParserFactory.newSAXParser();
+            final XMLReader reader = saxParser.getXMLReader();
+            filter.setParent( reader );
+
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            unmarshaller.setSchema( schema );
+            unmarshaller.setEventHandler( new BusinessDataValidationEventHandler( resourcePath, schemaPath ) );
+
+            UnmarshallerHandler unmarshallerHandler = unmarshaller.getUnmarshallerHandler();
+            filter.setContentHandler( unmarshallerHandler );
+            
+            filter.parse( inputSource );
+            
+            unmarshalledData = (D) unmarshallerHandler.getResult();
          }catch( SAXException | ParserConfigurationException e ){
             throw new RuntimeException( e );
          }
-         InputSource inputSource = new InputSource( resourceStream );
-         SAXSource source = new SAXSource( reader, inputSource );
-
-         BusinessDataValidationEventHandler validationHandler = new BusinessDataValidationEventHandler( resourcePath, schemaPath );
-         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-         unmarshaller.setSchema( schema );
-         unmarshaller.setEventHandler( validationHandler );
-         unmarshalledData = (D) unmarshaller.unmarshal( source );
-         resourceStream.close();
       }catch( JAXBException e ){
          throw new BusinessDataLoaderException( resourcePath, e );
       }catch( Exception e ){

@@ -138,13 +138,10 @@
 	</dl:dataLoaders>
 	
 	<bd:businessDefinitions>
-		<ge:schema>classpath:com/processpuzzle/business/definition/domain/BusinessDefinition.xsd</ge:schema>
+		<ge:schema>file:c:/ZsZs/PublicRepositories/ProcessPuzzleUI/Implementation/WebTier/Schemas/BusinessDefinitionsConfiguration.xsd</ge:schema>
 		<ge:mapping>classpath:com/processpuzzle/business/definition/domain/BusinessDefinitionMapping.xml</ge:mapping>
-<!-- 
  		<bd:businessDefinition>classpath:com/processpuzzle/sharedfixtures/domaintier/TestBusinessDefinition.xml</bd:businessDefinition>
 		<bd:businessDefinition>classpath:com/processpuzzle/sharedfixtures/domaintier/AnotherBusinessDefinition.xml</bd:businessDefinition>
- -->		
-		<bd:businessDefinition>classpath:com/processpuzzle/sharedfixtures/domaintier/LightWeightBusinessDefinition.xml</bd:businessDefinition>
 	</bd:businessDefinitions>
 	
 	<bi:businessImplementations>

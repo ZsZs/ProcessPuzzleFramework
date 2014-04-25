@@ -51,15 +51,15 @@ import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 
 public class ArtifactTypeGroup extends GenericEntity<ArtifactTypeGroup> implements AggregateRoot {
    private @XmlAttribute @XmlID String name;
-   @XmlElementWrapper( name = "defaultAccessRights" ) @XmlElement( name = "accessRight" )
-   private List<DefaultAccessRight> defaultAccessRights = new ArrayList<DefaultAccessRight>();
+   private @XmlElementWrapper( name = "defaultAccessRights" ) @XmlElement( name = "accessRight" ) List<DefaultAccessRight> defaultAccessRights = new ArrayList<DefaultAccessRight>();
    private @XmlElement( name = "artifactType" ) List<ArtifactType> artifactTypes = new ArrayList<ArtifactType>();
 
    ArtifactTypeGroup() {
    }
 
-   ArtifactTypeGroup( String name ) {
+   public ArtifactTypeGroup( String name ) {
       this.name = name;
+      defaultAccessRights.add( new DefaultAccessRight() );
    }
 
    public void addType( ArtifactType aType ) {

@@ -1,6 +1,3 @@
-/*
- * Created on Jul 16, 2006
- */
 package com.processpuzzle.business.definition.domain;
 
 import static org.hamcrest.core.Is.is;
@@ -29,10 +26,7 @@ import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeReposit
 import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.party.partytype.domain.PartyTypeRepository;
 
-/**
- * @author zsolt.zsuffa
- */
-public class BusinessDefinitionLoaderTest extends BusinessDataLoaderTest<BusinessDefinitionLoader> {
+public class BusinessDefinitionLoaderTest extends BusinessDataLoaderTest<BusinessDefinitionLoader, BusinessDefinition> {
    private static final String ARTIFACT_GROUP_NAME = "Business";
    private static PartyType personPartyType;
    private static PartyType companyPartyType;

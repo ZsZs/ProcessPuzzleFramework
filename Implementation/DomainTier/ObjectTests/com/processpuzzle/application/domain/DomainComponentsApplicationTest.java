@@ -19,11 +19,11 @@ public class DomainComponentsApplicationTest extends NotInstalledApplicationTest
    @Test
    public void install_ShouldLoadMultipleBusinessDefintions() throws ApplicationException {
       //EXERCISE:
-      application.install();
-      folderRepository = application.getContext().getRepository( ArtifactFolderRepository.class );
+      sut.install();
+      folderRepository = sut.getContext().getRepository( ArtifactFolderRepository.class );
       
       //VERIFY:
-      PartyTypeRepository partyTypeRepository = application.getContext().getRepository( PartyTypeRepository.class );
+      PartyTypeRepository partyTypeRepository = sut.getContext().getRepository( PartyTypeRepository.class );
       assertThat( "'NonProfitOrganization' is defined in a 'TestBusinessDefinition_Two.xml'. See the default_configuraiton.xml.", 
             partyTypeRepository.findByName( "NonProfitOrganization" ), notNullValue() );
    
@@ -31,8 +31,8 @@ public class DomainComponentsApplicationTest extends NotInstalledApplicationTest
       assertThat( thereIsOneArtifactsFolder(), is( true ));
       
       //TEARDOWN:
-      application.stop();
-      application.unInstall();
+      sut.stop();
+      sut.unInstall();
    }
    
    private boolean thereIsOneArtifactsFolder() {
@@ -41,7 +41,7 @@ public class DomainComponentsApplicationTest extends NotInstalledApplicationTest
    }
    
    private boolean thereIsOneRootArtifactFolder() {
-      ArtifactFolderRepository folderRepository = application.getContext().getRepository( ArtifactFolderRepository.class );
+      ArtifactFolderRepository folderRepository = sut.getContext().getRepository( ArtifactFolderRepository.class );
       if( folderRepository.findByName( RootArtifactFolder.ROOT_ARTIFACT_FOLDER_NAME ) != null ) return true;
       else return false;
    }

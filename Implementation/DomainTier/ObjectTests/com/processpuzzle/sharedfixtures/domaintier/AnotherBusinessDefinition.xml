@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<businessDefinition 
-	xmlns = "http://www.processpuzzle.com/"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.processpuzzle.com/ ../../business/definition/domain/BusinessDefinition.xsd ">
+<bd:businessDefinition 
+	xmlns:atd="http://www.processpuzzle.com/ArtifactTypeDefinition"
+	xmlns:bd="http://www.processpuzzle.com/BusinessDefinitionsConfiguration"
+	xmlns:ge="http://www.processpuzzle.com/GlobalElements" 
+	xmlns:pd="http://www.processpuzzle.com/ProtocolDefinition"
+	xmlns:prt="http://www.processpuzzle.com/PartyRelationshipTypeDefinition"
+	xmlns:pt="http://www.processpuzzle.com/PartyTypeDefinition"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/BusinessDefinitionsConfiguration ../../../../../../../../ProcessPuzzleUI/Implementation/WebTier/Schemas/BusinessDefinitionsConfiguration.xsd">
 
 	<!-- PartyTypes: Defines acceptable types of parties. -->
-	<partyTypes>
-		<partyType name = "NonProfitOrganization" />
-	</partyTypes>
+	<bd:partyTypes>
+		<pt:partyType name = "NonProfitOrganization" />
+	</bd:partyTypes>
 	
 	<!-- PartyRoleTypes: Defines the roles can be filled in the workflows. -->
-	<partyRoleTypes>
-		<partyRoleType name="Customer">
-		</partyRoleType>
+	<bd:partyRoleTypes>
+		<prt:partyRoleType name="Customer">
+		</prt:partyRoleType>
 		
-		<partyRoleType name="Vendor">
-		</partyRoleType>		
-	</partyRoleTypes>
+		<prt:partyRoleType name="Vendor">
+		</prt:partyRoleType>		
+	</bd:partyRoleTypes>
 	
-	<partyRelationshipTypes>
-		<partyRelationshipType name="Sales">
-			<partyRelationshipConstraints>
-				<partyRelationshipConstraint clientRoleType="Customer" supplierRoleType="Vendor" />
-			</partyRelationshipConstraints>
-		</partyRelationshipType>
-	</partyRelationshipTypes>
+	<bd:partyRelationshipTypes>
+		<prt:partyRelationshipType name="Sales">
+			<prt:partyRelationshipConstraints>
+				<prt:partyRelationshipConstraint clientRoleType="Customer" supplierRoleType="Vendor" />
+			</prt:partyRelationshipConstraints>
+		</prt:partyRelationshipType>
+	</bd:partyRelationshipTypes>
 	 
-</businessDefinition>
+</bd:businessDefinition>

@@ -31,7 +31,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.business.definition.domain;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,10 +38,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Sets;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType;
 import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
@@ -50,27 +51,30 @@ import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.workflow.protocol.domain.ProtocolDefinition;
 
 @XmlAccessorType( XmlAccessType.FIELD ) 
-@XmlRootElement( name = "businessDefinition" )
+@XmlRootElement( name = "businessDefinition", namespace = "http://www.processpuzzle.com/BusinessDefinitionsConfiguration" )
+@XmlType( propOrder = { "partyTypes", "partyRoleTypes", "partyRelationshipTypes", "artifactTypeGroups", "protocols" })
 public class BusinessDefinition {
    private static Logger log = LoggerFactory.getLogger( BusinessDefinition.class );
+   @XmlElementWrapper(name="artifactTypes") @XmlElement(name="artifactTypeGroup", namespace="http://www.processpuzzle.com/ArtifactTypeDefinition" ) public Set<ArtifactTypeGroup> artifactTypeGroups = Sets.newHashSet();
+   @XmlElementWrapper(name="partyRelationshipTypes") @XmlElement( name="partyRelationshipType", namespace="http://www.processpuzzle.com/PartyRelationshipTypeDefinition" ) public Set<PartyRelationshipType> partyRelationshipTypes = Sets.newHashSet();
+   @XmlElementWrapper(name="partyRoleTypes") @XmlElement(name="partyRoleType", namespace="http://www.processpuzzle.com/PartyRelationshipTypeDefinition" ) public Set<PartyRoleType> partyRoleTypes = Sets.newHashSet();
+   @XmlElementWrapper(name="partyTypes") @XmlElement( name="partyType", namespace="http://www.processpuzzle.com/PartyTypeDefinition" ) public Set<PartyType> partyTypes = Sets.newHashSet();
    @XmlElement(name="protocols") public ProtocolDefinition protocols = new ProtocolDefinition();
-   
-   @XmlElementWrapper(name="partyTypes") @XmlElement(name="partyType")
-   public Set<PartyType> partyTypes = new HashSet<PartyType>();
 
-   @XmlElementWrapper(name="artifactTypes") @XmlElement(name="artifactTypeGroup")
-   public Set<ArtifactTypeGroup> artifactTypeGroups = new HashSet<ArtifactTypeGroup>();
-
-   @XmlElementWrapper(name="partyRelationshipTypes") @XmlElement(name="partyRelationshipType")
-   public Set<PartyRelationshipType> partyRelationshipTypes = new HashSet<PartyRelationshipType>();
-
-   @XmlElementWrapper(name="partyRoleTypes") @XmlElement(name="partyRoleType")
-   public Set<PartyRoleType> partyRoleTypes = new HashSet<PartyRoleType>();
-
+   //Constructors
    public BusinessDefinition() {
       log.debug( BusinessDefinition.class.getSimpleName() + " was instantiated." );
    }
 
+   //Public accessors and mutators
+   public void addArtifactTypeGroup( ArtifactTypeGroup artifactType ) {
+      artifactTypeGroups.add( artifactType );
+   }
+
+   public void addPartyType( PartyType partyType ) {
+      partyTypes.add( partyType );
+   }
+   
    public void clearCollections() {
       partyTypes.clear();
       artifactTypeGroups.clear();
@@ -78,4 +82,5 @@ public class BusinessDefinition {
       partyRoleTypes.clear();
       protocols.clearCollections();
    }
+
 }

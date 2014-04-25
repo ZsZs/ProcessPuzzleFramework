@@ -11,7 +11,7 @@ import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 public class InstalledAndStoppedApplicationFixture extends DefaultApplicationFixture<Application> {
    
    public InstalledAndStoppedApplicationFixture() {
-      super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
+      super( DomainTierTestConfiguration.APPLICATION_CONFIGURATION_DESCRIPTOR_PATH );
    }
 
    @Override
@@ -21,18 +21,27 @@ public class InstalledAndStoppedApplicationFixture extends DefaultApplicationFix
       try {
          application.install();
       } catch( ApplicationException e ) {
-         // TODO Auto-generated catch block
          e.printStackTrace();
       }
       
-      application.stop();
-      applicationRepository.add( application );
       return application;
    }
 
    @Override
+   protected void configureAfterSutInstantiation() {
+      super.configureAfterSutInstantiation();
+      application.stop();
+      applicationRepository.add( application );
+   }
+
+   @Override
    protected void configureBeforeSutInstantiation() {
-      // TODO Auto-generated method stub
-      
+      //Nothing to do here in this case.
+   }
+
+   @Override
+   protected void releaseResources() {
+      applicationRepository.delete( application );
+      super.releaseResources();
    }
 }

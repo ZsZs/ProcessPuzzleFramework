@@ -24,7 +24,6 @@ public abstract class ApplicationTest<A extends Application, F extends DefaultAp
    protected static final String DEFAULT_USER_NAME     = "ProcessPuzzle";
    protected static final String DEFAULT_USER_PASSWORD = "ProcessPuzzle";
    protected F applicationFixture;
-   protected Application application;
    protected UserRepository userRepository;
 
    public ApplicationTest() {
@@ -34,31 +33,31 @@ public abstract class ApplicationTest<A extends Application, F extends DefaultAp
    @Test
    public void testStart() throws ApplicationException {
       //SETUP: implicit setup in beforeEachTests()
-      assumeThat( application.getInstallationStatus(), equalTo( Application.InstallationStatus.installed ));
-      assumeThat( application.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ));
+      assumeThat( sut.getInstallationStatus(), equalTo( Application.InstallationStatus.installed ));
+      assumeThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ));
       
       //EXERCISE:
-      application.start();
+      sut.start();
       ProcessPuzzleContext applicationContext = UserRequestManager.getInstance().getApplicationContext();
       userRepository = (UserRepository) applicationContext.getRepository(UserRepository.class);
-      assertThat( application.getExecutionStatus(), equalTo( Application.ExecutionStatus.running ));
+      assertThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.running ));
 
       //VERIFY:
       changeDefaultUserPassordTo( "bakfity" );
       assertEquals("start() doesn't reinitialize the database.", "bakfity", findDefaultUser().getPassword());
       
       //TEARDOWN:
-      application.stop();
+      sut.stop();
    }
    
    @Test
    public void testStop() {
       //EXERCISE:
-      application.stop();
+      sut.stop();
       
       //VERIFY:
       ProcessPuzzleContext applicationContext = UserRequestManager.getInstance().getApplicationContext();
-      assertThat( application.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ));
+      assertThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ));
       assertThat( "Stop tears down ProcessPuzzleContext.", applicationContext.isConfigured(), is( false ));
    }
 
@@ -67,20 +66,20 @@ public abstract class ApplicationTest<A extends Application, F extends DefaultAp
       //SETUP: Implicit setup in 'beforeAllTests()'
       
       //EXERCISE:
-      application.start();
+      sut.start();
       ProcessPuzzleContext applicationContext = UserRequestManager.getInstance().getApplicationContext();
       userRepository = (UserRepository) applicationContext.getRepository(UserRepository.class);
       
       //VERIFY:
-      assertTrue("With the following account we can login.", application.loginUser("admin", "admin"));
-      assertFalse("This account is unknown:", application.loginUser("bla", "bla"));
+      assertTrue("With the following account we can login.", sut.loginUser("admin", "admin"));
+      assertFalse("This account is unknown:", sut.loginUser("bla", "bla"));
    }
 
    @After
    public void afterEachTests() throws Exception {
       userRepository = null;
-      assumeThat( application.getInstallationStatus(), equalTo( Application.InstallationStatus.installed ));
-      assumeThat( application.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ));
+      assumeThat( sut.getInstallationStatus(), equalTo( Application.InstallationStatus.installed ));
+      assumeThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ));
    }
 
    private User findDefaultUser() {

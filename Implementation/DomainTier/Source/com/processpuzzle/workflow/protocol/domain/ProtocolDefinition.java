@@ -31,20 +31,17 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.workflow.protocol.domain;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 
+import com.google.common.collect.Sets;
+
 public class ProtocolDefinition {
-   public @XmlElementWrapper( name = "activities" ) @XmlElement( name = "activity" )
-   Set<ActivityProtocol> activities = new HashSet<ActivityProtocol>();
-   public @XmlElementWrapper( name = "workflowDetails" )
-   @XmlElement( name = "workflowDetail" )
-   Set<WorkflowDetailProtocol> workflowDetails = new HashSet<WorkflowDetailProtocol>();
-   public @XmlElement( name = "lifecycleProtocol" )
-   Set<LifecycleProtocol> lifecycles = new HashSet<LifecycleProtocol>();
+   public @XmlElementWrapper( name = "activities" ) @XmlElement( name = "activity" ) Set<ActivityProtocol> activities = Sets.newHashSet();
+   public @XmlElementWrapper( name = "workflowDetails" ) @XmlElement( name = "workflowDetail" ) Set<WorkflowDetailProtocol> workflowDetails = Sets.newHashSet();
+   public @XmlElementWrapper( name = "lifeCycleProtocols" ) @XmlElement( name = "lifecycleProtocol" ) Set<LifecycleProtocol> lifecycles = Sets.newHashSet();
 
    public void clearCollections() {
       activities.clear();

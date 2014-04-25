@@ -56,8 +56,8 @@ import com.processpuzzle.persistence.query.transformer.domain.QueryTransformerFa
 public class DefaultQuery implements Query {
    private Integer id;
    private @XmlAttribute String name;
-   private @XmlElement(name = "description") String description;
-   private @XmlElement(name = "statement") String predefinedStatement;
+   private @XmlElement(name = "description", namespace="http://www.processpuzzle.com/GlobalElements" ) String description;
+   private @XmlElement(name = "statement", namespace="http://www.processpuzzle.com/ArtifactTypeDefinition" ) String predefinedStatement;
    protected static Class<? extends Entity> targetClass = null;
    protected DefaultQueryCondition condition = new DefaultQueryCondition();
    protected DefaultQueryContext context = new DefaultQueryContext();
@@ -67,18 +67,16 @@ public class DefaultQuery implements Query {
    protected Integer firstResult;
 
    // Constructors
-   @SuppressWarnings( "static-access" )
    DefaultQuery( Class<? extends Entity> targetClass, DefaultQueryCondition condition, DefaultQueryContext context, DefaultAttributeFilter filter ) {
-      this.targetClass = targetClass;
+      DefaultQuery.targetClass = targetClass;
       this.condition = condition;
       this.context = context;
       this.filter = filter;
    }
 
-   @SuppressWarnings( "static-access" )
    public DefaultQuery( Class<? extends Entity> targetClass, String name, String description ) {
       super();
-      this.targetClass = targetClass;
+      DefaultQuery.targetClass = targetClass;
       this.name = name;
       this.description = description;
    }
@@ -161,31 +159,18 @@ public class DefaultQuery implements Query {
 
    // Properties
    public Integer getId() { return id; }
-
    public Class<? extends Entity> getTargetClass() { return targetClass; }
-
    public String getDescription() { return description; }
-
    public Integer getFirstResult() { return firstResult; }
    public void setFirstResult( int firstResult ) { this.firstResult = firstResult; }
-   
    public Integer getMaxResults() { return maxResults; }
    public void setMaxResults( int maxResults ) { this.maxResults = maxResults; }
-   
    public String getName() { return name; }
-
    public String getPredefinedStatement() { return predefinedStatement; }
-   
-   public void setPredefinedStatement( String statement ) {
-      this.predefinedStatement = statement;
-   }
-
+   public void setPredefinedStatement( String statement ) { this.predefinedStatement = statement; }
    public QueryCondition<?> getQueryCondition() { return condition; }
-
    public QueryOrder getQueryOrder() { return order; }
-
    public QueryContext getQueryContext() { return context; }
-
    public AttributeFilter getAttributeFilter() { return filter; }
 
    // Private helper methods

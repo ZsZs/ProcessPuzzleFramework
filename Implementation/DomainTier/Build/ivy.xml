@@ -22,6 +22,7 @@
 		<dependency org="org.jdom" name="jdom" rev="2.0.2" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.jibx" name="maven-jibx-plugin" rev="1.2.5" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework" name="spring-web" rev="3.2.8.RELEASE" conf="production->*,!sources,!javadoc"/>
+		<dependency org="org.springframework" name="spring-oxm" rev="3.2.8.RELEASE" conf="production->*,!sources,!javadoc"/>
 		<dependency org="org.springframework.ws" name="spring-ws" rev="2.1.4.RELEASE" conf="production->*,!sources,!javadoc"/>
 	</dependencies>
 </ivy-module>

@@ -63,29 +63,25 @@ import com.processpuzzle.util.domain.GeneralService;
 
 @XmlRootElement( name = "artifactType" )
 public class ArtifactType extends GenericEntity<ArtifactType> implements AssetType {
-   @XmlAttribute @XmlID protected String name;
-   @XmlAttribute protected String artifactClassName;
-   @XmlAttribute protected String domainClassName;
-   @XmlAttribute protected String instanceFolder;
-   @XmlElement protected String description;
-   @XmlElement protected String caption;
-   @XmlElement protected String baseUri;
-   @XmlAttribute protected boolean isSystem = false;
-   @XmlAttribute( name = "createOnStartUp" ) protected boolean createOnStartup = false;
-   @XmlAttribute protected boolean isSingleton = false;
-   @XmlAttribute protected boolean pessimisticLock = false;
-   @XmlAttribute protected boolean isVersionControlled = false;
-   @XmlAttribute protected boolean refreshOnDocumentActivation = false;
-   @XmlAttribute protected boolean refreshOnViewActivation = false;
-   @XmlElementWrapper( name = "availableViews" ) @XmlElementRef
-   protected List<ArtifactViewType> availableViews = new ArrayList<ArtifactViewType>();
-   @XmlElementWrapper( name = "creationProperties" ) @XmlElement( name = "creationProperty" )
-   private List<PropertyDefinition> propertyDefinitions = new ArrayList<PropertyDefinition>();
-   @XmlElementWrapper( name = "defaultAccessRights" ) @XmlElement( name = "accessRight" )
-   private List<DefaultAccessRight> defaultAccessRights = new ArrayList<DefaultAccessRight>();
-   @XmlElementWrapper( name = "associatedMenuItems" ) @XmlElement( name = "menuItem" )
-   private List<ArtifactMenu> associatedMenuItems = new ArrayList<ArtifactMenu>();
-   @XmlIDREF @XmlAttribute( name = "group" ) private ArtifactTypeGroup group;
+   protected @XmlAttribute( required = true ) @XmlID String name;
+   protected @XmlAttribute String artifactClassName;
+   protected @XmlAttribute String domainClassName;
+   protected @XmlAttribute String instanceFolder;
+   protected @XmlElement( namespace="http://www.processpuzzle.com/GlobalElements" ) String description;
+   protected @XmlElement String caption;
+   protected @XmlElement String baseUri;
+   protected @XmlAttribute boolean isSystem = false;
+   protected @XmlAttribute( name = "createOnStartUp" ) boolean createOnStartup = false;
+   protected @XmlAttribute boolean isSingleton = false;
+   protected @XmlAttribute boolean pessimisticLock = false;
+   protected @XmlAttribute boolean isVersionControlled = false;
+   protected @XmlAttribute boolean refreshOnDocumentActivation = false;
+   protected @XmlAttribute boolean refreshOnViewActivation = false;
+   protected @XmlElementWrapper( name = "availableViews" ) @XmlElementRef List<ArtifactViewType> availableViews = new ArrayList<ArtifactViewType>();
+   private @XmlElementWrapper( name = "creationProperties" ) @XmlElement( name = "creationProperty" ) List<PropertyDefinition> propertyDefinitions = new ArrayList<PropertyDefinition>();
+   private @XmlElementWrapper( name = "defaultAccessRights" ) @XmlElement( name = "accessRight" ) List<DefaultAccessRight> defaultAccessRights = new ArrayList<DefaultAccessRight>();
+   private @XmlElementWrapper( name = "associatedMenuItems" ) @XmlElement( name = "menuItem" ) List<ArtifactMenu> associatedMenuItems = new ArrayList<ArtifactMenu>();
+   private @XmlIDREF @XmlAttribute( name = "group" ) ArtifactTypeGroup group;
 
    //Constructors
    ArtifactType( String typeName, ArtifactTypeGroup typeGroup, Class<? extends Artifact<?>> artifactClass ) {
@@ -189,9 +185,9 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
             try{
                artifactViewClass = (Class<? extends ArtifactView<?>>) Class.forName( viewClassName );
                artifactClass = (Class<? extends Artifact<?>>) Class.forName( artifactClassName );
-               Class[] argumentClasses = new Class[] { artifactClass, String.class, ArtifactViewType.class };
+               Class<?>[] argumentClasses = new Class[] { artifactClass, String.class, ArtifactViewType.class };
                Object[] arguments = new Object[] { artifact, viewName, aViewType };
-               Constructor viewConstructor = determineViewConstructor( artifactViewClass, argumentClasses );
+               Constructor<?> viewConstructor = determineViewConstructor( artifactViewClass, argumentClasses );
                artifactView = instantiateView( viewConstructor, argumentClasses, arguments );
             }catch( ClassNotFoundException e ){
                throw new ArtifactViewInstantiationException( artifact, viewClassName, e );
@@ -325,8 +321,7 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
       return artifactView;
    }
    
-   private boolean tryToReplaceSpecificArtifactWithMoreGenericArtifact( Class<?>[] argumentClasses, Class<? extends Artifact> artifactSubClass ) {
-      //Class<?>[] replacedClasses = new Class<?>[argumentClasses.length];
+   private boolean tryToReplaceSpecificArtifactWithMoreGenericArtifact( Class<?>[] argumentClasses, @SuppressWarnings( "rawtypes" ) Class<? extends Artifact> artifactSubClass ) {
       boolean replaceHappened = false;
       RunTimeClassHierarchyAnalyser classHierarchyAnalyser = new RunTimeClassHierarchyAnalyser();
 
@@ -335,7 +330,6 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
             argumentClasses[i] = artifactSubClass;
             replaceHappened = true;
          }
-         //else replacedClasses[i] = argumentClasses[i];
       }
       
       return replaceHappened;

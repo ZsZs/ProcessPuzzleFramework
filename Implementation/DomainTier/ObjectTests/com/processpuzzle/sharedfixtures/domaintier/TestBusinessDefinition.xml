@@ -1,145 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<businessDefinition 
-	xmlns = "http://www.processpuzzle.com/"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.processpuzzle.com/ ../../business/definition/domain/BusinessDefinition.xsd ">
+<bd:businessDefinition 
+	xmlns:atd="http://www.processpuzzle.com/ArtifactTypeDefinition"
+	xmlns:bd="http://www.processpuzzle.com/BusinessDefinitionsConfiguration"
+	xmlns:ge="http://www.processpuzzle.com/GlobalElements" 
+	xmlns:pd="http://www.processpuzzle.com/ProtocolDefinition"
+	xmlns:prt="http://www.processpuzzle.com/PartyRelationshipTypeDefinition"
+	xmlns:pt="http://www.processpuzzle.com/PartyTypeDefinition"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.processpuzzle.com/BusinessDefinitionsConfiguration ../../../../../../../../ProcessPuzzleUI/Implementation/WebTier/Schemas/BusinessDefinitionsConfiguration.xsd">
 
 	<!-- PartyTypes: Defines acceptable types of parties. -->
-	<partyTypes>
-		<partyType name = "PersonType" />
-		<partyType name = "CompanyType" />
-		<partyType name = "XPProject" />
-	</partyTypes>
+	<bd:partyTypes>
+		<pt:partyType name = "PersonType" />
+		<pt:partyType name = "CompanyType" />
+		<pt:partyType name = "XPProject" />
+	</bd:partyTypes>
 	
 	<!-- PartyRoleTypes: Defines the roles can be filled in the workflows. -->
-	<partyRoleTypes>
-		<partyRoleType name="ProcessPuzzleAdministrator">
-			<description>Administrator of the ProcessPuzzle application.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
-			</partyRoleConstraints>
-		</partyRoleType>
+	<bd:partyRoleTypes>
+		<prt:partyRoleType name="ProcessPuzzleAdministrator">
+			<ge:description>Administrator of the ProcessPuzzle application.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "PersonType" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
 		
-		<partyRoleType name="FatherRole">
-			<description>Defines the role of father of childrens.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
-			</partyRoleConstraints>
-		</partyRoleType>
+		<prt:partyRoleType name="FatherRole">
+			<ge:description>Defines the role of father of childrens.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "PersonType" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
 		
-		<partyRoleType name="SonRole">
-			<description>Defines the role of being a child of someone.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
-			</partyRoleConstraints>
-		</partyRoleType>
+		<prt:partyRoleType name="SonRole">
+			<ge:description>Defines the role of being a child of someone.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "PersonType" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
 		
-		<partyRoleType name="EmployingXPProject">
-			<description>An XP project which employs team members.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "XPProject" />
-			</partyRoleConstraints>
-		</partyRoleType>
+		<prt:partyRoleType name="EmployingXPProject">
+			<ge:description>An XP project which employs team members.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "XPProject" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
 
-		<partyRoleType name="XPTeamMemeber">
-			<description>Member of an XP team.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
-			</partyRoleConstraints>
-		</partyRoleType>
+		<prt:partyRoleType name="XPTeamMemeber">
+			<ge:description>Member of an XP team.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "PersonType" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
 
-		<partyRoleType name="Customer">
-			<description>Customer of the development effort.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
-			</partyRoleConstraints>
-		</partyRoleType>
+		<prt:partyRoleType name="Customer">
+			<ge:description>Customer of the development effort.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "PersonType" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
 
-		<partyRoleType name="Coach">
-			<description>Informal leader of an XP team.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
-			</partyRoleConstraints>
-		</partyRoleType>
+		<prt:partyRoleType name="Coach">
+			<ge:description>Informal leader of an XP team.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "PersonType" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
 
-		<partyRoleType name="Developer">
-			<description>Software developer, member of an XP team.</description>
-			<partyRoleConstraints>
-				<partyRoleConstraint typeOfParty = "PersonType" />
-			</partyRoleConstraints>
-		</partyRoleType>
-	</partyRoleTypes>
+		<prt:partyRoleType name="Developer">
+			<ge:description>Software developer, member of an XP team.</ge:description>
+			<prt:partyRoleConstraints>
+				<prt:partyRoleConstraint typeOfParty = "PersonType" />
+			</prt:partyRoleConstraints>
+		</prt:partyRoleType>
+	</bd:partyRoleTypes>
 	
-	<partyRelationshipTypes>
-		<partyRelationshipType name="FatherSonRelationship">
-			<partyRelationshipConstraints>
-				<partyRelationshipConstraint clientRoleType="FatherRole" supplierRoleType="SonRole" />
-			</partyRelationshipConstraints>
-		</partyRelationshipType>
-	</partyRelationshipTypes>
+	<bd:partyRelationshipTypes>
+		<prt:partyRelationshipType name="FatherSonRelationship">
+			<prt:partyRelationshipConstraints>
+				<prt:partyRelationshipConstraint clientRoleType="FatherRole" supplierRoleType="SonRole" />
+			</prt:partyRelationshipConstraints>
+		</prt:partyRelationshipType>
+	</bd:partyRelationshipTypes>
 	
-	<artifactTypes>
-		<artifactTypeGroup name="SystemAdministration">
-			<defaultAccessRights>
-				<accessRight partyRoleType="Coach" canCreate="true" canDelete="true" canModify="true" canRead="true" />
-				<accessRight partyRoleType="XPTeamMember" canCreate="true" canDelete="false" canModify="true" canRead="true" />
-			</defaultAccessRights>
+	<bd:artifactTypes>
+		<atd:artifactTypeGroup name="SystemAdministration">
+			<atd:defaultAccessRights>
+				<atd:accessRight partyRoleType="Coach" canCreate="true" canDelete="true" canModify="true" canRead="true" />
+				<atd:accessRight partyRoleType="XPTeamMember" canCreate="true" canDelete="false" canModify="true" canRead="true" />
+			</atd:defaultAccessRights>
 		
-			<artifactType name="RootArtifactFolder" artifactClassName="com.processpuzzle.artifact.domain.RootArtifactFolder" createOnStartUp="false" group="SystemAdministration" isSingleton="true" isSystem="true" isVersionControlled="false" pessimisticLock="false" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
-				<description>Root of all other artifact folders.</description>
-				<caption>Root Folder</caption>
-				<baseUri>baseUri</baseUri>
-				<defaultAccessRights>
-					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
-				</defaultAccessRights>
-				<creationProperties>
-					<creationProperty name="aProperty" type="string">
-						<defaultValue>aPropertyValue</defaultValue>
-					</creationProperty>
-				</creationProperties>
-				<availableViews>
-					<propertyViewType name="PropertyView" clientType="NativeView" isDefault="true" isStatic="false" presentationUri="uri" viewClassName="com.processpuzzle.artifact.domain.RootArtifactFolder_PropertyView">
-						<viewCaption>Property View</viewCaption>
-						<viewAccessUrl>viewAccessUrl</viewAccessUrl>
-						<associatedMenuItems>
-						</associatedMenuItems>
-					</propertyViewType>
-				</availableViews>
-				<associatedMenuItems></associatedMenuItems>
-			</artifactType>
+			<atd:artifactType name="RootArtifactFolder" artifactClassName="com.processpuzzle.artifact.domain.RootArtifactFolder" createOnStartUp="false" group="SystemAdministration" isSingleton="true" isSystem="true" isVersionControlled="false" pessimisticLock="false" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
+				<ge:description>Root of all other artifact folders.</ge:description>
+				<atd:caption>Root Folder</atd:caption>
+				<atd:baseUri>baseUri</atd:baseUri>
+				<atd:defaultAccessRights>
+					<atd:accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</atd:defaultAccessRights>
+				<atd:creationProperties>
+					<atd:creationProperty name="aProperty" type="string">
+						<atd:defaultValue>aPropertyValue</atd:defaultValue>
+					</atd:creationProperty>
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:propertyViewType name="PropertyView" clientType="NativeView" isDefault="true" isStatic="false" presentationUri="uri" viewClassName="com.processpuzzle.artifact.domain.RootArtifactFolder_PropertyView">
+						<atd:viewCaption>Property View</atd:viewCaption>
+						<atd:viewAccessUrl>viewAccessUrl</atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+						</atd:associatedMenuItems>
+					</atd:propertyViewType>
+				</atd:availableViews>
+				<atd:associatedMenuItems></atd:associatedMenuItems>
+			</atd:artifactType>
 			
-			<artifactType name="ArtifactFolder" artifactClassName="com.processpuzzle.artifact.domain.ArtifactFolder" createOnStartUp="false" group="SystemAdministration" isSingleton="false" isSystem="true" isVersionControlled="false" pessimisticLock="false" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
-				<description>Describes a folder of artifacts.</description>
-				<caption>Artifact Folder</caption>
-				<baseUri>baseUri</baseUri>
-				<defaultAccessRights>
-					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
-				</defaultAccessRights>
-				<creationProperties>
-					<creationProperty name="aProperty" type="string">
-						<defaultValue>A property value</defaultValue>
-					</creationProperty>
-				</creationProperties>
-				<availableViews>
-					<propertyViewType name="PropertyView" clientType="NativeView" isDefault="true" isStatic="false" presentationUri="uri" viewClassName="com.processpuzzle.artifact.domain.ArtifactFolder_PropertyView">
-						<viewCaption>Property View</viewCaption>
-						<viewAccessUrl>viewAccessUrl</viewAccessUrl>
-						<associatedMenuItems>
-							<menuItem name="Print">
-								<command name="PrintFolderProperties" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-							</menuItem>
-						</associatedMenuItems>
-					</propertyViewType>
-				</availableViews>
-				<associatedMenuItems>
-					<menuItem name="Activate">
-						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-					</menuItem>
-				</associatedMenuItems>
-			</artifactType>
+			<atd:artifactType name="ArtifactFolder" artifactClassName="com.processpuzzle.artifact.domain.ArtifactFolder" createOnStartUp="false" group="SystemAdministration" isSingleton="false" isSystem="true" isVersionControlled="false" pessimisticLock="false" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
+				<ge:description>Describes a folder of artifacts.</ge:description>
+				<atd:caption>Artifact Folder</atd:caption>
+				<atd:baseUri>baseUri</atd:baseUri>
+				<atd:defaultAccessRights>
+					<atd:accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</atd:defaultAccessRights>
+				<atd:creationProperties>
+					<atd:creationProperty name="aProperty" type="string">
+						<atd:defaultValue>A property value</atd:defaultValue>
+					</atd:creationProperty>
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:propertyViewType name="PropertyView" clientType="NativeView" isDefault="true" isStatic="false" presentationUri="uri" viewClassName="com.processpuzzle.artifact.domain.ArtifactFolder_PropertyView">
+						<atd:viewCaption>Property View</atd:viewCaption>
+						<atd:viewAccessUrl>viewAccessUrl</atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+							<atd:menuItem name="Print">
+								<atd:command name="PrintFolderProperties" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</atd:menuItem>
+						</atd:associatedMenuItems>
+					</atd:propertyViewType>
+				</atd:availableViews>
+				<atd:associatedMenuItems>
+					<atd:menuItem name="Activate">
+						<atd:command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</atd:menuItem>
+				</atd:associatedMenuItems>
+			</atd:artifactType>
 
-<!-- 
-			<artifactType 
+			<atd:artifactType 
 				name="CommentList" 
 				group="SystemAdministration" 
 				artifactClassName="com.processpuzzle.artifact.domain.CommentList" 
@@ -148,11 +153,11 @@
 				isVersionControlled="false" 
 				isSingleton="false"
 				createOnStartUp="false">
-				<caption>commentList</caption>
-				<baseUri>../../../</baseUri>
-			</artifactType>
+				<atd:caption>commentList</atd:caption>
+				<atd:baseUri>../../../</atd:baseUri>
+			</atd:artifactType>
 
-			<artifactType 
+			<atd:artifactType 
 				name="MessageWall" 
 				group="SystemAdministration"
 				artifactClassName="com.processpuzzle.artifact.domain.CommentList"
@@ -161,10 +166,10 @@
 				isVersionControlled="false" 
 				isSingleton="true"
 				createOnStartUp="true">
-				<caption>messageWall</caption>
-				<baseUri>../../../</baseUri>
-				<availableViews>
-					<editableTextViewType 
+				<atd:caption>messageWall</atd:caption>
+				<atd:baseUri>../../../</atd:baseUri>
+				<atd:availableViews>
+					<atd:editableTextViewType 
 						name="unvisible" 
 						isDefault="true" 
 						isStatic="false"
@@ -172,49 +177,49 @@
 						xmlToHtmlXsltPath=""
 						presentationUri="/Commons/MessageWall/MessageWall.jsp"
 						viewClassName="com.processpuzzle.artifact.domain.CommentList_EditableTextView">
-						<viewCaption>ui.viewCaption.unvisible</viewCaption>
-					</editableTextViewType>
-				</availableViews>
-			</artifactType>
-			
-			<artifactType name="PersonList" artifactClassName="com.processpuzzle.party.artifact.PersonList" createOnStartUp="true" group="SystemAdministration" isSingleton="true" isSystem="true" isVersionControlled="false" pessimisticLock="false" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
-				<description></description>
-				<caption>Person List</caption>
-				<baseUri>baseUri</baseUri>
-				<defaultAccessRights>
-					<accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
-				</defaultAccessRights>
-				<creationProperties>
-					<creationProperty name="aProperty" type="string">
-						<value>A property value</value>
-					</creationProperty>
-				</creationProperties>
-				<availableViews>
-					<listQueryViewType 
+						<atd:viewCaption>ui.viewCaption.unvisible</atd:viewCaption>
+					</atd:editableTextViewType>
+				</atd:availableViews>
+			</atd:artifactType>
+
+			<atd:artifactType name="PersonList" artifactClassName="com.processpuzzle.party.artifact.PersonList" createOnStartUp="true" group="SystemAdministration" isSingleton="true" isSystem="true" isVersionControlled="false" pessimisticLock="false" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
+				<ge:description></ge:description>
+				<atd:caption>Person List</atd:caption>
+				<atd:baseUri>baseUri</atd:baseUri>
+				<atd:defaultAccessRights>
+					<atd:accessRight partyRoleType="ProcessPuzzleAdministrator" canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</atd:defaultAccessRights>
+				<atd:creationProperties>
+					<atd:creationProperty name="aProperty" type="string">
+						<atd:defaultValue>A property value</atd:defaultValue>
+					</atd:creationProperty>
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:listQueryViewType 
 						name="PersonList_QueryView" 
 						presentationUri="/BusinessImplementation/SystemAdministration/PersonList_QueryView.jsp"
 						viewClassName="com.processpuzzle.party.artifact.PersonList_QueryView" 
 						clientType="ListQueryView"
 						targetPropertyView="PersonDataSheet_PropertyView">
-						<viewCaption>ui.viewCaption.listQuery</viewCaption>
-						<viewAccessUrl></viewAccessUrl>
-						<preDefinedQueries>
-							<query name="NamesStartingWithB">
-								<description>Names starting with B</description>
-								<statement>from PersonDataSheet o where o.person.name like 'B'</statement>
-							</query>
-						</preDefinedQueries>
-					</listQueryViewType>
+						<atd:viewCaption>ui.viewCaption.listQuery</atd:viewCaption>
+						<atd:viewAccessUrl></atd:viewAccessUrl>
+						<atd:preDefinedQueries>
+							<atd:query name="NamesStartingWithB">
+								<ge:description>Names starting with B</ge:description>
+								<atd:statement>from PersonDataSheet o where o.person.name like 'B'</atd:statement>
+							</atd:query>
+						</atd:preDefinedQueries>
+					</atd:listQueryViewType>
 
-				</availableViews>
-				<associatedMenuItems>
-					<menuItem name="Activate">
-						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-					</menuItem>
-				</associatedMenuItems>
-			</artifactType>
-			
-			<artifactType 
+				</atd:availableViews>
+				<atd:associatedMenuItems>
+					<atd:menuItem name="Activate">
+						<atd:command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</atd:menuItem>
+				</atd:associatedMenuItems>
+			</atd:artifactType>
+
+			<atd:artifactType 
 				name="PersonDataSheet" 
 				group="SystemAdministration" 
 				artifactClassName="com.processpuzzle.party.artifact.PersonDataSheet" 
@@ -224,36 +229,36 @@
 				isSystem="false" 
 				isVersionControlled="false"
 				pessimisticLock="false">
-				<caption>personDataSheet</caption>
-				<baseUri>../../../</baseUri>
-				<creationProperties>
-					<creationProperty name="familyName" type="string" />
-					<creationProperty name="givenName" type="string" />
-					<creationProperty name="userName" type="string" />
-					<creationProperty name="password" type="string" />
-				</creationProperties>
-				<availableViews>
-					<propertyViewType 
+				<atd:caption>personDataSheet</atd:caption>
+				<atd:baseUri>../../../</atd:baseUri>
+				<atd:creationProperties>
+					<atd:creationProperty name="familyName" type="string" />
+					<atd:creationProperty name="givenName" type="string" />
+					<atd:creationProperty name="userName" type="string" />
+					<atd:creationProperty name="password" type="string" />
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:propertyViewType 
 						name="PersonDataSheet_PropertyView" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/PersonDataSheet_PropertyView.jsp" 
 						isDefault="false" 
 						isStatic="false" 
 						clientType="PropertyView"
 						viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_PropertyView">
-						<viewCaption>ui.viewCaption.properties</viewCaption>
-						<viewAccessUrl></viewAccessUrl>
-					</propertyViewType>
-					<artifactCustomFormViewType 
+						<atd:viewCaption>ui.viewCaption.properties</atd:viewCaption>
+						<atd:viewAccessUrl></atd:viewAccessUrl>
+					</atd:propertyViewType>
+					<atd:artifactCustomFormViewType 
 						name="PersonDataSheet_BaseDataView" 
 						clientType="CustomFormView" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/PersonDataSheet_BaseData.jsp" 
 						isDefault="true"
 						isStatic="false" 
 						viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_BaseDataView">
-						<viewCaption>ui.viewCaption.baseData</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PersonDataSheet_BaseDataView</viewAccessUrl>
-					</artifactCustomFormViewType>
-					<printViewType 
+						<atd:viewCaption>ui.viewCaption.baseData</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=PersonDataSheet_BaseDataView</atd:viewAccessUrl>
+					</atd:artifactCustomFormViewType>
+					<atd:printViewType 
 						name="PrintView" 
 						clientType="PrintView" 
 						isDefault="false" 
@@ -261,48 +266,48 @@
 						presentationUri="uri" 
 						xmlToFoXsltPath="/stylesheet/persondata.xsl"
 						viewClassName="com.processpuzzle.party.artifact.PersonDataSheet_PrintView">
-						<viewCaption>ui.viewCaption.print</viewCaption>
-						<viewAccessUrl></viewAccessUrl>
-						<associatedMenuItems>
-							<menuItem name="Print">
-								<command name="PrintPersons" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-							</menuItem>
-						</associatedMenuItems>
-					</printViewType>
-				</availableViews>
-			</artifactType>
+						<atd:viewCaption>ui.viewCaption.print</atd:viewCaption>
+						<atd:viewAccessUrl></atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+							<atd:menuItem name="Print">
+								<atd:command name="PrintPersons" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</atd:menuItem>
+						</atd:associatedMenuItems>
+					</atd:printViewType>
+				</atd:availableViews>
+			</atd:artifactType>
 
-			<artifactType name="CompanyList" artifactClassName="com.processpuzzle.party.artifact.CompanyList" createOnStartUp="true" group="SystemAdministration" isSingleton="true" isSystem="false" isVersionControlled="false" pessimisticLock="true" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
-				<description></description>
-				<caption>Company List</caption>
-				<baseUri>baseUri</baseUri>
-				<defaultAccessRights>
-					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
-				</defaultAccessRights>
-				<creationProperties>
-					<creationProperty name="aProperty" type="string">
-						<value>A property value</value>
-					</creationProperty>
-				</creationProperties>
-				<availableViews>
-					<propertyViewType name="PropertyView" clientType="NativeView" isDefault="true" isStatic="false" presentationUri="uri" viewClassName="com.processpuzzle.party.artifact.CompanyList_PropertyView">
-						<viewCaption>Property View</viewCaption>
-						<viewAccessUrl>viewAccessUrl</viewAccessUrl>
-						<associatedMenuItems>
-							<menuItem name="Print">
-								<command name="PrintCompanyListProperties" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-							</menuItem>
-						</associatedMenuItems>
-					</propertyViewType>
-				</availableViews>
-				<associatedMenuItems>
-					<menuItem name="Activate">
-						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-					</menuItem>
-				</associatedMenuItems>
-			</artifactType>
+			<atd:artifactType name="CompanyList" artifactClassName="com.processpuzzle.party.artifact.CompanyList" createOnStartUp="true" group="SystemAdministration" isSingleton="true" isSystem="false" isVersionControlled="false" pessimisticLock="true" refreshOnDocumentActivation="true" refreshOnViewActivation="true">
+				<ge:description></ge:description>
+				<atd:caption>Company List</atd:caption>
+				<atd:baseUri>baseUri</atd:baseUri>
+				<atd:defaultAccessRights>
+					<atd:accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</atd:defaultAccessRights>
+				<atd:creationProperties>
+					<atd:creationProperty name="aProperty" type="string">
+						<atd:defaultValue>A property value</atd:defaultValue>
+					</atd:creationProperty>
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:propertyViewType name="PropertyView" clientType="NativeView" isDefault="true" isStatic="false" presentationUri="uri" viewClassName="com.processpuzzle.party.artifact.CompanyList_PropertyView">
+						<atd:viewCaption>Property View</atd:viewCaption>
+						<atd:viewAccessUrl>viewAccessUrl</atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+							<atd:menuItem name="Print">
+								<atd:command name="PrintCompanyListProperties" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</atd:menuItem>
+						</atd:associatedMenuItems>
+					</atd:propertyViewType>
+				</atd:availableViews>
+				<atd:associatedMenuItems>
+					<atd:menuItem name="Activate">
+						<atd:command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</atd:menuItem>
+				</atd:associatedMenuItems>
+			</atd:artifactType>
 			
-			<artifactType 
+			<atd:artifactType 
 				name="CompanyDataSheet" 
 				group="SystemAdministration" 
 				artifactClassName="com.processpuzzle.party.artifact.CompanyDataSheet" 
@@ -312,30 +317,30 @@
 				isSystem="false" 
 				isVersionControlled="false"
 				pessimisticLock="false">
-				<caption>companyDataSheet</caption>
-				<baseUri>../../../</baseUri>
-				<creationProperties>
-					<creationProperty name="companyName" type="string" />
-				</creationProperties>
-				<availableViews>
-					<propertyViewType 
+				<atd:caption>companyDataSheet</atd:caption>
+				<atd:baseUri>../../../</atd:baseUri>
+				<atd:creationProperties>
+					<atd:creationProperty name="companyName" type="string" />
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:propertyViewType 
 						name="Properties" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/CompanyDataSheet_PropertyView.jsp" 
 						clientType="PropertyView"
 						viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_PropertyView">
-						<viewCaption>ui.viewCaption.properties</viewCaption>
-						<viewAccessUrl></viewAccessUrl>
-					</propertyViewType>
-					<artifactCustomFormViewType 
+						<atd:viewCaption>ui.viewCaption.properties</atd:viewCaption>
+						<atd:viewAccessUrl></atd:viewAccessUrl>
+					</atd:propertyViewType>
+					<atd:artifactCustomFormViewType 
 						name="BaseData" 
 						clientType="CustomFormView" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/CompanyDataSheet_BaseData.jsp" 
 						isDefault="true"
 						viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_BaseDataView">
-						<viewCaption>ui.viewCaption.baseData</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=CompanyDataSheet_BaseDataView</viewAccessUrl>
-					</artifactCustomFormViewType>
-				  	<printViewType 
+						<atd:viewCaption>ui.viewCaption.baseData</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=CompanyDataSheet_BaseDataView</atd:viewAccessUrl>
+					</atd:artifactCustomFormViewType>
+				  	<atd:printViewType 
 						name="PrintView" 
 						clientType="PrintView" 
 						isDefault="false" 
@@ -343,51 +348,50 @@
 						presentationUri="uri" 
 						xmlToFoXsltPath="/stylesheet/companydata.xsl"
 						viewClassName="com.processpuzzle.party.artifact.CompanyDataSheet_PrintView">
-						<viewCaption>ui.viewCaption.print</viewCaption>
-						<viewAccessUrl></viewAccessUrl>
-						<associatedMenuItems>
-							<menuItem name="Print">
-								<command name="PrintPersons" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-							</menuItem>
-						</associatedMenuItems>
-					</printViewType>
- 				</availableViews>
-			</artifactType>
- -->			
+						<atd:viewCaption>ui.viewCaption.print</atd:viewCaption>
+						<atd:viewAccessUrl></atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+							<atd:menuItem name="Print">
+								<atd:command name="PrintPersons" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</atd:menuItem>
+						</atd:associatedMenuItems>
+					</atd:printViewType>
+ 				</atd:availableViews>
+			</atd:artifactType>
 
-			<artifactType name="UserList"
+			<atd:artifactType name="UserList"
 				artifactClassName="com.processpuzzle.party.artifact.UserList"
 				createOnStartUp="true" group="SystemAdministration" isSingleton="true"
 				isSystem="true" isVersionControlled="false" pessimisticLock="false"
 				refreshOnDocumentActivation="true" refreshOnViewActivation="true">
-				<description></description>
-				<caption>userList</caption>
-				<baseUri>../../../../</baseUri>
-				<defaultAccessRights>
-					<accessRight partyRoleType="ProcessPuzzleAdministrator"
-						canCreate="false" canDelete="false" canModify="false" canRead="true" />
-				</defaultAccessRights>
-				<creationProperties>
-					<creationProperty name="aProperty" type="string">
-						<defaultValue></defaultValue>
-					</creationProperty>
-				</creationProperties>
-				<availableViews>
-					<artifactListViewType name="ListView"
+				<ge:description></ge:description>
+				<atd:caption>userList</atd:caption>
+				<atd:baseUri>../../../../</atd:baseUri>
+				<atd:defaultAccessRights>
+					<atd:accessRight partyRoleType="ProcessPuzzleAdministrator"	canCreate="false" canDelete="false" canModify="false" canRead="true" />
+				</atd:defaultAccessRights>
+				<atd:creationProperties>
+					<atd:creationProperty name="aProperty" type="string">
+						<atd:defaultValue></atd:defaultValue>
+					</atd:creationProperty>
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:artifactListViewType 
+					   name="ListView"
 						clientType="BrowseView" isDefault="true" isStatic="false"
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/UserList_ListView.jsp"
 						viewClassName="com.processpuzzle.party.artifact.UserList_ListView"
 						listedArtifactType="com.processpuzzle.party.artifact.UserDataSheet"
 						orderBy="name" order="desc">
-						<viewCaption>ui.viewCaption.list</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=UserList&amp;viewName=UserList_ListView</viewAccessUrl>
-						<associatedMenuItems>
-							<menuItem name="Show">
-								<command name="ShowUser" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-							</menuItem>
-						</associatedMenuItems>
-					</artifactListViewType>
-					<printViewType 
+						<atd:viewCaption>ui.viewCaption.list</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowListView&amp;artifactName=UserList&amp;viewName=UserList_ListView</atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+							<atd:menuItem name="Show">
+								<atd:command name="ShowUser" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</atd:menuItem>
+						</atd:associatedMenuItems>
+					</atd:artifactListViewType>
+					<atd:printViewType 
 						name="PrintView" 
 						clientType="PrintView" 
 						isDefault="false" 
@@ -395,29 +399,29 @@
 						presentationUri="uri" 
 						xmlToFoXsltPath=""
 						viewClassName="com.processpuzzle.party.artifact.UserList_PrintView">
-						<viewCaption>ui.viewCaption.print</viewCaption>
-						<viewAccessUrl></viewAccessUrl>
-						<associatedMenuItems>
-							<menuItem name="Print">
-								<command name="PrintUsers" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-							</menuItem>
-						</associatedMenuItems>
-					</printViewType>
-					<artifactCommentsViewType 
+						<atd:viewCaption>ui.viewCaption.print</atd:viewCaption>
+						<atd:viewAccessUrl></atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+							<atd:menuItem name="Print">
+								<atd:command name="PrintUsers" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+							</atd:menuItem>
+						</atd:associatedMenuItems>
+					</atd:printViewType>
+					<atd:artifactCommentsViewType 
 						name="Comments" 
 						clientType="EditableHtmlView">
-						<viewCaption>ui.viewCaption.comments</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=UserList</viewAccessUrl>
-					</artifactCommentsViewType>
-				</availableViews>
-				<associatedMenuItems>
-					<menuItem name="Activate">
-						<command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
-					</menuItem>
-				</associatedMenuItems>
-			</artifactType>
+						<atd:viewCaption>ui.viewCaption.comments</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes&amp;artifactName=UserList</atd:viewAccessUrl>
+					</atd:artifactCommentsViewType>
+				</atd:availableViews>
+				<atd:associatedMenuItems>
+					<atd:menuItem name="Activate">
+						<atd:command name="ActivateProductCatalog" description="" type="CustomCommand" actionStatement="" customPrefix="" />
+					</atd:menuItem>
+				</atd:associatedMenuItems>
+			</atd:artifactType>
 	
-			<artifactType 
+			<atd:artifactType 
 				name="UserDataSheet" 
 				group="SystemAdministration" 
 				artifactClassName="com.processpuzzle.party.artifact.UserDataSheet" 
@@ -427,62 +431,62 @@
 				isSystem="false" 
 				isVersionControlled="false"
 				pessimisticLock="false">
-				<caption>userDataSheet</caption>
-				<baseUri>../../../../</baseUri>
-				<creationProperties>
-					<creationProperty name="userName" type="string" />
-					<creationProperty name="password" type="string" />
-				</creationProperties>
-				<availableViews>
-					<propertyViewType 
+				<atd:caption>userDataSheet</atd:caption>
+				<atd:baseUri>../../../../</atd:baseUri>
+				<atd:creationProperties>
+					<atd:creationProperty name="userName" type="string" />
+					<atd:creationProperty name="password" type="string" />
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:propertyViewType 
 						name="Properties" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/UserDataSheet_PropertyView.jsp" 
 						clientType="PropertyView"
 						viewClassName="com.processpuzzle.party.artifact.UserDataSheet_PropertyView">
-						<viewCaption>ui.viewCaption.properties</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=UserDataSheet&amp;viewName=UserDataSheet_PropertyView</viewAccessUrl>
-					</propertyViewType>
-					<artifactCustomFormViewType 
+						<atd:viewCaption>ui.viewCaption.properties</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=UserDataSheet&amp;viewName=UserDataSheet_PropertyView</atd:viewAccessUrl>
+					</atd:propertyViewType>
+					<atd:artifactCustomFormViewType 
 						name="BaseData" 
 						clientType="CustomFormView" 
 						presentationUri="/Commons/BusinessImplementation/SystemAdministration/UserDataSheet_BaseData.jsp" 
 						isDefault="true"
 						viewClassName="com.processpuzzle.party.artifact.UserDataSheet_BaseData">
-						<viewCaption>ui.viewCaption.baseData</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=UserDataSheet&amp;viewName=UserDataSheet_BaseData</viewAccessUrl>
-					</artifactCustomFormViewType>
- 					<relatedArtifactsViewType 
+						<atd:viewCaption>ui.viewCaption.baseData</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;artifactName=UserDataSheet&amp;viewName=UserDataSheet_BaseData</atd:viewAccessUrl>
+					</atd:artifactCustomFormViewType>
+ 					<atd:relatedArtifactsViewType 
  						name="RelatedArtifacts" 
  						clientType="CustomFormView" 
  						presentationUri="/BusinessImplementation/ProjectAdministration/Artifact_RelatedArtifacts.jsp"
 						viewClassName="com.processpuzzle.artifact.domain.RelatedArtifactsListView">
-						<viewCaption>ui.viewCaption.relatedArtifacts</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</viewAccessUrl>
-					</relatedArtifactsViewType>
-					<artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
-						<viewCaption>ui.viewCaption.comments</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</viewAccessUrl>
-					</artifactCommentsViewType>
-					<accessRightsViewType 
+						<atd:viewCaption>ui.viewCaption.relatedArtifacts</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=RelatedArtifactsListView</atd:viewAccessUrl>
+					</atd:relatedArtifactsViewType>
+					<atd:artifactCommentsViewType name="Comments" clientType="EditableHtmlView">
+						<atd:viewCaption>ui.viewCaption.comments</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowDocumentNotes</atd:viewAccessUrl>
+					</atd:artifactCommentsViewType>
+					<atd:accessRightsViewType 
 						name="AccessRights" 
 						clientType="CustomFormView" 
 						presentationUri="/Commons/BusinessImplementation/ProjectAdministration/Artifact_AccessRights.jsp" 
 						viewClassName="com.processpuzzle.artifact.domain.AccessRightsView">
-						<viewCaption>ui.viewCaption.accessRights</viewCaption>
-						<viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</viewAccessUrl>
-					</accessRightsViewType>
-				</availableViews>
-			</artifactType>
+						<atd:viewCaption>ui.viewCaption.accessRights</atd:viewCaption>
+						<atd:viewAccessUrl>./CommandControllerServlet?action=ShowView&amp;viewName=AccessRightsView</atd:viewAccessUrl>
+					</atd:accessRightsViewType>
+				</atd:availableViews>
+			</atd:artifactType>
 
-		</artifactTypeGroup>
-<!-- 
-		<artifactTypeGroup name="Business">
-			<defaultAccessRights>
-				<accessRight partyRoleType="Coach" canCreate="true" canDelete="true" canModify="true" canRead="true" />
-				<accessRight partyRoleType="XPTeamMember" canCreate="true" canDelete="false" canModify="true" canRead="true" />
-			</defaultAccessRights>
+		</atd:artifactTypeGroup>
+
+		<atd:artifactTypeGroup name="Business">
+			<atd:defaultAccessRights>
+				<atd:accessRight partyRoleType="Coach" canCreate="true" canDelete="true" canModify="true" canRead="true" />
+				<atd:accessRight partyRoleType="XPTeamMember" canCreate="true" canDelete="false" canModify="true" canRead="true" />
+			</atd:defaultAccessRights>
 			
-			<artifactType
+			<atd:artifactType
 				name="ProductCatalogDataSheet" 
 				artifactClassName="com.processpuzzle.product.artifact.ProductCatalogDataSheet"
                 createOnStartUp="false" 
@@ -493,52 +497,53 @@
 				pessimisticLock="true" 
 				refreshOnDocumentActivation="true"
 				refreshOnViewActivation="true">
-				<description>Product catalog is a hierarchically structured list of available product types.</description>
-				<caption>Product Catalog Data Sheet</caption>
-				<baseUri>baseUri</baseUri>
-				<defaultAccessRights>
-					<accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
-				</defaultAccessRights>
-				<creationProperties>
-					<creationProperty name="productCatalogName" type="string">
-						<defaultValue>Catalog-2008</defaultValue>
-					</creationProperty>
-				</creationProperties>
-				<availableViews>
-					<propertyViewType 
+				<ge:description>Product catalog is a hierarchically structured list of available product types.</ge:description>
+				<atd:caption>Product Catalog Data Sheet</atd:caption>
+				<atd:baseUri>baseUri</atd:baseUri>
+				<atd:defaultAccessRights>
+					<atd:accessRight partyRoleType="FatherRole" canCreate="false" canDelete="false" canModify="true" canRead="true" />
+				</atd:defaultAccessRights>
+				<atd:creationProperties>
+					<atd:creationProperty name="productCatalogName" type="string">
+						<atd:defaultValue>Catalog-2008</atd:defaultValue>
+					</atd:creationProperty>
+				</atd:creationProperties>
+				<atd:availableViews>
+					<atd:propertyViewType 
 						name="PropertyView"
 						clientType="NativeView"
 						isDefault="true" 
 						isStatic="false" 
 						presentationUri="uri" 
 						viewClassName="com.processpuzzle.product.artifact.ProductCatalogDataSheet_PropertyView">
-						<viewCaption>Property View</viewCaption>
-						<viewAccessUrl>viewAccessUrl</viewAccessUrl>
-						<associatedMenuItems>
-							<menuItem name="Print">
-								<command name="PrintProductCatalogProperties" 
+						<atd:viewCaption>Property View</atd:viewCaption>
+						<atd:viewAccessUrl>viewAccessUrl</atd:viewAccessUrl>
+						<atd:associatedMenuItems>
+							<atd:menuItem name="Print">
+								<atd:command 
+								       name="PrintProductCatalogProperties" 
 										 description="" 
 										 type="CustomCommand" 
 										 actionStatement="" 
 										 customPrefix="" />
-							</menuItem>
-						</associatedMenuItems>
-					</propertyViewType>
-				</availableViews>
-				<associatedMenuItems>
-					<menuItem name="Activate">
-						<command name="ActivateProductCatalog" 
+							</atd:menuItem>
+						</atd:associatedMenuItems>
+					</atd:propertyViewType>
+				</atd:availableViews>
+				<atd:associatedMenuItems>
+					<atd:menuItem name="Activate">
+						<atd:command 
+						       name="ActivateProductCatalog" 
 								 description="" 
 								 type="CustomCommand" 
 								 actionStatement="" 
 								 customPrefix="" />
-					</menuItem>
-				</associatedMenuItems>
-			</artifactType>
-		</artifactTypeGroup>
- -->		
+					</atd:menuItem>
+				</atd:associatedMenuItems>
+			</atd:artifactType>
+		</atd:artifactTypeGroup>
 
-	</artifactTypes>
+	</bd:artifactTypes>
 
 	<!-- Protocols: Defines the workflows can be run by the system. -->
 	<!-- 
@@ -566,4 +571,4 @@
 	</protocols>
 	 -->
 	 
-</businessDefinition>
+</bd:businessDefinition>

@@ -34,6 +34,8 @@ package com.processpuzzle.party.partytype.domain;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.fundamental_types.domain.HashCodeUtil;
@@ -41,10 +43,11 @@ import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 import com.processpuzzle.resource.resourcetype.domain.AssetType;
 import com.processpuzzle.resource.resourcetype.domain.ResourceType;
 
+@XmlType( propOrder = { "name", "partyClassName", "description" })
 public class PartyType extends GenericEntity<PartyType> implements AssetType {
-   protected @XmlAttribute( name="name", required = true ) @XmlID String name;
-   protected @XmlAttribute( name="partyClassName" ) String partyClassName;
-   protected @XmlElement String description;
+   protected @XmlAttribute( required = true ) @XmlJavaTypeAdapter( NameTypeAdapter.class ) @XmlID String name;
+   protected @XmlAttribute @XmlJavaTypeAdapter( NameTypeAdapter.class ) String partyClassName;
+   protected @XmlElement( namespace="http://www.processpuzzle.com/GlobalElements" ) String description;
 
    //Constructors
    public PartyType( String theName ) {

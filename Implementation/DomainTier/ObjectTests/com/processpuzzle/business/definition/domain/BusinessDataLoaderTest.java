@@ -13,12 +13,12 @@ import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.sharedfixtures.domaintier.ProcessPuzzleContextFixture;
 
 @SuppressWarnings("unchecked")
-public abstract class BusinessDataLoaderTest<L extends BusinessDataLoader> {
+public abstract class BusinessDataLoaderTest<L extends BusinessDataLoader<D>, D> {
    protected static String xPathKey;
    protected static ProcessPuzzleContextFixture contextFixture;
    protected static ProcessPuzzleContext applicationContext;
    protected static DataLoader dataLoader;
-   protected static Class<? extends BusinessDataLoader> dataLoaderClass;
+   protected static Class<? extends BusinessDataLoader<?>> dataLoaderClass;
 
    @BeforeClass
    public static void beforeAllTests() throws Exception {
@@ -31,18 +31,18 @@ public abstract class BusinessDataLoaderTest<L extends BusinessDataLoader> {
       dataLoader.loadData();
    }
    
-   public static BusinessDataLoader instantiateBusinessDataLoader( String resourcePath ) throws Exception {
+   public static BusinessDataLoader<?> instantiateBusinessDataLoader( String resourcePath ) throws Exception {
       return instantiateBusinessDataLoader( resourcePath, dataLoaderClass );
    }
    
-   public static BusinessDataLoader instantiateBusinessDataLoader( String resourcePath, Class<? extends BusinessDataLoader> dataLoaderClass ) throws Exception {
+   public static BusinessDataLoader<?> instantiateBusinessDataLoader( String resourcePath, Class<? extends BusinessDataLoader<?>> dataLoaderClass ) throws Exception {
       Class<?>[] argumentClasses = { String.class };
       Object[] arguments = { resourcePath };
-      Constructor<BusinessDataLoader> applicationConstructor;
-      BusinessDataLoader dataLoader = null;
+      Constructor<BusinessDataLoader<?>> applicationConstructor;
+      BusinessDataLoader<?> dataLoader = null;
       try{
-         applicationConstructor = (Constructor<BusinessDataLoader>) dataLoaderClass.getConstructor( argumentClasses );
-         dataLoader = (BusinessDataLoader) applicationConstructor.newInstance( arguments );
+         applicationConstructor = (Constructor<BusinessDataLoader<?>>) dataLoaderClass.getConstructor( argumentClasses );
+         dataLoader = (BusinessDataLoader<?>) applicationConstructor.newInstance( arguments );
       }catch( Exception e ){
          e.printStackTrace();
          throw e;

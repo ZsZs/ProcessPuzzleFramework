@@ -52,8 +52,8 @@ import com.processpuzzle.party.partytype.domain.PartyType;
 import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 
 public class PartyRoleType extends GenericEntity<PartyRoleType> implements Comparable<Object>, AggregateRoot {
-   @XmlAttribute @XmlID private String name;
-   @XmlElement private String description;
+   @XmlAttribute( name="name", required = true ) @XmlID private String name;
+   @XmlElement( namespace="http://www.processpuzzle.com/GlobalElements" ) private String description;
    @XmlElementWrapper(name = "partyRoleConstraints") @XmlElement(name = "partyRoleConstraint")
    private Set<PartyRoleConstraint> validPartyTypes = new HashSet<PartyRoleConstraint>();
    private RuleSet requirementsForRole;
