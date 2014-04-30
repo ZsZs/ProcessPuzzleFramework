@@ -33,7 +33,7 @@ public class TimePointTest {
       aLocale = new ProcessPuzzleLocale( "hu", "HU" );
    }
    
-   @Test public final void instantiation_WhenDateWithPrecissionSpecified(){
+   @Test public final void instantiation_whenDateWithPrecissionSpecified(){
       TimePoint aTimePoint = new TimePoint( SAMPLE_YEAR, SAMPLE_MONTH, SAMPLE_DAY, SAMPLE_HOUR, SAMPLE_MINUTES, SAMPLE_SECONDS );
       
       TimePoint newTimePoint = new TimePoint( aTimePoint.getValue(), TimePrecision.YEAR );
@@ -42,20 +42,79 @@ public class TimePointTest {
       assertThat( newTimePoint.getDay(), equalTo( 0 ));
    }
    
-   @Test public final void instantiation_WhenTimeIsSpecifiedAsString_UsesDefaultPrecission(){
+   @Test public final void instantiation_whenTimeIsSpecifiedAsString_UsesDefaultPrecission(){
       TimePoint aTimePoint = new TimePoint( DATE_AS_STRING, aLocale );
       assertThat( aTimePoint.getPrecision(), equalTo( TimePrecision.DAY ));
    }
 
    @Test
-   public final void equal_ShouldEqualWithItself() {
+   public final void compareTo_whenLessThan_returnMinusOne() {
+      TimePoint tPoint1 = new TimePoint( 2007, 03, 15 );
+      TimePoint tPoint2 = new TimePoint( 2007, 03, 02 );
+      assertEquals( -1, tPoint2.compareTo( tPoint1 ) );
+   }
+
+   @Test
+   public final void compareTo_whenGreaterThan_returnsPlusOne() {
+      TimePoint tPoint1 = new TimePoint( 2007, 03, 15 );
+      TimePoint tPoint2 = new TimePoint( 2007, 03, 02 );
+      assertEquals( 1, tPoint1.compareTo( tPoint2 ) );
+   }
+
+   @Test
+   public final void compareTo_whenEquals_returnsZero() {
+      TimePoint tPoint1 = new TimePoint( 2007, 03, 11 );
+      TimePoint tPoint2 = new TimePoint( 2007, 03, 11 );
+      assertEquals( 0, tPoint1.compareTo( tPoint2 ) );
+   }
+   
+   @Test
+   public final void equals_whenInstantiatedWithSameDateObject_isTrue() {
+      Date currentTime = new Date( System.currentTimeMillis() );
+      TimePoint timePointOne = new TimePoint( currentTime );
+      TimePoint timePointTwo = new TimePoint( currentTime );
+      assumeThat( timePointOne.getPrecision(), equalTo( TimePrecision.MILLISECOND ));
+      
+      assertThat( timePointOne, equalTo( timePointTwo ) );
+      assertThat( timePointTwo, equalTo( timePointOne ));
+   }
+   
+   @Test
+   public final void equals_whenInstantiatedWithSameDateValues_isTrue() {
+      TimePoint timePointOne = new TimePoint( 2008, 4, 28 );
+      TimePoint timePointTwo = new TimePoint( 2008, 4, 28 );
+      
+      assertThat( timePointOne, equalTo( timePointTwo ) );
+      assertThat( timePointTwo, equalTo( timePointOne ));
+   }
+   
+   @Test
+   public final void equals_whenInstantiatedWithSameTimeValues_isTrue() {
+      TimePoint timePointOne = new TimePoint( 2008, 4, 28, 8, 32, 11 );
+      TimePoint timePointTwo = new TimePoint( 2008, 4, 28, 8, 32, 11 );
+      assumeThat( timePointOne.getPrecision(), equalTo( TimePrecision.SECOND ));
+      
+      assertThat( timePointOne, equalTo( timePointTwo ) );
+      assertThat( timePointTwo, equalTo( timePointOne ));
+   }
+   
+   @Test public final void equals_whenTimeIsSpecifiedByString() {
+      TimePoint timePointOne = new TimePoint( DATE_AS_STRING, aLocale );
+      TimePoint timePointTwo = new TimePoint( DATE_AS_STRING, aLocale );
+      
+      assertThat( timePointOne.equals( timePointTwo ), is( true ));
+      assertThat( timePointTwo.equals( timePointOne ), is( true ));
+   }
+
+   @Test
+   public final void equals_ShouldEqualWithItself() {
       TimePoint tPoint = new TimePoint( 2007, 1, 1 );
       assertThat( tPoint, equalTo( tPoint ) );
       assertThat( tPoint.getPrecision(), equalTo( TimePrecision.DAY ));
    }
    
    @Test 
-   public final void equal_IsFalseWhenPrecisionDiffers() {
+   public final void equals_IsFalseWhenPrecisionDiffers() {
       TimePoint timeWithDayPrecision = new TimePoint( 2009, 5, 31 );
       TimePoint timeWithHourPrecision = new TimePoint( 2009, 5, 31, 0, null );
       
@@ -63,73 +122,17 @@ public class TimePointTest {
    }
 
    @Test
-   public final void testCompareTo_ForLessThan() {
-      TimePoint tPoint1 = new TimePoint( 2007, 03, 15 );
-      TimePoint tPoint2 = new TimePoint( 2007, 03, 02 );
-      assertEquals( -1, tPoint2.compareTo( tPoint1 ) );
-   }
-
-   @Test
-   public final void testCompareTo_ForEquals() {
-      TimePoint tPoint1 = new TimePoint( 2007, 03, 11 );
-      TimePoint tPoint2 = new TimePoint( 2007, 03, 11 );
-      assertEquals( 0, tPoint1.compareTo( tPoint2 ) );
-   }
-
-   @Test
-   public final void testCompareTo_ForGreaterThan() {
-      TimePoint tPoint1 = new TimePoint( 2007, 03, 15 );
-      TimePoint tPoint2 = new TimePoint( 2007, 03, 02 );
-      assertEquals( 1, tPoint1.compareTo( tPoint2 ) );
-   }
-
-   @Test
-   public final void testDayOfMonts() throws ParseException {
+   public final void dayOfMonts_returnsDayPart() throws ParseException {
       TimePoint aTimePoint = new TimePoint( 1999, 1, 11 );
       assertEquals( "The day of month is: ", 11, aTimePoint.dayOfMonth() );
    }
 
    @Test
-   public final void testIsLeapYear() {
+   public final void isLeapYear_determinesIfYearIsLeap() {
       TimePoint noneLeapYear = new TimePoint( 2007, 03, 11 );
       TimePoint leapYear = new TimePoint( 2008, 01, 11 );
       assertFalse( noneLeapYear.isLeapYear() );
       assertTrue( leapYear.isLeapYear() );
-   }
-   
-   @Test
-   public final void testEqualsWithDateValues() {
-      TimePoint timePointOne = new TimePoint( 2008, 4, 28 );
-      TimePoint timePointTwo = new TimePoint( 2008, 4, 28 );
-      
-      assertThat( timePointOne, equalTo( timePointTwo ) );
-   }
-   
-   @Test
-   public final void testEqualsWithDateAndTimeValues() {
-      TimePoint timePointOne = new TimePoint( 2008, 4, 28, 8, 32, 11 );
-      TimePoint timePointTwo = new TimePoint( 2008, 4, 28, 8, 32, 11 );
-      
-      assertThat( timePointOne, equalTo( timePointTwo ) );
-
-      assertThat( timePointOne.getPrecision(), equalTo( TimePrecision.SECOND ));
-   }
-   
-   @Test
-   public final void testEqualsWithTimeInMillis() {
-      Date currentTime = new Date( System.currentTimeMillis() );
-      TimePoint timePointOne = new TimePoint( currentTime );
-      TimePoint timePointTwo = new TimePoint( currentTime );
-      
-      assertThat( timePointOne, equalTo( timePointTwo ) );
-      assertThat( timePointOne.getPrecision(), equalTo( TimePrecision.MILLISECOND ));
-   }
-   
-   @Test public final void equals_WhenTimeIsSpecifiedByString() {
-      TimePoint timePointOne = new TimePoint( DATE_AS_STRING, aLocale );
-      TimePoint timePointTwo = new TimePoint( DATE_AS_STRING, aLocale );
-      assertThat( timePointOne.equals( timePointTwo ), is( true ));
-      assertThat( timePointTwo.equals( timePointOne ), is( true ));
    }
 
    @After

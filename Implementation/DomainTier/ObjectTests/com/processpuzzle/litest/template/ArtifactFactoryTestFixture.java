@@ -16,7 +16,7 @@ import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.litest.template.GenericTemplatedFixture;
 
 public abstract class ArtifactFactoryTestFixture<S extends ArtifactFactory<A>, A extends Artifact<?>> extends GenericTemplatedFixture<S> {
-   private DefaultApplicationFixture applicationFixture;
+   private DefaultApplicationFixture<?> applicationFixture;
    protected ArtifactTypeFactory artifactTypeFactory;
    protected ArtifactTypeGroupFactory artifactTypeGroupFactory;
    protected ArtifactTypeGroupRepository artifactTypeGroupRepository;

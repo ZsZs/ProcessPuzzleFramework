@@ -1,39 +1,55 @@
 package com.processpuzzle.application.domain;
 
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assume.assumeThat;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.junit.Assume.*;
-import static org.hamcrest.core.IsEqual.*;
-import static org.hamcrest.core.Is.*;
-
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 
 import com.processpuzzle.application.domain.Application.ExecutionStatus;
 import com.processpuzzle.application.domain.Application.InstallationStatus;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
+import com.processpuzzle.litest.template.DefaultApplicationFixture;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
 public class ApplicationManagerTest {
    private static final String NEW_APPLICATION_NAME = InstallationTestApplication.class.getSimpleName();
-   private static final String ALREADY_INSTALLED_APPLICATION_NAME = AlreadyInstalledApplication.class.getSimpleName();
    private static final String APPLICATION_REPOSITOTRY_STORAGE_PATH = DomainTierTestConfiguration.APPLICATION_REPOSITORY_STORAGE_PATH;
    private static final String CONFIGURATION_DESCRIPTOR_PATH = DomainTierTestConfiguration.APPLICATION_CONFIGURATION_DESCRIPTOR_PATH;
-   private ResourceLoader resourceLoader;
-   private ApplicationManager applicationManager;
-   private Application newApplication;
    private Application alreadyInstalledApplication;
+   private ApplicationManager applicationManager;
+   private ApplicationRepository applicationRepository;
+   private DefaultApplicationFixture<Application> installedApplicationFixture;
+   private Application newApplication;
+   private ResourceLoader resourceLoader;
 
    @Before
    public void beforEachTests() throws InstantiationException {
       resourceLoader = new DefaultResourceLoader();
       applicationManager = new ApplicationManager( APPLICATION_REPOSITOTRY_STORAGE_PATH, resourceLoader );
+      
+      installedApplicationFixture = new InstalledAndStoppedApplicationFixture();
+      installedApplicationFixture.setUp();
+      
+      instantiateApplicationRepository();
    }
 
-   @Ignore
-   @Test
+   @After
+   public void afterEachTests() {
+      installedApplicationFixture.tearDown();
+      deleteAllApplicationsFromRepository();
+      newApplication = null;
+      alreadyInstalledApplication = null;
+      applicationManager = null;
+   }
+   
+   @Ignore @Test
    public void install_InstallsApplication() throws ApplicationInstallationException, ApplicationUninstallationException {
       // EXCERCISE:
       assumeThat( applicationIsInRepository( NEW_APPLICATION_NAME ), is( false ) );
@@ -49,30 +65,27 @@ public class ApplicationManagerTest {
       assumeThat( applicationIsInRepository( NEW_APPLICATION_NAME ), is( false ) );
    }
 
-   @Ignore
    @Test
    public void install_OnlyStartsApplicationIfAlreadyInstalled() throws ApplicationInstallationException {
       // EXCERCISE:
-      assumeThat( applicationIsInRepository( ALREADY_INSTALLED_APPLICATION_NAME ), is( true ) );
-      assumeThat( applicationStatusInRepository( ALREADY_INSTALLED_APPLICATION_NAME ), equalTo( ExecutionStatus.stopped ) );
-      alreadyInstalledApplication = applicationManager.install( ALREADY_INSTALLED_APPLICATION_NAME, AlreadyInstalledApplication.class,
-            CONFIGURATION_DESCRIPTOR_PATH );
+      assumeThat( applicationIsInRepository( installedApplicationFixture.getApplicationName() ), is( true ) );
+      assumeThat( applicationStatusInRepository( installedApplicationFixture.getApplicationName() ), equalTo( ExecutionStatus.stopped ) );
+      alreadyInstalledApplication = applicationManager.install( installedApplicationFixture.getApplicationName(), AlreadyInstalledApplication.class, CONFIGURATION_DESCRIPTOR_PATH );
 
       // VERIFY:
       assertThat( alreadyInstalledApplication.getExecutionStatus(), equalTo( ExecutionStatus.running ) );
-      assertThat( applicationStatusInRepository( ALREADY_INSTALLED_APPLICATION_NAME ), equalTo( ExecutionStatus.running ) );
+      assertThat( applicationStatusInRepository( installedApplicationFixture.getApplicationName() ), equalTo( ExecutionStatus.running ) );
    }
 
-   @Ignore
    @Test
    public void start_UpdatesApplicationStatusInRepository() throws ApplicationException, ConfusingApplicationStatusException {
       // EXCERCISE:
-      assumeThat( applicationStatusInRepository( ALREADY_INSTALLED_APPLICATION_NAME ), equalTo( ExecutionStatus.stopped ) );
-      alreadyInstalledApplication = applicationManager.start( ALREADY_INSTALLED_APPLICATION_NAME );
+      assumeThat( applicationStatusInRepository( installedApplicationFixture.getApplicationName() ), equalTo( ExecutionStatus.stopped ) );
+      alreadyInstalledApplication = applicationManager.start( installedApplicationFixture.getApplicationName() );
 
       // VERIFY:
       assertThat( alreadyInstalledApplication.getExecutionStatus(), equalTo( ExecutionStatus.running ) );
-      assertThat( applicationStatusInRepository( ALREADY_INSTALLED_APPLICATION_NAME ), equalTo( ExecutionStatus.running ) );
+      assertThat( applicationStatusInRepository( installedApplicationFixture.getApplicationName() ), equalTo( ExecutionStatus.running ) );
    }
 
    @Test( expected = ConfusingApplicationStatusException.class )
@@ -80,33 +93,19 @@ public class ApplicationManagerTest {
       applicationManager.start( NEW_APPLICATION_NAME );
    }
 
-   @Ignore
    @Test
    public void stop_UpdatesApplicationStatusInReposiotry() throws ApplicationException, ConfusingApplicationStatusException {
       // EXCERCISE:
-      alreadyInstalledApplication = applicationManager.start( ALREADY_INSTALLED_APPLICATION_NAME );
+      alreadyInstalledApplication = applicationManager.start( installedApplicationFixture.getApplicationName() );
       applicationManager.stop( alreadyInstalledApplication );
 
       // VERIFY:
       assertThat( alreadyInstalledApplication.getExecutionStatus(), equalTo( ExecutionStatus.stopped ) );
-      assertThat( applicationStatusInRepository( ALREADY_INSTALLED_APPLICATION_NAME ), equalTo( ExecutionStatus.stopped ) );
-   }
-
-   @After
-   public void afterEachTests() {
-      newApplication = null;
-      alreadyInstalledApplication = null;
-      applicationManager = null;
+      assertThat( applicationStatusInRepository( installedApplicationFixture.getApplicationName() ), equalTo( ExecutionStatus.stopped ) );
    }
 
    // Private helper methods
    private boolean applicationIsInRepository( String applicationName ) {
-      ApplicationRepository applicationRepository = null;
-      try{
-         applicationRepository = ApplicationRepository.getInstance( APPLICATION_REPOSITOTRY_STORAGE_PATH, resourceLoader );
-      }catch( InstantiationException e ){
-         e.printStackTrace();
-      }
       if( applicationRepository.findByName( applicationName ) != null )
          return true;
       else
@@ -114,13 +113,26 @@ public class ApplicationManagerTest {
    }
 
    private ExecutionStatus applicationStatusInRepository( String applicationName ) {
-      ApplicationRepository applicationRepository = null;
+      Application application = applicationRepository.findByName( applicationName );
+      return application.getExecutionStatus();
+   }
+
+   private void deleteAllApplicationsFromRepository() {
+      RepositoryResultSet<Application> applications = applicationRepository.findAll( null );
+      for( Application application : applications ){
+         applicationRepository.delete( application );
+      }
+   }
+
+   private void instantiateApplicationRepository() {
       try{
          applicationRepository = ApplicationRepository.getInstance( APPLICATION_REPOSITOTRY_STORAGE_PATH, resourceLoader );
       }catch( InstantiationException e ){
          e.printStackTrace();
       }
-      Application application = applicationRepository.findByName( applicationName );
-      return application.getExecutionStatus();
+   }
+   
+   protected void openHsqlManager() {
+      org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",  "jdbc:hsqldb:mem:mymemdb", "--noexit" });
    }
 }

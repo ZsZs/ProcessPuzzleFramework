@@ -3,6 +3,7 @@ package com.processpuzzle.application.configuration.domain;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.mockito.Mockito.mock;
 
 import java.util.Collection;
 
@@ -10,18 +11,18 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoAnnotations.Mock;
 
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.fundamental_types.quantity.domain.Unit;
 
 public class MeasurementContextTest extends ContextTest {
-   @Mock private Application application;
+   private Application application;
    private MeasurementContext measurementContext;
    
    @Before
    public void beforeEachTest() {
-      MockitoAnnotations.initMocks( MeasurementContextTest.class );
+      application = mock( Application.class );
+      MockitoAnnotations.initMocks( Application.class );
       measurementContext = new MeasurementContext( application );
       measurementContext.setUp( Application.Action.start );
    }

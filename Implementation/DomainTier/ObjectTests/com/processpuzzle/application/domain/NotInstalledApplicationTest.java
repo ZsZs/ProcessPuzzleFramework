@@ -4,7 +4,6 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.nullValue;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeThat;
@@ -16,48 +15,51 @@ import com.processpuzzle.application.security.domain.PredefinedUser;
 import com.processpuzzle.application.security.domain.UserRepository;
 import com.processpuzzle.user_session.domain.UserRequestManager;
 
-public class NotInstalledApplicationTest extends ApplicationTest<Application, ConfigurableApplicationFixture> {
+public class NotInstalledApplicationTest extends ApplicationTest<Application, NotInstalledApplicationFixture> {
+   private ProcessPuzzleContext applicationContext;
+
+   @Override
+   public void beforeEachTest() {
+      super.beforeEachTest();
+      
+      assumeThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ) );
+      assumeThat( sut.getInstallationStatus(), equalTo( Application.InstallationStatus.notInstalled ) );
+      
+      try{
+         sut.install();
+         applicationContext = UserRequestManager.getInstance().getApplicationContext();
+         userRepository = (UserRepository) applicationContext.getRepository( UserRepository.class );
+      }catch( ApplicationException e ){
+         e.printStackTrace();
+      }
+   }
+
+   public void afterEachTests() throws Exception {
+      sut.unInstall();
+      
+      assertThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ) );
+      assertThat( sut.getInstallationStatus(), equalTo( Application.InstallationStatus.notInstalled ) );
+   }
    
    @Test
    public void testInstall() throws ApplicationException {
-      assumeThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ) );
-      assumeThat( sut.getInstallationStatus(), equalTo( Application.InstallationStatus.notInstalled ) );
       // SETUP: Implicit setup.
 
-      // EXERCISE:
-      sut.install();
-      ProcessPuzzleContext applicationContext = UserRequestManager.getInstance().getApplicationContext();
-      userRepository = (UserRepository) applicationContext.getRepository( UserRepository.class );
+      // EXERCISE: See beforeEachTest()
 
       // VERIFY:
       assumeThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.running ) );
-
-      assertThat( "Installation also starts the application", sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.running ) );
-
       assertThat( "Application calls ProcessPuzzle.setUp() to initialize context.", applicationContext.isConfigured(), is( true ) );
 
-      // assertThat("Installation runs all the data loaders.", application.getDataLoaders(), hasItem( isLoaded() ));
-
       assertThat( "Installation defines 'Anonymous' user.", userRepository.findUserByName( PredefinedUser.ANONYMOUS.getUserName() ), not( nullValue() ) );
-      assertThat( "Installation defines 'Administrator' user.", userRepository.findUserByName( PredefinedUser.SYSTEM_ADMINISTRATOR.getUserName() ),
-            not( nullValue() ) );
+      assertThat( "Installation defines 'Administrator' user.", userRepository.findUserByName( PredefinedUser.SYSTEM_ADMINISTRATOR.getUserName() ), not( nullValue() ) );
 
       assertThat( "Installation defines default user.", sut.authenticateUser( DEFAULT_USER_NAME, DEFAULT_USER_PASSWORD ), not( nullValue() ) );
 
       assertTrue( "Application stores in a history what had happend.", sut.getHistorySize() >= 1 );
-
-      assertEquals( "The number of DataLoaders the Application executed is:", 2, sut.findApplicationEventsByType( Application.Events.dataload ).size() );
-      assertThat( "Data loaders can injected with constructor parameters.", TestDataLoaderWithConstructorArguments.getConstructorArgumentOne(),
-            equalTo( "Hello World!" ) );
-
-      // TEARDOWN:
+      
+      //TEAD DOWN:
       sut.stop();
-      sut.unInstall();
    }
 
-   @Override
-   public void afterEachTests() throws Exception {
-      assertThat( sut.getExecutionStatus(), equalTo( Application.ExecutionStatus.stopped ) );
-      assertThat( sut.getInstallationStatus(), equalTo( Application.InstallationStatus.notInstalled ) );
-   }
 }

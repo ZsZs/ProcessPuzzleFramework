@@ -33,7 +33,7 @@ public class TestRespositoryMappings extends RepositoryMappings {
 
    @Override
    protected void setUpRespositoryAndStrategyMappings() {
-      Class[] strategies = {HibernatePersistenceProvider.class, InMemoryPersistenceProvider.class};
+      Class<?>[] strategies = {HibernatePersistenceProvider.class, InMemoryPersistenceProvider.class};
       appendRepositoryStrategyMapping(TestEntityRepository.class, createListFromArray( strategies ));
    }
 }

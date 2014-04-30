@@ -40,6 +40,7 @@ import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.GenericRepository;
 import com.processpuzzle.persistence.query.domain.ComparisonOperators;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
+import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 import com.processpuzzle.persistence.query.domain.TextAttributeCondition;
 
 public class ArtifactTypeRepository extends GenericRepository<ArtifactType> {
@@ -106,7 +107,7 @@ public class ArtifactTypeRepository extends GenericRepository<ArtifactType> {
    }
 
    public ArtifactType findArtifactTypeByName( UnitOfWork work, String typeName ) {
-      ArtifactTypeIdentity identity = new ArtifactTypeIdentity();
+      ArtifactTypeIdentity identity = new ArtifactTypeIdentity( new DefaultQueryContext() );
       identity.getQueryContext().addTextValueFor( "nameValue", typeName );
       return findByIdentityExpression( work, identity );
    }

@@ -31,7 +31,6 @@ import com.processpuzzle.commons.persistence.RepositoryEventHandler;
 import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.commons.rdbms.DatabaseSpy;
 import com.processpuzzle.litest.fixture.TransientFreshFixture;
-import com.processpuzzle.litest.template.GenericTemplatedFixture;
 import com.processpuzzle.persistence.domain.DefaultPersistenceStrategy;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.HibernatePersistenceProvider;
@@ -67,6 +66,7 @@ public abstract class RepositoryTestFixture<R extends Repository<A>, A extends A
    }
 
    //Properties
+   public ProcessPuzzleContext getApplicationContext(){ return applicationContext; }
    public DatabaseSpy getDatabaseSpy() { return databaseSpy; }
    public R getRepository() { return repository; }
    public A getRoot() { return root; }
@@ -106,15 +106,15 @@ public abstract class RepositoryTestFixture<R extends Repository<A>, A extends A
    protected abstract A createNewAggregate() throws Exception;
 
    @SuppressWarnings( "unchecked" )
-   protected Repository instantiateGivenRepository( Class repositoryClass ) {
-      Repository repository = null;
-      Class[] parameterTypes = new Class[] { DefaultPersistenceStrategy.class };
-      Constructor repositoryConstructor;
+   protected Repository<A> instantiateGivenRepository( Class<A> repositoryClass ) {
+      Repository<A> repository = null;
+      Class<?>[] parameterTypes = new Class[] { DefaultPersistenceStrategy.class };
+      Constructor<?> repositoryConstructor;
 
       try{
          repositoryConstructor = repositoryClass.getConstructor( parameterTypes );
          Object[] constructorArguments = { strategy };
-         repository = (Repository) repositoryConstructor.newInstance( constructorArguments );
+         repository = (Repository<A>) repositoryConstructor.newInstance( constructorArguments );
       }catch( SecurityException e ){
          e.printStackTrace();
       }catch( NoSuchMethodException e ){
@@ -278,7 +278,7 @@ public abstract class RepositoryTestFixture<R extends Repository<A>, A extends A
    private R instantiateRepository( DefaultPersistenceStrategy strategy ) {
       R repository = null;
       Class<R> repositoryClass = (Class<R>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1];
-      Class[] parameterTypes = new Class[] { DefaultPersistenceStrategy.class };
+      Class<?>[] parameterTypes = new Class[] { DefaultPersistenceStrategy.class };
       Constructor<R> repositoryConstructor;
 
       try{

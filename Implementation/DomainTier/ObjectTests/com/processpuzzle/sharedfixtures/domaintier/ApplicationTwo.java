@@ -1,5 +1,7 @@
 package com.processpuzzle.sharedfixtures.domaintier;
 
+import org.springframework.core.io.ResourceLoader;
+
 import com.processpuzzle.application.domain.Application;
 
 public class ApplicationTwo extends Application {
@@ -7,6 +9,10 @@ public class ApplicationTwo extends Application {
 
    public ApplicationTwo(String configurationDescriptorPath) {
       super(configurationDescriptorPath);
+   }
+
+   public ApplicationTwo( String configurationDescriptorPath, ResourceLoader resourceLoader ) {
+      super(configurationDescriptorPath, resourceLoader );
    }
 
    @Override

@@ -1,11 +1,11 @@
-/*
- * Created on May 25, 2006
- */
 package com.processpuzzle.application.security.domain;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,70 +18,71 @@ import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.domain.Application;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
-/**
- * @author zsolt.zsuffa
- */
 public class UserTest {
+   private static final String USER_NAME = "John.Smith";
+   private static final String USER_PASSWORD = "password";
    private static Application application;
    private static ProcessPuzzleContext applicationContext;
    private static UserFactory userFactory;
-   private User johnSmith = null;
+   private User user = null;
    private AnAccessControlledObject aControlledObject;
    private AnAccessControlledObject anotherControlledObject;
 
    @BeforeClass
    public static void beforeAllTest() {
+      application = mock( Application.class );
       applicationContext = ApplicationContextFactory.create( application, DomainTierTestConfiguration.APPLICATION_CONFIGURATION_DESCRIPTOR_PATH );
-      applicationContext.setUp( Application.Action.start );
+      when( application.getContext() ).thenReturn( applicationContext );
+      applicationContext.setUp( Application.Action.install );
       userFactory = applicationContext.getEntityFactory( UserFactory.class );
    }
-   
-   @AfterClass
-   public static void afterAllTest() {
-      applicationContext.tearDown( Application.Action.stop );
-   }
-   
+
    @Before
    public void beforeEachTests() throws Exception {
-      aControlledObject = new AnAccessControlledObject(new Integer(1));
-      aControlledObject.setName("aControlledObject");
-      anotherControlledObject = new AnAccessControlledObject(new Integer(2));
-      anotherControlledObject.setName("anotherControlledObject");
+      aControlledObject = new AnAccessControlledObject( new Integer( 1 ) );
+      aControlledObject.setName( "aControlledObject" );
+      anotherControlledObject = new AnAccessControlledObject( new Integer( 2 ) );
+      anotherControlledObject.setName( "anotherControlledObject" );
 
-      johnSmith = userFactory.createUser("John.Smith", "password");
+      user = userFactory.createUser( USER_NAME, USER_PASSWORD );
    }
 
    @After
    public void afterEachTests() throws Exception {
-      johnSmith = null;
+      user = null;
+   }
+
+   @AfterClass
+   public static void afterAllTest() {
+      applicationContext.tearDown( Application.Action.uninstall );
    }
 
    @Test
-   public final void constructor_ForRequiredAttributes () {
-      assertEquals("After createtion the usename should be:", "John.Smith", johnSmith.getUserName());
-      assertEquals("After createtion the password should be:", "password", johnSmith.getPassword());
+   public final void constructor_savesRequiredProperties() {
+      assertThat( user.getUserName(), equalTo( USER_NAME ));
+      assertThat( user.getPassword(), equalTo( USER_PASSWORD ));
    }
 
    @Test
-   public final void addRightFor () {
-      johnSmith.addRightFor( aControlledObject, true, false, true, false );
-      assertNotNull("'johnSmith' has rights for 'aControlledObject'", johnSmith.getRightFor(aControlledObject));
+   public final void addRightFor() {
+      user.addRightFor( aControlledObject, true, false, true, false );
+      assertNotNull( "'johnSmith' has rights for 'aControlledObject'", user.getRightFor( aControlledObject ) );
 
-      johnSmith.addRightFor( anotherControlledObject, true, true, true, true );
-      assertNotNull("'johnSmith' has rights for 'anotherControlledObject'", johnSmith.getRightFor(anotherControlledObject));
+      user.addRightFor( anotherControlledObject, true, true, true, true );
+      assertNotNull( "'johnSmith' has rights for 'anotherControlledObject'", user.getRightFor( anotherControlledObject ) );
    }
-   
-   @Test (expected = AccessRightConstraintViolationException.class)
+
+   @Test( expected = AccessRightConstraintViolationException.class )
    public final void testAddRightFor_ForDuplicateTrial() {
-      //Attempt to add duplicate right for the same controlled object throws an exception.
-      johnSmith.addRightFor( aControlledObject );
-      johnSmith.addRightFor( aControlledObject );
+      // Attempt to add duplicate right for the same controlled object throws an exception.
+      user.addRightFor( aControlledObject );
+      user.addRightFor( aControlledObject );
    }
-   
+
    @Test
-   public final void getRightFor () {
-      assertNull("'johnSmith' doesn't have right for 'aControlledObject'", johnSmith.getRightFor(aControlledObject));
-      johnSmith.addRightFor(aControlledObject);
-      assertNotNull("But now, yes.", johnSmith.getRightFor(aControlledObject));
+   public final void getRightFor() {
+      assertNull( "'johnSmith' doesn't have right for 'aControlledObject'", user.getRightFor( aControlledObject ) );
+      user.addRightFor( aControlledObject );
+      assertNotNull( "But now, yes.", user.getRightFor( aControlledObject ) );
    }
 }

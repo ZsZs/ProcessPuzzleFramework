@@ -5,7 +5,7 @@ import com.processpuzzle.litest.template.RepositoryTestFixture;
 
 public class ApplicationEventRepositoryTestFixture extends RepositoryTestFixture<ApplicationEventRepository, ApplicationEvent> {
 
-   protected ApplicationEventRepositoryTestFixture( RepositoryTestEnvironment<ApplicationEventRepository, RepositoryTestFixture<ApplicationEventRepository,ApplicationEvent>> testEnvironment ) {
+   public ApplicationEventRepositoryTestFixture( RepositoryTestEnvironment<ApplicationEventRepository, RepositoryTestFixture<ApplicationEventRepository,ApplicationEvent>> testEnvironment ) {
       super( testEnvironment );
    }
 

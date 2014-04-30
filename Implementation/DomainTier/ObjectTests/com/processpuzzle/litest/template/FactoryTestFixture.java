@@ -16,6 +16,10 @@ public abstract class FactoryTestFixture<S extends EntityFactory<E>, E extends E
    protected ProcessPuzzleContext applicationContext;
    protected S factory;
 
+   //Properties
+   public ProcessPuzzleContext getApplicationContext(){ return applicationContext; }
+   
+   //Protected, private helper methods
    protected FactoryTestFixture( FactoryTestEnvironment<S, ?> testEnvironment ) {
       super( testEnvironment );
       this.applicationFixture = testEnvironment.getApplicationFixture();
@@ -36,12 +40,11 @@ public abstract class FactoryTestFixture<S extends EntityFactory<E>, E extends E
 
    @Override
    protected void releaseResources() {
-      // TODO Auto-generated method stub
-      
    }
 
    @SuppressWarnings("unchecked")
    protected void saveAggregateRoot( AggregateRoot aggregateRoot ) {
+      @SuppressWarnings( "rawtypes" )
       Repository repository = applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       repository.add( work, aggregateRoot );
@@ -50,6 +53,7 @@ public abstract class FactoryTestFixture<S extends EntityFactory<E>, E extends E
    
    @SuppressWarnings("unchecked")
    protected void deleteAggregateRoot( AggregateRoot aggregateRoot ) {
+      @SuppressWarnings( "rawtypes" )
       Repository repository = applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       repository.delete( work, aggregateRoot );

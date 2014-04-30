@@ -37,7 +37,6 @@ You should have received a copy of the GNU General Public License along with thi
  */
 package com.processpuzzle.application.domain;
 
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.text.MessageFormat;
@@ -85,7 +84,7 @@ public abstract class Application extends GenericEntity<Application> implements 
    protected String applicationDescription;
    protected ExecutionStatus executionStatus = ExecutionStatus.stopped;
    protected InstallationStatus installationStatus = InstallationStatus.notInstalled;
-   protected static ProcessPuzzleContext applicationContext = null;
+   protected ProcessPuzzleContext applicationContext;
    protected String configurationDescriptorPath = "classpath:com/itcodex/objectpuzzle/framework/configuration/domaintier/configuration_descriptor.xml";
    protected Map<Application.Events, List<ApplicationEvent>> history = new LinkedHashMap<Events, List<ApplicationEvent>>();
    protected List<DataLoader> dataLoaders = new ArrayList<DataLoader>();
@@ -194,15 +193,6 @@ public abstract class Application extends GenericEntity<Application> implements 
    // Public accessors
    public List<ApplicationEvent> findApplicationEventsByType( Events searchedEvent ) {
       return history.get( searchedEvent );
-//      Map<Events, ApplicationEvent> resultSet = new LinkedHashMap<Events, ApplicationEvent>();
-//      for( Iterator iter = history.entrySet().iterator(); iter.hasNext(); ){
-//         Map.Entry<Events, ApplicationEvent> historyEvent = (Map.Entry) iter.next();
-//         Events key = historyEvent.getKey();
-//         ApplicationEvent event = historyEvent.getValue();
-//         if( key == searchedEvent )
-//            resultSet.put( key, event );
-//      }
-//      return resultSet;
    }
 
    @Override
@@ -228,58 +218,25 @@ public abstract class Application extends GenericEntity<Application> implements 
    }
 
    // Properties
-   public ProcessPuzzleContext getContext() {
-      return applicationContext;
-   }
-
-   public String getApplicationName() {
-      return applicationName;
-   }
-
-   public String getApplicationVersion() {
-      return applicationVersion;
-   }
-
-   public String getDescription() {
-      return applicationDescription;
-   }
-
-   public ExecutionStatus getExecutionStatus() {
-      return executionStatus;
-   }
-
-   public InstallationStatus getInstallationStatus() {
-      return installationStatus;
-   }
-
-   public List<DataLoader> getDataLoaders() {
-      return dataLoaders;
-   }
-
-   public String getConfigurationDescriptorPath() {
-      return configurationDescriptorPath;
-   }
-
-   public enum InstallationStatus {
-      installed, notInstalled
-   }
-
-   public enum ExecutionStatus {
-      stopped, running, suspended
-   }
-
-   public enum Events {
-      started, stopped, installed, unistalled, dataload, backup, restore
-   }
-
-   public enum Action {
-      install, uninstall, start, stop
-   }
+   public String getApplicationName() { return applicationName; }
+   public String getApplicationVersion() { return applicationVersion; }
+   public String getConfigurationDescriptorPath() { return configurationDescriptorPath; }
+   public ProcessPuzzleContext getContext() { return applicationContext; }
+   public List<DataLoader> getDataLoaders() { return dataLoaders; }
+   public String getDescription() { return applicationDescription; }
+   public ExecutionStatus getExecutionStatus() { return executionStatus; }
+   public InstallationStatus getInstallationStatus() { return installationStatus; }
+   
+   // Embeded enumerations
+   public enum InstallationStatus { installed, notInstalled }
+   public enum ExecutionStatus { stopped, running, suspended }
+   public enum Events { started, stopped, installed, unistalled, dataload, backup, restore }
+   public enum Action { install, uninstall, start, stop }
 
    // Protedted, private helper methods
    protected abstract void defineApplicationDescription();
 
-   protected static void runDataLoader( String property ) {
+   protected void runDataLoader( String property ) {
       String loaderClassName = (String) applicationContext.getProperty( property );
       if( loaderClassName != null ){
          try{

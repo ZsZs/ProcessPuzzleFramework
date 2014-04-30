@@ -4,7 +4,9 @@ import com.processpuzzle.litest.template.FactoryTestEnvironment;
 import com.processpuzzle.litest.template.FactoryTestFixture;
 
 public class UserFactoryTestFixture extends FactoryTestFixture<UserFactory, User> {
-   private User johnSmith = null;
+   private static final String USER_NAME = "john.smith";
+   private static final String USER_PASSWORD = "psw";
+   private User user = null;
 
    public UserFactoryTestFixture( FactoryTestEnvironment<UserFactory, ?> testEnvironment ) {
       super( testEnvironment );
@@ -12,9 +14,10 @@ public class UserFactoryTestFixture extends FactoryTestFixture<UserFactory, User
 
    @Override
    protected void configureAfterSutInstantiation() {
-      johnSmith = factory.createUser("john.smith", "psw");
+      user = factory.createUser( USER_NAME, USER_PASSWORD );
    }
 
-   public User getJohnSmith() { return johnSmith; }
-
+   public User getJohnSmith() {
+      return user;
+   }
 }

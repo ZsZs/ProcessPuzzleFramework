@@ -42,7 +42,7 @@ import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 public abstract class ApplicationEvent extends GenericEntity<ApplicationEvent> implements AggregateRoot {
    protected static Application.Events eventName = null;
    protected String eventDescription = "";
-   protected TimePoint occuredOn = null;
+   protected TimePoint occuredOn;
    
    ApplicationEvent(String desc) {
       occuredOn = new TimePoint( new Date( System.currentTimeMillis() ));

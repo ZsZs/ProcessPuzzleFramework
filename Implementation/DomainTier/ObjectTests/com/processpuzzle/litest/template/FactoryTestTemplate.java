@@ -21,6 +21,12 @@ public abstract class FactoryTestTemplate<S extends EntityFactory<A>, F extends 
       super( fixtureContainerConfigurationPath, FactoryTestEnvironment.class );
    }
 
+   @Override
+   public void beforeEachTest() {
+      super.beforeEachTest();
+      applicationContext = templatedFixture.getApplicationContext();
+   }
+
    @Test public abstract void create_ForSuccess();
    @Test (expected = EntityIdentityCollitionException.class ) public abstract void create_ForCollision();
    

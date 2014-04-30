@@ -1,5 +1,6 @@
 package com.processpuzzle.application.domain;
 
+import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsSame.*;
@@ -21,6 +22,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
 import com.processpuzzle.application.resource.domain.ResourceNotFoundException;
+import com.processpuzzle.commons.persistence.RepositoryResultSet;
 import com.processpuzzle.persistence.domain.IdentityCollisionException;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
@@ -37,13 +39,17 @@ public class ApplicationRepositoryTest {
       applicationRepository.add( application );      
    }
 
-   @Test public void testInitialization_ForSuccess() {
+   @After public void afterEachTests() {
+      applicationRepository.delete( application );
+   }
+
+   @Test public void instantion_whenValidStoragePathIsGiven_isSuccessfull() {
       assertThat( applicationRepository.getStorageXmlPath(), equalTo( DomainTierTestConfiguration.APPLICATION_REPOSITORY_STORAGE_PATH ));
       assertThat( applicationRepository.getStorageXmlResource(), notNullValue() );
    }
    
    @Test( expected = ResourceNotFoundException.class )
-   public void testInitiation_ForResourceNotFound() throws DocumentException, IOException, InstantiationException {
+   public void instantiation_whenInvalidStoragePathIsGeven_throwsResourceNotFoundException() throws DocumentException, IOException, InstantiationException {
       ApplicationRepository.getInstance( "blabla" );
    }
    
@@ -79,10 +85,12 @@ public class ApplicationRepositoryTest {
       assertThat( foundApplicationInstance, equalTo( application ));
    }
    
-   @After public void afterEachTests() {
-      applicationRepository.delete( application );
+   @Test public void findAll_returnsAllStoredApplications(){
+      RepositoryResultSet<Application> applications = applicationRepository.findAll();
+      
+      assertThat( applications.size(), greaterThan( 0 ));
    }
-
+   
    //Private helper methods
    private void compareApplicationPropertiesInXml() throws DocumentException, IOException {
       assertThat( getApplicationProperty( ApplicationRepository.VERSION_ELEMENT ), equalTo( application.getApplicationVersion() ));

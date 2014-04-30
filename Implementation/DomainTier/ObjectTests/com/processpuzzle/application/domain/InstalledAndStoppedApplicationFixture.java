@@ -13,7 +13,8 @@ public class InstalledAndStoppedApplicationFixture extends DefaultApplicationFix
    public InstalledAndStoppedApplicationFixture() {
       super( DomainTierTestConfiguration.APPLICATION_CONFIGURATION_DESCRIPTOR_PATH );
    }
-
+   
+   //Protected, private helper methods
    @Override
    protected Application instantiateSUT() {
       application = ApplicationFactory.create( ApplicationTwo.class, configurationPath );
@@ -41,6 +42,7 @@ public class InstalledAndStoppedApplicationFixture extends DefaultApplicationFix
 
    @Override
    protected void releaseResources() {
+      application.unInstall();
       applicationRepository.delete( application );
       super.releaseResources();
    }

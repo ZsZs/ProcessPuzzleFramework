@@ -36,6 +36,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
+import java.util.List;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -48,6 +49,7 @@ import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
+import com.google.common.collect.Lists;
 import com.processpuzzle.application.domain.Application.ExecutionStatus;
 import com.processpuzzle.application.domain.Application.InstallationStatus;
 import com.processpuzzle.application.resource.domain.ResourceNotFoundException;
@@ -62,6 +64,7 @@ import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.IdentityCollisionException;
 import com.processpuzzle.persistence.domain.RepositoryAction;
 import com.processpuzzle.persistence.domain.RepositoryException;
+import com.processpuzzle.persistence.domain.SimpleResultSet;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
 import com.processpuzzle.persistence.query.domain.DefaultQuery;
 
@@ -169,9 +172,18 @@ public class ApplicationRepository implements Repository<Application> {
       return application;
    }
 
-   public RepositoryResultSet<Application> findAll(DefaultUnitOfWork work) {
-      // TODO Auto-generated method stub
-      return null;
+   public RepositoryResultSet<Application> findAll() {
+      DefaultUnitOfWork work = new DefaultUnitOfWork( true );
+      RepositoryResultSet<Application> applications = findAll( work );
+      work.finish();      
+      return applications;
+   }
+
+   public RepositoryResultSet<Application> findAll( DefaultUnitOfWork work ) {
+      List<Node> applicationNodes = findApplicationElements();
+      List<Application> definedApplications = instantiateApplicationObjects( applicationNodes );
+      RepositoryResultSet<Application> resultSet = new SimpleResultSet<Application>( definedApplications );
+      return resultSet;
    }
 
    public Application findById(DefaultUnitOfWork work, Integer id) {
@@ -179,8 +191,7 @@ public class ApplicationRepository implements Repository<Application> {
       return null;
    }
 
-   @SuppressWarnings("unchecked")
-   public Application findByIdentityExpression(DefaultUnitOfWork work, DefaultIdentityExpression identity) {
+   public Application findByIdentityExpression(DefaultUnitOfWork work, @SuppressWarnings( "rawtypes" ) DefaultIdentityExpression identity) {
       // TODO Auto-generated method stub
       return null;
    }
@@ -209,6 +220,14 @@ public class ApplicationRepository implements Repository<Application> {
       Node node = null;
       node = xmlDocument.selectSingleNode( xPath );
       return node;
+   }
+   
+   @SuppressWarnings( "unchecked" )
+   private List<Node> findApplicationElements() {
+      String xPath = "/applicationRepository/application";
+      List<Node> nodes = null;
+      nodes = xmlDocument.selectNodes( xPath );
+      return nodes;
    }
    
    private void createApplicationElement(Application application) {
@@ -289,6 +308,15 @@ public class ApplicationRepository implements Repository<Application> {
       return application;
    }
 
+   private List<Application> instantiateApplicationObjects( List<Node> applicationNodes ) {
+      List<Application> applications = Lists.newArrayList();
+      for( Node node : applicationNodes ){
+         Application application = instantiateApplicationObject( (Element) node );
+         applications.add( application );
+      }
+      return applications;
+   }
+   
    private void saveApplicationProperties( Element applicationElement, Application application ) {
       applicationElement.element( VERSION_ELEMENT ).setText( application.getApplicationVersion() );
       applicationElement.element( DESCRIPTION_ELEMENT ).setText( application.getDescription() );

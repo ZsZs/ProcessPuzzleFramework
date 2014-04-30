@@ -8,7 +8,7 @@ import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 public class NotInstalledApplicationFixture extends DefaultApplicationFixture<Application> {
    
    public NotInstalledApplicationFixture() {
-      super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
+      super( DomainTierTestConfiguration.APPLICATION_CONFIGURATION_DESCRIPTOR_PATH );
    }
 
    @Override
@@ -23,9 +23,13 @@ public class NotInstalledApplicationFixture extends DefaultApplicationFixture<Ap
    }
 
    @Override
+   protected void configureAfterSutInstantiation() {
+      // Suppress parent class functionality.
+   }
+
+   @Override
    protected void configureBeforeSutInstantiation() {
-      // TODO Auto-generated method stub
-      
+      // No need to do here.
    }
 
 }

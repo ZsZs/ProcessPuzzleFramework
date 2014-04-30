@@ -31,8 +31,9 @@ public abstract class DefaultApplicationFixture<A extends Application> extends G
    
    //Properties
    public Application getApplication() { return application; }
-   public ApplicationRepository getApplicationRepository() { return applicationRepository; }
    public ProcessPuzzleContext getApplicationContext() { return applicationContext; }
+   public String getApplicationName() { return application.getApplicationName(); }
+   public ApplicationRepository getApplicationRepository() { return applicationRepository; }
    public UserRequestContext getUserRequestContext() { return requestContext; }
    
 
@@ -73,5 +74,4 @@ public abstract class DefaultApplicationFixture<A extends Application> extends G
       application = null;
       applicationRepository = null;
    }
-
 }

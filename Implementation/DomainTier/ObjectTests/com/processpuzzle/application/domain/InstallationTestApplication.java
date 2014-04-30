@@ -1,9 +1,15 @@
 package com.processpuzzle.application.domain;
 
+import org.springframework.core.io.ResourceLoader;
+
 public class InstallationTestApplication extends Application {
 
    public InstallationTestApplication( String configurationDescriptorPath ) {
       super( configurationDescriptorPath );
+   }
+   
+   public InstallationTestApplication( String configurationDescriptorPath, ResourceLoader resourceLoader ){
+      super( configurationDescriptorPath, resourceLoader );
    }
 
    @Override

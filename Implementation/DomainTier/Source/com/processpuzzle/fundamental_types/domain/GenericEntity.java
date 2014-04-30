@@ -48,16 +48,15 @@ public abstract class GenericEntity<E extends Entity> implements Entity {
    protected DefaultIdentityExpression<E> defaultIdentity;
    protected Set<DefaultIdentityExpression<E>> identities = new HashSet<DefaultIdentityExpression<E>>();
    
-//Constructors
+   //Constructors
    protected GenericEntity() {
-//      defineIdentityExpressions();
+      //defineIdentityExpressions();
    }
 
-//Public accessors
+   //Public accessors
    public abstract <I extends DefaultIdentityExpression<E>> I getDefaultIdentity();
-   protected abstract void defineIdentityExpressions();
 
-//Properties
+   //Properties
    public Integer getId() { return id; }
    public void setId( Integer id ) { this.id = id; }
    
@@ -66,6 +65,6 @@ public abstract class GenericEntity<E extends Entity> implements Entity {
    
    public Set<DefaultIdentityExpression<E>> getIdentities() { return identities; }
    
-//Private helper methods
-//   protected abstract void defineIdentityExpressions();
+   //Protected private helper methods
+   protected abstract void defineIdentityExpressions();
 }

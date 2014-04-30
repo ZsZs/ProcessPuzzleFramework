@@ -6,13 +6,10 @@ import java.sql.ResultSet;
 import org.junit.Test;
 
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
-import com.processpuzzle.application.domain.ConfigurableApplicationFixture;
 import com.processpuzzle.commons.persistence.AggregateRoot;
 import com.processpuzzle.commons.persistence.Repository;
 import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.commons.rdbms.DatabaseSpy;
-import com.processpuzzle.litest.fixture.CompositeFixture;
-import com.processpuzzle.litest.template.GenericTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.persistence.domain.GenericRepository;
 
@@ -38,16 +35,14 @@ public abstract class RepositoryTestTemplate<R extends GenericRepository<?>, F e
       super( fixtureContainerConfigurationPath, RepositoryTestEnvironment.class );
    }
 
-   @Override public void beforeAllTests() {
-      super.beforeAllTests();
-      DefaultApplicationFixture applicationFixture = (DefaultApplicationFixture) ((CompositeFixture<?>) fixtureStrategy.getFixture()).getFixture( ConfigurableApplicationFixture.class );
-      applicationContext = applicationFixture.getApplication().getContext();
-   }
-   
+   @SuppressWarnings( "unchecked" )
    @Override public void beforeEachTest() {
       super.beforeEachTest();
+      applicationContext = templatedFixture.getApplicationContext();
       databaseSpy = templatedFixture.getDatabaseSpy();
       root = (A) templatedFixture.getRoot();
+      repository = templatedFixture.getRepository();
+      testWork = new DefaultUnitOfWork( true );
    }
 
    @Test public abstract void testAdd_ForOwnedAttributesAndComponents() throws Exception;
@@ -64,17 +59,17 @@ public abstract class RepositoryTestTemplate<R extends GenericRepository<?>, F e
 
    @SuppressWarnings("unchecked")
    protected void saveAggregateRoot( AggregateRoot aggregateRoot, ProcessPuzzleContext applicationContext ) {
-      Repository repository = applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
+      Repository<A> repository = (Repository<A>) applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      repository.add( work, aggregateRoot );
+      repository.add( work, (A) aggregateRoot );
       work.finish();
    }
 
    @SuppressWarnings("unchecked")
    protected void deleteAggregateRoot( AggregateRoot aggregateRoot, ProcessPuzzleContext applicationContext ) {
-      Repository repository = applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
+      Repository<A> repository = (Repository<A>) applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      repository.delete( work, aggregateRoot );
+      repository.delete( work, (A) aggregateRoot );
       work.finish();
    }
    

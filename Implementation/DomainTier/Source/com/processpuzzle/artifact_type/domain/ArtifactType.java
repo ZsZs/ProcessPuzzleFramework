@@ -57,6 +57,7 @@ import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.business.definition.domain.SystemArtifact;
 import com.processpuzzle.fundamental_types.domain.GenericEntity;
 import com.processpuzzle.persistence.query.domain.DefaultIdentityExpression;
+import com.processpuzzle.persistence.query.domain.DefaultQueryContext;
 import com.processpuzzle.resource.resourcetype.domain.AssetType;
 import com.processpuzzle.resource.resourcetype.domain.ResourceType;
 import com.processpuzzle.util.domain.GeneralService;
@@ -216,7 +217,7 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
    public String getBaseUri() { return baseUri; }
    public String getCaption() { return caption; }
    public List<DefaultAccessRight> getDefaultAccessRights() { return defaultAccessRights; }
-   public @Override <I extends DefaultIdentityExpression<ArtifactType>> I getDefaultIdentity() { return null; }
+   public @Override @SuppressWarnings( "unchecked" ) <I extends DefaultIdentityExpression<ArtifactType>> I getDefaultIdentity() { defineIdentityExpressions(); return (I) defaultIdentity; }
    public DefaultAccessRight getDefaultRightByUserRole( String roleName ) {
       for( Iterator<DefaultAccessRight> iter = this.getDefaultAccessRights().iterator(); iter.hasNext(); ){
          DefaultAccessRight defaultAccessRight = iter.next();
@@ -287,7 +288,8 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
    
    //Protected, private helper methods
    protected @Override void defineIdentityExpressions() {
-      defaultIdentity = new ArtifactTypeIdentity();
+      DefaultQueryContext context = new DefaultQueryContext();
+      defaultIdentity = new ArtifactTypeIdentity( context );
       identities.add( defaultIdentity );
    }
 

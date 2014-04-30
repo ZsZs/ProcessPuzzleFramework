@@ -152,8 +152,7 @@ public abstract class GenericRepository<E extends AggregateRoot> implements Repo
    }
 
    // Protected accessors: just a simple implementation of public abstract accessors
-   @SuppressWarnings( "unchecked" )
-   protected E findById( UnitOfWork work, Class entityClass, Integer id ) {
+   protected E findById( UnitOfWork work, Class<? extends E> entityClass, Integer id ) {
       OpAssertion.ppAssert( work.isStarted(), "UnitOfWork should be started before invoking findById()" );
       log.trace( "Repository: " + repositoryClass.getSimpleName() + ".findById( " + id.toString() + ") was called." );
       return (E) strategy.findById( work, entityClass, id );

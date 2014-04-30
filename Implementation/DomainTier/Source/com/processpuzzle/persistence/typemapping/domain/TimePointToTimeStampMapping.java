@@ -32,6 +32,7 @@ You should have received a copy of the GNU General Public License along with thi
 package com.processpuzzle.persistence.typemapping.domain;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -73,7 +74,7 @@ public class TimePointToTimeStampMapping implements CompositeUserType {
    public Object nullSafeGet(ResultSet rs, String[] names, SessionImplementor session, Object owner) throws HibernateException, SQLException {
 
       Timestamp timeStamp = (Timestamp) StandardBasicTypes.TIMESTAMP.nullSafeGet( rs, names[0], session );
-      return new TimePoint( com.processpuzzle.fundamental_types.domain.TimeStamp.toDate( timeStamp ));
+      return new TimePoint( new Date( timeStamp.getTime() ));
    }
 
    public void nullSafeSet(PreparedStatement st, Object value, int index, SessionImplementor session) throws HibernateException, SQLException {
