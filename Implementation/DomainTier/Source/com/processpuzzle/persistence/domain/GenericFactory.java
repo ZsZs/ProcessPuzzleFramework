@@ -102,7 +102,7 @@ public abstract class GenericFactory<E extends Entity> implements EntityFactory<
 
    @SuppressWarnings( "unchecked" )
    protected E instantiateEntity( Class<? extends Entity> entityClass, Class<?>[] argumentClasses, Object[] arguments ) {
-      Constructor entityConstructor;
+      Constructor<?> entityConstructor;
       E newEntity;
 
       try{

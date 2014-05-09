@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 <hibernate-mapping default-access="field">
 	<union-subclass name="com.processpuzzle.artifact_type.domain.ArtifactType"
 		table="T_ARTIFACT_TYPE"
@@ -24,7 +24,7 @@
 			column="ARTIFACT_TYPE_GROUP_ID" 
 			class="com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup"
 			lazy="false"
-			not-null="true"
+			not-null="false"
  			insert="false"
 			update="false">
 		</many-to-one>

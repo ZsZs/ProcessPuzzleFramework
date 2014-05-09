@@ -107,8 +107,7 @@ public class ArtifactTypeRepository extends GenericRepository<ArtifactType> {
    }
 
    public ArtifactType findArtifactTypeByName( UnitOfWork work, String typeName ) {
-      ArtifactTypeIdentity identity = new ArtifactTypeIdentity( new DefaultQueryContext() );
-      identity.getQueryContext().addTextValueFor( "nameValue", typeName );
+      ArtifactTypeIdentity identity = new ArtifactTypeIdentity( typeName, new DefaultQueryContext() );
       return findByIdentityExpression( work, identity );
    }
 

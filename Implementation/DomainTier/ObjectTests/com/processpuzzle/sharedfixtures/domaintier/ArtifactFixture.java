@@ -19,7 +19,7 @@ public class ArtifactFixture {
    public void setUp() {
       applicationContext = UserRequestManager.getInstance().getApplicationContext();
       artifactTypeFactory = applicationContext.getEntityFactory( ArtifactTypeFactory.class );
-      folderType = artifactTypeFactory.createArtifactType( SystemArtifactTypes.ARTIFACT_FOLDER.getName() );
+      folderType = artifactTypeFactory.create( SystemArtifactTypes.ARTIFACT_FOLDER.getName(), "SystemAdministration" );
       artifacTypeRepository = applicationContext.getRepository( ArtifactTypeRepository.class );
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
       artifacTypeRepository.add( work, folderType );

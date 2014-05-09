@@ -24,6 +24,7 @@
   <bean id="addressFactory" class="com.processpuzzle.party.domain.AddressFactory" lazy-init="true"/>
   <bean id="artifactFolderFactory" class="com.processpuzzle.artifact.domain.ArtifactFolderFactory" lazy-init="true"/>
   <bean id="artifactTypeFactory" class="com.processpuzzle.artifact_type.domain.ArtifactTypeFactory" lazy-init="true"/>
+  <bean id="artifactTypeGroupFactory" class="com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupFactory" lazy-init="true"/>
   <bean id="catalogEntryDataSheetFactory" class="com.processpuzzle.product.artifact.CatalogEntryDataSheetFactory" lazy-init="true"/>
   <bean id="commentListFactory" class="com.processpuzzle.artifact.domain.CommentListFactory" lazy-init="true"/>
   <bean id="companyDataSheetFactory" class="com.processpuzzle.party.artifact.CompanyDataSheetFactory" lazy-init="true"/>

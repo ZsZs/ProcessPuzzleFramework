@@ -51,8 +51,8 @@ public class ProtocolTestFixture extends GenericTestFixture<Protocol> implements
       repository = DomainTier_ConfigurationFixture.getProtocolRepository();
       artifactTypeFactory = configurationFixture.getConfig().getEntityFactory( ArtifactTypeFactory.class );
 
-      testArtifactType_1 = artifactTypeFactory.createArtifactType( "TestArtifactType_1", "SystemAdministration" );
-      testArtifactType_2 = artifactTypeFactory.createArtifactType( "TestArtifactType_2", "SystemAdministration" );
+      testArtifactType_1 = artifactTypeFactory.create( "TestArtifactType_1", "SystemAdministration" );
+      testArtifactType_2 = artifactTypeFactory.create( "TestArtifactType_2", "SystemAdministration" );
       artifactInstance_1 = new ArtifactInstance( testArtifactType_1, "InstanceInWorkflow_1" );
       artifactInstance_2 = new ArtifactInstance( testArtifactType_1, "InstanceInWorkflow_2" );
 

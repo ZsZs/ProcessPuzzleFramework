@@ -27,10 +27,9 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package com.processpuzzle.fundamental_types.domain;
-
 
 import java.util.HashSet;
 import java.util.Set;
@@ -47,24 +46,58 @@ public abstract class GenericEntity<E extends Entity> implements Entity {
    protected int version = 0;
    protected DefaultIdentityExpression<E> defaultIdentity;
    protected Set<DefaultIdentityExpression<E>> identities = new HashSet<DefaultIdentityExpression<E>>();
-   
-   //Constructors
-   protected GenericEntity() {
-      //defineIdentityExpressions();
+
+   // Constructors
+   protected GenericEntity() {}
+
+   // Public accessors
+   @Override
+   public boolean equals( Object other ) {
+      if( id == null ) return super.equals( other );
+    
+      if( this == other ) return true;
+      if( !(other instanceof GenericEntity )) return false;
+      
+      final GenericEntity<?> entity = (GenericEntity<?>) other;
+      
+      if( this.id != null && entity.getId() != null && this.id == entity.getId() ) return true;
+      
+      return false;
    }
 
-   //Public accessors
+
+   @Override
+   public int hashCode() {
+      int result;
+      if( id == null ) result = super.hashCode();
+      else result = id.hashCode();
+      
+      return result;
+   }
+
    public abstract <I extends DefaultIdentityExpression<E>> I getDefaultIdentity();
 
-   //Properties
-   public Integer getId() { return id; }
-   public void setId( Integer id ) { this.id = id; }
-   
-   public int getVersion() { return version; }
-   public void setVersion( int version ) { this.version = version; }
-   
-   public Set<DefaultIdentityExpression<E>> getIdentities() { return identities; }
-   
-   //Protected private helper methods
+   // Properties
+   public Integer getId() {
+      return id;
+   }
+
+   public void setId( Integer id ) {
+      this.id = id;
+   }
+
+   public int getVersion() {
+      return version;
+   }
+
+   public void setVersion( int version ) {
+      this.version = version;
+   }
+
+   public Set<DefaultIdentityExpression<E>> getIdentities() {
+      return identities;
+   }
+
+   // Protected private helper methods
    protected abstract void defineIdentityExpressions();
 }

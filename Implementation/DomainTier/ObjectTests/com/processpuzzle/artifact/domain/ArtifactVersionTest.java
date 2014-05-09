@@ -55,7 +55,7 @@ public class ArtifactVersionTest {
       
       applicationContext = applicationContextFixture.getApplicationContext();
       
-      typeFixture = ArtifactTypeTestFixture.getInstance( applicationContext );
+      typeFixture = new ArtifactTypeTestFixture( null );
       typeFixture.setUp();
 
       userFactory = applicationContext.getEntityFactory( UserFactory.class );
@@ -121,7 +121,7 @@ public class ArtifactVersionTest {
    @Ignore
    @Test
    public final void testCreateArtifactVersion_withNameAndResponsibleAndType() {
-      ArtifactType type = artifactTypeFactory.createArtifactType( "testType", "ArtifactGroup" );
+      ArtifactType type = artifactTypeFactory.create( "testType", "ArtifactGroup" );
       ArtifactVersion version = new ArtifactVersion( "AVersion", person );
       assertNotNull( "The artifact version object is exist.", version );
       assertNotNull( "The artifact version's date of creation is not null.", version.getCreation() );
@@ -158,7 +158,7 @@ public class ArtifactVersionTest {
       version.setVersionControlled( true );
       assertTrue( "The artifact version is is version controlled.", version.isVersionControlled() );
 
-      ArtifactType artifactType = artifactTypeFactory.createArtifactType( "anArtifactType", "ArtifactGroup" );
+      ArtifactType artifactType = artifactTypeFactory.create( "anArtifactType", "ArtifactGroup" );
       assertNotNull( "The artifact type is not null.", artifactType );
 
       CommentList commentList = commentListFactory.create( "aCommentList" );
@@ -197,7 +197,7 @@ public class ArtifactVersionTest {
       version.setModification( modification );
       version.setVersionControlled( true );
 
-      ArtifactType artifactType = artifactTypeFactory.createArtifactType( "anArtifactType", "ArtifactGroup" );
+      ArtifactType artifactType = artifactTypeFactory.create( "anArtifactType", "ArtifactGroup" );
       assertNotNull( "The artifact type is not null.", artifactType );
 
       CommentList commentList = commentListFactory.create( "aCommentList" );

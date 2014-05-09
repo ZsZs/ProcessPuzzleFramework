@@ -19,14 +19,14 @@ import com.processpuzzle.artifact_type.domain.ArtifactTypeTestFixture;
  * @author zsolt.zsuffa
  */
 public class ListQueryViewTest {
-   private ArtifactTestFixture artifactFixture = null;
+   private GenericArtifactTestFixture artifactFixture = null;
    private TestEntityDataSheet dataSheet = null;
    private TestEntity testEntity = null;
    private TestEntityDataSheet_QueryView queryView = null;
 
    @Before
    public void setUp() throws Exception {
-      artifactFixture = ArtifactTestFixture.getInstance();
+      artifactFixture = null;
       artifactFixture.setUp();
       dataSheet = artifactFixture.getDataSheet();
       testEntity = dataSheet.getTestEntity();

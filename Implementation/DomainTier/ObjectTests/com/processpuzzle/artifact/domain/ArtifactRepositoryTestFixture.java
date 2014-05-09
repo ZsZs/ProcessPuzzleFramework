@@ -40,7 +40,7 @@ public class ArtifactRepositoryTestFixture extends RepositoryTestFixture<Default
       userRepository = applicationContext.getRepository( UserRepository.class );
       
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      subClassType = artifactTypeFactory.createArtifactType( "ArtifactSubClass" );
+      subClassType = artifactTypeFactory.create( "ArtifactSubClass", "SystemAdministration" );
       subClassType.setSystem( true );
       artifactTypeRepository.addArtifactType( work, subClassType );
       creator = userFactory.createUser( "testPerson", "password" );

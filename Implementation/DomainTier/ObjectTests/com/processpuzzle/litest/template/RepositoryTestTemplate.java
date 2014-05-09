@@ -29,6 +29,7 @@ public abstract class RepositoryTestTemplate<R extends GenericRepository<?>, F e
    protected Class<R> repositoryClass;
    protected A root;
    protected ResultSet rootRecord;
+   protected String tableName;
    protected UnitOfWork testWork;
 
    protected RepositoryTestTemplate( String fixtureContainerConfigurationPath ) {
@@ -41,6 +42,8 @@ public abstract class RepositoryTestTemplate<R extends GenericRepository<?>, F e
       applicationContext = templatedFixture.getApplicationContext();
       databaseSpy = templatedFixture.getDatabaseSpy();
       root = (A) templatedFixture.getRoot();
+      rootRecord = templatedFixture.getRootRecord();
+      tableName = templatedFixture.getRootTableName();
       repository = templatedFixture.getRepository();
       testWork = new DefaultUnitOfWork( true );
    }

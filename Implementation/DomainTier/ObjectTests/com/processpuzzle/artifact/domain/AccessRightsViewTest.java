@@ -44,7 +44,7 @@ public class AccessRightsViewTest {
       applicationContext = applicationContextFixture.getApplicationContext();
       
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      typeFixture = ArtifactTypeTestFixture.getInstance( applicationContext );
+      typeFixture = new ArtifactTypeTestFixture( null );
       typeFixture.setUp();
 
       applicationContext.setUp( Application.Action.start );

@@ -27,7 +27,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package com.processpuzzle.artifact_type.domain;
 
@@ -39,13 +39,13 @@ import com.processpuzzle.persistence.query.domain.TextAttributeCondition;
 
 public class ArtifactTypeIdentity extends DefaultIdentityExpression<ArtifactType> {
 
-   public ArtifactTypeIdentity( final  DefaultQueryContext context ) {
+   public ArtifactTypeIdentity( String typeName, final DefaultQueryContext context ) {
       super( context );
+      this.context.addTextValueFor( "nameValue", typeName );
    }
 
    @Override
    protected void buildQuery() {
-      condition.addAttributeCondition(new TextAttributeCondition("name",new QueryVariable("nameValue"),ComparisonOperators.EQUAL_TO));
+      condition.addAttributeCondition( new TextAttributeCondition( "name", new QueryVariable( "nameValue" ), ComparisonOperators.EQUAL_TO ) );
    }
-
 }

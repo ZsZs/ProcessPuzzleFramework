@@ -15,26 +15,18 @@ public class ArtifactFolderRepositoryTest extends RepositoryTestTemplate<Artifac
 
    @Override
    public void testAdd_ForOwnedAttributesAndComponents() throws Exception {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testAdd_ForReferencedAggregateRoots() {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testDelete_ForOwnedAttributesAndComponents() throws Exception {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testFindAll_ForResultCount() {
-      // TODO Auto-generated method stub
-      
    }
 
    public @Override void testFindById() {
@@ -50,45 +42,26 @@ public class ArtifactFolderRepositoryTest extends RepositoryTestTemplate<Artifac
 
    @Override
    public void testFindById_ForEagerLoadedComponents() {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testFindById_ForLazyLoadedComponents() {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testFindByQuery_ForComponentAttributes() {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testFindByQuery_ForDirectAttributes() {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testUpdate_ForOwnedAttributesAndComponents() throws Exception {
-      // TODO Auto-generated method stub
-      
    }
 
    @Override
    public void testUpdate_ForReferencedAggregateRoots() {
-      // TODO Auto-generated method stub
-      
-   }
-
-   private Artifact<?> findChildArtifactOfFolder( ArtifactFolder folder, String artifactName ) {
-      for( Artifact<?> childArtifact : folder.getChildArtifacts() ) {
-         if( childArtifact.getName().equals( artifactName )) return childArtifact;
-      }
-      return null;
    }
 
 }

@@ -9,12 +9,10 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.security.domain.User;
 import com.processpuzzle.application.security.domain.UserFactory;
 import com.processpuzzle.application.security.domain.UserRepository;
-import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
-import com.processpuzzle.artifact.domain.ArtifactListView;
-import com.processpuzzle.artifact.domain.PropertyView;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeTestFixture;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
@@ -44,7 +42,7 @@ public class ArtifactListViewTest {
       
       applicationContext = applicationContextFixture.getApplicationContext();
 
-      typeFixture = ArtifactTypeTestFixture.getInstance( applicationContext );
+      typeFixture = new ArtifactTypeTestFixture( null );
       typeFixture.setUp();
 
       userFactory = applicationContext.getEntityFactory( UserFactory.class );

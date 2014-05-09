@@ -32,7 +32,7 @@ public class ArtifactViewTest {
       
       applicationContext = applicationContextFixture.getApplicationContext();
 
-      typeFixture = ArtifactTypeTestFixture.getInstance( applicationContext );
+      typeFixture = new ArtifactTypeTestFixture( null );
       typeFixture.setUp();
 
       userFactory = applicationContext.getEntityFactory( UserFactory.class );

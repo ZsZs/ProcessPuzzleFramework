@@ -31,15 +31,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 package com.processpuzzle.business.definition.domain;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.exolab.castor.mapping.MappingException;
-import org.exolab.castor.xml.MarshalException;
-import org.exolab.castor.xml.ValidationException;
 import org.springframework.core.io.DefaultResourceLoader;
-import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
 import com.processpuzzle.application.configuration.domain.PropertyKeys;
@@ -143,33 +135,5 @@ public class BusinessDefinitionLoader extends BusinessDataLoader<BusinessDefinit
             log.trace( "Protocol: '" + lifeCycleProtocol.getName() + "' was created and saved." );
          }
       }
-   }
-
-   @SuppressWarnings("unused")
-   private BusinessDefinition unmarshalBusinessDefinition_Castor( String businessDefinitionPath, String mappingPath ) {
-      BusinessDefinition businessDefinition = null;
-      
-      Resource mappingResource = resourceLoader.getResource( mappingPath );
-      org.exolab.castor.mapping.Mapping mapping = new org.exolab.castor.mapping.Mapping();
-      org.exolab.castor.xml.Unmarshaller unMarshaller = new org.exolab.castor.xml.Unmarshaller( BusinessDefinition.class );
-
-      Resource businessDefinitionResource = resourceLoader.getResource( businessDefinitionPath );
-      try{
-         mapping.loadMapping( mappingResource.getURL() );
-         unMarshaller.setMapping( mapping );
-         FileReader fileReader = new FileReader( businessDefinitionResource.getFile() );
-         businessDefinition = (BusinessDefinition) unMarshaller.unmarshal( fileReader );
-      }catch( FileNotFoundException e ){
-         throw new BusinessDataLoaderException( businessDefinitionPath, e );
-      }catch( IOException e ){
-         throw new BusinessDataLoaderException( businessDefinitionPath, e );
-      }catch( MarshalException e ){
-         throw new BusinessDataLoaderException( businessDefinitionPath, e );
-      }catch( ValidationException e ){
-         throw new BusinessDataLoaderException( businessDefinitionPath, e );
-      }catch( MappingException e ){
-         throw new BusinessDataLoaderException( businessDefinitionPath, e );
-      }
-      return businessDefinition;
    }
 }

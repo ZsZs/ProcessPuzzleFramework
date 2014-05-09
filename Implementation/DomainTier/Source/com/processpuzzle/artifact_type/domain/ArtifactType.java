@@ -289,7 +289,7 @@ public class ArtifactType extends GenericEntity<ArtifactType> implements AssetTy
    //Protected, private helper methods
    protected @Override void defineIdentityExpressions() {
       DefaultQueryContext context = new DefaultQueryContext();
-      defaultIdentity = new ArtifactTypeIdentity( context );
+      defaultIdentity = new ArtifactTypeIdentity( this.name, context );
       identities.add( defaultIdentity );
    }
 

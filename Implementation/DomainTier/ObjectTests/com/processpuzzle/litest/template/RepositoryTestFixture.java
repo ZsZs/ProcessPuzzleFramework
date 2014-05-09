@@ -70,6 +70,8 @@ public abstract class RepositoryTestFixture<R extends Repository<A>, A extends A
    public DatabaseSpy getDatabaseSpy() { return databaseSpy; }
    public R getRepository() { return repository; }
    public A getRoot() { return root; }
+   public ResultSet getRootRecord(){ return rootRecord; }
+   public String getRootTableName(){ return rootTable.getName(); }
 
    // Protected abstract and helper methods
    protected abstract void afterAggregateCreation();
@@ -100,6 +102,7 @@ public abstract class RepositoryTestFixture<R extends Repository<A>, A extends A
       }
       
       afterAggregateCreation();
+      determineAggregateRootRecord();
       instantiateTestWork();
    }
 
@@ -218,7 +221,11 @@ public abstract class RepositoryTestFixture<R extends Repository<A>, A extends A
 
    @SuppressWarnings("unchecked")
    private void determineAggregateRootClass() {
-      rootClass = (Class<A>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+      rootClass = (Class<A>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1];
+   }
+   
+   private void determineAggregateRootRecord(){
+      rootRecord = databaseSpy.retrieveRecord( rootTable.getName(), root.getId() );
    }
 
    private void determineAggregateRootTable() {

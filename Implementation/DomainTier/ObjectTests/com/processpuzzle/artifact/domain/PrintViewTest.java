@@ -10,13 +10,13 @@ import org.junit.Test;
 import com.processpuzzle.artifact.domain.PrintView;
 
 public class PrintViewTest {
-   private ArtifactTestFixture artifactFixture = null;
+   private GenericArtifactTestFixture artifactFixture = null;
    private TestEntityDataSheet dataSheet;
    private PrintView<?> printView;
 
    @Before
    public void setUp() throws Exception {
-      artifactFixture = ArtifactTestFixture.getInstance();
+      artifactFixture = null;
       artifactFixture.setUp();
       dataSheet = artifactFixture.getDataSheet();
       printView = (PrintView<?>) dataSheet.getAvailableViews().get(TestEntityDataSheet_PrintView.class.getSimpleName());

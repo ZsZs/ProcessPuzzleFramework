@@ -18,14 +18,14 @@ import com.processpuzzle.persistence.domain.TestEntity;
  */
 public class CustomFormViewTest {
    private static String NEW_TEXT_VALUE = "New text value.";
-   private ArtifactTestFixture fixture = null;
+   private GenericArtifactTestFixture fixture = null;
    private TestEntityDataSheet dataSheet = null;
    private TestEntity testEntity = null;
    private TestEntityFormView formView = null;
 
    @Before
    public void setUp() throws Exception {
-      fixture = ArtifactTestFixture.getInstance();
+      fixture = null;
       fixture.setUp();
       dataSheet = fixture.getDataSheet();
       formView = (TestEntityFormView) dataSheet.getView(TestEntityFormView.class.getSimpleName());
@@ -46,9 +46,9 @@ public class CustomFormViewTest {
    @Ignore
    @Test
    public void testFormView_ForGetters () {
-      assertEquals(ArtifactTestFixture.TEXT_VALUE, formView.getTextAttribute());
-      assertEquals(ArtifactTestFixture.NUMBER_VALUE, formView.getNumberAttribute());
-      assertEquals(ArtifactTestFixture.DATE_VALUE, formView.getDateAttribute());
+      assertEquals(GenericArtifactTestFixture.TEXT_VALUE, formView.getTextAttribute());
+      assertEquals(GenericArtifactTestFixture.NUMBER_VALUE, formView.getNumberAttribute());
+      assertEquals(GenericArtifactTestFixture.DATE_VALUE, formView.getDateAttribute());
    }
    
    @Ignore

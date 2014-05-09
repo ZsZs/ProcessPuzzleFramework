@@ -1,22 +1,5 @@
 package com.processpuzzle.party.artifact;
 
-import com.processpuzzle.party.artifact.OrganizationUnitDataSheet;
-import com.processpuzzle.party.artifact.OrganizationUnitDataSheetFactory;
-import com.processpuzzle.party.domain.Company;
-import com.processpuzzle.party.domain.CompanyRepository;
-import com.processpuzzle.party.domain.Organization;
-import com.processpuzzle.party.domain.OrganizationUnit;
-import com.processpuzzle.party.domain.OrganizationUnitFactory;
-import com.processpuzzle.party.domain.PartyRelationship;
-import com.processpuzzle.party.domain.PartyRelationshipFactory;
-import com.processpuzzle.party.domain.PartyRepository;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipTypeFactory;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipTypeRepository;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeFactory;
-import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeRepository;
-import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.application.configuration.domain.ConfigurationSetUpException;
 import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
 import com.processpuzzle.application.domain.Application;
@@ -28,6 +11,20 @@ import com.processpuzzle.artifact_type.domain.ArtifactViewType;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupFactory;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
+import com.processpuzzle.party.domain.Company;
+import com.processpuzzle.party.domain.CompanyRepository;
+import com.processpuzzle.party.domain.Organization;
+import com.processpuzzle.party.domain.OrganizationUnit;
+import com.processpuzzle.party.domain.OrganizationUnitFactory;
+import com.processpuzzle.party.domain.PartyRelationshipFactory;
+import com.processpuzzle.party.domain.PartyRepository;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipType;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipTypeFactory;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRelationshipTypeRepository;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleType;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeFactory;
+import com.processpuzzle.party.partyrelationshiptype.domain.PartyRoleTypeRepository;
+import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 // CSAK A PIROS HIBAK LETTEK KISZEDVE!!! ATIRANDO!
 
@@ -45,8 +42,6 @@ public class OrganizationDataSheetFixture {
    private static OrganizationUnitDataSheet organizationDataSheet = null;
    private static PartyRepository partyRepository;
    private static CompanyRepository companyRepository;
-   private PartyRelationship prs1;
-   private PartyRelationship prs2;
    private PartyRelationshipTypeRepository relationshipTypeRepository;
    private PartyRoleTypeRepository roleTypeRepository;
    private PartyRoleType companyRoleType;
@@ -87,7 +82,7 @@ public class OrganizationDataSheetFixture {
       artifactTypeGroupRepository = config.getRepository(ArtifactTypeGroupRepository.class );
       artifactTypeGroupRepository.addArtifactTypeGroup(work, group);
 
-      type = artifactTypeFactory.createArtifactType("CompanyDataSheet", "Group");
+      type = artifactTypeFactory.create("CompanyDataSheet", "Group");
       ArtifactViewType viewType = ArtifactTypeFactory.createArtifactViewType("name", "presentationUri");
       //viewType.setViewClassName("com.itcodex.objectpuzzle.party.artifact.CompanyDataSheet_PropertyView");
       type.addViewType(viewType);
@@ -118,8 +113,8 @@ public class OrganizationDataSheetFixture {
       partyRepository.addOrganizationUnit(work, bankFiok1);
       partyRepository.addOrganizationUnit(work, bankFiok2);
 
-      prs1 = PartyRelationshipFactory.createPartyRelationship(organizationHierarchy, /* */company, bankFiok1);
-      prs2 = PartyRelationshipFactory.createPartyRelationship(organizationHierarchy, /* */company, bankFiok2);
+      PartyRelationshipFactory.createPartyRelationship(organizationHierarchy, /* */company, bankFiok1);
+      PartyRelationshipFactory.createPartyRelationship(organizationHierarchy, /* */company, bankFiok2);
 //      partyRepository.addPartyRelationship(work, prs1);
 //      partyRepository.addPartyRelationship(work, prs2);
       work.finish();

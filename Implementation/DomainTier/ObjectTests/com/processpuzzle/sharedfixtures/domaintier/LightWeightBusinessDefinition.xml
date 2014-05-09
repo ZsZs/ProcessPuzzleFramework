@@ -34,9 +34,15 @@
 			</prt:partyRoleConstraints>
 		</prt:partyRoleType>
 	</bd:partyRoleTypes>
-	
+
 	<bd:partyRelationshipTypes>
 	</bd:partyRelationshipTypes>
+	
+<!-- 
+	<bd:artifactTypeGroups>
+		<atd:artifactTypeGroup name="SystemAdministration" />
+	</bd:artifactTypeGroups>
+ -->
 	
 	<bd:artifactTypes>
 		<atd:artifactTypeGroup name="SystemAdministration">

@@ -3,43 +3,29 @@ package com.processpuzzle.artifact.artifact;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
-import com.processpuzzle.application.configuration.domain.ProcessPuzzleContext;
+import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact.domain.ArtifactListFactory;
+import com.processpuzzle.litest.template.ArtifactTestFixture;
+import com.processpuzzle.litest.template.ArtifactTestTemplate;
+import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 
-public class ArtifactListTest {
-   private ArtifactList<?> artifactList = null;
-   private ProcessPuzzleContext applicationContext;
-   private ArtifactListFactory<ArtifactList<?>> artifactListFactory;
-   
-   @Before
-   public void setUp() throws Exception {
-      artifactListFactory = applicationContext.getEntityFactory( ArtifactListFactory.class );
-      artifactList = artifactListFactory.create(); //("AnArtifactList", ArtifactTypeFactory.createArtifactType( "anArtifactType", "ArtifactGroup" ));
+public abstract class ArtifactListTest<A extends Artifact<A>, F extends ArtifactTestFixture<A>> extends ArtifactTestTemplate<A, F>{
+   protected ArtifactListFactory<ArtifactList<?>> artifactListFactory;
+
+   //Constructors
+   public ArtifactListTest() {
+      super( DomainTierTestConfiguration.FIXTURE_CONTAINER_DEFINITION_PATH );
    }
 
-   @After
-   public void tearDown() throws Exception {
-      artifactList = null;
+   //Test methods
+   @Test public void testAvailableView() {
+      assertTrue("An artifactList has at least one view.", sut.getAvailableViews().size() >= 1);
+      assertNotNull("A PropertyView is required.", sut.getPropertyView());
    }
 
-   @Ignore @Test
-   public void testAvailableView() {
-      assertTrue("An artifactList has at least one view.", artifactList.getAvailableViews().size() >= 1);
-      assertNotNull("A PropertyView is required.", artifactList.getPropertyView());
-   }
-
-   @Ignore @Test
-   public void testPropertyView() {
-      assertNotNull("A PropertyView is required.", artifactList.getPropertyView());
-   }
-
-   @Ignore @Test
-   public void testListView() {
-      assertNotNull("A ListView is required.", artifactList.getListView());
+   @Test public void testPropertyView() {
+      assertNotNull("A PropertyView is required.", sut.getPropertyView());
    }
 }

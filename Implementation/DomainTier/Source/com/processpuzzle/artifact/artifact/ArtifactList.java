@@ -19,7 +19,7 @@ ProcessPuzzle - Content and Workflow Management Integration Business Platform
 Author(s): 
     - Zsolt Zsuffa
 
-Copyright: (C) 2011 This program is free software: you can redistribute it and/or modify it under the terms of the 
+Copyright: (C) 2014 This program is free software: you can redistribute it and/or modify it under the terms of the 
 GNU General Public License as published by the Free Software Foundation, either version 3 of the License, 
 or (at your option) any later version.
 
@@ -44,22 +44,21 @@ import com.processpuzzle.artifact.domain.PrintView;
 import com.processpuzzle.artifact_type.domain.ArtifactType;
 
 @XmlType( name = "ArtifactList", propOrder = {} )
-public class ArtifactList<L extends ArtifactList<?>> extends Artifact<L> {
+public abstract class ArtifactList<L extends Artifact<L>> extends Artifact<L> {
    public static String PROPERTY_VIEW = "ArtifactList_PropertyView";
    public static String LIST_VIEW = "ArtifactList_ListView";
    public static String PRINT_VIEW = "ArtifactList_PrintView";
-   protected @XmlTransient
-   ArtifactListView<L> listView;
-   protected @XmlTransient
-   PrintView<?> printView;
+   protected @XmlTransient ArtifactListView<L> listView;
+   protected @XmlTransient PrintView<?> printView;
 
+   //Constructors
    public ArtifactList( String name, ArtifactType type, User creator ) {
       super( name, type, creator );
-//      instantiateVersion( name, type, creator );
    }
 
    protected ArtifactList() {}
 
+   //Public accessors and mutators
    @SuppressWarnings("unchecked")
    public ArtifactListView<L> getListView() {
       for( Iterator<String> iter = availableViews.keySet().iterator(); iter.hasNext(); ){

@@ -29,11 +29,12 @@ import com.processpuzzle.artifact.domain.VersionControlException;
 import com.processpuzzle.artifact_type.domain.ArtifactType;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeFactory;
 import com.processpuzzle.artifact_type.domain.ArtifactTypeTestFixture;
+import com.processpuzzle.litest.template.ArtifactTestTemplate;
 import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 import com.processpuzzle.sharedfixtures.domaintier.DomainTierTestConfiguration;
 import com.processpuzzle.sharedfixtures.domaintier.ProcessPuzzleContextFixture;
 
-public class ArtifactTest {
+public abstract class ArtifactTest<S extends Artifact<S>> extends ArtifactTestTemplate<S, GenericArtifactTestFixture<S>>{
    private ProcessPuzzleContextFixture applicationContextFixture;
    private ProcessPuzzleContext applicationContext;
    private UserFactory userFactory;
@@ -46,6 +47,10 @@ public class ArtifactTest {
    private static ArtifactTypeFactory artifactTypeFactory;
    private static CommentListFactory commentListFactory;
 
+   protected ArtifactTest( String fixtureContainerConfigurationPath ) {
+      super( fixtureContainerConfigurationPath );
+   }
+
    @Before
    public void setUp() throws Exception {
       DefaultUnitOfWork work = new DefaultUnitOfWork(true);
@@ -54,7 +59,7 @@ public class ArtifactTest {
       
       applicationContext = applicationContextFixture.getApplicationContext();
 
-      typeFixture = ArtifactTypeTestFixture.getInstance( applicationContext );
+      typeFixture = new ArtifactTypeTestFixture( null );
       typeFixture.setUp();
 
       userFactory = applicationContext.getEntityFactory( UserFactory.class );
@@ -109,7 +114,7 @@ public class ArtifactTest {
    @Ignore
    @Test
    public void testCreatAnArtifact_withNameAndResponsibleAndArtifactType() {
-      ArtifactType artifactType = artifactTypeFactory.createArtifactType( "type", "ArtifactGroup" );
+      ArtifactType artifactType = artifactTypeFactory.create( "type", "ArtifactGroup" );
       Artifact<?> artifact2 = new ArtifactSubClass("artifact", artifactType, user);
       assertNotNull("The artifact is exist.", artifact2);
       assertNotNull("The artifact have a version.", artifact2.latest());
@@ -143,7 +148,7 @@ public class ArtifactTest {
    @Test
    public void testDelete() {
       DefaultUnitOfWork work = new DefaultUnitOfWork(true);
-      ArtifactType artifactType = artifactTypeFactory.createArtifactType( "type", "ArtifactGroup" );
+      ArtifactType artifactType = artifactTypeFactory.create( "type", "ArtifactGroup" );
       Artifact<?> artifact2 = new ArtifactSubClass("artifactDelete", artifactType, user);
       arepository.add(work, artifact2);
       assertNotNull("The artifact updated.", arepository.findByName(work, artifact2.getName()));

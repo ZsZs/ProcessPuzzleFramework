@@ -40,7 +40,7 @@ public class ArtifactFolderTest extends ApplicationContextAwareTest {
    @Before
    public void setUp() throws Exception {
       
-      typeFixture = ArtifactTypeTestFixture.getInstance( applicationContext );
+      typeFixture = new ArtifactTypeTestFixture( null );
       typeFixture.setUp();
 
       userFactory = applicationContext.getEntityFactory( UserFactory.class );
@@ -79,19 +79,6 @@ public class ArtifactFolderTest extends ApplicationContextAwareTest {
       secondChildFolder = null;
    }
 
-   // public final void testChildArtifacts_ForRelationships () {
-   // assertEquals("The number of 'parentFolder's childfolder is:", 3,
-   // rootFolder.getChildArtifacts().size());
-   // assertTrue("'firstChildFolder' is a child artifact of 'parentFolder'",
-   // rootFolder.getChildArtifacts().contains(firstChildFolder));
-   // assertTrue("'oneArtifact' is a child artifact of 'parentFolder'",
-   // rootFolder.getChildArtifacts().contains(oneArtifact));
-   // assertEquals("'firstChildFolder's containing folder is:", rootFolder,
-   // firstChildFolder.getContainingFolder());
-   // assertEquals("'oneArtifact's containing folder is:", rootFolder,
-   // oneArtifact.getContainingFolder());
-   // }
-   //   
    @Test
    public final void relationships_ForPersistence() {
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
@@ -103,7 +90,6 @@ public class ArtifactFolderTest extends ApplicationContextAwareTest {
       firstChildFolder = artifactFolderFactory.create( firstChildFolder, "subFirstChildFolder" );
       artifactFolderRepository.update( work, rootFolder );
       a = artifactFolderRepository.findByPath( work, "rootFolder.firstChildFolder." );
-      // assertNotNull(a);
 
       ArtifactFolder folder3 = artifactFolderFactory.create( firstChildFolder, "childFolder3" );
       ArtifactFolder folder4 = artifactFolderFactory.create( folder3, "childFolder4" );
@@ -111,17 +97,9 @@ public class ArtifactFolderTest extends ApplicationContextAwareTest {
       ArtifactFolder folder6 = artifactFolderFactory.create( folder5, "childFolder6" );
       artifactFolderFactory.create( folder6, "childFolder7" );
       artifactFolderRepository.update( work, rootFolder );
-      a = artifactFolderRepository.findByPath( work,
-            "rootFolder.firstChildFolder.subFirstChildFolder.childFolder3.childFolder4.childFolder5.childFolder6" );
+      a = artifactFolderRepository.findByPath( work, "rootFolder.firstChildFolder.subFirstChildFolder.childFolder3.childFolder4.childFolder5.childFolder6" );
       assertNotNull( a );
 
-      //      
-      // ArtifactFolder anotherInstanceOfParentFolder = (ArtifactFolder)
-      // artifactRepository.findArtifactById(parentFolder.getId());
-      // assertEquals("The number of 'parentFolder's childfolder is:", 3,
-      // anotherInstanceOfParentFolder.getChildArtifacts().size());
-      //      
-      // artifactRepository.deleteArtifact(parentFolder);
       artifactFolderRepository.delete( work, rootFolder );
       work.finish();
 

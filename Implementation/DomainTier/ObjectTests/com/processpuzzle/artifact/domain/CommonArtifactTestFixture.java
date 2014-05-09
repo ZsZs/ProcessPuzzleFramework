@@ -78,7 +78,7 @@ public class CommonArtifactTestFixture extends ArtifactTestFixture<TestEntityDat
       
       propertyViewType = ArtifactTypeFactory.createPropertyViewType( "PropertyView", null );
       
-      artifactType = artifactTypeFactory.createArtifactType( ARTIFACT_TYPE_NAME, null, TestEntityDataSheet.class );
+      artifactType = artifactTypeFactory.create( ARTIFACT_TYPE_NAME, null, TestEntityDataSheet.class );
       artifactType.addViewType( propertyViewType );
    }
 

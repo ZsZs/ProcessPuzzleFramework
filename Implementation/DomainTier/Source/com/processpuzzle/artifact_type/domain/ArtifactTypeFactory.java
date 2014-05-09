@@ -35,54 +35,41 @@ You should have received a copy of the GNU General Public License along with thi
 package com.processpuzzle.artifact_type.domain;
 
 
+import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.Assert.assertThat;
+
 import com.processpuzzle.artifact.domain.Artifact;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroup;
 import com.processpuzzle.artifact_type_group.domain.ArtifactTypeGroupRepository;
 import com.processpuzzle.commons.persistence.UnitOfWork;
 import com.processpuzzle.persistence.domain.GenericFactory;
-import com.processpuzzle.persistence.domain.DefaultUnitOfWork;
 
 public class ArtifactTypeFactory extends GenericFactory<ArtifactType> {
 
-   public ArtifactType createArtifactType( String typeName ) {
-      return createArtifactType( typeName, null );
-   }
-
-   public ArtifactType createArtifactType( String typeName, String groupName ) {
-      return this.createArtifactType( typeName, groupName, null );
+   public ArtifactType create( String typeName, String groupName ) {
+      return this.create( typeName, groupName, null );
    }
    
-   public ArtifactType createArtifactType( String typeName, String groupName, Class<? extends Artifact<?>> artifactClass ) {
-      ArtifactTypeGroup group = null;
+   public ArtifactType create( String typeName, String groupName, Class<? extends Artifact<?>> artifactClass ) {
+      assertThat( "typeName", typeName, notNullValue() );
+      assertThat( "groupName", groupName, notNullValue() );
+      
+      ArtifactTypeGroup group = findArtifactTypeGroup( groupName );
+      ArtifactType artifactType = createArtifactType( typeName, group, null );
 
-      if( groupName != null ){
-         ArtifactTypeGroupRepository repository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
-         DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-         group = repository.findByName( work, groupName );
-         work.finish();
-      }
-
-      ArtifactType artifactType = new ArtifactType( typeName, group, artifactClass );
-      checkEntityIdentityCollition( artifactType.getDefaultIdentity() );
       return artifactType;
    }
 
-   public ArtifactType createArtifactType( UnitOfWork work, String typeName, String groupName, Class<? extends Artifact<?>> artifactClass ) {
-      ArtifactTypeGroup group = null;
-      ArtifactTypeGroupRepository groupRepository = null;
-      
-      if( groupName != null ){
-         groupRepository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
-         group = groupRepository.findByName( work, groupName );
-      }
+   public ArtifactType createAndAddToGroup( UnitOfWork work, String typeName, String groupName, Class<? extends Artifact<?>> artifactClass ) {
+      ArtifactTypeGroup group = findArtifactTypeGroup( groupName );
 
-      ArtifactType artifactType = new ArtifactType( typeName, group, artifactClass );
-      checkEntityIdentityCollition( artifactType.getDefaultIdentity() );
+      ArtifactType artifactType = createArtifactType( typeName, group, artifactClass );
       
-      if( group != null ) {
-         group.addType( artifactType );
-         groupRepository.update( work, group );
-      }
+      group.addType( artifactType );
+      
+      ArtifactTypeGroupRepository groupRepository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
+      groupRepository.update( work, group );
+
       return artifactType;
    }
 
@@ -92,5 +79,23 @@ public class ArtifactTypeFactory extends GenericFactory<ArtifactType> {
    
    public static ArtifactPropertyViewType createPropertyViewType( String name, String presentationUri ) {
       return new ArtifactPropertyViewType( name, presentationUri );
+   }
+   
+   //Protected, private helper methods
+   private ArtifactType createArtifactType( String typeName, ArtifactTypeGroup group, Class<? extends Artifact<?>> artifactClass ) {
+      ArtifactType artifactType = new ArtifactType( typeName, group, artifactClass );
+      checkEntityIdentityCollition( artifactType.getDefaultIdentity() );
+      return artifactType;
+   }
+
+   private ArtifactTypeGroup findArtifactTypeGroup( final String name ){
+      ArtifactTypeGroup group;
+      ArtifactTypeGroupRepository groupRepository;
+      
+      groupRepository = applicationContext.getRepository( ArtifactTypeGroupRepository.class );
+      group = groupRepository.findByName( name );
+      
+      assertThat( "artifactTypeGroup", group, notNullValue() );
+      return group;
    }
 }

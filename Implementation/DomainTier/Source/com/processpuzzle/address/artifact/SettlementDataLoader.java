@@ -111,9 +111,10 @@ public class SettlementDataLoader extends XmlDataLoader {
                String settlementName = settlementElement.attribute( SETTLEMENT_NAME_ATTRIBUTE ).getValue();
                if( settlementName != null && !"".equals( settlementName ) ){
                   DefaultUnitOfWork work = new DefaultUnitOfWork( true );
+                  SettlementDataSheet settlementDataSheet = null;
                   try{
 
-                     SettlementDataSheet settlementDataSheet = createAndSaveSettlement( work, settlementName, country );
+                     settlementDataSheet = createAndSaveSettlement( work, settlementName, country );
                      savedSettlements.add( settlementDataSheet.getSettlement() );
 
                      for( Iterator<Element> k = settlementElement.elementIterator( DISTRICT_ELEMENT ); k.hasNext(); ){
@@ -141,6 +142,7 @@ public class SettlementDataLoader extends XmlDataLoader {
                      logError( e, settlementName );
                   }finally{
                      work.finish();
+                     logSuccess( settlementDataSheet.getSettlement() );
                   }
                }
             }

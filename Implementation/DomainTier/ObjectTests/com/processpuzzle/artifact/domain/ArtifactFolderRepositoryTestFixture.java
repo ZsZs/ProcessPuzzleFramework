@@ -50,16 +50,16 @@ public class ArtifactFolderRepositoryTestFixture extends RepositoryTestFixture<A
       userRepository = applicationContext.getRepository( UserRepository.class );
       
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      folderType = artifactTypeFactory.createArtifactType( "ArtifactFolder" );
+      folderType = artifactTypeFactory.create( "ArtifactFolder", "SystemAdministration" );
       folderType.setArtifactClassName( ArtifactFolder.class.getName() );
       artifactTypeRepository.addArtifactType( work, folderType );
       
-      subClassType = artifactTypeFactory.createArtifactType( "ArtifactSubClass" );
+      subClassType = artifactTypeFactory.create( "ArtifactSubClass", "SystemAdministration" );
       subClassType.setArtifactClassName( ArtifactSubClass.class.getName() );
       subClassType.setSystem( true );
       artifactTypeRepository.addArtifactType( work, subClassType );
       
-      personListType = artifactTypeFactory.createArtifactType( "PersonList" );
+      personListType = artifactTypeFactory.create( "PersonList", "SystemAdministration" );
       personListType.setArtifactClassName( PersonList.class.getName() );
       personListType.setSystem( true );
       artifactTypeRepository.addArtifactType( work, personListType );
