@@ -6,11 +6,9 @@
 		table="T_ARTIFACT_FOLDER"
 		extends="com.processpuzzle.artifact.domain.Artifact">
 		
-		<!-- 
 		<set name="childArtifacts" cascade="save-update,delete" lazy="false" inverse="true">
 			<key column="ARTIFACT_FOLDER_ID" />
 			<one-to-many class="com.processpuzzle.artifact.domain.Artifact"/>
 		</set>
-		 -->
 	</union-subclass>
 </hibernate-mapping>

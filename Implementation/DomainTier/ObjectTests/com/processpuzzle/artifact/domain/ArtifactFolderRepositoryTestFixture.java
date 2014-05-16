@@ -32,7 +32,7 @@ public class ArtifactFolderRepositoryTestFixture extends RepositoryTestFixture<A
    private ArtifactFolder artifactFolder;
    private PersonList personList;
 
-   protected ArtifactFolderRepositoryTestFixture( RepositoryTestEnvironment<ArtifactFolderRepository, RepositoryTestFixture<ArtifactFolderRepository,ArtifactFolder>> testEnvironment ) {
+   public ArtifactFolderRepositoryTestFixture( RepositoryTestEnvironment<ArtifactFolderRepository, RepositoryTestFixture<ArtifactFolderRepository,ArtifactFolder>> testEnvironment ) {
       super( testEnvironment );
    }
    
@@ -40,29 +40,27 @@ public class ArtifactFolderRepositoryTestFixture extends RepositoryTestFixture<A
    public Artifact<?> getArtifactOne() { return artifactOne; }
    public Artifact<?> getArtifactTwo() { return artifactTwo; }
    public DefaultArtifactRepository getArtifactRepository() { return artifactRepository; }
+   public ArtifactType getFolderType(){ return folderType; }
 
    @Override
    protected void configureBeforeSutInstantiation() {
+      super.configureBeforeSutInstantiation();
       artifactFolderFactory = applicationContext.getEntityFactory( ArtifactFolderFactory.class );
       artifactTypeFactory = applicationContext.getEntityFactory( ArtifactTypeFactory.class );
       artifactTypeRepository = applicationContext.getRepository( ArtifactTypeRepository.class );
       artifactRepository = applicationContext.getRepository( DefaultArtifactRepository.class );
+      userFactory = applicationContext.getEntityFactory( UserFactory.class );
       userRepository = applicationContext.getRepository( UserRepository.class );
       
       DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      folderType = artifactTypeFactory.create( "ArtifactFolder", "SystemAdministration" );
-      folderType.setArtifactClassName( ArtifactFolder.class.getName() );
-      artifactTypeRepository.addArtifactType( work, folderType );
+      folderType = artifactTypeRepository.findArtifactTypeByName( work, "ArtifactFolder" );
       
       subClassType = artifactTypeFactory.create( "ArtifactSubClass", "SystemAdministration" );
       subClassType.setArtifactClassName( ArtifactSubClass.class.getName() );
       subClassType.setSystem( true );
       artifactTypeRepository.addArtifactType( work, subClassType );
       
-      personListType = artifactTypeFactory.create( "PersonList", "SystemAdministration" );
-      personListType.setArtifactClassName( PersonList.class.getName() );
-      personListType.setSystem( true );
-      artifactTypeRepository.addArtifactType( work, personListType );
+      personListType = artifactTypeRepository.findArtifactTypeByName( work, "PersonList" );
       
       creator = userFactory.createUser( "testPerson", "password" );
       userRepository.add( work, creator );

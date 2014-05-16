@@ -30,9 +30,9 @@ public class ArtifactFolderRepositoryTest extends RepositoryTestTemplate<Artifac
    }
 
    public @Override void testFindById() {
-      ArtifactFolder artifactFolder = repository.findById( testWork, fixture.getArtifactFolder().getId() );
-      Artifact<?> artifactOne = fixture.getArtifactRepository().findById( fixture.getArtifactOne().getId() );
-      Artifact<?> artifactTwo = fixture.getArtifactRepository().findById( fixture.getArtifactTwo().getId() );
+      ArtifactFolder artifactFolder = repository.findById( testWork, templatedFixture.getArtifactFolder().getId() );
+      Artifact<?> artifactOne = templatedFixture.getArtifactRepository().findById( templatedFixture.getArtifactOne().getId() );
+      Artifact<?> artifactTwo = templatedFixture.getArtifactRepository().findById( templatedFixture.getArtifactTwo().getId() );
       
       assertThat( artifactFolder, notNullValue() );
 //      assertThat( (Artifact)findChildArtifactOfFolder( artifactFolder, artifactOne.getName() ), equalTo( artifactOne ));
