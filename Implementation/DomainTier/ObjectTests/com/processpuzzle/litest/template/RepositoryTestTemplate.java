@@ -60,14 +60,7 @@ public abstract class RepositoryTestTemplate<R extends GenericRepository<?>, F e
    @Test public abstract void testFindByQuery_ForDirectAttributes();
    @Test public abstract void testFindByQuery_ForComponentAttributes();
 
-   @SuppressWarnings("unchecked")
-   protected void saveAggregateRoot( AggregateRoot aggregateRoot, ProcessPuzzleContext applicationContext ) {
-      Repository<A> repository = (Repository<A>) applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
-      DefaultUnitOfWork work = new DefaultUnitOfWork( true );
-      repository.add( work, (A) aggregateRoot );
-      work.finish();
-   }
-
+   //Protected, private helper methods
    @SuppressWarnings("unchecked")
    protected void deleteAggregateRoot( AggregateRoot aggregateRoot, ProcessPuzzleContext applicationContext ) {
       Repository<A> repository = (Repository<A>) applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
@@ -76,4 +69,15 @@ public abstract class RepositoryTestTemplate<R extends GenericRepository<?>, F e
       work.finish();
    }
    
+   @SuppressWarnings("unchecked")
+   protected void saveAggregateRoot( AggregateRoot aggregateRoot, ProcessPuzzleContext applicationContext ) {
+      Repository<A> repository = (Repository<A>) applicationContext.getRepositoryByEntityClass( aggregateRoot.getClass() );
+      DefaultUnitOfWork work = new DefaultUnitOfWork( true );
+      repository.add( work, (A) aggregateRoot );
+      work.finish();
+   }
+
+   protected void openHsqlManager() {
+      org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",  "jdbc:hsqldb:mem:mymemdb", "--noexit" });
+   }
 }

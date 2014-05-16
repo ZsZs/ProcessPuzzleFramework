@@ -14,6 +14,12 @@ public class ArtifactFolderRepositoryTest extends RepositoryTestTemplate<Artifac
    }
 
    @Override
+   public void beforeEachTest() {
+      openHsqlManager();
+      super.beforeEachTest();
+   }
+
+   @Override
    public void testAdd_ForOwnedAttributesAndComponents() throws Exception {
    }
 
