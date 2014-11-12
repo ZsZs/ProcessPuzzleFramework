@@ -1,0 +1,9 @@
+[[elso][^TestOne]]
+[[masodik][^TestTwo]]
+
+
+|'''!-PlanList-!'''|
+|'''name'''|'''plan types'''|'''state'''|
+|Marketing|separate|proposed|
+|Offer|separate|proposed|
+|Sales|separate|proposed|

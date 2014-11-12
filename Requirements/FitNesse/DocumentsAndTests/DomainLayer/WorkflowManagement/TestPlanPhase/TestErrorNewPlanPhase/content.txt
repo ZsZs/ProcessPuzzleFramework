@@ -1,0 +1,26 @@
+'''Hivatkozás:''' New Workflow
+
+'''Rule:''' Azonos workflow alatt a planphase-ek neve nem egyezhet meg. A rendszer a kis és nagybetűket  a névegyezőség ellenőrzésekor nem különbözteti meg.
+
+|!-fit.ActionFixture-!|
+|start|New planphase|
+|enter|name|Offer Making|
+|enter|create|
+|enter|workflow|Operation|
+|check|identifier|error|
+|check|name|error|
+
+|!-fit.ActionFixture-!|
+|start|New planphase|
+|enter|name|OFFER Making|
+|enter|create|
+|enter|workflow|Operation|
+|check|identifier|error|
+|check|name|error|
+
+- A planphase-ek listája továbbra is két planphase-t tartalmaz:
+
+|'''!-PlanListOfOffer-!'''|
+|'''planphase-name'''|'''workflow-name'''|'''state'''|
+|Offer making|IT prodact sales|proposed|
+|Offer making|Operation|proposed|

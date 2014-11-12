@@ -1,0 +1,139 @@
+!***> To grasp the details see this diagram.
+!img http://test.itkodex.hu/files/ProcessPuzzle/Images/DesignModel_TimeDetails.gif
+***!
+
+|'''add'''|com.processpuzzle.fitnesse.fundamental_types.!-TimeTests-!|'''as'''|timeTests|
+|'''select'''|timeTests|
+
+|'''set up date format'''|
+|language|country|variant|format|
+|hu|HU|formal|yyyy/MM/dd HH:mm:ss.SSS|
+|hu|HU|letter|yyyy/MM/dd HH:mm:ss.SSS|
+|en|GB|formal|dd/MM/yyyy HH:mm:ss.SSS|
+
+'''Rule:''' Unit provides the conversion ration between different timeunits. It throws !-UnknownUnitException-! when an unknown unit is given.
+
+|'''calculate conversion ratio'''|
+|from|to|ratio()|
+|msec|s|0.001|
+|s|min|0.016667|
+|min|h|0.016667|
+|h|d|0.041667|
+|d|wk|0.142857|
+|wk|yr|0.019231|
+|mth|yr|0.083333|
+|s|msec|1000|
+|min|s|60|
+|h|min|60|
+|h|s|3600|
+|d|h|24|
+|wk|d|7|
+|yr|wk|52|
+|yr|mth|12|
+|wk|m|error|
+
+'''Rule:''' A rendszer számítsa ki két időpont közötti napok számát. A rendszer kezelje a szökőévet.
+
+|'''!-CalculateTimeTo-!'''|
+|timepoint1|timepoint2|style|timeto()|timeunit()|
+|20/02/2004|10/03/2004|medium|19|d|
+|30/12/2000|01/01/2001|medium|2|d|
+|31/12/1782|02/05/1783|medium|122|d|
+
+'''Rule:''' A rendszer számítsa át az első idő mértékegységben megadott mennyiséget a másodiknak megadott időmértékegységre. A rendszer két tizedesre kerekít. Ha a törtek értékénél a tizedes legalább 9, akkor egész számra kerekít a rendszer.
+
+|'''!-CalculateConvert-!'''|
+|time quantity|timeunit 1|timeunit 2|convert()|timeunit()|
+|4|d|h|96|h|
+|3|wk|d|21|d|
+|-4|d|min|-5760|min|
+|3|yr|mth|36|mth|
+|5|min|l|error|error|
+|4|mth|yr|0.33|yr|
+|1.33|yr|mth|16|mth|
+|1.142857|wk|d|8|d|
+
+'''Rule:''' A rendszer ismerje fel az időpont különböző pontosságú megadását (helyes formátum: nap/hónap/év óra:perc:másodperc.millimásodperc).
+
+|'''!-CalculateFormattedString-!'''|
+|day|month|year|hour|minute|sec|msec|style|string()|
+|20|10|2000|08|02|00|000|medium,medium|20/10/2000 08:02|
+|20|10|2000|00|00|00|0|medium|20/10/2000|
+|45|10|2000|00|02|00|30|medium,full|error|
+|10|20|2000|00|00|00|0|medium|error|
+|31|02|2000|00|00|00|0|medium|error|
+|20|10|-300|00|00|00|0|medium|error|
+|10|10|2000|25|00|00|0|medium,full|error|
+|10|10|2000|20|61|00|0|medium,full|error|
+|10|10|2000|20|58|62|0|medium,full|error|
+|10|10|2000|10|03|59|011|medium,full|10/10/2000 10:03:59.011|
+
+'''Rule:''' A rendszer egy stringben megadott időpontot ismerjen fel. A medium dátumformátumban megadott timepoint-nál a rendszer az óra, perc, másodperc, msec értékeit 0-nak értelmezi. A rendszer negatív timepoint esetén hibát jelez.
+
+|'''!-Parse time-!'''|
+|source|style|hourValue()|minValue()|secValue()|msecValue()|dayValue()|monthValue()|yearValue()|
+|20/10/2000 05:02|medium,medium|05|02|00|00|20|10|2000|
+|-10/10/2000|medium|error|error|error|error|error|error|error|
+|20/10/2000|medium|00|00|00|000|20|10|2000|
+
+'''Rule:''' A rendszer hasomlítson össze két időpontot, és adja meg a rendszer, hogy az első korábbi (1), későbbi (-1), vagy azonos (0) a másodikként megadott időponttal.
+
+|'''!-Compare times-!'''|
+|timepoint1|timepoint2|style1|style2|compareto()|
+|02/01/2006|02/01/2005|medium|medium|-1|
+|01/01/2000|01/01/2000|medium|medium|0|
+|01/01/2000|01/01/2000 08:02|medium|medium,medium|1|
+|01/01/2000|01/01/2000 08:02|medium|medium,medium|1|
+|01/01/2000 08:00:10.01|01/01/2000 08:02|medium,full|medium,medium|1|
+|01/01/2000 08:00:10.01|01/01/2000 08:02|medium,full|medium,medium|1|
+|01/01/2000 08:00:10.01|01/01/2000 08:02:30.05|medium,full|medium,full|1|
+
+'''Rule:''' A rendszer egy dátumhoz adjon hozzá egy megadott időintervallumot és adja meg az intervallum vége dátumot.
+
+|'''!-CalculateTimepoint-!'''|
+|timepoint|style|timeValueDay|timeValueWeek|timeValueMonth|timeValueYear|timeValueHour|timeValueMin|timeValueSec|timeValueMsec|timepoint()|
+|01/01/2006 06:10|medium,medium|00|10|00|00|00|3|00|00|12/03/2006 06:13|
+|28/02/2007 08:00:00.01|medium,full|01|00|00|1|00|00|70|00|29/02/2008 08:01:10.001|
+|28/02/2007|medium|01|00|00|00|00|00|00|00|01/03/2007|
+|28/02/2008|medium|00|00|00|1|00|00|00|00|28/02/2009|
+|28/02/2008|medium|1|00|00|1|00|00|00|00|01/03/2009|
+|29/02/2008|medium|00|00|00|1|00|00|00|00|28/02/2009|
+|28/02/2008|medium|00|00|00|1|00|00|00|00|28/02/2009|
+|28/02/2007|medium|1|00|00|1|00|00|00|00|29/02/2008|
+|01/03/2006|medium|0|00|00|1|00|00|00|00|01/03/2007|
+|01/03/2007|medium|0|00|00|1|00|00|00|00|01/03/2008|
+|29/02/2012|medium|0|00|1|0|00|00|00|00|29/03/2012|
+|28/02/2008|medium|0|00|1|0|00|00|00|00|28/03/2008|
+|31/01/2008|medium|0|00|1|0|00|00|00|00|29/02/2008|
+|31/01/2007|medium|0|00|1|0|00|00|00|00|28/02/2007|
+|31/03/2007|medium|0|00|1|0|00|00|00|00|30/04/2007|
+|01/11/2007|medium|0|00|1|0|00|00|00|00|01/12/2007|
+|29/02/2008|medium|0|00|12|0|00|00|00|00|28/02/2009|
+|29/02/2008|medium|0|00|00|4|00|00|00|00|29/02/2012|
+|31/01/2008|medium|0|00|00|4|00|00|00|00|31/01/2012|
+|31/05/2008|medium|0|00|1|0|00|00|00|00|30/06/2008|
+|31/01/2008|medium|0|00|1|0|00|00|00|00|29/02/2008|
+
+'''Rule:''' A rendszer az angol és a magyar nyelven stringben megadott dátumformátumot ismerjen fel.
+
+|'''!-ParseLocalizedTime-!'''|
+|language|country|source|style|timevalue1()|timevalue2()|timevalue3()|
+|hu|HU|2000.10.20.|medium|2000|10|20|
+|hu|HU|2000,10.20|medium|error|error|error|
+|hu|HU|2000.10.20|medium|error|error|error|
+|en|GB|20/10/2000|medium|2000|10|20|
+|en|GB|35/10/2000|medium|error|error|error|
+|en|GB|20/10-2000|medium|error|error|error|
+
+'''Rule:''' A rendszer az angol és a magyar nyelv hivatalos dátumformátumának megfelelő stringé alakítsa a dátumot.
+
+|'''!-CalculateFormattedLocalizedString-!'''|
+|language|country|day|month|year|style|tostring()|
+|hu|HU|10|10|2000|medium|2000.10.10.|
+|hu|HU|20|10|2000|medium|2000.10.20.|
+|hu|HU|40|10|2000|medium|error|
+|en|GB|10|10|2000|medium|10/10/2000|
+|en|GB|20|10|2000|medium|20/10/2000|
+|en|GB|30|2|2000|medium|error|
+
+

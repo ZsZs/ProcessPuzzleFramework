@@ -1,0 +1,40 @@
+'''Rule:''' Új user létrehozásakor meg kell adni a felhasználói nevet és jelszót. A jelszó minimum 6, maximum 10 karakterből állhat, és legalább 1 nagybetűt és egy számot kell tartalmaznia.
+
+|!-fit.ActionFixture-!|
+|start|new User|
+|press|create|
+|enter|username|Böcker Beáta|
+|press|save|
+|check|username|ok|
+|enter|password|11|
+|press|save|
+|check|password|error|
+|enter|password|wklllmeiiiskill|
+|press|save|
+|check|password|error|
+|enter|password|wwwklo5|
+|press|save|
+|check|password|error|
+|enter|password|wwWklo5|
+|press|save|
+|check|password|ok|
+|check|identifier|ok|
+
+'''Rule:''' Új User felhasználói neve és jelszava nem egyezhet meg más user felhasználói nevével és azonosítójával.
+
+|!-fit.ActionFixture-!|
+|start|new User|
+|press|create|
+|enter|username|Böcker Beáta|
+|press|save|
+|check|username|error|
+|enter|password|Böcker Bea|
+|press|save|
+|check|password|ok|
+|enter|password|wwWklo5|
+|press|save|
+|check|password|error|
+|enter|password|wwWkl06|
+|press|save|
+|check|password|ok|
+|check|identifier|ok|

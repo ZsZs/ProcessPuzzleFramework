@@ -1,0 +1,5 @@
+!3 Common setup and tear down fixtures
+
+ * [['''Configure Logging''' fixture][>ConfigureLogging]]
+ * [['''Generic Application Setup''' fixture][>GenericApplicationSetUp]]
+ * [['''Generic Application Tear Down''' fixture][>GenericApplicationTearDown]]

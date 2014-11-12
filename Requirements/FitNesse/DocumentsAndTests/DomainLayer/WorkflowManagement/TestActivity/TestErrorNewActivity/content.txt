@@ -1,0 +1,51 @@
+'''Hivatkozás''' New Activity
+
+'''Rule:''' Azon Plan alatt nem hozható létre activity, amelynek része Plan.
+
+- Az Offer Plan plan listája nem üres:
+
+|'''!-PlanListOfOffer-!'''|
+|'''plan-name'''|'''state'''|
+|Cal for offers|proposed|
+
+- Activity létrehozása kezdeményezésekor a rendszer hibát jelez. (Nem hozható létre tevékenység a Plan alatt)
+
+|!-fit.ActionFixture-!|
+|start|False activity under Offer|
+|press|create|
+|enter|name|planing|
+|enter|plan|Offer|
+|enter|create|
+|check|identyfier|error|
+
+- Az Offer Plan activity listája üres:
+
+|'''!-PlanList-!'''|
+|'''activity-name'''|'''state'''|
+
+'''Rule:''' Azonos plan alatt létrehozott activity-k neve nem egyezhet meg. A rendszer a kis és nagybetűket  a névegyezőség ellenőrzésekor nem különbözteti meg.
+
+|!-fit.ActionFixture-!|
+|start|False activity for name under Marketing 1|
+|press|create|
+|enter|name|marketing|
+|enter|plan|Marketing|
+|enter|create|
+|check|identyfier|error|
+
+|!-fit.ActionFixture-!|
+|start|False activity for name under Marketing 2|
+|press|create|
+|enter|name|MARKETING|
+|enter|plan|Marketing|
+|enter|create|
+|check|identyfier|error|
+
+- A Marketing Plan activity listája csak egy tevékenységet tartalmaz:
+
+|'''!-ActivityListOfMarketing-!'''|
+|'''activity-name'''|'''state'''|
+|Marketing|proposed|
+
+
+

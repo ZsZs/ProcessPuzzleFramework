@@ -1,0 +1,24 @@
+'''Rule:''' A felhasználói név nem változtatható meg.
+
+|!-fit.ActionFixture-!|
+|start|User username change|
+|enter|username|Böcker Beáta|
+|press|change username|error|
+|press|save|
+|check|username|Böcker Beáta|
+|check|password|wwWklo5|
+
+'''Rule:''' A jelszó megváltoztatásakor meglévő élő jelszó nem használható. Már nem élő, törölt jelszó ismét használható.
+
+|!-fit.ActionFixture-!|
+|start|User password change|
+|enter|username|Böcker Beáta|
+|press|change password|
+|enter|password|wwWklo6|
+|press|save|
+|check|password|error|
+|press|change password|
+|enter|password|Wwwklo5|
+|press|save|
+|check|username|Böcker Beáta|
+|check|password|Wwwklo5|

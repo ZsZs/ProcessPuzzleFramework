@@ -1,0 +1,23 @@
+'''Rule:''' A tervezett állapotú tevékenység tervezett kezdésének időpontja a tevékenység létrehozásakori rendszer időpont.
+
+ellenőrizzük a rendszer időpontot, majd ezt enter létrehozás és tervezett kezdés időpontjának, majd ellenőrizzük, hogy a rendszer időpont és a létrehozás, valamint a tervezett kezdés időpontja azonos-e
+
+'''Rule:''' Tervezett állapotú tevékenységhez kell, hogy tartozzon tervezett kezdés időpont.
+
+
+'''Rule:''' Tervezett állapotú tevékenységnél megadhatóak az alábbi jellemzők:
+
+'''Rule:''' Tervezett állapotú tevékenység tervezett kezdési időpont módosítható, de a megadott időpont nem lehet korábbi, mint a tevékenység létrehozásakori rendszeridőpont.
+
+|'''Compare activity planed timepoint with formation timepoint'''|
+|planed timepoint|formation timepoint|compareto()|
+|08/01/2006 |08/01/2007|ok|
+
+
+'''Rule:''' A Tervezett állapotú tevékenységnél megadott tervezett Time value nem lehet több, mint a tervezett kezdés és befejezés közötti időmennyiség.
+
+
+
+
+
+

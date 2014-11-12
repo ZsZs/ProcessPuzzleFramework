@@ -1,0 +1,13 @@
+|fitlibrary.!-SelectFixture-!|
+
+|'''add'''|hu.itkodex.litest.fitnesse.!-LoggingConfigurator-!|'''as'''|loggingConfigurator|
+
+|'''select'''|loggingConfigurator|
+
+!***> Configure logging
+!include .LocalSettings.CommonTestHelpers.LoggingConfiguration
+***!
+
+!***> Start application
+!include .LocalSettings.ProcessPuzzleFramework.CommonFixtures.SetUpTearDown.GenericApplicationSetUp.ApplicationSetUp
+***!

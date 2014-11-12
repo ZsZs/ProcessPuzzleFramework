@@ -1,0 +1,46 @@
+'''Hivatkozás''' New Part Plan
+
+'''Rule:''' Új tevékenység létrehozásakor meg kell adni a következőket: (név, mely plan része). A rendszer a létrehozott tevékenységhez egyedi azonosítót rendel és az újonnan létrehozott tevékenység tervezett állapotot kap.
+
+|!-fit.ActionFixture-!|
+|start|new Activity of Marketing|
+|press|create|
+|enter|name|Marketing|
+|check|identifier|error|
+|enter|plan|Marketing|
+|press|create|
+|check|name|ok|
+|check|identifier|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|start|new Activity of Sales|
+|press|create|
+|enter|name|Marketing|
+|check|identifier|error|
+|enter|plan|Sales|
+|press|create|
+|check|name|ok|
+|check|identifier|ok|
+|check|state|proposed|
+
+- A Marketing Plan Activity listájában szerepel a létrehozott activity:
+
+|'''!-ActivityListOfMarketing-!'''|
+|'''activity-name'''|'''state'''|
+|Marketing|proposed|
+
+- A Sales Plan Activity listájában szerepel a létrehozott activity:
+
+|'''!-ActivityListOfSales-!'''|
+|'''activity-name'''|'''state'''|
+|Marketing|proposed|
+
+'''Rule:''' Különböző tervekhez tartozhat azonos nevű tevékenység.
+
+- Az összes tevékenység lista:
+
+|'''!-SumActivityList-!'''|
+|'''activity-name'''|'''plan-name'''|'''state'''|
+|Marketing|Marketing|proposed|
+|Marketing|Sales|proposed|

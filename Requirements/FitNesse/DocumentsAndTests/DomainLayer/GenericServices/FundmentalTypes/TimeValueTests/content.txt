@@ -1,0 +1,34 @@
+!********> !-Time-! - Details
+!img http://files/images/ProcessPuzzleFramework/Domain/FundamentalTypes/TimeValue-details.gif
+**************!
+
+'''Rule:''' Unit provides the conversion ration between different timeunits. It throws !-UnknownUnitException-! when an unknown unit is given.
+
+|'''!-CalculateConversionRatio-!'''|
+|from|to|ratio()|
+|msec|sec|10|
+|sec|min|60|
+|min|h|60|
+|h|d|24|
+|d|week|7|
+|week|year|56|
+|month|year|12|
+|sec|msec|0.1|
+|min|sec|0.0166666667|
+|h|min|0.0166666667|
+|h|sec|0.0002777778|
+|d|h|0.0416666667|
+|week|d|0.142857|
+|year|week|0.017857143|
+|year|month|0.083333333|
+|week|m|error|
+
+'''Rule:''' Hasonlítson össze két formatált stringben megadott dátumot, és adja meg a rendszer, hogy az első korábbi (1), későbbi (-1), vagy azonos (0) a másodikként megadott időponttal.
+
+|'''!-CalculateCompareToDate-!'''|
+|timepoint1|timepoint2|compareto()|
+|2006.01.02|2005.01.02|-1|
+|0000.00.00|1000.01.02|1|
+|2000.01.01|2000.01.01|0|
+
+

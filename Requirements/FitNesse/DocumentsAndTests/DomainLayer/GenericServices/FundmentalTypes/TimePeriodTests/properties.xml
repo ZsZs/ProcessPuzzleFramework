@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<properties>
+	<Files>true</Files>
+	<Properties>true</Properties>
+	<RecentChanges>true</RecentChanges>
+	<Refactor>true</Refactor>
+	<Search>true</Search>
+	<Versions>true</Versions>
+	<WhereUsed>true</WhereUsed>
+	<WikiImport>
+		<Source>http://dev.itkodex.hu:8004/LocalSettings.ProcessPuzzleFramework.DomainLayer.FundmentalTypes.TimePeriodTests</Source>
+		<LastRemoteModification>20070323233839</LastRemoteModification>
+	</WikiImport>
+	<saveId>1174657085360</saveId>
+	<ticketId>1037607621430128660</ticketId>
+</properties>

@@ -1,0 +1,38 @@
+'''Hivatkozás:''' New Separate Plan
+
+'''Rule:''' Két önálló típusú plan neve nem egyezhet meg. A rendszer a kis és nagybetűket  a plan névegyezőség ellenőrzésekor nem különbözteti meg.
+
+|!-fit.ActionFixture-!|
+|start|Normally Managed Plan|
+|enter|name|Marketing|
+|enter|plan types|separate|
+|press|create|error|
+|check|name|error|
+|check|identifier|error|
+|check|state|error|
+
+|!-fit.ActionFixture-!|
+|start|Normally Managed Plan|
+|enter|name|marketing|
+|enter|plan types|separate|
+|press|create|
+|check|name|error|
+|check|identifier|error|
+|check|state|error|
+
+|!-fit.ActionFixture-!|
+|start|Normally Managed Plan|
+|enter|name|MARKETING|
+|enter|plan types|separate|
+|press|create|
+|check|name|error|
+|check|identifier|error|
+|check|state|error|
+
+- A Plan-ek listája 3 plant - Marketing, Offer, Sales - tartalmaz:
+
+|'''!-PlanList-!'''|
+|'''name'''|'''plan types'''|'''state'''|
+|Marketing|separate|proposed|
+|Offer|separate|proposed|
+|Sales|separate|proposed|

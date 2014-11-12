@@ -1,0 +1,3 @@
+'''Rule:''' A Plan részét képző Action-okhoz tartozó input Artifact-ok-nak a Plan-hez is kapcsolódniuk kell, mint input artifact.
+
+'''Rule:''' A Plan részét képző Action-okhoz tartozó output Artifact-ok-nak a Plan-hez is kapcsolódniuk kell, mint output artifact.

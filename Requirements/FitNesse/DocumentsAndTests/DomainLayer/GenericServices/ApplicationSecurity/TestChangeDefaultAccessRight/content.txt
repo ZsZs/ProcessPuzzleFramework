@@ -1,0 +1,65 @@
+'''Hivatkozás:''' Access Right
+
+'''Rule:''' Új artifactra az artifact típusánál megadott defult access right vonatkozik, függetlenűl már létező kokrét artifactotknál történt módosításoktól.
+
+Létrehozunk az Offer artifact type alatt egy új artifactot:
+
+|!-fit.ActionFixture-!|
+|start|new controlled artifact 2|
+|enter|artifact type|Offer|
+|press|new|
+|enter|artifact name|HP Offer|
+|press|save|
+|check|identifier|ok|
+
+'''Rule:''' Az új artifacthoz az artifact típusánál megadott jogosultságokkal rendelkeznek a felhasználók (mindaddig, amíg a konkrét artifactnál ezt felül nem definiálják).
+
+Ellenőrizzük felhasználónként az HP Offer-hez való jogosultságukat. 0 jelölés, ha nincs jogosultsága, 1, ha van.
+
+Böcker Bea felhasználó jogosultságai:
+
+|Check Böcker Bea user Access Right|
+|artifact|action artifact|check access right()|
+|HP Offer|write|0|
+|HP Offer|read|1|
+|HP Offer|delete|0|
+|HP Offer|create|0|
+
+'''Rule:''' Az artifact típushoz való minden jogosultság módosításával a konkrét artifactoknál felül definiált jogosultság nem változik (azoknál a meglévő artifactoknál, amelyeknél a default access right nem lett felüldefiniálva, az artifact típusnál érvényes jogosultságok éervényesek).
+
+Listázzuk ki Böcker Bea Default jogosultságait:
+
+|Check Böcker Bea user Default Access Right|
+|artifact type|action artifact|check default access right()|
+|Offer|write|0|
+|Offer|read|1|
+|Offer|delete|0|
+|Offer|create|0|
+
+Töröljük Böcker Bea  Offer artifact típusokra vonatkozó valamennyi jogosultságát:
+
+|!-fit.ActionFixture-!|
+|start|delete default acces right|
+|enter|username|Böcker Bea|
+|enter|artifact type|Offer|
+|press|chage default access right|
+|enter|action artifact|read|
+|press|delete|
+|press|save|
+
+Listázzuk ki Böcker Bea jogosultságait:
+
+|Check Böcker Bea user Default Access Right|
+|artifact type|artifact|action artifact|check access right()|
+|Offer||write|0|
+|Offer||read|0|
+|Offer||delete|0|
+|Offer||create|0|
+|Offer|IBM Offer|write|1|
+|Offer|IBM Offer|read|1|
+|Offer|IBM Offer|delete|0|
+|Offer|IBM Offer|create|0|
+|Offer|HP Offer|write|0|
+|Offer|HP Offer|read|0|
+|Offer|HP Offer|delete|0|
+|Offer|HP Offer|create|0|

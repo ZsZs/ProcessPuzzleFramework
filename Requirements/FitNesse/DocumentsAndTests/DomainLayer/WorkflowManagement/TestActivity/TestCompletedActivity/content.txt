@@ -1,0 +1,7 @@
+'''Rule:''' Az implemented állapotú tevékenység Completed állapotot kap a Befejez nyomógomb megnyomásával.
+
+'''Rule:''' A Completed állapotú tevékenység örökli az implemented állapotú tevékenység jellemzőit.
+
+'''Rule:''' A completed állapotú tevékenység tényleges befejezésének időpontja a Befejez nyomógomb megnyomásakori rendszeridőpont.
+
+'''Rule:''' A completed állapotú tevékenység jellemzői közül csak a tényleges Time value jellemző módosítható.

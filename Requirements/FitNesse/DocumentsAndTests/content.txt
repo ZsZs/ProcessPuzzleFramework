@@ -1,0 +1,91 @@
+A complex systems such as !-ProcessPuzzle-! can be specified, documented and tested from many different viewpoints. The Business Model of !-ProcessPuzzle-! as depicted in the diagram below defines the requirements in a strongly logical level. It's inherent property to decouple the requirements specification technique from the implementation technique. On the other hand the Design Model's main purpose is to specify how the requirement - defined in the Business Model - are implemented in a specific architecture. There is a relationship between the Business and Design Model but while the Business Model hides this relationship the Design Model makes explicit how the logically formed requirements are implemented in the given architecture.
+According to this duality in specification's purpose, viewpoints, and abstraction !-ProcessPuzzle-! Framework is specified, documented and tested in correspondence with the
+!3 Business Model
+!*** Business Model - Overview
+!img http://files/ProcessPuzzle/Images/BusinessModel_BusinessModelOverview.gif
+***!
+ * '''Business terms and rules''' are specified and tested in the context of [[Domain Model][^DomainLayer]]
+ * '''The consistent sets of datas used in workflows, especially in activities''' are specified and tested as [[Work Products][>WorkProducts]]
+ * '''The consistent sets of activities performed by humans playing a role''' are specified and tested as [[Roles][^RolesPackage]]
+ * '''The complex series of business activities''' are specified and tested as [[Workflows][^WorkflowsPackage]]
+ * '''The system's usability''' is specified and tested in the context of [[Use Cases][^UseCases]]
+
+!3 Design Model
+As the diagram below depicts, '''!-ProcessPuzzle-! Framework''' has a complex component based, Service Oriented Architecture reflecting the very different concerns to which the system should comply.
+!*** Component Dependencies
+!img http://files/ProcessPuzzle/Images/DesignModel_ApplicationComponentsOverview.gif
+***!
+ * '''The Browser elements''' - mainly !-JavaScript-! widgets - are specified and tested in the [[!-ProcessPuzzle-! Browser Interface][^BrowserInterface]] component.
+ * '''The Portlets''' from which the !-ProcessPuzzle SharePoint Front End-! consists of are specified and tested in the context of [[!-ProcessPuzzle SharePoint-! Interface][^SharePointInterface]] component.
+ * '''The Eclipse Plugins''' from which the !-ProcessPuzzle GUI-! built are specified and tested in the context of [[!-ProcessPuzzle-! GUI][^EclipseInterface]] component.
+ * '''The very fundamental services''', like persistence, application configuration, internationalization are specified in the context of [[!-ProcessPuzzle-! Generic Services][^DomainLayer.GenericServices]] component.
+ * '''The framework's core functionality''', like party-, work product-, problem-, goal- planning- and rule management are specified in the context of [[!-ProcessPuzzle-! Business Management][^BusinessManagement]] component.
+ * '''The framework's human workflow management''' are specified in the context of [[!-ProcessPuzzle-! Workflow Engine][^WorkflowManagement]] component.
+
+According to the [[Domain Driven Desing][http://domaindrivendesign.org/]] principles the Domain layer implements the problem domain specific knowledge. Technological issues, such as persistency or user interface are taken away from domain layer to the integration, control and presentation layers.
+Corresponding to this design rules different kind of specifications and test are written againts the different layers:
+
+!3 Common Test Fixtures
+To be able to eliminate any kind of redundancy in test cases the recurring elements, parts should extracted turned to reusable test components. Below those test components are listed which can be reused in many of the test above.
+ * '''[[Common Fixtures][>CommonFixtures]]''' constitutes reusable elements in the specifications above.
+
+!***> Project specific variables
+!define ApplicationConfigurationDescriptor {classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml}
+!define DatabaseType {HSQLDB}
+!define DatabaseConnection {mem:ENYV_TEST_DB}
+!define DatabaseUser {sa}
+!define DatabasePassword {}
+***!
+
+!***> Project specific test runner
+!define TEST_RUNNER {fitlibrary.suite.FitLibraryServer}
+***!
+
+!***> Projekt specific Class Path settings
+'''!-ProcessPuzzle-!''' compiled classes
+!path ${ViewPath}\ProcessPuzzle\Framework\DomainTier\${InstrumentedClasses}
+!path ${ViewPath}\ProcessPuzzle\Framework\DomainTier\${CompiledClasses}
+!path ${ViewPath}\ProcessPuzzle\Framework\DomainTier\${CompiledTestClasses}
+
+!path ${ViewPath}\ProcessPuzzle\Framework\DomainComponents\${InstrumentedClasses}
+!path ${ViewPath}\ProcessPuzzle\Framework\DomainComponents\${CompiledClasses}
+!path ${ViewPath}\ProcessPuzzle\Framework\DomainComponents\${CompiledTestClasses}
+
+!path ${ViewPath}\ProcessPuzzle\Framework\WebTier\${InstrumentedClasses}
+!path ${ViewPath}\ProcessPuzzle\Framework\WebTier\${CompiledClasses}
+!path ${ViewPath}\ProcessPuzzle\Framework\WebTier\${CompiledTestClasses}
+
+'''!-ProcessPuzzle-!''' framework libraries
+!path ${ViewPath}\${COMMONS_DISTRIBUTION_DIR}\${COMMONS_DOMAIN_LOGIC_JAR}
+!path ${ViewPath}\${LITEST_DISTRIBUTION_DIR}\${LITEST_DOMAIN_LOGIC_JAR}
+
+'''Third party libraries for !-ProcessPuzzle-! domain tier:'''
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Apache Commons\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Castor\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\DOM4J\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\FOP\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Google-Collect\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hamcrest\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hibernate\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JAXB-RI\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Jaxen\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JiBX\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\jTDS\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Log4J\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\SLF4J\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Spring\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Xerces\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Xalan\*.jar
+
+'''HSQL JDBC dirver'''
+!path ${ViewPath}\ProcessPuzzle\Framework\build\DevelopmentLibraries\HSQL\*.jar
+
+'''Oracle Thin JDBC dirver'''
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Oracle-JDBC\ojdbc14.jar
+
+'''!-HtmlUnit-! for testing Browser UI'''
+!path ${ViewPath}\ProcessPuzzle\Framework\build\DevelopmentLibraries\HtmlUnit\*.jar
+
+'''tools.jar needed for Java Compiler API'''
+!path ${JavaHome}\lib\tools.jar
+***!

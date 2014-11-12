@@ -1,0 +1,9 @@
+'''Rule:''' A plan tervezett kezdésének időpontja nem lehet korábbi, mint a Plan létrehozásának időpontja.
+
+'''Rule:''' A plan tervezett kezdésének időpontja nem lehet későbbi, mint a hozzá tartozó Action-ok tervezett kezdésének legkorábbi időpontja.
+
+'''Rule:''' A plan tervezett befejezésének időpontja nem lehet korábbi, mint a hozzátartozó Action-ok bármelyikének tervezett befejezési időpontja.
+
+'''Rule:''' Plan tervezett kezdésének módosításakor a rendszer ellenőrzi, hogy a plan-hez tartozó Action-ok valamelyikének tervezett kezdési időpontjánál nem későbbi-e a módosított időpont. Ha igen, akkor a rendszer üzenetet küld (Módosítsa a Plan, vagy a hozzá tartozó Action tervezett kezdési időpontját)
+
+'''Rule:''' Plan tervezett befejezésének módosításakor a rendszer ellenőrzi, hogy a plan-hez tartozó Action-ok valamelyikének tervezett befejezési időpontjánál nem korábbi-e a módosított időpont. Ha igen, akkor a rendszer üzenetet küld (Módosítsa a Plan, vagy a hozzá tartozó Action tervezett kezdési időpontját)

@@ -1,0 +1,68 @@
+'''Hivatkozás:''' New Separate Plan
+
+'''Rule:''' Más plan részeként (anya terv) akkor hozható létre Plan, ha az anya terv még nem tartalmaz activity-ket.
+
+- Az Offer Plan tevékenységlistája üres:
+
+|'''!-ActivityListOfOffer-!'''|
+|'''activity-name'''|'''state'''|
+
+'''Rule:''' Más Plan részeként létrehozott új terv létrehozásakor meg kell adni a Plan nevét, a típusát part-nak kell jelölni, és meg kell adni melyik plan része. A létrehozott tervhez a rendszer egyedi azonosítót rendel és a terv tervezett állapotot kap.
+
+|!-fit.ActionFixture-!|
+|start|New part plan under Offer 1|
+|enter|name|Call for offers|
+|enter|part types|part|
+|enter|create|
+|check|identifier|error|
+|enter|plan|Offer|
+|press|create|
+|check|identifier|ok|
+|check|name|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|start|New part plan under Offer 2|
+|enter|name|Offer|
+|enter|part types|part|
+|enter|create|
+|check|identifier|error|
+|enter|plan|Offer|
+|press|create|
+|check|identifier|ok|
+|check|name|ok|
+|check|state|proposed|
+
+- A separate tipusú Offer Plan plan-listája tartalmazza az új rész-terveket:
+
+|'''!-PlanListOfOffer-!'''|
+|'''plan-name'''|'''plan type'''|'''state'''|
+|Call for offers|part|proposed|
+|Offer|part|proposed|
+
+'''Rule:''' Különböző tervek alatt létrehozható azonos nevű terv.
+
+- Létrehozunk egy rész-plant a Call for offers plan alatt:
+
+|!-fit.ActionFixture-!|
+|start|New part plan under Call for offers|
+|enter|name|Call for offers|
+|enter|part types|part|
+|enter|create|
+|enter|plan|Call for offers|
+|press|create|
+|check|identifier|ok|
+|check|name|ok|
+|check|state|proposed|
+
+- Az összes Plan-ek listája:
+
+|'''!-SumPlanList-!'''|
+|'''plan-name'''|'''plan-type'''|'''state'''|'''mother-plan-name'''|
+|Offer|separate|proposed||
+|Marketing|separate|proposed||
+|Sales|separate|proposed||
+|Call for offers|part|proposed|Offer|
+|Offer|part|proposed|Offer|
+|Call for offers|part|proposed|Call for offers|
+

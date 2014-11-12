@@ -1,0 +1,13 @@
+!********> Domain Classes Overview
+!img http://test.itkodex.hu/files/images/ProcessPuzzleFramework/Domain/ApplicationSecurity/UserAggregateOverview.gif
+**************!
+
+ * [[User][^TestUser]]
+ * [[User identification data][^TestUserIdentificationData]]
+ * [[Default Access Right][^TestDefaultAccessRight]]
+ * [[Change Default Access Right][^TestChangeDefaultAccessRight]]
+ * [[Access Right][^TestAccessRight]]
+ * [[Contact of Access Right][^TestContactOfAccessRight]]
+ * [[New Action Artifact][^TestNewActionArtifact]]
+
+!lastmodified

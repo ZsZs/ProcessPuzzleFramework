@@ -1,0 +1,74 @@
+!-ProcessPuzzle-! Framework constitutes the backbone of all ''real'' applications. It's - domain - services are very basic and generic. Therefore do not try to find problem domain specific test here. These are defined in differenc so called '''Business Plugins'''. The services provided by the framework can be devided into three main areas:
+ 1 [['''Generic application services'''][>GenericServices]]
+  * [[Fundamental Types][>GenericServices.FundmentalTypes]]
+  * [[Internalization][>GenericServices.InterNalization]]
+  * [[Persistence][>GenericServices.PerSistence]]
+  * [[Resouce Management][>GenericServices.ResouceManagement]]
+  * [[Application Configuration][>GenericServices.ApplicationConfiguration]]
+  * [[Application Security][>GenericServices.ApplicationSecurity]]
+  * [[Rule][>GenericServices.RuleTests]]
+  * [[Quantity][>GenericServices.QuantityTests]]
+  * [[Money][>GenericServices.MoneyTests]]
+ 2 [['''Archetypes'''][>ArcheTypes]]
+  * [[Party][>ArcheTypes.PartyTests]]
+  * [[Party Relationship][>ArcheTypes.PartyRelationship]]
+  * [[CRM][>ArcheTypes.CustomerRelationshipManagement]]
+  * [[Product][>ArcheTypes.ProductTests]]
+  * [[Order][>Archetypes.OrderTests]]
+  * [[Inventory][>ArcheTypes.InventoryTests]]
+ 3 [['''Workflow and Content management services'''][>WorkflowManagement]]
+  * [[Workflows][>WorkflowManagement.Workflow]]
+  * [[Roles][>WorkflowManagement.Roles]]
+  * [[Artifacts][>WorkflowManagement.Artifacts]]
+
+!*** Domain Areas
+!img http://test.itkodex.hu/files/ProcessPuzzle/Images/DesignModel_ProcessPuzzleDomainLayerOverview.gif
+***!
+
+!***> Project specific variables
+!define ApplicationConfigurationDescriptor {classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml}
+!define DatabaseType {HSQLDB}
+!define DatabaseConnection {mem:ENYV_TEST_DB}
+!define DatabaseUser {sa}
+!define DatabasePassword {}
+***!
+
+!***> Project specific class path
+'''!-IT-Codex-Commons-!''' - domain tier
+!path ${ViewPath}\ProcessPuzzle\Framework\build\Distribution\Commons\IT-Codex-Commons-DomainLogic-0.1.0.jar
+
+'''!-LiTest-!''' - domain tier
+#!path ${ViewPath}\ProcessPuzzle\Framework\build\Distribution\LiTest\LiTest-DomainLogic-0.3.0.jar
+!path ${ViewPath}\ITKodex\Projects\LiTest\Implementation\DomainTier\${CompiledClasses}
+
+'''!-ProcessPuzzle-! domain tier'''
+!path ${ViewPath}\ProcessPuzzle\Framework\FrameworkDomainTier\${CompiledClasses}
+
+'''Third party libraries''' for !-ProcessPuzzle-! domain tier:
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Apache Commons\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Castor\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\DOM4J\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\FOP\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Google-Collect\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hamcrest\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hibernate\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JAXB-RI\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Jaxen\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JiBX\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\jTDS\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Log4J\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Spring\*.jar
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Xerces\*.jar
+
+'''!-DbFit-! FIT extendsion for databasde testing'''
+!path ${ViewPath}\ITKodex\Projects\DbFit\Implementation\DomainTier\${CompiledClasses}
+
+'''HSQL JDBC dirver'''
+!path ${ViewPath}\ProcessPuzzle\Framework\build\DevelopmentLibraries\HSQL\*.jar
+
+'''Oracle Thin JDBC dirver'''
+!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Oracle-JDBC\\ojdbc14.jar
+
+'''tools.jar needed for Java Compiler API'''
+!path ${JavaHome}\lib\tools.jar
+***!

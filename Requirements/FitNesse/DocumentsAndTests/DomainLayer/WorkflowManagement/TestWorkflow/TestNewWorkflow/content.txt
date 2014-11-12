@@ -1,0 +1,25 @@
+'''Rule:''' Új workflow létrehozásakor meg kell adni a nevét. A rendszer egyedi azonosítót rendel a létrehozott workflow-hoz, és létrehozáskor tervezett állapotot kap.
+
+|!-fit.ActionFixture-!|
+|start|New workflow|
+|enter|name|IT prodact sales|
+|press|create|
+|check|identifier|ok|
+|check|name|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|start|New workflow|
+|enter|name|Operation|
+|press|create|
+|check|identifier|ok|
+|check|name|ok|
+|check|state|proposed|
+
+- A Workflow-k listája tartalmazza a létrehozott workflow-t:
+
+|'''!-WorkflowList-!'''|
+|'''name'''|'''state'''|
+|IT prodact sales|proposed|
+|Operation|proposed|
+

@@ -1,0 +1,77 @@
+'''Hivatkozás:''' Change Default Access Right
+
+'''Rule:''' Írási jogosultsághoz automatikusan jár olvasási jogosultság is.
+
+Létrehozunk az Offer artifact type alatt egy új artifactot:
+
+|!-fit.ActionFixture-!|
+|start|new controlled artifact 2|
+|enter|artifact type|Offer|
+|press|new|
+|enter|artifact name|Hais Offer|
+|press|save|
+|check|identifier|ok|
+
+Böcker Bea usernek írási jogosultságot adok a Hais Offerhez (az Offer artifact típushoz általában nincs hozzáférési jogosultsága):
+
+|!-fit.ActionFixture-!|
+|start|add acces right|
+|enter|username|Böcker Bea|
+|enter|artifact type|Offer|
+|enter|artifact|Hais Offer|
+|press|new access right|
+|enter|action artifact|write|
+|press|save|
+
+Ellenőrizzük Böcker Bea valamennyi jogosultságát:
+
+|Check Böcker Bea user Access Right|
+|artifact type|artifact|action artifact|check access right()|
+|Offer|IBM Offer|write|1|
+|Offer|IBM Offer|read|1|
+|Offer|IBM Offer|delete|0|
+|Offer|IBM Offer|create|0|
+|Offer|Hais Offer|write|1|
+|Offer|Hais Offer|read|1|
+|Offer|Hais Offer|delete|0|
+|Offer|Hais Offer|create|0|
+
+'''Rule:''' Törlési jogosultsághoz automatikusan jár olvasási jogosultság is.
+
+Létrehozunk az Offer artifact type alatt egy új artifactot:
+
+|!-fit.ActionFixture-!|
+|start|new controlled artifact 2|
+|enter|artifact type|Offer|
+|press|new|
+|enter|artifact name|KOD Offer|
+|press|save|
+|check|identifier|ok|
+
+Böcker Bea usernek törlési jogosultságot adok a KOD Offer artifacthoz (az Offer artifact típushoz általában nincs hozzáférési jogosultsága):
+
+|!-fit.ActionFixture-!|
+|start|add acces right|
+|enter|username|Böcker Bea|
+|enter|artifact type|Offer|
+|enter|artifact|KOD Offer|
+|press|new access right|
+|enter|action artifact|delete|
+|press|save|
+
+Ellenőrizzük Böcker Bea valamennyi jogosultságát:
+
+|Check Böcker Bea user Access Right|
+|artifact type|artifact|action artifact|check access right()|
+|Offer|IBM Offer|write|1|
+|Offer|IBM Offer|read|1|
+|Offer|IBM Offer|delete|0|
+|Offer|IBM Offer|create|0|
+|Offer|Hais Offer|write|1|
+|Offer|Hais Offer|read|1|
+|Offer|Hais Offer|delete|0|
+|Offer|KOD Offer|create|0|
+|Offer|KOD Offer|write|0|
+|Offer|KOD Offer|read|1|
+|Offer|KOD Offer|delete|1|
+|Offer|KOD Offer|create|0|

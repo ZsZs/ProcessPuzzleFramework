@@ -1,0 +1,5 @@
+!3 Common Fixtures - Reusable specification and test elements
+
+Reusable testing elements falls into a couple of different categories based on their usage environment.
+ * [['''Setup and Tear'''][>SetUpTearDown]] down fixtures
+ * [['''Database'''][>DataBase]] back door manipulation fixtures

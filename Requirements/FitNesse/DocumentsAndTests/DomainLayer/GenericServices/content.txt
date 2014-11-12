@@ -1,0 +1,14 @@
+Generic Services component comprises the most basic part of !-ProcessPuzzle-!. It provides very generic services for handling time, quantity and such basic terms, facilitates Domain Driven Design with repositories, factories, helps internationalization with managing locale.
+!***> To get an overview see this diagram.
+!img http://test.itkodex.hu/files/ProcessPuzzle/Images/DesignModel_GenericServicesOverview.gif
+***!
+  * [[Application Configuration][>ApplicationConfiguration]]
+  * [[Application Security][>ApplicationSecurity]]
+  * [[Fundamental Types][>FundmentalTypes]]
+  * [[Internationalization][>InterNalization]]
+  * [[Persistence Management][>PerSistence]]
+  * [[Preferences][>PrefeRences]]
+  * [[Resource Management][>ResouceManagement]]
+  * [[Text Formatting][>TextFormatting]]
+  * [[User Operation][>UserOperation]]
+

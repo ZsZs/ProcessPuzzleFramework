@@ -1,0 +1,16 @@
+|!-fit.ActionFixture-!|
+|start|Normally managed plan|
+|enter|name|Test2|
+|enter|plan types|separate|
+|press|create|
+|check|name|ok|
+|check|identifier|ok|
+|check|state|proposed|
+
+
+|'''!-PlanList-!'''|
+|'''name'''|'''plan types'''|'''state'''|
+|Marketing|separate|proposed|
+|Offer|separate|proposed|
+|Sales|separate|proposed|
+

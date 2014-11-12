@@ -1,0 +1,9 @@
+!3 Generic Application Set Up
+
+|Import|
+|com.processpuzzle.fitnesse.application|
+
+|fit.!-ActionFixture-!|
+|'''start'''|!-ApplicationTestCoordinator-!|
+|'''enter'''|''configurationPath''|${ApplicationConfigurationDescriptor}|
+|'''enter'''|''!-notifyOnTestPageSetUp-!''|!-LocalSettings.ProcessPuzzleFramework-!|

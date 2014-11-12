@@ -1,0 +1,1 @@
+'''Rule:''' A Planhez kapcsolódnia kell Owner tipusú party-nak, ahhoz, hogy a Plan bármely action-je végrehajtás alatti állapotba kerüljön.

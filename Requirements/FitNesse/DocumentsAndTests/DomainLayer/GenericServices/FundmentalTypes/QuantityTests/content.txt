@@ -1,0 +1,152 @@
+!********> Quantity - Details
+!img http://files/images/ProcessPuzzleFramework/Domain/FundamentalTypes/Quantity-details.gif
+**************!
+
+Checking if our methods know the decimal separators belonging to the different languages
+|Decimal separator test|
+|language|country|currency()|separator()|
+|hu|HU|HUF|,|
+|en|GB|GBP|.|
+
+|!-fit.ActionFixture-!|
+|start|!-EmptyLocaleRepository-!|
+|press|empty|
+
+'''Rule:''' The system must add two units in same measure furthermore it should handle negative numbers.
+
+|'''!-Calculate add with same units-!'''|
+|unit|quantity 1|quantity 2|add()|
+|kg|10|5|15|
+|kg|0|0|0|
+|kg|0.2|0|0.2|
+|kg|5|0.4|5.4|
+|kg|-3|-4|-7|
+|g|-3|4|1|
+|t|0.1|-0.03|0.07|
+
+'''Rule:''' A rendszer két különböző súly mértékegységű mennyiséget tudjon összeadni, úgy, hogy az első érték mértékegységre konvertálja a második értéket és abszolut értékben számol. Nem átváltható mértékegységek esetén a rendszer hibát jelez.
+
+|'''!-Calculate add with different units-!'''|
+|quantity 1|unit 1|quantity 2|unit 2|add()|unit()|
+|10|kg|5|dkg|10.05|kg|
+|2.3|kg|5|dkg|2.3499999999999996|kg|
+|-4.02|kg|-72.5|dkg|-4.744999999999999|kg|
+|0|kg|-31|dkg|-0.31|kg|
+|10|g|5|t|5000010|g|
+|250.5|g|-0.341|t|-340749.5|g|
+|14.2|kg|33.3|l|error|g|
+
+'''Rule:''' A rendszer két különböző súly mértékegységű mennyiséget tudjon összeadni, úgy, hogy az első érték mértékegységre konvertálja a második értéket és abszolut értékben számol. Nem átváltható mértékegységek esetén a rendszer hibát jelez.
+
+|'''!-Calculate add with different units-!'''|
+|quantity 1|unit 1|quantity 2|unit 2|add()|unit()|
+|10|kg|5|dkg|10.05|kg|
+|2.3|kg|5|dkg|2.3499999999999996|kg|
+|-4.02|kg|-72.5|dkg|-4.744999999999999|kg|
+|0|kg|-31|dkg|-0.31|kg|
+|10|g|5|t|5000010|g|
+|250.5|g|-0.341|t|-340749.5|g|
+|14.2|kg|33.3|km|error|
+|1|t|10|person|error|
+
+'''Rule:''' A rendszer hasonlítson össze két azonos mértékegységű mennyiséget, és adja meg, hogy az első kisebb (-1), nagyobb(1), vagy egyenlő (0) a második mennyiséggel.
+
+|'''Compare two quantities with same units'''|
+|unit|quantity 1|quantity 2|compareto()|
+|kg|5|4|1|
+|g|-3|6|-1|
+|t|0|0|0|
+|dkg|-5.467|-5.467|0|
+|kg|4560.34|7846.26987|-1|
+|g|0|-0.001|1|
+|kg|0|0.21|-1|
+|USD|34|-23.4|1|
+|EUR|0.12|-12|1|
+|HUF|-5|0|-1|
+|HUF|0|0|0|
+|pc|-1|0|-1|
+|person|-2.3|6|-1|
+
+'''Rule:''' A rendszer hasonlítson össze két különböző mértékegységű súly mennyiséget, és adja meg, hogy az első kisebb (-1), nagyobb(1), vagy egyenlő (0) a második mennyiséggel.  Nem átváltható mértékegységek esetén a rendszer hibát jelez.
+
+|'''Compare two quantities with different units'''|
+|quantity 1|unit 1|quantity 2|unit 2|compareto()|
+|5|kg|10|dkg|1|
+|3|g|0.0003|kg|1|
+|3|g|0.003|kg|0|
+|0.123|t|122|kg|1|
+|-34.1|dkg|341|g|-1|
+|-45.3|t|-45300|kg|0|
+|0.0000012|t|-12|g|1|
+|2.3|t|13|pc|error|
+
+'''Rule:'''  A rendszer váltsa át az első mértékegységben megadott mennyiséget a másodiknak megadott mértékegységre.  Nem átváltható mértékegységek esetén a rendszer hibát jelez.
+
+|'''Convert unit'''|
+|quantity 1|from unit|to unit|convertto()|result unit()|
+|23|kg|t|0.023|t|
+|-0.00023|t|g|-230|g|
+|0|kg|dkg|0|dkg|
+|1|kg|dkg|100|dkg|
+|467.345|g|kg|0.467345|kg|
+|34|g|cm|error|
+|40|m|cm|4000|
+|-5|km|m|-5000|
+|10|m|person|error|
+
+'''Rule:'''  A rendszer egy stringben megadott mennyiség+mértékegységben ismerje fel a mennyiséget és a mértékegységét. Értelmezehetetlen string esetén a rendszer hibát jelez.
+
+'''Megjegyzés:''' A tesztek alapértelmezett nyelve magyar, ennek megfelelően fog a feldolgozás megtörténni!
+
+|'''!-CalculateParse-!'''|
+|source text|quantity()|unit()|
+|3kg|3|kg|
+|356EUR|356|EUR|
+|0,123t|0.123|t|
+|-34g|-34|g|
+|15 kinéz|error|error|
+|120     t|120|t|
+|34;3HUF|error|error|
+|-4 person|-4|person|
+|2    pc|2|pc|
+|4%|error|
+
+'''Rule:''' A rendszer a megadott nyelvnek megfelelő, folytonosan, illetve space elválasztással írt számformátumú stringben megadott mennyiség+mértékegységben ismerje fel a mennyiséget és a mértékegységét. A nyelvnek nem megfelelő decimális elválasztó esetén a rendszer hibát dob.
+
+|'''!-CalculateParse with different languages-!'''|
+|language|country|source text|quantity()|unit()|
+|hu|HU|1 000 000,34 kg|1000000.34|kg|
+|hu|HU|1  000 000 t|1000000|t|
+|hu|HU|1 000m|1000|m|
+|hu|HU|100,34 t|100.34|t|
+|hu|HU|100000,78 kg|100000.78|kg|
+|hu|HU|1 0000 00,34 kg|1000000.34|kg|
+|hu|HU|1  0 00 000 t|1000000|t|
+|hu|HU|1 0 00m|1000|m|
+|hu|HU|100,34 t|100.34|t|
+|hu|HU|100000,78 kg|100000.78|kg|
+|en|GB|1 000 000.34 kg|1000000.34|kg|
+|en|GB|1  0 00 000 t|1000000|t|
+|en|GB|1 000m|1000|m|
+|en|GB|100.34 t|100.34|t|
+|en|GB|1   00000.78 kg|100000.78|kg|
+|en|GB|1 0000 00.34 kg|1000000.34|kg|
+|en|GB|100000,78 kg|error|
+|hu|HU|100.34 t|error|
+
+|!-fit.ActionFixture-!|
+|start|!-EmptyLocaleRepository-!|
+|press|empty|
+
+'''Rule:''' A rendszer  szeparátorként csak a space szeparátort fogadja el, más group elválasztó használata esetén hibát dob.
+
+|'''!-CalculateParse with different languages-!'''|
+|language|country|source text|quantity()|unit()|
+|hu|HU|1 000 000,34 kg|1000000.34|kg|
+|hu|HU|1.000.000 t|error|
+|hu|HU|1-000-m|error|
+|hu|HU|100,34 t|100.34|t|
+|en|GB|1.000.000 t|error|
+|en|GB|1.000.34m|error|
+|en|GB|100 0.34 t|1000.34|t|
+

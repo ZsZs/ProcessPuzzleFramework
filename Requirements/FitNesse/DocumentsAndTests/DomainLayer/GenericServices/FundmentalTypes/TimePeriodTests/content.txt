@@ -1,0 +1,12 @@
+!********> !-TimePeriod-! - Details
+!img http://files/images/ProcessPuzzleFramework/Domain/FundamentalTypes/TimePeriod-details.gif
+**************!
+
+'''Rule:''' Hasonlítson össze két formatált stringben megadott dátumot, és adja meg a rendszer, hogy az első korábbi (1), későbbi (-1), vagy azonos (0) a másodikként megadott időponttal.
+
+|'''!-CalculateCompareToDate-!'''|
+|timepoint1|timepoint2|compareto()|
+|2006.01.02|2005.01.02|-1|
+|0000.00.00|1000.01.02|1|
+|2000.01.01|2000.01.01|0|
+

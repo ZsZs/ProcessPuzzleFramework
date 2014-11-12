@@ -1,0 +1,3 @@
+!********> Locale - Details
+!img http://files/images/ProcessPuzzleFramework/Domain/Internalization/Locale-details.gif
+**************!

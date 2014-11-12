@@ -1,0 +1,1 @@
+'''Rule:''' A workflow csak planphase-ekből állhat (plant-t és activity-t nem tartalmazhat).

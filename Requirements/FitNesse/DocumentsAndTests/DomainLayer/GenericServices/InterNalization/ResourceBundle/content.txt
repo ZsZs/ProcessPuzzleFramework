@@ -1,0 +1,3 @@
+!********> ResourceBundle - Details
+!img http://files/images/ProcessPuzzleFramework/Domain/Internalization/ResourceBundle-details.gif
+**************!

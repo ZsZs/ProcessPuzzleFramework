@@ -1,0 +1,7 @@
+!********> Domain Classes Overview
+!img http://files/images/ProcessPuzzleFramework/Domain/Internalization/Overview.gif
+**************!
+ * [[Manage localized texts][^ResourceBundle]]
+ * [[Manage specific geographical, political, or cultural regions][^ManageLocales]]
+
+!lastmodified

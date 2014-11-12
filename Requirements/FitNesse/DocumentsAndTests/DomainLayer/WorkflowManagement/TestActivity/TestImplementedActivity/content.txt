@@ -1,0 +1,11 @@
+'''Rule:''' Tervezett állapotú tevékenység implemented állapotot kap a start metódus hatására.
+
+'''Rule:''' Start metódus nem indításának feltétele, hogy a tevékenység kapcsolódik végrehajtó party-hoz.
+
+'''Rule:''' Az implemented állapotú tevékenység megörökli a tervezett állapotú tevékenység jellemzőit.
+
+'''Rule:''' Az implemented állapotú tevékenységhez kell, hogy tartozzon tervezett állapotú tevékenység.
+
+'''Rule:''' Az implemented állapotú tevékenység tényleges megkezdésének időpontja a megkezdéskori rendszer időpont.
+
+'''Rule:''' Az implemented állapotú tevékenységnél kötelezőek az alábbi jellemzők megléte (tervezett kezdés, befejezés, tényleges kezdés, végrehajtó).

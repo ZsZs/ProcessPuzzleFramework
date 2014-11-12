@@ -1,0 +1,1 @@
+'''Rule:''' A Plan tényleges idő-ráfordítása egyenlő a hozzá tartozó planek tényleges időráfordításainak mennyiségével.

@@ -1,0 +1,31 @@
+'''Hivatozás:''' New Workflow
+
+'''Rule:''' Új workflow neve nem lehet azonos más workflow nevével. A rendszer a kis és nagybetűket  a névegyezőség ellenőrzésekor nem különbözteti meg.
+
+|!-fit.ActionFixture-!|
+|start|False new workflow for name 1|
+|enter|name|IT prodact sales|
+|enter|create|
+|check|name|error|
+|check|identifier|error|
+
+|!-fit.ActionFixture-!|
+|start|False new workflow for name 2|
+|enter|name|IT Prodact sales|
+|enter|create|
+|check|name|error|
+|check|identifier|error|
+
+|!-fit.ActionFixture-!|
+|start|False new workflow for name 3|
+|enter|name|IT PRODACT SALES|
+|enter|create|
+|check|name|error|
+|check|identifier|error|
+
+- A Workflow-k listája 1 workflow-t tartalmaz:
+
+|'''!-WorkflowList-!'''|
+|'''name'''|'''state'''|
+|IT prodact sales|proposed|
+

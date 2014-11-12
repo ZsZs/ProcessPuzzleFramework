@@ -1,0 +1,86 @@
+'''Hivatkozás:''' User
+
+'''Rule:''' Minden újonnan létrehozott Artifact típushoz defaultban Olvasási jogosultsága van a felhasználóknak.
+
+Létrehozzuk az Ajánlat artifact típust:
+
+|!-fit.ActionFixture-!|
+|start|new artifact type|
+|press|create|
+|enter|name|Offer|
+|press|save|
+|check|identifier|ok|
+
+Ellenőrizzük felhasználónként a default acces right-ját. 0 jelölés, ha nincs jogosultsága, 1, ha van.
+Böcker Beáta felhasználó jogosultságai:
+
+|Check Böcker Beáta user Default Access Right|
+|artifact type|action artifact|check access right()|
+|Offer|write|0|
+|Offer|read|1|
+|Offer|delete|0|
+|Offer|create|0|
+
+Böcker Bea felhasználó jogosultságai:
+
+|Check Böcker Bea user Default Access Right|
+|artifact type|action artifact|check access right()|
+|Offer|write|0|
+|Offer|read|1|
+|Offer|delete|0|
+|Offer|create|0|
+
+'''Rule:''' Artifact típusonként átállítható egyes felhasználó default jogosultsága. (Átállítást követően az adott artifact típus valamennyi artifatcjára érvényes a megadott jogosultság, kivéve azon kokrét artifactra, amelynél ezt a jogosultságot felül nem definiálják.)
+
+Megváltoztatjuk Böcker Beáta jogosultságát az Offer típusú artifacthoz.
+
+|!-fit.ActionFixture-!|
+|start|change default acces right|
+|enter|artifact type|Offer|
+|enter|username|Böcker Beáta|
+|press|change default acces right|
+|enter|write|
+|press|save|
+
+Ellenőrizzük felhasználónként a default acces right-ját. 0 jelölés, ha nincs jogosultsága, 1, ha van.
+Böcker Beáta felhasználó jogosultságai:
+
+|Check Böcker Beáta user Default Access Right|
+|artifact type|action artifact|check access right()|
+|Offer|write|1|
+|Offer|read|1|
+|Offer|delete|0|
+|Offer|create|0|
+
+Böcker Bea felhasználó jogosultságai:
+
+|Check Böcker Bea user Default Access Right|
+|artifact type|action artifact|check access right()|
+|Offer|write|0|
+|Offer|read|1|
+|Offer|delete|0|
+|Offer|create|0|
+
+'''Rule:''' Minden újonnan létrehozott User-nek defaultban Olvasási jogosultsága van minden Artifact típushoz.
+
+Létrehozunk egy új felhasználót, Krima Péter-t.
+
+|!-fit.ActionFixture-!|
+|start|new User 3|
+|press|create|
+|enter|username|Krima Péter|
+|press|save|
+|check|username|ok|
+|enter|password|kkkL007|
+|press|save|
+|check|password|ok|
+|check|identifier|ok|
+
+Ellenőrizzük Krima Péter default acces right-ját:
+
+|Check Krima Péter user Default Access Right|
+|artifact type|action artifact|check access right()|
+|Offer|write|0|
+|Offer|read|1|
+|Offer|delete|0|
+|Offer|create|0|

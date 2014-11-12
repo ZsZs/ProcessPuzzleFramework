@@ -1,0 +1,8 @@
+'''Rule:''' The system knows about wich month how day long.
+
+'''Rule:''' A rendszer tudja, hogy a 0. és minden 4-el, illetve 1000-el osztható számú év szökőév. Az ezerrel nem, de 100-al osztható évek nem szökőévek. A megadott évszámot megviszgálja, ha 4-el osztható, akkor szökőév (1), ha nem osztható, akkor nem szökőév (-1).
+
+|'''!-Calculate leap year-!'''|
+|year|leapyear()|days()|february()|
+|1900|false|365|28|
+|2000|true|366|29|

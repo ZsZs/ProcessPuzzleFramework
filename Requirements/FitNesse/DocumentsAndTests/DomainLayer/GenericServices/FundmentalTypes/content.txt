@@ -1,0 +1,10 @@
+!***> To get an overview see this diagram.
+!img http://test.itkodex.hu/files/ProcessPuzzle/Images/DesignModel_FundamentalTypesDomainLayerOverview.gif
+***!
+ * [[Units][^TestUnit]]
+ * [[Calendar][^TestCalendar]]
+ * [[Quantity][^QuantityTests]]
+ * [[Money][^MoneyTests]]
+ * [[!-Time-!][^TimeTests]]
+
+!lastmodified

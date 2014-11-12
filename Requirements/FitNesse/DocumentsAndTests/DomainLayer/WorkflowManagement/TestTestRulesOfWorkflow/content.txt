@@ -1,0 +1,24 @@
+'''SetUp:''' Protokol Workflow létrehozása
+
+A Sales protokol workflow az alábbi tevékenységeket, azok sorrendjét, input, output termékeket és a végreható szerepkört tartalmazza. A tevékenységek egymást követik, amikor az előző befejeződik, akkor kezdődik a következő tevékenység.:
+
+|'''!-Sales workflowList-!'''|
+|'''activity name'''|'''befor activity name'''|'''next activity name'''|'''input artifact type name'''|'''output artifact type name'''|'''Role'''|
+|offer|-|sales|-|Offer|sales manager|
+|sales|offer|sealing|Offer|Contract|sales cooperator|
+|sealing|sales|certificate of compliance|report|sales manager|
+
+'''Rule:''' Protokol alapján létrehozott workflownak a protokolban megadott tevékenységeket és azok sorrendi kapcsolatát kell tartalmaznia.
+előfeltétel: protokol létezzen
+utófeltétel: példányosodik a workflow
+
+'''Rule:'''Új példányosított workflow tervezett állapotot kap.
+előfeltétel: ismertek az activity és a workflow státuszok
+utófeltétel:
+
+'''Rule:'''Protokol alapján létrehozott workflowhoz létre kell hozni egy, a protokolban megadott role-okból egy projekt team-et.
+előfeltétel: protokol létezzen
+utófeltétel: van projekt team
+
+'''Rule:'''A tervezett állapotú workflow-hoz a protokol-nál megadott input, output artifact típusoknak kapcsolódniuk.
+utófeltétel: van projekt team

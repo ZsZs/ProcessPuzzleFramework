@@ -1,0 +1,68 @@
+'''Hivatkozás:''' New separate Plan
+
+'''Rule:''' Csak olyan plan alatt hozható létre activity, amelynek nem része más plan.
+
+- A Marketing Plan plan listája üres:
+
+|'''!-PlanList-!'''|
+|'''plan-name'''|'''state'''|
+
+'''Rule:''' Egy tervhez nem tartozhat több azonos nevű activity.
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|press|new|
+|enter|name|Offer|
+|enter|plan|Marketing|
+|press|new|
+|check|name|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|startFals managed Activity|
+|press|new|
+|enter|name|Offer|
+|enter|plan|Marketing|
+|press|new|
+|check|name|error|
+
+|!-fit.ActionFixture-!|
+|startFals managed Activity|
+|press|new|
+|enter|name|OFFER|
+|enter|plan|Marketing|
+|press|new|
+|check|name|error|
+
+|!-fit.ActionFixture-!|
+|startFals managed Activity|
+|press|new|
+|enter|name|offer|
+|enter|plan|Marketing|
+|press|new|
+|check|name|error|
+
+- A Marketing Plan tevékenység listájában csak egy Offer tevékenység szerepel:
+
+|'''!-ActivityList1-!'''|
+|'''plan-name'''|'''activity-name'''|'''state'''|
+|Marketing|Offer|proposed|
+
+'''Rule:''' Olyan Plan alatt nem hozható létre plan, amely tartalmaz már tevékenységet.
+
+|!-fit.ActionFixture-!|
+|startFals managed Plan|
+|press|new|
+|enter|name|Administration|
+|enter|plan|Marketing|
+|press|new|
+|check|state|error|
+
+- A Marketing Plan plan listája üres marad:
+
+|'''!-PlanList-!'''|
+|'''plan-name'''|'''state'''|
+
+
+
+

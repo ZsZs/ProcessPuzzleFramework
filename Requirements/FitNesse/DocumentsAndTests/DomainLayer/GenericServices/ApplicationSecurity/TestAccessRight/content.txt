@@ -1,0 +1,79 @@
+'''Hivatkozás:''' Default Acces Right
+
+Létrehozunk az Offer artifact típushoz tartozó konkrét artifactokat:
+
+|!-fit.ActionFixture-!|
+|start|new controlled artifact|
+|enter|artifact type|Offer|
+|press|new|
+|enter|artifact name|IBM Offer|
+|press|save|
+|check|identifier|ok|
+
+'''Rule:''' Az új artifacthoz az artifact típusánál megadott jogosultságokkal rendelkeznek a felhasználók (mindaddig, amíg a konkrét artifactnál ezt felül nem definiálják).
+
+Ellenőrizzük felhasználónként az IBM Offer-hez való jogosultságukat. 0 jelölés, ha nincs jogosultsága, 1, ha van.
+
+Böcker Beáta felhasználó jogosultságai:
+
+|Check Böcker Beáta user Access Right|
+|artifact|action artifact|check access right()|
+|IBM Offer|write|1|
+|IBM Offer|read|1|
+|IBM Offer|delete|0|
+|IBM Offer|create|0|
+
+Böcker Bea felhasználó jogosultságai:
+
+|Check Böcker Bea user Access Right|
+|artifact|action artifact|check access right()|
+|IBM Offer|write|0|
+|IBM Offer|read|1|
+|IBM Offer|delete|0|
+|IBM Offer|create|0|
+
+'''Rule:'''  A konkrét artifactnál az ott megadott jogosultságok érvényesek, amely eltérhet az artifact típusánál megadott jogosultságoktól (ott továbbra is az artifact típushoz rendelt jogosultságok érvényesek).
+
+Megváltoztatjuk Böcker Bea jogosultságát az IBM Offer artifacthoz.
+
+|!-fit.ActionFixture-!|
+|start|change default acces right|
+|enter|artifact type|Offer|
+|enter|artifact|IBM Offer|
+|enter|username|Böcker Bea|
+|press|change acces right|
+|enter|write|
+|press|save|
+
+Ellenőrizzük felhasználónként az IBM Offer artifacthoz való acces right-ját. 0 jelölés, ha nincs jogosultsága, 1, ha van.
+Böcker Beáta felhasználó jogosultságai:
+
+Böcker Beáta felhasználó jogosultságai:
+
+|Check Böcker Beáta user Access Right|
+|artifact|action artifact|check access right()|
+|IBM Offer|write|1|
+|IBM Offer|read|1|
+|IBM Offer|delete|0|
+|IBM Offer|create|0|
+
+Böcker Bea felhasználó jogosultságai:
+
+|Check Böcker Bea user Access Right|
+|artifact|action artifact|check access right()|
+|IBM Offer|write|1|
+|IBM Offer|read|1|
+|IBM Offer|delete|0|
+|IBM Offer|create|0|
+
+Ellenőrizzük Böcker Bea  Offer artifact típusra vonatkozó jogosultságát:
+
+Böcker Bea felhasználó jogosultságai:
+
+|Check Böcker Bea user Default Access Right|
+|artifact type|action artifact|check access right()|
+|Offer|write|0|
+|Offer|read|1|
+|Offer|delete|0|
+|Offer|create|0|
+

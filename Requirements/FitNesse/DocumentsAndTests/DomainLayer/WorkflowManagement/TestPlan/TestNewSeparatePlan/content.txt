@@ -1,0 +1,47 @@
+|!-fit.ActionFixture-!|
+|start|Set time|
+|enter|timeIsNow|2007/08/02 10:00|
+
+'''Rule:''' Önálló új plan létrehozásakor meg kell adni a Plan nevét. A létrehozott tervhez a rendszer egyedi azonosítót rendel, és a terv proposed állapotot kap.
+
+|!-fit.ActionFixture-!|
+|start|Normally managed plan|
+|enter|name|Marketing|
+|enter|plan types|separate|
+|press|create|
+|check|name|ok|
+|check|identifier|ok|
+|check|state|proposed|
+|check|create timepoint|02/08/2007 10:00.000|
+
+|!-fit.ActionFixture-!|
+|start|Normally managed plan|
+|enter|name|Offer|
+|enter|plan types|separate|
+|press|create|
+|check|name|ok|
+|check|identifier|ok|
+|check|state|proposed|
+|check|create timepoint|02/08/2007 10:00.000|
+
+|!-fit.ActionFixture-!|
+|start|Normally managed plan|
+|enter|name|Sales|
+|enter|plan types|separate|
+|press|create|
+|check|name|ok|
+|check|identifier|ok|
+|check|state|proposed|
+|check|create timepoint|02/08/2007 10:00.000|
+
+- A Plan-ek listája 3 plant tartalmaz:
+
+|'''!-PlanList-!'''|
+|'''name'''|'''plan types'''|'''state'''|
+|Marketing|separate|proposed|
+|Offer|separate|proposed|
+|Sales|separate|proposed|
+
+
+!see .LocalSettings.ProcessPuzzleFramework.DomainLayer.WorkflowManagement.TestPlan.TestErrorNewSeparatePlan
+!see .LocalSettings.ProcessPuzzleFramework.DomainLayer.WorkflowManagement.TestPlan.TestNewPartPlan

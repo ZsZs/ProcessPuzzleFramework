@@ -1,0 +1,30 @@
+
+!path C:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\DomainComponents\bin\
+!path c:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\build\lib\fitnesse\*
+!path c:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\build\lib\spring-framework-2.0.6\*
+!path c:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\build\lib\spring-framework-2.0.6\modules\*
+!path c:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\build\lib\hibernate-3.1.3\*
+!path c:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\build\lib\log4j-1.2.14\*
+!path c:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\build\lib\apache-commons\*
+!path c:\balint.varga-perke_webview_on_mindenes\ProcessPuzzle\Framework\build\lib\jibx-1.1.5\*
+
+|Comment|
+|Kész:|
+| * [[Error New Separate Plan ][^Test3ErrorNewSeparatePlan]]|
+| * [[New Part Plan][^Test4NewPartPlan]]|
+| * [[Error Actions of Plan][^TestErrorActionsOfPlan]]|
+|Eredeti:|
+
+ * [[Plan types][^TestPlanTypes]]
+ * [[New Separate Plan ][^TestNewSeparatePlan]]
+ * [[Error New Separate Plan ][^TestErrorNewSeparatePlan]]
+ * [[New Part Plan][^TestNewPartPlan]]
+ * [[Plan Planed Time Period][^TestPlanPlanedTimePeriod]]
+ * [[Plan Real Time Period][^TestRealTimePeriod]]
+ * [[Plan Time Value][^TestPlanTimeValue]]
+ * [[Plan Owner][^TestPlanOwner]]
+ * [[Plan Artifact][^TestPlanArtifact]]
+ * [[Error Actions of Plan][^TestErrorActionsOfPlan]]
+ * [[New Actions of Plan][^TestNewActionsOfPlan]]
+ * [[Actions of Plan][^TestActionsOfPlan]]
+

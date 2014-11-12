@@ -1,0 +1,4 @@
+
+'''Rule:''' A Plan tényleges kezdésének időpontja megegyezik a hozzá tartozó Action-okból a legkorábban megkezdett Action tényleges megkezdésének időpontjával.
+
+'''Rule:''' A Plan tényleges befejezésének időpontja megegyezik a hozzá tartozó Action-okból a legkésőbb befejezett Action tényleges befejezésének időpontjával.

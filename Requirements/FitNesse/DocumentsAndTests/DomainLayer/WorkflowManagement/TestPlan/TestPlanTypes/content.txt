@@ -1,0 +1,6 @@
+'''Rule:''' The system knows about the following plapn types:
+
+|'''!-PlanTypesList-!'''|
+|'''name'''|
+|part|
+|separate|

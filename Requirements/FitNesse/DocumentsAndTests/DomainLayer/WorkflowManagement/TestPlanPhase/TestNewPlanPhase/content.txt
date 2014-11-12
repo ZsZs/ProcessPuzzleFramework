@@ -1,0 +1,30 @@
+'''Hivatkozás:''' New workflow
+
+'''Rule:''' Új planphase létrehozásakor meg kell adni a nevét, és meg kell adni melyik workflow része. A létrehozott planphase-hez a rendszer egyedi azonosítót rendel és a planphase tervezett állapotot kap. Különböző workflow-k alatt létrehozható azonos nevű planphase.
+
+|!-fit.ActionFixture-!|
+|start|New planphase|
+|enter|name|Offer making|
+|enter|create|
+|check|identifier|ok|
+|enter|workflow|IT prodact sales|
+|check|identifier|ok|
+|check|name|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|start|New planphase|
+|enter|name|Offer making|
+|enter|create|
+|check|identifier|ok|
+|enter|workflow|Operation|
+|check|identifier|ok|
+|check|name|ok|
+|check|state|proposed|
+
+- A planphase-ek listája két planphase-t tartalmaz:
+
+|'''!-PlanListOfOffer-!'''|
+|'''planphase-name'''|'''workflow-name'''|'''state'''|
+|Offer making|IT prodact sales|proposed|
+|Offer making|Operation|proposed|

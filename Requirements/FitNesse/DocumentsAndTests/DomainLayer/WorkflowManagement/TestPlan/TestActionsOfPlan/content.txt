@@ -1,0 +1,179 @@
+'''Hivakozás:''' New Actions of Plan
+
+'''Rule:''' A Plan ismerje fel a hozzá tartozó Activity-ket és azok aktuális státuszát. A listában azonos nevű activity-ből mindig az aktuális státuszú szereplhet csak.
+
+- Az Offer tevékenységet megkezdjük, a státusza implemented állapotba változik:
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|offer|
+|press|implement|
+|press|save|
+|check|state|implemented|
+
+- Az Offer tevékenység listája tartalmazza a proposed és implented állapotú Offer tevékenységet.
+
+|'''!-OfferActivityList1-!'''|
+|'''activity-name'''|'''state'''|
+|Offer|proposed|
+|Offer|implemented|
+
+- A Plan tevékenységlistájában 5 tevékenység szerepel azok aktuális státuszával:
+
+|'''!-ActivityList1-!'''|
+|'''paln-name'''|'''activity-name'''|'''state'''|
+|Marketing|Offer|implemented|
+|Marketing|Reconciliation|proposed|
+|Marketing|Contracting|proposed|
+|Marketing|Accomplishment|proposed|
+|Marketing|Closing|proposed|
+
+- Az Offer tevékenységet lezárjuk, a státusza closed állapotba változik:
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|Offer|
+|press|close|
+|press|save|
+|check|state|closed|
+
+- A Reconciliation tevékenységet megkezdjük, a státusza implemented állapotba változik:
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|Reconciliation|
+|press|implement|
+|press|save|
+|check|state|implemented|
+
+- Az Offer tevékenység listája tartalmazza a proposed, az implented és closed állapotú Offer tevékenységet.
+
+|'''!-OfferActivityList1-!'''|
+|'''activity-name'''|'''state'''|
+|Offer|proposed|
+|Offer|implemented|
+|Offer|closed|
+
+- A Reconciliation tevékenység listája tartalmazza a proposed, az implented állapotú Reconciliation tevékenységet.
+
+|'''!-OfferActivityList1-!'''|
+|'''activity-name'''|'''state'''|
+|Reconciliation|proposed|
+|Reconciliation|implemented|
+
+- A Plan tevékenységlistájában 5 tevékenység szerepel azok aktuális státuszával:
+
+|'''!-ActivityList1-!'''|
+|'''paln-name'''|'''activity-name'''|'''activity-state'''|
+|Marketing|Offer|closed|
+|Marketing|Reconciliation|implemented|
+|Marketing|Contracting|proposed|
+|Marketing|Accomplishment|proposed|
+|Marketing|Closing|proposed|
+
+- A Reconciliation tevékenységetlezárjuk, a státusza closed állapotba változik:
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|Reconciliation|
+|press|close|
+|press|save|
+|check|state|closed|
+
+- A Reconciliation tevékenység listája tartalmazza a proposed, az implented és a closed állapotú Reconciliation tevékenységet.
+
+|'''!-OfferActivityList1-!'''|
+|'''activity-name'''|'''state'''|
+|Reconciliation|proposed|
+|Reconciliation|implemented|
+|Reconciliation|closed|
+
+- A Contracting és Accomplishment tevékenységet visszíutasítjuk, a státuszuk abandoned állapotba változik:
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|Contracting|
+|press|abandon|
+|press|save|
+|check|state|abandoned|
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|Accomplishment|
+|press|abandon|
+|press|save|
+|check|state|abandoned|
+
+- A Contracting tevékenység listája tartalmazza a proposed, az abandoned állapotú Accomplishment tevékenységet.
+
+|'''!-OfferActivityList1-!'''|
+|'''activity-name'''|'''state'''|
+|Accomplishment|abandoned|
+|Accomplishment|abandoned|
+
+- A Plan tevékenységlistájában 5 tevékenység szerepel azok aktuális státuszával:
+
+|'''!-ActivityList1-!'''|
+|'''paln-name'''|'''activity-name'''|'''activity-state'''|
+|Marketing|Offer|closed|
+|Marketing|Reconciliation|closed|
+|Marketing|Contracting|abandoned|
+|Marketing|Accomplishment|abandoned|
+|Marketing|Closing|proposed|
+
+- A Closing tevékenységet megkezdjuk, a státusza imlemented állapotba változik:
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|Closing|
+|press|implement|
+|press|save|
+|check|state|implemeted|
+
+- A Closing tevékenység listája tartalmazza a proposed, az implented állapotú Closing tevékenységet.
+
+|'''!-OfferActivityList1-!'''|
+|'''activity-name'''|'''state'''|
+|Closing|proposed|
+|Closing|implemented|
+
+- A Plan tevékenységlistájában 5 tevékenység szerepel azok aktuális státuszával:
+
+|'''!-ActivityList1-!'''|
+|'''paln-name'''|'''activity-name'''|'''activity-state'''|
+|Marketing|Offer|closed|
+|Marketing|Reconciliation|closed|
+|Marketing|Contracting|abandoned|
+|Marketing|Accomplishment|abandoned|
+|Marketing|Closing|implemented|
+
+- A Closing tevékenységet lezárjuk, a státusza closed állapotba változik:
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity1|
+|enter|name|Closing|
+|press|close|
+|press|save|
+|check|state|closed|
+
+- A Closing tevékenység listája tartalmazza a proposed, az implented és closed állapotú Closing tevékenységet.
+
+|'''!-OfferActivityList1-!'''|
+|'''activity-name'''|'''state'''|
+|Closing|proposed|
+|Closing|implemented|
+|Closing|closed|
+
+- A Plan tevékenységlistájában 5 tevékenység szerepel azok aktuális státuszával:
+
+|'''!-ActivityList1-!'''|
+|'''paln-name'''|'''activity-name'''|'''activity-state'''|
+|Marketing|Offer|closed|
+|Marketing|Reconciliation|closed|
+|Marketing|Contracting|abandoned|
+|Marketing|Accomplishment|abandoned|
+|Marketing|Closing|closed|
+
+
+
+

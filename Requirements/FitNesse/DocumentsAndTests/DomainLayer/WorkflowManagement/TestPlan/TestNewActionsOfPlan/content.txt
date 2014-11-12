@@ -1,0 +1,51 @@
+'''Hivakozás:''' Error Actions of Plan
+
+'''Rule:''' A Plan ismerje fel a hozzá létrehozott Activity-ket.
+
+Létrehozunk 5 tevékenységet
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity2|
+|press|new|
+|enter|name|reconciliation|
+|enter|plan|Marketing|
+|press|new|
+|check|name|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity3|
+|press|new|
+|enter|name|Contracting|
+|enter|plan|Marketing|
+|press|new|
+|check|name|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity4|
+|press|new|
+|enter|name|Accomplishment|
+|enter|plan|Marketing|
+|press|new|
+|check|name|ok|
+|check|state|proposed|
+
+|!-fit.ActionFixture-!|
+|startNormally managed Activity5|
+|press|new|
+|enter|name|Closing|
+|enter|plan|Marketing|
+|press|new|
+|check|name|ok|
+|check|state|proposed|
+
+- A Plan tevékenységlistájában 5 proposed státuszú tevékenység szerepel:
+
+|'''!-ActivityList1-!'''|
+|'''plan-name'''|'''activity-name'''|'''state'''|
+|Marketing|Offer|proposed|
+|Marketing|Reconciliation|proposed|
+|Marketing|Contracting|proposed|
+|Marketing|Accomplishment|proposed|
+|Marketing|Closing|proposed|

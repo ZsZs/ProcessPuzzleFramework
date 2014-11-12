@@ -1,0 +1,2 @@
+|Import|
+|com.processpuzzle.fitnesse.fundamental_types|

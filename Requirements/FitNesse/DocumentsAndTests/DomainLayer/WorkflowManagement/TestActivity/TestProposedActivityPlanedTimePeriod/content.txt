@@ -1,0 +1,7 @@
+'''Rule:''' Az activity tervezett befejezése nem lehet azonos, vagy későbbi időpont, mint a tervezett befejezésének időpontja. Az activity tervezett kezdésének időpontja nem lehet korábbi, mint a létrehozás időpontja.
+
+- Létrehozunk két tevékenységet, és megadjuk a tervezett kezdésük és tervezett befejezésük időpontját, és ellenőrizzük, hogy a tervezett kezdési időpont nem korábbi-e mint a létrehozás időpontja, ha korábbi a rendszer hibát jelez. Valamint ellenőrizzük, hogy a tervezett befejezés nem korábbi időpont-e a tervezett kezdés időpontjánál, mert ekkor a rendszer hibát jelez:
+
+- módosítjuk a tervezett befejezési időpontot a tervezett kezdéssel megegyező időpontra, a rendszer hibát jelez
+
+- módosítjuk a tervezett befejezési időpontot a tervezett kezdésnél későbbi időpontra, a rendszer hibát jelez (ha egyenlő a rendszer hibát jelez error, ha későbbi: error)

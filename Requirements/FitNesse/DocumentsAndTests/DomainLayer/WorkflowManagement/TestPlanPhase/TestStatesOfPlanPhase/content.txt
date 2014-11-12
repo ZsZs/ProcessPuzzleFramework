@@ -1,0 +1,5 @@
+'''Rule:''' A PlanPhase állapota két módon kerülhet végrehajtott állapotba. Ellenőrzi a rendszer, hogy van-e megelőző planphase.
+Ha nincs:
+1. Úgy, ahogy bármely Plan.
+Ha van megelőző workflow:
+2. Amikor a megelőző PlanPhase állapota Lezártra változik.

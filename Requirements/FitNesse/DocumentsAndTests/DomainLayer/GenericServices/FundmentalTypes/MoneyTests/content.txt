@@ -1,0 +1,82 @@
+Define exchange rates
+|'''!-SetUpExchangeRates-!'''|
+|fromCurrency|toCurrency|rate|
+|USD|EUR|0.752389|
+|USD|HUF|185.922|
+|EUR|USD|1.32909|
+|EUR|HUF|247.265|
+|HUF|USD|0.00537922|
+|HUF|EUR|0.00404391|
+
+'''Rule:''' A rendszer két azonos pénznemű pénzmennyiséget tudjon összeadni, úgy, hogy az értékek abszolut értékeit adja össze két tizedesre kerekítve.
+
+|'''!-CalculateAdd-!'''|
+|quantity 1|currency 1|quantity 2|currency 2|quantity()|currency()|
+|5|EUR|3.45|EUR|8.45|EUR|
+|42|EUR|-5.67|EUR|36.33|EUR|
+|-3.45|EUR|-200.02|EUR|-203.47|EUR|
+|25|USD|-4.67|USD|20.33|USD|
+|-300|HUF|402.1|HUF|102.1|HUF|
+
+'''Rule:''' A rendszer két különböző pénznemű pénzmennyiséget tudjon összeadni, úgy, hogy az értékek abszolut értékeit adja össze 2 tizedesre kerekítve az első mennyiség pénznemében számolva.
+
+|'''!-CalculateAdd-!'''|
+|quantity 1|currency 1|quantity 2|currency 2|quantity()|currency()|
+|5|EUR|45|USD|38.86|EUR|
+|34.5|HUF|2|EUR|529.03|HUF|
+|5|USD|-25|HUF|4.87|USD|
+|-45.45|EUR|-45.45|HUF|-45.63|EUR|
+
+'''Rule:'''  A rendszer hasonlítson össze két különböző pénznemű mennyiséget, és adja meg, hogy az első kisebb (-1), nagyobb(1), vagy egyenlő (0) a második mennyiséggel.
+
+|'''!-CalculateCompareTo-!'''|
+|quantity 1|currency 1|quantity 2|currency 2|compareTo()|
+|5|EUR|5|USD|1|
+|-3|HUF|3|EUR|-1|
+|3|HUF|3|EUR|-1|
+|278.34|HUF|1|USD|1|
+|367|EUR|513|USD|-1|
+|18592.2|HUF|100|USD|0|
+
+'''Rule:'''  A rendszer váltsa át az első pénznemben megadott mennyiséget a másodiknak megadott pénznemre 2 tizedesjegyig kerekítve. A kerekítés szabálya,hogy x=<0.5 legyen 0, x>0.5 legyen 1.
+
+|'''!-CalculateConvertTo-!'''|
+|quantity 1|currency 1|currency 2|convertTo()|currency()|
+|8|EUR|USD|10.63|USD|
+|-5.43|HUF|USD|-0.03|USD|
+|3|USD|EUR|2.26|EUR|
+|0.24|USD|HUF|44.62|HUF|
+
+'''Rule:'''  A rendszer szorozza meg az elsőnek megadott pénzmennyiséget a másodiknak megadott mennyiséggel 2 tizedesjegyig kerekítve. A kerekítés szabálya,hogy x=<0.5 legyen 0, x>0.5 legyen 1.
+
+|'''!-CalculateMoneyMultiply-!'''|
+|quantity 1|currency|quantity 2|multiply()|
+|0.13|USD|3.45|0.45|
+|0.13|HUF|3.11|0.40|
+
+'''Rule:'''  A rendszer ossza el az elsőnek megadott pénzmennyiséget a másodiknak megadott mennyiséggel 2 tizedesjegyig kerekítve. A kerekítés szabálya,hogy x=<0.5 legyen 0, x>0.5 legyen 1.
+
+|'''!-CalculateMoneyDivide-!'''|
+|quantity 1|currency|quantity 2|divide()|
+|0.13|USD|3.45|0.04|
+|0.13|HUF|3.11|0.04|
+
+'''Rule:'''  A rendszer ismerje fel a stringben megadott pénzmennyiség formátumot. A rendszer csak a szám után írt 3 karakteres pénznemjelet fogadja el, más pénznem jelölések esetén hibát dob.
+
+|'''!-CalculateMoneyParse-!'''|
+|language|country|source text|quantity()|currency()|
+|hu|HU|234 USD|234|USD|
+|en|GB|234 USD|234|USD|
+|hu|HU|200USD|200|USD|
+|en|GB|200HUF|200|HUF|
+|hu|HU|200Ł|error|
+|en|GB|$200|error|
+|en|GB|$ 200|error|
+|hu|HU|100 Ft|error|
+|en|GB|100 Ft|error|
+|hu|HU|Ft 100|error|
+|hu|HU|Ft100|error|
+|hu|HU|HUF100|error|
+|en|GB|EUR100|error|
+|hu|HU|100pc|error|
+|en|GB|t100|error|

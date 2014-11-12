@@ -1,0 +1,9 @@
+'''Rule:''' A planphase tervezett kezdésének időpontja nem lehet korábbi, mint a Planphase létrehozásának időpontja.
+
+'''Rule:''' A palnphase tervezett kezdésének időpontja nem lehet későbbi, mint a hozzá tartozó planek tervezett kezdésének legkorábbi időpontja.
+
+'''Rule:''' A planphase tervezett befejezésének időpontja nem lehet korábbi, mint a hozzátartozó planek bármelyikének tervezett befejezési időpontja.
+
+'''Rule:''' A Planphase tényleges kezdésének időpontja megegyezik a hozzá tartozó planekből a legkorábban megkezdett tényleges megkezdésének időpontjával.
+
+'''Rule:''' A Plan tényleges befejezésének időpontja megegyezik a hozzá tartozó planekből a legkésőbb befejezett plan tényleges befejezésének időpontjával.

@@ -1,0 +1,50 @@
+!***> Overview
+!img http://files/ProcessPuzzle/Images/DesignModel_ProcessPuzzleBrowserInterfaceOverview.gif
+***!
+'''!-ProcessPuzzle-! Browser UI''' provides a web browser based user interface for any kind of !-ProcessPuzzle-! application. One deterministic goal of this Browser UI's design was, the it should provide the same kind of usability and dynamic behavior as traditional desktop application's user interface can. 
+The !-ProcessPuzzle-! Browser UI does not assume any kind of special back-end service - like portal server or servlets - therefore it is called back-end agnostic UI. This is the default user interface for !-ProcessPuzzle-!. As the diagram below depicts the !-ProcessPuzzle-! Browser UI completely written in !-JavaScript-! and it uses only XML resources from the back-end. These XML resources could be static files, but almost always these are provided by web services. Providing UI configuration data by back-end web services further enhances the dynamic, context dependent behavior of the user interface. 
+
+!***> Start up procedure
+!img http://files/ProcessPuzzle/Images/DesignModel_BrowserUIStartUp.gif
+***!
+'''The interaction patterns between the Browser UI Components''' helps to better understand the roles played by these different elements.
+
+!***> Library Dependencies - Overview
+!img http://files/ProcessPuzzle/Images/DesignModel_BrowserUILibraryDependenciesOverview.gif
+***!
+'''!-ProcessPuzzle-! Browser UI''' is built on two largely deterministic libraries:
+ * '''[[!-MooTools-!][http://mootools.net]]''' - extends the !-JavaScript-! language itself - with Class construct, inheritance, encapsulation - thus facilitating more OO style programming and also provides easy DOM handling library elements.
+ * '''[[!-MochaUI-!][http://mochaui.org]]''' - provides a complete set of desktop like UI elements such as, column, panel, window, dialog.
+On top these two libraries, '''[[!-Log4JavaScript-!][http://log4javascript.org]]''' is used for logging and '''[[Sarissa][http://dev.abiss.gr/sarissa]]''', '''[[!-XmlForScript-!][http://xmljs.sourceforge.net]]''' is used for XML manipulation.
+
+!***> Components - Overview
+See the diagram below, to get an overview of all these UI components.
+!img http://files/ProcessPuzzle/Images/DesignModel_BrowserUIComponentsOverview.gif
+***!
+'''!-ProcessPuzzle-! Browser UI's''' components can be grouped into two large set of components:
+ * '''[[Generic UI Services][^GenericUiServices]]''' - helps to configure the desktop UI structure, defines generic widgets, provides UI internal messaging infrastructure for these widgets, facilitates internationalization and handles web services, xml messages.
+  * '''[[Authentication Widget][^GenericUiServices.AuthenticationWidget]]''' - 
+  * '''[[Browser UI Configuration][^GenericUiServices.BrowserUiConfiguration]]''' - 
+  * '''[[Browser UI Controller][^GenericUiServices.WebUiController]]''' - 
+  * '''[[Browser UI Logger][^GenericUiServices.BrowserUiLogger]]''' - 
+  * '''[[Component State Manager][^GenericUiServices.WebUiStateManager]]''' - helps to store and retrieve different UI component's current status.
+  * '''[[Browser Widget][^GenericUiServices.BrowserWidget]]''' is a generic base class for all other !-JavaSrcipt-! widgets. Handles widget data and widget definition xmls. Facilitates adding, modifying DOM elements of the widget in a standard way.
+  * '''[[Fundamental Types][^GenericUiServices.FundamentalTypes]]''' - defines or refines base types, such as !-HashSet-!, !-HashMap-!, !-TimePoint-!, !-TimePeriod-! for further usage in other !-JavaScript-! components.
+  * '''[[Internalization][^GenericUiServices.InternalizatioN]]''' - provides client (browser) side internationalization.
+  * '''[[Menu Widget][^GenericUiServices.MenuWidget]]''' - 
+  * '''[[Tab Widget][^TGenericUiServices.abWidget]]''' ...
+  * '''[[Tree Widget][^GenericUiServices.TreeWidget]]''' - displays xml data in an explorer like tree.
+ * '''[[Business UI Widgets][^BusinessUiWidgets]]''' - are business domain specific widgets.
+
+!4 Obsolete components
+ * '''[[Artifact Type Loader][^GenericUiServices.ArtifactTypeLoader]]''' - 
+ * [[Data Retriever][^GenericUiServices.DataRetriever]] ...
+ * [[Document Manager][^GenericUiServices.DocumentManager]] ... 
+ * [[Document Relationship Widget][^GenericUiServices.DocumentRelationshipWidget]] ...
+ * [[Document Reservation Widget][^GenericUiServices.DocumentReservationWidget]] ...
+ * [[File Upload Widget][^GenericUiServices.FileUploadWidget]] ...
+ * [[Folder Manager Widget][^GenericUiServices.FolderManagerWidget]] ...
+ * [[Framed Content Manager][^GenericUiServices.FramedContentManager]] ...
+ * [[Paging Widget][^GenericUiServices.PagingWidget]] ...
+ * [[!-ProcessPuzzle-! Core][^GenericUiServices.ProcesssPuzzleCore]] !-JavaScript-! library '''provides fundamental functionality to handle collections, files, xml, xml transformations etc'''.
+ * [[State Machine][^GenericUiServices.StateMachine]] !-JavaScript-! component helps '''managing the current status of the user interface'''.
