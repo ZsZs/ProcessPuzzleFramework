@@ -66,23 +66,24 @@ public class GeneralService {
 
    public static String toHTMLEntityString( String string ) {
       Map<Character, String> HTMLEntites = new HashMap<Character, String>();
-      HTMLEntites.put( new Character( 'á' ), "&aacute;" );
-      HTMLEntites.put( new Character( 'Á' ), "&Aacute;" );
-      HTMLEntites.put( new Character( 'é' ), "&eacute;" );
-      HTMLEntites.put( new Character( 'É' ), "&Eacute;" );
-      HTMLEntites.put( new Character( 'í' ), "&iacute;" );
-      HTMLEntites.put( new Character( 'Í' ), "&Iacute;" );
-      HTMLEntites.put( new Character( 'ó' ), "&oacute;" );
-      HTMLEntites.put( new Character( 'Ó' ), "&Oacute;" );
-      HTMLEntites.put( new Character( 'ö' ), "&ouml;" );
-      HTMLEntites.put( new Character( 'Ö' ), "&Ouml;" );
-      HTMLEntites.put( new Character( 'ú' ), "&uacute;" );
-      HTMLEntites.put( new Character( 'Ú' ), "&Uacute;" );
-      HTMLEntites.put( new Character( 'ü' ), "&uuml;" );
-      HTMLEntites.put( new Character( 'Ü' ), "&Uuml;" );
-      HTMLEntites.put( new Character( 'û' ), "&ucirc;" );
-      HTMLEntites.put( new Character( 'Û' ), "&Ucirc;" );
-
+      /*
+      HTMLEntites.put( new Character( 'Ã¡' ), "&aacute;" );
+      HTMLEntites.put( new Character( 'Ã�' ), "&Aacute;" );
+      HTMLEntites.put( new Character( 'Ã©' ), "&eacute;" );
+      HTMLEntites.put( new Character( 'Ã‰' ), "&Eacute;" );
+      HTMLEntites.put( new Character( 'Ã­' ), "&iacute;" );
+      HTMLEntites.put( new Character( 'Ã�' ), "&Iacute;" );
+      HTMLEntites.put( new Character( 'Ã³' ), "&oacute;" );
+      HTMLEntites.put( new Character( 'Ã“' ), "&Oacute;" );
+      HTMLEntites.put( new Character( 'Ã¶' ), "&ouml;" );
+      HTMLEntites.put( new Character( 'Ã–' ), "&Ouml;" );
+      HTMLEntites.put( new Character( 'Ãº' ), "&uacute;" );
+      HTMLEntites.put( new Character( 'Ãš' ), "&Uacute;" );
+      HTMLEntites.put( new Character( 'Ã¼' ), "&uuml;" );
+      HTMLEntites.put( new Character( 'Ãœ' ), "&Uuml;" );
+      HTMLEntites.put( new Character( 'Ã»' ), "&ucirc;" );
+      HTMLEntites.put( new Character( 'Ã›' ), "&Ucirc;" );
+      */
       String str = "";
 
       for( int i = 0; i < string.length(); i++ ){
