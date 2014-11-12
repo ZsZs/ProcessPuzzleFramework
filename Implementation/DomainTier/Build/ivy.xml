@@ -25,5 +25,9 @@
       <dependency org="org.springframework" name="spring-web" rev="3.2.8.RELEASE" conf="production->*,!sources,!javadoc" />
       <dependency org="org.springframework" name="spring-oxm" rev="3.2.8.RELEASE" conf="production->*,!sources,!javadoc" />
       <dependency org="org.springframework.ws" name="spring-ws" rev="2.1.4.RELEASE" conf="production->*,!sources,!javadoc" />
+      
+      <exclude org="org.apache.ant" module="ant" />
+      <exclude org="maven-plugins" module="maven-cobertura-plugin" />
+      <exclude org="maven-plugins" module="maven-findbugs-plugin" />
    </dependencies>
 </ivy-module>
