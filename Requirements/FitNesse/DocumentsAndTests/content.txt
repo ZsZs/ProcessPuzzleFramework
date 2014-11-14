@@ -29,7 +29,9 @@ Corresponding to this design rules different kind of specifications and test are
 To be able to eliminate any kind of redundancy in test cases the recurring elements, parts should extracted turned to reusable test components. Below those test components are listed which can be reused in many of the test above.
  * '''[[Common Fixtures][>CommonFixtures]]''' constitutes reusable elements in the specifications above.
 
+
 !***> Project specific variables
+!define PROCESSPUZZLE_DOMAIN_TIER_DIR {ProcessPuzzleFramework\Implementation\DomainTier}
 !define ApplicationConfigurationDescriptor {classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml}
 !define DatabaseType {HSQLDB}
 !define DatabaseConnection {mem:ENYV_TEST_DB}
@@ -41,51 +43,17 @@ To be able to eliminate any kind of redundancy in test cases the recurring eleme
 !define TEST_RUNNER {fitlibrary.suite.FitLibraryServer}
 ***!
 
-!***> Projekt specific Class Path settings
-'''!-ProcessPuzzle-!''' compiled classes
-!path ${ViewPath}\ProcessPuzzle\Framework\DomainTier\${InstrumentedClasses}
-!path ${ViewPath}\ProcessPuzzle\Framework\DomainTier\${CompiledClasses}
-!path ${ViewPath}\ProcessPuzzle\Framework\DomainTier\${CompiledTestClasses}
-
-!path ${ViewPath}\ProcessPuzzle\Framework\DomainComponents\${InstrumentedClasses}
-!path ${ViewPath}\ProcessPuzzle\Framework\DomainComponents\${CompiledClasses}
-!path ${ViewPath}\ProcessPuzzle\Framework\DomainComponents\${CompiledTestClasses}
-
-!path ${ViewPath}\ProcessPuzzle\Framework\WebTier\${InstrumentedClasses}
-!path ${ViewPath}\ProcessPuzzle\Framework\WebTier\${CompiledClasses}
-!path ${ViewPath}\ProcessPuzzle\Framework\WebTier\${CompiledTestClasses}
+!***> Project specific Class Path
+'''!-LiTest-!''' compiled classes
+!path ${ViewPath}\${PROCESSPUZZLE_DOMAIN_TIER_DIR}\${CompiledClasses}
+!path ${ViewPath}\${PROCESSPUZZLE_DOMAIN_TIER_DIR}\${CompiledTestClasses}
 
 '''!-ProcessPuzzle-!''' framework libraries
-!path ${ViewPath}\${COMMONS_DISTRIBUTION_DIR}\${COMMONS_DOMAIN_LOGIC_JAR}
-!path ${ViewPath}\${LITEST_DISTRIBUTION_DIR}\${LITEST_DOMAIN_LOGIC_JAR}
+!path ${MavenRepository}\com\processpuzzle\processpuzzle-commons-domain\0.1.0-SNAPSHOT\*.jar
+!path ${MavenRepository}\com\processpuzzle\processpuzzle-litest-domain\0.3.0-SNAPSHOT\*.jar
 
-'''Third party libraries for !-ProcessPuzzle-! domain tier:'''
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Apache Commons\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Castor\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\DOM4J\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\FOP\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Google-Collect\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hamcrest\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hibernate\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JAXB-RI\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Jaxen\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JiBX\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\jTDS\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Log4J\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\SLF4J\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Spring\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Xerces\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Xalan\*.jar
+'''Third party libraries for !-LiTest-! domain tier:'''
 
 '''HSQL JDBC dirver'''
-!path ${ViewPath}\ProcessPuzzle\Framework\build\DevelopmentLibraries\HSQL\*.jar
-
-'''Oracle Thin JDBC dirver'''
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Oracle-JDBC\ojdbc14.jar
-
-'''!-HtmlUnit-! for testing Browser UI'''
-!path ${ViewPath}\ProcessPuzzle\Framework\build\DevelopmentLibraries\HtmlUnit\*.jar
-
-'''tools.jar needed for Java Compiler API'''
-!path ${JavaHome}\lib\tools.jar
+!path ${MavenRepository}\org\hsqldb\hsqldb\2.2.8\*.jar
 ***!

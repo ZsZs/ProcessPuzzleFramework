@@ -1,13 +1,11 @@
-|fitlibrary.!-SelectFixture-!|
-
-|'''add'''|hu.itkodex.litest.fitnesse.!-LoggingConfigurator-!|'''as'''|loggingConfigurator|
+|'''add'''|com.processpuzzle.litest.fitnesse.!-LoggingConfigurator-!|'''as'''|loggingConfigurator|
 
 |'''select'''|loggingConfigurator|
 
 !***> Configure logging
-!include .LocalSettings.CommonTestHelpers.LoggingConfiguration
+!include -c <LiTest.DomainLogic.FitNesseHelpers.LoggingConfigurator
 ***!
 
 !***> Start application
-!include .LocalSettings.ProcessPuzzleFramework.CommonFixtures.SetUpTearDown.GenericApplicationSetUp.ApplicationSetUp
+!include .ProcessPuzzleFramework.DocumentsAndTests.CommonFixtures.SetUpTearDown.GenericApplicationSetUp.ApplicationSetUp
 ***!

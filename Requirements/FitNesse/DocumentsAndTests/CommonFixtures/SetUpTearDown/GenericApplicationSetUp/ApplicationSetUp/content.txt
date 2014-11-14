@@ -4,6 +4,6 @@
 |com.processpuzzle.fitnesse.application|
 
 |fit.!-ActionFixture-!|
-|'''start'''|!-ApplicationTestCoordinator-!|
+|'''start'''|com.processpuzzle.fitnesse.application.!-ApplicationTestCoordinator-!|
 |'''enter'''|''configurationPath''|${ApplicationConfigurationDescriptor}|
 |'''enter'''|''!-notifyOnTestPageSetUp-!''|!-LocalSettings.ProcessPuzzleFramework-!|

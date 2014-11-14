@@ -26,6 +26,7 @@
 ***!
 
 !***> Project specific variables
+!define PROCESSPUZZLE_DOMAIN_TIER_DIR {LiTest\Implementation\DomainTier}
 !define ApplicationConfigurationDescriptor {classpath:com/processpuzzle/sharedfixtures/domaintier/configuration_descriptor.xml}
 !define DatabaseType {HSQLDB}
 !define DatabaseConnection {mem:ENYV_TEST_DB}
@@ -34,41 +35,13 @@
 ***!
 
 !***> Project specific class path
-'''!-IT-Codex-Commons-!''' - domain tier
-!path ${ViewPath}\ProcessPuzzle\Framework\build\Distribution\Commons\IT-Codex-Commons-DomainLogic-0.1.0.jar
+'''!-LiTest-!''' compiled classes
+!path ${ViewPath}\${PROCESSPUZZLE_DOMAIN_TIER_DIR}\${CompiledClasses}
+!path ${ViewPath}\${PROCESSPUZZLE_DOMAIN_TIER_DIR}\${CompiledTestClasses}
 
-'''!-LiTest-!''' - domain tier
-#!path ${ViewPath}\ProcessPuzzle\Framework\build\Distribution\LiTest\LiTest-DomainLogic-0.3.0.jar
-!path ${ViewPath}\ITKodex\Projects\LiTest\Implementation\DomainTier\${CompiledClasses}
-
-'''!-ProcessPuzzle-! domain tier'''
-!path ${ViewPath}\ProcessPuzzle\Framework\FrameworkDomainTier\${CompiledClasses}
+'''!-ProcessPuzzle-!''' framework libraries
+!path ${MavenRepository}\com\processpuzzle\processpuzzle-commons-domain\0.1.0-SNAPSHOT\*.jar
+!path ${MavenRepository}\com\processpuzzle\processpuzzle-litest-domain\0.3.0-SNAPSHOT\*.jar
 
 '''Third party libraries''' for !-ProcessPuzzle-! domain tier:
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Apache Commons\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Castor\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\DOM4J\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\FOP\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Google-Collect\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hamcrest\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Hibernate\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JAXB-RI\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Jaxen\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\JiBX\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\jTDS\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Log4J\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Spring\*.jar
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Xerces\*.jar
-
-'''!-DbFit-! FIT extendsion for databasde testing'''
-!path ${ViewPath}\ITKodex\Projects\DbFit\Implementation\DomainTier\${CompiledClasses}
-
-'''HSQL JDBC dirver'''
-!path ${ViewPath}\ProcessPuzzle\Framework\build\DevelopmentLibraries\HSQL\*.jar
-
-'''Oracle Thin JDBC dirver'''
-!path ${ViewPath}\ProcessPuzzle\Framework\build\ProductionLibraries\Oracle-JDBC\\ojdbc14.jar
-
-'''tools.jar needed for Java Compiler API'''
-!path ${JavaHome}\lib\tools.jar
 ***!
