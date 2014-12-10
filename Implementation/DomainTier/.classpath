@@ -12,5 +12,7 @@
 	<classpathentry kind="src" path="Configuration"/>
 	<classpathentry excluding="*.copyarea.db" kind="src" path="IntegratedTests"/>
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=ProcessPuzzle+-+Domain+Tier&amp;ivyXmlPath=Build%2Fivy.xml&amp;confs=*"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LiTest - Domain Tier"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ProcessPuzzleCommons - Domain Tier"/>
 	<classpathentry kind="output" path="Binaries"/>
 </classpath>
